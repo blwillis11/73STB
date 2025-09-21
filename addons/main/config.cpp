@@ -1,14 +1,19 @@
 #include "script_component.hpp"
 
-class CfgPatches {
-    class ADDON {
+class CfgPatches
+{
+    class main
+    {
         name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"cba_main"};
-        author = ECSTRING(common,ACETeam);
-        url = CSTRING(URL);
+        requiredAddons[] = { };             // Addon dependencies
+        authors[] = {                       // Authors
+            "Salmon",
+            "73rd S-4 Team"
+        };
+        author = AUTHOR;                   // MACRO
         VERSION_CONFIG;
     };
 
@@ -20,18 +25,13 @@ class CfgPatches {
 
 class CfgMods {
     class PREFIX {
-        dir = "@ace";
-        name = "Advanced Combat Environment 3";
-        picture = "A3\Ui_f\data\Logos\arma3_expansion_alpha_ca";
-        hidePicture = "true";
-        hideName = "true";
-        actionName = "Website";
-        action = CSTRING(URL);
-        description = "Issue Tracker: https://github.com/acemod/ACE3/issues";
+        dir = "@73STB";
+        name = "73rd STB Mod V2";
+        picture = ""; // 256x256            // Picture displayed in expansions menu.
+        hidePicture = "true";               // Hide the picture in the expansions menu.
+        hideName = "true";                  // Hide the name in the expansions menu.
+        actionName = "Website";             // Text displayed in the action button in the main menu.
+        action = CSTRING(URL);              // Website URL, that is opened when the action button is clicked.
+        //description = "";                 // Short description, that is displayed in the main menu.
     };
 };
-
-#include "CfgSettings.hpp"
-#include "CfgModuleCategories.hpp"
-#include "CfgVehicleClasses.hpp"
-#include "CfgEditorSubcategories.hpp"
