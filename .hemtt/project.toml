@@ -12,7 +12,6 @@ include = [
 
 [properties]
 author = "73rd S-4 Team"
-url = "https://github.com/"
 
 [version]
 path = "addons/main/script_version.hpp"
