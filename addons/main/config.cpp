@@ -14,7 +14,7 @@ class CfgPatches
             "73rd S-4 Team"
         };
         author = AUTHOR;                   // MACRO
-        VERSION_CONFIG;
+        VERSION_CONFIG
     };
 
     class XADDON: ADDON { // just in-case anything requires "acex_main"
