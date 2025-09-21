@@ -1,0 +1,85 @@
+class NSWep_95x40_AP;
+class 73_95x40_AP: NSWep_95x40_AP
+{
+    caliber=7;
+    hit=22;
+    indirectHit=0;
+    indirectHitRange=0;
+    typicalSpeed=700;
+    airFriction=-0.001;
+    deflecting=0;
+    cartridge="FxCartridge_556";
+    model="\A3\Weapons_f\Data\bullettracer\tracer_yellow";
+    tracerScale=1.2;
+    tracerStartTime=0.0;
+    tracerEndTime=8;
+    nvgOnly=0;
+    audibleFire=40;
+    visibleFire=3;
+    initspeed=700;
+    visibleFireTime=3;
+    dangerRadiusBulletClose=8;
+    suppressionRadiusBulletClose=6;
+    dangerRadiusHit=12;
+    suppressionRadiusHit=8;
+    ACE_caliber=9.5;
+    ACE_bulletLength=29.464001;
+    ACE_bulletMass=28.3;
+    ACE_ammoTempMuzzleVelocityShifts[]={-2.55,-2.47,-2.25,-2.1199999,-1.6799999,-1.28,-7.6399999,-1.3,0.58999997,1.51,2.6099999};
+    ACE_ballisticCoefficients[]={0.63};
+    ACE_velocityBoundaries[]={};
+    ACE_standardAtmosphere="ICAO";
+    ACE_dragModel=1;
+    ACE_muzzleVelocityVariationSD=0.1;
+    ACE_muzzleVelocities[]={900,923,947,992,1016,1035};
+    ACE_barrelLengths[]={400,450,500,550,600,660.40002};
+};
+class 73_95x40_AP_TG: 73_95x40_AP
+{
+    model="\A3\Weapons_f\Data\bullettracer\tracer_green";
+};
+class 73_95x40_AP_TR: 73_95x40_AP
+{
+    model="\A3\Weapons_f\Data\bullettracer\tracer_red";
+};
+class 73_95x40_AP_TIR: 73_95x40_AP
+{
+    model="\A3\Weapons_f\Data\bullettracer\tracer_white";
+    nvgOnly=1;
+};
+class MA_95x40_HPSAP;
+class 73_95x40_HPSAP: MA_95x40_HPSAP
+{
+    caliber=7;
+    hit=22;
+    indirectHit=0;
+    indirectHitRange=0;
+    typicalSpeed=700;
+    airFriction=-0.001;
+    deflecting=0;
+    cartridge="FxCartridge_556";
+    model="\A3\Weapons_f\Data\bullettracer\tracer_yellow";
+    tracerScale=1.2;
+    tracerStartTime=0.0;
+    tracerEndTime=8;
+    nvgOnly=0;
+    audibleFire=40;
+    visibleFire=3;
+    initspeed=700;
+    visibleFireTime=3;
+    dangerRadiusBulletClose=8;
+    suppressionRadiusBulletClose=6;
+    dangerRadiusHit=12;
+    suppressionRadiusHit=8;
+    ACE_caliber=9.5;
+    ACE_bulletLength=29.464001;
+    ACE_bulletMass=28.3;
+    ACE_ammoTempMuzzleVelocityShifts[]={-2.55,-2.47,-2.25,-2.1199999,-1.6799999,-1.28,-7.6399999,-1.3,0.58999997,1.51,2.6099999};
+    ACE_ballisticCoefficients[]={0.63};
+    ACE_velocityBoundaries[]={};
+    ACE_standardAtmosphere="ICAO";
+    ACE_dragModel=1;
+    ACE_muzzleVelocityVariationSD=0.1;
+    ACE_muzzleVelocities[]={900,923,947,992,1016,1035};
+    ACE_barrelLengths[]={400,450,500,550,600,660.40002};
+};

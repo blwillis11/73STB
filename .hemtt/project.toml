@@ -1,0 +1,18 @@
+name = "73rd STB Mod V2"
+author = "73rd S-4 Team"
+prefix = "STB73"
+mainprefix = "STB73"
+
+include = [
+    "mod.cpp",
+    "meta.cpp",
+    "LICENSE",
+    "logo_co.paa",
+]
+
+[properties]
+author = "73rd S-4 Team"
+url = "https://github.com/"
+
+[version]
+path = "addons/main/script_version.hpp"
