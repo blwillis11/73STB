@@ -1,7 +1,7 @@
 name = "73rd STB Mod V2"
 author = "73rd S-4 Team"
-prefix = "STB73"
-mainprefix = "STB73"
+prefix = "73STB"
+mainprefix = "z"
 
 include = [
     "mod.cpp",
