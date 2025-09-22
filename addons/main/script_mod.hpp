@@ -1,21 +1,17 @@
 #define MAINPREFIX z
 #define PREFIX STB73
-#define MAINPREFIX z
-#define PREFIX TAG
 
-#define AUTHOR QUOTE(Salmon)
-#define MOD_NAME_BEAUTIFIED QUOTE(Salmon)
+#define AUTHOR QUOTE(73rd S-4 Team)
+#define MOD_NAME_BEAUTIFIED QUOTE(73rd S-4 Team)
 
 
 #include "script_version.hpp"
 
-
-#define VERSION     MAJOR.MINOR
 #define VERSION_STR MAJOR.MINOR.PATCHLVL.BUILD
 #define VERSION_AR  MAJOR,MINOR,PATCHLVL,BUILD
 
 // MINIMAL required version for the Mod. Components can specify others..
-#define REQUIRED_VERSION 1.0
+#define REQUIRED_VERSION 1.58
 #define REQUIRED_CBA_VERSION {3,15,6}
 #define REQUIRED_ACE_VERSION {3,14,0,63}
 #define REQUIRED_TFAR_VERSION {1,-1,0,328}

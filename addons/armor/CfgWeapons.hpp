@@ -1,1 +1,8 @@
-UNIFORM_WEP_CLASS(FieldTop,SlimSleeve,Gloves,Bloused,Unzipped,Urban)
+NEW_VEST_4(ODST)
+NEW_VEST_4(SHARPSHOOTER)
+NEW_VEST_4(BREACHER)
+
+class TCP_H_Helmet_ECH55D_Black_Black;
+class TCP_H_Helmet_ECH55D_Black_Black_DP;
+
+ECH55D_HELMET(Black,Black)

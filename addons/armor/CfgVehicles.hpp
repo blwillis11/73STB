@@ -1,1 +1,5 @@
-UNIFORM_VEH_CLASS(FieldTop,SlimSleeve,Gloves,Bloused,Unzipped,Urban)
+class ContainerSupply;
+class STB73_vest_supply: ContainerSupply
+{
+    maximumLoad = VEST_MAXLOAD;
+};

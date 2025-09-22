@@ -2,7 +2,7 @@
 
 class CfgPatches
 {
-    class main
+    class 73STB_main
     {
         name = COMPONENT_NAME;
         units[] = {};
@@ -14,10 +14,10 @@ class CfgPatches
             "73rd S-4 Team"
         };
         author = AUTHOR;                   // MACRO
-        VERSION_CONFIG
+        VERSION_CONFIG;
     };
 
-    class XADDON: ADDON { // just in-case anything requires "acex_main"
+    class X73STB_main: 73STB_main { // just in-case anything requires "acex_main"
         units[] = {};
         weapons[] = {};
     };

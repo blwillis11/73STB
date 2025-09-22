@@ -17,14 +17,13 @@
       combination of pouches.
   ==============================================================================
 */
-#define AUTHOR "73rd S-4 Team"
 
 //basic path macros
-#define P(PATH) \x\@73rd STB Armor Pack v2\addons\73_units\##PATH
+#define P(PATH) \x\73stb\addons\armor\##PATH
     //P((Something) => "\x\@73rd STB Armor Pack v2\addons\73_units\something
 
 // Q(INPUT) => "INPUT"
-#define Q(INPUT) #INPUT
+#define Q(INPUT) QUOTE(INPUT)
 
 // GLUE(A,B) => AB (concatenates tokens)
 #define GLUE(A,B) A##B
@@ -73,36 +72,24 @@ class HitpointsProtectionInfo {  \
   };                             \
 };
 
-
-#define NEW_VEST(ARMOUR) 						                      \
-    class TCP_V_M43D_##ARMOUR##_Base;                                 \
-    class TCP_V_M43D_##ARMOUR##_Black: TCP_V_M43D_##ARMOUR##_Base {   \
-        class ItemInfo;							                   	  \
-    };
-
 #define UNIFORM_XtdGI(CAMO,SHIRT) 						               \
     class TCP_U_B_CBUU_##SHIRT##_Base;                           \
 
-#define 73_TEXPATH(PIECE,FILE) P(data\##PIECE\##FILE)
+#define STB73_TEXPATH(PIECE,FILE) P(data\##PIECE\##FILE)
 
-#define UNIFORM_WEP_CLASS(SHIRT,TUCKED,GLOVES,BLOUSED,ZIPPED,CAMO) \
-    class 73STB_U_B_CBUU_##SHIRT####TUCKED####GLOVES####BLOUSED####ZIPPED##_##CAMO##: TCP_U_B_CBUU_##SHIRT####TUCKED####GLOVES####BLOUSED####ZIPPED##_Base { \
-        author = AUTHOR; \
-        displayName = "CBUU (" #SHIRT ", " #CAMO ")"; \
-        maximumLoad = 50; \
-        class ItemInfo: UniformItem { \
-            uniformClass = "73STB_B_##SHIRT####TUCKED####GLOVES####BLOUSED####ZIPPED##_##CAMO##"; \
-            containerClass = "Supply50"; \
-            mass = 30; \
-            uniformType = "Neopren"; \
-        }; \
+#define NEW_VEST_4(ARMOUR) 						                      \
+    class TCP_V_M43D_##ARMOUR##_4_Base;                                 \
+    class 73STB_M43D_##ARMOUR##_Black: TCP_V_M43D_##ARMOUR##_4_Base {   \
+        class XtdGearInfo { \
+          Model="73_ACE_M43D_Vest"; \
+          Variant =Q(##ARMOUR##);};   \
+    };
 
-#define UNIFORM_VEH_CLASS(SHIRT,TUCKED,GLOVES,BLOUSED,CAMO) \
-    class 73STB_B_CBUU_##SHIRT####TUCKED####GLOVES####BLOUSED####ZIPPED##: TCP_B_CBUU_##SHIRT####TUCKED####GLOVES####BLOUSED####ZIPPED##_Base { \
-        author = AUTHOR; \
-        scope = 2; \
-        scopeCurator = 2; \
-        displayName = "CBUU (" #SHIRT ", " #CAMO ")"; \
-        uniformClass = "73STB_U_B_CBUU_##SHIRT####TUCKED####GLOVES####BLOUSED####ZIPPED##_##CAMO##"; \
-        //hiddenSelectionsTextures[] = {73_TEXPATH(Uniforms,##CAMO##_CBUU_##SHIRT##_CO.paa)}; \
+#define ECH55D_HELMET(CAMO,VISOR) \
+    class 73STB_H_ECH55D_##CAMO##_##VISOR : TCP_H_Helmet_ECH55D_Black_Black { \
+        displayName = QUOTE(ECH55D Helmet CAMO VISOR); \
+        hiddenSelectionsTextures[] = { Q(STB73_TEXPATH(helmets,ECH55D_##CAMO##_helmet_co.paa)), Q(STB73_TEXPATH(helmets,ECH55D_##CAMO##_visor_co.paa)),"tcp\characters\BLUFOR\UNSC\ARMY\Vests\M43A\data\camo\White\vest_M43_DecalSheet_CA.paa" }; \
+    }; \
+    class 73STB_H_ECH55D_##CAMO##_##VISOR##_DP : TCP_H_Helmet_ECH55D_Black_Black_DP { \
+        hiddenSelectionsTextures[] = { Q(STB73_TEXPATH(helmets,ECH55D_##CAMO##_helmet_co.paa)),"\TCP\Characters\BLUFOR\UNSC\Marines\Headgear\helmet_ECH55D\data\camo\default\helmet_ECH55D_Visor_CA.paa","tcp\characters\BLUFOR\UNSC\ARMY\Vests\M43A\data\camo\White\vest_M43_DecalSheet_CA.paa"}; \
     };
