@@ -1,36 +1,38 @@
-class ViewCargo;
-class ViewOptics;
-class VehicleSystemsTemplateLeftCommander;
-class VehicleSystemsTemplateRightCommander;
-class VehicleSystemsTemplateLeftPilot;
-class VehicleSystemsTemplateRightPilot;
-class Turrets;
-class MainTurret;
-class CommanderOptics;
-class Components;
-class SensorTemplateIR;
-class SensorTemplateVisual;
-class SensorTemplateActiveRadar;
-class SensorTemplatePassiveRadar;
-class SensorTemplateLaser;
-class SensorTemplateNV;
-class CargoTurret_01;
-class animationSources;
-class HitPoints;
-class HitLFWheel;
-class HitLBWheel;
-class HitLMWheel;
-class HitLF2Wheel;
-class HitRFWheel;
-class HitRBWheel;
-class HitRMWheel;
-class HitRF2Wheel;
+class CfgVehicles {
+    class ViewCargo;
+    class ViewOptics;
+    class VehicleSystemsTemplateLeftCommander;
+    class VehicleSystemsTemplateRightCommander;
+    class VehicleSystemsTemplateLeftPilot;
+    class VehicleSystemsTemplateRightPilot;
+    class Turrets;
+    class MainTurret;
+    class CommanderOptics;
+    class Components;
+    class SensorTemplateIR;
+    class SensorTemplateVisual;
+    class SensorTemplateActiveRadar;
+    class SensorTemplatePassiveRadar;
+    class SensorTemplateLaser;
+    class SensorTemplateNV;
+    class CargoTurret_01;
+    class animationSources;
+    class HitPoints;
+    class HitLFWheel;
+    class HitLBWheel;
+    class HitLMWheel;
+    class HitLF2Wheel;
+    class HitRFWheel;
+    class HitRBWheel;
+    class HitRMWheel;
+    class HitRF2Wheel;
 
-#include "data\APC.hpp"
-#include "data\Tanks.hpp"
-#include "data\Cars.hpp"
-#include "data\Helicopter.hpp"
-#include "data\Planes.hpp"
-#include "data\Drone.hpp"
-#include "data\Aquatic.hpp"
-#include "data\Utility.hpp"
+    #include "data\APC.hpp"
+    #include "data\Tanks.hpp"
+    #include "data\Cars.hpp"
+    #include "data\Helicopter.hpp"
+    #include "data\Planes.hpp"
+    #include "data\Drone.hpp"
+    #include "data\Aquatic.hpp"
+    #include "data\Utility.hpp"
+};

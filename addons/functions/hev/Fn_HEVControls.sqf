@@ -1,4 +1,4 @@
-DMNS_HEV_CONTROL_KDEH = (findDisplay 46) displayAddEventHandler ["KeyDown", "
+private _kdeh = (findDisplay 46) displayAddEventHandler ["KeyDown", "
 
 	switch (_this select 1) do {
 
@@ -10,9 +10,14 @@ DMNS_HEV_CONTROL_KDEH = (findDisplay 46) displayAddEventHandler ["KeyDown", "
 
 "];
 
-DMNS_HEV_CONTROL_KEH = player addEventHandler ["Killed",{
-	if (!isNil "DMNS_HEV_CONTROL_KDEH") then {(findDisplay 46) displayRemoveEventHandler ["KeyDown", DMNS_HEV_CONTROL_KDEH];};
+private _keh = player addEventHandler ["Killed",{
+    private _kdeh_local = (findDisplay 46) getVariable ["DMNS_HEV_CONTROL_KDEH", objNull];
+    if (!isNull _kdeh_local) then {(findDisplay 46) displayRemoveEventHandler ["KeyDown", _kdeh_local]; (findDisplay 46) setVariable ["DMNS_HEV_CONTROL_KDEH", objNull];};
 }];
+
+// store handler ids on player/display for cross-file access
+(findDisplay 46) setVariable ["DMNS_HEV_CONTROL_KDEH", _kdeh, false];
+player setVariable ["DMNS_HEV_CONTROL_KEH", _keh, false];
 
 /*
 //case 30: { _HEV = vehicle player; _v = velocity _HEV; _HEV setVelocity [(_v select 0) - 1, (_v select 1), (_v select 2)]; };

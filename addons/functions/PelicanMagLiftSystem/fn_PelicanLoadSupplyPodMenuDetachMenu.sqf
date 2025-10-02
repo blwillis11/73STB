@@ -25,7 +25,7 @@
 			_count = 1;
 
 			{
-				_i = _control lbAdd ((format ["[%1] ",_count]) + (getText (configfile >> "CfgVehicles" >> typeOf _x >> "displayName")));
+				_i = _control lbAdd ((format ["[%1] ",_count]) + (getText (configOf _x >> "displayName")));
 				_count = _count + 1;
 			} forEach _podArray;
 

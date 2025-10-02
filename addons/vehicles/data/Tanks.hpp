@@ -1,16 +1,16 @@
 class VES_M875_SPH;
 
-class 73_M875:VES_M875_SPH
+class STB73_M875:VES_M875_SPH
 {
     displayName="[73] M875 Scorpion [SPH]";
     author= AUTHOR;
-    editorCategory = "73_STB";
-    editorSubcategory = "73_Tanks_EdSubCat";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_Tanks_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
     armor=450;
-    crew = "73_Crewman";
+    crew = "STB73_Crewman";
      class ace_cargo {
             class cargo {
                 class ACE_Tracks { // Doesn't have to have the same name as the item you're adding
@@ -23,7 +23,7 @@ class 73_M875:VES_M875_SPH
     class textureSources
     {};
     class VehicleSpawnerInfo {
-        class 73_GroundSpawner
+        class STB73_GroundSpawner
         {
             scope = 1;
             spawner= "73rd Mechanized";
@@ -41,16 +41,16 @@ class 73_M875:VES_M875_SPH
 };
 class VES_M808BM_MBT;
 
-class 73_M808BM_MBT:VES_M808BM_MBT
+class STB73_M808BM_MBT:VES_M808BM_MBT
 {
     displayName="[73] M808B/M Scorpion";
     author= AUTHOR;
-    editorCategory = "73_STB";
-    editorSubcategory = "73_Tanks_EdSubCat";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_Tanks_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "73_Crewman";
+    crew = "STB73_Crewman";
     armor=575;
     armorStructural=5;
      class ace_cargo {
@@ -137,7 +137,7 @@ class 73_M808BM_MBT:VES_M808BM_MBT
         transmissionDelay=0.1;
 };
     class VehicleSpawnerInfo {
-        class 73_GroundSpawner
+        class STB73_GroundSpawner
         {
             scope = 1;
             spawner= "73rd Mechanized";
@@ -155,16 +155,16 @@ class 73_M808BM_MBT:VES_M808BM_MBT
 };
 class VES_M808B2_MBT;
 
-class 73_M808B2_MBT:VES_M808B2_MBT
+class STB73_M808B2_MBT:VES_M808B2_MBT
 {
     displayName="[73] M808B2 Sun Devil";
     author= AUTHOR;
-    editorCategory = "73_STB";
-    editorSubcategory = "73_Tanks_EdSubCat";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_Tanks_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "73_Crewman";
+    crew = "STB73_Crewman";
     armor=575;
     armorStructural=5;
      class ace_cargo {
@@ -186,7 +186,7 @@ class 73_M808B2_MBT:VES_M808B2_MBT
         "V_FZ_Ground_Vehicles\data\Scorpion\V_M808S_SDG_CLS_CO.paa"
     };
     class VehicleSpawnerInfo {
-        class 73_GroundSpawner
+        class STB73_GroundSpawner
         {
             scope = 1;
             spawner= "73rd Mechanized";
@@ -204,16 +204,16 @@ class 73_M808B2_MBT:VES_M808B2_MBT
 };
 
 class DMNS_M808B;
-class 73_M808BMk2:DMNS_M808B
+class STB73_M808BMk2:DMNS_M808B
 {
     displayName="[73] M808B Scorpion MBT Mk.2";
     author= AUTHOR;
-    editorCategory = "73_STB";
-    editorSubcategory = "73_Tanks_EdSubCat";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_Tanks_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "73_Crewman";
+    crew = "STB73_Crewman";
     armor=575;
     armorStructural=5;
      class ace_cargo {
@@ -237,7 +237,7 @@ class 73_M808BMk2:DMNS_M808B
         "DMNS\DMNS_Armour\M808B_Scorpion\data\M808B_Track_Int_co.paa"
     };
     class VehicleSpawnerInfo {
-        class 73_GroundSpawner
+        class STB73_GroundSpawner
         {
             scope = 1;
             spawner= "73rd Mechanized";
@@ -292,20 +292,20 @@ class B_MBT_01_TUSK_F: B_MBT_01_cannon_F
 {
     class Components;
 };
-class 73_Merkava : B_MBT_01_TUSK_F
+class STB73_Merkava : B_MBT_01_TUSK_F
 {
     displayName="[73] Merkava";
     author= AUTHOR;
-    editorCategory = "73_STB";
-    editorSubcategory = "73_Tanks_EdSubCat";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_Tanks_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
     armor=450;
-    crew = "73_Crewman";
+    crew = "STB73_Crewman";
     typicalCargo[]=
     {
-        "73_Marine_Rifleman"
+        "STB73_Marine_Rifleman"
     };
     transportSoldier=7;
      class ace_cargo {
@@ -325,7 +325,7 @@ class 73_Merkava : B_MBT_01_TUSK_F
         "a3\Armor_F\Data\camonet_NATO_Green_CO.paa"
     };
     class VehicleSpawnerInfo {
-    class 73_GroundSpawner
+    class STB73_GroundSpawner
     {
         scope = 1;
         spawner= "73rd Mechanized";

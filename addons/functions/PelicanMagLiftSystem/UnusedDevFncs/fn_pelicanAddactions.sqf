@@ -86,7 +86,7 @@ _this addAction ["Load Supply Pods",
  15 
 ]; 
  
-_this addEventHandler ["killed",{ 
+_this addEventHandler ["Killed",{ 
 	{ 
 		detach _x;  
 		_x setVelocity [0,0,-1]; 

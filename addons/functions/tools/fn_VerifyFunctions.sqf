@@ -4,11 +4,9 @@
 
 private _functionsToCheck = [
     /* STB73 Modules */
-    "STB73_fnc_ModuleHEV",
     "STB73_fnc_ModuleODSTHEV",
     "STB73_fnc_ModuleBJHEV",
     "STB73_fnc_ModuleOCLSSquadPod",
-    "STB73_fnc_ModuleHEVCleanUp",
     "STB73_fnc_ModulePelicanAirAssault",
 
     /* STB73 Thrusters */

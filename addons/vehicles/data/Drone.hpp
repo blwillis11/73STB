@@ -1,14 +1,14 @@
 class B_UGV_01_rcws_F;
 
-class 73_POGV_RCWS: B_UGV_01_rcws_F
+class STB73_POGV_RCWS: B_UGV_01_rcws_F
 {
     ace_cargo_space=14;
     cargoProxyIndexes[]={};
     displayName="POG-V Mk.1";
     author= AUTHOR;
-    faction = "73_STB";
-    editorCategory = "73_STB";
-    editorSubcategory = "73_APCs_EdSubCat";
+    faction = "STB73_STB";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_APCs_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
@@ -268,7 +268,7 @@ class 73_POGV_RCWS: B_UGV_01_rcws_F
         };
     };
     class VehicleSpawnerInfo {
-        class 73_GroundSpawner
+        class STB73_GroundSpawner
         {
             scope = 1;
             spawner= "73rd Mechanized";
@@ -285,7 +285,7 @@ class 73_POGV_RCWS: B_UGV_01_rcws_F
     };
 };
 
-class 73_COGV_RCWS: 73_POGV_RCWS
+class STB73_COGV_RCWS: STB73_POGV_RCWS
 {
     cargoProxyIndexes[]={};
     enginePower=128;
@@ -350,7 +350,7 @@ class 73_COGV_RCWS: 73_POGV_RCWS
             turretInfoType="RscOptics_UGV_gunner";
             weapons[]=
             {
-                "73_COGV_Support_Rocket",
+                "STB73_COGV_Support_Rocket",
                 "OPTRE_M12_SOC",
                 "CMFlareLauncher",
                 "SmokeLauncher",
@@ -564,7 +564,7 @@ class 73_COGV_RCWS: 73_POGV_RCWS
         };
 };
     class VehicleSpawnerInfo {
-        class 73_GroundSpawner
+        class STB73_GroundSpawner
         {
             scope = 1;
             spawner= "73rd Mechanized";

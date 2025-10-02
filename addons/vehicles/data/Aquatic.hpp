@@ -1,13 +1,13 @@
 class B_SDV_01_F;
-class 73_SDV_ODST: B_SDV_01_F
+class STB73_SDV_ODST: B_SDV_01_F
 {
     displayName="[73] SDV";
     author= AUTHOR;
-    faction = "73_STB";
-    editorCategory = "73_STB";
+    faction = "STB73_STB";
+    editorCategory = "STB73_STB";
     editorSubcategory="EdSubcat_Submersibles";
     fuelCapacity=300;
-    crew="73_STB_ODST_Rifleman";
+    crew="STB73_STB_ODST_Rifleman";
     armor=100;
     acceleration=12;
     maxSpeed=65;

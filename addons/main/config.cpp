@@ -2,7 +2,7 @@
 
 class CfgPatches
 {
-    class 73STB_main
+    class 73STB_Main
     {
         name = COMPONENT_NAME;
         units[] = {};
@@ -17,11 +17,13 @@ class CfgPatches
         VERSION_CONFIG;
     };
 
-    class X73STB_main: 73STB_main { // just in-case anything requires "acex_main"
+    class X73STB_main: 73STB_Main { // just in-case anything requires "acex_main"
         units[] = {};
         weapons[] = {};
     };
 };
+
+#include "CfgEditor.hpp"
 
 class CfgMods {
     class PREFIX {

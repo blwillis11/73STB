@@ -1,15 +1,15 @@
 class OPTRE_M494;
-class 73_M494_Oryx: OPTRE_M494
+class STB73_M494_Oryx: OPTRE_M494
 {
     displayName="[73] M494 Oryx";
     author= AUTHOR;
-    faction = "73_STB";
-    editorCategory = "73_STB";
-    editorSubcategory = "73_APCs_EdSubCat";
+    faction = "STB73_STB";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_APCs_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "73_Crewman";
+    crew = "STB73_Crewman";
     class ace_cargo {
         class cargo {
             class ACE_Tracks { // Doesn't have to have the same name as the item you're adding
@@ -19,7 +19,7 @@ class 73_M494_Oryx: OPTRE_M494
         };
     };
     class VehicleSpawnerInfo {
-        class 73_GroundSpawner
+        class STB73_GroundSpawner
         {
             scope = 1;
             spawner= "73rd Mechanized";
@@ -36,16 +36,16 @@ class 73_M494_Oryx: OPTRE_M494
     };
 };
 class VES_IFV76_A;
-class 73_IFV76_A:VES_IFV76_A
+class STB73_IFV76_A:VES_IFV76_A
 {
     displayName="[73] IFV-76 Honeybadger";
     author= AUTHOR;
-    editorCategory = "73_STB";
-    editorSubcategory = "73_APCs_EdSubCat";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_APCs_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "73_Crewman";
+    crew = "STB73_Crewman";
     class ACE_Cargo
     {
         class Cargo
@@ -58,7 +58,7 @@ class 73_IFV76_A:VES_IFV76_A
         };
     };
     class VehicleSpawnerInfo {
-        class 73_GroundSpawner
+        class STB73_GroundSpawner
         {
             scope = 1;
             spawner= "73rd Mechanized";
@@ -76,16 +76,16 @@ class 73_IFV76_A:VES_IFV76_A
 };
 
 class VES_IFV76;
-class 73_IFV76:VES_IFV76
+class STB73_IFV76:VES_IFV76
 {
     displayName="[73] APC-76 Honeybadger";
     author= AUTHOR;
-    editorCategory = "73_STB";
-    editorSubcategory = "73_APCs_EdSubCat";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_APCs_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "73_Crewman";
+    crew = "STB73_Crewman";
     class ACE_Cargo
     {
         class Cargo
@@ -98,7 +98,7 @@ class 73_IFV76:VES_IFV76
         };
     };
     class VehicleSpawnerInfo {
-        class 73_GroundSpawner
+        class STB73_GroundSpawner
         {
             scope = 1;
             spawner= "73rd Mechanized";
@@ -116,16 +116,16 @@ class 73_IFV76:VES_IFV76
 };
 
 class VES_M412_IFV;
-class 73_M412_IFV:VES_M412_IFV
+class STB73_M412_IFV:VES_M412_IFV
 {
     displayName="[73] M412 Bison IFV";
     author= AUTHOR;
-    editorCategory = "73_STB";
-    editorSubcategory = "73_APCs_EdSubCat";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_APCs_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "73_Crewman";
+    crew = "STB73_Crewman";
     class ACE_Cargo
     {
         class Cargo
@@ -138,7 +138,7 @@ class 73_M412_IFV:VES_M412_IFV
         };
     };
     class VehicleSpawnerInfo {
-        class 73_GroundSpawner
+        class STB73_GroundSpawner
         {
             scope = 1;
             spawner= "73rd Mechanized";
@@ -155,16 +155,16 @@ class 73_M412_IFV:VES_M412_IFV
     };
 };
 class VES_M413_MGS;
-class 73_M413_MGS:VES_M413_MGS
+class STB73_M413_MGS:VES_M413_MGS
 {
     displayName="[73] M413 Bison MGS";
     author= AUTHOR;
-    editorCategory = "73_STB";
-    editorSubcategory = "73_APCs_EdSubCat";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_APCs_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "73_Crewman";
+    crew = "STB73_Crewman";
     class ACE_Cargo
     {
         class Cargo
@@ -177,7 +177,7 @@ class 73_M413_MGS:VES_M413_MGS
         };
     };
     class VehicleSpawnerInfo {
-        class 73_GroundSpawner
+        class STB73_GroundSpawner
         {
             scope = 1;
             spawner= "73rd Mechanized";
@@ -196,16 +196,16 @@ class 73_M413_MGS:VES_M413_MGS
 
 class DMNS_M511_Springbok_APC;
 
-class 73_M511_Springbok_APC : DMNS_M511_Springbok_APC
+class STB73_M511_Springbok_APC : DMNS_M511_Springbok_APC
 {
     displayName="[73] M511-Springbok Transport";
     author= AUTHOR;
-    editorCategory = "73_STB";
-    editorSubcategory = "73_APCs_EdSubCat";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_APCs_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "73_Crewman";
+    crew = "STB73_Crewman";
     class ACE_Cargo
     {
         class Cargo
@@ -218,7 +218,7 @@ class 73_M511_Springbok_APC : DMNS_M511_Springbok_APC
         };
     };
     class VehicleSpawnerInfo {
-        class 73_GroundSpawner
+        class STB73_GroundSpawner
         {
             scope = 1;
             spawner= "73rd Mechanized";
@@ -236,16 +236,16 @@ class 73_M511_Springbok_APC : DMNS_M511_Springbok_APC
 };
 
 class DMNS_M511_Springbok_IFV;
-class 73_M511_Springbok_IFV : DMNS_M511_Springbok_IFV
+class STB73_M511_Springbok_IFV : DMNS_M511_Springbok_IFV
 {
     displayName="[73] M511-Springbok IFV";
     author= AUTHOR;
-    editorCategory = "73_STB";
-    editorSubcategory = "73_APCs_EdSubCat";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_APCs_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "73_Crewman";
+    crew = "STB73_Crewman";
     class ACE_Cargo
     {
         class Cargo
@@ -258,7 +258,7 @@ class 73_M511_Springbok_IFV : DMNS_M511_Springbok_IFV
         };
     };
     class VehicleSpawnerInfo {
-        class 73_GroundSpawner
+        class STB73_GroundSpawner
         {
             scope = 1;
             spawner= "73rd Mechanized";
@@ -275,16 +275,16 @@ class 73_M511_Springbok_IFV : DMNS_M511_Springbok_IFV
     };
 };
 class DMNS_M511_Springbok_MGS;
-class 73_M511_Springbok_MGS : DMNS_M511_Springbok_MGS
+class STB73_M511_Springbok_MGS : DMNS_M511_Springbok_MGS
 {
     displayName="[73] M511-Springbok MGS";
     author= AUTHOR;
-    editorCategory = "73_STB";
-    editorSubcategory = "73_APCs_EdSubCat";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_APCs_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "73_Crewman";
+    crew = "STB73_Crewman";
     class ACE_Cargo
     {
         class Cargo
@@ -297,7 +297,7 @@ class 73_M511_Springbok_MGS : DMNS_M511_Springbok_MGS
         };
     };
     class VehicleSpawnerInfo {
-        class 73_GroundSpawner
+        class STB73_GroundSpawner
         {
             scope = 1;
             spawner= "73rd Mechanized";
@@ -314,16 +314,16 @@ class 73_M511_Springbok_MGS : DMNS_M511_Springbok_MGS
     };
 };
 class DMNS_M511_Springbok_AA;
-class 73_M511_Springbok_AA : DMNS_M511_Springbok_AA
+class STB73_M511_Springbok_AA : DMNS_M511_Springbok_AA
 {
     displayName="[73] M511-Springbok AA";
     author= AUTHOR;
-    editorCategory = "73_STB";
-    editorSubcategory = "73_APCs_EdSubCat";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_APCs_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "73_Crewman";
+    crew = "STB73_Crewman";
     class ACE_Cargo
     {
         class Cargo
@@ -336,7 +336,7 @@ class 73_M511_Springbok_AA : DMNS_M511_Springbok_AA
         };
     };
     class VehicleSpawnerInfo {
-        class 73_GroundSpawner
+        class STB73_GroundSpawner
         {
             scope = 1;
             spawner= "73rd Mechanized";
@@ -366,16 +366,16 @@ class B_APC_Tracked_01_CRV_F: B_APC_Tracked_01_base_F
     };
     class ACE_SelfActions;
 };
-class 73_Hammerhead_Repair: B_APC_Tracked_01_CRV_F
+class STB73_Hammerhead_Repair: B_APC_Tracked_01_CRV_F
 {
     displayName="[73] Hammerhead [Repair]";
     author= AUTHOR;
-    editorCategory = "73_STB";
-    editorSubcategory = "73_APCs_EdSubCat";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_APCs_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "73_Crewman";
+    crew = "STB73_Crewman";
     enginePower=1500;
     peakTorque=6000;
     idleRPM=1000;
@@ -407,7 +407,7 @@ class 73_Hammerhead_Repair: B_APC_Tracked_01_CRV_F
         "a3\Armor_F\Data\camonet_NATO_Green_CO.paa"
     };
     class VehicleSpawnerInfo {
-        class 73_GroundSpawner
+        class STB73_GroundSpawner
         {
             scope = 1;
             spawner= "73rd Mechanized";
@@ -492,9 +492,9 @@ class 73_Hammerhead_Repair: B_APC_Tracked_01_CRV_F
         delete _xx_Titan_AT;
         delete _xx_Titan_AP;
         delete _xx_Titan_AA;
-        class _xx_73_60Rnd_5x23Caseless_FMJ_Mag_Tracer
+        class _xx_STB73_60Rnd_5x23Caseless_FMJ_Mag_Tracer
         {
-            magazine="73_60Rnd_5x23Caseless_FMJ_Mag_Tracer";
+            magazine="STB73_60Rnd_5x23Caseless_FMJ_Mag_Tracer";
             count=20;
         };
     };
@@ -659,14 +659,14 @@ class 73_Hammerhead_Repair: B_APC_Tracked_01_CRV_F
             };
             soundServo[]=
             {
-                "A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_comm",
+                "A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_comm.ogg",
                 0.56234133,
                 1,
                 30
             };
             soundServoVertical[]=
             {
-                "A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_comm",
+                "A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_comm.ogg",
                 0.56234133,
                 1,
                 30
@@ -802,7 +802,7 @@ class APC_Wheeled_02_base_v2_F: APC_Wheeled_02_base_F
         class MainTurret;
     };
 };
-class 73_Iguana: APC_Wheeled_02_base_v2_F
+class STB73_Iguana: APC_Wheeled_02_base_v2_F
 {
     tf_hasLRradio=1;
     tf_isolatedAmount=0.64999998;
@@ -953,33 +953,33 @@ class 73_Iguana: APC_Wheeled_02_base_v2_F
     class TextureSources
     {};
 };
-class 73_Iguana_APC: 73_Iguana
+class STB73_Iguana_APC: STB73_Iguana
 {
     displayname="[73] Iguana APC";
     author= AUTHOR;
-    editorCategory = "73_STB";
-    editorSubcategory = "73_APCs_EdSubCat";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_APCs_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "73_Crewman";
+    crew = "STB73_Crewman";
     accuracy=1000;
     editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\O_APC_Wheeled_02_rcws_v2_F.jpg";
     _generalMacro="O_APC_Wheeled_02_rcws_v2_F";
     hiddenSelectionsTextures[]=
     {
-        "73_vehicles\data\Iguana\Iguana_01_Ext_co.paa",
-        "73_vehicles\data\Iguana\Iguana_02_Ext_co.paa",
-        "73_vehicles\data\Iguana\Iguana_Turret.paa",
+        "STB73_vehicles\data\Iguana\Iguana_01_Ext_co.paa",
+        "STB73_vehicles\data\Iguana\Iguana_02_Ext_co.paa",
+        "STB73_vehicles\data\Iguana\Iguana_Turret.paa",
         "A3\Armor_F\Data\camonet_AAF_FIA_green_CO.paa",
         "A3\armor_f\data\cage_csat_green_co.paa"
     };
     typicalCargo[]=
     {
-        "73_Marine_Rifleman"
+        "STB73_Marine_Rifleman"
     };
     class VehicleSpawnerInfo {
-        class 73_GroundSpawner
+        class STB73_GroundSpawner
         {
             scope = 1;
             spawner= "73rd Mechanized";
@@ -990,7 +990,7 @@ class 73_Iguana_APC: 73_Iguana
             priority = 1;
             liveries[]=
             {
-             "[""Standard"",[""73_vehicles\data\Iguana\Iguana_01_Ext_co.paa"",""73_vehicles\data\Iguana\Iguana_02_Ext_co.paa"",""73_vehicles\data\Iguana\Iguana_Turret.paa"",""A3\Armor_F\Data\camonet_AAF_FIA_green_CO.paa"",""A3\armor_f\data\cage_csat_green_co.paa""]]",
+             "[""Standard"",[""STB73_vehicles\data\Iguana\Iguana_01_Ext_co.paa"",""STB73_vehicles\data\Iguana\Iguana_02_Ext_co.paa"",""STB73_vehicles\data\Iguana\Iguana_Turret.paa"",""A3\Armor_F\Data\camonet_AAF_FIA_green_CO.paa"",""A3\armor_f\data\cage_csat_green_co.paa""]]",
             };
         };
     };
@@ -1006,30 +1006,30 @@ class 73_Iguana_APC: 73_Iguana
         };
     };
 };
-class 73_Iguana_Medical_APC: 73_Iguana
+class STB73_Iguana_Medical_APC: STB73_Iguana
 {
     displayname="[73] Iguana Medical APC";
     author= AUTHOR;
-    editorCategory = "73_STB";
-    editorSubcategory = "73_APCs_EdSubCat";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_APCs_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "73_Crewman";
+    crew = "STB73_Crewman";
     accuracy=1000;
     editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\O_APC_Wheeled_02_rcws_v2_F.jpg";
     _generalMacro="O_APC_Wheeled_02_rcws_v2_F";
     ace_medical_isMedicalVehicle=1;
     hiddenSelectionsTextures[]=
     {
-        "73_vehicles\data\Iguana\Iguana_01_Ext_co.paa",
-        "73_vehicles\data\Iguana\Iguana_02_Ext_co.paa",
-        "73_vehicles\data\Iguana\Iguana_Turret.paa",
+        "STB73_vehicles\data\Iguana\Iguana_01_Ext_co.paa",
+        "STB73_vehicles\data\Iguana\Iguana_02_Ext_co.paa",
+        "STB73_vehicles\data\Iguana\Iguana_Turret.paa",
         "A3\Armor_F\Data\camonet_AAF_FIA_green_CO.paa",
         "A3\armor_f\data\cage_csat_green_co.paa"
     };
     class VehicleSpawnerInfo {
-        class 73_GroundSpawner
+        class STB73_GroundSpawner
         {
             scope = 1;
             spawner= "73rd Mechanized";
@@ -1040,7 +1040,7 @@ class 73_Iguana_Medical_APC: 73_Iguana
             priority = 1;
             liveries[]=
             {
-             "[""Standard"",[""73_vehicles\data\Iguana\Iguana_01_Ext_co.paa"",""73_vehicles\data\Iguana\Iguana_02_Ext_co.paa"",""73_vehicles\data\Iguana\Iguana_Turret.paa"",""A3\Armor_F\Data\camonet_AAF_FIA_green_CO.paa"",""A3\armor_f\data\cage_csat_green_co.paa""]]",
+             "[""Standard"",[""STB73_vehicles\data\Iguana\Iguana_01_Ext_co.paa"",""STB73_vehicles\data\Iguana\Iguana_02_Ext_co.paa"",""STB73_vehicles\data\Iguana\Iguana_Turret.paa"",""A3\Armor_F\Data\camonet_AAF_FIA_green_CO.paa"",""A3\armor_f\data\cage_csat_green_co.paa""]]",
             };
         };
     };
@@ -1149,7 +1149,7 @@ class 73_Iguana_Medical_APC: 73_Iguana
     };
     typicalCargo[]=
     {
-        "73_Marine_Rifleman"
+        "STB73_Marine_Rifleman"
     };
     class ACE_Cargo
     {
@@ -1165,16 +1165,16 @@ class 73_Iguana_Medical_APC: 73_Iguana
 };
 
 class B_AFV_Wheeled_01_up_cannon_F;
-class 73_Komodo: B_AFV_Wheeled_01_up_cannon_F
+class STB73_Komodo: B_AFV_Wheeled_01_up_cannon_F
 {
     displayName="[73] MGS-7 Komodo";
     author= AUTHOR;
-    editorCategory = "73_STB";
-    editorSubcategory = "73_APCs_EdSubCat";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_APCs_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "73_Crewman";
+    crew = "STB73_Crewman";
     hiddenSelections[]=
     {
         "camo1",
@@ -1196,7 +1196,7 @@ class 73_Komodo: B_AFV_Wheeled_01_up_cannon_F
         "A3\Armor_F_Tank\AFV_Wheeled_01\Data\afv_wheeled_01_EXT3_CO.paa"
     };
     class VehicleSpawnerInfo {
-        class 73_GroundSpawner
+        class STB73_GroundSpawner
         {
             scope = 1;
             spawner= "73rd Mechanized";
@@ -1213,7 +1213,7 @@ class 73_Komodo: B_AFV_Wheeled_01_up_cannon_F
     };
     typicalCargo[]=
     {
-        "73_Marine_Rifleman"
+        "STB73_Marine_Rifleman"
     };
     textureList[]=
     {};

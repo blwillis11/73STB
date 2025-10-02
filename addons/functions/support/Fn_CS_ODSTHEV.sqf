@@ -44,24 +44,24 @@ private _units = switch (typeName (_this select 0)) do {
 		for "_i" from 1 to (_this select 0) do {
 						
 			private _randomUnitType = selectRandom [
-					"73_STB_ODST_Grenadier",
-					"73_STB_ODST_Rifleman",
-					"73_STB_ODST_AT",
-					"73_STB_ODST_Autorifleman",
-					"73_STB_ODST_Sniper",
-					"73_STB_ODST_Marksman",
-					"73_STB_ODST_Scout",
-					"73_STB_ODST_Demo",
-					"73_STB_ODST_Medic",
-					"73_STB_ODST_Team_Lead",
-					"73_STB_ODST_Squad_Lead"
+					"STB73_STB_ODST_Grenadier",
+					"STB73_STB_ODST_Rifleman",
+					"STB73_STB_ODST_AT",
+					"STB73_STB_ODST_Autorifleman",
+					"STB73_STB_ODST_Sniper",
+					"STB73_STB_ODST_Marksman",
+					"STB73_STB_ODST_Scout",
+					"STB73_STB_ODST_Demo",
+					"STB73_STB_ODST_Medic",
+					"STB73_STB_ODST_Team_Lead",
+					"STB73_STB_ODST_Squad_Lead"
 			];
 
 			_selectedUnitTypes pushBack _randomUnitType;
 		};
 		_selectedUnitTypes
 	};
-	default { ["73_STB_ODST_AT","73_STB_ODST_Team_Lead","73_STB_ODST_Marksman","73_STB_ODST_Medic"] };
+	default { ["STB73_STB_ODST_AT","STB73_STB_ODST_Team_Lead","STB73_STB_ODST_Marksman","STB73_STB_ODST_Medic"] };
 };
 
 private _group = [[0,0,0], _side, _units,[],[],[],[],[],0] call BIS_fnc_spawnGroup;	

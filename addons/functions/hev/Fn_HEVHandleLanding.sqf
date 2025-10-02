@@ -68,9 +68,15 @@ params [
 			resetCamShake;
 
 			// should not be a global Variable, change when pods are added to local nameSpace Variable
-			if (!isNil "DMNS_HEV_CONTROL_KDEH") then {
-				(findDisplay 46) displayRemoveEventHandler ["KeyDown", DMNS_HEV_CONTROL_KDEH];
-				_gunner removeEventHandler ["killed", DMNS_HEV_CONTROL_KEH];
+			private _kdeh_local = (findDisplay 46) getVariable ["DMNS_HEV_CONTROL_KDEH", objNull];
+			private _keh_local = (_gunner) getVariable ["DMNS_HEV_CONTROL_KEH", objNull];
+			if (!isNull _kdeh_local) then {
+				(findDisplay 46) displayRemoveEventHandler ["KeyDown", _kdeh_local];
+				(findDisplay 46) setVariable ["DMNS_HEV_CONTROL_KDEH", objNull];
+			};
+			if (!isNull _keh_local) then {
+				_gunner removeEventHandler ["Killed", _keh_local];
+				_gunner setVariable ["DMNS_HEV_CONTROL_KEH", objNull];
 			};
 		};
 	},

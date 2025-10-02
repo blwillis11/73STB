@@ -5,7 +5,7 @@ _backpack = backpack player;
 if ((_backpack != "STB73_JumpPack_on"  AND _backpack != "STB73_JumpPack")) exitWith {};
 if !(STB73_JumpPack_Enabled) exitWith {hint "JumpPacks are currently disabled by an admin";};
 
-if ((player getVariable ["ace_medical_isUnconscious", false]) or (not (alive player)) or (vehicle player != player)) exitWith {};
+if ((player getVariable ["ace_medical_isUnconscious", false]) or (not (alive player)) or (player in (vehicle player))) exitWith {};
 
 
 if (not _held) exitWith {
@@ -23,7 +23,7 @@ if (not _held) exitWith {
     if(not (isNil "STB73_JumpPackWaiting")) then {
         if(STB73_JumpPackWaiting) exitWith {};
     };
-    if(not isTouchingGround player and (vehicle player == player)) then {
+    if(not isTouchingGround player and (not (player in (vehicle player)))) then {
         waitUntil{
             uiSleep .1;
             [(getPosASL player),velocity (vehicle player)] call STB73_fnc_RoofStuckCheck;

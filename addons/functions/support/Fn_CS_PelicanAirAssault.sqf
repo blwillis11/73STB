@@ -120,7 +120,7 @@ _VehWPPosArray = [];
 
 // Spawn Pelican. 
 _className = switch _style do {
-	case "73rd STB": 	 { "73_D77_TC_Pelican" };
+	case "73rd STB": 	 { "STB73_D77_TC_Pelican" };
 	case "10th MEB": 	 { "Splits_UNSC_D77_TC_Pelican" };
 	default	 			 { "Splits_D77_TC_Pelican" };
 };
@@ -137,13 +137,13 @@ _pelican setVehicleLock "LOCKEDPLAYER";
 
 // End If Event Handlers Pelican. 
 {
-	_x addEventHandler ["killed",{
+	_x addEventHandler ["Killed",{
 		if isServer then { 
 			_veh = ( (_this select 0) getVariable ["OPTRE_CS_SupPods", objNull] );
 			(_this select 0) setVariable ["OPTRE_CS_SupPods", objNull];
 			if (!isNull _veh) then {detach _veh;}; 
-			{ (_this select 0) removeAllEventHandlers _x; } forEach ["GetOut","HandleDamage","killed"];
-			{_x addCuratorEditableObjects [( ( (_this select 0) getVariable ["OPTRE_AllSpawned",[]] ) + [_veh]), true];} forEach allCurators;	
+			{ (_this select 0) removeAllEventHandlers _x; } forEach ["GetOut","HandleDamage","Killed"];
+			{_x addCuratorEditableObjects [( ( (_this select 0) getVariable ["OPTRE_AllSpawned",[]] ) + [_veh]), true];} forEach allCurators;    
 		};
 	}];
 } forEach [_pelican, driver _pelican];
@@ -154,7 +154,7 @@ _pelican addEventHandler ["GetOut",{
 				_veh = ( (_this select 0) getVariable ["OPTRE_CS_SupPods", objNull] );
 				(_this select 0) setVariable ["OPTRE_CS_SupPods", objNull];
 				if (!isNull _veh) then {detach _veh;};
-				{ (_this select 0) removeAllEventHandlers _x; } forEach ["GetOut","HandleDamage","killed"];
+				{ (_this select 0) removeAllEventHandlers _x; } forEach ["GetOut","HandleDamage","Killed"];
 				{_x addCuratorEditableObjects [( ( (_this select 0) getVariable ["OPTRE_AllSpawned",[]] ) + [_veh]), true];} forEach allCurators;	
 			};
 		};	
@@ -167,8 +167,8 @@ _squad = if (typeName _squadsFactions == "ARRAY") then {
 	_squadsFactions
 } else {
 	(switch _squadsFactions do {
-		case "73rd STB": 	{ ["73_STB_ODST_Team_Lead","73_STB_ODST_Medic","73_STB_ODST_AT","73_STB_ODST_Rifleman","73_STB_ODST_Demo","73_STB_ODST_Autorifleman"] };
-		case "10th MEB": 	{ ["73_Marine_Team_Lead","73_Marine_Medic","73_Marine_Rifleman_AT","73_Marine_Rifleman","73_Marine_RTO_Operator","73_Marine_Autorifleman"] };
+		case "73rd STB": 	{ ["STB73_STB_ODST_Team_Lead","STB73_STB_ODST_Medic","STB73_STB_ODST_AT","STB73_STB_ODST_Rifleman","STB73_STB_ODST_Demo","STB73_STB_ODST_Autorifleman"] };
+		case "10th MEB": 	{ ["STB73_Marine_Team_Lead","STB73_Marine_Medic","STB73_Marine_Rifleman_AT","STB73_Marine_Rifleman","STB73_Marine_RTO_Operator","STB73_Marine_Autorifleman"] };
 	})
 };
 

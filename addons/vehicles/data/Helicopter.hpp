@@ -1,21 +1,21 @@
 class OPTRE_UNSC_hornet_CAS;
-class 73_AV14_Hornet_CAS: OPTRE_UNSC_hornet_CAS
+class STB73_AV14_Hornet_CAS: OPTRE_UNSC_hornet_CAS
 {
     displayName = "[73] AV-14 Hornet [CAS]";
     author= AUTHOR;
-    editorCategory = "73_STB";
-    editorSubcategory = "73_Helicopters_EdSubCat";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_Helicopters_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
     class EventHandlers: EventHandlers
     {
-        class 73_RegisterThrusters_EH
+        class STB73_RegisterThrusters_EH
         {
-            init = "[(_this select 0),true,false] call STB73_fnc_RegisterThrusters;";
+            init = "[(_this select 0),true,false] call STBSTB73_fnc_RegisterThrusters;";
         };
     };
-    crew = "73_Aviator";
+    crew = "STB73_Aviator";
     hiddenSelectionsTextures[] =
     {
         "optre_vehicles_air\hornet\data\hornet_hull_standard_co.paa",
@@ -28,7 +28,7 @@ class 73_AV14_Hornet_CAS: OPTRE_UNSC_hornet_CAS
         #include "cfg\UtilityActions.hpp"
     };
     class VehicleSpawnerInfo {
-        class 73_AirSpawner
+        class STB73_AirSpawner
         {
             scope = 1;
             spawner= "73rd Aviation";
@@ -45,23 +45,23 @@ class 73_AV14_Hornet_CAS: OPTRE_UNSC_hornet_CAS
     };
 };
 class OPTRE_UNSC_hornet_CAP;
-class 73_AV14_Hornet_CAP: OPTRE_UNSC_hornet_CAP
+class STB73_AV14_Hornet_CAP: OPTRE_UNSC_hornet_CAP
 {
     displayName = "[73] AV-14 Hornet [CAP]";
     author= AUTHOR;
-    editorCategory = "73_STB";
-    editorSubcategory = "73_Helicopters_EdSubCat";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_Helicopters_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
     class EventHandlers: EventHandlers
     {
-        class 73_RegisterThrusters_EH
+        class STB73_RegisterThrusters_EH
         {
-            init = "[(_this select 0),true,false] call STB73_fnc_RegisterThrusters;";
+            init = "[(_this select 0),true,false] call STBSTB73_fnc_RegisterThrusters;";
         };
     };
-    crew = "73_Aviator";
+    crew = "STB73_Aviator";
     hiddenSelectionsTextures[] =
     {
         "optre_vehicles_air\hornet\data\hornet_hull_standard_co.paa",
@@ -76,7 +76,7 @@ class 73_AV14_Hornet_CAP: OPTRE_UNSC_hornet_CAP
         #include "cfg\UtilityActions.hpp"
     };
     class VehicleSpawnerInfo {
-        class 73_AirSpawner
+        class STB73_AirSpawner
         {
             scope = 1;
             spawner= "73rd Aviation";
@@ -94,20 +94,20 @@ class 73_AV14_Hornet_CAP: OPTRE_UNSC_hornet_CAP
 };
 
 class Splits_UNSC_D77_TC_Pelican;
-class 73_D77_TC_Pelican: Splits_UNSC_D77_TC_Pelican
+class STB73_D77_TC_Pelican: Splits_UNSC_D77_TC_Pelican
 {
     displayName = "[73] D77-TC Pelican";
-    editorCategory = "73_STB";
-    editorSubcategory = "73_Helicopters_EdSubCat";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_Helicopters_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "73_Aviator";
+    crew = "STB73_Aviator";
     hiddenSelectionsTextures[] =
     {
-        "73_vehicles\data\Pelican\body_co.paa",
-        "73_vehicles\data\Pelican\wings_and_gear_co.paa",
-        "73_vehicles\data\Pelican\weaponry_co.paa"
+        "z\73STB\addons\vehicles\data\Pelican\body_co.paa",
+        "z\73STB\addons\vehicles\data\Pelican\wings_and_gear_co.paa",
+        "z\73STB\addons\vehicles\data\Pelican\weaponry_co.paa"
     };
     transportVehiclesCount = 2;  // Max vehicles loadable (e.g., 1 Warthog + 1 Mongoose)
     transportVehiclesMass = 10000;  // Total mass limit (kg); adjust for balance
@@ -118,63 +118,63 @@ class 73_D77_TC_Pelican: Splits_UNSC_D77_TC_Pelican
     class TransportVehicles {
         class Cargo1 {
             name = "FrontLeft";
-            type = "73_M274_ATV";  // Example: Warthog class
+            type = "STB73_M274_ATV";  // Example: Warthog class
             direction = "forward";  // Align forward in bay
             offset[] = {1.15, 6, 2.13};  // Relative offset from Pelican's center (tweak in editor)
             maxLoadCoefficient = 0.5;  // Full size allowed
         };
         class Cargo2 {
             name = "FrontRight";
-            type = "73_M274_ATV";  // Example: Mongoose ATV
+            type = "STB73_M274_ATV";  // Example: Mongoose ATV
             direction = "forward";
             offset[] = {-1.15, 6, 2.13};
             maxLoadCoefficient = 0.5;  // Half size for smaller vehicle
         };
         class Cargo3 {
             name = "BackLeft";
-            type = "73_M274_ATV";  // Example: Mongoose ATV
+            type = "STB73_M274_ATV";  // Example: Mongoose ATV
             direction = "forward";
             offset[] = {-1.15, 2.3, 2.13};
             maxLoadCoefficient = 0.5;  // Half size for smaller vehicle
         };
         class Cargo4 {
             name = "BackRight";
-            type = "73_M274_ATV";  // Example: Mongoose ATV
+            type = "STB73_M274_ATV";  // Example: Mongoose ATV
             direction = "forward";
             offset[] = {1.15, 2.3, 2.13};
             maxLoadCoefficient = 0.5;  // Half size for smaller vehicle
         };
         class Cargo5 {
             name = "BackLeft";
-            type = "73_M274_ATV";  // Example: Mongoose ATV
+            type = "STB73_M274_ATV";  // Example: Mongoose ATV
             direction = "forward";
             offset[] = {-1.15, .45, 2.13};
             maxLoadCoefficient = 0.5;  // Half size for smaller vehicle
         };
         class Cargo6 {
             name = "BackRight";
-            type = "73_M274_ATV";  // Example: Mongoose ATV
+            type = "STB73_M274_ATV";  // Example: Mongoose ATV
             direction = "forward";
             offset[] = {1.15, .45, 2.13};
             maxLoadCoefficient = 0.5;  // Half size for smaller vehicle
         };
         class Cargo7 {
             name = "MainBayCenter";
-            type = "73_SDV_ODST";  // Example: Mongoose ATV
+            type = "STB73_SDV_ODST";  // Example: Mongoose ATV
             direction = "backward";
             offset[] = {0, 4.15, 2.13};
             maxLoadCoefficient = 0.5;  // Half size for smaller vehicle
         };
         class Cargo8 {
             name = "MainBayCenter";
-            type = "73_POGV_RCWS";  // Example: Mongoose ATV
+            type = "STB73_POGV_RCWS";  // Example: Mongoose ATV
             direction = "backward";
             offset[] = {0, 4.15, 2.13};
             maxLoadCoefficient = 0.5;  // Half size for smaller vehicle
         };
         class Cargo9 {
             name = "MainBayCenter";
-            type = "73_COGV_RCWS";  // Example: Mongoose ATV
+            type = "STB73_COGV_RCWS";  // Example: Mongoose ATV
             direction = "backward";
             offset[] = {0, 4.15, 2.13};
             maxLoadCoefficient = 0.5;  // Half size for smaller vehicle
@@ -207,24 +207,24 @@ class 73_D77_TC_Pelican: Splits_UNSC_D77_TC_Pelican
 
     		class CargoTypeWhitelist										// Whitelist. If this isn't empty, only listed vehicles (isKindOf) can load into (since 2.10)
      		{
-     			73_M274_ATV = 1;
-     			73_POGV_RCWS = 1;
-     			73_COGV_RCWS = 1;
-     			73_SDV_ODST = 1;													// In this case the transporter only carry boats, not cars or tanks etc
+     			STB73_M274_ATV = 1;
+     			STB73_POGV_RCWS = 1;
+     			STB73_COGV_RCWS = 1;
+     			STB73_SDV_ODST = 1;													// In this case the transporter only carry boats, not cars or tanks etc
      		};
     	};
     };
     class EventHandlers: EventHandlers
     {
-        class 73_RegisterThrusters_EH
+        class STB73_RegisterThrusters_EH
         {
-            init = "[(_this select 0),true,true,false] call STB73_fnc_RegisterThrusters;";
+            init = "[(_this select 0),true,true,false] call STBSTB73_fnc_RegisterThrusters;";
         };
     };
     class textureSources
     {};
     class VehicleSpawnerInfo {
-        class 73_AirSpawner
+        class STB73_AirSpawner
         {
             scope = 1;
             spawner= "73rd Aviation";
@@ -235,7 +235,7 @@ class 73_D77_TC_Pelican: Splits_UNSC_D77_TC_Pelican
             priority = 1;
             liveries[]=
             {
-             "[""Standard"",[""73_vehicles\data\Pelican\body_co.paa"",""73_vehicles\data\Pelican\wings_and_gear_co.paa"",""73_vehicles\data\Pelican\weaponry_co.paa""]]",
+             "[""Standard"",[""data\Pelican\body_co.paa"",""data\Pelican\wings_and_gear_co.paa"",""data\Pelican\weaponry_co.paa""]]",
             };
         };
     };
@@ -247,21 +247,21 @@ class 73_D77_TC_Pelican: Splits_UNSC_D77_TC_Pelican
 
 class OPTRE_UNSC_falcon;
 
-class 73_UNSC_falcon:OPTRE_UNSC_falcon
+class STB73_UNSC_falcon:OPTRE_UNSC_falcon
 {
     displayName = "[73] UH-144 Falcon [Unarmed]";
     author= AUTHOR;
-    editorCategory = "73_STB";
-    editorSubcategory = "73_Helicopters_EdSubCat";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_Helicopters_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "73_Aviator";
+    crew = "STB73_Aviator";
     class EventHandlers: EventHandlers
     {
-        class 73_RegisterThrusters_EH
+        class STB73_RegisterThrusters_EH
         {
-            init = "[(_this select 0),true,false] call STB73_fnc_RegisterThrusters;";
+            init = "[(_this select 0),true,false] call STBSTB73_fnc_RegisterThrusters;";
         };
     };
     class UserActions
@@ -271,7 +271,7 @@ class 73_UNSC_falcon:OPTRE_UNSC_falcon
     };
 
     class VehicleSpawnerInfo {
-        class 73_AirSpawner
+        class STB73_AirSpawner
         {
             scope = 1;
             spawner= "73rd Aviation";
@@ -285,21 +285,21 @@ class 73_UNSC_falcon:OPTRE_UNSC_falcon
 
 class OPTRE_UNSC_falcon_S;
 
-class 73_UNSC_falcon_S:OPTRE_UNSC_falcon_S
+class STB73_UNSC_falcon_S:OPTRE_UNSC_falcon_S
 {
     displayName = "[73] UH-144S Falcon";
     author= AUTHOR;
-    editorCategory = "73_STB";
-    editorSubcategory = "73_Helicopters_EdSubCat";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_Helicopters_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "73_Aviator";
+    crew = "STB73_Aviator";
     class EventHandlers: EventHandlers
     {
-        class 73_RegisterThrusters_EH
+        class STB73_RegisterThrusters_EH
         {
-            init = "[(_this select 0),true,false] call STB73_fnc_RegisterThrusters;";
+            init = "[(_this select 0),true,false] call STBSTB73_fnc_RegisterThrusters;";
         };
     };
     class UserActions
@@ -308,7 +308,7 @@ class 73_UNSC_falcon_S:OPTRE_UNSC_falcon_S
         #include "cfg\ThrusterActions.hpp"
     };
     class VehicleSpawnerInfo {
-        class 73_AirSpawner
+        class STB73_AirSpawner
         {
             scope = 1;
             spawner= "73rd Aviation";
@@ -321,30 +321,30 @@ class 73_UNSC_falcon_S:OPTRE_UNSC_falcon_S
 };
 class OPTRE_UNSC_MH_144_Falcon;
 
-class 73_UNSC_MH_144_Falcon:OPTRE_UNSC_MH_144_Falcon
+class STB73_UNSC_MH_144_Falcon:OPTRE_UNSC_MH_144_Falcon
 {
     displayName = "[73] MH-144 Falcon";
     author= AUTHOR;
-    editorCategory = "73_STB";
-    editorSubcategory = "73_Helicopters_EdSubCat";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_Helicopters_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
     class EventHandlers: EventHandlers
     {
-        class 73_RegisterThrusters_EH
+        class STB73_RegisterThrusters_EH
         {
-            init = "[(_this select 0),true,false] call STB73_fnc_RegisterThrusters;";
+            init = "[(_this select 0),true,false] call STBSTB73_fnc_RegisterThrusters;";
         };
     };
-    crew = "73_Aviator";
+    crew = "STB73_Aviator";
     class UserActions
     {
         #include "cfg\UtilityActions.hpp"
         #include "cfg\ThrusterActions.hpp"
     };
     class VehicleSpawnerInfo {
-        class 73_AirSpawner
+        class STB73_AirSpawner
         {
             scope = 1;
             spawner= "73rd Aviation";
@@ -357,23 +357,23 @@ class 73_UNSC_MH_144_Falcon:OPTRE_UNSC_MH_144_Falcon
 };
 class OPTRE_UNSC_MH_144S_Falcon;
 
-class 73_UNSC_MH_144S_Falcon:OPTRE_UNSC_MH_144S_Falcon
+class STB73_UNSC_MH_144S_Falcon:OPTRE_UNSC_MH_144S_Falcon
 {
     displayName = "[73] MH-144S Falcon";
     author= AUTHOR;
-    editorCategory = "73_STB";
-    editorSubcategory = "73_Helicopters_EdSubCat";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_Helicopters_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
     class EventHandlers: EventHandlers
     {
-        class 73_RegisterThrusters_EH
+        class STB73_RegisterThrusters_EH
         {
-            init = "[(_this select 0),true,false] call STB73_fnc_RegisterThrusters;";
+            init = "[(_this select 0),true,false] call STBSTB73_fnc_RegisterThrusters;";
         };
     };
-    crew = "73_Aviator";
+    crew = "STB73_Aviator";
     radarIcon="MA_HUD\textures\radar\vehicles\pelican.paa";
     radarIconScale=3;
     class UserActions
@@ -382,7 +382,7 @@ class 73_UNSC_MH_144S_Falcon:OPTRE_UNSC_MH_144S_Falcon
         #include "cfg\ThrusterActions.hpp"
     };
     class VehicleSpawnerInfo {
-        class 73_AirSpawner
+        class STB73_AirSpawner
         {
             scope = 1;
             spawner= "73rd Aviation";
@@ -396,30 +396,30 @@ class 73_UNSC_MH_144S_Falcon:OPTRE_UNSC_MH_144S_Falcon
 
 class OPTRE_AV22_Sparrowhawk;
 
-class 73_AV22_Sparrowhawk:OPTRE_AV22_Sparrowhawk
+class STB73_AV22_Sparrowhawk:OPTRE_AV22_Sparrowhawk
 {
     displayName = "[73] AV-22M Sparrowhawk";
     author= AUTHOR;
-    editorCategory = "73_STB";
-    editorSubcategory = "73_Helicopters_EdSubCat";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_Helicopters_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
     class EventHandlers: EventHandlers
     {
-        class 73_RegisterThrusters_EH
+        class STB73_RegisterThrusters_EH
         {
-            init = "[(_this select 0),true,false] call STB73_fnc_RegisterThrusters;";
+            init = "[(_this select 0),true,false] call STBSTB73_fnc_RegisterThrusters;";
         };
     };
-    crew = "73_Aviator";
+    crew = "STB73_Aviator";
 	class UserActions
 	{
 	    #include "cfg\UtilityActions.hpp"
 		#include "cfg\ThrusterActions.hpp"
 	};
     class VehicleSpawnerInfo {
-        class 73_AirSpawner
+        class STB73_AirSpawner
         {
             scope = 1;
             spawner= "73rd Aviation";
@@ -432,30 +432,30 @@ class 73_AV22_Sparrowhawk:OPTRE_AV22_Sparrowhawk
 };
 class OPTRE_AV22A_Sparrowhawk;
 
-class 73_AV22A_Sparrowhawk:OPTRE_AV22A_Sparrowhawk
+class STB73_AV22A_Sparrowhawk:OPTRE_AV22A_Sparrowhawk
 {
     displayName = "[73] AV-22L Sparrowhawk";
     author= AUTHOR;
-    editorCategory = "73_STB";
-    editorSubcategory = "73_Helicopters_EdSubCat";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_Helicopters_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
     class EventHandlers: EventHandlers
     {
-        class 73_RegisterThrusters_EH
+        class STB73_RegisterThrusters_EH
         {
-            init = "[(_this select 0),true,false] call STB73_fnc_RegisterThrusters;";
+            init = "[(_this select 0),true,false] call STBSTB73_fnc_RegisterThrusters;";
         };
     };
-    crew = "73_Aviator";
+    crew = "STB73_Aviator";
     class UserActions
     {
         #include "cfg\UtilityActions.hpp"
         #include "cfg\ThrusterActions.hpp"
     };
     class VehicleSpawnerInfo {
-        class 73_AirSpawner
+        class STB73_AirSpawner
         {
             scope = 1;
             spawner= "73rd Aviation";
@@ -468,30 +468,30 @@ class 73_AV22A_Sparrowhawk:OPTRE_AV22A_Sparrowhawk
 };
 class OPTRE_AV22B_Sparrowhawk;
 
-class 73_AV22B_Sparrowhawk:OPTRE_AV22B_Sparrowhawk
+class STB73_AV22B_Sparrowhawk:OPTRE_AV22B_Sparrowhawk
 {
     displayName = "[73] AV-22ML Sparrowhawk";
     author= AUTHOR;
-    editorCategory = "73_STB";
-    editorSubcategory = "73_Helicopters_EdSubCat";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_Helicopters_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
     class EventHandlers: EventHandlers
     {
-        class 73_RegisterThrusters_EH
+        class STB73_RegisterThrusters_EH
         {
-            init = "[(_this select 0),true,false] call STB73_fnc_RegisterThrusters;";
+            init = "[(_this select 0),true,false] call STBSTB73_fnc_RegisterThrusters;";
         };
     };
-    crew = "73_Aviator";
+    crew = "STB73_Aviator";
     class UserActions
     {
         #include "cfg\UtilityActions.hpp"
         #include "cfg\ThrusterActions.hpp"
     };
     class VehicleSpawnerInfo {
-        class 73_AirSpawner
+        class STB73_AirSpawner
         {
             scope = 1;
             spawner= "73rd Aviation";
@@ -504,30 +504,30 @@ class 73_AV22B_Sparrowhawk:OPTRE_AV22B_Sparrowhawk
 };
 class OPTRE_AV22C_Sparrowhawk;
 
-class 73_AV22C_Sparrowhawk:OPTRE_AV22C_Sparrowhawk
+class STB73_AV22C_Sparrowhawk:OPTRE_AV22C_Sparrowhawk
 {
     displayName = "[73] AV-22 Sparrowhawk";
     author= AUTHOR;
-    editorCategory = "73_STB";
-    editorSubcategory = "73_Helicopters_EdSubCat";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_Helicopters_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
     class EventHandlers: EventHandlers
     {
-        class 73_RegisterThrusters_EH
+        class STB73_RegisterThrusters_EH
         {
-            init = "[(_this select 0),true,false] call STB73_fnc_RegisterThrusters;";
+            init = "[(_this select 0),true,false] call STBSTB73_fnc_RegisterThrusters;";
         };
     };
-    crew = "73_Aviator";
+    crew = "STB73_Aviator";
     class UserActions
     {
         #include "cfg\UtilityActions.hpp"
         #include "cfg\ThrusterActions.hpp"
     };
     class VehicleSpawnerInfo {
-        class 73_AirSpawner
+        class STB73_AirSpawner
         {
             scope = 1;
             spawner= "73rd Aviation";

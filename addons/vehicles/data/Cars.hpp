@@ -1,12 +1,12 @@
 class VES_HDV134_Resupply;
 
-class 73_HDV134_Resupply:VES_HDV134_Resupply
+class STB73_HDV134_Resupply:VES_HDV134_Resupply
 {
     displayName="[73] HDV-134 Buffalo [Resupply]";
     author= AUTHOR;
-    faction = "73_STB";
-    editorCategory = "73_STB";
-    editorSubcategory = "73_Cars_EdSubCat";
+    faction = "STB73_STB";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_Cars_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
@@ -19,9 +19,9 @@ class 73_HDV134_Resupply:VES_HDV134_Resupply
                 };
             };
         };
-    crew = "73_Crewman";
+    crew = "STB73_Crewman";
     class VehicleSpawnerInfo {
-        class 73_GroundSpawner
+        class STB73_GroundSpawner
         {
             scope = 1;
             spawner= "73rd Mechanized";
@@ -40,17 +40,17 @@ class 73_HDV134_Resupply:VES_HDV134_Resupply
 
 class VES_HDV134_TT;
 
-class 73_HDV134_TT:VES_HDV134_TT
+class STB73_HDV134_TT:VES_HDV134_TT
 {
     displayName="[73] HDV-134 Buffalo [TT]";
     author= AUTHOR;
-    faction = "73_STB";
-    editorCategory = "73_STB";
-    editorSubcategory = "73_Cars_EdSubCat";
+    faction = "STB73_STB";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_Cars_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "73_Crewman";
+    crew = "STB73_Crewman";
  class ace_cargo {
             class cargo {
                 class ACE_Tyres { // Doesn't have to have the same name as the item you're adding
@@ -61,7 +61,7 @@ class 73_HDV134_TT:VES_HDV134_TT
             };
         };
     class VehicleSpawnerInfo {
-        class 73_GroundSpawner
+        class STB73_GroundSpawner
         {
             scope = 1;
             spawner= "73rd Mechanized";
@@ -80,19 +80,19 @@ class 73_HDV134_TT:VES_HDV134_TT
 
 class VES_HDV134_TT_C;
 
-class 73_HDV134_TT_C:VES_HDV134_TT_C
+class STB73_HDV134_TT_C:VES_HDV134_TT_C
 {
     displayName="[73] HDV-134 Buffalo [TT-C]";
     author= AUTHOR;
-    faction = "73_STB";
-    editorCategory = "73_STB";
-    editorSubcategory = "73_Cars_EdSubCat";
+    faction = "STB73_STB";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_Cars_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "73_Crewman";
+    crew = "STB73_Crewman";
     class VehicleSpawnerInfo {
-        class 73_GroundSpawner
+        class STB73_GroundSpawner
         {
             scope = 1;
             spawner= "73rd Mechanized";
@@ -113,17 +113,17 @@ class 73_HDV134_TT_C:VES_HDV134_TT_C
 
 class VES_M12;
 
-class 73_M12 : VES_M12
+class STB73_M12 : VES_M12
 {
     displayName="[73] M12 FAV Warthog [Unarmed]";
     author= AUTHOR;
-    faction = "73_STB";
-    editorCategory = "73_STB";
-    editorSubcategory = "73_Cars_EdSubCat";
+    faction = "STB73_STB";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_Cars_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "73_Crewman";
+    crew = "STB73_Crewman";
     class ace_cargo {
         class cargo {
             class ACE_Tyres { // Doesn't have to have the same name as the item you're adding
@@ -133,7 +133,7 @@ class 73_M12 : VES_M12
         };
     };
     class VehicleSpawnerInfo {
-        class 73_GroundSpawner
+        class STB73_GroundSpawner
         {
             scope = 1;
             spawner= "73rd Mechanized";
@@ -147,17 +147,17 @@ class 73_M12 : VES_M12
 
 class VES_M12_LRV;
 
-class 73_M12_LRV : VES_M12_LRV
+class STB73_M12_LRV : VES_M12_LRV
 {
     displayName="[73] M12 LRV Warthog [M41 LAAG]";
     author= AUTHOR;
-    faction = "73_STB";
-    editorCategory = "73_STB";
-    editorSubcategory = "73_Cars_EdSubCat";
+    faction = "STB73_STB";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_Cars_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "73_Crewman";
+    crew = "STB73_Crewman";
     class ace_cargo {
         class cargo {
             class ACE_Tyres { // Doesn't have to have the same name as the item you're adding
@@ -168,7 +168,7 @@ class 73_M12_LRV : VES_M12_LRV
         };
     };
     class VehicleSpawnerInfo {
-        class 73_GroundSpawner
+        class STB73_GroundSpawner
         {
             scope = 1;
             spawner= "73rd Mechanized";
@@ -181,17 +181,17 @@ class 73_M12_LRV : VES_M12_LRV
 };
 class VES_M12G1_LRV;
 
-class 73_M12G1_LRV : VES_M12G1_LRV
+class STB73_M12G1_LRV : VES_M12G1_LRV
 {
     displayName="[73] M12 LRV Warthog [M68 ALIM]";
     author= AUTHOR;
-    faction = "73_STB";
-    editorCategory = "73_STB";
-    editorSubcategory = "73_Cars_EdSubCat";
+    faction = "STB73_STB";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_Cars_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "73_Crewman";
+    crew = "STB73_Crewman";
     class ace_cargo {
         class cargo {
             class ACE_Tyres { // Doesn't have to have the same name as the item you're adding
@@ -202,7 +202,7 @@ class 73_M12G1_LRV : VES_M12G1_LRV
         };
     };
     class VehicleSpawnerInfo {
-        class 73_GroundSpawner
+        class STB73_GroundSpawner
         {
             scope = 1;
             spawner= "73rd Mechanized";
@@ -215,17 +215,17 @@ class 73_M12G1_LRV : VES_M12G1_LRV
 };
 class VES_M12A1_LRV;
 
-class 73_M12A1_LRV : VES_M12A1_LRV
+class STB73_M12A1_LRV : VES_M12A1_LRV
 {
     displayName="[73] M12 LRV Warthog [ATGM]";
     author= AUTHOR;
-    faction = "73_STB";
-    editorCategory = "73_STB";
-    editorSubcategory = "73_Cars_EdSubCat";
+    faction = "STB73_STB";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_Cars_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "73_Crewman";
+    crew = "STB73_Crewman";
     class ace_cargo {
         class cargo {
             class ACE_Tyres { // Doesn't have to have the same name as the item you're adding
@@ -235,7 +235,7 @@ class 73_M12A1_LRV : VES_M12A1_LRV
         };
     };
     class VehicleSpawnerInfo {
-        class 73_GroundSpawner
+        class STB73_GroundSpawner
         {
             scope = 1;
             spawner= "73rd Mechanized";
@@ -248,17 +248,17 @@ class 73_M12A1_LRV : VES_M12A1_LRV
 };
 class VES_M12R_AA;
 
-class 73_M12R_AA : VES_M12R_AA
+class STB73_M12R_AA : VES_M12R_AA
 {
     displayName="[73] M12 LRV Warthog [M79 AA]";
     author= AUTHOR;
-    faction = "73_STB";
-    editorCategory = "73_STB";
-    editorSubcategory = "73_Cars_EdSubCat";
+    faction = "STB73_STB";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_Cars_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "73_Crewman";
+    crew = "STB73_Crewman";
     class ace_cargo {
         class cargo {
             class ACE_Tyres { // Doesn't have to have the same name as the item you're adding
@@ -269,7 +269,7 @@ class 73_M12R_AA : VES_M12R_AA
         };
     };
     class VehicleSpawnerInfo {
-        class 73_GroundSpawner
+        class STB73_GroundSpawner
         {
             scope = 1;
             spawner= "73rd Mechanized";
@@ -281,17 +281,17 @@ class 73_M12R_AA : VES_M12R_AA
     };
 };
 class VES_M12_APC;
-class 73_M12_APC : VES_M12_APC
+class STB73_M12_APC : VES_M12_APC
 {
     displayName="[73] M12 APC Warthog";
     author= AUTHOR;
-    faction = "73_STB";
-    editorCategory = "73_STB";
-    editorSubcategory = "73_Cars_EdSubCat";
+    faction = "STB73_STB";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_Cars_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "73_Crewman";
+    crew = "STB73_Crewman";
     class ace_cargo {
         class cargo {
             class ACE_Tyres { // Doesn't have to have the same name as the item you're adding
@@ -302,7 +302,7 @@ class 73_M12_APC : VES_M12_APC
         };
     };
     class VehicleSpawnerInfo {
-        class 73_GroundSpawner
+        class STB73_GroundSpawner
         {
             scope = 1;
             spawner= "73rd Mechanized";
@@ -315,17 +315,17 @@ class 73_M12_APC : VES_M12_APC
 };
 class VES_M813_TT;
 
-class 73_M813_TT : VES_M813_TT
+class STB73_M813_TT : VES_M813_TT
 {
     displayName="[73] M813 TT Warthog";
     author= AUTHOR;
-    faction = "73_STB";
-    editorCategory = "73_STB";
-    editorSubcategory = "73_Cars_EdSubCat";
+    faction = "STB73_STB";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_Cars_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "73_Crewman";
+    crew = "STB73_Crewman";
     class ace_cargo {
         class cargo {
             class ACE_Tyres { // Doesn't have to have the same name as the item you're adding
@@ -336,7 +336,7 @@ class 73_M813_TT : VES_M813_TT
         };
     };
     class VehicleSpawnerInfo {
-        class 73_GroundSpawner
+        class STB73_GroundSpawner
         {
             scope = 1;
             spawner= "73rd Mechanized";
@@ -349,17 +349,17 @@ class 73_M813_TT : VES_M813_TT
 };
 class OPTRE_M12_TD_ins;
 
-class 73_M914_TD : OPTRE_M12_TD_ins
+class STB73_M914_TD : OPTRE_M12_TD_ins
 {
     displayName="[73] M914 Tank Destroyer Warthog";
     author= AUTHOR;
-    faction = "73_STB";
-    editorCategory = "73_STB";
-    editorSubcategory = "73_Cars_EdSubCat";
+    faction = "STB73_STB";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_Cars_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "73_Crewman";
+    crew = "STB73_Crewman";
     class ace_cargo {
         class cargo {
             class ACE_Tyres { // Doesn't have to have the same name as the item you're adding
@@ -370,7 +370,7 @@ class 73_M914_TD : OPTRE_M12_TD_ins
         };
     };
     class VehicleSpawnerInfo {
-        class 73_GroundSpawner
+        class STB73_GroundSpawner
         {
             scope = 1;
             spawner= "73rd Mechanized";
@@ -384,19 +384,19 @@ class 73_M914_TD : OPTRE_M12_TD_ins
 
 class OPTRE_M274_ATV;
 
-class 73_M274_ATV:OPTRE_M274_ATV
+class STB73_M274_ATV:OPTRE_M274_ATV
 {
    canBeTransported = 1;
    transportVehicleMass = 1000;  // Mongoose mass (approx.)
    displayName="[73] M274 Mongoose";
    author= AUTHOR;
-   faction = "73_STB";
-   editorCategory = "73_STB";
-   editorSubcategory = "73_Cars_EdSubCat";
+   faction = "STB73_STB";
+   editorCategory = "STB73_STB";
+   editorSubcategory = "STB73_Cars_EdSubCat";
    scopeCurator=2;
    scope=2;
    side=1;
-   crew = "73_Crewman";
+   crew = "STB73_Crewman";
    class VehicleTransport
    {
         class Cargo

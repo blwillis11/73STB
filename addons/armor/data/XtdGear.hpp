@@ -2,7 +2,7 @@ class XtdGearModels
 {
     class CfgWeapons
     {
-        class 73_ACE_M43D_Vest
+        class STB73_ACE_M43D_Vest
         {
             label = "[73] M43D Vest";
             author = AUTHOR;
@@ -137,7 +137,59 @@ class XtdGearModels
                 };
             };
         };
+
+        class STB73_ACE_VX19_Helmet
+		{
+		    label="[73] VX19 Flight Helmet";
+			author="73rd S-4 Team";
+			options[] =
+			{
+				"Roles"
+			};
+			class Roles
+			{
+				alwaysSelectable=1;
+				changeingame=0;
+				changedelay=0;
+                label= "Roles";
+		        values[]=
+		        {
+		            "Aviator",
+		            "Sr Aviator"
+		        };
+		    };
+		};
     };
+    class cfgVehicles
+	{
+		class STB73_ACE_Rucksack
+		{
+			label = "[73] Rucksack";
+			author="73rd S-4 Team";
+			options[] = 
+			{
+				"Role"
+			};
+			class Role
+			{
+				alwaysSelectable = 1;
+				changeingame = 0;
+				changedelay = 0;
+				label = "Role";
+				values[] =
+				{
+					"Standard",
+					"Medic",
+					"Heavy",
+					"AN/PRC RTO",
+					"RTO",
+					"Heavy RTO",
+					"Invis",
+					"Invis RTO"
+				};
+			};
+		};
+	};
 };
 
 class XtdGearInfos

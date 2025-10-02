@@ -59,7 +59,14 @@ class CfgFunctions{
             class CountDown { description = "HEV - countdown"; };
             class CleanUp { description = "HEV - cleanup"; };
         };
-
+        class Weapons
+        {
+            file="z\73STB\addons\functions\weapons";
+            class Init
+            {
+                postInit=1;
+            };
+        };
         class MenuFunctions
         {
             file = "z\73STB\addons\functions\menufunctions";
