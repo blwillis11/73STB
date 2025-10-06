@@ -37,8 +37,8 @@ class CfgVehicles {
         weapons[] = {"STB73_MA5k","OPTRE_Smartfinder", "Throw", "Put"};
         respawnWeapons[] = {"STB73_MA5k","OPTRE_Smartfinder", "Throw", "Put"};
 
-        linkedItems[] = {"","ItemMap","ItemcTab","ItemRadio","ItemCompass","ItemWatch"};
-        respawnLinkedItems[] = {"","ItemMap","ItemcTab","ItemRadio","ItemCompass","ItemWatch"};
+        linkedItems[] = {"STB73_M43A_BaseSec_Black","STB73_VX19_Helmet_Base","ItemMap","ItemcTab","ItemRadio","ItemCompass","ItemWatch"};
+        respawnLinkedItems[] = {"STB73_M43A_BaseSec_Black","STB73_VX19_Helmet_Base","ItemMap","ItemcTab","ItemRadio","ItemCompass","ItemWatch"};
 
         magazines[] = {"STB73_60RND_762x51_Mag_Tracer_Yellow"};
         respawnMagazines[] = {"STB73_60RND_762x51_Mag_Tracer_Yellow"};
@@ -145,8 +145,8 @@ class CfgVehicles {
         linkedItems[] = {"STB73_M43D_ODST_Black","STB73_H_ECH55D_Standard_Black","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
         respawnLinkedItems[] = {"STB73_M43D_ODST_Black","STB73_H_ECH55D_Standard_Black","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
 
-        magazines[] = {"STB73_200rnd_M247_Mag","STB73_200rnd_M247_Mag","STB73_200rnd_M247_Mag","STB73_200rnd_M247_Mag","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_M2_Smoke","OPTRE_M2_Smoke_Green","OPTRE_M9_Frag","OPTRE_M9_Frag"};
-        respawnMagazines[] = {"STB73_200rnd_M247_Mag","STB73_200rnd_M247_Mag","STB73_200rnd_M247_Mag","STB73_200rnd_M247_Mag","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_M2_Smoke","OPTRE_M2_Smoke_Green","OPTRE_M9_Frag","OPTRE_M9_Frag"};
+        magazines[] = {"STB73_100rnd_M247_Mag_Tracer_Yellow","STB73_100rnd_M247_Mag_Tracer_Yellow","STB73_100rnd_M247_Mag_Tracer_Yellow","STB73_100rnd_M247_Mag_Tracer_Yellow","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_M2_Smoke","OPTRE_M2_Smoke_Green","OPTRE_M9_Frag","OPTRE_M9_Frag"};
+        respawnMagazines[] = {"STB73_100rnd_M247_Mag_Tracer_Yellow","STB73_100rnd_M247_Mag_Tracer_Yellow","STB73_100rnd_M247_Mag_Tracer_Yellow","STB73_100rnd_M247_Mag_Tracer_Yellow","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_M2_Smoke","OPTRE_M2_Smoke_Green","OPTRE_M9_Frag","OPTRE_M9_Frag"};
 
         items[] = {"ACE_EarPlugs","OPTRE_Biofoam"};
         respawnItems[] = {"ACE_EarPlugs","OPTRE_Biofoam"};
@@ -305,8 +305,8 @@ class CfgVehicles {
         weapons[] = {"STB73_MA37B", "Throw", "Put"};
         respawnWeapons[] = {"STB73_MA37B", "Throw", "Put"};
 
-        linkedItems[] = {"STB73_M43D_ODST_Black","STB73_CH252D_Helmet_STB_SORC","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
-        respawnLinkedItems[] = {"STB73_M43D_ODST_Black","STB73_CH252D_Helmet_STB_SORC","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
+        linkedItems[] = {"STB73_M43D_ODST_Black","STB73_H_ECH55D_Standard_Black","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
+        respawnLinkedItems[] = {"STB73_M43D_ODST_Black","STB73_H_ECH55D_Standard_Black","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
 
         magazines[] = {"STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag"};
         respawnMagazines[] = {"STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag"};
@@ -332,8 +332,8 @@ class CfgVehicles {
         weapons[] = {"STB73_MA37B", "Throw", "Put"};
         respawnWeapons[] = {"STB73_MA37B", "Throw", "Put"};
 
-        linkedItems[] = {"STB73_M43D_ODST_Black","STB73_CH252D_Helmet_STB_Lead","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
-        respawnLinkedItems[] = {"STB73_M43D_ODST_Black","STB73_CH252D_Helmet_STB_Lead","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
+        linkedItems[] = {"STB73_M43D_ODST_Black","STB73_H_ECH55D_Standard_Black","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
+        respawnLinkedItems[] = {"STB73_M43D_ODST_Black","STB73_H_ECH55D_Standard_Black","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
 
         magazines[] = {"STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag"};
         respawnMagazines[] = {"STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag"};
@@ -359,8 +359,8 @@ class CfgVehicles {
         weapons[] = {"STB73_MA37B", "Throw", "Put"};
         respawnWeapons[] = {"STB73_MA37B", "Throw", "Put"};
 
-        linkedItems[] = {"STB73_M43D_ODST_Black","STB73_CH252D_Helmet_STB_Lead","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
-        respawnLinkedItems[] = {"STB73_M43D_ODST_Black","STB73_CH252D_Helmet_STB_Lead","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
+        linkedItems[] = {"STB73_M43D_ODST_Black","STB73_H_ECH55D_Standard_Black","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
+        respawnLinkedItems[] = {"STB73_M43D_ODST_Black","STB73_H_ECH55D_Standard_Black","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
 
         magazines[] = {"STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag"};
         respawnMagazines[] = {"STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag"};

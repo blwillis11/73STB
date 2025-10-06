@@ -2,6 +2,7 @@ class OPTRE_FC_Marines_Soldier;
 class STB73_OCLFBase: OPTRE_FC_Marines_Soldier
 {
     faction = "STB73_OCLF";
+    side = 0;
     author= AUTHOR;
     editorSubcategory = "STB73_Infantry_EdSubCat";
     uniformClass="STB73_OCLF_Uniform";
@@ -97,6 +98,60 @@ class STB73_OCLFBase: OPTRE_FC_Marines_Soldier
         };
     };
 };
+class STB73_OCLF_Officer: STB73_OCLFBase
+{
+    scope=2;
+    scopeCurator=2;
+    displayName="Rifleman";
+    weapons[]=
+    {
+        "STB73_M6G",
+        "Throw",
+        "Put"
+    };
+    respawnWeapons[]=
+    {
+        "STB73_M6G",
+        "Throw",
+        "Put"
+    };
+    magazines[]=
+    {
+        "STB73_12Rnd_10x31_SAP_Mag_Tracer",
+        "STB73_12Rnd_10x31_SAP_Mag_Tracer",
+        "STB73_12Rnd_10x31_SAP_Mag_Tracer",
+        "OPTRE_M2_Smoke",
+        "OPTRE_M2_Smoke"
+    };
+    respawnMagazines[]=
+    {
+        "STB73_12Rnd_10x31_SAP_Mag_Tracer",
+        "STB73_12Rnd_10x31_SAP_Mag_Tracer",
+        "STB73_12Rnd_10x31_SAP_Mag_Tracer",
+        "OPTRE_M2_Smoke",
+        "OPTRE_M2_Smoke"
+    };
+        linkedItems[]=
+    {
+        "STB73_M52B_Vest",
+        "",
+        "ItemMap",
+        "ItemCompass",
+        "ItemWatch",
+        "ItemRadio",
+        "OPTRE_NVG"
+    };
+    respawnLinkedItems[]=
+    {
+        "STB73_M52B_Vest",
+        "",
+        "ItemMap",
+        "ItemCompass",
+        "ItemWatch",
+        "ItemRadio",
+        "OPTRE_NVG"
+    };
+};
 class STB73_OCLF_Soldier_Rifleman: STB73_OCLFBase
 {
     scope=2;
@@ -149,36 +204,36 @@ class STB73_OCLF_Soldier_Medic: STB73_OCLFBase
     attendant = 1;
     weapons[]=
     {
-        "STB73_M6DS_Carbine_Foregrip",
+        "STB73_M6J",
         "Throw",
         "Put"
     };
     respawnWeapons[]=
     {
-        "STB73_M6DS_Carbine_Foregrip",
+        "STB73_M6J",
         "Throw",
         "Put"
     };
     magazines[]=
     {
-        "STB73_26Rnd_127x40_Mag_Black_Tracer",
-        "STB73_26Rnd_127x40_Mag_Black_Tracer",
-        "STB73_26Rnd_127x40_Mag_Black_Tracer",
-        "STB73_26Rnd_127x40_Mag_Black_Tracer",
-        "STB73_26Rnd_127x40_Mag_Black_Tracer",
-        "STB73_26Rnd_127x40_Mag_Black_Tracer",
+        "STB73_40Rnd_127x40_Drum_Black_Tracer",
+        "STB73_40Rnd_127x40_Drum_Black_Tracer",
+        "STB73_40Rnd_127x40_Drum_Black_Tracer",
+        "STB73_40Rnd_127x40_Drum_Black_Tracer",
+        "STB73_40Rnd_127x40_Drum_Black_Tracer",
+        "STB73_40Rnd_127x40_Drum_Black_Tracer",
         "OPTRE_M2_Smoke",
         "OPTRE_M2_Smoke",
         "OPTRE_M2_Smoke"
     };
     respawnMagazines[]=
     {
-        "STB73_26Rnd_127x40_Mag_Black_Tracer",
-        "STB73_26Rnd_127x40_Mag_Black_Tracer",
-        "STB73_26Rnd_127x40_Mag_Black_Tracer",
-        "STB73_26Rnd_127x40_Mag_Black_Tracer",
-        "STB73_26Rnd_127x40_Mag_Black_Tracer",
-        "STB73_26Rnd_127x40_Mag_Black_Tracer",
+        "STB73_40Rnd_127x40_Drum_Black_Tracer",
+        "STB73_40Rnd_127x40_Drum_Black_Tracer",
+        "STB73_40Rnd_127x40_Drum_Black_Tracer",
+        "STB73_40Rnd_127x40_Drum_Black_Tracer",
+        "STB73_40Rnd_127x40_Drum_Black_Tracer",
+        "STB73_40Rnd_127x40_Drum_Black_Tracer",
         "OPTRE_M2_Smoke",
         "OPTRE_M2_Smoke",
         "OPTRE_M2_Smoke"
@@ -301,19 +356,19 @@ class STB73_OCLF_Soldier_AutoRifleman: STB73_OCLFBase
     displayName="AutoRifleman";
     weapons[]=
     {
-        "STB73_M247",
+        "STB73_LMG_M731",
         "Throw",
         "Put"
     };
     respawnWeapons[]=
     {
-        "STB73_M247",
+        "STB73_LMG_M731",
         "Throw",
         "Put"
     };
     magazines[]=
     {
-        "STB73_100Rnd_M247_Mag_Tracer_Yellow",
+        "STB73_100rnd_M247_Mag_Tracer_Yellow",
         "STB73_100Rnd_M247_Mag_Tracer_Yellow",
         "STB73_100Rnd_M247_Mag_Tracer_Yellow",
         "STB73_100Rnd_M247_Mag_Tracer_Yellow",
@@ -351,7 +406,7 @@ class STB73_OCLF_Soldier_Breacher: STB73_OCLFBase
     };
     respawnWeapons[]=
     {
-        "STB73_M45TAC",
+        "STB73_M45",
         "Throw",
         "Put"
     };
@@ -608,6 +663,7 @@ class EventHandlers;
 class STB73_OCLFSpecOpsBase: STB73_OCLFBase
 {
     faction = "STB73_OCLF";
+    side = 0;
     author= AUTHOR;
     editorSubcategory = "STB73_SpecOps_EdSubCat";
     uniformClass="STB73_OCLF_Uniform_Blk";

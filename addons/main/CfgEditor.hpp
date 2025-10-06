@@ -100,6 +100,10 @@ class CfgEditorSubcategories
     {
         displayName = "Infantry";
     };
+    class STB73_ECH_Infantry_EdSubCat
+    {
+        displayName = "Infantry [ECH]";
+    };
     class STB73_Tanks_EdSubCat
     {
         displayName = "Tanks";
@@ -112,6 +116,11 @@ class CfgEditorSubcategories
 	{
 		displayName = "Supply Pods"; // Name visible in the list
 	};
+    class STB73_Misc_EdSubCat
+    {
+        displayName = "Miscellaneous";
+        vehicleClass = "STB73_Objects";
+    };
 	class STB73_Utility_EdSubCat // Category class, you point to it in editorSubcategory property
 	{
 		displayName = "Utility"; // Name visible in the list

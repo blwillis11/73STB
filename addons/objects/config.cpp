@@ -25,7 +25,8 @@ class CfgPatches {
 			"STB73_supply_TACResupply",
 			"STB73_supply_Squad",
 			"STB73_supply_Emptypod",
-			"STB73_supply_Light"
+			"STB73_supply_Light",
+			"STB73_BriefScreen"
         }; 
         weapons[] = {
            

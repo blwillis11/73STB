@@ -12,7 +12,15 @@ class CfgPatches {
             "STB73_Marine_Medic",
             "STB73_Marine_Grenadier",
             "STB73_Marine_Autorifleman",
-            "STB73_Marine_Sniper"
+            "STB73_Marine_Sniper",
+            "STB73_ECH_Marine_Rifleman_AT",
+            "STB73_ECH_Marine_Rifleman",
+            "STB73_ECH_Marine_Marksman",
+            "STB73_ECH_Marine_RTO_Operator",
+            "STB73_ECH_Marine_Medic",
+            "STB73_ECH_Marine_Grenadier",
+            "STB73_ECH_Marine_Autorifleman",
+            "STB73_ECH_Marine_Sniper"
         }; 
         weapons[] = {
            

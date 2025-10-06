@@ -32,7 +32,7 @@ params [
 	["_pos",[0,0,0]],
 	["_wayPoints",[]],
 	["_endWaypoint","garrison"],
-	["_side",WEST]
+	["_side",EAST]
 ];
 
 if (_pos isEqualTo [0,0,0]) exitWith {};
@@ -64,7 +64,27 @@ private _units = switch (typeName (_this select 0)) do {
 	default { ["STB73_STB_ODST_AT","STB73_STB_ODST_Team_Lead","STB73_STB_ODST_Marksman","STB73_STB_ODST_Medic"] };
 };
 
-private _group = [[0,0,0], _side, _units,[],[],[],[],[],0] call BIS_fnc_spawnGroup;	
+
+diag_log format ["CS_ODSTHEV: params units=%1 pos=%2 waypoints=%3 endWP=%4 side=%5", _units, _pos, _wayPoints, _endWaypoint, _side];
+
+// Log unit count and check that each classname exists in CfgVehicles
+diag_log format ["CS_ODSTHEV: unit count=%1", (count _units)];
+diag_log format ["CS_ODSTHEV: unit list=%1", _units];
+private _missingClasses = [];
+{
+	private _cname = _x;
+	if !(isClass (configFile >> "CfgVehicles" >> _cname)) then {
+		_missingClasses pushBack _cname;
+	};
+} forEach _units;
+if ((count _missingClasses) > 0) then {
+	diag_log format ["CS_ODSTHEV: missing classes in CfgVehicles=%1", _missingClasses];
+};
+
+private _group = [[0,0,0], _side, _units,[],[],[],[],[],0] call BIS_fnc_spawnGroup; 
+if (isNull _group) then { diag_log "CS_ODSTHEV: spawnGroup returned null"; };
+if (isNull _group) exitWith {};
+diag_log format ["CS_ODSTHEV: spawned group %1", _group];
 private _unitsInGroup = units _group; 
 
 
@@ -92,7 +112,7 @@ _unitsInGroup apply {
 		true,
 		300,
 		true
-	] call OPTRE_fnc_HEV; 
+	] call STB73_fnc_HEV; 
 } call CBA_fnc_directCall;
 
 

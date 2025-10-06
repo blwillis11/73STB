@@ -1,10 +1,12 @@
 class MA_MK50_Sidekick;
-class OPTRE_M6C;
-class OPTRE_M6G;
+class TCP_hgun_Pistol_M6C2;
+class TCP_hgun_Pistol_M6G;
+class TCP_hgun_Pistol_M6G2;
+class TCP_hgun_Pistol_FlareGun_Black;
 
 class STB73_MK50_Sidekick : MA_MK50_Sidekick
 {
-    author= "73rd S-4 Team";
+    author= AUTHOR;
     displayName = "[73] Mk50 Sidekick";
     baseWeapon 	= "STB73_MK50_Sidekick";
     magazineWell[]={
@@ -15,9 +17,9 @@ class STB73_MK50_Sidekick : MA_MK50_Sidekick
         "STB73_12Rnd_10x31_SAP_Mag_Tracer"
     };
 };
-class STB73_M6C : OPTRE_M6C
+class STB73_M6C : TCP_hgun_Pistol_M6C2
 {
-    author= "73rd S-4 Team";
+    author= AUTHOR;
     displayName = "[73] M6C Handgun";
     baseWeapon 	= "STB73_M6C";
     magazineWell[]={
@@ -28,9 +30,9 @@ class STB73_M6C : OPTRE_M6C
         "STB73_12Rnd_10x31_SAP_Mag_Tracer"
     };
 };
-class STB73_M6G : OPTRE_M6G
+class STB73_M6G : TCP_hgun_Pistol_M6G
 {
-    author= "73rd S-4 Team";
+    author= AUTHOR;
     displayName = "[73] M6G Handgun";
     baseWeapon 	= "STB73_M6G";
     magazineWell[]={
@@ -40,4 +42,23 @@ class STB73_M6G : OPTRE_M6G
     {
         "STB73_12Rnd_10x31_SAP_Mag_Tracer"
     };
+};
+class STB73_M6G2 : TCP_hgun_Pistol_M6G2
+{
+    author= AUTHOR;
+    displayName = "[73] M6G2 Handgun";
+    baseWeapon 	= "STB73_M6G2";
+    magazineWell[]={
+        "STB73_sidearm"
+    };
+    magazines[]=
+    {
+        "STB73_12Rnd_10x31_SAP_Mag_Tracer"
+    };
+};
+class STB73_M8_FlareGun : TCP_hgun_Pistol_FlareGun_Black
+{
+    author= AUTHOR;
+    displayName = "[73] M8 Flare Gun";
+    baseWeapon 	= "STB73_M8_FlareGun";
 };

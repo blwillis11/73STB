@@ -36,20 +36,45 @@ if (isNull _logic) exitWith {}; // exit if module is deleted
 		if ( _unit == "random") then {
 			_units pushBack (
 				[
-					"73_STB_ODST_Grenadier",
-					"73_STB_ODST_Rifleman",
-					"73_STB_ODST_AT",
-					"73_STB_ODST_Autorifleman",
-					"73_STB_ODST_Sniper",
-					"73_STB_ODST_Marksman",
-					"73_STB_ODST_Scout",
-					"73_STB_ODST_Demo",
-					"73_STB_ODST_Medic",
-					"73_STB_ODST_Team_Lead",
-					"73_STB_ODST_Squad_Lead"
+					"STB73_STB_ODST_Grenadier",
+					"STB73_STB_ODST_Rifleman",
+					"STB73_STB_ODST_AT",
+					"STB73_STB_ODST_Autorifleman",
+					"STB73_STB_ODST_Sniper",
+					"STB73_STB_ODST_Marksman",
+					"STB73_STB_ODST_Scout",
+					"STB73_STB_ODST_Demo",
+					"STB73_STB_ODST_Medic",
+					"STB73_STB_ODST_Team_Lead",
+					"STB73_STB_ODST_Squad_Lead"
 				] call BIS_fnc_selectRandom
 			);
 		} else {
+			// If unit classname is not present in CfgVehicles, attempt to map malformed names
+			// (for example: "73_STB_ODST_Marksman" -> "STB73_STB_ODST_Marksman") by
+			// searching our known ODST pool for a matching substring.
+			private _odstPool = [
+				"STB73_STB_ODST_Grenadier",
+				"STB73_STB_ODST_Rifleman",
+				"STB73_STB_ODST_AT",
+				"STB73_STB_ODST_Autorifleman",
+				"STB73_STB_ODST_Sniper",
+				"STB73_STB_ODST_Marksman",
+				"STB73_STB_ODST_Scout",
+				"STB73_STB_ODST_Demo",
+				"STB73_STB_ODST_Medic",
+				"STB73_STB_ODST_Team_Lead",
+				"STB73_STB_ODST_Squad_Lead"
+			];
+
+			if !(isClass (configFile >> "CfgVehicles" >> _unit)) then {
+				private _fixIdx = _odstPool findIf { ((toLower _x) find (toLower _unit)) != -1 };
+				if (_fixIdx != -1) then {
+					_unit = _odstPool select _fixIdx;
+					diag_log format ["ModuleODSTHEV: normalized unit '%1' -> '%2'", _x, _unit];
+				};
+			};
+
 			_units pushBack _unit;
 		};
 	};
@@ -63,4 +88,4 @@ if (isNull _logic) exitWith {}; // exit if module is deleted
 	WEST
 ] call OPTRE_fnc_CS_ODSTHEV;
 
-if {!isNull _logic} then { deleteVehicle _logic };
+if (!isNull _logic) then { deleteVehicle _logic };

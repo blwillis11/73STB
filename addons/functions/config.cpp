@@ -492,7 +492,7 @@ class CfgSounds
 		name = "[OPTRE] HEV Tone";
 		sound[]=
 		{
-			"functions\Sounds\OPTRE_HEV_Tone.ogg",
+			"z\73STB\addons\functions\Sounds\OPTRE_HEV_Tone.ogg",
 			1.25,
 			1
 		};
@@ -505,7 +505,7 @@ class CfgSounds
 		name = "[OPTRE] HEV Ground Alarm";
 		sound[] =
 		{
-			"functions\Sounds\OPTRE_HEV_GroundAlarm.ogg",
+			"z\73STB\addons\functions\Sounds\OPTRE_HEV_GroundAlarm.ogg",
 			0.5,
 			1
 		};
@@ -518,7 +518,7 @@ class CfgSounds
 		name = "[OPTRE] HEV Engine Start";
 		sound[] =
 		{
-			"functions\Sounds\OPTRE_HEV_EngineStart.ogg",
+			"z\73STB\addons\functions\Sounds\OPTRE_HEV_EngineStart.ogg",
 			2,
 			1
 		};
@@ -531,7 +531,7 @@ class CfgSounds
 		name = "[OPTRE] Corvette HEV Drop Engine Loop";
 		sound[] =
 		{
-			"functions\Sounds\OPTRE_HEV_interiorDropLoop.ogg",
+			"z\73STB\addons\functions\Sounds\OPTRE_HEV_interiorDropLoop.ogg",
 			1,
 			1
 		};

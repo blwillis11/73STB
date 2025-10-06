@@ -17,7 +17,11 @@ class CfgPatches {
             "STB73_M45ATAC",
             "STB73_M45TAC",
             "STB73_M45E",
-            "STB73_M6DS_Carbine_Foregrip",
+            "STB73_M6C",
+            "STB73_M6G",
+            "STB73_M6G2",
+            "STB73_M8_FlareGun",
+            "STB73_M6J",
             "STB73_M7_SMG",
             "STB73_M7_SMG_salmon",
             "STB73_M90A",
@@ -169,12 +173,16 @@ class cfgMagazineWells{
 	};
 	class STB73_DMR{
 		STB73_Magazines[] = {
-			"STB73_15Rnd_10x40_Mag",
-			"STB73_15Rnd_10x40_Mag_Tracer",
-			"STB73_15Rnd_10x40_Mag_Tracer_Yellow",
-			"STB73_15Rnd_10x40_HVAP_Mag",
-			"STB73_15Rnd_10x40_HVAP_Mag_Tracer",
-			"STB73_15Rnd_10x40_HVAP_Mag_Tracer_Yellow"
+			"STB73_15Rnd_762x51_Mag",
+			"STB73_15Rnd_762x51_Mag_Tracer",
+			"STB73_15Rnd_762x51_Mag_Tracer_Yellow",
+			"STB73_15Rnd_762x51_HVAP_Mag",
+			"STB73_15Rnd_762x51_HVAP_Mag_Tracer",
+			"STB73_15Rnd_762x51_HVAP_Mag_Tracer_Yellow",
+			"STB73_15Rnd_762x51_BTHP",
+			"STB73_15Rnd_762x51_BTHP_Mag_Tracer",
+			"STB73_15Rnd_762x51_BTHP_Mag_Tracer_Yellow",
+			"STB73_15Rnd_762x51_BTHP_Mag_Tracer_IR"
 		};
 	};
 	class STB73_BR55{

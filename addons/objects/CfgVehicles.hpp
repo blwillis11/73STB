@@ -3,6 +3,24 @@ class CfgVehicles
 	class OPTRE_Ammo_SupplyPod_Empty;
 	class OPTRE_Ammo_SupplyPod_Launcher;
 	class Module_F;
+
+	class SZ_screen;
+
+	class STB73_BriefScreen: SZ_screen
+	{
+		author = "73rd S-4 Team";
+		displayName = "[73] Briefing Screen";
+		scope = 2;
+		scopeCurator = 2;
+		faction = "STB73_STB";
+		editorCategory = "STB73_Objects";
+		editorSubcategory = "STB73_Misc_EdSubcat";
+		hiddenSelectionsTextures[]=
+		{
+			"z\73STB\addons\objects\data\briefing_screen_co.paa"
+		};
+	};
+
 	class STB73_SupplyPod: OPTRE_Ammo_SupplyPod_Empty
 	{
 		scope = 1;

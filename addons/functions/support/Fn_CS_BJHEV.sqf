@@ -52,7 +52,6 @@ private _units = switch (typeName (_this select 0)) do {
 					"OPTRE_Ins_BJ_Soldier_URB_Marksman",
 					"OPTRE_Ins_BJ_Soldier_URB_Demolitions",
 					"OPTRE_Ins_BJ_Soldier_URB_Corpsman",
-					"OPTRE_Ins_BJ_Soldier_URB_Shield",
 					"OPTRE_Ins_BJ_Soldier_URB_Engineer2",
 					"OPTRE_Ins_BJ_Soldier_URB_Rifleman_AT"
 			];
@@ -64,7 +63,15 @@ private _units = switch (typeName (_this select 0)) do {
 	default { ["OPTRE_Ins_BJ_Soldier_URB_Rifleman_AT","OPTRE_Ins_BJ_Soldier_URB_TeamLeader","OPTRE_Ins_BJ_Soldier_URB_Marksman","OPTRE_Ins_BJ_Soldier_URB_Corpsman"] };
 };
 
-private _group = [[0,0,0], _side, _units,[],[],[],[],[],0] call BIS_fnc_spawnGroup;	
+diag_log format ["CS_BJHEV: params units=%1 pos=%2 waypoints=%3 endWP=%4 side=%5", _units, _pos, _wayPoints, _endWaypoint, _side];
+
+private _group = [[0,0,0], _side, _units,[],[],[],[],[],0] call BIS_fnc_spawnGroup;    
+if (isNull _group) then {
+	diag_log "CS_BJHEV: spawnGroup returned null";
+} else {
+	diag_log format ["CS_BJHEV: spawned group %1", _group];
+};
+
 private _unitsInGroup = units _group; 
 
 
@@ -92,7 +99,7 @@ _unitsInGroup apply {
 		true,
 		300,
 		true
-	] call OPTRE_fnc_HEV; 
+	] call STB73_fnc_HEV; 
 } call CBA_fnc_directCall;
 
 

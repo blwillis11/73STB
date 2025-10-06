@@ -5,7 +5,7 @@ _units = [];
 
 // Wait until the module object exists. The original waited for isNull which
 // could return true too early; waitUntil expects a condition block without extra braces.
-waitUntil {!isNull _logic}; // wait until module is present (pelican colour set or other init)
+waitUntil { !isNull _logic }; // wait until module is present (pelican colour set or other init)
 
 if (isNull _logic) exitWith {}; // exit if module is deleted during wait
 
@@ -19,7 +19,7 @@ private _dropFinalWP = (_logic getVariable ["finalWaypoint", ""]);
 	_dropWaypoints,
 	_dropFinalWP,
 	east
-] call OPTRE_fnc_CS_OCLSSquadDrop;
+] call OPTRE_fnc_CS_OCLSSquadPod;
 
 // Only delete the module object if it still exists
-if {!isNull _logic} then { deleteVehicle _logic };
+if (!isNull _logic) then { deleteVehicle _logic };

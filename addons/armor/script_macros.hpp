@@ -79,7 +79,7 @@ class HitpointsProtectionInfo {  \
 
 #define NEW_VEST_43D(ARMOUR) 						                      \
     class TCP_V_M43D_##ARMOUR##_4_Black;                                 \
-    class 73STB_M43D_##ARMOUR##_Black: TCP_V_M43D_##ARMOUR##_4_Black {   \
+    class STB73_M43D_##ARMOUR##_Black: TCP_V_M43D_##ARMOUR##_4_Black {   \
         displayName = QUOTE([73] M43/D CBBAS [ARMOUR]); \
         class XtdGearInfo { \
           Model="STB73_ACE_M43D_Vest"; \
@@ -87,16 +87,16 @@ class HitpointsProtectionInfo {  \
     };
 #define NEW_VEST_43A(ARMOUR) 						                      \
     class TCP_V_M43A_##ARMOUR##_3_Black;                             \
-    class 73STB_M43A_##ARMOUR##_Black: TCP_V_M43A_##ARMOUR##_3_Black {   \
+    class STB73_M43A_##ARMOUR##_Black: TCP_V_M43A_##ARMOUR##_3_Black {   \
       displayName = QUOTE([73] M43/A CBBAS [ARMOUR]); \
     };
 
 #define ECH55D_HELMET(CAMO,VISOR) \
-    class 73STB_H_ECH55D_##CAMO##_##VISOR : TCP_H_Helmet_ECH55D_Black_Black { \
+    class STB73_H_ECH55D_##CAMO##_##VISOR : TCP_H_Helmet_ECH55D_Black_Black { \
         displayName = QUOTE([73] ECH55D Helmet CAMO VISOR); \
         hiddenSelectionsTextures[] = { Q(STB73_TEXPATH(helmets,ECH55D_##CAMO##_helmet_co.paa)), Q(STB73_TEXPATH(helmets,ECH55D_##VISOR##_visor_co.paa)),"tcp\characters\BLUFOR\UNSC\ARMY\Vests\M43A\data\camo\White\vest_M43_DecalSheet_CA.paa" }; \
     }; \
-    class 73STB_H_ECH55D_##CAMO##_##VISOR##_DP : TCP_H_Helmet_ECH55D_Black_Black_DP { \
+    class STB73_H_ECH55D_##CAMO##_##VISOR##_DP : TCP_H_Helmet_ECH55D_Black_Black_DP { \
         displayName = QUOTE([73] ECH55D Helmet CAMO VISOR [DP]); \
         hiddenSelectionsTextures[] = { Q(STB73_TEXPATH(helmets,ECH55D_##CAMO##_helmet_co.paa)),"\TCP\Characters\BLUFOR\UNSC\Marines\Headgear\helmet_ECH55D\data\camo\default\helmet_ECH55D_Visor_CA.paa","tcp\characters\BLUFOR\UNSC\ARMY\Vests\M43A\data\camo\White\vest_M43_DecalSheet_CA.paa"}; \
     };

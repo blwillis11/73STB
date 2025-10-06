@@ -20,7 +20,7 @@ class CfgWeapons
         displayName="[73] VX19 Flight Helmet [Aviator]";
         hiddenSelectionsTextures[]=
         {
-            "data\helmets\73_VX19_aviator_co.paa",
+            "z\73STB\addons\armor\data\helmets\73_VX19_aviator_co.paa",
             "optre_fc_units\marines\data\h3_pilothelmet_visor_co.paa",
             "optre_unsc_units\army\data\ghillie_woodland_co.paa",
             "optre_unsc_units\army\data\soft_packs_co.paa"
@@ -44,7 +44,7 @@ class CfgWeapons
         displayName="[73] VX19 Flight Helmet [Sr Aviator]";
         hiddenSelectionsTextures[]=
         {
-            "data\helmets\73_VX19_senioraviator_co.paa",
+            "z\73STB\addons\armor\data\helmets\73_VX19_senioraviator_co.paa",
             "optre_fc_units\marines\data\h3_pilothelmet_visor_co.paa",
         };
         class XtdGearInfo
@@ -60,7 +60,7 @@ class CfgWeapons
         displayName = "[73] Beret";
         hiddenSelectionsTextures[]=
         {
-            "data\helmets\73Beret_co.paa"
+            "z\73STB\addons\armor\data\helmets\73Beret_co.paa"
         };
     };
 };

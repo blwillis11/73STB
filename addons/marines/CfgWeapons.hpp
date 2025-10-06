@@ -44,22 +44,4 @@ class CfgWeapons {
         scope=2;
         displayName="[10thMEB] ECH43/A Marine Helmet";
     };
-    class TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Woodland;
-
-    class STB73_CEUniform_U_B: TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Woodland
-    {
-        scope=2;
-        allowedSlots[]=
-        {
-            "BACKPACK_SLOT"
-        };
-        displayName="[73] CBUU Marine Uniform";
-        class ItemInfo
-        {
-            uniformModel="-";
-            uniformClass="STB73_CEUniform_inf_B";
-            containerClass="Supply90";
-            mass=80;
-        };
-    };
 };

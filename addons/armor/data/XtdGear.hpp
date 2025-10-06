@@ -181,9 +181,7 @@ class XtdGearModels
 					"Standard",
 					"Medic",
 					"Heavy",
-					"AN/PRC RTO",
 					"RTO",
-					"Heavy RTO",
 					"Invis",
 					"Invis RTO"
 				};

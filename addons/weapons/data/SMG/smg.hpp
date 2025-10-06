@@ -1,5 +1,5 @@
 class MA_M7_SMG;
-class OPTRE_M6DS_Carbine_Foregrip_Black_F;
+class TCP_arifle_M6J;
 
 class STB73_M7_SMG: MA_M7_SMG {
     author= "73rd S-4 Team";
@@ -216,69 +216,12 @@ class STB73_M7_SMG: MA_M7_SMG {
     aiRateOfFireDistance = 20; // prefer full auto within ~20m
     };
 };
-class OPTRE_M6DS_Carbine_Foregrip_Black_F_F:OPTRE_M6DS_Carbine_Foregrip_Black_F
-{
-    class WeaponSlotsInfo;
-};
-class STB73_M6DS_Carbine_Foregrip : OPTRE_M6DS_Carbine_Foregrip_Black_F_F
+class STB73_M6J : TCP_arifle_M6J
 {
     author= "73rd S-4 Team";
-    baseWeapon 	= "STB73_M6DS_Carbine_Foregrip";
-    displayName = "[73] M6DS Carbine";
+    baseWeapon 	= "STB73_M6J";
+    displayName = "[73] M6J PDWS";
     scope = 2;
-    hiddenSelectionsTextures[] = {
-        "\OPTRE_Weapons_Pistols\M6D\Data\camo\black\M6D_Main_co.paa",
-        "\OPTRE_Weapons_Pistols\M6D\Data\M6D_Emmisve_co.paa",
-        "\OPTRE_Weapons_Pistols\M6D_Carbine\Data\colors\black\Furniture_co.paa",
-        "\OPTRE_Weapons_Pistols\M6D_Carbine\Data\colors\black\Furniture_co.paa"
-    };
-    magazines[] = {"STB73_12Rnd_127x40_Mag_Black_Tracer"};
+    magazines[] = {"STB73_40Rnd_127x40_Drum_Black_Tracer"};
     magazineWell[]={"STB73_M6D"};
-    class WeaponSlotsInfo
-    {
-        class MuzzleSlot
-        {
-            compatibleitems[] =
-                {
-                    "OPTRE_M6D_Carbine_Suppressor",
-                    "OPTRE_M6D_Carbine_Brake"
-                };
-        };
-        class CowsSlot
-        {
-            compatibleitems[]=
-            {
-                "OPTRE_MA5_BUIS",
-                "OPTRE_MA5 SmartLink",
-                "Optre_Evo_Sight",
-                "Optre_Evo_Sight_Covie",
-                "Optre_Evo_Sight_Spartan",
-                "Optre_Evo_Sight_Innie",
-                "Optre_Evo_Sight_Yellow",
-                "Optre_Evo_Sight_Riser",
-                "Optre_Evo_Sight_Riser_Covie",
-                "Optre_Evo_Sight_Riser_Spartan",
-                "Optre_Evo_Sight_Riser_Innie",
-                "Optre_Evo_Sight_Riser_Yellow",
-                "Optre_Recon_Sight",
-                "Optre_Recon_Sight_Green",
-                "Optre_Recon_Sight_Red",
-                "Optre_Recon_Sight_UNSC"
-            };
-        };
-        class PointerSlot
-        {
-            compatibleitems[] =
-            {
-                "OPTRE_M6D_Carbine_Flashlight",
-                "OPTRE_M6D_Carbine_IR",
-                "OPTRE_M6D_Carbine_Vis_Red"
-            };
-        };
-        class UnderBarrelSlot
-        {
-            compatibleitems[] = {};
-        };
-        mass = 60;
-    };
 };

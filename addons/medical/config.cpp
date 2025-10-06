@@ -1147,11 +1147,11 @@ class ACE_Medical_Treatment_Actions
         allowSelfTreatment=0;
         medicRequired=0;
         treatmentTime=30;
-        condition="[_medic, _patient, _bodyPart] call STBSTB73_fnc_canpressure";
-        callbackFailure="STBSTB73_fnc_endpressure";
-        callbackSuccess="STBSTB73_fnc_endpressure";
-        callbackProgress="[_medic, _patient, _bodyPart] call STBSTB73_fnc_canpressure";
-        callbackStart="STBSTB73_fnc_doPressure";
+        condition="[_medic, _patient, _bodyPart] call STB73_fnc_canpressure";
+        callbackFailure="STB73_fnc_endpressure";
+        callbackSuccess="STB73_fnc_endpressure";
+        callbackProgress="[_medic, _patient, _bodyPart] call STB73_fnc_canpressure";
+        callbackStart="STB73_fnc_doPressure";
         animationMedicProne="AinvPknlMstpSnonWnonDr_medic0";
         consumeItem=0;
         allowedUnderwater=1;
@@ -1230,7 +1230,7 @@ class ACE_Medical_Treatment_Actions
 		{
 			"STB73_Medigel"
 		};
-		callbackSuccess="STBSTB73_fnc_biomed";
+		callbackSuccess="STB73_fnc_biomed";
 		consumeItem=1;
 		category="bandage";
 		medicRequired=1;
@@ -1243,7 +1243,7 @@ class ACE_Medical_Treatment_Actions
 		{
 			"STB73_Biofoam"
 		};
-		callbackSuccess="STBSTB73_fnc_biomed";
+		callbackSuccess="STB73_fnc_biomed";
 		consumeItem=1;
 		category="bandage";
 		medicRequired=1;
@@ -1257,7 +1257,7 @@ class ACE_Medical_Treatment_Actions
 			"STB73_Medigel_Light"
 		};
 		category="bandage";
-		callbackSuccess="STBSTB73_fnc_biomed";
+		callbackSuccess="STB73_fnc_biomed";
 	};
 	class STB73_Biofoam_Light: OPTRE_Biofoam
 	{
@@ -1268,7 +1268,7 @@ class ACE_Medical_Treatment_Actions
 			"STB73_Biofoam_Light"
 		};
 		category="bandage";
-		callbackSuccess="STBSTB73_fnc_biomed";
+		callbackSuccess="STB73_fnc_biomed";
 	};
 	class ApplyTourniquet: BasicBandage
 	{
@@ -1316,7 +1316,7 @@ class ACE_Medical_Treatment_Actions
 			"STB73_MedKit"
 		};
 		callbackStart="";
-		callbackSuccess="STBSTB73_fnc_medkit";
+		callbackSuccess="STB73_fnc_medkit";
 	};
 	class FirstAidKit: STB73_Biofoam
 	{

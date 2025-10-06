@@ -64,12 +64,17 @@ private _bjDropPos = getPos _logic;
 private _bjWaypoints = ((_logic getVariable ["waypoints", ""]) call OPTRE_fnc_StringToArrayOfString);
 private _bjFinalWP = (_logic getVariable ["finalWaypoint", ""]);
 
-[
+// Debug: log inputs to RPT so we can trace module calls
+diag_log format ["ModuleBJHEV: calling CS_BJHEV with units=%1 pos=%2 waypoints=%3 finalWP=%4 side=%5", _units, _bjDropPos, _bjWaypoints, _bjFinalWP, east];
+
+private _bj_ret = [
 	_units,
 	_bjDropPos,
 	_bjWaypoints,
 	_bjFinalWP,
 	east
 ] call OPTRE_fnc_CS_BJHEV;
+
+diag_log format ["ModuleBJHEV: CS_BJHEV returned %1", _bj_ret];
 
 if {!isNull _logic} then { deleteVehicle _logic };
