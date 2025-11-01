@@ -11,7 +11,7 @@ if (!(_pos isEqualTo [0, 0, 0])) then {
 	// Ensure this runs on the server. If called on a client, forward the call to the server.
 	if (!isServer) then {
 		diag_log format ["CS_OCLSSquadpod: called on client, forwarding to server with pos=%1", _pos];
-		[_pos, _wayPoints, _endWaypoint, _side] remoteExecCall ["OPTRE_fnc_CS_OCLSSquadPod", 2, false];
+		[_pos, _wayPoints, _endWaypoint, _side] remoteExecCall ["STB73_fnc_CS_OCLSSquadPod", 2, false];
 	} else {
 		diag_log format ["CS_OCLSSquadpod: starting on server with pos=%1 waypoints=%2 endWP=%3 side=%4", _pos, _wayPoints, _endWaypoint, _side];
 

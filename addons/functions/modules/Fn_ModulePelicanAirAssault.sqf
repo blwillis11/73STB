@@ -63,6 +63,6 @@ _veh =  _logic getVariable "vehicle";
 	_side,
 	_exitDir,
 	_code
-] call OPTRE_fnc_CS_PelicanAirAssault;
+] call STB73_fnc_CS_PelicanAirAssault;
 
 if {!isNull _logic} then { deleteVehicle _logic };

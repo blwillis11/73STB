@@ -28,6 +28,12 @@ class cfgFactionClasses
         side = 0; // Opfor = 0, Blufor = 1, Indep = 2.
         icon = ""; //Custom Icon
     };
+    class STB73_Modules
+    {
+        displayName = "[73] Modules";
+        priority = 0; // Position in list.
+        side = 7;
+    };
 };
 class CfgEditorCategories
 {

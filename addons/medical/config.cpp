@@ -1250,7 +1250,7 @@ class ACE_Medical_Treatment_Actions
 	};
 	class STB73_Medigel_Light: OPTRE_Medigel
 	{
-		displayName="[73] Apply Medigel";
+		displayName="[73] Apply Light Medigel";
 		displayNameProgress="Spreading Medigel...";
 		items[]=
 		{
@@ -1261,7 +1261,7 @@ class ACE_Medical_Treatment_Actions
 	};
 	class STB73_Biofoam_Light: OPTRE_Biofoam
 	{
-		displayName="[73] Inject Biofoam";
+		displayName="[73] Inject Light Biofoam";
 		displayNameProgress="Injecting Biofoam...";
 		items[]=
 		{

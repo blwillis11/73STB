@@ -9,18 +9,48 @@ class CfgPatches {
         requiredAddons[] = {
 			"73STB_main",
 			"A3_Data_F_Enoch_Loadorder",
-			"19th_Fleet_Armor"
+			"19th_Fleet_Armor",
+			"TCP_UI"
         };
         authors[] = {"Salmon"}; // sub array of authors, considered for the specific addon, can be removed or left empty {}
         author = AUTHOR; // primary author name, either yours or your team's, considered for the whole mod
         VERSION_CONFIG;
-		skipWhenMissingDependencies=1;
     };
 };
+class CfgMissions
+{
+	class Cutscenes
+	{
+		class STB73_Intro
+		{
+			directory="z\73STB\addons\mainmenu\Cutscenes";
+		};
+	};
+};
+class CAWorld;
+class CfgWorlds
+{
+	class EridanusSecundus: CAWorld
+	{
+		cutscenes[]=
+		{
+			"STB73_Intro"
+		};
+	};
+};
+
+#include "CfgEventHandlers.hpp"
 class RscStandardDisplay;
 class RscDisplayMPPlayers;
 class RscPicture;
 class RscButton;
+class RscControlsGroupNoScrollbars;
+class RscShortcutButton;
+class RscButtonMenu: RscShortcutButton
+{
+    class ShortcutPos;
+};
+class RscTCPButtonMenu: RscButtonMenu {};
 class RscDisplayConfigure
 {
 	enableDisplay=1;
@@ -55,6 +85,13 @@ class RscDisplayMain: RscStandardDisplay
 		delete SpotlightNext;
 		delete SpotlightPrev;
 		delete 12thLogo;
+        class TCP_ButtonArsenal: RscTCPButtonMenu
+        {
+            idc = 2500;
+            text = "ACE Firing Range";
+            onbuttonclick = "playMission ['', '\z\ace\addons\arsenal\missions\Arsenal.VR']";            
+            y = "12.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))";
+        };
 		class Logo: RscPicture
 		{
 			idc=-1;
@@ -70,7 +107,7 @@ class RscDisplayMain: RscStandardDisplay
 			idc=-1;
 			text="Join 73rd Main";
 			style=2;
-			onbuttonclick="connectToServer ['nae-ogs8.armahosts.com', 2322, 'Trident']";
+			onbuttonclick="connectToServer ['Yonservers.asuscomm.com', 2302, '73STB']";
 			colorBackground[]={0,0,0,0.69999999};
 			colorBackgroundActive[]={.5,0,0,0,.5};
 			colorFocused[]={.5,0,0,0,.5};
@@ -83,6 +120,7 @@ class RscDisplayMain: RscStandardDisplay
 			h="safezoneH / 3";
 		};
 	};
+	
 	class ControlsBackground
 	{
 		delete Picture;

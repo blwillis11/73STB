@@ -5,7 +5,7 @@ _backpack = backpack player;
 if ((_backpack != "STB73_JumpPack_on"  AND _backpack != "STB73_JumpPack")) exitWith {};
 if !(STB73_JumpPack_Enabled) exitWith {hint "JumpPacks are currently disabled by an admin";};
 
-if ((player getVariable ["ace_medical_isUnconscious", false]) or (not (alive player)) or (player in (vehicle player))) exitWith {};
+if ((player getVariable ["ace_medical_isUnconscious", false]) or (not (alive player)) or (vehicle player != player)) exitWith {};
 
 
 if (not _held) exitWith {

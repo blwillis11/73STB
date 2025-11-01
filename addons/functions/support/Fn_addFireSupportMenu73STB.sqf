@@ -15,7 +15,7 @@ private _uid = getPlayerUID _localPlayer;
 private _CommandUIDs = ["76561198175303222","76561198101051151","76561198031672645","76561198147813299","76561198169022665"];
 
 // Diagnostic: log who is executing the menu setup and which UID was detected
-diag_log format ["STB73_fnc_addFireSupportMenu73STB: running on %1, player=%2, uid=%3", if (isServer) then {"SERVER"} else {"CLIENT"}, name _localPlayer, _uid];
+diag_log format ["STB73_fnc_addFireSupportMenu73STB: running on %1, player=%2, uid=%3", ["CLIENT", "SERVER"] select (isServer), name _localPlayer, _uid];
 
 private _myaction;
 

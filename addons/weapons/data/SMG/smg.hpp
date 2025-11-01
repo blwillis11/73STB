@@ -1,227 +1,33 @@
-class MA_M7_SMG;
+class TCP_SMG_M7;
 class TCP_arifle_M6J;
 
-class STB73_M7_SMG: MA_M7_SMG {
-    author= "73rd S-4 Team";
+class STB73_M7_SMG: TCP_SMG_M7 {
+    author= AUTHOR;
     displayName = "[73] M7S SMG";
     scope = 2;
     scopeArsenal = 2;
     scopeCurator = 2;
     baseWeapon="STB73_M7_SMG";
     magazineWell[]={
-    "STB73_M7_SMG"
+    "STB73_48Rnd_5x23Caseless_MagWell",
+    "STB73_60Rnd_5x23Caseless_MagWell"
     };
     magazines[] =
     {
-        "STB73_48Rnd_5x23Caseless_FMJ_Mag",
-        "STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer",
-        "STB73_60Rnd_5x23Caseless_FMJ_Mag",
-        "STB73_60Rnd_5x23Caseless_FMJ_Mag_Tracer"
-    };
-    class XtdGearInfo
-    {
-        Model="STB73_ACE_M7";
-        Variant="Standard";
-    };
-    modes[]=
-    {
-        "Single",
-        "FullAuto"
-    };
-    class Single
-    {
-        sounds[]=
-        {
-            "SilencedSound"
-        };
-        class BaseSoundModeType
-        {
-            weaponSoundEffect="DefaultRifle";
-            closure1[]={};
-            closure2[]={};
-            soundClosure[]=
-            {
-                "closure1",
-                0.5,
-                "closure2",
-                0.5
-            };
-        };
-        class SilencedSound: BaseSoundModeType
-        {
-            begin1[]=
-            {
-                "A3\Sounds_F\arsenal\weapons\Rifles\TRG20\Silencer_TRG20_short_01",
-                1.5,
-                1,
-                150
-            };
-            begin2[]=
-            {
-                "A3\Sounds_F\arsenal\weapons\Rifles\TRG20\Silencer_TRG20_short_01",
-                1.5,
-                1.015,
-                150
-            };
-            begin3[]=
-            {
-                "A3\Sounds_F\arsenal\weapons\Rifles\TRG20\Silencer_TRG20_short_01",
-                1.5,
-                0.985,
-                150
-            };
-            begin4[]=
-            {
-                "A3\Sounds_F\arsenal\weapons\Rifles\TRG20\Silencer_TRG20_short_01",
-                1.5,
-                1.01,
-                150
-            };
-            begin5[]=
-            {
-                "A3\Sounds_F\arsenal\weapons\Rifles\TRG20\Silencer_TRG20_short_01",
-                1.5,
-                0.995,
-                150
-            };
-            soundBegin[]=
-            {
-                "begin1",
-                0.20,
-                "begin2",
-                0.20,
-                "begin3",
-                0.20,
-                "begin4",
-                0.20,
-                "begin5",
-                0.20,
-            };
-            beginwater1[]=
-            {
-                "A3\Sounds_F\arsenal\weapons\Rifles\TRG20\Silencer_TRG20_short_01",
-                1,
-                1,
-                150
-            };
-            soundBeginWater[]=
-            {
-                "beginwater1",
-                1,
-            };
-        };
-        reloadTime=0.066699997;
-        dispersion=0.00075000001;
-        minRange=2;
-        minRangeProbab=0.25; // more likely to be used at very close range
-        midRange=100;
-        midRangeProbab=0.6; // reasonable chance at mid range
-        maxRange=400;
-        maxRangeProbab=0.05; // unlikely at extreme ranges
-        aiRateOfFire = 1.0;
-        aiRateOfFireDistance = 100;
-    };
-    class FullAuto
-    {
-        sounds[]=
-        {
-            "SilencedSound"
-        };
-        class BaseSoundModeType
-        {
-            weaponSoundEffect="DefaultRifle";
-            closure1[]={};
-            closure2[]={};
-            soundClosure[]=
-            {
-                "closure1",
-                0.5,
-                "closure2",
-                0.5
-            };
-        };
-        class SilencedSound: BaseSoundModeType
-        {
-            begin1[]=
-            {
-                "A3\Sounds_F\arsenal\weapons\Rifles\TRG20\Silencer_TRG20_short_01",
-                1.5,
-                1,
-                150
-            };
-            begin2[]=
-            {
-                "A3\Sounds_F\arsenal\weapons\Rifles\TRG20\Silencer_TRG20_short_01",
-                1.5,
-                1.015,
-                150
-            };
-            begin3[]=
-            {
-                "A3\Sounds_F\arsenal\weapons\Rifles\TRG20\Silencer_TRG20_short_01",
-                1.5,
-                0.985,
-                150
-            };
-            begin4[]=
-            {
-                "A3\Sounds_F\arsenal\weapons\Rifles\TRG20\Silencer_TRG20_short_01",
-                1.5,
-                1.01,
-                150
-            };
-            begin5[]=
-            {
-                "A3\Sounds_F\arsenal\weapons\Rifles\TRG20\Silencer_TRG20_short_01",
-                1.5,
-                0.995,
-                150
-            };
-            soundBegin[]=
-            {
-                "begin1",
-                0.20,
-                "begin2",
-                0.20,
-                "begin3",
-                0.20,
-                "begin4",
-                0.20,
-                "begin5",
-                0.20,
-            };
-            beginwater1[]=
-            {
-                "A3\Sounds_F\arsenal\weapons\Rifles\TRG20\Silencer_TRG20_short_01",
-                1,
-                1,
-                150
-            };
-            soundBeginWater[]=
-            {
-                "beginwater1",
-                1,
-            };
-        };
-    reloadTime=0.0789;
-    dispersion=0.00075;
-    minRange=2;
-    minRangeProbab=0.95; // prefer full-auto at very close range
-    midRange=40;
-    midRangeProbab=0.75; // still use auto at short-mid ranges
-    maxRange=150;
-    maxRangeProbab=0.1; // unlikely at longer ranges
-    // Encourage AI to use FullAuto at short ranges
-    aiRateOfFire = 0.1; // seconds between bursts (small value encourages burst/auto)
-    aiRateOfFireDistance = 20; // prefer full auto within ~20m
+        "STB73_48Rnd_5x23Caseless_FMJ_Mag"
     };
 };
 class STB73_M6J : TCP_arifle_M6J
 {
-    author= "73rd S-4 Team";
+    author= AUTHOR;
     baseWeapon 	= "STB73_M6J";
     displayName = "[73] M6J PDWS";
     scope = 2;
-    magazines[] = {"STB73_40Rnd_127x40_Drum_Black_Tracer"};
-    magazineWell[]={"STB73_M6D"};
+    magazines[] = {"STB73_36Rnd_127x30_SAP_Mag_Tracer"};
+    magazineWell[]=
+    {
+        "STB73_12Rnd_127x30_MagWell",
+        "STB73_24Rnd_127x30_MagWell",
+        "STB73_36Rnd_127x30_MagWell"
+    };
 };

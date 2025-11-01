@@ -1,4 +1,6 @@
 class CfgWeapons {
+
+    #include "data\ammo\greenMag.hpp"
     #include "data\SMG\smg.hpp"
     #include "data\DMR\dmr.hpp"
     #include "data\LMG\lmg.hpp"

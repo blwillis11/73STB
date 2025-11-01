@@ -19,7 +19,7 @@ private _dropFinalWP = (_logic getVariable ["finalWaypoint", ""]);
 	_dropWaypoints,
 	_dropFinalWP,
 	east
-] call OPTRE_fnc_CS_OCLSSquadPod;
+] call STB73_fnc_CS_OCLSSquadPod;
 
 // Only delete the module object if it still exists
 if (!isNull _logic) then { deleteVehicle _logic };

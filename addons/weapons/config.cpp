@@ -8,14 +8,8 @@ class CfgPatches {
         }; 
         weapons[] = {
             "STB73_BR55HBM1_DMR",
-            "STB73_M247",
             "STB73_M392_DMR",
-            "STB73_M395_DMR",
-            "STB73_M395S_DMR",
             "STB73_M45",
-            "STB73_M45A",
-            "STB73_M45ATAC",
-            "STB73_M45TAC",
             "STB73_M45E",
             "STB73_M6C",
             "STB73_M6G",
@@ -24,9 +18,12 @@ class CfgPatches {
             "STB73_M6J",
             "STB73_M7_SMG",
             "STB73_M7_SMG_salmon",
+			"STB73_LMG_M731",
             "STB73_M90A",
-            "STB73_MA37BGL",
-            "STB73_MA37B",
+            "STB73_MA37GL",
+            "STB73_MA37",
+            "STB73_MA40GL",
+            "STB73_MA40",
             "STB73_MA37K",
             "STB73_MA5B",
             "STB73_MA5BGL",
@@ -36,7 +33,75 @@ class CfgPatches {
             "STB73_M96_LAW",
             "STB73_Fang",
             "STB73_Fang2",
-            "STB73_BR55HBM1_CQC"
+            "STB73_BR55HBM1_CQC",
+			"STB73_HMG_M250",
+			"STB73_GMG_M247A1",
+			"greenmag_ammo_762x51_tracer_yellow_1Rnd",
+			"greenmag_ammo_762x51_tracer_yellow_30Rnd",
+			"greenmag_ammo_762x51_tracer_yellow_60Rnd",
+			"greenmag_ammo_762x51_tracer_yellow_100Rnd",
+			"greenmag_ammo_95x40_tracer_1Rnd",
+			"greenmag_ammo_95x40_tracer_30Rnd",
+			"greenmag_ammo_95x40_tracer_60Rnd",
+			"greenmag_ammo_95x40_tracer_100Rnd",
+			"greenmag_ammo_95x40_tracer_yellow_1Rnd",
+			"greenmag_ammo_95x40_tracer_yellow_30Rnd",
+			"greenmag_ammo_95x40_tracer_yellow_60Rnd",
+			"greenmag_ammo_95x40_tracer_yellow_100Rnd",
+			"greenmag_ammo_95x40_IRtracer_1Rnd",
+			"greenmag_ammo_95x40_IRtracer_30Rnd",
+			"greenmag_ammo_95x40_IRtracer_60Rnd",
+			"greenmag_ammo_95x40_IRtracer_100Rnd",
+			"greenmag_ammo_12Gauge_Pellet_1Rnd",
+			"greenmag_ammo_12Gauge_Slug_1Rnd",
+			"greenmag_ammo_12Gauge_Smoke_1Rnd",
+			"greenmag_ammo_127x30_basic_1Rnd",
+			"greenmag_ammo_127x30_basic_10Rnd",
+			"greenmag_ammo_127x30_basic_30Rnd",
+			"greenmag_ammo_127x30_basic_60Rnd",
+			"greenmag_ammo_127x30_NARQ_1Rnd",
+			"greenmag_ammo_127x30_NARQ_10Rnd",
+			"greenmag_ammo_127x30_NARQ_30Rnd",
+			"greenmag_ammo_127x30_NARQ_60Rnd",
+			"greenmag_ammo_127x30_NARQ_tracer_1Rnd",
+			"greenmag_ammo_127x30_NARQ_tracer_10Rnd",
+			"greenmag_ammo_127x30_NARQ_tracer_30Rnd",
+			"greenmag_ammo_127x30_NARQ_tracer_60Rnd",
+			"greenmag_ammo_127x30_tracer_1Rnd",
+			"greenmag_ammo_127x30_tracer_10Rnd",
+			"greenmag_ammo_127x30_tracer_30Rnd",
+			"greenmag_ammo_127x30_tracer_60Rnd",
+			"greenmag_ammo_127x30_tracer_yellow_1Rnd",
+			"greenmag_ammo_127x30_tracer_yellow_30Rnd",
+			"greenmag_ammo_127x30_tracer_yellow_60Rnd",
+			"greenmag_ammo_127x30_IRtracer_1Rnd",
+			"greenmag_ammo_127x30_IRtracer_10Rnd",
+			"greenmag_ammo_127x30_IRtracer_30Rnd",
+			"greenmag_ammo_127x30_IRtracer_60Rnd",
+			"greenmag_ammo_5x23Caseless_basic_1Rnd",
+			"greenmag_ammo_5x23Caseless_basic_30Rnd",
+			"greenmag_ammo_5x23Caseless_basic_60Rnd",
+			"greenmag_ammo_5x23Caseless_basic_100Rnd",
+			"greenmag_ammo_5x23Caseless_tracer_1Rnd",
+			"greenmag_ammo_5x23Caseless_tracer_30Rnd",
+			"greenmag_ammo_5x23Caseless_tracer_60Rnd",
+			"greenmag_ammo_5x23Caseless_tracer_100Rnd",
+			"greenmag_ammo_5x23Caseless_tracer_yellow_1Rnd",
+			"greenmag_ammo_5x23Caseless_tracer_yellow_30Rnd",
+			"greenmag_ammo_5x23Caseless_tracer_yellow_60Rnd",
+			"greenmag_ammo_5x23Caseless_tracer_yellow_100Rnd",
+			"greenmag_ammo_5x23Caseless_IRtracer_1Rnd",
+			"greenmag_ammo_5x23Caseless_IRtracer_30Rnd",
+			"greenmag_ammo_5x23Caseless_IRtracer_60Rnd",
+			"greenmag_ammo_5x23Caseless_IRtracer_100Rnd",
+			"greenmag_ammo_5x23Caseless_NARQ_1Rnd",
+			"greenmag_ammo_5x23Caseless_NARQ_30Rnd",
+			"greenmag_ammo_5x23Caseless_NARQ_60Rnd",
+			"greenmag_ammo_5x23Caseless_NARQ_100Rnd",
+			"greenmag_ammo_5x23Caseless_NARQ_tracer_1Rnd",
+			"greenmag_ammo_5x23Caseless_NARQ_tracer_30Rnd",
+			"greenmag_ammo_5x23Caseless_NARQ_tracer_60Rnd",
+			"greenmag_ammo_5x23Caseless_NARQ_tracer_100Rnd"
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
@@ -47,7 +112,8 @@ class CfgPatches {
 			"ace_missileguidance",
             "NSWep_Weapons",
             "CBA_Main",
-            "73STB_Main"
+            "73STB_Main",
+			"greenmag_main"
         };
         authors[] = {"Salmon"}; // sub array of authors, considered for the specific addon, can be removed or left empty {}
         author = AUTHOR; // primary author name, either yours or your team's, considered for the whole mod
@@ -107,29 +173,13 @@ class SensorTemplateDataLink;
 class OPTRE_ace_missileguidance_type_M41_Thermal;
 class cfgAmmo {
 
-    #include "data\SMG\smgammo.hpp"
-    #include "data\DMR\dmrammo.hpp"
-    #include "data\LMG\lmgammo.hpp"
-    #include "data\Launcher\launcherammo.hpp"
-    #include "data\Sniper\sniperammo.hpp"
-    #include "data\BR\brammo.hpp"
-    #include "data\Shotgun\shotgunammo.hpp"
-    #include "data\AR\arammo.hpp"
-    #include "data\sidearm\sidearmammo.hpp"
+    #include "data\ammo\ammo.hpp"
 
 };
 
 class cfgMagazines
 {
-    #include "data\SMG\smgmagazine.hpp"
-    #include "data\DMR\dmrmagazine.hpp"
-    #include "data\LMG\lmgmagazine.hpp"
-    #include "data\Launcher\launchermagazine.hpp"
-    #include "data\Sniper\snipermagazine.hpp"
-    #include "data\BR\brmagazine.hpp"
-    #include "data\Shotgun\shotgunmagazine.hpp"
-    #include "data\AR\armagazine.hpp"
-    #include "data\sidearm\sidearmmagazine.hpp"
+    #include "data\ammo\magazines.hpp"
 
 };
 
@@ -141,107 +191,168 @@ class cfgMagazineWells{
 			"STB73_HEAA"
 		};
 	};
-	class STB73_ar{
-		STB73_Magazines[] = {
-			"STB73_32Rnd_762x51_Mag",
-			"STB73_32Rnd_762x51_Mag_Tracer",
-			"STB73_32Rnd_762x51_Mag_Tracer_Yellow"
-		};
-	};
-	class STB73_ar32rnd_uw{
-		STB73_Magazines[] = {
-			"STB73_32Rnd_762x51_Mag_UW_Tracer",
-			"STB73_32Rnd_762x51_Mag_UW"
-		};
-	};
-	class STB73_ar60rnd{
-		STB73_Magazines[] = {
-			"STB73_60Rnd_762x51_Mag",
-			"STB73_60Rnd_762x51_Mag_Tracer",
-			"STB73_60Rnd_762x51_Mag_Tracer_Yellow"
-		};
-	};
-	class STB73_LMG{
-		STB73_Magazines[] = {
-			"STB73_200rnd_M247_Mag",
-			"STB73_200rnd_M247_Mag_Tracer",
-			"STB73_200rnd_M247_Mag_Tracer_Yellow",
-			"STB73_100rnd_M247_Mag",
-			"STB73_100rnd_M247_Mag_Tracer",
-			"STB73_100rnd_M247_Mag_Tracer_Yellow"
-		};
-	};
-	class STB73_DMR{
+	class STB73_15Rnd_762x51_MagWell{
 		STB73_Magazines[] = {
 			"STB73_15Rnd_762x51_Mag",
 			"STB73_15Rnd_762x51_Mag_Tracer",
 			"STB73_15Rnd_762x51_Mag_Tracer_Yellow",
+			"STB73_15Rnd_762x51_Mag_Tracer_IR",
+			"STB73_15Rnd_762x51_Mag_Dual"
+		};
+	};
+	class STB73_32Rnd_762x51_MagWell{
+		STB73_Magazines[] = {
+			"STB73_32Rnd_762x51_Mag",
+			"STB73_32Rnd_762x51_Mag_Tracer",
+			"STB73_32Rnd_762x51_Mag_Tracer_Yellow",
+			"STB73_32Rnd_762x51_Mag_Tracer_IR",
+			"STB73_32Rnd_762x51_Mag_Dual"
+		};
+	};
+	class STB73_60Rnd_762x51_MagWell{
+		STB73_Magazines[] = {
+			"STB73_60Rnd_762x51_Mag",
+			"STB73_60Rnd_762x51_Mag_Tracer",
+			"STB73_60Rnd_762x51_Mag_Tracer_Yellow",
+			"STB73_60Rnd_762x51_Mag_Tracer_IR",
+			"STB73_60Rnd_762x51_Mag_Dual"
+		};
+	};
+	class STB73_1Rnd_40mm_MagWell{
+		STB73_Magazines[] = {
+			"TCP_1Rnd_40_Shell_Signal_Green",
+			"TCP_1Rnd_40_Shell_Signal_Red",
+			"TCP_1Rnd_40_Shell_Signal_White",
+			"TCP_1Rnd_40_Shell_Signal_Yellow",
+			"TCP_1Rnd_40_Shell_HE",
+			"TCP_1Rnd_40_Shell_TD",
+			"TCP_1Rnd_40_Shell_Smoke_Blue",
+			"TCP_1Rnd_40_Shell_Smoke_Green",
+			"TCP_1Rnd_40_Shell_Smoke_Red",
+			"TCP_1Rnd_40_Shell_Smoke_White",
+			"TCP_1Rnd_40_Shell_Smoke_Yellow",
+			"TCP_1Rnd_40_Shell_Smoke_Orange",
+			"TCP_1Rnd_40_Shell_Smoke_Purple"
+		};
+	};
+	class STB73_100Rnd_762x51_MagWell{
+		STB73_Magazines[] = {
+			"STB73_100rnd_762x51_Mag",
+			"STB73_100rnd_762x51_Mag_Tracer",
+			"STB73_100rnd_762x51_Mag_Tracer_Yellow",
+			"STB73_100rnd_762x51_Mag_Tracer_IR"
+		};
+	};
+	class STB73_200Rnd_762x51_MagWell{
+		STB73_Magazines[] = {
+			"STB73_200rnd_762x51_Mag",
+			"STB73_200rnd_762x51_Mag_Tracer",
+			"STB73_200rnd_762x51_Mag_Tracer_Yellow",
+			"STB73_200rnd_762x51_Mag_Tracer_IR"
+		};
+	};
+	class STB73_15Rnd_762x51_DMR_MagWell{
+		STB73_Magazines[] = {
+			"STB73_15Rnd_762x51_Mag",
+			"STB73_15Rnd_762x51_Mag_Tracer",
+			"STB73_15Rnd_762x51_Mag_Tracer_Yellow",
+			"STB73_15Rnd_762x51_Mag_Tracer_IR",
 			"STB73_15Rnd_762x51_HVAP_Mag",
 			"STB73_15Rnd_762x51_HVAP_Mag_Tracer",
 			"STB73_15Rnd_762x51_HVAP_Mag_Tracer_Yellow",
-			"STB73_15Rnd_762x51_BTHP",
+			"STB73_15Rnd_762x51_HVAP_Mag_Tracer_IR",
+			"STB73_15Rnd_762x51_BTHP_Mag",
 			"STB73_15Rnd_762x51_BTHP_Mag_Tracer",
 			"STB73_15Rnd_762x51_BTHP_Mag_Tracer_Yellow",
 			"STB73_15Rnd_762x51_BTHP_Mag_Tracer_IR"
 		};
 	};
-	class STB73_BR55{
+	class STB73_36Rnd_95x40_MagWell{
 		STB73_Magazines[] = {
-            "STB73_95x40_36Rnd",
-            "STB73_95x40_36Rnd_T_G",
-            "STB73_95x40_36Rnd_T_R",
-            "STB73_95x40_36Rnd_T_IR"
+            "STB73_95x40_36Rnd_Mag",
+            "STB73_95x40_36Rnd_Mag_Tracer",
+            "STB73_95x40_36Rnd_Mag_Tracer_Yellow",
+            "STB73_95x40_36Rnd_Mag_Tracer_IR"
 		};
 	};
-	class STB73_BR55HB{
-		STB73_Magazines[] = {
-            "STB73_36Rnd_95x40_HPSAP_Mag",
-            "STB73_36Rnd_95x40_HPSAP_Mag_Tracer"
-		};
-	};
-	class STB73_M6D{
-		STB73_Magazines[] = {
-			"STB73_40Rnd_127x40_Drum_Black_Tracer",
-			"STB73_26Rnd_127x40_Mag_Black_Tracer",
-			"STB73_16Rnd_127x40_Mag_Black_Tracer",
-			"STB73_12Rnd_127x40_Mag_Black_Tracer",
-			"STB73_12Rnd_127x40_Mag_Black_Tracer_Narq"
-		};
-	};
-	class STB73_M7_SMG{
+	class STB73_48Rnd_5x23Caseless_MagWell{
 		STB73_Magazines[] = {
 			"STB73_48Rnd_5x23Caseless_FMJ_Mag",
 			"STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer",
+			"STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow",
+			"STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_IR",
+			"STB73_48Rnd_5x23Caseless_NARQ_Mag",
+			"STB73_48Rnd_5x23Caseless_NARQ_Mag_Tracer",
+		};
+	};
+	class STB73_60Rnd_5x23Caseless_MagWell{
+		STB73_Magazines[] = {
 			"STB73_60Rnd_5x23Caseless_FMJ_Mag",
 			"STB73_60Rnd_5x23Caseless_FMJ_Mag_Tracer",
-			"STB73_48Rnd_5x23Caseless_NARQ_Mag"
+			"STB73_60Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow",
+			"STB73_60Rnd_5x23Caseless_FMJ_Mag_Tracer_IR"
 		};
 	};
-	class STB73_shotgun{
+	class STB73_1Rnd_12Gauge_MagWell
+	{
 		STB73_Magazines[] = {
-			"STB73_6Rnd_8Gauge_Pellets",
-			"STB73_6Rnd_8Gauge_Slugs",
-			"STB73_12Rnd_8Gauge_Pellets",
-			"STB73_12Rnd_8Gauge_Slugs",
-			"STB73_6Rnd_8Gauge_HEDP",
-			"STB73_12Rnd_8Gauge_HEDP"
+			"STB73_1Rnd_12Gauge_Pellets",
+			"STB73_1Rnd_12Gauge_Slugs",
+			"STB73_1Rnd_12Gauge_Smoke"
 		};
 	};
-	class STB73_shotgun_Bulldog{
+	class STB73_12Rnd_127x30_MagWell{
 		STB73_Magazines[] = {
-			"STB73_24Rnd_12Gauge_Pellets",
-			"STB73_24Rnd_12Gauge_Slugs",
-			"STB73_24Rnd_12Gauge_HE",
-			"STB73_24Rnd_12Gauge_Smoke",
-
+			"STB73_12Rnd_127x30_SAP_Mag",
+			"STB73_12Rnd_127x30_SAP_Mag_Tracer",
+			"STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow",
+			"STB73_12Rnd_127x30_SAP_Mag_Tracer_IR",
+			"STB73_12Rnd_127x30_NARQ_Mag",
+			"STB73_12Rnd_127x30_NARQ_Mag_Tracer"
 		};
 	};
-	class STB73_sidearm{
+	class STB73_24Rnd_127x30_MagWell{
 		STB73_Magazines[] = {
-			"STB73_12Rnd_10x31_SAP_Mag",
-			"STB73_12Rnd_10x31_SAP_Mag_Tracer",
-			"STB73_12Rnd_10x31_NARQ_Mag",
-			"STB73_12Rnd_10x31_NARQ_Mag_Tracer"
+			"STB73_24Rnd_127x30_SAP_Mag",
+			"STB73_24Rnd_127x30_SAP_Mag_Tracer",
+			"STB73_24Rnd_127x30_SAP_Mag_Tracer_Yellow",
+			"STB73_24Rnd_127x30_SAP_Mag_Tracer_IR"
+		};
+	};
+	class STB73_36Rnd_127x30_MagWell{
+		STB73_Magazines[] = {
+			"STB73_36Rnd_127x30_SAP_Mag",
+			"STB73_36Rnd_127x30_SAP_Mag_Tracer",
+			"STB73_36Rnd_127x30_SAP_Mag_Tracer_Yellow",
+			"STB73_36Rnd_127x30_SAP_Mag_Tracer_IR"
+		};
+	};
+	class STB73_4Rnd_145x114_MagWell{
+		STB73_Magazines[] = {
+			"STB73_M232_145x114x4_APFSDS",
+			"STB73_M232_145x114x4_APFSDS_TG",
+			"STB73_M232_145x114x4_APFSDS_TR",
+			"STB73_M232_145x114x4_APFSDS_TC",
+			"STB73_M232_145x114x4_APFSDS_TIR",
+			"STB73_M233_145x114x4_APFSDS",
+			"STB73_M233_145x114x4_APFSDS_TG",
+			"STB73_M233_145x114x4_APFSDS_TR",
+			"STB73_M233_145x114x4_APFSDS_TC",
+			"STB73_M233_145x114x4_APFSDS_TIR"
+		};
+	};
+	class STB73_8Rnd_145x114_MagWell{
+		STB73_Magazines[] = {
+			"STB73_M232_145x114x8_APFSDS",
+			"STB73_M232_145x114x8_APFSDS_TG",
+			"STB73_M232_145x114x8_APFSDS_TR",
+			"STB73_M232_145x114x8_APFSDS_TC",
+			"STB73_M232_145x114x8_APFSDS_TIR",
+			"STB73_M233_145x114x8_APFSDS",
+			"STB73_M233_145x114x8_APFSDS_TG",
+			"STB73_M233_145x114x8_APFSDS_TR",
+			"STB73_M233_145x114x8_APFSDS_TC",
+			"STB73_M233_145x114x8_APFSDS_TIR"
 		};
 	};
 };

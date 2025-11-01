@@ -6,7 +6,7 @@ class CfgFunctions{
         {
             file = "z\73STB\addons\functions\misc";
             //Used with permission from Jerry of the 105th
-            class Init
+            class Init_misc
 			{
 				postInit=1;
 			};
@@ -30,25 +30,26 @@ class CfgFunctions{
             class ModuleBJHEV { description = "STB73 - BJ HEV module"; };
             class ModuleOCLSSquadPod { description = "STB73 - OCLS squad pod module"; };
             class ModulePelicanAirAssault { description = "STB73 - Pelican air assault module"; };
+            class ModuleHEV { description = "STB73 - HEV module"; };
+            class ModuleHEVCleanup { description = "STB73 - HEV Cleanup module"; };
         };
 
         class Thrusters
         {
             file = "z\73STB\addons\functions\thrusters";
-            class GetFlightTime { description = "Thrusters - get flight time"; };
-            class IncreaseThrusterLevel { description = "Thrusters - increase level"; };
-            class RegisterThrusters { description = "Thrusters - register thrusters"; };
-            class ThrusterAnimate { description = "Thrusters - animate"; };
-            class ThrusterDeAnimate { description = "Thrusters - de-animate"; };
-            class ThrusterDisengage { description = "Thrusters - disengage"; };
-            class AfterburnersDisengage { description = "Thrusters - afterburners disengage"; };
-            class Init { postInit = 1; description = "Thrusters - initialization"; };
-            class ChangeSpeed { description = "Thrusters - change speed"; };
-            class DecreaseThrusterLevel { description = "Thrusters - decrease level"; };
-            class EngageAfterburners { description = "Thrusters - engage afterburners"; };
-            class EngageAirBrakes { description = "Thrusters - engage air brakes"; };
-            class EngageForwardThrusters { description = "Thrusters - engage forward thrusters"; };
-
+            class GetFlightTime { file = "z\73STB\addons\functions\thrusters\Fn_GetFlightTime.sqf"; description = "Thrusters - get flight time"; };
+            class IncreaseThrusterLevel { file = "z\73STB\addons\functions\thrusters\Fn_IncreaseThrusterLevel.sqf"; description = "Thrusters - increase level"; };
+            class RegisterThrusters { file = "z\73STB\addons\functions\thrusters\Fn_RegisterThrusters.sqf"; description = "Thrusters - register thrusters"; };
+            class ThrusterAnimate { file = "z\73STB\addons\functions\thrusters\Fn_ThrusterAnimate.sqf"; description = "Thrusters - animate"; };
+            class ThrusterDeAnimate { file = "z\73STB\addons\functions\thrusters\Fn_ThrusterDeAnimate.sqf"; description = "Thrusters - de-animate"; };
+            class ThrusterDisengage { file = "z\73STB\addons\functions\thrusters\Fn_ThrusterDisengage.sqf"; description = "Thrusters - disengage"; };
+            class AfterburnersDisengage { file = "z\73STB\addons\functions\thrusters\Fn_AfterburnersDisengage.sqf"; description = "Thrusters - afterburners disengage"; };
+            class Init_vic { postInit = 1;  file = "z\73STB\addons\functions\thrusters\fn_Init_vic.sqf"; description = "Thrusters - initialization"; };
+            class ChangeSpeed { file = "z\73STB\addons\functions\thrusters\Fn_ChangeSpeed.sqf"; description = "Thrusters - change speed"; };
+            class DecreaseThrusterLevel { file = "z\73STB\addons\functions\thrusters\Fn_DecreaseThrusterLevel.sqf"; description = "Thrusters - decrease level"; };
+            class EngageAfterburners { file = "z\73STB\addons\functions\thrusters\Fn_EngageAfterburners.sqf"; description = "Thrusters - engage afterburners"; };
+            class EngageAirbrakes { file = "z\73STB\addons\functions\thrusters\Fn_EngageAirbrakes.sqf"; description = "Thrusters - engage airbrakes"; };
+            class EngageForwardThruster { file = "z\73STB\addons\functions\thrusters\Fn_EngageForwardThruster.sqf"; description = "Thrusters - engage forward thruster"; };
             
         };
 
@@ -56,13 +57,23 @@ class CfgFunctions{
         {
             file = "z\73STB\addons\functions\jumpack";
             class PreInit { preInit = 1; description = "Jumpack - preInit"; };
-            class Init { postInit = 1; description = "Jumpack - init"; };
+            class Init_JP { postInit = 1; description = "Jumpack - init"; };
             class JumpPack { description = "Jumpack - main"; };
             class EventHandlers { description = "Jumpack - event handlers"; };
             class JumpPackRefuel { description = "Jumpack - refuel"; };
             class RoofStuckCheck { description = "Jumpack - roof stuck check"; };
         };
-
+        class SupportSystem
+        {
+            file = "z\73STB\addons\functions\support";
+            class CS_ODSTHEV {};
+            class CS_BJHEV {};
+            class CS_PelicanAirAssault {};
+            class CS_OCLSSquadPod {};
+            class setCallMortarFireSupport73STB {};
+            class setCallArtyFireSupport73STB {};
+            class addFireSupportMenu73STB {};
+        };
         class HEV
         {
             file = "z\73STB\addons\functions\hev";
@@ -89,7 +100,7 @@ class CfgFunctions{
         class Weapons
         {
             file="z\73STB\addons\functions\weapons";
-            class Init
+            class Init_wep
             {
                 postInit=1;
             };
@@ -98,6 +109,7 @@ class CfgFunctions{
         {
             file = "z\73STB\addons\functions\menufunctions";
             class HEVRoom { description = "Menus - HEV room menu"; };
+            class UNSCdatabase { description = "Menus - UNSC database menu"; };
         };
         class Tools
         {
@@ -123,7 +135,7 @@ class CfgFunctions{
             class PelicanLoadSupplyPodsMenuLoad
             {
             };
-            class PelicanLoadSupplyPodsMenuDetachMenu
+            class PelicanLoadSupplyPodMenuDetachMenu
             {
             };
             class PelicanLoad_UnloadAllSupplyPods

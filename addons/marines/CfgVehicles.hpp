@@ -60,8 +60,8 @@ class CfgVehicles {
         linkedItems[] = {"STB73_CEArmourNSV2","STB73_CEBoonie","ItemMap","ItemRadio","ItemCompass","ItemWatch","LM_OPCAN_CAMSNI"};
         respawnLinkedItems[] = {"STB73_CEArmourNSV2","STB73_CEBoonie","ItemMap","ItemRadio","ItemCompass","ItemWatch","LM_OPCAN_CAMSNI"};
 
-        magazines[] = {"STB73_15Rnd_10x40_Mag_Tracer_Yellow","STB73_15Rnd_10x40_Mag_Tracer_Yellow","STB73_15Rnd_10x40_Mag_Tracer_Yellow","STB73_15Rnd_10x40_Mag_Tracer_Yellow","STB73_15Rnd_10x40_Mag_Tracer_Yellow","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag"};
-        respawnMagazines[] = {"STB73_15Rnd_10x40_Mag_Tracer_Yellow","STB73_15Rnd_10x40_Mag_Tracer_Yellow","STB73_15Rnd_10x40_Mag_Tracer_Yellow","STB73_15Rnd_10x40_Mag_Tracer_Yellow","STB73_15Rnd_10x40_Mag_Tracer_Yellow","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag"};
+        magazines[] = {"STB73_15Rnd_762x51_Mag_Tracer_Yellow","STB73_15Rnd_762x51_Mag_Tracer_Yellow","STB73_15Rnd_762x51_Mag_Tracer_Yellow","STB73_15Rnd_762x51_Mag_Tracer_Yellow","STB73_15Rnd_762x51_Mag_Tracer_Yellow","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag"};
+        respawnMagazines[] = {"STB73_15Rnd_762x51_Mag_Tracer_Yellow","STB73_15Rnd_762x51_Mag_Tracer_Yellow","STB73_15Rnd_762x51_Mag_Tracer_Yellow","STB73_15Rnd_762x51_Mag_Tracer_Yellow","STB73_15Rnd_762x51_Mag_Tracer_Yellow","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag"};
 
         items[] = {"ACE_EarPlugs","FirstAidKit"};
         respawnItems[] = {"ACE_EarPlugs","FirstAidKit"};
@@ -87,8 +87,8 @@ class CfgVehicles {
         linkedItems[] = {"STB73_CEArmour","STB73_CH43A_Helmet","ItemMap","ItemRadio","ItemCompass","ItemWatch","LM_OPCAN_COMMCAMSNI"};
         respawnLinkedItems[] = {"STB73_CEArmour","STB73_CH43A_Helmet","ItemMap","ItemRadio","ItemCompass","ItemWatch","LM_OPCAN_COMMCAMSNI"};
 
-        magazines[] = {"Chemlight_green","Chemlight_green","HandGrenade","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag"};
-        respawnMagazines[] = {"Chemlight_green","Chemlight_green","HandGrenade","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag"};
+        magazines[] = {"Chemlight_green","Chemlight_green","HandGrenade","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag"};
+        respawnMagazines[] = {"Chemlight_green","Chemlight_green","HandGrenade","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag"};
 
         items[] = {"FirstAidKit"};
         respawnItems[] = {"FirstAidKit"};
@@ -114,8 +114,8 @@ class CfgVehicles {
         linkedItems[] = {"STB73_CEArmourPouch","STB73_CH43A_Helmet","ItemMap","ItemRadio","ItemCompass","ItemWatch","LM_OPCAN_COMM"};
         respawnLinkedItems[] = {"STB73_CEArmourPouch","STB73_CH43A_Helmet","ItemMap","ItemRadio","ItemCompass","ItemWatch","LM_OPCAN_COMM"};
 
-        magazines[] = {"Chemlight_green","Chemlight_green","HandGrenade","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag"};
-        respawnMagazines[] = {"Chemlight_green","Chemlight_green","HandGrenade","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag"};
+        magazines[] = {"Chemlight_green","Chemlight_green","HandGrenade","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag"};
+        respawnMagazines[] = {"Chemlight_green","Chemlight_green","HandGrenade","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag"};
 
         items[] = {"FirstAidKit"};
         respawnItems[] = {"FirstAidKit"};
@@ -222,8 +222,8 @@ class CfgVehicles {
         linkedItems[] = {"STB73_CEArmour","STB73_CH43A_Helmet","ItemMap","ItemRadio","ItemCompass","ItemWatch","LM_OPCAN_COMMUA"};
         respawnLinkedItems[] = {"STB73_CEArmour","STB73_CH43A_Helmet","ItemMap","ItemRadio","ItemCompass","ItemWatch","LM_OPCAN_COMMUA"};
 
-        magazines[] = {"STB73_100rnd_M247_Mag_Tracer_Yellow","STB73_100rnd_M247_Mag_Tracer_Yellow","STB73_100rnd_M247_Mag_Tracer_Yellow","OPTRE_8Rnd_127x40_Mag"};
-        respawnMagazines[] = {"STB73_100rnd_M247_Mag_Tracer_Yellow","STB73_100rnd_M247_Mag_Tracer_Yellow","STB73_100rnd_M247_Mag_Tracer_Yellow","OPTRE_8Rnd_127x40_Mag"};
+        magazines[] = {"STB73_100rnd_762x51_Mag_Tracer","STB73_100rnd_762x51_Mag_Tracer","STB73_100rnd_762x51_Mag_Tracer","OPTRE_8Rnd_127x40_Mag"};
+        respawnMagazines[] = {"STB73_100rnd_762x51_Mag_Tracer","STB73_100rnd_762x51_Mag_Tracer","STB73_100rnd_762x51_Mag_Tracer","OPTRE_8Rnd_127x40_Mag"};
 
         items[] = {"ACE_EarPlugs","FirstAidKit"};
         respawnItems[] = {"ACE_EarPlugs","FirstAidKit"};
@@ -303,8 +303,8 @@ class CfgVehicles {
         linkedItems[] = {"STB73_CEArmourNSV2","STB73_CEBoonie","ItemMap","ItemRadio","ItemCompass","ItemWatch","LM_OPCAN_CAMSNI"};
         respawnLinkedItems[] = {"STB73_CEArmourNSV2","STB73_CEBoonie","ItemMap","ItemRadio","ItemCompass","ItemWatch","LM_OPCAN_CAMSNI"};
 
-        magazines[] = {"STB73_15Rnd_10x40_Mag_Tracer_Yellow","STB73_15Rnd_10x40_Mag_Tracer_Yellow","STB73_15Rnd_10x40_Mag_Tracer_Yellow","STB73_15Rnd_10x40_Mag_Tracer_Yellow","STB73_15Rnd_10x40_Mag_Tracer_Yellow","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag"};
-        respawnMagazines[] = {"STB73_15Rnd_10x40_Mag_Tracer_Yellow","STB73_15Rnd_10x40_Mag_Tracer_Yellow","STB73_15Rnd_10x40_Mag_Tracer_Yellow","STB73_15Rnd_10x40_Mag_Tracer_Yellow","STB73_15Rnd_10x40_Mag_Tracer_Yellow","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag"};
+        magazines[] = {"STB73_15Rnd_762x51_Mag_Tracer_Yellow","STB73_15Rnd_762x51_Mag_Tracer_Yellow","STB73_15Rnd_762x51_Mag_Tracer_Yellow","STB73_15Rnd_762x51_Mag_Tracer_Yellow","STB73_15Rnd_762x51_Mag_Tracer_Yellow","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag"};
+        respawnMagazines[] = {"STB73_15Rnd_762x51_Mag_Tracer_Yellow","STB73_15Rnd_762x51_Mag_Tracer_Yellow","STB73_15Rnd_762x51_Mag_Tracer_Yellow","STB73_15Rnd_762x51_Mag_Tracer_Yellow","STB73_15Rnd_762x51_Mag_Tracer_Yellow","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag"};
 
         items[] = {"ACE_EarPlugs","FirstAidKit"};
         respawnItems[] = {"ACE_EarPlugs","FirstAidKit"};
@@ -330,8 +330,8 @@ class CfgVehicles {
         linkedItems[] = {"STB73_CEArmour","STB73_ECH43A_Helmet","ItemMap","ItemRadio","ItemCompass","ItemWatch","LM_OPCAN_COMMCAMSNI"};
         respawnLinkedItems[] = {"STB73_CEArmour","STB73_ECH43A_Helmet","ItemMap","ItemRadio","ItemCompass","ItemWatch","LM_OPCAN_COMMCAMSNI"};
 
-        magazines[] = {"Chemlight_green","Chemlight_green","HandGrenade","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag"};
-        respawnMagazines[] = {"Chemlight_green","Chemlight_green","HandGrenade","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag"};
+        magazines[] = {"Chemlight_green","Chemlight_green","HandGrenade","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag"};
+        respawnMagazines[] = {"Chemlight_green","Chemlight_green","HandGrenade","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag"};
 
         items[] = {"FirstAidKit"};
         respawnItems[] = {"FirstAidKit"};
@@ -357,8 +357,8 @@ class CfgVehicles {
         linkedItems[] = {"STB73_CEArmourPouch","STB73_ECH43A_Helmet","ItemMap","ItemRadio","ItemCompass","ItemWatch","LM_OPCAN_COMM"};
         respawnLinkedItems[] = {"STB73_CEArmourPouch","STB73_ECH43A_Helmet","ItemMap","ItemRadio","ItemCompass","ItemWatch","LM_OPCAN_COMM"};
 
-        magazines[] = {"Chemlight_green","Chemlight_green","HandGrenade","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag"};
-        respawnMagazines[] = {"Chemlight_green","Chemlight_green","HandGrenade","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag"};
+        magazines[] = {"Chemlight_green","Chemlight_green","HandGrenade","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag"};
+        respawnMagazines[] = {"Chemlight_green","Chemlight_green","HandGrenade","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_48Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag"};
 
         items[] = {"FirstAidKit"};
         respawnItems[] = {"FirstAidKit"};
@@ -465,8 +465,8 @@ class CfgVehicles {
         linkedItems[] = {"STB73_CEArmour","STB73_ECH43A_Helmet","ItemMap","ItemRadio","ItemCompass","ItemWatch","LM_OPCAN_COMMUA"};
         respawnLinkedItems[] = {"STB73_CEArmour","STB73_ECH43A_Helmet","ItemMap","ItemRadio","ItemCompass","ItemWatch","LM_OPCAN_COMMUA"};
 
-        magazines[] = {"STB73_100rnd_M247_Mag_Tracer_Yellow","STB73_100rnd_M247_Mag_Tracer_Yellow","STB73_100rnd_M247_Mag_Tracer_Yellow","OPTRE_8Rnd_127x40_Mag"};
-        respawnMagazines[] = {"STB73_100rnd_M247_Mag_Tracer_Yellow","STB73_100rnd_M247_Mag_Tracer_Yellow","STB73_100rnd_M247_Mag_Tracer_Yellow","OPTRE_8Rnd_127x40_Mag"};
+        magazines[] = {"STB73_100rnd_762x51_Mag_Tracer","STB73_100rnd_762x51_Mag_Tracer","STB73_100rnd_762x51_Mag_Tracer","OPTRE_8Rnd_127x40_Mag"};
+        respawnMagazines[] = {"STB73_100rnd_762x51_Mag_Tracer","STB73_100rnd_762x51_Mag_Tracer","STB73_100rnd_762x51_Mag_Tracer","OPTRE_8Rnd_127x40_Mag"};
 
         items[] = {"ACE_EarPlugs","FirstAidKit"};
         respawnItems[] = {"ACE_EarPlugs","FirstAidKit"};

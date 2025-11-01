@@ -88,6 +88,8 @@ class CfgVehicles
         tf_dialog="";
         tf_subtype="";
         tf_range=0;
+        scope=1;
+        scopeArsenal=1;
         tf_dialogUpdate="";
         tf_hasLRradio=0;
         class XtdGearInfo

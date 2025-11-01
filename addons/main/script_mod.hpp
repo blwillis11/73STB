@@ -7,6 +7,7 @@
 
 #include "script_version.hpp"
 
+#define VERSION MAJOR.MINOR
 #define VERSION_STR MAJOR.MINOR.PATCHLVL.BUILD
 #define VERSION_AR  MAJOR,MINOR,PATCHLVL,BUILD
 
@@ -15,6 +16,8 @@
 #define REQUIRED_CBA_VERSION {3,15,6}
 #define REQUIRED_ACE_VERSION {3,14,0,63}
 #define REQUIRED_TFAR_VERSION {1,-1,0,328}
+
+#define VERSION_CONFIG version = VERSION; versionStr = QUOTE(VERSION); versionAr[] = {VERSION_AR}
 
 #define RELEASE_BUILD
 

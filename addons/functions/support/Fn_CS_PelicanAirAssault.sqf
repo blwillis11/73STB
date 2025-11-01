@@ -99,7 +99,7 @@ private ["_pos","_crew","_crewGroup","_group1","_group2"];
 
 // Variables 
 _pos = switch (typeName (_this select 0)) do { case "ARRAY": { (_this select 0) }; case "STRING": { (getMarkerPos (_this select 0)) }; case "OBJECT": { getPos (_this select 0) }; default {[0,0,0]}; }; _posFinal = _pos;
-_AssaultTroopsArray = [_this,1,["OPTRE_M12_LRV_black","ODST",[]]] call BIS_fnc_param;
+_AssaultTroopsArray = [_this,1,["STB73_M12_LRV","ODST",[]]] call BIS_fnc_param;
 
 _vehicleMagLiftedClassname = [_AssaultTroopsArray, 0, ""] call BIS_fnc_param;//_podArrayString select 0;
 _squadsFactions =  [_AssaultTroopsArray, 1, "10th MEB"] call BIS_fnc_param;//_podArrayString select 1;
@@ -167,8 +167,8 @@ _squad = if (typeName _squadsFactions == "ARRAY") then {
 	_squadsFactions
 } else {
 	(switch _squadsFactions do {
-		case "73rd STB": 	{ ["STB73_STB_ODST_Team_Lead","STB73_STB_ODST_Medic","STB73_STB_ODST_AT","STB73_STB_ODST_Rifleman","STB73_STB_ODST_Demo","STB73_STB_ODST_Autorifleman"] };
-		case "10th MEB": 	{ ["STB73_Marine_Team_Lead","STB73_Marine_Medic","STB73_Marine_Rifleman_AT","STB73_Marine_Rifleman","STB73_Marine_RTO_Operator","STB73_Marine_Autorifleman"] };
+		case "73rd STB": 	{ ["STB73_STB_ODST_Team_Lead","STB73_STB_ODST_Medic","STB73_STB_ODST_AT","STB73_STB_ODST_Rifleman","STB73_STB_ODST_Autorifleman"] };
+		case "10th MEB": 	{ ["STB73_Marine_Team_Lead","STB73_Marine_Medic","STB73_Marine_Rifleman_AT","STB73_Marine_Rifleman","STB73_Marine_Autorifleman"] };
 	})
 };
 

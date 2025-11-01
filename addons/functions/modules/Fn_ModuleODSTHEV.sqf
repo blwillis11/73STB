@@ -86,6 +86,6 @@ if (isNull _logic) exitWith {}; // exit if module is deleted
 	((_logic getVariable ["waypoints",""]) call OPTRE_fnc_StringToArrayOfString),
 	(_logic getVariable ["finalWaypoint",""]),
 	WEST
-] call OPTRE_fnc_CS_ODSTHEV;
+] call STB73_fnc_CS_ODSTHEV;
 
 if (!isNull _logic) then { deleteVehicle _logic };

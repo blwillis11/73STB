@@ -62,7 +62,8 @@ class CfgPatches {
         requiredAddons[] = {
             "OPTRE_UNSC_Units_Army",
             "OPTRE_FunctionsLibrary",
-            "DMNS_Armour"
+            "DMNS_Armour",
+			"73STB_Functions"
         };
         authors[] = {"Salmon"}; // sub array of authors, considered for the specific addon, can be removed or left empty {}
         author = AUTHOR; // primary author name, either yours or your team's, considered for the whole mod

@@ -1,5 +1,7 @@
 class CfgWeapons
 {
+    class VestItem;
+    
     NEW_VEST_43D(ODST)
     NEW_VEST_43D(Sharpshooter)
     NEW_VEST_43D(Breacher)
@@ -18,6 +20,7 @@ class CfgWeapons
         scopeArsenal=2;
         author="73rd S-4 Team";
         displayName="[73] VX19 Flight Helmet [Aviator]";
+        ace_hearing_protection = 0.80;
         hiddenSelectionsTextures[]=
         {
             "z\73STB\addons\armor\data\helmets\73_VX19_aviator_co.paa",
@@ -42,6 +45,7 @@ class CfgWeapons
         scopeArsenal=2;
         author="73rd S-4 Team";
         displayName="[73] VX19 Flight Helmet [Sr Aviator]";
+        ace_hearing_protection = 0.80;
         hiddenSelectionsTextures[]=
         {
             "z\73STB\addons\armor\data\helmets\73_VX19_senioraviator_co.paa",

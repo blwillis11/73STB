@@ -73,7 +73,7 @@ private _bj_ret = [
 	_bjWaypoints,
 	_bjFinalWP,
 	east
-] call OPTRE_fnc_CS_BJHEV;
+] call STB73_fnc_CS_BJHEV;
 
 diag_log format ["ModuleBJHEV: CS_BJHEV returned %1", _bj_ret];
 

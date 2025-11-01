@@ -63,14 +63,31 @@ class HitpointsProtectionInfo {  \
   class Body {                   \
     hitpointName="HitBody";      \
     passThrough=0.1;             \
-    armor=20;                    \
   };                             \
   class Legs {                   \
     hitpointName="HitLegs";      \
     armor=20;                    \
     passThrough=0.5;             \
   };                             \
+  class Hands {                  \
+    hitpointName="HitHands";     \
+    armor=20;                    \
+    passThrough=0.1;             \
+  };                             \
+  class Pelvis {                  \
+    hitpointName="HitPelvis";    \
+    armor=30;                    \
+    passThrough=0.1;             \
+  };                             \
 };
+
+#define VEST_ITEM_INFO                                        \
+  class ItemInfo: VestItem {                                          \
+    vestType="Rebreather";                                            \
+    containerClass="STB73_vest_supply";                                      \
+    mass=VEST_MASS;                                                   \
+    VEST_HITPOINT_INFO                                                \
+  };
 
 #define UNIFORM_XtdGI(CAMO,SHIRT) 						               \
     class TCP_U_B_CBUU_##SHIRT##_Base;                           \
@@ -94,9 +111,11 @@ class HitpointsProtectionInfo {  \
 #define ECH55D_HELMET(CAMO,VISOR) \
     class STB73_H_ECH55D_##CAMO##_##VISOR : TCP_H_Helmet_ECH55D_Black_Black { \
         displayName = QUOTE([73] ECH55D Helmet CAMO VISOR); \
+        ace_hearing_protection = 0.80; \
         hiddenSelectionsTextures[] = { Q(STB73_TEXPATH(helmets,ECH55D_##CAMO##_helmet_co.paa)), Q(STB73_TEXPATH(helmets,ECH55D_##VISOR##_visor_co.paa)),"tcp\characters\BLUFOR\UNSC\ARMY\Vests\M43A\data\camo\White\vest_M43_DecalSheet_CA.paa" }; \
     }; \
     class STB73_H_ECH55D_##CAMO##_##VISOR##_DP : TCP_H_Helmet_ECH55D_Black_Black_DP { \
         displayName = QUOTE([73] ECH55D Helmet CAMO VISOR [DP]); \
+        ace_hearing_protection = 0.80; \
         hiddenSelectionsTextures[] = { Q(STB73_TEXPATH(helmets,ECH55D_##CAMO##_helmet_co.paa)),"\TCP\Characters\BLUFOR\UNSC\Marines\Headgear\helmet_ECH55D\data\camo\default\helmet_ECH55D_Visor_CA.paa","tcp\characters\BLUFOR\UNSC\ARMY\Vests\M43A\data\camo\White\vest_M43_DecalSheet_CA.paa"}; \
     };

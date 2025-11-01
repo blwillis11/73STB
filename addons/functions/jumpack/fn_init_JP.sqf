@@ -1,13 +1,13 @@
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
 
 ["73rd Jumpack", "STB73_JumpPack_Use", ["Jump Pack Use", "Hold this key to activate JumpPack"], {
-    [true] spawn STB73_fnc_JumpPack;
+    [true] spawn STB73_fnc_jumpPack;
 }, {
-    [false] spawn STB73_fnc_JumpPack;
+    [false] spawn STB73_fnc_jumpPack;
 }, [DIK_SPACE, [true, false, false]]] call CBA_fnc_addKeybind;
 
 ["73rd Jumpack", "STB73_JumpPack_Toggle", ["Jump Pack Toggle", "Press this key to toggle activate the JumpPack"], {
-    [!(STB73_JumpPack_ON)] spawn STB73_fnc_JumpPack;
+    [!(STB73_JumpPack_ON)] spawn STB73_fnc_jumpPack;
 }, {
 }, [nil, [false, false, false]]] call CBA_fnc_addKeybind;
 

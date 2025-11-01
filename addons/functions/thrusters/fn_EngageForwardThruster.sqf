@@ -47,8 +47,13 @@ STB73_ThrustersEH = addMissionEventHandler ["EachFrame", {
 		_vehicle setVariable ["STB73_Thrusters_Engaged", false];
 		hint "DISENGAGING FORWARD THRUSTERS, DUE TO DAMAGE";
 	};
-	if (speed _vehicle <= 350) then {
-		private _speed = (STB73_ThrusterMultiplier/diag_fps);
+	private _speed = (STB73_ThrusterMultiplier / diag_fps);
+	private _speedBefore = speed _vehicle;
+	if (_speed == 0) exitWith {};
+	if (_speedBefore <= 350) then {
+		diag_log format ["STB73: Thruster increment computed %1 (mult=%2, fps=%3) for %4. speedBefore=%5", _speed, STB73_ThrusterMultiplier, diag_fps, typeOf _vehicle, _speedBefore];
 		[_vehicle, _speed] call STB73_fnc_ChangeSpeed;
+		private _speedAfter = speed _vehicle;
+		diag_log format ["STB73: After ChangeSpeed for %1, speedAfter=%2", typeOf _vehicle, _speedAfter];
 	};
 }, [_vehicle]];

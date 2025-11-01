@@ -40,8 +40,8 @@ class CfgVehicles {
         linkedItems[] = {"STB73_M43A_BaseSec_Black","STB73_VX19_Helmet_Base","ItemMap","ItemcTab","ItemRadio","ItemCompass","ItemWatch"};
         respawnLinkedItems[] = {"STB73_M43A_BaseSec_Black","STB73_VX19_Helmet_Base","ItemMap","ItemcTab","ItemRadio","ItemCompass","ItemWatch"};
 
-        magazines[] = {"STB73_60RND_762x51_Mag_Tracer_Yellow"};
-        respawnMagazines[] = {"STB73_60RND_762x51_Mag_Tracer_Yellow"};
+        magazines[] = {"STB73_60Rnd_762x51_Mag_Tracer"};
+        respawnMagazines[] = {"STB73_60Rnd_762x51_Mag_Tracer"};
 
         items[] = {""};
         respawnItems[] = {""};
@@ -63,8 +63,8 @@ class CfgVehicles {
         respawnWeapons[] = {"STB73_MA37BGL","OPTRE_Smartfinder", "Throw", "Put"};
         linkedItems[] = {"STB73_M43D_ODST_Black","STB73_H_ECH55D_Standard_Black","ItemMap","ItemAndroid","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
         respawnLinkedItems[] = {"STB73_M43D_ODST_Black","STB73_H_ECH55D_Standard_Black","ItemMap","ItemAndroid","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
-        magazines[] = {"1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","3Rnd_HE_Grenade_shell","MA_M8_Smoke_White","MA_M8_Smoke_White","MA_M9_Frag_Mag","MA_M9_Frag_Mag","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","OPTRE_8Rnd_127x40_AP_Mag"};
-        respawnMagazines[] = {"1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","3Rnd_HE_Grenade_shell","MA_M8_Smoke_White","MA_M8_Smoke_White","MA_M9_Frag_Mag","MA_M9_Frag_Mag","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","OPTRE_8Rnd_127x40_AP_Mag"};
+        magazines[] = {"TCP_1Rnd_40_Shell_HE","TCP_1Rnd_40_Shell_HE","TCP_1Rnd_40_Shell_HE","TCP_1Rnd_40_Shell_HE","TCP_1Rnd_40_Shell_HE","TCP_1Rnd_40_Shell_HE","TCP_1Rnd_40_Shell_HE","TCP_1Rnd_40_Shell_HE","TCP_1Rnd_40_Shell_HE","TCP_1Rnd_40_Shell_HE","MA_M8_Smoke_White","MA_M8_Smoke_White","MA_M9_Frag_Mag","MA_M9_Frag_Mag","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","OPTRE_8Rnd_127x40_AP_Mag"};
+        respawnMagazines[] = {"TCP_1Rnd_40_Shell_HE","TCP_1Rnd_40_Shell_HE","TCP_1Rnd_40_Shell_HE","TCP_1Rnd_40_Shell_HE","TCP_1Rnd_40_Shell_HE","TCP_1Rnd_40_Shell_HE","TCP_1Rnd_40_Shell_HE","TCP_1Rnd_40_Shell_HE","TCP_1Rnd_40_Shell_HE","TCP_1Rnd_40_Shell_HE","MA_M8_Smoke_White","MA_M8_Smoke_White","MA_M9_Frag_Mag","MA_M9_Frag_Mag","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","OPTRE_8Rnd_127x40_AP_Mag"};
         items[] = {"ACE_bloodIV_250","ACE_bloodIV_250","ACE_bloodIV_500","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_epinephrine","ACE_epinephrine","ACE_morphine","ACE_morphine","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_splint","ACE_splint","ACE_splint","ACE_splint","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","DMNS_Biofoam","DMNS_Biofoam"};
         respawnItems[] = {"ACE_bloodIV_250","ACE_bloodIV_250","ACE_bloodIV_500","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_epinephrine","ACE_epinephrine","ACE_morphine","ACE_morphine","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_splint","ACE_splint","ACE_splint","ACE_splint","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","DMNS_Biofoam","DMNS_Biofoam"};
     };
@@ -90,8 +90,8 @@ class CfgVehicles {
         linkedItems[] = {"STB73_M43D_ODST_Black","STB73_H_ECH55D_Standard_Black","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
         respawnLinkedItems[] = {"STB73_M43D_ODST_Black","STB73_H_ECH55D_Standard_Black","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
 
-        magazines[] = {"MA_M8_Smoke_White","MA_M8_Smoke_White","MA_M9_Frag_Mag","MA_M9_Frag_Mag","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag"};
-        respawnMagazines[] = {"MA_M8_Smoke_White","MA_M8_Smoke_White","MA_M9_Frag_Mag","MA_M9_Frag_Mag","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag"};
+        magazines[] = {"MA_M8_Smoke_White","MA_M8_Smoke_White","MA_M9_Frag_Mag","MA_M9_Frag_Mag","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag"};
+        respawnMagazines[] = {"MA_M8_Smoke_White","MA_M8_Smoke_White","MA_M9_Frag_Mag","MA_M9_Frag_Mag","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","STB73_32Rnd_762x51_Mag_Tracer_Yellow","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag"};
 
         items[] = {"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_DefusalKit","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","DMNS_Biofoam","DMNS_Biofoam"};
         respawnItems[] = {"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_DefusalKit","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","DMNS_Biofoam","DMNS_Biofoam"};
@@ -139,14 +139,14 @@ class CfgVehicles {
         uniformClass = "TCP_U_B_CBUU_TacShirt_SlimSleeve_Gloves_Bloused_Urban";
         backpack = "STB73_Rucksack";
 
-        weapons[] = {"STB73_M247", "Throw", "Put"};
-        respawnWeapons[] = {"STB73_M247", "Throw", "Put"};
+        weapons[] = {"STB73_LMG_M731", "Throw", "Put"};
+        respawnWeapons[] = {"STB73_LMG_M731", "Throw", "Put"};
 
         linkedItems[] = {"STB73_M43D_ODST_Black","STB73_H_ECH55D_Standard_Black","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
         respawnLinkedItems[] = {"STB73_M43D_ODST_Black","STB73_H_ECH55D_Standard_Black","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
 
-        magazines[] = {"STB73_100rnd_M247_Mag_Tracer_Yellow","STB73_100rnd_M247_Mag_Tracer_Yellow","STB73_100rnd_M247_Mag_Tracer_Yellow","STB73_100rnd_M247_Mag_Tracer_Yellow","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_M2_Smoke","OPTRE_M2_Smoke_Green","OPTRE_M9_Frag","OPTRE_M9_Frag"};
-        respawnMagazines[] = {"STB73_100rnd_M247_Mag_Tracer_Yellow","STB73_100rnd_M247_Mag_Tracer_Yellow","STB73_100rnd_M247_Mag_Tracer_Yellow","STB73_100rnd_M247_Mag_Tracer_Yellow","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_M2_Smoke","OPTRE_M2_Smoke_Green","OPTRE_M9_Frag","OPTRE_M9_Frag"};
+        magazines[] = {"STB73_100rnd_762x51_Mag_Tracer","STB73_100rnd_762x51_Mag_Tracer","STB73_100rnd_762x51_Mag_Tracer","STB73_100rnd_762x51_Mag_Tracer","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","OPTRE_M2_Smoke","OPTRE_M2_Smoke_Green","OPTRE_M9_Frag","OPTRE_M9_Frag"};
+        respawnMagazines[] = {"STB73_100rnd_762x51_Mag_Tracer","STB73_100rnd_762x51_Mag_Tracer","STB73_100rnd_762x51_Mag_Tracer","STB73_100rnd_762x51_Mag_Tracer","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","OPTRE_M2_Smoke","OPTRE_M2_Smoke_Green","OPTRE_M9_Frag","OPTRE_M9_Frag"};
 
         items[] = {"ACE_EarPlugs","OPTRE_Biofoam"};
         respawnItems[] = {"ACE_EarPlugs","OPTRE_Biofoam"};
@@ -173,8 +173,8 @@ class CfgVehicles {
         linkedItems[] = {"STB73_M43D_ODST_Black","STB73_H_ECH55D_Standard_Black","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
         respawnLinkedItems[] = {"STB73_M43D_ODST_Black","STB73_H_ECH55D_Standard_Black","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
 
-        magazines[] = {"STB73_M233_145x114x8_APFSDS_TC","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_M2_Smoke","OPTRE_M2_Smoke_Green","OPTRE_M9_Frag","OPTRE_M9_Frag"};
-        respawnMagazines[] = {"STB73_M233_145x114x8_APFSDS_TC","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_M2_Smoke","OPTRE_M2_Smoke_Green","OPTRE_M9_Frag","OPTRE_M9_Frag"};
+        magazines[] = {"STB73_M233_145x114x8_APFSDS_TC","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","OPTRE_M2_Smoke","OPTRE_M2_Smoke_Green","OPTRE_M9_Frag","OPTRE_M9_Frag"};
+        respawnMagazines[] = {"STB73_M233_145x114x8_APFSDS_TC","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","OPTRE_M2_Smoke","OPTRE_M2_Smoke_Green","OPTRE_M9_Frag","OPTRE_M9_Frag"};
 
         items[] = {"ACE_EarPlugs","OPTRE_Biofoam"};
         respawnItems[] = {"ACE_EarPlugs","OPTRE_Biofoam"};
@@ -200,8 +200,8 @@ class CfgVehicles {
         linkedItems[] = {"STB73_M43D_ODST_Black","STB73_H_ECH55D_Standard_Black","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
         respawnLinkedItems[] = {"STB73_M43D_ODST_Black","STB73_H_ECH55D_Standard_Black","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
 
-        magazines[] = {"STB73_15Rnd_10x40_Mag_Tracer_Yellow","STB73_15Rnd_10x40_Mag_Tracer_Yellow","STB73_15Rnd_10x40_Mag_Tracer_Yellow","STB73_15Rnd_10x40_Mag_Tracer_Yellow","STB73_15Rnd_10x40_Mag_Tracer_Yellow","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_M2_Smoke","OPTRE_M2_Smoke_Green","OPTRE_M9_Frag","OPTRE_M9_Frag","TCF_20Rnd_86x70_Mag_APT"};
-        respawnMagazines[] = {"STB73_15Rnd_10x40_Mag_Tracer_Yellow","STB73_15Rnd_10x40_Mag_Tracer_Yellow","STB73_15Rnd_10x40_Mag_Tracer_Yellow","STB73_15Rnd_10x40_Mag_Tracer_Yellow","STB73_15Rnd_10x40_Mag_Tracer_Yellow","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_M2_Smoke","OPTRE_M2_Smoke_Green","OPTRE_M9_Frag","OPTRE_M9_Frag","TCF_20Rnd_86x70_Mag_APT"};
+        magazines[] = {"STB73_15Rnd_762x51_Mag_Tracer_Yellow","STB73_15Rnd_762x51_Mag_Tracer_Yellow","STB73_15Rnd_762x51_Mag_Tracer_Yellow","STB73_15Rnd_762x51_Mag_Tracer_Yellow","STB73_15Rnd_762x51_Mag_Tracer_Yellow","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","OPTRE_M2_Smoke","OPTRE_M2_Smoke_Green","OPTRE_M9_Frag","OPTRE_M9_Frag","TCF_20Rnd_86x70_Mag_APT"};
+        respawnMagazines[] = {"STB73_15Rnd_762x51_Mag_Tracer_Yellow","STB73_15Rnd_762x51_Mag_Tracer_Yellow","STB73_15Rnd_762x51_Mag_Tracer_Yellow","STB73_15Rnd_762x51_Mag_Tracer_Yellow","STB73_15Rnd_762x51_Mag_Tracer_Yellow","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","OPTRE_M2_Smoke","OPTRE_M2_Smoke_Green","OPTRE_M9_Frag","OPTRE_M9_Frag","TCF_20Rnd_86x70_Mag_APT"};
 
         items[] = {"ACE_EarPlugs","OPTRE_Biofoam"};
         respawnItems[] = {"ACE_EarPlugs","OPTRE_Biofoam"};
@@ -227,8 +227,8 @@ class CfgVehicles {
         linkedItems[] = {"STB73_M43D_ODST_Black","STB73_H_ECH55D_Standard_Black","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
         respawnLinkedItems[] = {"STB73_M43D_ODST_Black","STB73_H_ECH55D_Standard_Black","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
 
-        magazines[] = {"STB73_15Rnd_10x40_Mag_Tracer_Yellow","STB73_15Rnd_10x40_Mag_Tracer_Yellow","STB73_15Rnd_10x40_Mag_Tracer_Yellow","STB73_15Rnd_10x40_Mag_Tracer_Yellow","STB73_15Rnd_10x40_Mag_Tracer_Yellow","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_M2_Smoke","OPTRE_M2_Smoke_Green","OPTRE_M9_Frag","OPTRE_M9_Frag","TCF_20Rnd_86x70_Mag_APT"};
-        respawnMagazines[] = {"STB73_15Rnd_10x40_Mag_Tracer_Yellow","STB73_15Rnd_10x40_Mag_Tracer_Yellow","STB73_15Rnd_10x40_Mag_Tracer_Yellow","STB73_15Rnd_10x40_Mag_Tracer_Yellow","STB73_15Rnd_10x40_Mag_Tracer_Yellow","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_M2_Smoke","OPTRE_M2_Smoke_Green","OPTRE_M9_Frag","OPTRE_M9_Frag","TCF_20Rnd_86x70_Mag_APT"};
+        magazines[] = {"STB73_15Rnd_762x51_Mag_Tracer_Yellow","STB73_15Rnd_762x51_Mag_Tracer_Yellow","STB73_15Rnd_762x51_Mag_Tracer_Yellow","STB73_15Rnd_762x51_Mag_Tracer_Yellow","STB73_15Rnd_762x51_Mag_Tracer_Yellow","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","OPTRE_M2_Smoke","OPTRE_M2_Smoke_Green","OPTRE_M9_Frag","OPTRE_M9_Frag","TCF_20Rnd_86x70_Mag_APT"};
+        respawnMagazines[] = {"STB73_15Rnd_762x51_Mag_Tracer_Yellow","STB73_15Rnd_762x51_Mag_Tracer_Yellow","STB73_15Rnd_762x51_Mag_Tracer_Yellow","STB73_15Rnd_762x51_Mag_Tracer_Yellow","STB73_15Rnd_762x51_Mag_Tracer_Yellow","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","OPTRE_M2_Smoke","OPTRE_M2_Smoke_Green","OPTRE_M9_Frag","OPTRE_M9_Frag","TCF_20Rnd_86x70_Mag_APT"};
 
         items[] = {"ACE_EarPlugs","STB73_BiofoamItem_Light","STB73_BiofoamItem_Light","STB73_BiofoamItem_Light","STB73_BiofoamItem_Light","STB73_MediGelItem_Light","STB73_MediGelItem_Light","STB73_MediGelItem_Light","STB73_MediGelItem_Light","STB73_MediGelItem_Light"};
         respawnItems[] = {"ACE_EarPlugs","STB73_BiofoamItem_Light","STB73_BiofoamItem_Light","STB73_BiofoamItem_Light","STB73_BiofoamItem_Light","STB73_MediGelItem_Light","STB73_MediGelItem_Light","STB73_MediGelItem_Light","STB73_MediGelItem_Light","STB73_MediGelItem_Light"};
@@ -248,14 +248,14 @@ class CfgVehicles {
         uniformClass = "STB73_ODST_Dress_Uniform";
         backpack = "STB73_Rucksack_invis";
 
-        weapons[] = {"MA_MK50_Sidekick","OPTRE_Smartfinder", "Throw", "Put"};
-        respawnWeapons[] = {"MA_MK50_Sidekick","OPTRE_Smartfinder", "Throw", "Put"};
+        weapons[] = {"STB73_M6C","OPTRE_Smartfinder", "Throw", "Put"};
+        respawnWeapons[] = {"STB73_M6C","OPTRE_Smartfinder", "Throw", "Put"};
 
         linkedItems[] = {"STB73_beret","ItemMap","ItemcTab","ItemRadio","ItemCompass","ItemWatch"};
         respawnLinkedItems[] = {"STB73_beret","ItemMap","ItemcTab","ItemRadio","ItemCompass","ItemWatch"};
 
-        magazines[] = {"MA_12Rnd_10x31_SAP_Mag_Tracer"};
-        respawnMagazines[] = {"MA_12Rnd_10x31_SAP_Mag_Tracer"};
+        magazines[] = {"STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow"};
+        respawnMagazines[] = {"STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow"};
 
         items[] = {""};
         respawnItems[] = {""};
@@ -281,8 +281,8 @@ class CfgVehicles {
         linkedItems[] = {"STB73_M43D_ODST_Black","STB73_H_ECH55D_Standard_Black","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
         respawnLinkedItems[] = {"STB73_M43D_ODST_Black","STB73_H_ECH55D_Standard_Black","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
 
-        magazines[] = {"STB73_60Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_60Rnd_5x23Caseless_FMJ_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer"};
-        respawnMagazines[] = {"STB73_60Rnd_5x23Caseless_FMJ_Mag_Tracer","STB73_60Rnd_5x23Caseless_FMJ_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer","OPTRE_8Rnd_127x40_Mag_Tracer"};
+        magazines[] = {"STB73_60Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_60Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow"};
+        respawnMagazines[] = {"STB73_60Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_60Rnd_5x23Caseless_FMJ_Mag_Tracer_Yellow","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow","STB73_12Rnd_127x30_SAP_Mag_Tracer_Yellow"};
 
         items[] = {"ACE_EarPlugs","OPTRE_Biofoam"};
         respawnItems[] = {"ACE_EarPlugs","OPTRE_Biofoam"};

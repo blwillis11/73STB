@@ -70,6 +70,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "73STB_Main",
+            "73STB_Weapons",
             "OPTRE_Misc",
             "OPTRE_Vehicles",
             "OPTRE_Vehicles_Tracked",

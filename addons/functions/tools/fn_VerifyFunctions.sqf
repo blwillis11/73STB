@@ -6,21 +6,29 @@ private _functionsToCheck = [
     /* STB73 Modules */
     "STB73_fnc_ModuleODSTHEV",
     "STB73_fnc_ModuleBJHEV",
+    "STB73_fnc_ModuleHEV",
+    "STB73_fnc_ModuleHEVCleanUp",
     "STB73_fnc_ModuleOCLSSquadPod",
     "STB73_fnc_ModulePelicanAirAssault",
 
     /* STB73 Thrusters */
+    "STB73_fnc_AfterburnersDisengage",
+    "STB73_fnc_ChangeSpeed",
+    "STB73_fnc_DecreaseThrusterLevel",
+    "STB73_fnc_EngageAfterburners",
+    "STB73_fnc_EngageAirbrakes",
+    "STB73_fnc_EngageForwardThruster",
     "STB73_fnc_GetFlightTime",
     "STB73_fnc_IncreaseThrusterLevel",
+    "STB73_fnc_Init_vic",
     "STB73_fnc_RegisterThrusters",
     "STB73_fnc_ThrusterAnimate",
     "STB73_fnc_ThrusterDeAnimate",
     "STB73_fnc_ThrusterDisengage",
-    "STB73_fnc_AfterburnersDisengage",
 
     /* STB73 Jumpack */
     "STB73_fnc_PreInit",
-    "STB73_fnc_Init",
+    "STB73_fnc_Init_JP",
     "STB73_fnc_JumpPack",
     "STB73_fnc_EventHandlers",
     "STB73_fnc_JumpPackRefuel",
@@ -49,9 +57,11 @@ private _functionsToCheck = [
 
     /* STB73 MenuFunctions */
     "STB73_fnc_HEVRoom",
+    "STB73_fnc_UNSCdatabase",
 
     /* STB73 Tools */
     "STB73_fnc_VerifyFunctions",
+    "STB73_fnc_locateBlacklisted",
 
     /* OPTRE SupportSystem */
     "OPTRE_fnc_CS_ODSTHEV",
@@ -62,13 +72,11 @@ private _functionsToCheck = [
     "OPTRE_fnc_setCallArtyFireSupport73STB",
     "OPTRE_fnc_addFireSupportMenu73STB",
 
-    /* OPTRE Modules */
-    "OPTRE_fnc_ModuleHEV",
-    "OPTRE_fnc_ModuleODSTHEV",
-    "OPTRE_fnc_ModuleBJHEV",
-    "OPTRE_fnc_ModuleOCLSSquadPod",
-    "OPTRE_fnc_ModuleHEVCleanUp",
-    "OPTRE_fnc_ModulePelicanAirAssault"
+    /* STB73 Misc */
+    "STB73_fnc_defaultKits",
+    "STB73_fnc_destroyEquipment",
+    "STB73_fnc_init_misc",
+    "STB73_fnc_zeusMessage"
 ];
 
 private _missing = [];

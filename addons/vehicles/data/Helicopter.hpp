@@ -218,7 +218,7 @@ class STB73_D77_TC_Pelican: Splits_UNSC_D77_TC_Pelican
     {
         class STB73_RegisterThrusters_EH
         {
-            init = "[(_this select 0),true,true,false] call STBSTB73_fnc_RegisterThrusters;";
+            init = "[(_this select 0),true,true,false] call STB73_fnc_RegisterThrusters;";
         };
     };
     class textureSources
@@ -235,7 +235,7 @@ class STB73_D77_TC_Pelican: Splits_UNSC_D77_TC_Pelican
             priority = 1;
             liveries[]=
             {
-             "[""Standard"",[""data\Pelican\body_co.paa"",""data\Pelican\wings_and_gear_co.paa"",""data\Pelican\weaponry_co.paa""]]",
+             "[""Standard"",[""z\73STB\addons\vehicles\data\Pelican\body_co.paa"",""z\73STB\addons\vehicles\data\Pelican\wings_and_gear_co.paa"",""z\73STB\addons\vehicles\data\Pelican\weaponry_co.paa""]]",
             };
         };
     };
