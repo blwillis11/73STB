@@ -9,49 +9,49 @@ class STB73_M52B_Armor_Vest: OPTRE_FC_M52B_Armor_Rifleman
         class Neck
         {
             hitpointName="HitNeck";
-            armor=15;
+            armor=8;
             passThrough=0.1;
         };
         class Legs
         {
             hitpointName="HitLegs";
-            armor=10;
+            armor=6;
             passThrough=0.1;
         };
         class Arms
         {
             hitpointName="HitArms";
-            armor=20;
+            armor=12;
             passThrough=0.1;
         };
         class Hands
         {
             hitpointName="HitHands";
-            armor=10;
+            armor=6;
             passThrough=0.1;
         };
         class Chest
         {
             hitpointName="HitChest";
-            armor=20;
+            armor=12;
             passThrough=0.1;
         };
         class Diaphragm
         {
             hitpointName="HitDiaphragm";
-            armor=20;
+            armor=12;
             passThrough=0.1;
         };
         class Abdomen
         {
             hitpointName="HitAbdomen";
-            armor=20;
+            armor=12;
             passThrough=0.1;
         };
         class Body
         {
             hitpointName="HitBody";
-            armor=20;
+            armor=12;
             passThrough=0.1;
         };
     };
@@ -67,49 +67,49 @@ class STB73_M52B_Vest: OPTRE_FC_M52B_Armor_Vest
         class Neck
         {
             hitpointName="HitNeck";
-            armor=15;
+            armor=8;
             passThrough=0.1;
         };
         class Legs
         {
             hitpointName="HitLegs";
-            armor=10;
+            armor=6;
             passThrough=0.1;
         };
         class Arms
         {
             hitpointName="HitArms";
-            armor=20;
+            armor=12;
             passThrough=0.1;
         };
         class Hands
         {
             hitpointName="HitHands";
-            armor=10;
+            armor=6;
             passThrough=0.1;
         };
         class Chest
         {
             hitpointName="HitChest";
-            armor=20;
+            armor=12;
             passThrough=0.1;
         };
         class Diaphragm
         {
             hitpointName="HitDiaphragm";
-            armor=20;
+            armor=12;
             passThrough=0.1;
         };
         class Abdomen
         {
             hitpointName="HitAbdomen";
-            armor=20;
+            armor=12;
             passThrough=0.1;
         };
         class Body
         {
             hitpointName="HitBody";
-            armor=20;
+            armor=12;
             passThrough=0.1;
         };
     };
@@ -125,7 +125,7 @@ class STB73_M52B_Armor_Lancer: OPTRE_FC_M52B_Armor_TeamLeader_URB
         class Neck
         {
             hitpointName="HitNeck";
-            armor=15;
+            armor=12;
             passThrough=0.1;
         };
         class Legs
@@ -137,37 +137,37 @@ class STB73_M52B_Armor_Lancer: OPTRE_FC_M52B_Armor_TeamLeader_URB
         class Arms
         {
             hitpointName="HitArms";
-            armor=20;
+            armor=15;
             passThrough=0.1;
         };
         class Hands
         {
             hitpointName="HitHands";
-            armor=10;
+            armor=8;
             passThrough=0.1;
         };
         class Chest
         {
             hitpointName="HitChest";
-            armor=20;
+            armor=15;
             passThrough=0.1;
         };
         class Diaphragm
         {
             hitpointName="HitDiaphragm";
-            armor=20;
+            armor=15;
             passThrough=0.1;
         };
         class Abdomen
         {
             hitpointName="HitAbdomen";
-            armor=20;
+            armor=15;
             passThrough=0.1;
         };
         class Body
         {
             hitpointName="HitBody";
-            armor=20;
+            armor=15;
             passThrough=0.1;
         };
     };

@@ -5,6 +5,28 @@ class CfgVehicles
     {
         maximumLoad = VEST_MAXLOAD;
     };
+    TCP_VEH_CLASS_DEF
+    VEH_UNI_CLASS(urban)
+    VEH_UNI_CLASS(woodland)
+    VEH_UNI_CLASS(arctic)
+    VEH_UNI_CLASS(arid)
+    VEH_UNI_CLASS(tropic)
+    VEH_UNI_CLASS(black)
+    VEH_UNI_CLASS(grey)
+    VEH_UNI_CLASS(green)
+    VEH_UNI_CLASS(olive)
+    VEH_UNI_CLASS(tan)
+    VEH_UNI_CLASS(white)
+
+    class MA_M56S_BDU_Base;
+	class MA_M56S_Rucksack;
+	class MA_M52D_Rucksack;
+	class MA_M56S_Rucksack_Medic;
+	class MA_M56S_Rucksack_ODST_Radio;
+	class weapons_f;
+	class OPTRE_UNSC_Army_Soldier_DressGray;
+	class ItemInfo;
+	class UniformItem;
 
     class OPTRE_ILCS_Rucksack_Black;
     class STB73_Rucksack: OPTRE_ILCS_Rucksack_Black
@@ -22,7 +44,7 @@ class CfgVehicles
             model = "STB73_ACE_Rucksack";
             Role = "Standard";
         };
-        maximumLoad = 250;
+        maximumLoad = 300;
     };
     class OPTRE_ILCS_Rucksack_Medical;
     class STB73_Rucksack_med: OPTRE_ILCS_Rucksack_Medical
@@ -40,8 +62,9 @@ class CfgVehicles
             model = "STB73_ACE_Rucksack";
             Role = "Medic";
         };
-        maximumLoad = 300;
+        maximumLoad = 350;
     };
+    
     class OPTRE_ILCS_Rucksack_Heavy;
     class STB73_Rucksack_hev: OPTRE_ILCS_Rucksack_Heavy
     {
@@ -49,7 +72,7 @@ class CfgVehicles
         displayName = "[73] ODST Rucksack [Heavy]";
         scope= 2;
         scopeArsenal=2;
-        maximumLoad = 300;
+        maximumLoad = 350;
         hidenSelectionsMaterials[]=
         {
             "z\73STB\addons\armor\data\backpack\odst_Ruck.rvmat"
@@ -67,7 +90,7 @@ class CfgVehicles
         author="73rd S-4 Team";
         scope=2;
         scopeArsenal=2;
-        maximumLoad = 250;
+        maximumLoad = 300;
         tf_encryptionCode="tf_west_radio_code";
         tf_dialog="rt1523g_radio_dialog";
         tf_subtype="digital_lr";
@@ -105,7 +128,7 @@ class CfgVehicles
         model = "\A3\weapons_f\empty";
         scope= 2;
         scopeArsenal=2;
-        maximumLoad = 100;
+        maximumLoad = 150;
         hiddenSelectionsTextures[]=
         {
             "",
@@ -124,7 +147,7 @@ class CfgVehicles
         tf_dialog="rt1523g_radio_dialog";
         tf_subtype="digital_lr";
         tf_range=60000;
-        maximumLoad = 100;
+        maximumLoad = 150;
         tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
         tf_hasLRradio=1;
         class XtdGearInfo

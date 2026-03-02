@@ -293,7 +293,7 @@ class STB73_100rnd_762x51_Mag_Tracer: TCP_100Rnd_762x51_Mag{
     greenmag_ammo="greenmag_beltlinked_762x51_tracer";
     greenmag_basicammo="greenmag_beltlinked_762x51_basic";
 };
-class STB73_100rnd_Mag_Tracer_Yellow: STB73_100rnd_762x51_Mag_Tracer{
+class STB73_100rnd_762x51_Mag_Tracer_Yellow: STB73_100rnd_762x51_Mag_Tracer{
     displayName = "[73] 100Rnd 7.62x51mm Box [Yellow Tracers]";
     ammo = "STB73_B_762x51_Ball_Tracer_Yellow";
     greenmag_canSpeedload=0;
@@ -301,7 +301,7 @@ class STB73_100rnd_Mag_Tracer_Yellow: STB73_100rnd_762x51_Mag_Tracer{
     greenmag_ammo="greenmag_beltlinked_762x51_tracer";
     greenmag_basicammo="greenmag_beltlinked_762x51_basic";
 };
-class STB73_100rnd_Mag_Tracer_IR: STB73_100rnd_762x51_Mag_Tracer{
+class STB73_100rnd_762x51_Mag_Tracer_IR: STB73_100rnd_762x51_Mag_Tracer{
     displayName = "[73] 100Rnd 7.62x51mm Box [IR Tracers]";
     ammo = "STB73_B_762x51_Ball_Tracer_IR";
     greenmag_canSpeedload=0;
@@ -817,3 +817,192 @@ class STB73_M232_145x114x8_APFSDS_TIR:NSWep_M232_145x114x8_APFSDS_TIR
     descriptionShort="Contains 8 rounds of 14.5x114 AP ammo <br />Used in: SRS99 rifles";
 };
 
+class CA_Magazine;
+class STB73_1Rnd_40mm_Shell_Smoke_Blue: CA_Magazine
+{
+    author=AUTHOR;
+    scope=2;
+    displayName="[73] 40mm Smoke Round (Blue)";
+    displayNameShort="40mm Smoke Round (Blue)";
+    descriptionShort="A blue impact smoke round for a grenade launcher";
+    picture="\TCP\Weapons\Ammo\40\Smoke\data\ui\icon_40mm_Smoke_Blue_1Rnd_CA.paa";
+    ammo="STB73_40mm_Shell_Smoke_Blue";
+    model="\TCP\Weapons\Ammo\40\Smoke\mag_40mm_1Rnd_Smoke_Blue.p3d";
+    modelSpecial="\TCP\Weapons\Ammo\40\Smoke\mag_40mm_1Rnd_Smoke_Blue.p3d";
+    modelSpecialIsProxy=1;
+    count=1;
+    mass=4.1005931;
+    initSpeed=76;
+};
+class STB73_1Rnd_40mm_Shell_Smoke_Green: STB73_1Rnd_40mm_Shell_Smoke_Blue
+{
+    displayName="[73] 40mm Smoke Round (Green)";
+    displayNameShort="40mm Smoke Round (Green)";
+    descriptionShort="A green impact smoke round for a grenade launcher";
+    picture="\TCP\Weapons\Ammo\40\Smoke\data\ui\icon_40mm_Smoke_Green_1Rnd_CA.paa";
+    ammo="STB73_40mm_Shell_Smoke_Green";
+    model="\TCP\Weapons\Ammo\40\Smoke\mag_40mm_1Rnd_Smoke_Green.p3d";
+    modelSpecial="\TCP\Weapons\Ammo\40\Smoke\mag_40mm_1Rnd_Smoke_Green.p3d";
+    modelSpecialIsProxy=1;
+    count=1;
+    mass=4.1005931;
+    initSpeed=76;
+};
+class STB73_1Rnd_40mm_Shell_Smoke_Orange: STB73_1Rnd_40mm_Shell_Smoke_Blue
+{
+    displayName="[73] 40mm Smoke Round (Orange)";
+    displayNameShort="40mm Smoke Round (Orange)";
+    descriptionShort="An orange impact smoke round for a grenade launcher";
+    picture="\TCP\Weapons\Ammo\40\Smoke\data\ui\icon_40mm_Smoke_Orange_1Rnd_CA.paa";
+    ammo="STB73_40mm_Shell_Smoke_Orange";
+    model="\TCP\Weapons\Ammo\40\Smoke\mag_40mm_1Rnd_Smoke_Orange.p3d";
+    modelSpecial="\TCP\Weapons\Ammo\40\Smoke\mag_40mm_1Rnd_Smoke_Orange.p3d";
+    modelSpecialIsProxy=1;
+    count=1;
+    mass=4.1005931;
+    initSpeed=76;
+};
+class STB73_1Rnd_40mm_Shell_Smoke_Purple: STB73_1Rnd_40mm_Shell_Smoke_Blue
+{
+    displayName="[73] 40mm Smoke Round (Purple)";
+    displayNameShort="40mm Smoke Round (Purple)";
+    descriptionShort="A purple impact smoke round for a grenade launcher";
+    picture="\TCP\Weapons\Ammo\40\Smoke\data\ui\icon_40mm_Smoke_Purple_1Rnd_CA.paa";
+    ammo="STB73_40mm_Shell_Smoke_Purple";
+    model="\TCP\Weapons\Ammo\40\Smoke\mag_40mm_1Rnd_Smoke_Purple.p3d";
+    modelSpecial="\TCP\Weapons\Ammo\40\Smoke\mag_40mm_1Rnd_Smoke_Purple.p3d";
+    modelSpecialIsProxy=1;
+    count=1;
+    mass=4.1005931;
+    initSpeed=76;
+};
+class STB73_1Rnd_40mm_Shell_Smoke_Red: STB73_1Rnd_40mm_Shell_Smoke_Blue
+{
+    displayName="[73] 40mm Smoke Round (Red)";
+    displayNameShort="40mm Smoke Round (Red)";
+    descriptionShort="A red impact smoke round for a grenade launcher";
+    picture="\TCP\Weapons\Ammo\40\Smoke\data\ui\icon_40mm_Smoke_Red_1Rnd_CA.paa";
+    ammo="STB73_40mm_Shell_Smoke_Red";
+    model="\TCP\Weapons\Ammo\40\Smoke\mag_40mm_1Rnd_Smoke_Red.p3d";
+    modelSpecial="\TCP\Weapons\Ammo\40\Smoke\mag_40mm_1Rnd_Smoke_Red.p3d";
+    modelSpecialIsProxy=1;
+    count=1;
+    mass=4.1005931;
+    initSpeed=76;
+};
+class STB73_1Rnd_40mm_Shell_Smoke_White: STB73_1Rnd_40mm_Shell_Smoke_Blue
+{
+    displayName="[73] 40mm Smoke Round (White)";
+    displayNameShort="40mm Smoke Round (White)";
+    descriptionShort="A white impact smoke round for a grenade launcher";
+    picture="\TCP\Weapons\Ammo\40\Smoke\data\ui\icon_40mm_Smoke_White_1Rnd_CA.paa";
+    ammo="STB73_40mm_Shell_Smoke_White";
+    model="\TCP\Weapons\Ammo\40\Smoke\mag_40mm_1Rnd_Smoke_White.p3d";
+    modelSpecial="\TCP\Weapons\Ammo\40\Smoke\mag_40mm_1Rnd_Smoke_White.p3d";
+    modelSpecialIsProxy=1;
+    count=1;
+    mass=4.1005931;
+    initSpeed=76;
+};
+class STB73_1Rnd_40mm_Shell_Smoke_Yellow: STB73_1Rnd_40mm_Shell_Smoke_Blue
+{
+    displayName="[73] 40mm Smoke Round (Yellow)";
+    displayNameShort="40mm Smoke Round (Yellow)";
+    descriptionShort="A yellow impact smoke round for a grenade launcher";
+    picture="\TCP\Weapons\Ammo\40\Smoke\data\ui\icon_40mm_Smoke_Yellow_1Rnd_CA.paa";
+    ammo="STB73_40mm_Shell_Smoke_Yellow";
+    model="\TCP\Weapons\Ammo\40\Smoke\mag_40mm_1Rnd_Smoke_Yellow.p3d";
+    modelSpecial="\TCP\Weapons\Ammo\40\Smoke\mag_40mm_1Rnd_Smoke_Yellow.p3d";
+    modelSpecialIsProxy=1;
+    count=1;
+    mass=4.1005931;
+    initSpeed=76;
+};
+class STB73_1Rnd_40mm_Shell_HE: CA_Magazine
+{
+    author=AUTHOR;
+    scope=2;
+    displayName="[73] 40mm HE Round";
+    displayNameShort="40mm HE Round";
+    descriptionShort="A high-explosive round for a grenade launcher";
+    picture="\TCP\Weapons\Ammo\40\HE\data\ui\icon_40mm_1rnd_CA.paa";
+    ammo="STB73_40mm_Shell_HE";
+    model="\TCP\Weapons\Ammo\40\HE\mag_40mm_1rnd.p3d";
+    modelSpecial="\TCP\Weapons\Ammo\40\HE\mag_40mm_1rnd.p3d";
+    modelSpecialIsProxy=1;
+    count=1;
+    mass=4.1005931;
+    initSpeed=76;
+};
+class STB73_1Rnd_40mm_Shell_TD: STB73_1Rnd_40mm_Shell_HE
+{
+    author=AUTHOR;
+    scope=2;
+    displayName="[73] 40mm TD Round";
+    displayNameShort="40mm TD Round";
+    descriptionShort="A time explosive round for a grenade launcher";
+    ammo="STB73_40mm_Shell_TD";
+    count=1;
+    mass=4.1005931;
+    initSpeed=76;
+};
+class STB73_1Rnd_40mm_Shell_Signal_Green: CA_Magazine
+{
+    author=AUTHOR;
+    scope=2;
+    displayName="[73] 40mm Flare Round (Green)";
+    displayNameShort="40mm Flare Round (Green)";
+    descriptionShort="A green flare round for a grenade launcher";
+    picture="\TCP\Weapons\Ammo\40\Signal\data\ui\icon_40mm_Signal_Green_1rnd_CA.paa";
+    ammo="STB73_F_40_Signal_Green";
+    model="\TCP\Weapons\Ammo\40\Signal\mag_40mm_1Rnd_Signal_Green.p3d";
+    modelSpecial="\TCP\Weapons\Ammo\40\Signal\mag_40mm_1Rnd_Signal_Green.p3d";
+    modelSpecialIsProxy=1;
+    count=1;
+    mass=1.3999337;
+};
+class STB73_1Rnd_40mm_Shell_Signal_Red: STB73_1Rnd_40mm_Shell_Signal_Green
+{
+    author=AUTHOR;
+    scope=2;
+    displayName="[73] 40mm Flare Round (Red)";
+    displayNameShort="40mm Flare Round (Red)";
+    descriptionShort="A red flare round for a grenade launcher";
+    picture="\TCP\Weapons\Ammo\40\Signal\data\ui\icon_40mm_Signal_Red_1rnd_CA.paa";
+    ammo="STB73_F_40_Signal_Red";
+    model="\TCP\Weapons\Ammo\40\Signal\mag_40mm_1Rnd_Signal_Red.p3d";
+    modelSpecial="\TCP\Weapons\Ammo\40\Signal\mag_40mm_1Rnd_Signal_Red.p3d";
+    modelSpecialIsProxy=1;
+    count=1;
+    mass=1.3999337;
+};
+class STB73_1Rnd_40mm_Shell_Signal_White: STB73_1Rnd_40mm_Shell_Signal_Green
+{
+    author=AUTHOR;
+    scope=2;
+    displayName="[73] 40mm Flare Round (White)";
+    displayNameShort="40mm Flare Round (White)";
+    descriptionShort="A white flare round for a grenade launcher";
+    picture="\TCP\Weapons\Ammo\40\Signal\data\ui\icon_40mm_Signal_White_1rnd_CA.paa";
+    ammo="STB73_F_40_Signal_White";
+    model="\TCP\Weapons\Ammo\40\Signal\mag_40mm_1Rnd_Signal_White.p3d";
+    modelSpecial="\TCP\Weapons\Ammo\40\Signal\mag_40mm_1Rnd_Signal_White.p3d";
+    modelSpecialIsProxy=1;
+    count=1;
+    mass=1.3999337;
+};
+class STB73_1Rnd_40mm_Shell_Signal_Yellow: STB73_1Rnd_40mm_Shell_Signal_Green
+{
+    author=AUTHOR;
+    scope=2;
+    displayName="[73] 40mm Flare Round (Yellow)";
+    displayNameShort="40mm Flare Round (Yellow)";
+    descriptionShort="A yellow flare round for a grenade launcher";
+    picture="\TCP\Weapons\Ammo\40\Signal\data\ui\icon_40mm_Signal_Yellow_1rnd_CA.paa";
+    ammo="STB73_F_40_Signal_Yellow";
+    model="\TCP\Weapons\Ammo\40\Signal\mag_40mm_1Rnd_Signal_Yellow.p3d";
+    modelSpecial="\TCP\Weapons\Ammo\40\Signal\mag_40mm_1Rnd_Signal_Yellow.p3d";
+    modelSpecialIsProxy=1;
+    count=1;
+    mass=1.3999337;
+};

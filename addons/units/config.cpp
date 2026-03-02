@@ -17,10 +17,7 @@ class CfgPatches {
 			"STB73_STB_ODST_Scout",
 			"STB73_STB_ODST_Team_Lead",
 			"STB73_STB_ODST_Squad_Lead",
-			"STB73_Crewman",
-			"STB73_Crewman_Officer",
-			"STB73_Aviator",
-			"STB73_Aviator_Officer"
+			"STB73_Aviator"
         }; 
         weapons[] = {
            

@@ -3,7 +3,7 @@
 playSound "FD_Finish_F"; 
 
 _pelican = 	_this;			
-_vehicles = (_pelican getVariable ["STB73_Pelican_AttachedToVehiclesEffect",[]]); 
+_vehicles = (_pelican getVariable ["Splits_Pelican_AttachedToVehiclesEffect",[]]); 
 //{_x disableCollisionWith vehicle player; vehicle player disableCollisionWith _x;} forEach _vehicles;
 _pelican allowDamage false; 
 
@@ -27,7 +27,7 @@ _pelican allowDamage true;
 				 
 {_x allowDamage true;} forEach _vehicles; 
 _pelican allowDamage true; 
-_pelican setVariable ["STB73_Pelican_AttachedToVehiclesEffect", [], true];  
+_pelican setVariable ["Splits_Pelican_AttachedToVehiclesEffect", [], true];  
 
 //0 = _vehicles spawn OPTRE_Fnc_SupplyPodCleanUp; 
 

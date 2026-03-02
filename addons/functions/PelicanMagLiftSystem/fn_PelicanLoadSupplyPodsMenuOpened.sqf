@@ -6,7 +6,7 @@ _control = (_this select 0) select 0;
 _arrayPosition = _this select 1;
 _pelican = OPTRE_PelicanLoadSupplyPods_Menu_PelicanObject;
 
-_podArray = (_pelican getVariable ["STB73_Pelican_AttachedToVehiclesEffect",[]]); // array of vehicles attached to pelican.
+_podArray = (_pelican getVariable ["Splits_Pelican_AttachedToVehiclesEffect",[]]); // array of vehicles attached to pelican.
 _podClassname = if (count _podArray >= _arrayPosition + 1) then {(typeOf (_podArray select _arrayPosition))} else {""};
 
 {

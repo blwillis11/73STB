@@ -8,7 +8,7 @@ class CfgVehicles
     {
         displayName="[73] JumpPack";
         author="73rd S-4 Team";
-        maximumLoad=250;
+        maximumLoad=20;
         tf_encryptionCode="tf_west_radio_code";
         tf_dialog="rt1523g_radio_dialog";
         tf_subtype="digital_lr";
@@ -21,7 +21,7 @@ class CfgVehicles
     {
         displayName="[73] JumpPack";
         author="73rd S-4 Team";
-        maximumLoad=250;
+        maximumLoad=20;
         tf_encryptionCode="tf_west_radio_code";
         tf_dialog="rt1523g_radio_dialog";
         tf_subtype="digital_lr";
@@ -29,29 +29,107 @@ class CfgVehicles
         tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
         tf_hasLRradio=1;
     };
-    class Man;
-    class CAManBase: Man
+    class Logic;
+	class Module_F : Logic
+	{
+		class AttributesBase
+		{
+			class Edit;
+			class ModuleDescription;
+		};
+		class ModuleDescription{};
+	};
+    class Sign_Sphere10cm_F;
+    class STB73_Stand_In : Sign_Sphere10cm_F
     {
-        class ACE_SelfActions
-        {
-            class Add_Marker {
-                displayName = "Mark Position";
-                condition = "true";
-                statement = "";
-                class MarkClear {
-                    displayName = "Add Clear Dot";
-                    statement = "call QUI_fnc_ClearMarker;";
-                    condition = "true";
-                };
-            };
-        };
+        displayName= "DO NOT DELETE!";
     };
-
-	class Module_F;
 	class OPTRE_PelicanSupplyDrop;
 	class Module_OPTRE_HEV;
 	class Module_OPTRE_ODSTDrop;
 	class OPTRE_ODSTDrop;
+
+    class ACE_Module: Module_F{};
+	class IK_Modules_MakeAceArsenal : ACE_Module
+	{
+		scope = 2; // 1 = Hidden, 2 = Visible
+		author = AUTHOR;
+		displayName = "Make ACE Arsenal";
+		function = "STB73_fnc_makeAceArsenal";	// Name of function triggered once conditions are met
+		category = "STB73_Modules";
+		functionPriority = 1;				// Execution priority, modules with lower number are executed first. 0 is used when the attribute is undefined
+		isGlobal = 0;						// 0 = server, 1 = global, 2 = persistent global execution
+		isTriggerActivated = 0;				// 1 = wait for synced triggers
+		isDisposable = 1;					// 0 = repeatable
+		is3DEN = 0;							// 1 = run in 3DEN
+		curatorCanAttach = 0;				// 1 = drag and drop on entity
+
+		// 3DEN Attributes Menu Options
+		canSetArea = 0;						// 1 = allows Area Attributes
+
+		class Attributes : AttributesBase
+		{
+			class ModuleDescription : ModuleDescription {};
+		};
+		class ModuleDescription : ModuleDescription
+		{
+			description = "Sync objects you wish to make a ACE Arsenal. WARNING! Does not work on Simple Objects!";	// Short description, structured text
+			sync[] = {"Anything"};				// Array of synced entities (can contain base classes)
+		};
+	};
+    class IK_Modules_RescaleObjects : ACE_Module
+	{
+		scope = 2;
+		displayName = "Rescale Objects";
+		function = "STB73_fnc_rescaleObjects";
+		category = "STB73_Modules";
+		functionPriority = 1;
+		isGlobal = 0;
+		isTriggerActivated = 0;
+		isDisposable = 1;
+		is3DEN = 0;
+		curatorCanAttach = 0;
+		canSetArea = 0;
+
+		class Attributes : AttributesBase
+		{
+			class RescaleFactor : Edit
+			{
+				displayName = "Rescale Factor";
+				tooltip = "Factor to rescale the objects by. 1 = no change, 2 = double size, 0.5 = half size.";
+				property = "STB73_Modules_RescaleObjects_RescaleFactor";
+				typeName = "NUMBER";
+				defaultValue = "1";
+			};
+			class ModuleDescription : ModuleDescription {};
+		};
+		class ModuleDescription : ModuleDescription
+		{
+			description = "Sync objects you wish to rescale.";
+			sync[] = {"AnyStaticObject"};
+		};
+	};
+    class IK_Modules_MakeTrippleRArea : ACE_Module
+	{
+		scope = 2;
+		displayName = "Repair, Refuel, Rearm Area";
+		function = "STB73_fnc_repairRefuelRearmArea";
+		category = "STB73_Modules";
+		functionPriority = 1;
+		isGlobal = 0;
+		isTriggerActivated = 0;
+		isDisposable = 1;
+		is3DEN = 0;
+		curatorCanAttach = 0;
+		canSetArea = 0;
+
+		class ModuleDescription : ModuleDescription
+		{
+			description = "Sync trigger areas to make them a RRR area. Any vehicle that enters this area will be repaired, refuled, and rearmed.";
+			sync[] = {"EmptyDetector"};
+		};
+	};
+
 	class STB73_Module_HEV: Module_OPTRE_HEV
 	{
 		displayName="[73] HEV Module";

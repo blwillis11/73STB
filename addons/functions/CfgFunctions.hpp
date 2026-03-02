@@ -9,29 +9,49 @@ class CfgFunctions{
             class Init_misc
 			{
 				postInit=1;
+                description = "Misc - Initialization";
+                file = "z\73STB\addons\functions\misc\fn_Init_misc.sqf";
 			};
 			class DefaultKits
 			{
                 description = "Misc - Default Kits";
+                file = "z\73STB\addons\functions\misc\fn_DefaultKits.sqf";
 			};
 			class DestroyEquipment
 			{
                 description = "Misc - Destroy Equipment";
+                file = "z\73STB\addons\functions\misc\fn_DestroyEquipment.sqf";
 			};
 			class ZeusMessage
 			{
                 description = "Misc - Zeus Message";
+                file = "z\73STB\addons\functions\misc\fn_ZeusMessage.sqf";
 			};
+            class RescaleObjects
+            {
+                description = "Misc - Rescale Objects";
+                file = "z\73STB\addons\functions\misc\fn_RescaleObjects.sqf";
+            };
+            class RepairRefuelRearmArea
+            {
+                description = "Misc - Repair Refuel Rearm Area";
+                file = "z\73STB\addons\functions\misc\fn_RepairRefuelRearmArea.sqf";
+            };
+            class MakeACEArsenal
+            {
+                description = "Misc - Make ACE Arsenal";
+                file = "z\73STB\addons\functions\misc\fn_MakeACEArsenal.sqf";
+            };
         };
         class Modules
         {
             file = "z\73STB\addons\functions\modules";
-            class ModuleODSTHEV { description = "STB73 - ODST HEV module"; };
-            class ModuleBJHEV { description = "STB73 - BJ HEV module"; };
-            class ModuleOCLSSquadPod { description = "STB73 - OCLS squad pod module"; };
-            class ModulePelicanAirAssault { description = "STB73 - Pelican air assault module"; };
-            class ModuleHEV { description = "STB73 - HEV module"; };
-            class ModuleHEVCleanup { description = "STB73 - HEV Cleanup module"; };
+            class ModuleODSTHEV { file = "z\73STB\addons\functions\modules\fn_ModuleODSTHEV.sqf"; description = "STB73 - ODST HEV module"; };
+            class ModuleBJHEV { file = "z\73STB\addons\functions\modules\fn_ModuleBJHEV.sqf"; description = "STB73 - BJ HEV module"; };
+            class ModuleOCLSSquadPod { file = "z\73STB\addons\functions\modules\fn_ModuleOCLSSquadPod.sqf"; description = "STB73 - OCLS squad pod module"; };
+            class ModulePelicanAirAssault { file = "z\73STB\addons\functions\modules\fn_ModulePelicanAirAssault.sqf"; description = "STB73 - Pelican air assault module"; };
+            class ModuleHEV { file = "z\73STB\addons\functions\modules\fn_ModuleHEV.sqf"; description = "STB73 - HEV module"; };
+            class ModuleHEVCleanup { file = "z\73STB\addons\functions\modules\fn_ModuleHEVCleanup.sqf"; description = "STB73 - HEV Cleanup module"; };
         };
 
         class Thrusters

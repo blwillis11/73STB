@@ -76,7 +76,10 @@ private _functionsToCheck = [
     "STB73_fnc_defaultKits",
     "STB73_fnc_destroyEquipment",
     "STB73_fnc_init_misc",
-    "STB73_fnc_zeusMessage"
+    "STB73_fnc_zeusMessage",
+    "STB73_fnc_makeAceArsenal",
+    "STB73_fnc_rescaleObjects",
+    "STB73_fnc_repairRefuelRearmArea"
 ];
 
 private _missing = [];

@@ -10,7 +10,7 @@ class STB73_M875:VES_M875_SPH
     scope=2;
     side=1;
     armor=450;
-    crew = "STB73_Crewman";
+    crew = "STB73_Marine_Rifleman";
      class ace_cargo {
             class cargo {
                 class ACE_Tracks { // Doesn't have to have the same name as the item you're adding
@@ -50,7 +50,7 @@ class STB73_M808BM_MBT:VES_M808BM_MBT
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_Crewman";
+    crew = "STB73_Marine_Rifleman";
     armor=575;
     armorStructural=5;
      class ace_cargo {
@@ -164,7 +164,7 @@ class STB73_M808B2_MBT:VES_M808B2_MBT
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_Crewman";
+    crew = "STB73_Marine_Rifleman";
     armor=575;
     armorStructural=5;
      class ace_cargo {
@@ -213,7 +213,7 @@ class STB73_M808BMk2:DMNS_M808B
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_Crewman";
+    crew = "STB73_Marine_Rifleman";
     armor=575;
     armorStructural=5;
      class ace_cargo {
@@ -302,7 +302,7 @@ class STB73_Merkava : B_MBT_01_TUSK_F
     scope=2;
     side=1;
     armor=450;
-    crew = "STB73_Crewman";
+    crew = "STB73_Marine_Rifleman";
     typicalCargo[]=
     {
         "STB73_Marine_Rifleman"

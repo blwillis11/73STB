@@ -70,17 +70,17 @@ class STB73_OCLF_Officer: STB73_OCLFBase
     };
     magazines[]=
     {
-        "STB73_12Rnd_127x30_SAP_Mag_Tracer",
-        "STB73_12Rnd_127x30_SAP_Mag_Tracer",
-        "STB73_12Rnd_127x30_SAP_Mag_Tracer",
+        "STB73_12Rnd_127x30_SAP_Mag",
+        "STB73_12Rnd_127x30_SAP_Mag",
+        "STB73_12Rnd_127x30_SAP_Mag",
         "OPTRE_M2_Smoke",
         "OPTRE_M2_Smoke"
     };
     respawnMagazines[]=
     {
-        "STB73_12Rnd_127x30_SAP_Mag_Tracer",
-        "STB73_12Rnd_127x30_SAP_Mag_Tracer",
-        "STB73_12Rnd_127x30_SAP_Mag_Tracer",
+        "STB73_12Rnd_127x30_SAP_Mag",
+        "STB73_12Rnd_127x30_SAP_Mag",
+        "STB73_12Rnd_127x30_SAP_Mag",
         "OPTRE_M2_Smoke",
         "OPTRE_M2_Smoke"
     };
@@ -112,41 +112,39 @@ class STB73_OCLF_Soldier_Rifleman: STB73_OCLFBase
     displayName="Rifleman";
     weapons[]=
     {
-        "STB73_MA37B",
+        "STB73_MA37",
         "Throw",
         "Put"
     };
     respawnWeapons[]=
     {
-        "STB73_MA37B",
+        "STB73_MA37",
         "Throw",
         "Put"
     };
     magazines[]=
     {
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
         "OPTRE_M2_Smoke",
         "OPTRE_M2_Smoke",
-        "OPTRE_M2_Smoke",
-        "MA_M9_Frag_Mag"
+        "OPTRE_M2_Smoke"
     };
     respawnMagazines[]=
     {
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
         "OPTRE_M2_Smoke",
         "OPTRE_M2_Smoke",
-        "OPTRE_M2_Smoke",
-        "MA_M9_Frag_Mag"
+        "OPTRE_M2_Smoke"
     };
 };
 class STB73_OCLF_Soldier_Medic: STB73_OCLFBase
@@ -169,24 +167,24 @@ class STB73_OCLF_Soldier_Medic: STB73_OCLFBase
     };
     magazines[]=
     {
-        "STB73_36Rnd_127x30_SAP_Mag_Tracer",
-        "STB73_36Rnd_127x30_SAP_Mag_Tracer",
-        "STB73_36Rnd_127x30_SAP_Mag_Tracer",
-        "STB73_36Rnd_127x30_SAP_Mag_Tracer",
-        "STB73_36Rnd_127x30_SAP_Mag_Tracer",
-        "STB73_36Rnd_127x30_SAP_Mag_Tracer",
+        "STB73_36Rnd_127x30_SAP_Mag",
+        "STB73_36Rnd_127x30_SAP_Mag",
+        "STB73_36Rnd_127x30_SAP_Mag",
+        "STB73_36Rnd_127x30_SAP_Mag",
+        "STB73_36Rnd_127x30_SAP_Mag",
+        "STB73_36Rnd_127x30_SAP_Mag",
         "OPTRE_M2_Smoke",
         "OPTRE_M2_Smoke",
         "OPTRE_M2_Smoke"
     };
     respawnMagazines[]=
     {
-        "STB73_36Rnd_127x30_SAP_Mag_Tracer",
-        "STB73_36Rnd_127x30_SAP_Mag_Tracer",
-        "STB73_36Rnd_127x30_SAP_Mag_Tracer",
-        "STB73_36Rnd_127x30_SAP_Mag_Tracer",
-        "STB73_36Rnd_127x30_SAP_Mag_Tracer",
-        "STB73_36Rnd_127x30_SAP_Mag_Tracer",
+        "STB73_36Rnd_127x30_SAP_Mag",
+        "STB73_36Rnd_127x30_SAP_Mag",
+        "STB73_36Rnd_127x30_SAP_Mag",
+        "STB73_36Rnd_127x30_SAP_Mag",
+        "STB73_36Rnd_127x30_SAP_Mag",
+        "STB73_36Rnd_127x30_SAP_Mag",
         "OPTRE_M2_Smoke",
         "OPTRE_M2_Smoke",
         "OPTRE_M2_Smoke"
@@ -208,47 +206,45 @@ class STB73_OCLF_Soldier_Rifleman_AA: STB73_OCLFBase
     backpack = "OPTRE_UNSC_Backpack";
     weapons[]=
     {
-        "STB73_MA37B",
+        "STB73_MA37",
         "optre_M41_SSR",
         "Throw",
         "Put"
     };
     respawnWeapons[]=
     {
-        "STB73_MA37B",
+        "STB73_MA37",
         "optre_M41_SSR",
         "Throw",
         "Put"
     };
     magazines[]=
     {
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
         "optre_m41_twin_heat_g_aa",
         "optre_m41_twin_heat_g_aa",
         "OPTRE_M2_Smoke",
         "OPTRE_M2_Smoke",
-        "OPTRE_M2_Smoke",
-        "MA_M9_Frag_Mag"
+        "OPTRE_M2_Smoke"
     };
     respawnMagazines[]=
     {
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
         "optre_m41_twin_heat_g_aa",
         "optre_m41_twin_heat_g_aa",
         "OPTRE_M2_Smoke",
         "OPTRE_M2_Smoke",
-        "OPTRE_M2_Smoke",
-        "MA_M9_Frag_Mag"
+        "OPTRE_M2_Smoke"
     };
 };
 class STB73_OCLF_Soldier_Rifleman_AT: STB73_OCLFBase
@@ -259,47 +255,45 @@ class STB73_OCLF_Soldier_Rifleman_AT: STB73_OCLFBase
     backpack = "OPTRE_UNSC_Backpack";
     weapons[]=
     {
-        "STB73_MA37B",
+        "STB73_MA37",
         "optre_M41_SSR",
         "Throw",
         "Put"
     };
     respawnWeapons[]=
     {
-        "STB73_MA37B",
+        "STB73_MA37",
         "optre_M41_SSR",
         "Throw",
         "Put"
     };
     magazines[]=
     {
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
         "optre_m41_twin_heat",
         "optre_m41_twin_heat",
         "OPTRE_M2_Smoke",
         "OPTRE_M2_Smoke",
-        "OPTRE_M2_Smoke",
-        "MA_M9_Frag_Mag"
+        "OPTRE_M2_Smoke"
     };
     respawnMagazines[]=
     {
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
         "optre_m41_twin_heat",
         "optre_m41_twin_heat",
         "OPTRE_M2_Smoke",
         "OPTRE_M2_Smoke",
-        "OPTRE_M2_Smoke",
-        "MA_M9_Frag_Mag"
+        "OPTRE_M2_Smoke"
     };
 };
 class STB73_OCLF_Soldier_AutoRifleman: STB73_OCLFBase
@@ -321,29 +315,27 @@ class STB73_OCLF_Soldier_AutoRifleman: STB73_OCLFBase
     };
     magazines[]=
     {
-        "STB73_100rnd_762x51_Mag_Tracer",
-        "STB73_100rnd_762x51_Mag_Tracer",
-        "STB73_100rnd_762x51_Mag_Tracer",
-        "STB73_100rnd_762x51_Mag_Tracer",
-        "STB73_100rnd_762x51_Mag_Tracer",
-        "STB73_100rnd_762x51_Mag_Tracer",
+        "STB73_100rnd_762x51_Mag",
+        "STB73_100rnd_762x51_Mag",
+        "STB73_100rnd_762x51_Mag",
+        "STB73_100rnd_762x51_Mag",
+        "STB73_100rnd_762x51_Mag",
+        "STB73_100rnd_762x51_Mag",
         "OPTRE_M2_Smoke",
         "OPTRE_M2_Smoke",
-        "OPTRE_M2_Smoke",
-        "MA_M9_Frag_Mag"
+        "OPTRE_M2_Smoke"
     };
     respawnMagazines[]=
     {
-        "STB73_100rnd_762x51_Mag_Tracer",
-        "STB73_100rnd_762x51_Mag_Tracer",
-        "STB73_100rnd_762x51_Mag_Tracer",
-        "STB73_100rnd_762x51_Mag_Tracer",
-        "STB73_100rnd_762x51_Mag_Tracer",
-        "STB73_100rnd_762x51_Mag_Tracer",
+        "STB73_100rnd_762x51_Mag",
+        "STB73_100rnd_762x51_Mag",
+        "STB73_100rnd_762x51_Mag",
+        "STB73_100rnd_762x51_Mag",
+        "STB73_100rnd_762x51_Mag",
+        "STB73_100rnd_762x51_Mag",
         "OPTRE_M2_Smoke",
         "OPTRE_M2_Smoke",
-        "OPTRE_M2_Smoke",
-        "MA_M9_Frag_Mag"
+        "OPTRE_M2_Smoke"
     };
 };
 class STB73_OCLF_Soldier_Breacher: STB73_OCLFBase
@@ -421,25 +413,25 @@ class STB73_OCLF_Soldier_Grenadier: STB73_OCLFBase
     displayName="Grenadier";
     weapons[]=
     {
-        "STB73_MA37BGL",
+        "STB73_MA37GL",
         "Throw",
         "Put"
     };
     respawnWeapons[]=
     {
-        "STB73_MA37BGL",
+        "STB73_MA37GL",
         "Throw",
         "Put"
     };
     
     magazines[]=
     {
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
         "TCP_1Rnd_40_Shell_HE",
         "TCP_1Rnd_40_Shell_HE",
         "TCP_1Rnd_40_Shell_TD",
@@ -450,12 +442,12 @@ class STB73_OCLF_Soldier_Grenadier: STB73_OCLFBase
     };
     respawnMagazines[]=
     {
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
         "TCP_1Rnd_40_Shell_HE",
         "TCP_1Rnd_40_Shell_HE",
         "TCP_1Rnd_40_Shell_TD",
@@ -485,29 +477,27 @@ class STB73_OCLF_Soldier_Radioman: STB73_OCLFBase
     };
     magazines[]=
     {
-        "STB73_95x40_36Rnd_Mag_Tracer",
-        "STB73_95x40_36Rnd_Mag_Tracer",
-        "STB73_95x40_36Rnd_Mag_Tracer",
-        "STB73_95x40_36Rnd_Mag_Tracer",
-        "STB73_95x40_36Rnd_Mag_Tracer",
-        "STB73_95x40_36Rnd_Mag_Tracer",
+        "STB73_95x40_36Rnd_Mag",
+        "STB73_95x40_36Rnd_Mag",
+        "STB73_95x40_36Rnd_Mag",
+        "STB73_95x40_36Rnd_Mag",
+        "STB73_95x40_36Rnd_Mag",
+        "STB73_95x40_36Rnd_Mag",
         "OPTRE_M2_Smoke",
         "OPTRE_M2_Smoke",
-        "OPTRE_M2_Smoke",
-        "MA_M9_Frag_Mag"
+        "OPTRE_M2_Smoke"
     };
     respawnMagazines[]=
     {
-        "STB73_95x40_36Rnd_Mag_Tracer",
-        "STB73_95x40_36Rnd_Mag_Tracer",
-        "STB73_95x40_36Rnd_Mag_Tracer",
-        "STB73_95x40_36Rnd_Mag_Tracer",
-        "STB73_95x40_36Rnd_Mag_Tracer",
-        "STB73_95x40_36Rnd_Mag_Tracer",
+        "STB73_95x40_36Rnd_Mag",
+        "STB73_95x40_36Rnd_Mag",
+        "STB73_95x40_36Rnd_Mag",
+        "STB73_95x40_36Rnd_Mag",
+        "STB73_95x40_36Rnd_Mag",
+        "STB73_95x40_36Rnd_Mag",
         "OPTRE_M2_Smoke",
         "OPTRE_M2_Smoke",
-        "OPTRE_M2_Smoke",
-        "MA_M9_Frag_Mag"
+        "OPTRE_M2_Smoke"
     };
 };
 class STB73_OCLF_Soldier_Sniper: STB73_OCLFBase
@@ -517,13 +507,13 @@ class STB73_OCLF_Soldier_Sniper: STB73_OCLFBase
     displayName="Sniper";
     weapons[]=
     {
-        "STB73_SRS99AM",
+        "STB73_SRS99AM_Stealth",
         "Throw",
         "Put"
     };
     respawnWeapons[]=
     {
-        "STB73_SRS99AM",
+        "STB73_SRS99AM_Stealth",
         "Throw",
         "Put"
     };
@@ -537,8 +527,7 @@ class STB73_OCLF_Soldier_Sniper: STB73_OCLFBase
         "STB73_M232_145x114x4_APFSDS",
         "OPTRE_M2_Smoke",
         "OPTRE_M2_Smoke",
-        "OPTRE_M2_Smoke",
-        "MA_M9_Frag_Mag"
+        "OPTRE_M2_Smoke"
     };
     respawnMagazines[]=
     {
@@ -550,8 +539,7 @@ class STB73_OCLF_Soldier_Sniper: STB73_OCLFBase
         "STB73_M232_145x114x4_APFSDS",
         "OPTRE_M2_Smoke",
         "OPTRE_M2_Smoke",
-        "OPTRE_M2_Smoke",
-        "MA_M9_Frag_Mag"
+        "OPTRE_M2_Smoke"
     };
 };
 class STB73_OCLF_Soldier_SquadLead: STB73_OCLFBase
@@ -573,29 +561,27 @@ class STB73_OCLF_Soldier_SquadLead: STB73_OCLFBase
     };
     magazines[]=
     {
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
         "OPTRE_M2_Smoke",
         "OPTRE_M2_Smoke",
-        "OPTRE_M2_Smoke",
-        "MA_M9_Frag_Mag"
+        "OPTRE_M2_Smoke"
     };
     respawnMagazines[]=
     {
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
-        "STB73_32Rnd_762x51_Mag_Tracer",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
+        "STB73_32Rnd_762x51_Mag",
         "OPTRE_M2_Smoke",
         "OPTRE_M2_Smoke",
-        "OPTRE_M2_Smoke",
-        "MA_M9_Frag_Mag"
+        "OPTRE_M2_Smoke"
     };
 };
 class STB73_OCLF_Soldier_Scout: STB73_OCLFBase
@@ -617,29 +603,27 @@ class STB73_OCLF_Soldier_Scout: STB73_OCLFBase
     };
     magazines[]=
     {
-        "STB73_15Rnd_762x51_Mag_Tracer",
-        "STB73_15Rnd_762x51_Mag_Tracer",
-        "STB73_15Rnd_762x51_Mag_Tracer",
-        "STB73_15Rnd_762x51_Mag_Tracer",
-        "STB73_15Rnd_762x51_Mag_Tracer",
-        "STB73_15Rnd_762x51_Mag_Tracer",
+        "STB73_15Rnd_762x51_Mag",
+        "STB73_15Rnd_762x51_Mag",
+        "STB73_15Rnd_762x51_Mag",
+        "STB73_15Rnd_762x51_Mag",
+        "STB73_15Rnd_762x51_Mag",
+        "STB73_15Rnd_762x51_Mag",
         "OPTRE_M2_Smoke",
         "OPTRE_M2_Smoke",
-        "OPTRE_M2_Smoke",
-        "MA_M9_Frag_Mag"
+        "OPTRE_M2_Smoke"
     };
     respawnMagazines[]=
     {
-        "STB73_15Rnd_762x51_Mag_Tracer",
-        "STB73_15Rnd_762x51_Mag_Tracer",
-        "STB73_15Rnd_762x51_Mag_Tracer",
-        "STB73_15Rnd_762x51_Mag_Tracer",
-        "STB73_15Rnd_762x51_Mag_Tracer",
-        "STB73_15Rnd_762x51_Mag_Tracer",
+        "STB73_15Rnd_762x51_Mag",
+        "STB73_15Rnd_762x51_Mag",
+        "STB73_15Rnd_762x51_Mag",
+        "STB73_15Rnd_762x51_Mag",
+        "STB73_15Rnd_762x51_Mag",
+        "STB73_15Rnd_762x51_Mag",
         "OPTRE_M2_Smoke",
         "OPTRE_M2_Smoke",
-        "OPTRE_M2_Smoke",
-        "MA_M9_Frag_Mag"
+        "OPTRE_M2_Smoke"
     };
 };
 ///////Heavy Forces///////////////
@@ -667,7 +651,7 @@ class STB73_OCLFSpecOpsBase: STB73_OCLFBase
     {
         "STB73_Biofoam_Light","STB73_Biofoam_Light","STB73_Biofoam_Light"
     };
-    magazines[]={
+    magazines[]={ 
     };
     respawnMagazines[]={
     };
@@ -765,8 +749,7 @@ class STB73_OCLF_SpecOps_Rifleman: STB73_OCLFSpecOpsBase
         "STB73_48Rnd_5x23Caseless_FMJ_Mag",
         "OPTRE_M2_Smoke",
         "OPTRE_M2_Smoke",
-        "OPTRE_M2_Smoke",
-        "MA_M9_Frag_Mag"
+        "OPTRE_M2_Smoke"
     };
     respawnMagazines[]=
     {
@@ -780,7 +763,6 @@ class STB73_OCLF_SpecOps_Rifleman: STB73_OCLFSpecOpsBase
         "STB73_48Rnd_5x23Caseless_FMJ_Mag",
         "OPTRE_M2_Smoke",
         "OPTRE_M2_Smoke",
-        "OPTRE_M2_Smoke",
-        "MA_M9_Frag_Mag"
+        "OPTRE_M2_Smoke"
     };
 };

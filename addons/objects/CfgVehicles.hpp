@@ -278,7 +278,7 @@ class CfgVehicles
 		};
 	};
 	class STB73_SupplyPod_StaticHMGAmmo: STB73_SupplyPod
-  {
+  	{
 		scope = 2; // Visible in Zeus and Eden
     	scopeCurator = 2; // Allow spawning in Zeus
 

@@ -22,8 +22,8 @@ class STB73_CH255_Helmet_Visor: OPTRE_FC_CH255_Helmet_Visor
         };
     };
 };
-class OPTRE_CH255_Security_Advanced_Type_1_Helmet_Black;
-class STB73_CH255_Helmet_Lancer: OPTRE_CH255_Security_Advanced_Type_1_Helmet_Black
+class OPTRE_CH255_Security_Advanced_Type_2_Helmet_Black;
+class STB73_CH255_Helmet_Lancer: OPTRE_CH255_Security_Advanced_Type_2_Helmet_Black
 {
     scope=2;
     displayName="[OCLF] CH255 Lancer Helmet";

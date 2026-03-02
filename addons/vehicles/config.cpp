@@ -12,8 +12,6 @@ class CfgPatches {
             "STB73_HDV134_Resupply",//Load/unload
             "STB73_HDV134_TT",//Load/unload
             "STB73_HDV134_TT_C",//Load/unload
-            "STB73_M19_GMG",//Load/unload
-            "STB73_M19_HMG",//Load/unload
             "STB73_M808BM_MBT",//Load/unload
             "STB73_D77_TC_Pelican",
             "STB73_M12",//Load/unload

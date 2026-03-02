@@ -1,4 +1,4 @@
-_podArray = (OPTRE_PelicanLoadSupplyPods_Menu_PelicanObject getVariable ["STB73_Pelican_AttachedToVehiclesEffect",[]]);
+_podArray = (OPTRE_PelicanLoadSupplyPods_Menu_PelicanObject getVariable ["Splits_Pelican_AttachedToVehiclesEffect",[]]);
 
 if (
 	(
@@ -13,14 +13,14 @@ if (
 	//hint "NO SUPPLY PODS ATTACHED TO PELICAN.";
 };
 
-_podsToRemove = (OPTRE_PelicanLoadSupplyPods_Menu_PelicanObject getVariable ["STB73_Pelican_AttachedToVehiclesEffect",[]]);
+_podsToRemove = (OPTRE_PelicanLoadSupplyPods_Menu_PelicanObject getVariable ["Splits_Pelican_AttachedToVehiclesEffect",[]]);
 
 {
 	deleteVehicle _x;
 } forEach _podsToRemove;
 
 
-OPTRE_PelicanLoadSupplyPods_Menu_PelicanObject setVariable ["STB73_Pelican_AttachedToVehiclesEffect",[], true];
+OPTRE_PelicanLoadSupplyPods_Menu_PelicanObject setVariable ["Splits_Pelican_AttachedToVehiclesEffect",[], true];
 
 {
 	((findDisplay 10293) displayCtrl _x) lbSetCurSel 0;

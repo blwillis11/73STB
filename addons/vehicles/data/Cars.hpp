@@ -19,7 +19,7 @@ class STB73_HDV134_Resupply:VES_HDV134_Resupply
                 };
             };
         };
-    crew = "STB73_Crewman";
+    crew = "STB73_Marine_Rifleman";
     class VehicleSpawnerInfo {
         class STB73_GroundSpawner
         {
@@ -50,7 +50,7 @@ class STB73_HDV134_TT:VES_HDV134_TT
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_Crewman";
+    crew = "STB73_Marine_Rifleman";
  class ace_cargo {
             class cargo {
                 class ACE_Tyres { // Doesn't have to have the same name as the item you're adding
@@ -90,7 +90,7 @@ class STB73_HDV134_TT_C:VES_HDV134_TT_C
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_Crewman";
+    crew = "STB73_Marine_Rifleman";
     class VehicleSpawnerInfo {
         class STB73_GroundSpawner
         {
@@ -123,7 +123,7 @@ class STB73_M12 : VES_M12
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_Crewman";
+    crew = "STB73_Marine_Rifleman";
     class ace_cargo {
         class cargo {
             class ACE_Tyres { // Doesn't have to have the same name as the item you're adding
@@ -157,7 +157,7 @@ class STB73_M12_LRV : VES_M12_LRV
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_Crewman";
+    crew = "STB73_Marine_Rifleman";
     class ace_cargo {
         class cargo {
             class ACE_Tyres { // Doesn't have to have the same name as the item you're adding
@@ -191,7 +191,7 @@ class STB73_M12G1_LRV : VES_M12G1_LRV
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_Crewman";
+    crew = "STB73_Marine_Rifleman";
     class ace_cargo {
         class cargo {
             class ACE_Tyres { // Doesn't have to have the same name as the item you're adding
@@ -225,7 +225,7 @@ class STB73_M12A1_LRV : VES_M12A1_LRV
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_Crewman";
+    crew = "STB73_Marine_Rifleman";
     class ace_cargo {
         class cargo {
             class ACE_Tyres { // Doesn't have to have the same name as the item you're adding
@@ -258,7 +258,7 @@ class STB73_M12R_AA : VES_M12R_AA
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_Crewman";
+    crew = "STB73_Marine_Rifleman";
     class ace_cargo {
         class cargo {
             class ACE_Tyres { // Doesn't have to have the same name as the item you're adding
@@ -291,7 +291,7 @@ class STB73_M12_APC : VES_M12_APC
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_Crewman";
+    crew = "STB73_Marine_Rifleman";
     class ace_cargo {
         class cargo {
             class ACE_Tyres { // Doesn't have to have the same name as the item you're adding
@@ -325,7 +325,7 @@ class STB73_M813_TT : VES_M813_TT
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_Crewman";
+    crew = "STB73_Marine_Rifleman";
     class ace_cargo {
         class cargo {
             class ACE_Tyres { // Doesn't have to have the same name as the item you're adding
@@ -359,7 +359,7 @@ class STB73_M914_TD : OPTRE_M12_TD_ins
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_Crewman";
+    crew = "STB73_Marine_Rifleman";
     class ace_cargo {
         class cargo {
             class ACE_Tyres { // Doesn't have to have the same name as the item you're adding
@@ -396,7 +396,7 @@ class STB73_M274_ATV:OPTRE_M274_ATV
    scopeCurator=2;
    scope=2;
    side=1;
-   crew = "STB73_Crewman";
+   crew = "STB73_Marine_Rifleman";
    class VehicleTransport
    {
         class Cargo

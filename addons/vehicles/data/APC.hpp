@@ -9,7 +9,7 @@ class STB73_M494_Oryx: OPTRE_M494
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_Crewman";
+    crew = "STB73_Marine_Rifleman";
     class ace_cargo {
         class cargo {
             class ACE_Tracks { // Doesn't have to have the same name as the item you're adding
@@ -45,7 +45,7 @@ class STB73_IFV76_A:VES_IFV76_A
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_Crewman";
+    crew = "STB73_Marine_Rifleman";
     class ACE_Cargo
     {
         class Cargo
@@ -85,7 +85,7 @@ class STB73_IFV76:VES_IFV76
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_Crewman";
+    crew = "STB73_Marine_Rifleman";
     class ACE_Cargo
     {
         class Cargo
@@ -125,7 +125,7 @@ class STB73_M412_IFV:VES_M412_IFV
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_Crewman";
+    crew = "STB73_Marine_Rifleman";
     class ACE_Cargo
     {
         class Cargo
@@ -164,7 +164,7 @@ class STB73_M413_MGS:VES_M413_MGS
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_Crewman";
+    crew = "STB73_Marine_Rifleman";
     class ACE_Cargo
     {
         class Cargo
@@ -205,7 +205,7 @@ class STB73_M511_Springbok_APC : DMNS_M511_Springbok_APC
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_Crewman";
+    crew = "STB73_Marine_Rifleman";
     class ACE_Cargo
     {
         class Cargo
@@ -245,7 +245,7 @@ class STB73_M511_Springbok_IFV : DMNS_M511_Springbok_IFV
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_Crewman";
+    crew = "STB73_Marine_Rifleman";
     class ACE_Cargo
     {
         class Cargo
@@ -284,7 +284,7 @@ class STB73_M511_Springbok_MGS : DMNS_M511_Springbok_MGS
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_Crewman";
+    crew = "STB73_Marine_Rifleman";
     class ACE_Cargo
     {
         class Cargo
@@ -323,7 +323,7 @@ class STB73_M511_Springbok_AA : DMNS_M511_Springbok_AA
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_Crewman";
+    crew = "STB73_Marine_Rifleman";
     class ACE_Cargo
     {
         class Cargo
@@ -375,7 +375,7 @@ class STB73_Hammerhead_Repair: B_APC_Tracked_01_CRV_F
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_Crewman";
+    crew = "STB73_Marine_Rifleman";
     enginePower=1500;
     peakTorque=6000;
     idleRPM=1000;
@@ -962,15 +962,15 @@ class STB73_Iguana_APC: STB73_Iguana
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_Crewman";
+    crew = "STB73_Marine_Rifleman";
     accuracy=1000;
     editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\O_APC_Wheeled_02_rcws_v2_F.jpg";
     _generalMacro="O_APC_Wheeled_02_rcws_v2_F";
     hiddenSelectionsTextures[]=
     {
-        "STB73_vehicles\data\Iguana\Iguana_01_Ext_co.paa",
-        "STB73_vehicles\data\Iguana\Iguana_02_Ext_co.paa",
-        "STB73_vehicles\data\Iguana\Iguana_Turret.paa",
+        "z\STB73_vehicles\data\Iguana\Iguana_01_Ext_co.paa",
+        "z\STB73_vehicles\data\Iguana\Iguana_02_Ext_co.paa",
+        "z\STB73_vehicles\data\Iguana\Iguana_Turret.paa",
         "A3\Armor_F\Data\camonet_AAF_FIA_green_CO.paa",
         "A3\armor_f\data\cage_csat_green_co.paa"
     };
@@ -1015,16 +1015,16 @@ class STB73_Iguana_Medical_APC: STB73_Iguana
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_Crewman";
+    crew = "STB73_Marine_Rifleman";
     accuracy=1000;
     editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\O_APC_Wheeled_02_rcws_v2_F.jpg";
     _generalMacro="O_APC_Wheeled_02_rcws_v2_F";
     ace_medical_isMedicalVehicle=1;
     hiddenSelectionsTextures[]=
     {
-        "STB73_vehicles\data\Iguana\Iguana_01_Ext_co.paa",
-        "STB73_vehicles\data\Iguana\Iguana_02_Ext_co.paa",
-        "STB73_vehicles\data\Iguana\Iguana_Turret.paa",
+        "z\STB73_vehicles\data\Iguana\Iguana_01_Ext_co.paa",
+        "z\STB73_vehicles\data\Iguana\Iguana_02_Ext_co.paa",
+        "z\STB73_vehicles\data\Iguana\Iguana_Turret.paa",
         "A3\Armor_F\Data\camonet_AAF_FIA_green_CO.paa",
         "A3\armor_f\data\cage_csat_green_co.paa"
     };
@@ -1174,7 +1174,7 @@ class STB73_Komodo: B_AFV_Wheeled_01_up_cannon_F
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_Crewman";
+    crew = "STB73_Marine_Rifleman";
     hiddenSelections[]=
     {
         "camo1",

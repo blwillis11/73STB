@@ -35,4 +35,23 @@ class CfgVehicles {
     #include "data\Drone.hpp"
     #include "data\Aquatic.hpp"
     #include "data\Utility.hpp"
+
+    class Man;
+	class CAManBase: Man
+	{
+		class ACE_SelfActions
+		{
+			class ACE_Equipment
+			{
+                class OPTRE_Wren_Drone_place;
+				class STB73_Minibee_Drone_place: OPTRE_Wren_Drone_place
+				{
+					displayName="Deploy Minibee Drone";
+					condition="[_player, 'STB73_OQ40_Minibee_Drone_Item'] call ace_common_fnc_hasItem";
+					statement="[_player, 'STB73_OQ40_Minibee', 'STB73_OQ40_Minibee_Drone_Item'] call OPTRE_ace_fnc_place_down_vic";
+					icon="\OPTRE_Vehicles_Air_Drone\OQ40_Minibee\data\OQ-40_Icon.paa";
+				};
+			};
+		};
+	};
 };

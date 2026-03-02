@@ -562,7 +562,7 @@ class STB73_COGV_RCWS: STB73_POGV_RCWS
             armor=0.5;
             name="wheel_2_3";
         };
-};
+    };
     class VehicleSpawnerInfo {
         class STB73_GroundSpawner
         {
@@ -578,5 +578,157 @@ class STB73_COGV_RCWS: STB73_POGV_RCWS
              "[""Standard"",[""\A3\Drones_F\soft_f_gamma\UGV_01\data\UGV_01_ext_co.paa"",""\A3\Drones_F\soft_f_gamma\UGV_01\data\UGV_01_int_co.paa"",""\A3\Data_F\Vehicles\Turret_co.paa""]]",
             };
         };
+    };
+};
+
+class OPTRE_OQ40_Minibee_UNSC;
+
+class STB73_OQ40_Minibee: OPTRE_OQ40_Minibee_UNSC
+{
+    displayName="[73] OQ-40 'Minibee'";
+    author= AUTHOR;
+    faction = "STB73_STB";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_Drones_EdSubCat";
+    fuelCapacity=100;
+    class Turrets: Turrets
+    {
+        class MainTurret: MainTurret
+        {
+            LODTurnedIn=1100;
+            LODTurnedOut=1100;
+            minCamElev=-179;
+            minElev=-179;
+            minTurn=-179;
+            maxCamElev=179;
+            maxElev=179;
+            maxTurn=179;
+            weapons[]=
+            {
+                "Laserdesignator_mounted"
+            };
+            magazines[]=
+            {
+                "Laserbatteries"
+            };
+            stabilizedInAxes=3;
+            class OpticsIn
+            {
+                class Wide
+                {
+                    opticsDisplayName="W";
+                    initAngleX=0;
+                    minAngleX=-30;
+                    maxAngleX=30;
+                    initAngleY=0;
+                    minAngleY=-100;
+                    maxAngleY=100;
+                    initFov=0.5;
+                    minFov=0.5;
+                    maxFov=0.5;
+                    directionStabilized=1;
+                    visionMode[]=
+                    {
+                        "Normal",
+                        "NVG",
+                        "Ti"
+                    };
+                    thermalMode[]={0,1};
+                    gunnerOpticsModel="A3\drones_f\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_wide_F.p3d";
+                };
+                class Short: Wide
+                {
+                    opticsDisplayName="S";
+                    initFov="0.25/2";
+                    minFov="0.25/2";
+                    maxFov="0.25/2";
+                    gunnerOpticsModel="A3\drones_f\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_medium_F.p3d";
+                };
+                class Medium: Wide
+                {
+                    opticsDisplayName="M";
+                    initFov="0.25/4";
+                    minFov="0.25/4";
+                    maxFov="0.25/4";
+                    gunnerOpticsModel="A3\drones_f\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_medium_F.p3d";
+                };
+                class Narrow: Wide
+                {
+                    opticsDisplayName="N";
+                    initFov="0.25/12";
+                    minFov="0.25/12";
+                    maxFov="0.25/12";
+                    gunnerOpticsModel="A3\drones_f\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
+                };
+                class Xtreme: Wide
+                {
+                    opticsDisplayName="X";
+                    initFov="0.25/32";
+                    minFov="0.25/32";
+                    maxFov="0.25/32";
+                    gunnerOpticsModel="A3\drones_f\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
+                };
+            };
+        };
+    };
+    class assembleInfo
+    {
+        primary=1;
+        base="";
+        assembleTo="";
+        displayName="";
+        dissasembleTo[]=
+        {
+            "STB73_OQ40_Minibee_Backpack_UNSC"
+        };
+    };
+    class ACE_Actions
+    {
+        class ACE_MainActions
+        {
+            selection="interaction_point";
+            distance=5;
+            condition="(true)";
+            class ACE_Pickup
+            {
+                selection="";
+                displayName="Pick Up Minibee";
+                distance=5;
+                condition="(alive _target)";
+                statement="[_player, _target, 'STB73_OQ40_Minibee_Drone_Item'] call OPTRE_ace_fnc_pick_up_vic";
+                showDisabled=0;
+                exceptions[]={};
+                icon="\OPTRE_Vehicles_Air_Drone\OQ40_Minibee\data\OQ-40_Icon.paa";
+            };
+            class ace_repair_Repair
+            {
+                displayName="Repair";
+                condition="true";
+                statement="";
+                runOnHover=1;
+                showDisabled=0;
+                icon="\A3\ui_f\data\igui\cfg\actions\repair_ca.paa";
+                distance=4;
+                exceptions[]=
+                {
+                    "isNotSwimming",
+                    "isNotOnLadder"
+                };
+            };
+        };
+    };
+};
+class assembleInfo;
+class OPTRE_OQ40_Minibee_Backpack_UNSC;
+class STB73_OQ40_Minibee_Backpack_UNSC: OPTRE_OQ40_Minibee_Backpack_UNSC
+{
+    author= AUTHOR;
+    displayName="[73] OQ-40 Minibee Drone";
+    faction = "STB73_STB";
+    class assembleInfo: assembleInfo
+    {
+        base="";
+        displayName="[73] OQ-40 Minibee";
+        assembleTo="STB73_OQ40_Minibee";
     };
 };

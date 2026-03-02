@@ -74,23 +74,5 @@ class JumpPackUI
 			y = "(0.03 * safezoneH) + safezoneY";
 			w = "(0.3); h = 0.03";
 		};
-		class background_heat2: ProgressBaseTextHUD
-		{
-			idc = 37205;
-
-			x = "(0.01 * safezoneW) + safezoneX";
-			y = "(0.05 * safezoneH) + safezoneY";
-			w = "(0.3); h = 0.03";
-			colorBackground[] = {0,0,0,0};
-		};
-		class Progress_heat2: RscProgressBar
-		{
-			idc = 37206;
-
-			x = "(0.01 * safezoneW) + safezoneX";
-			y = "(0.05 * safezoneH) + safezoneY";
-			w = "(0.3; h = 0.03)";
-			texture = "#(argb,8,8,3)color(1,0,0,1)";
-		};
 	};
 };

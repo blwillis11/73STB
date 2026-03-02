@@ -5,27 +5,34 @@ class cfgFactionClasses
         displayName = "[73] Shock Trooper Battalion Assets";
         priority = 0; // Position in list.
         side = 1; // Opfor = 0, Blufor = 1, Indep = 2. 
-        icon = "STB73_units\UI\73odstSTB.paa"; //Custom Icon
+        icon = "main\UI\73odstSTB.paa"; //Custom Icon
     };
     class STB73_odst
     {
         displayName = "[73] Shock Trooper Battalion ODST";
         priority = 0; // Position in list.
         side = 1; // Opfor = 0, Blufor = 1, Indep = 2.
-        icon = "STB73_units\UI\73odstSTB.paa"; //Custom Icon
+        icon = "main\UI\73odstSTB.paa"; //Custom Icon
     };
     class STB73_10MEB
     {
         displayName = "[73] 10th Marine Expeditionary Forces";
         priority = 0; // Position in list.
         side = 1; // Opfor = 0, Blufor = 1, Indep = 2.
-        icon = "STB73_units\UI\10thMEBLogo.paa"; //Custom Icon
+        icon = "main\UI\10thMEBLogo.paa"; //Custom Icon
     };
-        class STB73_OCLF
+    class STB73_OCLF
     {
         displayName = "[73] Outer Colony Liberation Front";
         priority = 0; // Position in list.
         side = 0; // Opfor = 0, Blufor = 1, Indep = 2.
+        icon = ""; //Custom Icon
+    };
+    class STB73_PK
+    {
+        displayName = "[73] United Nations Peacekeepers";
+        priority = 0; // Position in list.
+        side = 2; // Opfor = 0, Blufor = 1, Indep = 2.
         icon = ""; //Custom Icon
     };
     class STB73_Modules
@@ -65,6 +72,12 @@ class CfgEditorCategories
 		scopeCurator=2;
 		scopeeditor=2;
 	};
+    class STB73_PK
+    {
+        displayName = "[73] United Nations Peacekeepers";
+		scopeCurator=2;
+		scopeeditor=2;
+    };
 };
 
 class CfgEditorSubcategories
@@ -85,6 +98,10 @@ class CfgEditorSubcategories
     class STB73_Helicopters_EdSubCat
     {
         displayName = "Helicopters";
+    };
+    class STB73_Drones_EdSubCat
+    {
+        displayName = "Drones";
     };
     class STB73_Aviation_EdSubCat
     {

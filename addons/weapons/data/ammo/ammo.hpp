@@ -126,23 +126,11 @@ class STB73_12Gauge_Smoke: OPTRE_12Gauge_Smoke
 };
 
 // 5.23x23mm
-class MA_5x23_Caseless;
+class TCP_B_5x23_Ball;
 
-class STB73_5x23_Caseless:MA_5x23_Caseless
+class STB73_5x23_Caseless:TCP_B_5x23_Ball
 {
-    hit=12;
-    cartridge="";
-    caliber=2.4;
-    typicalSpeed=450;
-    model="\A3\Weapons_f\Data\bullettracer\tracer_green";
-    supersoniccracknear[]={};
-    supersoniccrackfar[]={};
-    soundSetSonicCrack[]={};
-    simulation = "shotBullet";       // classify correctly
-    // aiAmmoUsageFlags must be numeric (bitmask). 64 + 128 = 192
-    aiAmmoUsageFlags = 192;   // infantry + suppression
-    allowAgainstInfantry = 1;        // explicitly allow
-    cost = 1;                        // low cost so AI doesn't hoard
+    hit=9;
 };
 class STB73_5x23_Caseless_Tracer:STB73_5x23_Caseless
 {
@@ -300,7 +288,7 @@ class STB73_HEAT:OPTRE_M41_Rocket_HEAT_G{
     trackOversteer = 0.9;
     sideAirFriction = 0.30000001;
     cmImmunity = 0.75;
-    initTime = .2;
+    initTime = .1;
 };
 class STB73_HEAP:OPTRE_M41_Rocket_HEAP{
     irLock = 0;
@@ -365,4 +353,235 @@ class STB73_HEAA:OPTRE_M41_Rocket_HEAT_G_AA
             };
         };
     };
+};
+class G_40mm_Smoke;
+class G_40mm_SmokeRed;
+class G_40mm_SmokeGreen;
+class G_40mm_SmokeYellow;
+class G_40mm_SmokePurple;
+class G_40mm_SmokeBlue;
+class G_40mm_SmokeOrange;
+
+#define OPTRE_IMPACTGLVALUES \
+	deflecting=5;\
+	explosive = 1;\
+	simulation = "shotShell";\
+	explosionTime = 0;\
+	fuseDistance = 0;
+
+class STB73_40mm_Shell_Smoke_White: G_40mm_Smoke
+{
+    author=AUTHOR;
+    OPTRE_IMPACTGLVALUES
+    explosionEffects = "OPTRE_Effect_GL_White";
+    model="\TCP\Weapons\Ammo\40\Smoke\mag_40mm_1rnd_Smoke_White.p3d";
+    timetolive = 60; //60 in smokes
+};
+class STB73_40mm_Shell_Smoke_Blue: G_40mm_SmokeBlue
+{
+    model="\TCP\Weapons\Ammo\40\Smoke\mag_40mm_1rnd_Smoke_Blue.p3d";
+    OPTRE_IMPACTGLVALUES
+    effectsSmoke="SmokeShellBlueEffect";
+    explosionEffects = "OPTRE_Effect_GL_Blue";
+    smokeColor[]={0.1183,0.1867,1,1};
+};
+class STB73_40mm_Shell_Smoke_Green: G_40mm_SmokeGreen
+{
+    model="\TCP\Weapons\Ammo\40\Smoke\mag_40mm_1rnd_Smoke_Green.p3d";
+    effectsSmoke="SmokeShellGreenEffect";
+    OPTRE_IMPACTGLVALUES
+    explosionEffects = "OPTRE_Effect_GL_Green";
+    smokeColor[]={0.21250001,0.62580001,0.48910001,1};
+};
+class STB73_40mm_Shell_Smoke_Orange: G_40mm_SmokeOrange
+{
+    model="\TCP\Weapons\Ammo\40\Smoke\mag_40mm_1rnd_Smoke_Orange.p3d";
+    effectsSmoke="SmokeShellOrangeEffect";
+    OPTRE_IMPACTGLVALUES
+    explosionEffects = "OPTRE_Effect_GL_Orange";
+    smokeColor[]={0.66970003,0.22750001,0.10053,1};
+};
+class STB73_40mm_Shell_Smoke_Purple: G_40mm_SmokePurple
+{
+    model="\TCP\Weapons\Ammo\40\Smoke\mag_40mm_1rnd_Smoke_Purple.p3d";
+    effectsSmoke="SmokeShellPurpleEffect";
+    OPTRE_IMPACTGLVALUES
+    explosionEffects = "OPTRE_Effect_GL_Purple";
+    smokeColor[]={0.4341,0.1388,0.41440001,1};
+};
+class STB73_40mm_Shell_Smoke_Red: G_40mm_SmokeRed
+{
+    model="\TCP\Weapons\Ammo\40\Smoke\mag_40mm_1rnd_Smoke_Red.p3d";
+    effectsSmoke="SmokeShellRedEffect";
+    OPTRE_IMPACTGLVALUES
+    explosionEffects = "OPTRE_Effect_GL_Red";
+    smokeColor[]={0.84380001,0.1383,0.1353,1};
+};
+class STB73_40mm_Shell_Smoke_Yellow: G_40mm_SmokeYellow
+{
+    model="\TCP\Weapons\Ammo\40\Smoke\mag_40mm_1rnd_Smoke_Yellow.p3d";
+    effectsSmoke="SmokeShellYellowEffect";
+    OPTRE_IMPACTGLVALUES
+    explosionEffects = "OPTRE_Effect_GL_Yellow";
+    smokeColor[]={0.98830003,0.86059999,0.071900003,1};
+};
+
+class GrenadeBase;
+class STB73_40mm_Shell_HE: GrenadeBase
+{
+    author=AUTHOR;
+    warheadName="HE";
+    hit=80;
+    indirectHit=8;
+    indirectHitRange=6;
+    cartridge="";
+    pictureWire="\TCP\Weapons\Ammo\40\HE\data\ui\icon_ammo_40_W_CA.paa";
+    explosive=1;
+    explosionSoundEffect="DefaultExplosion";
+    fuseDistance=15;
+    whistleDist=16;
+    simulation="shotShell";
+    visibleFire=1;
+    visibleFireTime=3;
+    audibleFire=30;
+    dangerRadiusBulletClose=8;
+    dangerRadiusHit=60;
+    suppressionRadiusBulletClose=6;
+    suppressionRadiusHit=24;
+    cost=10;
+    airLock=1;
+    typicalSpeed=76;
+    deflecting=5;
+    deflectionSlowDown=0.75;
+    TCP_ammoMinTimeToLive=0;
+    explosionTime=0;
+    timeToLive=20;
+    caliber=1.0526316;
+    model="\TCP\Weapons\Ammo\40\HE\mag_40mm_1rnd.p3d";
+    tracerScale=0.69999999;
+    tracerStartTime=0.0074999998;
+    tracerEndTime=5;
+    airFriction=-0.001;
+    soundHit1[]=
+    {
+        "A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_01",
+        3.1622777,
+        1,
+        1500
+    };
+    soundHit2[]=
+    {
+        "A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_02",
+        3.1622777,
+        1,
+        1500
+    };
+    soundHit3[]=
+    {
+        "A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_03",
+        3.1622777,
+        1,
+        1500
+    };
+    soundHit4[]=
+    {
+        "A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_04",
+        3.1622777,
+        1,
+        1500
+    };
+    multiSoundHit[]=
+    {
+        "soundHit1",
+        0.25,
+        "soundHit2",
+        0.25,
+        "soundHit3",
+        0.25,
+        "soundHit4",
+        0.25
+    };
+    class CamShakeExplode
+    {
+        power=8;
+        duration=1.2;
+        frequency=20;
+        distance=74.596397;
+    };
+    class CamShakeHit
+    {
+        power=20;
+        duration=0.40000001;
+        frequency=20;
+        distance=1;
+    };
+    class CamShakeFire
+    {
+        power=0;
+        duration=0.2;
+        frequency=20;
+        distance=0;
+    };
+    class CamShakePlayerFire
+    {
+        power=0;
+        duration=0.1;
+        frequency=20;
+        distance=1;
+    };
+};
+class STB73_40mm_Shell_TD: STB73_40mm_Shell_HE
+{
+    author=AUTHOR;
+    warheadName="TD";
+    cost=10;
+    airLock=1;
+    typicalSpeed=76;
+    deflecting=30;
+    TCP_ammoMinTimeToLive=2;
+    explosionTime=15;
+    timeToLive=16;
+    caliber=1.0526316;
+    airFriction=-0.001;
+};
+class BulletBase;
+class STB73_F_Sub_Signal_Base: BulletBase
+{
+    airFriction=-0.021600001;
+    hit=0;
+    model="\A3\Weapons_F_Kart\Ammo\tracer_green.p3d";
+    simulation="shotSubmunitions";
+    submunitionConeAngle=35;
+    submunitionConeType[]=
+    {
+        "poissondisccenter",
+        3
+    };
+    tracerScale=5;
+    tracerStartTime=0.1;
+    triggerTime=0.89999998;
+};
+class STB73_F_40_Signal_Green: STB73_F_Sub_Signal_Base
+{
+    pictureWire="TCP\Weapons\Ammo\40\HE\data\ui\icon_ammo_40_W_CA.paa";
+    model="\A3\Weapons_F_Kart\Ammo\tracer_green.p3d";
+    submunitionAmmo="TCP_F_Signal_Green";
+};
+class STB73_F_40_Signal_Red: STB73_F_Sub_Signal_Base
+{
+    pictureWire="TCP\Weapons\Ammo\40\HE\data\ui\icon_ammo_40_W_CA.paa";
+    model="\A3\Weapons_F_Kart\Ammo\tracer_red.p3d";
+    submunitionAmmo="TCP_F_Signal_Red";
+};
+class STB73_F_40_Signal_White: STB73_F_Sub_Signal_Base
+{
+    pictureWire="TCP\Weapons\Ammo\40\HE\data\ui\icon_ammo_40_W_CA.paa";
+    model="\A3\weapons_f\ammo\flare_white.p3d";
+    submunitionAmmo="TCP_F_Signal_White";
+};
+class STB73_F_40_Signal_Yellow: STB73_F_Sub_Signal_Base
+{
+    pictureWire="TCP\Weapons\Ammo\40\HE\data\ui\icon_ammo_40_W_CA.paa";
+    model="\A3\weapons_f\ammo\flare_yellow.p3d";
+    submunitionAmmo="TCP_F_Signal_Yellow";
 };

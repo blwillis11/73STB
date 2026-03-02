@@ -18,6 +18,7 @@ class CfgPatches {
             "STB73_OCLF_Soldier_Sniper",
             "STB73_OCLF_Soldier_Scout",
             "STB73_OCLF_SpecOps_Rifleman",
+            "STB73_OCLF_Officer",
             "STB73_M12_FAV_ins",
             "STB73_M12_LRV_MG_ins",
             "STB73_M12_LRV_TD_ins",

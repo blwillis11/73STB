@@ -538,3 +538,40 @@ class STB73_AV22C_Sparrowhawk:OPTRE_AV22C_Sparrowhawk
         };
     };
 };
+
+class TKE_Ext_Dragonfly_A;
+
+class STB73_AV18_Dragonfly:TKE_Ext_Dragonfly_A
+{
+    displayName = "[73] AV-18 Dragonfly";
+    author= AUTHOR;
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_Helicopters_EdSubCat";
+    scopeCurator=2;
+    scope=2;
+    side=1;
+    class EventHandlers: EventHandlers
+    {
+        class STB73_RegisterThrusters_EH
+        {
+            init = "[(_this select 0),true,false] call STBSTB73_fnc_RegisterThrusters;";
+        };
+    };
+    crew = "STB73_Aviator";
+    class UserActions
+    {
+        #include "cfg\UtilityActions.hpp"
+        #include "cfg\ThrusterActions.hpp"
+    };
+    class VehicleSpawnerInfo {
+        class STB73_AirSpawner
+        {
+            scope = 1;
+            spawner= "73rd Aviation";
+            vehicle = "Dragonfly";
+            Type = "AV-18";
+            cost = 2;
+            priority = 2;
+        };
+    };
+};

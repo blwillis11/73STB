@@ -1,6 +1,30 @@
 class CfgWeapons {
-
-    #include "data\ammo\greenMag.hpp"
+    class Single;
+    class TCP_launch_M301;
+	class STB73_launch_M301: TCP_launch_M301
+	{
+		author=AUTHOR;
+		scope=1;
+		magazines[]=
+		{
+			"STB73_1Rnd_40mm_Shell_HE",
+            "STB73_1Rnd_40mm_Shell_TD",
+            "STB73_1Rnd_40mm_Shell_Smoke_Blue",
+            "STB73_1Rnd_40mm_Shell_Smoke_Green",
+            "STB73_1Rnd_40mm_Shell_Smoke_Orange",
+            "STB73_1Rnd_40mm_Shell_Smoke_Purple",
+            "STB73_1Rnd_40mm_Shell_Smoke_White",
+            "STB73_1Rnd_40mm_Shell_Smoke_Yellow",
+            "STB73_1Rnd_40mm_Shell_Signal_Green",
+            "STB73_1Rnd_40mm_Shell_Signal_Red",
+            "STB73_1Rnd_40mm_Shell_Signal_White",
+            "STB73_1Rnd_40mm_Shell_Signal_Yellow"
+		};
+		magazineWell[]=
+		{
+			"STB73_1Rnd_40mm_MagWell"
+		};
+	};
     #include "data\SMG\smg.hpp"
     #include "data\DMR\dmr.hpp"
     #include "data\LMG\lmg.hpp"

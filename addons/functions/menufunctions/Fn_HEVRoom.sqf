@@ -110,8 +110,7 @@ _linkedPods apply {
 [0,1] apply {
 	_i = _16 lbAdd (format ["Deployment: %1",
 		(switch _x do {
-				case 0: {"Frigate"};
-				case 1: {"No Ship"};
+				case 0: {"No Ship"};
 			}
 		)]);
 

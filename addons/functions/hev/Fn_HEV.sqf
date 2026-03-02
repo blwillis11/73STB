@@ -115,7 +115,7 @@ private ["_allHEVs","_ship"];
 _allHEVs = call {
 	_dropPosition = [(_dropPosition select 0), (_dropPosition select 1), _startHeight];
 	if (_shipDeployment == "Frigate") exitWith {
-		_ship = "WSD_Charon73rd" createVehicle [0,0,0];
+		_ship = "Land_HelipadEmpty_F" createVehicle [0,0,0];
 		_ship setVariable ["STB73_shipParts",[_ship]];
 		_ship setPosATL _dropPosition;
 		_ship setVectorUp [0,0,1];
