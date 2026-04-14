@@ -29,7 +29,7 @@ class STB73_GMG_M247A1:OPTRE_M247A1
 {
     displayName="[73] M247A1";
     baseWeapon="STB73_GMG_M247A1";
-        magazineWell[]=
+    magazineWell[]=
     {
         "STB73_100Rnd_762x51_MagWell",
         "STB73_200Rnd_762x51_MagWell"

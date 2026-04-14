@@ -17,11 +17,6 @@ class CfgFunctions{
                 description = "Misc - Default Kits";
                 file = "z\73STB\addons\functions\misc\fn_DefaultKits.sqf";
 			};
-			class DestroyEquipment
-			{
-                description = "Misc - Destroy Equipment";
-                file = "z\73STB\addons\functions\misc\fn_DestroyEquipment.sqf";
-			};
 			class ZeusMessage
 			{
                 description = "Misc - Zeus Message";
@@ -41,6 +36,16 @@ class CfgFunctions{
             {
                 description = "Misc - Make ACE Arsenal";
                 file = "z\73STB\addons\functions\misc\fn_MakeACEArsenal.sqf";
+            };
+            class LoadIntoNearestVehicle
+            {
+                description = "Misc - Load object into nearest compatible vehicle cargo";
+                file = "z\73STB\addons\functions\misc\fn_loadIntoNearestVehicle.sqf";
+            };
+            class destroyEquipment
+            {
+                description = "Misc - Destroy equipment";
+                file = "z\73STB\addons\functions\misc\fn_destroyEquipment.sqf";
             };
         };
         class Modules
@@ -199,19 +204,29 @@ class CfgFunctions{
             };
         };
     };
+    class CBRN
+    {
+        class gear
+        {
+            file="z\73STB\addons\functions\CWP_Rewrite";
+            class getProtectionLevel
+            {
+                description = "CBRN - get protection level";
+            };
+        };
+    };
     class OPTRE
     {
         tag = "OPTRE";
         class SupportSystem
         {
-            file = "z\73STB\addons\functions\support";
-            class CS_ODSTHEV {};
-            class CS_BJHEV {};
-            class CS_PelicanAirAssault {};
-            class CS_OCLSSquadPod {};
-            class setCallMortarFireSupport73STB {};
-            class setCallArtyFireSupport73STB {};
-            class addFireSupportMenu73STB {};
+            class CS_ODSTHEV {file = "z\73STB\addons\functions\support\Fn_CS_ODSTHEV.sqf";};
+            class CS_BJHEV {file = "z\73STB\addons\functions\support\Fn_CS_BJHEV.sqf";};
+            class CS_PelicanAirAssault {file = "z\73STB\addons\functions\support\Fn_CS_PelicanAirAssault.sqf";};
+            class CS_OCLSSquadPod {file = "z\73STB\addons\functions\support\Fn_CS_OCLSSquadPod.sqf";};
+            class setCallMortarFireSupport73STB {file = "z\73STB\addons\functions\support\Fn_setCallMortarFireSupport73STB.sqf";};
+            class setCallArtyFireSupport73STB {file = "z\73STB\addons\functions\support\Fn_setCallArtyFireSupport73STB.sqf";};
+            class addFireSupportMenu73STB {file = "z\73STB\addons\functions\support\Fn_addFireSupportMenu73STB.sqf";};
         };
         class HEV
         {
@@ -238,11 +253,19 @@ class CfgFunctions{
         };
         class Modules
         {
-            file = "z\73STB\addons\functions\modules";
-            class ModuleODSTHEV {};
-            class ModuleBJHEV {};
-            class ModuleOCLSSquadPod {};
-            class ModulePelicanAirAssault {};
+            
+            class ModuleODSTHEV {
+                file = "z\73STB\addons\functions\modules\fn_ModuleODSTHEV.sqf";
+            };
+            class ModuleBJHEV {
+                file = "z\73STB\addons\functions\modules\fn_ModuleBJHEV.sqf";
+            };
+            class ModuleOCLSSquadPod {
+                file = "z\73STB\addons\functions\modules\fn_ModuleOCLSSquadPod.sqf";
+            };
+            class ModulePelicanAirAssault {
+                file = "z\73STB\addons\functions\modules\fn_ModulePelicanAirAssault.sqf";
+            };
         };
     };
 };

@@ -32,10 +32,10 @@ class XtdGearModels
 			author="73rd S-4 Team";
 			options[] =
 			{
-				"Variant",
-				"GrenadeLauncher"
+				"variant",
+				"grenadeLauncher"
 			};
-			class Variant
+			class variant
 			{
 				alwaysSelectable=1;
 				changeingame=0;
@@ -52,7 +52,7 @@ class XtdGearModels
 					"MA5K"
 				};
 			};
-			class GrenadeLauncher
+			class grenadeLauncher
 			{
 				alwaysSelectable=1;
 				changeingame=0;

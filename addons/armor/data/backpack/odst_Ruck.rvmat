@@ -21,7 +21,7 @@ PixelShaderID = "Super";
 VertexShaderID = "Super";
 class Stage1
 {
-	texture = "z\73STB\addons\armor\data\ILCS\ruck_nohq.paa";
+	texture = "z\73STB\addons\armor\data\backpack\ruck_nohq.paa";
 	uvSource = "tex";
 	class uvTransform
 	{
@@ -57,7 +57,7 @@ class Stage3
 };
 class Stage4
 {
-	texture = "z\73STB\addons\armor\data\ILCS\ruck_as.paa";
+	texture = "z\73STB\addons\armor\data\backpack\ruck_as.paa";
 	uvSource = "tex";
 	class uvTransform
 	{
@@ -69,7 +69,7 @@ class Stage4
 };
 class Stage5
 {
-	texture = "z\73STB\addons\armor\data\ILCS\ruck_smdi.paa";
+	texture = "z\73STB\addons\armor\data\backpack\ruck_smdi.paa";
 	uvSource = "tex";
 	class uvTransform
 	{

@@ -70,7 +70,7 @@ class STB73_B_762x51_HVAP_Tracer_IR: STB73_B_762x51_HVAP
 class TCP_B_95x40_Ball;
 class STB73_95x40_AP: TCP_B_95x40_Ball
 {
-    hit=16;
+    hit=14;
 };
 class STB73_95x40_AP_Tracer: STB73_95x40_AP
 {
@@ -104,13 +104,13 @@ class STB73_B_95x40_Tracer_Yellow:STB73_B_95x40_Ball{
 };
 
 // 12 gauge
-class TCP_B_12Gauge_Pellets_Submunition;
-class TCP_B_12Gauge_Slug;
-class STB73_12Gauge_Pellets: TCP_B_12Gauge_Pellets_Submunition
+class OPTRE_8Gauge_Pellets;
+class OPTRE_8Gauge_Slugs;
+class STB73_12Gauge_Pellets: OPTRE_8Gauge_Pellets
 {
     model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
 };
-class STB73_12Gauge_Slugs: TCP_B_12Gauge_Slug
+class STB73_12Gauge_Slugs: OPTRE_8Gauge_Slugs
 {
     model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
 };
@@ -150,7 +150,7 @@ class STB73_5x23_Caseless_NARQ:STB73_5x23_Caseless
 {
     hit=1;
     caliber=0.1;
-    dosage=0.4;
+    dosage=0.6;
 };
 class STB73_5x23_Caseless_NARQ_Tracer:STB73_5x23_Caseless_NARQ
 {
@@ -182,7 +182,7 @@ class STB73_B_127x30_NARQ_Tracer: STB73_B_127x30_Ball
 {
     hit=1;
     caliber=0.1;
-    dosage=0.4;
+    dosage=0.6;
     model="\A3\Weapons_f\Data\bullettracer\tracer_green";
     aiAmmoUsageFlags = 192;
     allowAgainstInfantry = 1;
@@ -276,39 +276,18 @@ class OPTRE_M41_Rocket_HEAP;
 class OPTRE_M41_Rocket_HEAT_G_AA;
 
 class STB73_HEAT:OPTRE_M41_Rocket_HEAT_G{
-    maxSpeed=250;
+    maxSpeed=350;
     hit = 1600;
-    missileLockMaxDistance = 20000;
-    missileLockMinDistance = 50;
-    missileKeepLockedCone = 75;
-    missileLockCone = 30;
-    fuseDistance = 30;
-    timeToLive = 40;
-    typicalSpeed = 200;
-    trackOversteer = 0.9;
-    sideAirFriction = 0.30000001;
-    cmImmunity = 0.75;
-    initTime = .1;
 };
 class STB73_HEAP:OPTRE_M41_Rocket_HEAP{
-    irLock = 0;
-    airLock = 0;
-    laserLock = 0;
-    nvLock = 0;
-    maxSpeed=250;
+    maxSpeed=350;
     allowAgainstInfantry = 1;
     proximityExplosionDistance = 0;
-    hit = 220;
-    indirectHit = 75;
-    indirectHitRange = 6;
-    explosive = 1;
+    hit = 300;
 };
 class STB73_HEAA:OPTRE_M41_Rocket_HEAT_G_AA
 {
-    warheadName="TandemHEAT";
-    submunitionAmmo = "ammo_Penetrator_Vorona";
-    effectsMissile = "missile3";
-    hit = 550;
+    hit = 650;
     indirectHit = 150;
     indirectHitRange = 4;
     explosive=0.80000001;
@@ -316,43 +295,11 @@ class STB73_HEAA:OPTRE_M41_Rocket_HEAT_G_AA
     maneuvrability = 28;
     maxControlRange = 30000;
     missileKeepLockedCone = 180;
-    missileLockCone = 30;
+    missileLockCone = 60;
     missileLockMaxDistance = 20000;
     missileLockMinDistance = 50;
     missileLockMaxSpeed = 1200;
-    trackOversteer = 0.9;
-    trackLead = 0.8;
-    weaponLockSystem = 2;
-    initTime = 0;
-    thrustTime = 0.8;
-    thrust = 120;
-    maxSpeed = 600;
-    class Components {
-        class SensorsManagerComponent {
-            class Components {
-                class IRSensorComponent: SensorTemplateIR {
-                    class AirTarget {
-                        minRange=50;
-                        maxRange=20000;
-                        objectDistanceLimitCoef=-1;
-                        viewDistanceLimitCoef=1;
-                    };
-
-                    class GroundTarget {
-                        minRange=50;
-                        maxRange=20000;
-                        objectDistanceLimitCoef=1;
-                        viewDistanceLimitCoef=1;
-                    };
-
-                    maxTrackableSpeed=1200;
-                    angleRangeHorizontal=7;
-                    angleRangeVertical=4.5;
-                    maxTrackableATL=2000;
-                };
-            };
-        };
-    };
+    maxSpeed = 800;
 };
 class G_40mm_Smoke;
 class G_40mm_SmokeRed;

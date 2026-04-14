@@ -1,5 +1,4 @@
 #include "\x\cba\addons\main\script_macros_common.hpp"
-#include "\z\ace\addons\main\script_macros.hpp"
 #include "\x\cba\addons\xeh\script_xeh.hpp"
 #include "\z\ace\addons\medical_engine\script_macros_medical.hpp"
 

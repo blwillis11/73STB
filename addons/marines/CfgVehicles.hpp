@@ -1,15 +1,31 @@
 class CfgVehicles {
-    class STB73_UnitBase;
-    class STB73_10MEBBase: STB73_UnitBase
+    class SoldierWB;
+    class B_Soldier_base_F : SoldierWB {
+        class EventHandlers;
+    };
+    class STB73_10MEBBase: B_Soldier_base_F
     {
+        scope = 0;
+        scopeCurator = 0;
+
+        author = "73rd S-4 Team";
+        side = 1;
+        
         faction = "STB73_10MEB";
         editorCategory = "STB73_10MEB";
         editorSubcategory = "STB73_Infantry_EdSubCat";
+        camouflage = 1.4;
+
+        identityTypes[] = {"Head_Euro","LanguagePER_F","G_IRAN_default"};
+        allowedfacewear[] = {""};
+        allowedHeadgear[] = {""};
+        allowedHeadgearB[] = {""};
+        headgearList[] = {""};
+
+        uniformClass = "STB73_U_B_FieldTop_Full_Gloves_Bloused_Woodland_SlimSleeve";
     };
     class STB73_ECH_10MEBBase: STB73_10MEBBase
     {
-        faction = "STB73_10MEB";
-        editorCategory = "STB73_10MEB";
         editorSubcategory = "STB73_ECH_Infantry_EdSubCat";
     };
     class STB73_Marine_Rifleman_AT: STB73_10MEBBase
@@ -24,8 +40,7 @@ class CfgVehicles {
         engineer = 0;
         canDeactivateMines = 0;
 
-        uniformClass = "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Woodland";
-        backpack = "MA_MArine_Rucksack";
+        backpack = "TCP_B_M43_Medium_Rucksack_Brown";
 
         weapons[] = {"STB73_MA5B","STB73_MPRL", "Throw", "Put"};
         respawnWeapons[] = {"STB73_MA5B","STB73_MPRL", "Throw", "Put"};
@@ -51,8 +66,8 @@ class CfgVehicles {
         engineer = 0;
         canDeactivateMines = 0;
 
-        uniformClass = "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Woodland";
-        backpack = "MA_MArine_Rucksack";
+
+        backpack = "TCP_B_M43_Medium_Rucksack_Brown";
 
         weapons[] = {"STB73_M392_DMR","OPTRE_M6G_SF", "Throw", "Put"};
         respawnWeapons[] = {"STB73_M392_DMR","OPTRE_M6G_SF", "Throw", "Put"};
@@ -78,8 +93,8 @@ class CfgVehicles {
         engineer = 0;
         canDeactivateMines = 0;
 
-        uniformClass = "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Woodland";
-        backpack = "MA_MArine_Rucksack_radio";
+
+        backpack = "TCP_B_ANPRC171_Brown";
 
         weapons[] = {"STB73_M7_SMG","OPTRE_M6G_SF", "Throw", "Put"};
         respawnWeapons[] = {"STB73_M7_SMG","OPTRE_M6G_SF", "Throw", "Put"};
@@ -99,20 +114,26 @@ class CfgVehicles {
         scopeCurator = 2;
         displayName = "[73] Marine Medic";
 
+        identityTypes[] = {"Head_Euro","LanguagePER_F","G_IRAN_default"};
+        allowedfacewear[] = {""};
+        allowedHeadgear[] = {""};
+        allowedHeadgearB[] = {""};
+        headgearList[] = {""};
+
         facewear = "";
 
         attendant = 1;
         engineer = 0;
         canDeactivateMines = 0;
 
-        uniformClass = "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Woodland";
-        backpack = "MA_MArine_Rucksack";
+        uniformClass = "STB73_U_B_FieldTop_Full_Gloves_Bloused_Kneepads_Medic";
+        backpack = "STB73_B_Medic_1_Medic";
 
         weapons[] = {"STB73_M7_SMG","OPTRE_M6G_SF", "Throw", "Put"};
         respawnWeapons[] = {"STB73_M7_SMG","OPTRE_M6G_SF", "Throw", "Put"};
 
-        linkedItems[] = {"STB73_CEArmourPouch","STB73_CH43A_Helmet","ItemMap","ItemRadio","ItemCompass","ItemWatch","LM_OPCAN_COMM"};
-        respawnLinkedItems[] = {"STB73_CEArmourPouch","STB73_CH43A_Helmet","ItemMap","ItemRadio","ItemCompass","ItemWatch","LM_OPCAN_COMM"};
+        linkedItems[] = {"STB73_V_M43A_Pads_2_Medic","STB73_H_Helmet_CH43A_Medic","ItemMap","ItemRadio","ItemCompass","ItemWatch","LM_OPCAN_COMM"};
+        respawnLinkedItems[] = {"STB73_V_M43A_Pads_2_Medic","STB73_H_Helmet_CH43A_Medic","ItemMap","ItemRadio","ItemCompass","ItemWatch","LM_OPCAN_COMM"};
 
         magazines[] = {"Chemlight_green","Chemlight_green","HandGrenade","STB73_48Rnd_5x23Caseless_FMJ_Mag","STB73_48Rnd_5x23Caseless_FMJ_Mag","STB73_48Rnd_5x23Caseless_FMJ_Mag","STB73_48Rnd_5x23Caseless_FMJ_Mag","STB73_48Rnd_5x23Caseless_FMJ_Mag","STB73_48Rnd_5x23Caseless_FMJ_Mag","STB73_48Rnd_5x23Caseless_FMJ_Mag","STB73_48Rnd_5x23Caseless_FMJ_Mag","STB73_48Rnd_5x23Caseless_FMJ_Mag","STB73_48Rnd_5x23Caseless_FMJ_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag"};
         respawnMagazines[] = {"Chemlight_green","Chemlight_green","HandGrenade","STB73_48Rnd_5x23Caseless_FMJ_Mag","STB73_48Rnd_5x23Caseless_FMJ_Mag","STB73_48Rnd_5x23Caseless_FMJ_Mag","STB73_48Rnd_5x23Caseless_FMJ_Mag","STB73_48Rnd_5x23Caseless_FMJ_Mag","STB73_48Rnd_5x23Caseless_FMJ_Mag","STB73_48Rnd_5x23Caseless_FMJ_Mag","STB73_48Rnd_5x23Caseless_FMJ_Mag","STB73_48Rnd_5x23Caseless_FMJ_Mag","STB73_48Rnd_5x23Caseless_FMJ_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag","OPTRE_8Rnd_127x40_Mag"};
@@ -132,8 +153,8 @@ class CfgVehicles {
         engineer = 0;
         canDeactivateMines = 0;
 
-        uniformClass = "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Woodland";
-        backpack = "MA_MArine_Rucksack";
+
+        backpack = "TCP_B_M43_Medium_Rucksack_Brown";
 
         weapons[] = {"STB73_MA5BGL","OPTRE_M6B","OPTRE_Binoculars", "Throw", "Put"};
         respawnWeapons[] = {"STB73_MA5BGL","OPTRE_M6B","OPTRE_Binoculars", "Throw", "Put"};
@@ -159,8 +180,8 @@ class CfgVehicles {
         engineer = 0;
         canDeactivateMines = 0;
 
-        uniformClass = "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Woodland";
-        backpack = "MA_MArine_Rucksack";
+
+        backpack = "TCP_B_M43_Medium_Rucksack_Brown";
 
         weapons[] = {"STB73_MA5B","OPTRE_M6B","OPTRE_Binoculars", "Throw", "Put"};
         respawnWeapons[] = {"STB73_MA5B","OPTRE_M6B","OPTRE_Binoculars", "Throw", "Put"};
@@ -186,8 +207,8 @@ class CfgVehicles {
         engineer = 0;
         canDeactivateMines = 0;
 
-        uniformClass = "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Woodland";
-        backpack = "MA_MArine_Rucksack";
+
+        backpack = "TCP_B_M43_Medium_Rucksack_Brown";
 
         weapons[] = {"STB73_MA5B","OPTRE_M6B","OPTRE_Binoculars", "Throw", "Put"};
         respawnWeapons[] = {"STB73_MA5B","OPTRE_M6B","OPTRE_Binoculars", "Throw", "Put"};
@@ -213,8 +234,8 @@ class CfgVehicles {
         engineer = 0;
         canDeactivateMines = 0;
 
-        uniformClass = "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Woodland";
-        backpack = "MA_MArine_Rucksack";
+
+        backpack = "TCP_B_M43_Medium_Rucksack_Brown";
 
         weapons[] = {"STB73_LMG_M731","OPTRE_M6G_SF", "Throw", "Put"};
         respawnWeapons[] = {"STB73_LMG_M731","OPTRE_M6G_SF", "Throw", "Put"};
@@ -240,8 +261,8 @@ class CfgVehicles {
         engineer = 0;
         canDeactivateMines = 0;
 
-        uniformClass = "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Woodland";
-        backpack = "MA_MArine_Rucksack";
+
+        backpack = "TCP_B_M43_Medium_Rucksack_Brown";
 
         weapons[] = {"STB73_SRS99AM","OPTRE_M6G_SF", "Throw", "Put"};
         respawnWeapons[] = {"STB73_SRS99AM","OPTRE_M6G_SF", "Throw", "Put"};
@@ -267,8 +288,8 @@ class CfgVehicles {
         engineer = 0;
         canDeactivateMines = 0;
 
-        uniformClass = "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Woodland";
-        backpack = "MA_MArine_Rucksack";
+
+        backpack = "TCP_B_M43_Medium_Rucksack_Brown";
 
         weapons[] = {"STB73_MA5B","STB73_MPRL", "Throw", "Put"};
         respawnWeapons[] = {"STB73_MA5B","STB73_MPRL", "Throw", "Put"};
@@ -294,8 +315,8 @@ class CfgVehicles {
         engineer = 0;
         canDeactivateMines = 0;
 
-        uniformClass = "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Woodland";
-        backpack = "MA_MArine_Rucksack";
+
+        backpack = "TCP_B_M43_Medium_Rucksack_Brown";
 
         weapons[] = {"STB73_M392_DMR","OPTRE_M6G_SF", "Throw", "Put"};
         respawnWeapons[] = {"STB73_M392_DMR","OPTRE_M6G_SF", "Throw", "Put"};
@@ -321,8 +342,8 @@ class CfgVehicles {
         engineer = 0;
         canDeactivateMines = 0;
 
-        uniformClass = "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Woodland";
-        backpack = "MA_MArine_Rucksack_radio";
+
+        backpack = "TCP_B_ANPRC171_Brown";
 
         weapons[] = {"STB73_M7_SMG","OPTRE_M6G_SF", "Throw", "Put"};
         respawnWeapons[] = {"STB73_M7_SMG","OPTRE_M6G_SF", "Throw", "Put"};
@@ -348,8 +369,8 @@ class CfgVehicles {
         engineer = 0;
         canDeactivateMines = 0;
 
-        uniformClass = "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Woodland";
-        backpack = "MA_MArine_Rucksack";
+
+        backpack = "TCP_B_M43_Medium_Rucksack_Brown";
 
         weapons[] = {"STB73_M7_SMG","OPTRE_M6G_SF", "Throw", "Put"};
         respawnWeapons[] = {"STB73_M7_SMG","OPTRE_M6G_SF", "Throw", "Put"};
@@ -375,8 +396,8 @@ class CfgVehicles {
         engineer = 0;
         canDeactivateMines = 0;
 
-        uniformClass = "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Woodland";
-        backpack = "MA_MArine_Rucksack";
+
+        backpack = "TCP_B_M43_Medium_Rucksack_Brown";
 
         weapons[] = {"STB73_MA5BGL","OPTRE_M6B","OPTRE_Binoculars", "Throw", "Put"};
         respawnWeapons[] = {"STB73_MA5BGL","OPTRE_M6B","OPTRE_Binoculars", "Throw", "Put"};
@@ -402,8 +423,8 @@ class CfgVehicles {
         engineer = 0;
         canDeactivateMines = 0;
 
-        uniformClass = "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Woodland";
-        backpack = "MA_MArine_Rucksack";
+
+        backpack = "TCP_B_M43_Medium_Rucksack_Brown";
 
         weapons[] = {"STB73_MA5B","OPTRE_M6B","OPTRE_Binoculars", "Throw", "Put"};
         respawnWeapons[] = {"STB73_MA5B","OPTRE_M6B","OPTRE_Binoculars", "Throw", "Put"};
@@ -429,8 +450,8 @@ class CfgVehicles {
         engineer = 0;
         canDeactivateMines = 0;
 
-        uniformClass = "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Woodland";
-        backpack = "MA_MArine_Rucksack";
+
+        backpack = "TCP_B_M43_Medium_Rucksack_Brown";
 
         weapons[] = {"STB73_MA5B","OPTRE_M6B","OPTRE_Binoculars", "Throw", "Put"};
         respawnWeapons[] = {"STB73_MA5B","OPTRE_M6B","OPTRE_Binoculars", "Throw", "Put"};
@@ -456,8 +477,8 @@ class CfgVehicles {
         engineer = 0;
         canDeactivateMines = 0;
 
-        uniformClass = "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Woodland";
-        backpack = "MA_MArine_Rucksack";
+
+        backpack = "TCP_B_M43_Medium_Rucksack_Brown";
 
         weapons[] = {"STB73_LMG_M731","OPTRE_M6G_SF", "Throw", "Put"};
         respawnWeapons[] = {"STB73_LMG_M731","OPTRE_M6G_SF", "Throw", "Put"};
@@ -483,8 +504,8 @@ class CfgVehicles {
         engineer = 0;
         canDeactivateMines = 0;
 
-        uniformClass = "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Woodland";
-        backpack = "MA_MArine_Rucksack";
+
+        backpack = "TCP_B_M43_Medium_Rucksack_Brown";
 
         weapons[] = {"STB73_SRS99AM","OPTRE_M6G_SF", "Throw", "Put"};
         respawnWeapons[] = {"STB73_SRS99AM","OPTRE_M6G_SF", "Throw", "Put"};

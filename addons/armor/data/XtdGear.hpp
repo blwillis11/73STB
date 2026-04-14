@@ -1,5 +1,173 @@
 class XtdGearModels
 {
+    class STB73_CamoBase
+	{
+		label="Camouflage";
+		class Black
+		{
+			label="$STR_TCP_Data_Black";
+			image="#(rgb,8,8,3)color(0.22,0.22,0.22,1)";
+		};
+		class Brown
+		{
+			label="$STR_TCP_Data_Brown";
+			image="#(rgb,8,8,3)color(0.36,0.29,0.27,1)";
+		};
+		class Gray
+		{
+			label="$STR_TCP_Data_Gray";
+			image="#(rgb,8,8,3)color(0.33,0.36,0.36,1)";
+		};
+		class Green
+		{
+			label="$STR_TCP_Data_Green";
+			image="#(rgb,8,8,3)color(0.37,0.42,0.30,1)";
+		};
+		class Olive
+		{
+			label="$STR_TCP_Data_Olive";
+			image="#(rgb,8,8,3)color(0.31,0.33,0.27,1)";
+		};
+		class Tan
+		{
+			label="$STR_TCP_Data_Tan";
+			image="#(rgb,8,8,3)color(0.73,0.62,0.50,1)";
+		};
+		class White
+		{
+			label="$STR_TCP_Data_White";
+			image="#(rgb,8,8,3)color(0.9,0.9,0.9,1)";
+		};
+		class Arctic
+		{
+			label="$STR_TCP_Data_Arctic";
+			image="\TCP\Compat_ACEAX\GearInfo\data\camo\arctic\fabric.paa";
+		};
+		class Arid
+		{
+			label="$STR_TCP_Data_Arid";
+			image="\TCP\Compat_ACEAX\GearInfo\data\camo\arid\fabric.paa";
+		};
+		class Tropic
+		{
+			label="$STR_TCP_Data_Tropic";
+			image="\TCP\Compat_ACEAX\GearInfo\data\camo\tropic\fabric.paa";
+		};
+		class Tundra
+		{
+			label="$STR_TCP_Data_Tundra";
+			image="\TCP\Compat_ACEAX\GearInfo\data\camo\tundra\fabric.paa";
+		};
+		class Urban
+		{
+			label="$STR_TCP_Data_Urban";
+			image="\TCP\Compat_ACEAX\GearInfo\data\camo\urban\fabric.paa";
+		};
+		class Woodland
+		{
+			label="$STR_TCP_Data_Woodland";
+			image="\TCP\Compat_ACEAX\GearInfo\data\camo\woodland\fabric.paa";
+		};
+	};
+    class STB73_CamoFabric: STB73_CamoBase
+	{
+		class Black
+		{
+			label="$STR_TCP_Data_Black";
+			image="\TCP\Compat_ACEAX\GearInfo\data\camo\black\fabric.paa";
+		};
+		class Blue
+		{
+			label="$STR_TCP_Data_Blue";
+			image="\TCP\Compat_ACEAX\GearInfo\data\camo\blue\fabric.paa";
+		};
+		class Gray
+		{
+			label="$STR_TCP_Data_Gray";
+			image="\TCP\Compat_ACEAX\GearInfo\data\camo\gray\fabric.paa";
+		};
+		class Green
+		{
+			label="$STR_TCP_Data_Green";
+			image="\TCP\Compat_ACEAX\GearInfo\data\camo\green\fabric.paa";
+		};
+		class Olive
+		{
+			label="$STR_TCP_Data_Olive";
+			image="\TCP\Compat_ACEAX\GearInfo\data\camo\olive\fabric.paa";
+		};
+		class Red
+		{
+			label="$STR_TCP_Data_Red";
+			image="\TCP\Compat_ACEAX\GearInfo\data\camo\red\fabric.paa";
+		};
+		class Tan
+		{
+			label="$STR_TCP_Data_Tan";
+			image="\TCP\Compat_ACEAX\GearInfo\data\camo\tan\fabric.paa";
+		};
+		class White
+		{
+			label="$STR_TCP_Data_White";
+			image="\TCP\Compat_ACEAX\GearInfo\data\camo\white\fabric.paa";
+		};
+		class Arctic: Arctic
+		{
+		};
+		class Arid: Arid
+		{
+		};
+		class Tropic: Tropic
+		{
+		};
+		class Tundra: Tundra
+		{
+		};
+		class Urban: Urban
+		{
+		};
+		class Woodland: Woodland
+		{
+		};
+	};
+	class STB73_CamoMetal: STB73_CamoBase
+	{
+		class Black
+		{
+			label="$STR_TCP_Data_Black";
+			image="\TCP\Compat_ACEAX\GearInfo\data\camo\black\metal.paa";
+		};
+		class Brown
+		{
+			label="$STR_TCP_Data_Brown";
+			image="\TCP\Compat_ACEAX\GearInfo\data\camo\brown\metal.paa";
+		};
+		class Gray
+		{
+			label="$STR_TCP_Data_Gray";
+			image="\TCP\Compat_ACEAX\GearInfo\data\camo\gray\metal.paa";
+		};
+		class Green
+		{
+			label="$STR_TCP_Data_Green";
+			image="\TCP\Compat_ACEAX\GearInfo\data\camo\green\metal.paa";
+		};
+		class Olive
+		{
+			label="$STR_TCP_Data_Olive";
+			image="\TCP\Compat_ACEAX\GearInfo\data\camo\olive\metal.paa";
+		};
+		class Tan
+		{
+			label="$STR_TCP_Data_Tan";
+			image="\TCP\Compat_ACEAX\GearInfo\data\camo\tan\metal.paa";
+		};
+		class White
+		{
+			label="$STR_TCP_Data_White";
+			image="\TCP\Compat_ACEAX\GearInfo\data\camo\white\metal.paa";
+		};
+	};
     class CfgWeapons
     {
         class STB73_ACE_M43D_Vest
@@ -9,8 +177,9 @@ class XtdGearModels
             options[]=
             {
                 "Billet",
-                "Roles",
-                "Variant"
+                "Camo",
+                "Variant",
+				"Collar"
             };
             class Billet
             {
@@ -20,11 +189,14 @@ class XtdGearModels
                 label= "Billet";
                 values[]=
                 {
+                    "Standard",
                     "Company",
-                    "Alpha1"
+                    "Atlas1",
+					"Atlas2",
+					"SORC"
                 };
             };
-            class Roles
+            class Camo
             {
                 alwaysSelectable=1;
                 changeingame=0;
@@ -48,6 +220,19 @@ class XtdGearModels
                     "Breacher"
                 };
             };
+            class Collar
+            {
+                alwaysSelectable=1;
+                changeingame=0;
+                changedelay=0;
+                label= "Collar";
+                values[]=
+                {
+                    "None",
+                    "Flak",
+                    "Armored"
+                };
+            };
         };
         class STB73_ACE_ECH55D_Helmet
         {
@@ -55,7 +240,22 @@ class XtdGearModels
             author = AUTHOR;
             options[]=
             {
-                "Variant"
+                "Billet",
+				"Variant"
+            };
+			class Billet
+            {
+                alwaysSelectable=1;
+                changeingame=0;
+                changedelay=0;
+                label= "Billet";
+                values[]=
+                {
+                    "Standard",
+					"Company",
+                    "Atlas1",
+					"Atlas2"
+                };
             };
             class Variant
             {
@@ -69,119 +269,6 @@ class XtdGearModels
                     "SORC",
                     "NCO",
                     "Enlisted"
-                };
-            };
-        };
-
-        class TCP_ACE_CBUU
-        {
-            label = "[73] CBUU";
-            author = AUTHOR;
-            options[]=
-            {
-                "Camo",
-                "Top",
-                "Shirt",
-                "Pants",
-                "Sleeves",
-                "Collar",
-                "Gloves"
-            };
-            class Camo
-            {
-                alwaysSelectable=1;
-                changeingame=0;
-                changedelay=0;
-                label= "Camo";
-                values[]=
-                {
-                    "Arctic",
-                    "Arid",
-                    "Black",
-                    "Gray",
-                    "Green",
-                    "Olive",
-                    "Tan",
-                    "Tropic",
-                    "Tundra",
-                    "Urban",
-                    "White",
-                    "Woodland"
-                };
-            };
-            class Top
-            {
-                alwaysSelectable=1;
-                changeingame=0;
-                changedelay=0;
-                label= "Top";
-                values[]=
-                {
-                    "Field Top",
-                    "Tac-Shirt",
-                    "T-Shirt"
-                };
-            };
-            class Shirt
-            {
-                alwaysSelectable=1;
-                changeingame=0;
-                changedelay=0;
-                label= "Shirt";
-                values[]=
-                {
-                    "Tucked",
-                    "Untucked"
-                };
-            };
-            class Pants
-            {
-                alwaysSelectable=1;
-                changeingame=0;
-                changedelay=0;
-                label= "Pants";
-                values[]=
-                {
-                    "Bloused",
-                    "Untucked"
-                };
-            };
-            class Sleeves
-            {
-                alwaysSelectable=1;
-                changeingame=0;
-                changedelay=0;
-                label= "Sleeves";
-                values[]=
-                {
-                    "Full-Roll",
-                    "Half-Roll",
-                    "Quarter-Roll",
-                    "Slim-Sleeve"
-                };
-            };
-            class Collar
-            {
-                alwaysSelectable=1;
-                changeingame=0;
-                changedelay=0;
-                label= "Collar";
-                values[]=
-                {
-                    "Zipped",
-                    "Unzipped"
-                };
-            };
-            class Gloves
-            {
-                alwaysSelectable=1;
-                changeingame=0;
-                changedelay=0;
-                label= "Gloves";
-                values[]=
-                {
-                    "On",
-                    "Off"
                 };
             };
         };
@@ -209,304 +296,193 @@ class XtdGearModels
 		};
 
         // Uniforms
-        class STB73_new_uniforms {
-            label="[73] CBBU Uniform";
-            options[] = {"camo", "sleeves","gloves","shirt","Pants","zip"};
-            class camo {
-                alwaysSelectable = 1;
-                label="Camouflage";
-                values[]={"Urban","Woodland","Arctic","Arid","Tropic","Black","Grey","Green","Olive","Tan","White"};
-                class Urban {label="Urban";};
-                class Woodland {label="Woodland";};
-                class Arctic {label="Arctic";};
-                class Arid {label="Arid";};
-                class Tropic {label="Tropic";};
-                class Black {label="Black";};
-                class Grey {label="Grey";};
-                class Green {label="Green";};
-                class Olive {label="Olive";};
-                class Tan {label="Tan";};
-                class White {label="White";};
-            };
-            class sleeves {
-                alwaysSelectable = 1;
-                label="Sleeve Type";
-                values[]={"Tucked","Full","QuarterRoll","HalfRoll","SlimSleeve","Untucked"};
-                class Tucked  {label="Tucked";};
-                class Full  {label="Full";};
-                class QuarterRoll {label="Quarter Roll";};
-                class HalfRoll {label="Half Roll";};
-                class SlimSleeve {label="Slim Sleeve";};
-                class Untucked  {label="Untucked";};
-            };
-            class gloves {
-                alwaysSelectable = 1;
-                label="Gloves";
-                values[]={"Yes","No"};
-                class Yes  {label="Gloves On";};
-                class No {label="No Gloves";};
-            };
-            class shirt {
-                alwaysSelectable = 1;
-                label="Shirt Type";
-                values[]={"TShirt","TacShirt","FieldTop"};
-                class TShirt  {label="T-shirt";};
-                class TacShirt {label="Tac-Shirt";};
-                class FieldTop {label="Field Top";};
-            };
-            class Pants {
-                alwaysSelectable=1;
-                label="Pants Type";
-                values[]={"Bloused","Loose"};
-                class Bloused {label="Bloused";};
-                class Loose {label="Loose";};
-            };
-            class zip {
-                alwaysSelectable=1;
-                label="Zipper Type";
-                values[]={"Zipped","Unzipped"};
-                class Zipped {label="Zipped Up";};
-                class Unzipped {label="Unzipped";};
-            };
-        };
-
-        class 73_ACE_CH252D_Helmet_STB
+        class SleevesBase
 		{
-			label= "[73] CH252D Helmet [STB]";
-			author="73rd S-4 Team";
-			options[] = 
-			{
-				"Roles"
-			};
-			class Roles
-			{
-				alwaysSelectable=1;
-				changeingame=0;
-				changedelay=0;
-                label= "Roles";
-                values[]= 
-				{
-					"Recruit",
-					"Standard",
-					"SORC",
-					"Leadership",
-					"Officer"
-				};
-			};
+			class Full;
+			class Quarter;
+			class Half;
 		};
-		class 73_ACE_CH252D_Helmet_ACo
+        class STB73_U_B_CBUU
 		{
-			label= "[73] CH252D Helmet [ACo]";
-			author="73rd S-4 Team";
-			options[] =
+			label="CBUU";
+			author=AUTHOR;
+			options[]=
 			{
-				"Roles"
+				"camo",
+				"top",
+				"zipper",
+				"sleeves",
+				"gloves",
+				"blouse",
+				"kneepads"
 			};
-			class Roles
+			class camo: STB73_CamoFabric
 			{
-				alwaysSelectable=1;
-				changeingame=0;
-				changedelay=0;
-                label= "Roles";
-                values[]=
-				{
-					"Recruit",
-					"Standard",
-					"SORC",
-					"Leadership",
-					"Officer"
-				};
-			};
-		};
-		class 73_ACE_cus_CH252D_Helmet
-		{
-			label= "[73] CH252D Helmet [Custom]";
-			author="73rd S-4 Team";
-			options[] =
-			{
-				"Variant"
-			};
-			class Variant
-			{
-				alwaysSelectable=1;
-				changeingame=0;
-				changedelay=0;
-                label= "Variant";
-                values[]=
-				{
-				    "Smith",
-				    "Price",
-					"Salmon",
-					"Winters",
-					"Metal",
-					"Solaman",
-					"Vargas",
-					"Mendez",
-					"Mac",
-					"Bear",
-					"Dawn",
-					"Grayson",
-					"Pug",
-					"Pinky",
-					"Brooks",
-					"Norwood",
-					"Riverwood",
-					"Wolf"
-				};
-			};
-		};
-		class 73_ACE_M52_Armor_STB
-		{
-			label= "[73] M52 Vest";
-			author="73rd S-4 Team";
-			options[] = 
-			{
-				"Billet",
-				"MOS"
-			};
-			class Billet
-            {
-				alwaysSelectable=1;
-				changeingame=0;
-				changedelay=0;
-                label= "Billet";
-                values[]= 
-				{
-					"Recruit",
-					"Standard",
-					"Command"
-				};
-			};
-			class MOS
-			{
-				alwaysSelectable=1;
-				changeingame=0;
-				changedelay=0;
-                label= "MOS";
 				values[]=
 				{
-					"Basic",
-					"Medic",
-					"Autorifleman",
-					"Marksman",
-					"Demolitions",
-					"Scout",
-					"Sniper",
-				};
-			};
-		};
-		class 73_ACE_M52_Armor_Cus
-		{
-			label= "[73] M52 Vest Customs";
-			author="73rd S-4 Team";
-			options[] =
-			{
-				"Variant"
-			};
-			class Variant
-            {
-				alwaysSelectable=1;
-				changeingame=0;
-				changedelay=0;
-                label= "Variant";
-                values[]=
-				{
-					"Smith",
-					"Salmon"
-				};
-			};
-		};
-		class 73_ACE_M52_Armor_ACo
-		{
-			label= "[73] M52 Vest [ACo]";
-			author="73rd S-4 Team";
-			options[] = 
-			{
-				"Platoon",
-				"Billet",
-				"MOS"
-			};
-			class Platoon
-            {
-				alwaysSelectable=1;
-				changeingame=0;
-				changedelay=0;
-                label= "Platoon";
-                values[]= 
-				{
-					"Company",
-					"1st Platoon",
-					"2nd Platoon",
-					"3rd Platoon"
-				};
-			};
-			class Billet
-            {
-				alwaysSelectable=1;
-				changeingame=0;
-				changedelay=0;
-                label= "Billet";
-                values[]=
-				{
-					"Standard",
-					"SORC",
-					"PltCmd",
-					"CmdSORC",
-					"ACoCmd"
-				};
-			};
-			class MOS
-			{
-				alwaysSelectable=1;
-				changeingame=0;
-				changedelay=0;
-                label= "MOS";
-				values[]=
-				{
-					"Basic",
-					"SORC",
-					"Autorifleman",
-					"Marksman",
-					"Demolitions",
-					"Scout",
-					"Sniper",
-				};
-			};
-		};
-		class 73_ACE_ODST_BDU
-		{
-			label= "[73] M52D BDU";
-			author="73rd S-4 Team";
-			options[] =
-			{
-				"Camo",
-				"Collar"
-			};
-			class Camo
-            {
-				alwaysSelectable=1;
-				changeingame=0;
-				changedelay=0;
-                label= "Camo";
-                values[]=
-				{
-					"Urban",
-					"Woodland",
+					"Arctic",
 					"Arid",
-					"Winter"
+					"Black",
+					"Gray",
+					"Green",
+					"Olive",
+					"Tan",
+					"Tropic",
+					"Tundra",
+					"Urban",
+					"White",
+					"Woodland"
 				};
 			};
-			class Collar
+			class top
 			{
-				alwaysSelectable=1;
-				changeingame=0;
-				changedelay=0;
-                label= "Collar";
+				label="Top";
 				values[]=
 				{
-					"On",
-					"Off"
+					"FieldTop",
+					"TacShirt"
 				};
+				class FieldTop
+				{
+					label="Field Top";
+				};
+				class TacShirt
+				{
+					label="Tac-Shirt";
+				};
+			};
+			class tuck
+			{
+				label="Tuck";
+				values[]=
+				{
+					"Tucked",
+					"Untucked"
+				};
+				changeInGame=1;
+				class Tucked
+				{
+					label="Tucked";
+					actionLabel="Tuck shirt";
+				};
+				class Untucked
+				{
+					label="Untucked";
+					actionLabel="Untuck shirt";
+				};
+			};
+			class zipper
+			{
+				label="Zipper";
+				values[]=
+				{
+					"Zipped",
+					"Unzipped"
+				};
+				changeInGame=1;
+				class Zipped
+				{
+					label="Zipped";
+					actionLabel="Zip shirt";
+				};
+				class Unzipped
+				{
+					label="Unzipped";
+					actionLabel="Unzip shirt";
+				};
+			};
+			class sleeves: SleevesBase
+			{
+				label="Sleeves";
+				values[]=
+				{
+					"Full",
+					"QuarterRoll",
+					"HalfRoll"
+				};
+				class Full: Full
+				{
+					label="Full";
+				};
+				class QuarterRoll: Quarter
+				{
+					label="Quarter";
+				};
+				class HalfRoll: Half
+				{
+					label="Half";
+				};
+			};
+			class gloves
+			{
+				label="Gloves";
+				values[]=
+				{
+					"None",
+					"Gloves"
+				};
+				changeInGame=1;
+				class None
+				{
+					label="None";
+					actionLabel="Remove gloves";
+				};
+				class Gloves
+				{
+					label="Gloves";
+					actionLabel="Put on gloves";
+				};
+			};
+			class blouse
+			{
+				label="Boot Blousings";
+				values[]=
+				{
+					"Bloused",
+					"Unbloused"
+				};
+				changeInGame=1;
+				class Bloused
+				{
+					label="Bloused";
+					actionLabel="Blouse boots";
+				};
+				class Unbloused
+				{
+					label="Unbloused";
+					actionLabel="Unblouse boots";
+				};
+			};
+			class kneepads
+			{
+				label="Kneepads";
+				values[]=
+				{
+					"None",
+					"Kneepads"
+				};
+				changeInGame=1;
+				class None
+				{
+					label="None";
+					actionLabel="Remove kneepads";
+				};
+				class Kneepads
+				{
+					label="Kneepads";
+					actionLabel="Put on kneepads";
+				};
+			};
+		};
+		class STB73_U_B_TShirt: STB73_U_B_CBUU
+		{
+			options[]=
+			{
+				"camo",
+				"tuck",
+				"gloves",
+				"blouse",
+				"kneepads"
 			};
 		};
     };
@@ -538,25 +514,2927 @@ class XtdGearModels
 				};
 			};
 		};
+        class STB73_B_Ammo_Bearer_1
+		{
+			label="Ammo Bearer 1";
+			author="$STR_TCP_Data_Author";
+			options[]=
+			{
+				"camo",
+				"backpack",
+				"backpackPouchLevel",
+				"buttpack"
+			};
+			class camo: STB73_CamoFabric
+			{
+				values[]=
+				{
+					"Black",
+					"Olive",
+					"Tan",
+					"White"
+				};
+			};
+			class backpack
+			{
+				label="Backpack";
+				values[]=
+				{
+					"None",
+					"M43_Medium_Rucksack",
+					"EM39_MLBE_Hardcase"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M43_Medium_Rucksack
+				{
+					label="M43 Medium Rucksack";
+				};
+				class EM39_MLBE_Hardcase
+				{
+					label="EM39 M/LBE Hard Case";
+				};
+			};
+			class backpackPouchLevel
+			{
+				label="Backpack Pouches";
+				values[]=
+				{
+					"None",
+					"Assault",
+					"Engineer",
+					"Field",
+					"Medical",
+					"Patrol"
+				};
+				class None
+				{
+					label="None";
+				};
+				class Patrol
+				{
+					label="Patrol";
+				};
+			};
+			class buttpack
+			{
+				label="Buttpack";
+				values[]=
+				{
+					"None",
+					"M2_Buttpack",
+					"M35_Buttpack",
+					"EM39_Buttpack",
+					"Roll"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M2_Buttpack
+				{
+					label="M2 Buttpack";
+				};
+				class M35_Buttpack
+				{
+					label="M35 Hydration Pack";
+				};
+				class EM39_Buttpack
+				{
+					label="EM39 M/LBE Buttpack";
+				};
+				class Roll
+				{
+					label="Sleeping Roll";
+				};
+			};
+		};
+		class STB73_B_Assaulter_1
+		{
+			label="Assaulter 1";
+			author="$STR_TCP_Data_Author";
+			options[]=
+			{
+				"camo",
+				"backpack",
+				"backpackPouchLevel",
+				"buttpack"
+			};
+			class camo: STB73_CamoFabric
+			{
+				values[]=
+				{
+					"Black",
+					"Olive",
+					"Tan",
+					"White"
+				};
+			};
+			class backpack
+			{
+				label="Backpack";
+				values[]=
+				{
+					"None",
+					"M43_Medium_Rucksack",
+					"EM39_MLBE_Hardcase"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M43_Medium_Rucksack
+				{
+					label="M43 Medium Rucksack";
+				};
+				class EM39_MLBE_Hardcase
+				{
+					label="EM39 M/LBE Hard Case";
+				};
+			};
+			class backpackPouchLevel
+			{
+				label="Backpack Pouches";
+				values[]=
+				{
+					"None",
+					"Assault",
+					"Engineer",
+					"Field",
+					"Medical",
+					"Patrol"
+				};
+				class None
+				{
+					label="None";
+				};
+				class Patrol
+				{
+					label="Patrol";
+				};
+			};
+			class buttpack
+			{
+				label="Buttpack";
+				values[]=
+				{
+					"None",
+					"M2_Buttpack",
+					"M35_Buttpack",
+					"EM39_Buttpack",
+					"Roll"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M2_Buttpack
+				{
+					label="M2 Buttpack";
+				};
+				class M35_Buttpack
+				{
+					label="M35 Hydration Pack";
+				};
+				class EM39_Buttpack
+				{
+					label="EM39 M/LBE Buttpack";
+				};
+				class Roll
+				{
+					label="Sleeping Roll";
+				};
+			};
+		};
+		class STB73_B_Assaulter_2
+		{
+			label="Assaulter 2";
+			author="$STR_TCP_Data_Author";
+			options[]=
+			{
+				"camo",
+				"backpack",
+				"backpackPouchLevel",
+				"buttpack"
+			};
+			class camo: STB73_CamoFabric
+			{
+				values[]=
+				{
+					"Black",
+					"Olive",
+					"Tan",
+					"White"
+				};
+			};
+			class backpack
+			{
+				label="Backpack";
+				values[]=
+				{
+					"None",
+					"M43_Medium_Rucksack",
+					"EM39_MLBE_Hardcase"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M43_Medium_Rucksack
+				{
+					label="M43 Medium Rucksack";
+				};
+				class EM39_MLBE_Hardcase
+				{
+					label="EM39 M/LBE Hard Case";
+				};
+			};
+			class backpackPouchLevel
+			{
+				label="Backpack Pouches";
+				values[]=
+				{
+					"None",
+					"Assault",
+					"Engineer",
+					"Field",
+					"Medical",
+					"Patrol"
+				};
+				class None
+				{
+					label="None";
+				};
+				class Patrol
+				{
+					label="Patrol";
+				};
+			};
+			class buttpack
+			{
+				label="Buttpack";
+				values[]=
+				{
+					"None",
+					"M2_Buttpack",
+					"M35_Buttpack",
+					"EM39_Buttpack",
+					"Roll"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M2_Buttpack
+				{
+					label="M2 Buttpack";
+				};
+				class M35_Buttpack
+				{
+					label="M35 Hydration Pack";
+				};
+				class EM39_Buttpack
+				{
+					label="EM39 M/LBE Buttpack";
+				};
+				class Roll
+				{
+					label="Sleeping Roll";
+				};
+			};
+		};
+		class STB73_B_Autorifleman_1
+		{
+			label="Autorifleman 1";
+			author="$STR_TCP_Data_Author";
+			options[]=
+			{
+				"camo",
+				"backpack",
+				"backpackPouchLevel",
+				"buttpack"
+			};
+			class camo: STB73_CamoFabric
+			{
+				values[]=
+				{
+					"Black",
+					"Olive",
+					"Tan",
+					"White"
+				};
+			};
+			class backpack
+			{
+				label="Backpack";
+				values[]=
+				{
+					"None",
+					"M43_Medium_Rucksack",
+					"EM39_MLBE_Hardcase"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M43_Medium_Rucksack
+				{
+					label="M43 Medium Rucksack";
+				};
+				class EM39_MLBE_Hardcase
+				{
+					label="EM39 M/LBE Hard Case";
+				};
+			};
+			class backpackPouchLevel
+			{
+				label="Backpack Pouches";
+				values[]=
+				{
+					"None",
+					"Assault",
+					"Engineer",
+					"Field",
+					"Medical",
+					"Patrol"
+				};
+				class None
+				{
+					label="None";
+				};
+				class Patrol
+				{
+					label="Patrol";
+				};
+			};
+			class buttpack
+			{
+				label="Buttpack";
+				values[]=
+				{
+					"None",
+					"M2_Buttpack",
+					"M35_Buttpack",
+					"EM39_Buttpack",
+					"Roll"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M2_Buttpack
+				{
+					label="M2 Buttpack";
+				};
+				class M35_Buttpack
+				{
+					label="M35 Hydration Pack";
+				};
+				class EM39_Buttpack
+				{
+					label="EM39 M/LBE Buttpack";
+				};
+				class Roll
+				{
+					label="Sleeping Roll";
+				};
+			};
+		};
+		class STB73_B_Autorifleman_2
+		{
+			label="Autorifleman 2";
+			author="$STR_TCP_Data_Author";
+			options[]=
+			{
+				"camo",
+				"backpack",
+				"backpackPouchLevel",
+				"buttpack"
+			};
+			class camo: STB73_CamoFabric
+			{
+				values[]=
+				{
+					"Black",
+					"Olive",
+					"Tan",
+					"White"
+				};
+			};
+			class backpack
+			{
+				label="Backpack";
+				values[]=
+				{
+					"None",
+					"M43_Medium_Rucksack",
+					"EM39_MLBE_Hardcase"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M43_Medium_Rucksack
+				{
+					label="M43 Medium Rucksack";
+				};
+				class EM39_MLBE_Hardcase
+				{
+					label="EM39 M/LBE Hard Case";
+				};
+			};
+			class backpackPouchLevel
+			{
+				label="Backpack Pouches";
+				values[]=
+				{
+					"None",
+					"Assault",
+					"Engineer",
+					"Field",
+					"Medical",
+					"Patrol"
+				};
+				class None
+				{
+					label="None";
+				};
+				class Patrol
+				{
+					label="Patrol";
+				};
+			};
+			class buttpack
+			{
+				label="Buttpack";
+				values[]=
+				{
+					"None",
+					"M2_Buttpack",
+					"M35_Buttpack",
+					"EM39_Buttpack",
+					"Roll"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M2_Buttpack
+				{
+					label="M2 Buttpack";
+				};
+				class M35_Buttpack
+				{
+					label="M35 Hydration Pack";
+				};
+				class EM39_Buttpack
+				{
+					label="EM39 M/LBE Buttpack";
+				};
+				class Roll
+				{
+					label="Sleeping Roll";
+				};
+			};
+		};
+		class STB73_B_Breacher_1
+		{
+			label="Breacher 1";
+			author="$STR_TCP_Data_Author";
+			options[]=
+			{
+				"camo",
+				"backpack",
+				"backpackPouchLevel",
+				"buttpack"
+			};
+			class camo: STB73_CamoFabric
+			{
+				values[]=
+				{
+					"Black",
+					"Olive",
+					"Tan",
+					"White"
+				};
+			};
+			class backpack
+			{
+				label="Backpack";
+				values[]=
+				{
+					"None",
+					"M43_Medium_Rucksack",
+					"EM39_MLBE_Hardcase"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M43_Medium_Rucksack
+				{
+					label="M43 Medium Rucksack";
+				};
+				class EM39_MLBE_Hardcase
+				{
+					label="EM39 M/LBE Hard Case";
+				};
+			};
+			class backpackPouchLevel
+			{
+				label="Backpack Pouches";
+				values[]=
+				{
+					"None",
+					"Assault",
+					"Engineer",
+					"Field",
+					"Medical",
+					"Patrol"
+				};
+				class None
+				{
+					label="None";
+				};
+				class Patrol
+				{
+					label="Patrol";
+				};
+			};
+			class buttpack
+			{
+				label="Buttpack";
+				values[]=
+				{
+					"None",
+					"M2_Buttpack",
+					"M35_Buttpack",
+					"EM39_Buttpack",
+					"Roll"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M2_Buttpack
+				{
+					label="M2 Buttpack";
+				};
+				class M35_Buttpack
+				{
+					label="M35 Hydration Pack";
+				};
+				class EM39_Buttpack
+				{
+					label="EM39 M/LBE Buttpack";
+				};
+				class Roll
+				{
+					label="Sleeping Roll";
+				};
+			};
+		};
+		class STB73_B_Engineer_1
+		{
+			label="Engineer 1";
+			author="$STR_TCP_Data_Author";
+			options[]=
+			{
+				"camo",
+				"backpack",
+				"backpackPouchLevel",
+				"buttpack"
+			};
+			class camo: STB73_CamoFabric
+			{
+				values[]=
+				{
+					"Black",
+					"Olive",
+					"Tan",
+					"White"
+				};
+			};
+			class backpack
+			{
+				label="Backpack";
+				values[]=
+				{
+					"None",
+					"M43_Medium_Rucksack",
+					"EM39_MLBE_Hardcase"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M43_Medium_Rucksack
+				{
+					label="M43 Medium Rucksack";
+				};
+				class EM39_MLBE_Hardcase
+				{
+					label="EM39 M/LBE Hard Case";
+				};
+			};
+			class backpackPouchLevel
+			{
+				label="Backpack Pouches";
+				values[]=
+				{
+					"None",
+					"Assault",
+					"Engineer",
+					"Field",
+					"Medical",
+					"Patrol"
+				};
+				class None
+				{
+					label="None";
+				};
+				class Patrol
+				{
+					label="Patrol";
+				};
+			};
+			class buttpack
+			{
+				label="Buttpack";
+				values[]=
+				{
+					"None",
+					"M2_Buttpack",
+					"M35_Buttpack",
+					"EM39_Buttpack",
+					"Roll"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M2_Buttpack
+				{
+					label="M2 Buttpack";
+				};
+				class M35_Buttpack
+				{
+					label="M35 Hydration Pack";
+				};
+				class EM39_Buttpack
+				{
+					label="EM39 M/LBE Buttpack";
+				};
+				class Roll
+				{
+					label="Sleeping Roll";
+				};
+			};
+		};
+		class STB73_B_Grenadier_1
+		{
+			label="Grenadier 1";
+			author="$STR_TCP_Data_Author";
+			options[]=
+			{
+				"camo",
+				"backpack",
+				"backpackPouchLevel",
+				"buttpack"
+			};
+			class camo: STB73_CamoFabric
+			{
+				values[]=
+				{
+					"Black",
+					"Olive",
+					"Tan",
+					"White"
+				};
+			};
+			class backpack
+			{
+				label="Backpack";
+				values[]=
+				{
+					"None",
+					"M43_Medium_Rucksack",
+					"EM39_MLBE_Hardcase"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M43_Medium_Rucksack
+				{
+					label="M43 Medium Rucksack";
+				};
+				class EM39_MLBE_Hardcase
+				{
+					label="EM39 M/LBE Hard Case";
+				};
+			};
+			class backpackPouchLevel
+			{
+				label="Backpack Pouches";
+				values[]=
+				{
+					"None",
+					"Assault",
+					"Engineer",
+					"Field",
+					"Medical",
+					"Patrol"
+				};
+				class None
+				{
+					label="None";
+				};
+				class Patrol
+				{
+					label="Patrol";
+				};
+			};
+			class buttpack
+			{
+				label="Buttpack";
+				values[]=
+				{
+					"None",
+					"M2_Buttpack",
+					"M35_Buttpack",
+					"EM39_Buttpack",
+					"Roll"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M2_Buttpack
+				{
+					label="M2 Buttpack";
+				};
+				class M35_Buttpack
+				{
+					label="M35 Hydration Pack";
+				};
+				class EM39_Buttpack
+				{
+					label="EM39 M/LBE Buttpack";
+				};
+				class Roll
+				{
+					label="Sleeping Roll";
+				};
+			};
+		};
+		class STB73_B_Grenadier_2
+		{
+			label="Grenadier 2";
+			author="$STR_TCP_Data_Author";
+			options[]=
+			{
+				"camo",
+				"backpack",
+				"backpackPouchLevel",
+				"buttpack"
+			};
+			class camo: STB73_CamoFabric
+			{
+				values[]=
+				{
+					"Black",
+					"Olive",
+					"Tan",
+					"White"
+				};
+			};
+			class backpack
+			{
+				label="Backpack";
+				values[]=
+				{
+					"None",
+					"M43_Medium_Rucksack",
+					"EM39_MLBE_Hardcase"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M43_Medium_Rucksack
+				{
+					label="M43 Medium Rucksack";
+				};
+				class EM39_MLBE_Hardcase
+				{
+					label="EM39 M/LBE Hard Case";
+				};
+			};
+			class backpackPouchLevel
+			{
+				label="Backpack Pouches";
+				values[]=
+				{
+					"None",
+					"Assault",
+					"Engineer",
+					"Field",
+					"Medical",
+					"Patrol"
+				};
+				class None
+				{
+					label="None";
+				};
+				class Patrol
+				{
+					label="Patrol";
+				};
+			};
+			class buttpack
+			{
+				label="Buttpack";
+				values[]=
+				{
+					"None",
+					"M2_Buttpack",
+					"M35_Buttpack",
+					"EM39_Buttpack",
+					"Roll"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M2_Buttpack
+				{
+					label="M2 Buttpack";
+				};
+				class M35_Buttpack
+				{
+					label="M35 Hydration Pack";
+				};
+				class EM39_Buttpack
+				{
+					label="EM39 M/LBE Buttpack";
+				};
+				class Roll
+				{
+					label="Sleeping Roll";
+				};
+			};
+		};
+		class STB73_B_M2_Buttpack
+		{
+			label="M2 Buttpack";
+			author="$STR_TCP_Data_Author";
+			options[]=
+			{
+				"camo"
+			};
+			class camo: STB73_CamoFabric
+			{
+				values[]=
+				{
+					"Black",
+					"Olive",
+					"Tan",
+					"White"
+				};
+			};
+		};
+		class STB73_B_EM39_MLBE_Hardcase
+		{
+			label="EM39 M/LBE Hardcase";
+			author="$STR_TCP_Data_Author";
+			options[]=
+			{
+				"roll",
+				"pouch_level"
+			};
+			class roll
+			{
+				label="Sleeping Roll";
+				values[]=
+				{
+					"None",
+					"Roll"
+				};
+				class None
+				{
+					label="None";
+				};
+				class Roll
+				{
+					label="Roll";
+				};
+			};
+			class pouch_level
+			{
+				label="Pouch Level";
+				values[]=
+				{
+					"None",
+					"Patrol"
+				};
+				class None
+				{
+					label="None";
+				};
+				class Patrol
+				{
+					label="Patrol";
+				};
+			};
+		};
+		class STB73_B_M43_Medium_Rucksack
+		{
+			label="M43 Medium Rucksack";
+			author="$STR_TCP_Data_Author";
+			options[]=
+			{
+				"camo",
+				"roll",
+				"pouch_level"
+			};
+			class camo: STB73_CamoMetal
+			{
+				values[]=
+				{
+					"Black",
+					"Olive",
+					"Tan",
+					"White"
+				};
+			};
+			class roll
+			{
+				label="Sleeping Roll";
+				values[]=
+				{
+					"None",
+					"Roll"
+				};
+				class None
+				{
+					label="None";
+				};
+				class Roll
+				{
+					label="Roll";
+				};
+			};
+			class pouch_level
+			{
+				label="Pouch Level";
+				values[]=
+				{
+					"None",
+					"Assault",
+					"Engineer",
+					"Field",
+					"Medical",
+					"Patrol"
+				};
+				class None
+				{
+					label="None";
+				};
+				class Assault
+				{
+					label="Assault";
+				};
+				class Engineer
+				{
+					label="Engineer";
+				};
+				class Field
+				{
+					label="Field";
+				};
+				class Medical
+				{
+					label="Medical";
+				};
+				class Patrol
+				{
+					label="Patrol";
+				};
+			};
+		};
+		class STB73_B_Marksman_1
+		{
+			label="Marksman 1";
+			author="$STR_TCP_Data_Author";
+			options[]=
+			{
+				"camo",
+				"backpack",
+				"backpackPouchLevel",
+				"buttpack"
+			};
+			class camo: STB73_CamoFabric
+			{
+				values[]=
+				{
+					"Black",
+					"Olive",
+					"Tan",
+					"White"
+				};
+			};
+			class backpack
+			{
+				label="Backpack";
+				values[]=
+				{
+					"None",
+					"M43_Medium_Rucksack",
+					"EM39_MLBE_Hardcase"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M43_Medium_Rucksack
+				{
+					label="M43 Medium Rucksack";
+				};
+				class EM39_MLBE_Hardcase
+				{
+					label="EM39 M/LBE Hard Case";
+				};
+			};
+			class backpackPouchLevel
+			{
+				label="Backpack Pouches";
+				values[]=
+				{
+					"None",
+					"Assault",
+					"Engineer",
+					"Field",
+					"Medical",
+					"Patrol"
+				};
+				class None
+				{
+					label="None";
+				};
+				class Patrol
+				{
+					label="Patrol";
+				};
+			};
+			class buttpack
+			{
+				label="Buttpack";
+				values[]=
+				{
+					"None",
+					"M2_Buttpack",
+					"M35_Buttpack",
+					"EM39_Buttpack",
+					"Roll"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M2_Buttpack
+				{
+					label="M2 Buttpack";
+				};
+				class M35_Buttpack
+				{
+					label="M35 Hydration Pack";
+				};
+				class EM39_Buttpack
+				{
+					label="EM39 M/LBE Buttpack";
+				};
+				class Roll
+				{
+					label="Sleeping Roll";
+				};
+			};
+		};
+		class STB73_B_Marksman_2
+		{
+			label="Marksman 2";
+			author="$STR_TCP_Data_Author";
+			options[]=
+			{
+				"camo",
+				"backpack",
+				"backpackPouchLevel",
+				"buttpack"
+			};
+			class camo: STB73_CamoFabric
+			{
+				values[]=
+				{
+					"Black",
+					"Olive",
+					"Tan",
+					"White"
+				};
+			};
+			class backpack
+			{
+				label="Backpack";
+				values[]=
+				{
+					"None",
+					"M43_Medium_Rucksack",
+					"EM39_MLBE_Hardcase"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M43_Medium_Rucksack
+				{
+					label="M43 Medium Rucksack";
+				};
+				class EM39_MLBE_Hardcase
+				{
+					label="EM39 M/LBE Hard Case";
+				};
+			};
+			class backpackPouchLevel
+			{
+				label="Backpack Pouches";
+				values[]=
+				{
+					"None",
+					"Assault",
+					"Engineer",
+					"Field",
+					"Medical",
+					"Patrol"
+				};
+				class None
+				{
+					label="None";
+				};
+				class Patrol
+				{
+					label="Patrol";
+				};
+			};
+			class buttpack
+			{
+				label="Buttpack";
+				values[]=
+				{
+					"None",
+					"M2_Buttpack",
+					"M35_Buttpack",
+					"EM39_Buttpack",
+					"Roll"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M2_Buttpack
+				{
+					label="M2 Buttpack";
+				};
+				class M35_Buttpack
+				{
+					label="M35 Hydration Pack";
+				};
+				class EM39_Buttpack
+				{
+					label="EM39 M/LBE Buttpack";
+				};
+				class Roll
+				{
+					label="Sleeping Roll";
+				};
+			};
+		};
+		class STB73_B_Marksman_3
+		{
+			label="Marksman 3";
+			author="$STR_TCP_Data_Author";
+			options[]=
+			{
+				"camo",
+				"backpack",
+				"backpackPouchLevel",
+				"buttpack"
+			};
+			class camo: STB73_CamoFabric
+			{
+				values[]=
+				{
+					"Black",
+					"Olive",
+					"Tan",
+					"White"
+				};
+			};
+			class backpack
+			{
+				label="Backpack";
+				values[]=
+				{
+					"None",
+					"M43_Medium_Rucksack",
+					"EM39_MLBE_Hardcase"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M43_Medium_Rucksack
+				{
+					label="M43 Medium Rucksack";
+				};
+				class EM39_MLBE_Hardcase
+				{
+					label="EM39 M/LBE Hard Case";
+				};
+			};
+			class backpackPouchLevel
+			{
+				label="Backpack Pouches";
+				values[]=
+				{
+					"None",
+					"Assault",
+					"Engineer",
+					"Field",
+					"Medical",
+					"Patrol"
+				};
+				class None
+				{
+					label="None";
+				};
+				class Patrol
+				{
+					label="Patrol";
+				};
+			};
+			class buttpack
+			{
+				label="Buttpack";
+				values[]=
+				{
+					"None",
+					"M2_Buttpack",
+					"M35_Buttpack",
+					"EM39_Buttpack",
+					"Roll"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M2_Buttpack
+				{
+					label="M2 Buttpack";
+				};
+				class M35_Buttpack
+				{
+					label="M35 Hydration Pack";
+				};
+				class EM39_Buttpack
+				{
+					label="EM39 M/LBE Buttpack";
+				};
+				class Roll
+				{
+					label="Sleeping Roll";
+				};
+			};
+		};
+		class STB73_B_Medic_1
+		{
+			label="Medic 1";
+			author="$STR_TCP_Data_Author";
+			options[]=
+			{
+				"camo",
+				"backpack",
+				"backpackPouchLevel",
+				"buttpack"
+			};
+			class camo: STB73_CamoFabric
+			{
+				values[]=
+				{
+					"Black",
+					"Olive",
+					"Tan",
+					"White",
+					"Medic"
+				};
+			};
+			class backpack
+			{
+				label="Backpack";
+				values[]=
+				{
+					"None",
+					"M43_Medium_Rucksack",
+					"EM39_MLBE_Hardcase"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M43_Medium_Rucksack
+				{
+					label="M43 Medium Rucksack";
+				};
+				class EM39_MLBE_Hardcase
+				{
+					label="EM39 M/LBE Hard Case";
+				};
+			};
+			class backpackPouchLevel
+			{
+				label="Backpack Pouches";
+				values[]=
+				{
+					"None",
+					"Assault",
+					"Engineer",
+					"Field",
+					"Medical",
+					"Patrol"
+				};
+				class None
+				{
+					label="None";
+				};
+				class Patrol
+				{
+					label="Patrol";
+				};
+			};
+			class buttpack
+			{
+				label="Buttpack";
+				values[]=
+				{
+					"None",
+					"M2_Buttpack",
+					"M35_Buttpack",
+					"EM39_Buttpack",
+					"Roll"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M2_Buttpack
+				{
+					label="M2 Buttpack";
+				};
+				class M35_Buttpack
+				{
+					label="M35 Hydration Pack";
+				};
+				class EM39_Buttpack
+				{
+					label="EM39 M/LBE Buttpack";
+				};
+				class Roll
+				{
+					label="Sleeping Roll";
+				};
+			};
+		};
+		class STB73_B_Medic_2
+		{
+			label="Medic 2";
+			author="$STR_TCP_Data_Author";
+			options[]=
+			{
+				"camo",
+				"backpack",
+				"backpackPouchLevel",
+				"buttpack"
+			};
+			class camo: STB73_CamoFabric
+			{
+				values[]=
+				{
+					"Black",
+					"Olive",
+					"Tan",
+					"White"
+				};
+			};
+			class backpack
+			{
+				label="Backpack";
+				values[]=
+				{
+					"None",
+					"M43_Medium_Rucksack",
+					"EM39_MLBE_Hardcase"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M43_Medium_Rucksack
+				{
+					label="M43 Medium Rucksack";
+				};
+				class EM39_MLBE_Hardcase
+				{
+					label="EM39 M/LBE Hard Case";
+				};
+			};
+			class backpackPouchLevel
+			{
+				label="Backpack Pouches";
+				values[]=
+				{
+					"None",
+					"Assault",
+					"Engineer",
+					"Field",
+					"Medical",
+					"Patrol"
+				};
+				class None
+				{
+					label="None";
+				};
+				class Patrol
+				{
+					label="Patrol";
+				};
+			};
+			class buttpack
+			{
+				label="Buttpack";
+				values[]=
+				{
+					"None",
+					"M2_Buttpack",
+					"M35_Buttpack",
+					"EM39_Buttpack",
+					"Roll"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M2_Buttpack
+				{
+					label="M2 Buttpack";
+				};
+				class M35_Buttpack
+				{
+					label="M35 Hydration Pack";
+				};
+				class EM39_Buttpack
+				{
+					label="EM39 M/LBE Buttpack";
+				};
+				class Roll
+				{
+					label="Sleeping Roll";
+				};
+			};
+		};
+		class STB73_B_NCO_1
+		{
+			label="NCO 1";
+			author="$STR_TCP_Data_Author";
+			options[]=
+			{
+				"camo",
+				"backpack",
+				"backpackPouchLevel",
+				"buttpack"
+			};
+			class camo: STB73_CamoFabric
+			{
+				values[]=
+				{
+					"Black",
+					"Olive",
+					"Tan",
+					"White"
+				};
+			};
+			class backpack
+			{
+				label="Backpack";
+				values[]=
+				{
+					"None",
+					"M43_Medium_Rucksack",
+					"EM39_MLBE_Hardcase"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M43_Medium_Rucksack
+				{
+					label="M43 Medium Rucksack";
+				};
+				class EM39_MLBE_Hardcase
+				{
+					label="EM39 M/LBE Hard Case";
+				};
+			};
+			class backpackPouchLevel
+			{
+				label="Backpack Pouches";
+				values[]=
+				{
+					"None",
+					"Assault",
+					"Engineer",
+					"Field",
+					"Medical",
+					"Patrol"
+				};
+				class None
+				{
+					label="None";
+				};
+				class Patrol
+				{
+					label="Patrol";
+				};
+			};
+			class buttpack
+			{
+				label="Buttpack";
+				values[]=
+				{
+					"None",
+					"M2_Buttpack",
+					"M35_Buttpack",
+					"EM39_Buttpack",
+					"Roll"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M2_Buttpack
+				{
+					label="M2 Buttpack";
+				};
+				class M35_Buttpack
+				{
+					label="M35 Hydration Pack";
+				};
+				class EM39_Buttpack
+				{
+					label="EM39 M/LBE Buttpack";
+				};
+				class Roll
+				{
+					label="Sleeping Roll";
+				};
+			};
+		};
+		class STB73_B_NCO_2
+		{
+			label="NCO 2";
+			author="$STR_TCP_Data_Author";
+			options[]=
+			{
+				"camo",
+				"backpack",
+				"backpackPouchLevel",
+				"buttpack"
+			};
+			class camo: STB73_CamoFabric
+			{
+				values[]=
+				{
+					"Black",
+					"Olive",
+					"Tan",
+					"White"
+				};
+			};
+			class backpack
+			{
+				label="Backpack";
+				values[]=
+				{
+					"None",
+					"M43_Medium_Rucksack",
+					"EM39_MLBE_Hardcase"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M43_Medium_Rucksack
+				{
+					label="M43 Medium Rucksack";
+				};
+				class EM39_MLBE_Hardcase
+				{
+					label="EM39 M/LBE Hard Case";
+				};
+			};
+			class backpackPouchLevel
+			{
+				label="Backpack Pouches";
+				values[]=
+				{
+					"None",
+					"Assault",
+					"Engineer",
+					"Field",
+					"Medical",
+					"Patrol"
+				};
+				class None
+				{
+					label="None";
+				};
+				class Patrol
+				{
+					label="Patrol";
+				};
+			};
+			class buttpack
+			{
+				label="Buttpack";
+				values[]=
+				{
+					"None",
+					"M2_Buttpack",
+					"M35_Buttpack",
+					"EM39_Buttpack",
+					"Roll"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M2_Buttpack
+				{
+					label="M2 Buttpack";
+				};
+				class M35_Buttpack
+				{
+					label="M35 Hydration Pack";
+				};
+				class EM39_Buttpack
+				{
+					label="EM39 M/LBE Buttpack";
+				};
+				class Roll
+				{
+					label="Sleeping Roll";
+				};
+			};
+		};
+		class STB73_B_NCO_3
+		{
+			label="NCO 3";
+			author="$STR_TCP_Data_Author";
+			options[]=
+			{
+				"camo",
+				"backpack",
+				"backpackPouchLevel",
+				"buttpack"
+			};
+			class camo: STB73_CamoFabric
+			{
+				values[]=
+				{
+					"Black",
+					"Olive",
+					"Tan",
+					"White"
+				};
+			};
+			class backpack
+			{
+				label="Backpack";
+				values[]=
+				{
+					"None",
+					"M43_Medium_Rucksack",
+					"EM39_MLBE_Hardcase"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M43_Medium_Rucksack
+				{
+					label="M43 Medium Rucksack";
+				};
+				class EM39_MLBE_Hardcase
+				{
+					label="EM39 M/LBE Hard Case";
+				};
+			};
+			class backpackPouchLevel
+			{
+				label="Backpack Pouches";
+				values[]=
+				{
+					"None",
+					"Assault",
+					"Engineer",
+					"Field",
+					"Medical",
+					"Patrol"
+				};
+				class None
+				{
+					label="None";
+				};
+				class Patrol
+				{
+					label="Patrol";
+				};
+			};
+			class buttpack
+			{
+				label="Buttpack";
+				values[]=
+				{
+					"None",
+					"M2_Buttpack",
+					"M35_Buttpack",
+					"EM39_Buttpack",
+					"Roll"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M2_Buttpack
+				{
+					label="M2 Buttpack";
+				};
+				class M35_Buttpack
+				{
+					label="M35 Hydration Pack";
+				};
+				class EM39_Buttpack
+				{
+					label="EM39 M/LBE Buttpack";
+				};
+				class Roll
+				{
+					label="Sleeping Roll";
+				};
+			};
+		};
+		class STB73_B_Rifleman_1
+		{
+			label="Rifleman 1";
+			author="$STR_TCP_Data_Author";
+			options[]=
+			{
+				"camo",
+				"backpack",
+				"backpackPouchLevel",
+				"buttpack"
+			};
+			class camo: STB73_CamoFabric
+			{
+				values[]=
+				{
+					"Black",
+					"Olive",
+					"Tan",
+					"White"
+				};
+			};
+			class backpack
+			{
+				label="Backpack";
+				values[]=
+				{
+					"None",
+					"M43_Medium_Rucksack",
+					"EM39_MLBE_Hardcase"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M43_Medium_Rucksack
+				{
+					label="M43 Medium Rucksack";
+				};
+				class EM39_MLBE_Hardcase
+				{
+					label="EM39 M/LBE Hard Case";
+				};
+			};
+			class backpackPouchLevel
+			{
+				label="Backpack Pouches";
+				values[]=
+				{
+					"None",
+					"Assault",
+					"Engineer",
+					"Field",
+					"Medical",
+					"Patrol"
+				};
+				class None
+				{
+					label="None";
+				};
+				class Patrol
+				{
+					label="Patrol";
+				};
+			};
+			class buttpack
+			{
+				label="Buttpack";
+				values[]=
+				{
+					"None",
+					"M2_Buttpack",
+					"M35_Buttpack",
+					"EM39_Buttpack",
+					"Roll"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M2_Buttpack
+				{
+					label="M2 Buttpack";
+				};
+				class M35_Buttpack
+				{
+					label="M35 Hydration Pack";
+				};
+				class EM39_Buttpack
+				{
+					label="EM39 M/LBE Buttpack";
+				};
+				class Roll
+				{
+					label="Sleeping Roll";
+				};
+			};
+		};
+		class STB73_B_Rifleman_2
+		{
+			label="Rifleman 2";
+			author="$STR_TCP_Data_Author";
+			options[]=
+			{
+				"camo",
+				"backpack",
+				"backpackPouchLevel",
+				"buttpack"
+			};
+			class camo: STB73_CamoFabric
+			{
+				values[]=
+				{
+					"Black",
+					"Olive",
+					"Tan",
+					"White"
+				};
+			};
+			class backpack
+			{
+				label="Backpack";
+				values[]=
+				{
+					"None",
+					"M43_Medium_Rucksack",
+					"EM39_MLBE_Hardcase"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M43_Medium_Rucksack
+				{
+					label="M43 Medium Rucksack";
+				};
+				class EM39_MLBE_Hardcase
+				{
+					label="EM39 M/LBE Hard Case";
+				};
+			};
+			class backpackPouchLevel
+			{
+				label="Backpack Pouches";
+				values[]=
+				{
+					"None",
+					"Assault",
+					"Engineer",
+					"Field",
+					"Medical",
+					"Patrol"
+				};
+				class None
+				{
+					label="None";
+				};
+				class Patrol
+				{
+					label="Patrol";
+				};
+			};
+			class buttpack
+			{
+				label="Buttpack";
+				values[]=
+				{
+					"None",
+					"M2_Buttpack",
+					"M35_Buttpack",
+					"EM39_Buttpack",
+					"Roll"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M2_Buttpack
+				{
+					label="M2 Buttpack";
+				};
+				class M35_Buttpack
+				{
+					label="M35 Hydration Pack";
+				};
+				class EM39_Buttpack
+				{
+					label="EM39 M/LBE Buttpack";
+				};
+				class Roll
+				{
+					label="Sleeping Roll";
+				};
+			};
+		};
+		class STB73_B_Rifleman_3
+		{
+			label="Rifleman 3";
+			author="$STR_TCP_Data_Author";
+			options[]=
+			{
+				"camo",
+				"backpack",
+				"backpackPouchLevel",
+				"buttpack"
+			};
+			class camo: STB73_CamoFabric
+			{
+				values[]=
+				{
+					"Black",
+					"Olive",
+					"Tan",
+					"White"
+				};
+			};
+			class backpack
+			{
+				label="Backpack";
+				values[]=
+				{
+					"None",
+					"M43_Medium_Rucksack",
+					"EM39_MLBE_Hardcase"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M43_Medium_Rucksack
+				{
+					label="M43 Medium Rucksack";
+				};
+				class EM39_MLBE_Hardcase
+				{
+					label="EM39 M/LBE Hard Case";
+				};
+			};
+			class backpackPouchLevel
+			{
+				label="Backpack Pouches";
+				values[]=
+				{
+					"None",
+					"Assault",
+					"Engineer",
+					"Field",
+					"Medical",
+					"Patrol"
+				};
+				class None
+				{
+					label="None";
+				};
+				class Patrol
+				{
+					label="Patrol";
+				};
+			};
+			class buttpack
+			{
+				label="Buttpack";
+				values[]=
+				{
+					"None",
+					"M2_Buttpack",
+					"M35_Buttpack",
+					"EM39_Buttpack",
+					"Roll"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M2_Buttpack
+				{
+					label="M2 Buttpack";
+				};
+				class M35_Buttpack
+				{
+					label="M35 Hydration Pack";
+				};
+				class EM39_Buttpack
+				{
+					label="EM39 M/LBE Buttpack";
+				};
+				class Roll
+				{
+					label="Sleeping Roll";
+				};
+			};
+		};
+		class STB73_B_Rifleman_4
+		{
+			label="Rifleman 4";
+			author="$STR_TCP_Data_Author";
+			options[]=
+			{
+				"camo",
+				"backpack",
+				"backpackPouchLevel",
+				"buttpack"
+			};
+			class camo: STB73_CamoFabric
+			{
+				values[]=
+				{
+					"Black",
+					"Olive",
+					"Tan",
+					"White"
+				};
+			};
+			class backpack
+			{
+				label="Backpack";
+				values[]=
+				{
+					"None",
+					"M43_Medium_Rucksack",
+					"EM39_MLBE_Hardcase"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M43_Medium_Rucksack
+				{
+					label="M43 Medium Rucksack";
+				};
+				class EM39_MLBE_Hardcase
+				{
+					label="EM39 M/LBE Hard Case";
+				};
+			};
+			class backpackPouchLevel
+			{
+				label="Backpack Pouches";
+				values[]=
+				{
+					"None",
+					"Assault",
+					"Engineer",
+					"Field",
+					"Medical",
+					"Patrol"
+				};
+				class None
+				{
+					label="None";
+				};
+				class Patrol
+				{
+					label="Patrol";
+				};
+			};
+			class buttpack
+			{
+				label="Buttpack";
+				values[]=
+				{
+					"None",
+					"M2_Buttpack",
+					"M35_Buttpack",
+					"EM39_Buttpack",
+					"Roll"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M2_Buttpack
+				{
+					label="M2 Buttpack";
+				};
+				class M35_Buttpack
+				{
+					label="M35 Hydration Pack";
+				};
+				class EM39_Buttpack
+				{
+					label="EM39 M/LBE Buttpack";
+				};
+				class Roll
+				{
+					label="Sleeping Roll";
+				};
+			};
+		};
+		class STB73_B_Rifleman_5
+		{
+			label="Rifleman 5";
+			author="$STR_TCP_Data_Author";
+			options[]=
+			{
+				"camo",
+				"backpack",
+				"backpackPouchLevel",
+				"buttpack"
+			};
+			class camo: STB73_CamoFabric
+			{
+				values[]=
+				{
+					"Black",
+					"Olive",
+					"Tan",
+					"White"
+				};
+			};
+			class backpack
+			{
+				label="Backpack";
+				values[]=
+				{
+					"None",
+					"M43_Medium_Rucksack",
+					"EM39_MLBE_Hardcase"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M43_Medium_Rucksack
+				{
+					label="M43 Medium Rucksack";
+				};
+				class EM39_MLBE_Hardcase
+				{
+					label="EM39 M/LBE Hard Case";
+				};
+			};
+			class backpackPouchLevel
+			{
+				label="Backpack Pouches";
+				values[]=
+				{
+					"None",
+					"Assault",
+					"Engineer",
+					"Field",
+					"Medical",
+					"Patrol"
+				};
+				class None
+				{
+					label="None";
+				};
+				class Patrol
+				{
+					label="Patrol";
+				};
+			};
+			class buttpack
+			{
+				label="Buttpack";
+				values[]=
+				{
+					"None",
+					"M2_Buttpack",
+					"M35_Buttpack",
+					"EM39_Buttpack",
+					"Roll"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M2_Buttpack
+				{
+					label="M2 Buttpack";
+				};
+				class M35_Buttpack
+				{
+					label="M35 Hydration Pack";
+				};
+				class EM39_Buttpack
+				{
+					label="EM39 M/LBE Buttpack";
+				};
+				class Roll
+				{
+					label="Sleeping Roll";
+				};
+			};
+		};
+		class STB73_B_Rifleman_6
+		{
+			label="Rifleman 6";
+			author="$STR_TCP_Data_Author";
+			options[]=
+			{
+				"camo",
+				"backpack",
+				"backpackPouchLevel",
+				"buttpack"
+			};
+			class camo: STB73_CamoFabric
+			{
+				values[]=
+				{
+					"Black",
+					"Olive",
+					"Tan",
+					"White"
+				};
+			};
+			class backpack
+			{
+				label="Backpack";
+				values[]=
+				{
+					"None",
+					"M43_Medium_Rucksack",
+					"EM39_MLBE_Hardcase"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M43_Medium_Rucksack
+				{
+					label="M43 Medium Rucksack";
+				};
+				class EM39_MLBE_Hardcase
+				{
+					label="EM39 M/LBE Hard Case";
+				};
+			};
+			class backpackPouchLevel
+			{
+				label="Backpack Pouches";
+				values[]=
+				{
+					"None",
+					"Assault",
+					"Engineer",
+					"Field",
+					"Medical",
+					"Patrol"
+				};
+				class None
+				{
+					label="None";
+				};
+				class Patrol
+				{
+					label="Patrol";
+				};
+			};
+			class buttpack
+			{
+				label="Buttpack";
+				values[]=
+				{
+					"None",
+					"M2_Buttpack",
+					"M35_Buttpack",
+					"EM39_Buttpack",
+					"Roll"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M2_Buttpack
+				{
+					label="M2 Buttpack";
+				};
+				class M35_Buttpack
+				{
+					label="M35 Hydration Pack";
+				};
+				class EM39_Buttpack
+				{
+					label="EM39 M/LBE Buttpack";
+				};
+				class Roll
+				{
+					label="Sleeping Roll";
+				};
+			};
+		};
+		class STB73_B_Rifleman_7
+		{
+			label="Rifleman 7";
+			author="$STR_TCP_Data_Author";
+			options[]=
+			{
+				"camo",
+				"backpack",
+				"backpackPouchLevel",
+				"buttpack"
+			};
+			class camo: STB73_CamoFabric
+			{
+				values[]=
+				{
+					"Black",
+					"Olive",
+					"Tan",
+					"White"
+				};
+			};
+			class backpack
+			{
+				label="Backpack";
+				values[]=
+				{
+					"None",
+					"M43_Medium_Rucksack",
+					"EM39_MLBE_Hardcase"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M43_Medium_Rucksack
+				{
+					label="M43 Medium Rucksack";
+				};
+				class EM39_MLBE_Hardcase
+				{
+					label="EM39 M/LBE Hard Case";
+				};
+			};
+			class backpackPouchLevel
+			{
+				label="Backpack Pouches";
+				values[]=
+				{
+					"None",
+					"Assault",
+					"Engineer",
+					"Field",
+					"Medical",
+					"Patrol"
+				};
+				class None
+				{
+					label="None";
+				};
+				class Patrol
+				{
+					label="Patrol";
+				};
+			};
+			class buttpack
+			{
+				label="Buttpack";
+				values[]=
+				{
+					"None",
+					"M2_Buttpack",
+					"M35_Buttpack",
+					"EM39_Buttpack",
+					"Roll"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M2_Buttpack
+				{
+					label="M2 Buttpack";
+				};
+				class M35_Buttpack
+				{
+					label="M35 Hydration Pack";
+				};
+				class EM39_Buttpack
+				{
+					label="EM39 M/LBE Buttpack";
+				};
+				class Roll
+				{
+					label="Sleeping Roll";
+				};
+			};
+		};
+		class STB73_B_RTO_1
+		{
+			label="RTO 1";
+			author="$STR_TCP_Data_Author";
+			options[]=
+			{
+				"camo",
+				"backpack",
+				"backpackPouchLevel",
+				"buttpack"
+			};
+			class camo: STB73_CamoFabric
+			{
+				values[]=
+				{
+					"Black",
+					"Olive",
+					"Tan",
+					"White"
+				};
+			};
+			class backpack
+			{
+				label="Backpack";
+				values[]=
+				{
+					"None",
+					"M43_Medium_Rucksack",
+					"EM39_MLBE_Hardcase"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M43_Medium_Rucksack
+				{
+					label="M43 Medium Rucksack";
+				};
+				class EM39_MLBE_Hardcase
+				{
+					label="EM39 M/LBE Hard Case";
+				};
+			};
+			class backpackPouchLevel
+			{
+				label="Backpack Pouches";
+				values[]=
+				{
+					"None",
+					"Assault",
+					"Engineer",
+					"Field",
+					"Medical",
+					"Patrol"
+				};
+				class None
+				{
+					label="None";
+				};
+				class Patrol
+				{
+					label="Patrol";
+				};
+			};
+			class buttpack
+			{
+				label="Buttpack";
+				values[]=
+				{
+					"None",
+					"M2_Buttpack",
+					"M35_Buttpack",
+					"EM39_Buttpack",
+					"Roll"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M2_Buttpack
+				{
+					label="M2 Buttpack";
+				};
+				class M35_Buttpack
+				{
+					label="M35 Hydration Pack";
+				};
+				class EM39_Buttpack
+				{
+					label="EM39 M/LBE Buttpack";
+				};
+				class Roll
+				{
+					label="Sleeping Roll";
+				};
+			};
+		};
+		class STB73_B_Sapper_1
+		{
+			label="Sapper 1";
+			author="$STR_TCP_Data_Author";
+			options[]=
+			{
+				"camo",
+				"backpack",
+				"backpackPouchLevel",
+				"buttpack"
+			};
+			class camo: STB73_CamoFabric
+			{
+				values[]=
+				{
+					"Black",
+					"Olive",
+					"Tan",
+					"White"
+				};
+			};
+			class backpack
+			{
+				label="Backpack";
+				values[]=
+				{
+					"None",
+					"M43_Medium_Rucksack",
+					"EM39_MLBE_Hardcase"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M43_Medium_Rucksack
+				{
+					label="M43 Medium Rucksack";
+				};
+				class EM39_MLBE_Hardcase
+				{
+					label="EM39 M/LBE Hard Case";
+				};
+			};
+			class backpackPouchLevel
+			{
+				label="Backpack Pouches";
+				values[]=
+				{
+					"None",
+					"Assault",
+					"Engineer",
+					"Field",
+					"Medical",
+					"Patrol"
+				};
+				class None
+				{
+					label="None";
+				};
+				class Patrol
+				{
+					label="Patrol";
+				};
+			};
+			class buttpack
+			{
+				label="Buttpack";
+				values[]=
+				{
+					"None",
+					"M2_Buttpack",
+					"M35_Buttpack",
+					"EM39_Buttpack",
+					"Roll"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M2_Buttpack
+				{
+					label="M2 Buttpack";
+				};
+				class M35_Buttpack
+				{
+					label="M35 Hydration Pack";
+				};
+				class EM39_Buttpack
+				{
+					label="EM39 M/LBE Buttpack";
+				};
+				class Roll
+				{
+					label="Sleeping Roll";
+				};
+			};
+		};
+		class STB73_B_Sniper_1
+		{
+			label="Sniper 1";
+			author="$STR_TCP_Data_Author";
+			options[]=
+			{
+				"camo",
+				"backpack",
+				"backpackPouchLevel",
+				"buttpack"
+			};
+			class camo: STB73_CamoFabric
+			{
+				values[]=
+				{
+					"Black",
+					"Olive",
+					"Tan",
+					"White"
+				};
+			};
+			class backpack
+			{
+				label="Backpack";
+				values[]=
+				{
+					"None",
+					"M43_Medium_Rucksack",
+					"EM39_MLBE_Hardcase"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M43_Medium_Rucksack
+				{
+					label="M43 Medium Rucksack";
+				};
+				class EM39_MLBE_Hardcase
+				{
+					label="EM39 M/LBE Hard Case";
+				};
+			};
+			class backpackPouchLevel
+			{
+				label="Backpack Pouches";
+				values[]=
+				{
+					"None",
+					"Assault",
+					"Engineer",
+					"Field",
+					"Medical",
+					"Patrol"
+				};
+				class None
+				{
+					label="None";
+				};
+				class Patrol
+				{
+					label="Patrol";
+				};
+			};
+			class buttpack
+			{
+				label="Buttpack";
+				values[]=
+				{
+					"None",
+					"M2_Buttpack",
+					"M35_Buttpack",
+					"EM39_Buttpack",
+					"Roll"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M2_Buttpack
+				{
+					label="M2 Buttpack";
+				};
+				class M35_Buttpack
+				{
+					label="M35 Hydration Pack";
+				};
+				class EM39_Buttpack
+				{
+					label="EM39 M/LBE Buttpack";
+				};
+				class Roll
+				{
+					label="Sleeping Roll";
+				};
+			};
+		};
+		class STB73_B_Sniper_2
+		{
+			label="Sniper 2";
+			author="$STR_TCP_Data_Author";
+			options[]=
+			{
+				"camo",
+				"backpack",
+				"backpackPouchLevel",
+				"buttpack"
+			};
+			class camo: STB73_CamoFabric
+			{
+				values[]=
+				{
+					"Black",
+					"Olive",
+					"Tan",
+					"White"
+				};
+			};
+			class backpack
+			{
+				label="Backpack";
+				values[]=
+				{
+					"None",
+					"M43_Medium_Rucksack",
+					"EM39_MLBE_Hardcase"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M43_Medium_Rucksack
+				{
+					label="M43 Medium Rucksack";
+				};
+				class EM39_MLBE_Hardcase
+				{
+					label="EM39 M/LBE Hard Case";
+				};
+			};
+			class backpackPouchLevel
+			{
+				label="Backpack Pouches";
+				values[]=
+				{
+					"None",
+					"Assault",
+					"Engineer",
+					"Field",
+					"Medical",
+					"Patrol"
+				};
+				class None
+				{
+					label="None";
+				};
+				class Patrol
+				{
+					label="Patrol";
+				};
+			};
+			class buttpack
+			{
+				label="Buttpack";
+				values[]=
+				{
+					"None",
+					"M2_Buttpack",
+					"M35_Buttpack",
+					"EM39_Buttpack",
+					"Roll"
+				};
+				class None
+				{
+					label="None";
+				};
+				class M2_Buttpack
+				{
+					label="M2 Buttpack";
+				};
+				class M35_Buttpack
+				{
+					label="M35 Hydration Pack";
+				};
+				class EM39_Buttpack
+				{
+					label="EM39 M/LBE Buttpack";
+				};
+				class Roll
+				{
+					label="Sleeping Roll";
+				};
+			};
+		};
+		class STB73_B_Utility_Rig
+		{
+			label="Utility Rig";
+			author="$STR_TCP_Data_Author";
+			options[]=
+			{
+				"attachments",
+				"bandolier"
+			};
+			class attachments
+			{
+				label="Attachments";
+				values[]=
+				{
+					"None",
+					"Sapper",
+					"Grenadier"
+				};
+				alwaysSelectable=1;
+				class None
+				{
+					label="None";
+				};
+				class Sapper
+				{
+					label="Sapper";
+				};
+				class Grenadier
+				{
+					label="Grenadier";
+				};
+			};
+			class bandolier
+			{
+				label="Bandolier";
+				values[]=
+				{
+					"None",
+					"Both",
+					"Left",
+					"Right"
+				};
+				class None
+				{
+					label="None";
+				};
+				class Both
+				{
+					label="Both";
+				};
+				class Left
+				{
+					label="Left";
+				};
+				class Right
+				{
+					label="Right";
+				};
+			};
+		};
 	};
 };
-
 class XtdGearInfos
 {
     class CfgWeapons
     {
-    #include "CBUU.hpp"
-    NEW_UNIFROM_GI(Urban)
-    NEW_UNIFROM_GI(Woodland)
-    NEW_UNIFROM_GI(Arctic)
-    NEW_UNIFROM_GI(Arid)
-    NEW_UNIFROM_GI(Tropic)
-    NEW_UNIFROM_GI(Black)
-    NEW_UNIFROM_GI(Grey)
-    NEW_UNIFROM_GI(Green)
-    NEW_UNIFROM_GI(Olive)
-    NEW_UNIFROM_GI(Tan)
-    NEW_UNIFROM_GI(White)
+    #include "cfg/Uniforms.hpp"
     };
-
 };

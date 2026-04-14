@@ -1,13 +1,13 @@
 #include "script_component.hpp"
 
 class CfgPatches {
-    class 73STB_MainMenu {
+    class STB73_MainMenu {
         name = COMPONENT_NAME;
 		units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-			"73STB_main",
+			"STB73_main",
 			"A3_Data_F_Enoch_Loadorder",
 			"19th_Fleet_Armor",
 			"TCP_UI"
@@ -61,7 +61,7 @@ class RscDisplayMain: RscStandardDisplay
 	idc=1;
 	access=1;
 	enableDisplay=1;
-	text="z\73STB\addons\mainmenu\Textures\73_Splash1.paa";
+	text="z\73STB\addons\mainmenu\Textures\briefingFOB.paa";
 	class RscActiveText;
 	class RscActivePicture: RscActiveText
 	{
@@ -105,7 +105,7 @@ class RscDisplayMain: RscStandardDisplay
 		class ConnectMain: RscButton
 		{
 			idc=-1;
-			text="Join 73rd Main";
+			text="Join 73rd STB Main Server";
 			style=2;
 			onbuttonclick="connectToServer ['Yonservers.asuscomm.com', 2302, '73STB']";
 			colorBackground[]={0,0,0,0.69999999};
@@ -133,7 +133,7 @@ class RscDisplayMain: RscStandardDisplay
 			y="SafeZoneY";
 			h="SafeZoneH";
 			w="SafeZoneW";
-			text="z\73STB\addons\mainmenu\Textures\73_Splash6.paa";
+			text="z\73STB\addons\mainmenu\Textures\droneISR.paa";
 		};
 	};
 };
@@ -153,7 +153,7 @@ class RscDisplayLoading
 					y="SafeZoneY";
 					h="SafeZoneH";
 					w="SafeZoneW";
-					text="z\73STB\addons\mainmenu\Textures\73_Splash5.paa";
+					text="z\73STB\addons\mainmenu\Textures\nvgLDA.paa";
 				};
 			};
 		};
@@ -168,7 +168,7 @@ class RscDisplayLoading
 					y="SafeZoneY";
 					h="SafeZoneH";
 					w="SafeZoneW";
-					text="z\73STB\addons\mainmenu\Textures\73_Splash2.paa";
+					text="z\73STB\addons\mainmenu\Textures\covieHall.paa";
 				};
 			};
 		};
@@ -183,7 +183,7 @@ class RscDisplayLoading
 					y="SafeZoneY";
 					h="SafeZoneH";
 					w="SafeZoneW";
-					text="z\73STB\addons\mainmenu\Textures\73_Splash3.paa";
+					text="z\73STB\addons\mainmenu\Textures\nvgFalcon.paa";
 				};
 			};
 		};
@@ -198,7 +198,7 @@ class RscDisplayLoading
 					y="SafeZoneY";
 					h="SafeZoneH";
 					w="SafeZoneW";
-					text="z\73STB\addons\mainmenu\Textures\73_Splash7.paa";
+					text="z\73STB\addons\mainmenu\Textures\stackUpODST.paa";
 				};
 			};
 		};
@@ -213,7 +213,7 @@ class RscDisplayLoading
 					y="SafeZoneY";
 					h="SafeZoneH";
 					w="SafeZoneW";
-					text="z\73STB\addons\mainmenu\Textures\73_Splash2.paa";
+					text="z\73STB\addons\mainmenu\Textures\covieHall.paa";
 				};
 			};
 		};
@@ -228,7 +228,7 @@ class RscDisplayLoading
 					y="SafeZoneY";
 					h="SafeZoneH";
 					w="SafeZoneW";
-					text="z\73STB\addons\mainmenu\Textures\73_Splash3.paa";
+					text="z\73STB\addons\mainmenu\Textures\OCLFPropaganda.paa";
 				};
 			};
 		};
@@ -243,7 +243,7 @@ class RscDisplayLoading
 					y="SafeZoneY";
 					h="SafeZoneH";
 					w="SafeZoneW";
-					text="z\73STB\addons\mainmenu\Textures\73_Splash5.paa";
+					text="z\73STB\addons\mainmenu\Textures\nvgLDA.paa";
 				};
 			};
 		};
@@ -260,7 +260,7 @@ class RscDisplayLoadMission: RscStandardDisplay
 			y="SafeZoneY";
 			h="SafeZoneH";
 			w="SafeZoneW";
-			text="z\73STB\addons\mainmenu\Textures\73_Splash4.paa";
+			text="z\73STB\addons\mainmenu\Textures\covieShipAssault.paa";
 		};
 	};
 };
@@ -275,7 +275,7 @@ class RscDisplayStart: RscStandardDisplay
 			y="SafeZoneY";
 			h="SafeZoneH";
 			w="SafeZoneW";
-			text="z\73STB\addons\mainmenu\Textures\73_Splash6.paa";
+			text="z\73STB\addons\mainmenu\Textures\droneISR.paa";
 		};
 	};
 };
@@ -289,7 +289,7 @@ class RscDisplayClientWait: RscDisplayMPPlayers
 		y="SafeZoneY";
 		h="SafeZoneH";
 		w="SafeZoneW";
-		text="z\73STB\addons\mainmenu\Textures\73_Splash3.paa";
+		text="z\73STB\addons\mainmenu\Textures\nvgFalcon.paa";
 	};
 };
 class RscDisplayClient: RscStandardDisplay
@@ -303,7 +303,7 @@ class RscDisplayClient: RscStandardDisplay
 			y="SafeZoneY";
 			h="SafeZoneH";
 			w="SafeZoneW";
-			text="z\73STB\addons\mainmenu\Textures\73_Splash7.paa";
+			text="z\73STB\addons\mainmenu\Textures\stackUpODST.paa";
 		};
 	};
 };

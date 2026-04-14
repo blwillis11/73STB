@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 class CfgPatches {
-    class 73STB_Medical {
+    class STB73_Medical {
         name = COMPONENT_NAME;
 		units[] = 
         {
@@ -32,7 +32,7 @@ class CfgPatches {
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-			"73STB_main",
+			"STB73_Main",
 			"ace_medical_treatment",
 			"kat_pharma"
         };

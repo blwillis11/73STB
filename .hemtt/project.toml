@@ -10,8 +10,21 @@ include = [
     "logo_co.paa",
 ]
 
-[properties]
-author = "73rd S-4 Team"
+[hemtt.launch.default]
+workshop = [
+    "450814997",  # CBA_A3
+]
+presets = [
+    "Test"
+]
+parameters = [
+    "-world=empty",
+    "-noSplash",
+    "-showScriptErrors",
+    "-debug"
+]
+executable = "arma3profiling_x64"
+mission = "73rdTesting.flat_green_terrain"
 
 [version]
 path = "addons/main/script_version.hpp"

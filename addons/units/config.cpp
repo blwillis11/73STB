@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 class CfgPatches {
-    class 73STB_Units {
+    class STB73_Units {
         name = COMPONENT_NAME;
 		units[] = 
         {
@@ -24,9 +24,8 @@ class CfgPatches {
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-			"73STB_main",
+			"STB73_Main",
 			"OPTRE_UNSC_Units",
-			"MA_Armor",
 			"OPTRE_FC_Units"
         };
         authors[] = {"Salmon"}; // sub array of authors, considered for the specific addon, can be removed or left empty {}

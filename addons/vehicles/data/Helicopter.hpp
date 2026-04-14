@@ -12,7 +12,7 @@ class STB73_AV14_Hornet_CAS: OPTRE_UNSC_hornet_CAS
     {
         class STB73_RegisterThrusters_EH
         {
-            init = "[(_this select 0),true,false] call STBSTB73_fnc_RegisterThrusters;";
+            init = "[(_this select 0),true,false] call STB73_fnc_RegisterThrusters;";
         };
     };
     crew = "STB73_Aviator";
@@ -26,6 +26,7 @@ class STB73_AV14_Hornet_CAS: OPTRE_UNSC_hornet_CAS
     class UserActions
     {
         #include "cfg\UtilityActions.hpp"
+        #include "cfg\ThrusterActions.hpp"
     };
     class VehicleSpawnerInfo {
         class STB73_AirSpawner
@@ -58,8 +59,13 @@ class STB73_AV14_Hornet_CAP: OPTRE_UNSC_hornet_CAP
     {
         class STB73_RegisterThrusters_EH
         {
-            init = "[(_this select 0),true,false] call STBSTB73_fnc_RegisterThrusters;";
+            init = "[(_this select 0),true,false] call STB73_fnc_RegisterThrusters;";
         };
+    };
+    class UserActions
+    {
+        #include "cfg\UtilityActions.hpp"
+        #include "cfg\ThrusterActions.hpp"
     };
     crew = "STB73_Aviator";
     hiddenSelectionsTextures[] =
@@ -68,12 +74,6 @@ class STB73_AV14_Hornet_CAP: OPTRE_UNSC_hornet_CAP
         "",
         "",
         ""
-    };
-    class textureSources
-    {};
-    class UserActions
-    {
-        #include "cfg\UtilityActions.hpp"
     };
     class VehicleSpawnerInfo {
         class STB73_AirSpawner
@@ -179,6 +179,20 @@ class STB73_D77_TC_Pelican: Splits_UNSC_D77_TC_Pelican
             offset[] = {0, 4.15, 2.13};
             maxLoadCoefficient = 0.5;  // Half size for smaller vehicle
         };
+        class Cargo10 {
+            name = "MainBayCenter";
+            type = "STB73_Space_Crate_Pallet_Large_Base";  // Example: Mongoose ATV
+            direction = "backward";
+            offset[] = {0, 4.15, 2.13};
+            maxLoadCoefficient = 0.5;  // Half size for smaller vehicle
+        };
+        class Cargo11 {
+            name = "MainBayCenter";
+            type = "STB73_Boat_Transport";  // Example: Mongoose ATV
+            direction = "forward";
+            offset[] = {0, 4.15, 2.13};
+            maxLoadCoefficient = 0.5;  // Half size for smaller vehicle
+        };
     };
     class CargoAlignment {
         front[] = {"Cargo1"};  // Fill front first
@@ -193,11 +207,11 @@ class STB73_D77_TC_Pelican: Splits_UNSC_D77_TC_Pelican
     		cargoBayDimensions[]		= { {1.5, .5, -1}, {-1.5, 7.2, -3.4} };			// alternatively, positions in model space (since 2.08)
     		disableHeightLimit			= 1;								// If set to 1 disable height limit of transported vehicles
     		maxLoadMass					= 200000;							// Maximum cargo weight (in Kg) which the vehicle can transport
-    		cargoAlignment[]			= { "front", "front", "back", "back", "center"};				// Array of 2 elements defining alignment of vehicles in cargo space.
+    		cargoAlignment[]			= { "front", "center"};				// Array of 2 elements defining alignment of vehicles in cargo space.
     																		// Possible values are left, right, center, front, back. Order is important.
     		cargoSpacing[]				= { 0, 1.85, 0 };					// Offset from X,Y,Z axes (in metres)
             transportVehiclesCount = 2;
-    		exits[]					= { {0, -2, -3} };			// alternatively, positions in model space (since 2.08)
+    		exits[]					= { {0, -6, -4} };			// alternatively, positions in model space (since 2.08)
 
     		unloadingInterval			= 2;								// Time between unloading vehicles (in seconds)
     		loadingDistance				= 10;								// Maximal distance for loading in exit point (in meters).
@@ -211,18 +225,11 @@ class STB73_D77_TC_Pelican: Splits_UNSC_D77_TC_Pelican
      			STB73_POGV_RCWS = 1;
      			STB73_COGV_RCWS = 1;
      			STB73_SDV_ODST = 1;													// In this case the transporter only carry boats, not cars or tanks etc
+     			STB73_Space_Crate_Pallet_Large_Base = 1;
+                STB73_Boat_Transport=1;
      		};
     	};
     };
-    class EventHandlers: EventHandlers
-    {
-        class STB73_RegisterThrusters_EH
-        {
-            init = "[(_this select 0),true,true,false] call STB73_fnc_RegisterThrusters;";
-        };
-    };
-    class textureSources
-    {};
     class VehicleSpawnerInfo {
         class STB73_AirSpawner
         {
@@ -237,6 +244,13 @@ class STB73_D77_TC_Pelican: Splits_UNSC_D77_TC_Pelican
             {
              "[""Standard"",[""z\73STB\addons\vehicles\data\Pelican\body_co.paa"",""z\73STB\addons\vehicles\data\Pelican\wings_and_gear_co.paa"",""z\73STB\addons\vehicles\data\Pelican\weaponry_co.paa""]]",
             };
+        };
+    };
+    class EventHandlers: EventHandlers
+    {
+        class STB73_RegisterThrusters_EH
+        {
+            init = "[(_this select 0),true,true,false] call STB73_fnc_RegisterThrusters;";
         };
     };
     class UserActions
@@ -261,7 +275,7 @@ class STB73_UNSC_falcon:OPTRE_UNSC_falcon
     {
         class STB73_RegisterThrusters_EH
         {
-            init = "[(_this select 0),true,false] call STBSTB73_fnc_RegisterThrusters;";
+            init = "[(_this select 0),true,false] call STB73_fnc_RegisterThrusters;";
         };
     };
     class UserActions
@@ -269,7 +283,6 @@ class STB73_UNSC_falcon:OPTRE_UNSC_falcon
         #include "cfg\UtilityActions.hpp"
         #include "cfg\ThrusterActions.hpp"
     };
-
     class VehicleSpawnerInfo {
         class STB73_AirSpawner
         {
@@ -299,7 +312,7 @@ class STB73_UNSC_falcon_S:OPTRE_UNSC_falcon_S
     {
         class STB73_RegisterThrusters_EH
         {
-            init = "[(_this select 0),true,false] call STBSTB73_fnc_RegisterThrusters;";
+            init = "[(_this select 0),true,false] call STB73_fnc_RegisterThrusters;";
         };
     };
     class UserActions
@@ -334,7 +347,7 @@ class STB73_UNSC_MH_144_Falcon:OPTRE_UNSC_MH_144_Falcon
     {
         class STB73_RegisterThrusters_EH
         {
-            init = "[(_this select 0),true,false] call STBSTB73_fnc_RegisterThrusters;";
+            init = "[(_this select 0),true,false] call STB73_fnc_RegisterThrusters;";
         };
     };
     crew = "STB73_Aviator";
@@ -370,7 +383,7 @@ class STB73_UNSC_MH_144S_Falcon:OPTRE_UNSC_MH_144S_Falcon
     {
         class STB73_RegisterThrusters_EH
         {
-            init = "[(_this select 0),true,false] call STBSTB73_fnc_RegisterThrusters;";
+            init = "[(_this select 0),true,false] call STB73_fnc_RegisterThrusters;";
         };
     };
     crew = "STB73_Aviator";
@@ -409,7 +422,7 @@ class STB73_AV22_Sparrowhawk:OPTRE_AV22_Sparrowhawk
     {
         class STB73_RegisterThrusters_EH
         {
-            init = "[(_this select 0),true,false] call STBSTB73_fnc_RegisterThrusters;";
+            init = "[(_this select 0),true,false] call STB73_fnc_RegisterThrusters;";
         };
     };
     crew = "STB73_Aviator";
@@ -445,7 +458,7 @@ class STB73_AV22A_Sparrowhawk:OPTRE_AV22A_Sparrowhawk
     {
         class STB73_RegisterThrusters_EH
         {
-            init = "[(_this select 0),true,false] call STBSTB73_fnc_RegisterThrusters;";
+            init = "[(_this select 0),true,false] call STB73_fnc_RegisterThrusters;";
         };
     };
     crew = "STB73_Aviator";
@@ -481,7 +494,7 @@ class STB73_AV22B_Sparrowhawk:OPTRE_AV22B_Sparrowhawk
     {
         class STB73_RegisterThrusters_EH
         {
-            init = "[(_this select 0),true,false] call STBSTB73_fnc_RegisterThrusters;";
+            init = "[(_this select 0),true,false] call STB73_fnc_RegisterThrusters;";
         };
     };
     crew = "STB73_Aviator";
@@ -517,7 +530,7 @@ class STB73_AV22C_Sparrowhawk:OPTRE_AV22C_Sparrowhawk
     {
         class STB73_RegisterThrusters_EH
         {
-            init = "[(_this select 0),true,false] call STBSTB73_fnc_RegisterThrusters;";
+            init = "[(_this select 0),true,false] call STB73_fnc_RegisterThrusters;";
         };
     };
     crew = "STB73_Aviator";
@@ -554,7 +567,7 @@ class STB73_AV18_Dragonfly:TKE_Ext_Dragonfly_A
     {
         class STB73_RegisterThrusters_EH
         {
-            init = "[(_this select 0),true,false] call STBSTB73_fnc_RegisterThrusters;";
+            init = "[(_this select 0),true,false] call STB73_fnc_RegisterThrusters;";
         };
     };
     crew = "STB73_Aviator";

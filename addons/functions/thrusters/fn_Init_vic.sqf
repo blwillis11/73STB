@@ -1,8 +1,7 @@
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
-private ["_configs","_vehicle","_type","_icon","_liveriesData","_data","_types","_liveries","_className"];
+private ["_configs", "_vehicle", "_type", "_icon", "_liveriesData", "_data", "_types", "_liveries", "_className"];
 
-if(isDedicated) exitWith {};
-
+if (isDedicated) exitWith {};
 
 STB73_ThrusterMultiplier = 20;
 
@@ -11,6 +10,7 @@ STB73_ThrusterMultiplier = 20;
 	private _vic = (vehicle _unit);
 	if (_vic == _unit) exitWith {};
 	if ((_unit != driver _vic) or !(alive _vic) or !(isEngineOn _vic) or (((getPosATL _vic) select 2) < 1)) exitWith {};
+	if (!(_vic getVariable ["STB73_Afterburners_Usable", false]) && (_vic getVariable ["STB73_Thrusters_Engaged", false])) exitWith {};
 	[_vic] call STB73_fnc_increaseThrusterLevel;
 }, {}, [0xF4, [false, false, false]]] call CBA_fnc_addKeybind;
 
@@ -18,7 +18,7 @@ STB73_ThrusterMultiplier = 20;
 	private _unit = [player, remoteControlled player] select (isRemoteControlling player);
 	private _vic = (vehicle _unit);
 	if (_vic == _unit) exitWith {};
-	if ((_unit != driver _vic) or !(alive _vic) or !(isEngineOn _vic) or (((getPosATL _vic) select 2) < 1) && ((count (_vic getVariable ["Splits_Pelican_AttachedToVehiclesEffect",[]])) < 1)) exitWith {};
+	if ((_unit != driver _vic) or !(alive _vic) or !(isEngineOn _vic) or (((getPosATL _vic) select 2) < 1) && ((count (_vic getVariable ["Splits_Pelican_AttachedToVehiclesEffect", []])) < 1)) exitWith {};
 	[_vic] call STB73_fnc_PelicanUnLoadValidate;
 }, {}, [0xF4, [false, false, false]]] call CBA_fnc_addKeybind;
 

@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 class CfgPatches {
-    class 73STB_Functions {
+    class STB73_Functions {
         name = COMPONENT_NAME;
 		units[] = 
         {
@@ -19,12 +19,12 @@ class CfgPatches {
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
+			"STB73_Main",
 			"OPTRE_UNSC_Units_Army",
             "OPTRE_FunctionsLibrary",
             "OPTRE_modules",
             "Splits_Vehicles",
-            "DMNS_Cipher_HEVPatch",
-			"73STB_main"
+            "DMNS_Cipher_HEVPatch"
         };
         authors[] = {"Salmon"}; // sub array of authors, considered for the specific addon, can be removed or left empty {}
         author = AUTHOR; // primary author name, either yours or your team's, considered for the whole mod

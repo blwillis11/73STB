@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 class CfgPatches {
-    class 73STB_Weapons {
+    class STB73_Weapons {
         name = COMPONENT_NAME;
 		units[] = 
         {
@@ -47,7 +47,7 @@ class CfgPatches {
 			"ace_missileguidance",
             "NSWep_Weapons",
             "CBA_Main",
-            "73STB_Main"
+            "STB73_Main"
         };
         authors[] = {"Salmon"}; // sub array of authors, considered for the specific addon, can be removed or left empty {}
         author = AUTHOR; // primary author name, either yours or your team's, considered for the whole mod
@@ -230,9 +230,9 @@ class cfgMagazineWells{
 	class STB73_1Rnd_12Gauge_MagWell
 	{
 		STB73_Magazines[] = {
-			"STB73_1Rnd_12Gauge_Pellets",
-			"STB73_1Rnd_12Gauge_Slugs",
-			"STB73_1Rnd_12Gauge_Smoke"
+			"STB73_6Rnd_12Gauge_Pellets",
+			"STB73_6Rnd_12Gauge_Slugs",
+			"STB73_6Rnd_12Gauge_Smoke"
 		};
 	};
 	class STB73_12Rnd_127x30_MagWell{
@@ -267,12 +267,7 @@ class cfgMagazineWells{
 			"STB73_M232_145x114x4_APFSDS_TG",
 			"STB73_M232_145x114x4_APFSDS_TR",
 			"STB73_M232_145x114x4_APFSDS_TC",
-			"STB73_M232_145x114x4_APFSDS_TIR",
-			"STB73_M233_145x114x4_APFSDS",
-			"STB73_M233_145x114x4_APFSDS_TG",
-			"STB73_M233_145x114x4_APFSDS_TR",
-			"STB73_M233_145x114x4_APFSDS_TC",
-			"STB73_M233_145x114x4_APFSDS_TIR"
+			"STB73_M232_145x114x4_APFSDS_TIR"
 		};
 	};
 	class STB73_8Rnd_145x114_MagWell{
@@ -281,12 +276,7 @@ class cfgMagazineWells{
 			"STB73_M232_145x114x8_APFSDS_TG",
 			"STB73_M232_145x114x8_APFSDS_TR",
 			"STB73_M232_145x114x8_APFSDS_TC",
-			"STB73_M232_145x114x8_APFSDS_TIR",
-			"STB73_M233_145x114x8_APFSDS",
-			"STB73_M233_145x114x8_APFSDS_TG",
-			"STB73_M233_145x114x8_APFSDS_TR",
-			"STB73_M233_145x114x8_APFSDS_TC",
-			"STB73_M233_145x114x8_APFSDS_TIR"
+			"STB73_M232_145x114x8_APFSDS_TIR"
 		};
 	};
 };

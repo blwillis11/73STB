@@ -77,4 +77,6 @@ private _bj_ret = [
 
 diag_log format ["ModuleBJHEV: CS_BJHEV returned %1", _bj_ret];
 
-if {!isNull _logic} then { deleteVehicle _logic };
+if (!isNull _logic) then {
+	deleteVehicle _logic
+};

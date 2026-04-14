@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 class CfgPatches {
-    class 73STB_Innie {
+    class STB73_Innie {
         name = COMPONENT_NAME;
 		units[] = 
         {
@@ -70,15 +70,7 @@ class CfgPatches {
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "73STB_Main",
-            "73STB_Weapons",
-            "OPTRE_Misc",
-            "OPTRE_Vehicles",
-            "OPTRE_Vehicles_Tracked",
-            "OPTRE_Vehicles_Air",
-            "OPTRE_Weapons",
-            "OPTRE_FunctionsLibrary",
-            "OPTRE_MJOLNIR"
+            "STB73_Main"
         };
         authors[] = {"Salmon"}; // sub array of authors, considered for the specific addon, can be removed or left empty {}
         author = AUTHOR; // primary author name, either yours or your team's, considered for the whole mod

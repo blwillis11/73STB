@@ -397,8 +397,19 @@ class STB73_M274_ATV:OPTRE_M274_ATV
    scope=2;
    side=1;
    crew = "STB73_Marine_Rifleman";
-   class VehicleTransport
-   {
+   class VehicleSpawnerInfo {
+        class STB73_GroundSpawner
+        {
+            scope = 1;
+            spawner= "73rd Mechanized";
+            vehicle = "M274_ATV";
+            Type = "Mongoose";
+            cost = 0;
+            priority = 1;
+        };
+    };
+    class VehicleTransport
+    {
         class Cargo
         {
             parachuteClass			= "B_Parachute_02_F";	// Type of parachute used when dropped in air. When empty then parachute is not used.
@@ -407,5 +418,5 @@ class STB73_M274_ATV:OPTRE_M274_ATV
             //rotation = -90;								// (optional) Defines in which direction the vehicle gets rotated when its loaded into ViV cargo and will only fit when rotated
                                                         // Only -90 and 90 are supported. Since v2.08
         };
-   };
+    };
 };

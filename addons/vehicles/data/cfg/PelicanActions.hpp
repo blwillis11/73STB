@@ -43,7 +43,21 @@ class PelLift_LoadVehicle
     radius = 15;
     priority = 2;
     onlyForPlayer = 0;
-    condition = "!(player in [gunner this, driver this]) AND ((vehicle player == player) OR (vehicle player != player AND isPlayer vehicle player)) AND (str (this getVariable [""Splits_Pelican_AttachedToVehiclesEffect"",[]]) == ""[]"")";
+    condition = "!(player in [gunner this, driver this]) AND ((vehicle player != player AND isPlayer vehicle player)) AND (str (this getVariable [""Splits_Pelican_AttachedToVehiclesEffect"",[]]) == ""[]"")";
+    statement = "0 = [this,vehicle player] spawn STB73_fnc_PelicanLoadValidate;";
+};
+class PelLift_LoadCrate
+{
+    userActionID = 6;
+    displayName = "Maglock Crate";
+    displayNameDefault = "Maglock Crate";
+    textToolTip = "Maglock Crate";
+    position = "cargo_door_handle";
+    showWindow = 0;
+    radius = 15;
+    priority = 2;
+    onlyForPlayer = 0;
+    condition = "!(player in [gunner this, driver this]) AND (vehicle player == player) AND (this isKindOf ""STB73_Space_Crate_Pallet_Large_Base"") AND (str (this getVariable [""Splits_Pelican_AttachedToVehiclesEffect"",[]]) == ""[]"")";
     statement = "0 = [this,vehicle player] spawn STB73_fnc_PelicanLoadValidate;";
 };
 class PelLift_LoadPodMenu

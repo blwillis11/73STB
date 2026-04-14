@@ -1,15 +1,18 @@
 class CfgVehicles {
-    class O_Soldier_F;
-    class STB73_UnitBase: O_Soldier_F
+    class B_Soldier_base_F;
+    class STB73_UnitBase: B_Soldier_base_F
     {
         scope = 0;
         scopeCurator = 0;
 
-        author = "73rd S-4 Team";
+        author = AUTHOR;
         side = 1;
         faction = "STB73_odst";
         editorCategory = "STB73_odst";
         editorSubcategory = "STB73_STB_EdSubCat";
+        camouflage = 0.6;
+
+        uniformClass = "STB73_U_B_TacShirt_Full_Gloves_Bloused_Kneepads_Urban_SlimSleeve";
 
         identityTypes[] = {"Head_Euro","LanguagePER_F","G_IRAN_default"};
         allowedfacewear[] = {""};
@@ -31,8 +34,8 @@ class CfgVehicles {
         engineer = 0;
         canDeactivateMines = 0;
 
-        uniformClass = "STB73_U_B_TacShirt_SlimSleeve_Gloves_Bloused_black";
-        backpack = "";
+        uniformClass = "STB73_U_B_TacShirt_Full_Gloves_Bloused_Kneepads_Black_SlimSleeve";
+        backpack = "STB73_B_RTO_1_Black";
 
         weapons[] = {"STB73_MA5k","OPTRE_Smartfinder", "Throw", "Put"};
         respawnWeapons[] = {"STB73_MA5k","OPTRE_Smartfinder", "Throw", "Put"};
@@ -56,13 +59,13 @@ class CfgVehicles {
         attendant = 0;
         engineer = 0;
         canDeactivateMines = 0;
+        
+        backpack = "STB73_B_Grenadier_1_M43_Medium_Rucksack_Black";
 
-        uniformClass = "STB73_U_B_TacShirt_SlimSleeve_Gloves_Bloused_urban";
-        backpack = "STB73_Rucksack";
-        weapons[] = {"STB73_MA37GL","OPTRE_Smartfinder", "Throw", "Put"};
-        respawnWeapons[] = {"STB73_MA37GL","OPTRE_Smartfinder", "Throw", "Put"};
-        linkedItems[] = {"STB73_M43D_ODST_Black_Company","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemAndroid","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
-        respawnLinkedItems[] = {"STB73_M43D_ODST_Black_Company","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemAndroid","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
+        weapons[] = {"STB73_MA5AGL","OPTRE_Smartfinder", "Throw", "Put"};
+        respawnWeapons[] = {"STB73_MA5AGL","OPTRE_Smartfinder", "Throw", "Put"};
+        linkedItems[] = {"STB73_M43D_ODST_2_Black_Standard","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemAndroid","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
+        respawnLinkedItems[] = {"STB73_M43D_ODST_2_Black_Standard","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemAndroid","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
         magazines[] = {"TCP_1Rnd_40_Shell_HE","TCP_1Rnd_40_Shell_HE","TCP_1Rnd_40_Shell_HE","TCP_1Rnd_40_Shell_HE","TCP_1Rnd_40_Shell_HE","TCP_1Rnd_40_Shell_HE","TCP_1Rnd_40_Shell_HE","TCP_1Rnd_40_Shell_HE","TCP_1Rnd_40_Shell_HE","TCP_1Rnd_40_Shell_HE","MA_M8_Smoke_White","MA_M8_Smoke_White","MA_M9_Frag_Mag","MA_M9_Frag_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_AP_Mag"};
         respawnMagazines[] = {"TCP_1Rnd_40_Shell_HE","TCP_1Rnd_40_Shell_HE","TCP_1Rnd_40_Shell_HE","TCP_1Rnd_40_Shell_HE","TCP_1Rnd_40_Shell_HE","TCP_1Rnd_40_Shell_HE","TCP_1Rnd_40_Shell_HE","TCP_1Rnd_40_Shell_HE","TCP_1Rnd_40_Shell_HE","TCP_1Rnd_40_Shell_HE","MA_M8_Smoke_White","MA_M8_Smoke_White","MA_M9_Frag_Mag","MA_M9_Frag_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_AP_Mag"};
         items[] = {"ACE_bloodIV_250","ACE_bloodIV_250","ACE_bloodIV_500","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_epinephrine","ACE_epinephrine","ACE_morphine","ACE_morphine","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_splint","ACE_splint","ACE_splint","ACE_splint","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","DMNS_Biofoam","DMNS_Biofoam"};
@@ -81,14 +84,13 @@ class CfgVehicles {
         engineer = 0;
         canDeactivateMines = 0;
 
-        uniformClass = "STB73_U_B_TacShirt_SlimSleeve_Gloves_Bloused_urban";
-        backpack = "STB73_Rucksack";
+        backpack = "STB73_B_Rifleman_1_M43_Medium_Rucksack_Black";
 
-        weapons[] = {"STB73_MA37", "Throw", "Put"};
-        respawnWeapons[] = {"STB73_MA37", "Throw", "Put"};
+        weapons[] = {"STB73_MA5A", "Throw", "Put"};
+        respawnWeapons[] = {"STB73_MA5A", "Throw", "Put"};
 
-        linkedItems[] = {"STB73_M43D_ODST_Black_Company","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
-        respawnLinkedItems[] = {"STB73_M43D_ODST_Black_Company","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
+        linkedItems[] = {"STB73_M43D_ODST_2_Black_Standard","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
+        respawnLinkedItems[] = {"STB73_M43D_ODST_2_Black_Standard","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
 
         magazines[] = {"MA_M8_Smoke_White","MA_M8_Smoke_White","MA_M9_Frag_Mag","MA_M9_Frag_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag"};
         respawnMagazines[] = {"MA_M8_Smoke_White","MA_M8_Smoke_White","MA_M9_Frag_Mag","MA_M9_Frag_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag"};
@@ -108,14 +110,13 @@ class CfgVehicles {
         engineer = 0;
         canDeactivateMines = 0;
 
-        uniformClass = "STB73_U_B_TacShirt_SlimSleeve_Gloves_Bloused_urban";
-        backpack = "STB73_Rucksack_hev";
+        backpack = "STB73_B_Assaulter_2_M43_Medium_Rucksack_Black";
 
-        weapons[] = {"STB73_MA37","STB73_M41_SSR", "Throw", "Put"};
-        respawnWeapons[] = {"STB73_MA37","STB73_M41_SSR", "Throw", "Put"};
+        weapons[] = {"STB73_MA5A","STB73_M41_SSR", "Throw", "Put"};
+        respawnWeapons[] = {"STB73_MA5A","STB73_M41_SSR", "Throw", "Put"};
 
-        linkedItems[] = {"STB73_M43D_ODST_Black_Company","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
-        respawnLinkedItems[] = {"STB73_M43D_ODST_Black_Company","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
+        linkedItems[] = {"STB73_M43D_ODST_2_Black_Standard","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
+        respawnLinkedItems[] = {"STB73_M43D_ODST_2_Black_Standard","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
 
         magazines[] = {"STB73_HEAT","STB73_HEAT","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_M2_Smoke","OPTRE_M2_Smoke_Green","OPTRE_M9_Frag","OPTRE_M9_Frag"};
         respawnMagazines[] = {"STB73_HEAT","STB73_HEAT","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_M2_Smoke","OPTRE_M2_Smoke_Green","OPTRE_M9_Frag","OPTRE_M9_Frag"};
@@ -136,14 +137,13 @@ class CfgVehicles {
         engineer = 0;
         canDeactivateMines = 0;
 
-        uniformClass = "STB73_U_B_TacShirt_SlimSleeve_Gloves_Bloused_urban";
-        backpack = "STB73_Rucksack";
+        backpack = "STB73_B_Autorifleman_1_M43_Medium_Rucksack_Black";
 
         weapons[] = {"STB73_LMG_M731", "Throw", "Put"};
         respawnWeapons[] = {"STB73_LMG_M731", "Throw", "Put"};
 
-        linkedItems[] = {"STB73_M43D_ODST_Black_Company","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
-        respawnLinkedItems[] = {"STB73_M43D_ODST_Black_Company","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
+        linkedItems[] = {"STB73_M43D_ODST_2_Black_Standard","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
+        respawnLinkedItems[] = {"STB73_M43D_ODST_2_Black_Standard","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
 
         magazines[] = {"STB73_100rnd_762x51_Mag","STB73_100rnd_762x51_Mag","STB73_100rnd_762x51_Mag","STB73_100rnd_762x51_Mag","STB73_12Rnd_127x30_SAP_Mag","STB73_12Rnd_127x30_SAP_Mag","STB73_12Rnd_127x30_SAP_Mag","STB73_12Rnd_127x30_SAP_Mag","OPTRE_M2_Smoke","OPTRE_M2_Smoke_Green","OPTRE_M9_Frag","OPTRE_M9_Frag"};
         respawnMagazines[] = {"STB73_100rnd_762x51_Mag","STB73_100rnd_762x51_Mag","STB73_100rnd_762x51_Mag","STB73_100rnd_762x51_Mag","STB73_12Rnd_127x30_SAP_Mag","STB73_12Rnd_127x30_SAP_Mag","STB73_12Rnd_127x30_SAP_Mag","STB73_12Rnd_127x30_SAP_Mag","OPTRE_M2_Smoke","OPTRE_M2_Smoke_Green","OPTRE_M9_Frag","OPTRE_M9_Frag"};
@@ -164,14 +164,13 @@ class CfgVehicles {
         engineer = 0;
         canDeactivateMines = 0;
 
-        uniformClass = "STB73_U_B_TacShirt_SlimSleeve_Gloves_Bloused_urban";
-        backpack = "STB73_Rucksack";
+        backpack = "STB73_B_Sniper_1_M43_Medium_Rucksack_Black";
 
         weapons[] = {"STB73_SRS99AM_Stealth", "Throw", "Put"};
         respawnWeapons[] = {"STB73_SRS99AM_Stealth", "Throw", "Put"};
 
-        linkedItems[] = {"STB73_M43D_ODST_Black_Company","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
-        respawnLinkedItems[] = {"STB73_M43D_ODST_Black_Company","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
+        linkedItems[] = {"STB73_M43D_ODST_2_Black_Standard","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
+        respawnLinkedItems[] = {"STB73_M43D_ODST_2_Black_Standard","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
 
         magazines[] = {"STB73_M233_145x114x8_APFSDS_TC","STB73_12Rnd_127x30_SAP_Mag","STB73_12Rnd_127x30_SAP_Mag","STB73_12Rnd_127x30_SAP_Mag","STB73_12Rnd_127x30_SAP_Mag","OPTRE_M2_Smoke","OPTRE_M2_Smoke_Green","OPTRE_M9_Frag","OPTRE_M9_Frag"};
         respawnMagazines[] = {"STB73_M233_145x114x8_APFSDS_TC","STB73_12Rnd_127x30_SAP_Mag","STB73_12Rnd_127x30_SAP_Mag","STB73_12Rnd_127x30_SAP_Mag","STB73_12Rnd_127x30_SAP_Mag","OPTRE_M2_Smoke","OPTRE_M2_Smoke_Green","OPTRE_M9_Frag","OPTRE_M9_Frag"};
@@ -191,14 +190,13 @@ class CfgVehicles {
         engineer = 0;
         canDeactivateMines = 0;
 
-        uniformClass = "STB73_U_B_TacShirt_SlimSleeve_Gloves_Bloused_urban";
-        backpack = "STB73_Rucksack";
+        backpack = "STB73_B_Marksman_1_M43_Medium_Rucksack_Black";
 
         weapons[] = {"STB73_M392_DMR", "Throw", "Put"};
         respawnWeapons[] = {"STB73_M392_DMR", "Throw", "Put"};
 
-        linkedItems[] = {"STB73_M43D_ODST_Black_Company","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
-        respawnLinkedItems[] = {"STB73_M43D_ODST_Black_Company","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
+        linkedItems[] = {"STB73_M43D_ODST_2_Black_Standard","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
+        respawnLinkedItems[] = {"STB73_M43D_ODST_2_Black_Standard","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
 
         magazines[] = {"STB73_15Rnd_762x51_Mag","STB73_15Rnd_762x51_Mag","STB73_15Rnd_762x51_Mag","STB73_15Rnd_762x51_Mag","STB73_15Rnd_762x51_Mag","STB73_12Rnd_127x30_SAP_Mag","STB73_12Rnd_127x30_SAP_Mag","STB73_12Rnd_127x30_SAP_Mag","STB73_12Rnd_127x30_SAP_Mag","OPTRE_M2_Smoke","OPTRE_M2_Smoke_Green","OPTRE_M9_Frag","OPTRE_M9_Frag","TCF_20Rnd_86x70_Mag_APT"};
         respawnMagazines[] = {"STB73_15Rnd_762x51_Mag","STB73_15Rnd_762x51_Mag","STB73_15Rnd_762x51_Mag","STB73_15Rnd_762x51_Mag","STB73_15Rnd_762x51_Mag","STB73_12Rnd_127x30_SAP_Mag","STB73_12Rnd_127x30_SAP_Mag","STB73_12Rnd_127x30_SAP_Mag","STB73_12Rnd_127x30_SAP_Mag","OPTRE_M2_Smoke","OPTRE_M2_Smoke_Green","OPTRE_M9_Frag","OPTRE_M9_Frag","TCF_20Rnd_86x70_Mag_APT"};
@@ -218,14 +216,13 @@ class CfgVehicles {
         engineer = 0;
         canDeactivateMines = 0;
 
-        uniformClass = "STB73_U_B_TacShirt_SlimSleeve_Gloves_Bloused_urban";
-        backpack = "STB73_Rucksack";
+        backpack = "STB73_B_Marksman_2_M43_Medium_Rucksack_Black";
 
         weapons[] = {"STB73_M392_DMR", "Throw", "Put"};
         respawnWeapons[] = {"STB73_M392_DMR", "Throw", "Put"};
 
-        linkedItems[] = {"STB73_M43D_ODST_Black_Company","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
-        respawnLinkedItems[] = {"STB73_M43D_ODST_Black_Company","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
+        linkedItems[] = {"STB73_M43D_ODST_2_Black_Standard","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
+        respawnLinkedItems[] = {"STB73_M43D_ODST_2_Black_Standard","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
 
         magazines[] = {"STB73_15Rnd_762x51_Mag","STB73_15Rnd_762x51_Mag","STB73_15Rnd_762x51_Mag","STB73_15Rnd_762x51_Mag","STB73_15Rnd_762x51_Mag","STB73_12Rnd_127x30_SAP_Mag","STB73_12Rnd_127x30_SAP_Mag","STB73_12Rnd_127x30_SAP_Mag","STB73_12Rnd_127x30_SAP_Mag","OPTRE_M2_Smoke","OPTRE_M2_Smoke_Green","OPTRE_M9_Frag","OPTRE_M9_Frag","TCF_20Rnd_86x70_Mag_APT"};
         respawnMagazines[] = {"STB73_15Rnd_762x51_Mag","STB73_15Rnd_762x51_Mag","STB73_15Rnd_762x51_Mag","STB73_15Rnd_762x51_Mag","STB73_15Rnd_762x51_Mag","STB73_12Rnd_127x30_SAP_Mag","STB73_12Rnd_127x30_SAP_Mag","STB73_12Rnd_127x30_SAP_Mag","STB73_12Rnd_127x30_SAP_Mag","OPTRE_M2_Smoke","OPTRE_M2_Smoke_Green","OPTRE_M9_Frag","OPTRE_M9_Frag","TCF_20Rnd_86x70_Mag_APT"};
@@ -272,14 +269,13 @@ class CfgVehicles {
         engineer = 0;
         canDeactivateMines = 1;
 
-        uniformClass = "STB73_U_B_TacShirt_SlimSleeve_Gloves_Bloused_urban";
-        backpack = "STB73_Rucksack";
+        backpack = "STB73_B_Engineer_1_M43_Medium_Rucksack_Black";
 
         weapons[] = {"STB73_M7_SMG", "Throw", "Put"};
         respawnWeapons[] = {"STB73_M7_SMG", "Throw", "Put"};
 
-        linkedItems[] = {"STB73_M43D_ODST_Black_Company","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
-        respawnLinkedItems[] = {"STB73_M43D_ODST_Black_Company","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
+        linkedItems[] = {"STB73_M43D_ODST_2_Black_Standard","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
+        respawnLinkedItems[] = {"STB73_M43D_ODST_2_Black_Standard","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
 
         magazines[] = {"STB73_60Rnd_5x23Caseless_FMJ_Mag","STB73_60Rnd_5x23Caseless_FMJ_Mag","STB73_12Rnd_127x30_SAP_Mag","STB73_12Rnd_127x30_SAP_Mag","STB73_12Rnd_127x30_SAP_Mag","STB73_12Rnd_127x30_SAP_Mag"};
         respawnMagazines[] = {"STB73_60Rnd_5x23Caseless_FMJ_Mag","STB73_60Rnd_5x23Caseless_FMJ_Mag","STB73_12Rnd_127x30_SAP_Mag","STB73_12Rnd_127x30_SAP_Mag","STB73_12Rnd_127x30_SAP_Mag","STB73_12Rnd_127x30_SAP_Mag"};
@@ -299,14 +295,13 @@ class CfgVehicles {
         engineer = 0;
         canDeactivateMines = 0;
 
-        uniformClass = "STB73_U_B_TacShirt_SlimSleeve_Gloves_Bloused_urban";
-        backpack = "STB73_Rucksack";
+        backpack = "STB73_B_Medic_1_M43_Medium_Rucksack_Black";
 
-        weapons[] = {"STB73_MA37", "Throw", "Put"};
-        respawnWeapons[] = {"STB73_MA37", "Throw", "Put"};
+        weapons[] = {"STB73_MA5A", "Throw", "Put"};
+        respawnWeapons[] = {"STB73_MA5A", "Throw", "Put"};
 
-        linkedItems[] = {"STB73_M43D_ODST_Black_Company","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
-        respawnLinkedItems[] = {"STB73_M43D_ODST_Black_Company","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
+        linkedItems[] = {"STB73_M43D_ODST_2_Black_Standard","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
+        respawnLinkedItems[] = {"STB73_M43D_ODST_2_Black_Standard","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
 
         magazines[] = {"STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag"};
         respawnMagazines[] = {"STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag"};
@@ -326,14 +321,13 @@ class CfgVehicles {
         engineer = 0;
         canDeactivateMines = 0;
 
-        uniformClass = "STB73_U_B_TacShirt_SlimSleeve_Gloves_Bloused_urban";
-        backpack = "STB73_Rucksack";
+        backpack = "STB73_B_NCO_1_M43_Medium_Rucksack_Black";
 
-        weapons[] = {"STB73_MA37", "Throw", "Put"};
-        respawnWeapons[] = {"STB73_MA37", "Throw", "Put"};
+        weapons[] = {"STB73_MA5A", "Throw", "Put"};
+        respawnWeapons[] = {"STB73_MA5A", "Throw", "Put"};
 
-        linkedItems[] = {"STB73_M43D_ODST_Black_Company","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
-        respawnLinkedItems[] = {"STB73_M43D_ODST_Black_Company","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
+        linkedItems[] = {"STB73_M43D_ODST_2_Black_Standard","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
+        respawnLinkedItems[] = {"STB73_M43D_ODST_2_Black_Standard","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
 
         magazines[] = {"STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag"};
         respawnMagazines[] = {"STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag"};
@@ -353,14 +347,13 @@ class CfgVehicles {
         engineer = 0;
         canDeactivateMines = 0;
 
-        uniformClass = "STB73_U_B_TacShirt_SlimSleeve_Gloves_Bloused_urban";
-        backpack = "STB73_rucksack";
+        backpack = "STB73_B_NCO_2_M43_Medium_Rucksack_Black";
 
-        weapons[] = {"STB73_MA37", "Throw", "Put"};
-        respawnWeapons[] = {"STB73_MA37", "Throw", "Put"};
+        weapons[] = {"STB73_MA5A", "Throw", "Put"};
+        respawnWeapons[] = {"STB73_MA5A", "Throw", "Put"};
 
-        linkedItems[] = {"STB73_M43D_ODST_Black_Company","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
-        respawnLinkedItems[] = {"STB73_M43D_ODST_Black_Company","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
+        linkedItems[] = {"STB73_M43D_ODST_2_Black_Standard","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
+        respawnLinkedItems[] = {"STB73_M43D_ODST_2_Black_Standard","STB73_H_ECH55D_Standard_Blue","ItemMap","ItemRadio","ItemCompass","ItemWatch","OPTRE_NVG"};
 
         magazines[] = {"STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag"};
         respawnMagazines[] = {"STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","STB73_60Rnd_762x51_Mag","OPTRE_8Rnd_127x40_AP_Mag","OPTRE_8Rnd_127x40_AP_Mag"};

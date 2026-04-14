@@ -12,7 +12,9 @@ class STB73_MA40: TCP_arifle_MA40
 {
     author= "73rd S-4 Team";
     displayName = "[73] MA40 ICWS Assault Rifle";
-    baseWeapon = "STB73_MA40B";
+    baseWeapon = "STB73_MA40";
+    scope = 2;
+    scopeArsenal = 2;
     magazines[] = {"STB73_32Rnd_762x51_Mag_Tracer"}; // Requires a magazine to be defined so that the "Impact" slider in the arsenal will have a value. This also defines the standard magazine when the weapon is spawned.
     magazineWell[]={"STB73_32Rnd_762x51_MagWell","STB73_15Rnd_762x51_MagWell"};
     class XtdGearInfo
@@ -79,6 +81,15 @@ class STB73_MA37: TCP_arifle_MA37
         grenadeLauncher="None";
     };
 };
+class STB73_MA37_NoLight: STB73_MA37
+{
+    scope = 1;
+    scopeArsenal = 1;
+    class Flashlight{};
+    class XtdGearInfo
+    {
+    };
+};
 class STB73_MA37GL: TCP_arifle_MA37_GL
 {
     author= "73rd S-4 Team";
@@ -143,6 +154,7 @@ class STB73_MA37K: OPTRE_MA37K
         grenadeLauncher="None";
     };
 };
+
 class 19_UNSC_MA5A;
 class STB73_MA5A: 19_UNSC_MA5A
 {

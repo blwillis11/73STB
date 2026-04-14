@@ -135,9 +135,13 @@ class CfgEditorSubcategories
     {
         displayName = "Artillery";
     };
-	class supply_pods // Category class, you point to it in editorSubcategory property
+	class STB73_SupplyPods_EdSubCat // Category class, you point to it in editorSubcategory property
 	{
 		displayName = "Supply Pods"; // Name visible in the list
+	};
+	class STB73_Crates_EdSubCat // Category class, you point to it in editorSubcategory property
+	{
+		displayName = "Crates"; // Name visible in the list
 	};
     class STB73_Misc_EdSubCat
     {

@@ -59,10 +59,15 @@ switch true do {
 		_loaded = true;
 	};
 	case (_veh isKindOf "SDV_01_base_F") : {
-        _veh attachTo [_pelican, [0,-7.5,-.25]];
-        _veh setDir 180;
-        _loaded = true;
-    };
+		_veh attachTo [_pelican, [0, -7.5, -.25]];
+		_veh setDir 180;
+		_loaded = true;
+	};
+	case (_veh isKindOf "STB73_Space_Crate_Pallet_Large_Base") : {
+		_veh attachTo [_pelican, [0, -6.75, -1]];
+		_veh setDir 180;
+		_loaded = true;
+	};
 	case (
 	_veh isKindOf "73_M511_Springbok_IFV"
 	or _veh isKindOf "73_M511_Springbok_MGS"
@@ -106,7 +111,7 @@ switch true do {
 };
 
 if (_loaded) then {
-	_pelican setVariable ["Splits_Pelican_AttachedToVehiclesEffect", [vehicle player], true];
+	_pelican setVariable ["Splits_Pelican_AttachedToVehiclesEffect", [_veh], true];
 	titleText ["-------------------------------------------<br/><t color='#ff0000' size='1.5'>VEHICLE LOADED!</t><br/>-------------------------------------------<br/>", "PLAIN DOWN", -1, true, true];
 	playSound "FD_Finish_F";
 } else {

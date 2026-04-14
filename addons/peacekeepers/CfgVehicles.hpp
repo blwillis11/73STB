@@ -6,6 +6,8 @@ class CfgVehicles {
         editorCategory = "STB73_PK";
         editorSubcategory = "STB73_Infantry_EdSubCat";
         side = 2;
+
+        uniformClass = "TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Kneepads_Gray_SlimSleeve";
     };
     class STB73_Peacekeeper_RTO_Operator: STB73_PKBase
     {
@@ -19,8 +21,7 @@ class CfgVehicles {
         engineer = 0;
         canDeactivateMines = 0;
 
-        uniformClass = "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Gray";
-        backpack = "19th_H2A_marine_backpack_winter_rto";
+        backpack = "STB73_B_RTO_1_ANPRC171_Roll_White";
 
         weapons[] = {"STB73_M7_SMG","OPTRE_M6G_SF", "Throw", "Put"};
         respawnWeapons[] = {"STB73_M7_SMG","OPTRE_M6G_SF", "Throw", "Put"};
@@ -46,8 +47,7 @@ class CfgVehicles {
         engineer = 0;
         canDeactivateMines = 0;
 
-        uniformClass = "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Gray";
-        backpack = "19th_H2A_marine_backpack_winter";
+        backpack = "STB73_B_Medic_1_M43_Medium_Rucksack_Medical_Roll_White";
 
         weapons[] = {"STB73_M7_SMG","", "Throw", "Put"};
         respawnWeapons[] = {"STB73_M7_SMG","", "Throw", "Put"};
@@ -73,8 +73,7 @@ class CfgVehicles {
         engineer = 0;
         canDeactivateMines = 0;
 
-        uniformClass = "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Gray";
-        backpack = "19th_H2A_marine_backpack_winter";
+        backpack = "STB73_B_Rifleman_1_M43_Medium_Rucksack_Roll_White";
 
         weapons[] = {"STB73_MA5B","","OPTRE_Binoculars", "Throw", "Put"};
         respawnWeapons[] = {"STB73_MA5B","","OPTRE_Binoculars", "Throw", "Put"};
@@ -100,8 +99,7 @@ class CfgVehicles {
         engineer = 0;
         canDeactivateMines = 0;
 
-        uniformClass = "TCP_U_B_CBUU_FieldTop_SlimSleeve_Gloves_Bloused_Gray";
-        backpack = "19th_H2A_marine_backpack_winter";
+        backpack = "STB73_B_Rifleman_1_M43_Medium_Rucksack_Patrol_Roll_White";
 
         weapons[] = {"STB73_MA5B","","OPTRE_Binoculars", "Throw", "Put"};
         respawnWeapons[] = {"STB73_MA5B","","OPTRE_Binoculars", "Throw", "Put"};

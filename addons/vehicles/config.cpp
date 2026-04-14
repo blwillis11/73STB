@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 class CfgPatches {
-    class 73STB_Vehicles {
+    class STB73_Vehicles {
         name = COMPONENT_NAME;
 		units[] = 
         {
@@ -52,7 +52,8 @@ class CfgPatches {
             "STB73_Iguana_Medical_APC",//Load/unload
             "STB73_Komodo",//Load/unload
             "STB73_Merkava",//Load/unload
-            "STB73_cart"
+            "STB73_cart",
+            "STB73_Boat_Transport"
         }; 
         weapons[] = {
         };
@@ -61,7 +62,7 @@ class CfgPatches {
             "OPTRE_UNSC_Units_Army",
             "OPTRE_FunctionsLibrary",
             "DMNS_Armour",
-			"73STB_Functions"
+			"STB73_Functions"
         };
         authors[] = {"Salmon"}; // sub array of authors, considered for the specific addon, can be removed or left empty {}
         author = AUTHOR; // primary author name, either yours or your team's, considered for the whole mod

@@ -11,6 +11,18 @@ class STB73_F29_Nandao_VTOL : MEU_F29_Nandao_VTOL
     scope=2;
     side=1;
     crew = "STB73_Aviator";
+    class EventHandlers: EventHandlers
+    {
+        class STB73_RegisterThrusters_EH
+        {
+            init = "[(_this select 0),true,true,false] call STB73_fnc_RegisterThrusters;";
+        };
+    };
+    class UserActions
+    {
+        #include "cfg\UtilityActions.hpp"
+        #include "cfg\ThrusterActions.hpp"
+    };
     class VehicleSpawnerInfo {
         class STB73_AirSpawner
         {
@@ -36,6 +48,18 @@ class STB73_YSS_1000_A_VTOL_Single: OPTRE_YSS_1000_A_VTOL_Single
     scope=2;
     side=1;
     crew = "STB73_Aviator";
+    class EventHandlers: EventHandlers
+    {
+        class STB73_RegisterThrusters_EH
+        {
+            init = "[(_this select 0),true,true,false] call STB73_fnc_RegisterThrusters;";
+        };
+    };
+    class UserActions
+    {
+        #include "cfg\UtilityActions.hpp"
+        #include "cfg\ThrusterActions.hpp"
+    };
     class VehicleSpawnerInfo {
         class STB73_AirSpawner
         {
@@ -62,6 +86,18 @@ class STB73_Shortsword_01_F: DMNS_Shortsword_01_F
     scope=2;
     side=1;
     crew = "STB73_Aviator";
+    class EventHandlers: EventHandlers
+    {
+        class STB73_RegisterThrusters_EH
+        {
+            init = "[(_this select 0),true,true,false] call STB73_fnc_RegisterThrusters;";
+        };
+    };
+    class UserActions
+    {
+        #include "cfg\UtilityActions.hpp"
+        #include "cfg\ThrusterActions.hpp"
+    };
     class VehicleSpawnerInfo {
         class STB73_AirSpawner
         {
@@ -88,6 +124,18 @@ class STB73_JT_RM2_Longsword_dynamicLoadout_F: DMNS_JT_RM2_Longsword_dynamicLoad
     scope=2;
     side=1;
     crew = "STB73_Aviator";
+    class EventHandlers: EventHandlers
+    {
+        class STB73_RegisterThrusters_EH
+        {
+            init = "[(_this select 0),true,true,false] call STB73_fnc_RegisterThrusters;";
+        };
+    };
+    class UserActions
+    {
+        #include "cfg\UtilityActions.hpp"
+        #include "cfg\ThrusterActions.hpp"
+    };
     class VehicleSpawnerInfo {
         class STB73_AirSpawner
         {

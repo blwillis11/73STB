@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 class CfgPatches {
-    class 73STB_Peacekeeper {
+    class STB73_Peacekeeper {
         name = COMPONENT_NAME;
 		units[] = 
         {
@@ -15,8 +15,8 @@ class CfgPatches {
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-			"73STB_main",
-			"73STB_units"
+			"STB73_Main",
+			"STB73_Units"
         };
         authors[] = {"Salmon"}; // sub array of authors, considered for the specific addon, can be removed or left empty {}
         author = AUTHOR; // primary author name, either yours or your team's, considered for the whole mod
