@@ -19,6 +19,10 @@ class CfgEditorSubCategories
     {
         displayName = "Artillery";
     };
+    class 73_COP_Cars_EdSubCat
+    {
+        displayName = "Cars";
+    };
     class 73_COP_APCs_EdSubCat
     {
         displayName = "APCs";
@@ -26,6 +30,10 @@ class CfgEditorSubCategories
     class 73_COP_Tanks_EdSubCat
     {
         displayName = "Tanks";
+    };
+    class 73_COP_Turrets_EdSubCat
+    {
+        displayName = "Turrets";
     };
     class 73_COP_Helicopters_EdSubCat
     {

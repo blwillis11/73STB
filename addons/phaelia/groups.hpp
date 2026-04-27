@@ -8,6 +8,96 @@ class EAST
         {
             name = "Infantry";
             
+            class 73_COP_Cult_SF_Marksman_Team
+            {
+                name = "Cult SF Marksman Team";
+                side = 0;
+                faction = "73_COP";
+                icon = "\A3\ui_f\data\map\markers\nato\o_inf.paa";
+                rarityGroup = 0.5;
+                
+                class Unit0
+                {
+                    position[] = {0,0,0};
+                    rank = "SERGEANT";
+                    side = 0;
+                    vehicle = "73_COP_Cult_SF_TeamLead";
+                };
+                class Unit1
+                {
+                    position[] = {5,-5,0};
+                    rank = "PRIVATE";
+                    side = 0;
+                    vehicle = "73_COP_Cult_SF_Rifleman";
+                };
+                class Unit2
+                {
+                    position[] = {-5,-5,0};
+                    rank = "PRIVATE";
+                    side = 0;
+                    vehicle = "73_COP_Cult_SF_Marksman";
+                };
+                class Unit3
+                {
+                    position[] = {10,-10,0};
+                    rank = "PRIVATE";
+                    side = 0;
+                    vehicle = "73_COP_Cult_SF_Rifleman";
+                };
+                class Unit4
+                {
+                    position[] = {-10,-10,0};
+                    rank = "PRIVATE";
+                    side = 0;
+                    vehicle = "73_COP_Cult_SF_Marksman";
+                };
+            };
+            
+            class 73_COP_Cult_SF_MG_Team
+            {
+                name = "Cult SF MG Team";
+                side = 0;
+                faction = "73_COP";
+                icon = "\A3\ui_f\data\map\markers\nato\o_inf.paa";
+                rarityGroup = 0.5;
+                
+                class Unit0
+                {
+                    position[] = {0,0,0};
+                    rank = "SERGEANT";
+                    side = 0;
+                    vehicle = "73_COP_Cult_SF_TeamLead";
+                };
+                class Unit1
+                {
+                    position[] = {5,-5,0};
+                    rank = "PRIVATE";
+                    side = 0;
+                    vehicle = "73_COP_Cult_SF_MG";
+                };
+                class Unit2
+                {
+                    position[] = {-5,-5,0};
+                    rank = "PRIVATE";
+                    side = 0;
+                    vehicle = "73_COP_Cult_SF_MG";
+                };
+                class Unit3
+                {
+                    position[] = {10,-10,0};
+                    rank = "PRIVATE";
+                    side = 0;
+                    vehicle = "73_COP_Cult_Rifleman";
+                };
+                class Unit4
+                {
+                    position[] = {-10,-10,0};
+                    rank = "PRIVATE";
+                    side = 0;
+                    vehicle = "73_COP_Cult_Rifleman";
+                };
+            };
+            
             class 73_COP_Cult_SF_Group
             {
                 name = "Cult SF Group";
@@ -717,6 +807,185 @@ class EAST
                     rank = "PRIVATE";
                     side = 0;
                     vehicle = "73_COP_Cult_Sniper";
+                };
+            };
+        };
+        
+        class Mechanized
+        {
+            name = "Mechanized";
+            
+            class 73_COP_Cult_RSquad_Mechanized
+            {
+                name = "Cult RSquad Mechanized";
+                side = 0;
+                faction = "73_COP";
+                icon = "\A3\ui_f\data\map\markers\nato\o_inf.paa";
+                rarityGroup = 0.5;
+                
+                class Unit0
+                {
+                    position[] = {0,0,0};
+                    rank = "SERGEANT";
+                    side = 0;
+                    vehicle = "73_COP_Cult_APC_carrier";
+                };
+                class Unit1
+                {
+                    position[] = {5,-5,0};
+                    rank = "PRIVATE";
+                    side = 0;
+                    vehicle = "73_COP_Cult_SL";
+                };
+                class Unit2
+                {
+                    position[] = {-5,-5,0};
+                    rank = "PRIVATE";
+                    side = 0;
+                    vehicle = "73_COP_Cult_Rifleman";
+                };
+                class Unit3
+                {
+                    position[] = {10,-10,0};
+                    rank = "PRIVATE";
+                    side = 0;
+                    vehicle = "73_COP_Cult_Rifleman";
+                };
+                class Unit4
+                {
+                    position[] = {-10,-10,0};
+                    rank = "PRIVATE";
+                    side = 0;
+                    vehicle = "73_COP_Cult_Rifleman";
+                };
+                class Unit5
+                {
+                    position[] = {15,-15,0};
+                    rank = "PRIVATE";
+                    side = 0;
+                    vehicle = "73_COP_Cult_Rifleman";
+                };
+                class Unit6
+                {
+                    position[] = {-15,-15,0};
+                    rank = "PRIVATE";
+                    side = 0;
+                    vehicle = "73_COP_Cult_Rifleman";
+                };
+                class Unit7
+                {
+                    position[] = {20,-20,0};
+                    rank = "PRIVATE";
+                    side = 0;
+                    vehicle = "73_COP_Cult_Grenadier";
+                };
+                class Unit8
+                {
+                    position[] = {-20,-20,0};
+                    rank = "PRIVATE";
+                    side = 0;
+                    vehicle = "73_COP_Cult_Rifleman";
+                };
+            };
+            
+            class 73_COP_Cult_RSquad_Hemtt
+            {
+                name = "Cult RSquad Hemtt";
+                side = 0;
+                faction = "73_COP";
+                icon = "\A3\ui_f\data\map\markers\nato\o_inf.paa";
+                rarityGroup = 0.5;
+                
+                class Unit0
+                {
+                    position[] = {0,0,0};
+                    rank = "SERGEANT";
+                    side = 0;
+                    vehicle = "73_COP_Cult_HEMTT_Transport";
+                };
+                class Unit1
+                {
+                    position[] = {5,-5,0};
+                    rank = "PRIVATE";
+                    side = 0;
+                    vehicle = "73_COP_Cult_SL";
+                };
+                class Unit2
+                {
+                    position[] = {-5,-5,0};
+                    rank = "PRIVATE";
+                    side = 0;
+                    vehicle = "73_COP_Cult_Rifleman";
+                };
+                class Unit3
+                {
+                    position[] = {10,-10,0};
+                    rank = "PRIVATE";
+                    side = 0;
+                    vehicle = "73_COP_Cult_Rifleman";
+                };
+                class Unit4
+                {
+                    position[] = {-10,-10,0};
+                    rank = "PRIVATE";
+                    side = 0;
+                    vehicle = "73_COP_Cult_Rifleman";
+                };
+                class Unit5
+                {
+                    position[] = {15,-15,0};
+                    rank = "PRIVATE";
+                    side = 0;
+                    vehicle = "73_COP_Cult_Rifleman";
+                };
+                class Unit6
+                {
+                    position[] = {-15,-15,0};
+                    rank = "PRIVATE";
+                    side = 0;
+                    vehicle = "73_COP_Cult_Rifleman";
+                };
+                class Unit7
+                {
+                    position[] = {20,-20,0};
+                    rank = "PRIVATE";
+                    side = 0;
+                    vehicle = "73_COP_Cult_Rifleman";
+                };
+                class Unit8
+                {
+                    position[] = {-20,-20,0};
+                    rank = "PRIVATE";
+                    side = 0;
+                    vehicle = "73_COP_Cult_Rifleman";
+                };
+                class Unit9
+                {
+                    position[] = {25,-25,0};
+                    rank = "PRIVATE";
+                    side = 0;
+                    vehicle = "73_COP_Cult_Rifleman";
+                };
+                class Unit10
+                {
+                    position[] = {-25,-25,0};
+                    rank = "PRIVATE";
+                    side = 0;
+                    vehicle = "73_COP_Cult_Rifleman";
+                };
+                class Unit11
+                {
+                    position[] = {30,-30,0};
+                    rank = "PRIVATE";
+                    side = 0;
+                    vehicle = "73_COP_Cult_Rifleman";
+                };
+                class Unit12
+                {
+                    position[] = {-30,-30,0};
+                    rank = "PRIVATE";
+                    side = 0;
+                    vehicle = "73_COP_Cult_Rifleman";
                 };
             };
         };

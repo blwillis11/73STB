@@ -4,7 +4,7 @@ class 73_COP_UnitBase: O_Soldier_F
     scope = 0;
     scopeCurator = 0;
     
-    author = "M. Andrews";
+    author = "Capt. A. Grayson";
     side = 0;
     faction = "73_COP";
     editorCategory = "73_COP_EdCat";
@@ -35,8 +35,8 @@ class 73_COP_Cult_Bomber: 73_COP_UnitBase
     weapons[] = {"STB73_M6J_TCP_muzzle_flash_127_01_acc_flashlight_TCP_optic_M81ERO_TCP_bipod_handGuard_M6G","Knife_kukri", "Throw", "Put"};
     respawnWeapons[] = {"STB73_M6J_TCP_muzzle_flash_127_01_acc_flashlight_TCP_optic_M81ERO_TCP_bipod_handGuard_M6G","Knife_kukri", "Throw", "Put"};
 
-    linkedItems[] = {"CoP_V_M43A_Light_3_Olive","ReconCloaks_H_Hood_tna","NSWep_NVG","G_CBRN_M04_Hood"};
-    respawnLinkedItems[] = {"CoP_V_M43A_Light_3_Olive","ReconCloaks_H_Hood_tna","NSWep_NVG","G_CBRN_M04_Hood"};
+    linkedItems[] = {"TCP_V_M43A_Light_3_Olive","ReconCloaks_H_Hood_tna","NSWep_NVG","G_CBRN_M04_Hood"};
+    respawnLinkedItems[] = {"TCP_V_M43A_Light_3_Olive","ReconCloaks_H_Hood_tna","NSWep_NVG","G_CBRN_M04_Hood"};
 
     magazines[] = {"STB73_24Rnd_127x30_SAP_Mag_Tracer","STB73_36Rnd_127x30_SAP_Mag_Tracer","STB73_36Rnd_127x30_SAP_Mag_Tracer","STB73_36Rnd_127x30_SAP_Mag_Tracer","STB73_36Rnd_127x30_SAP_Mag_Tracer","STB73_36Rnd_127x30_SAP_Mag_Tracer","STB73_36Rnd_127x30_SAP_Mag_Tracer","STB73_36Rnd_127x30_SAP_Mag_Tracer"};
     respawnMagazines[] = {"STB73_24Rnd_127x30_SAP_Mag_Tracer","STB73_36Rnd_127x30_SAP_Mag_Tracer","STB73_36Rnd_127x30_SAP_Mag_Tracer","STB73_36Rnd_127x30_SAP_Mag_Tracer","STB73_36Rnd_127x30_SAP_Mag_Tracer","STB73_36Rnd_127x30_SAP_Mag_Tracer","STB73_36Rnd_127x30_SAP_Mag_Tracer","STB73_36Rnd_127x30_SAP_Mag_Tracer"};
@@ -93,8 +93,8 @@ class 73_COP_Cult_Platoon_Lead: 73_COP_UnitBase
     weapons[] = {"STB73_BR55HBM1_CQC_NSWep_BR55M1_FlashHider_NSWep_BR55_Flashlight_TCP_optic_M81ERO","Knife_kukri", "Throw", "Put"};
     respawnWeapons[] = {"STB73_BR55HBM1_CQC_NSWep_BR55M1_FlashHider_NSWep_BR55_Flashlight_TCP_optic_M81ERO","Knife_kukri", "Throw", "Put"};
 
-    linkedItems[] = {"CoP_V_M43A_Light_3_Green","TCP_H_Helmet_CH43A_Green","ReconCloaks_NV_Hood_Down_tna","G_CBRN_S10"};
-    respawnLinkedItems[] = {"CoP_V_M43A_Light_3_Green","TCP_H_Helmet_CH43A_Green","ReconCloaks_NV_Hood_Down_tna","G_CBRN_S10"};
+    linkedItems[] = {"TCP_V_M43A_Light_3_Green","TCP_H_Helmet_CH43A_Green","ReconCloaks_NV_Hood_Down_tna","G_CBRN_S10"};
+    respawnLinkedItems[] = {"TCP_V_M43A_Light_3_Green","TCP_H_Helmet_CH43A_Green","ReconCloaks_NV_Hood_Down_tna","G_CBRN_S10"};
 
     magazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag"};
     respawnMagazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag"};
@@ -122,8 +122,8 @@ class 73_COP_Friar_Lead: 73_COP_UnitBase
     weapons[] = {"STB73_BR55HBM1_CQC_NSWep_BR55M1_FlashHider_NSWep_BR55_Flashlight_TCP_optic_M81ERO","Knife_kukri", "Throw", "Put"};
     respawnWeapons[] = {"STB73_BR55HBM1_CQC_NSWep_BR55M1_FlashHider_NSWep_BR55_Flashlight_TCP_optic_M81ERO","Knife_kukri", "Throw", "Put"};
 
-    linkedItems[] = {"CoP_V_M43A_Light_3_Black","ReconCloaks_H_Hood_blk","ReconCloaks_NV_Hood_Down_blk","G_CBRN_B_black"};
-    respawnLinkedItems[] = {"CoP_V_M43A_Light_3_Black","ReconCloaks_H_Hood_blk","ReconCloaks_NV_Hood_Down_blk","G_CBRN_B_black"};
+    linkedItems[] = {"TCP_V_M43A_Light_3_Black","ReconCloaks_H_Hood_blk","ReconCloaks_NV_Hood_Down_blk","G_CBRN_B_black"};
+    respawnLinkedItems[] = {"TCP_V_M43A_Light_3_Black","ReconCloaks_H_Hood_blk","ReconCloaks_NV_Hood_Down_blk","G_CBRN_B_black"};
 
     magazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag"};
     respawnMagazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag"};
@@ -151,8 +151,8 @@ class 73_COP_Cult_SF_MG: 73_COP_UnitBase
     weapons[] = {"STB73_HMG_M250_TCP_muzzle_snds_523_02_TCP_optic_M81ERO_Blue","Knife_kukri", "Throw", "Put"};
     respawnWeapons[] = {"STB73_HMG_M250_TCP_muzzle_snds_523_02_TCP_optic_M81ERO_Blue","Knife_kukri", "Throw", "Put"};
 
-    linkedItems[] = {"CoP_V_M43A_Light_2_2_Black","TCP_H_Helmet_ECH43A_Black_Black","OPTRE_NVG_HUL3_Gray","TCP_G_BalaclavaTacticalGlasses_Black_Black"};
-    respawnLinkedItems[] = {"CoP_V_M43A_Light_2_2_Black","TCP_H_Helmet_ECH43A_Black_Black","OPTRE_NVG_HUL3_Gray","TCP_G_BalaclavaTacticalGlasses_Black_Black"};
+    linkedItems[] = {"TCP_V_M43A_Light_2_2_Black","TCP_H_Helmet_ECH43A_Black_Black","OPTRE_NVG_HUL3_Gray","TCP_G_BalaclavaTacticalGlasses_Black_Black"};
+    respawnLinkedItems[] = {"TCP_V_M43A_Light_2_2_Black","TCP_H_Helmet_ECH43A_Black_Black","OPTRE_NVG_HUL3_Gray","TCP_G_BalaclavaTacticalGlasses_Black_Black"};
 
     magazines[] = {"OPTRE_50Rnd_127x99_M250_Box","OPTRE_50Rnd_127x99_M250_Box","OPTRE_50Rnd_127x99_M250_Box"};
     respawnMagazines[] = {"OPTRE_50Rnd_127x99_M250_Box","OPTRE_50Rnd_127x99_M250_Box","OPTRE_50Rnd_127x99_M250_Box"};
@@ -209,8 +209,8 @@ class 73_COP_Cult_Grenadier: 73_COP_UnitBase
     weapons[] = {"NSWep_BR55HBM1GL_TCP_optic_M27RCO","Knife_kukri", "Throw", "Put"};
     respawnWeapons[] = {"NSWep_BR55HBM1GL_TCP_optic_M27RCO","Knife_kukri", "Throw", "Put"};
 
-    linkedItems[] = {"CoP_V_M43A_Light_3_Olive","ReconCloaks_H_Hood_tna","NSWep_NVG","G_CBRN_M04_Hood"};
-    respawnLinkedItems[] = {"CoP_V_M43A_Light_3_Olive","ReconCloaks_H_Hood_tna","NSWep_NVG","G_CBRN_M04_Hood"};
+    linkedItems[] = {"TCP_V_M43A_Light_3_Olive","ReconCloaks_H_Hood_tna","NSWep_NVG","G_CBRN_M04_Hood"};
+    respawnLinkedItems[] = {"TCP_V_M43A_Light_3_Olive","ReconCloaks_H_Hood_tna","NSWep_NVG","G_CBRN_M04_Hood"};
 
     magazines[] = {"36Rnd_95x40_br_55","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","PHEN_FSPLUS_ChemGrenade_RiotCSGasGrenade_40mm_3GL","PHEN_FSPLUS_ChemGrenade_RiotCSGasGrenade_40mm_3GL","PHEN_FSPLUS_ChemGrenade_RiotCSGasGrenade_40mm_3GL"};
     respawnMagazines[] = {"36Rnd_95x40_br_55","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","PHEN_FSPLUS_ChemGrenade_RiotCSGasGrenade_40mm_3GL","PHEN_FSPLUS_ChemGrenade_RiotCSGasGrenade_40mm_3GL","PHEN_FSPLUS_ChemGrenade_RiotCSGasGrenade_40mm_3GL"};
@@ -238,8 +238,8 @@ class 73_COP_Cult_Company_Lead: 73_COP_UnitBase
     weapons[] = {"STB73_BR55HBM1_CQC_NSWep_BR55M1_FlashHider_NSWep_BR55_Flashlight_TCP_optic_M81ERO","Knife_kukri", "Throw", "Put"};
     respawnWeapons[] = {"STB73_BR55HBM1_CQC_NSWep_BR55M1_FlashHider_NSWep_BR55_Flashlight_TCP_optic_M81ERO","Knife_kukri", "Throw", "Put"};
 
-    linkedItems[] = {"CoP_V_M43A_Light_3_Brown","TCP_H_Beret_Tan","ReconCloaks_NV_Hood_Down_snd","MK50"};
-    respawnLinkedItems[] = {"CoP_V_M43A_Light_3_Brown","TCP_H_Beret_Tan","ReconCloaks_NV_Hood_Down_snd","MK50"};
+    linkedItems[] = {"TCP_V_M43A_Light_3_Brown","TCP_H_Beret_Tan","ReconCloaks_NV_Hood_Down_snd","MK50"};
+    respawnLinkedItems[] = {"TCP_V_M43A_Light_3_Brown","TCP_H_Beret_Tan","ReconCloaks_NV_Hood_Down_snd","MK50"};
 
     magazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag"};
     respawnMagazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag"};
@@ -296,8 +296,8 @@ class 73_COP_Cult_Sniper: 73_COP_UnitBase
     weapons[] = {"STB73_SRS99AM_Stealth_NSWep_SRS99AM_Suppressor_Cloth_NSWep_ORACLE_N_Optic_E","Knife_kukri", "Throw", "Put"};
     respawnWeapons[] = {"STB73_SRS99AM_Stealth_NSWep_SRS99AM_Suppressor_Cloth_NSWep_ORACLE_N_Optic_E","Knife_kukri", "Throw", "Put"};
 
-    linkedItems[] = {"CoP_V_M43A_Light_Olive","ReconCloaks_H_SniperHoodSpec_taiga","NSWep_NVG","TCP_G_BalaclavaTacticalGlasses_Green_Red"};
-    respawnLinkedItems[] = {"CoP_V_M43A_Light_Olive","ReconCloaks_H_SniperHoodSpec_taiga","NSWep_NVG","TCP_G_BalaclavaTacticalGlasses_Green_Red"};
+    linkedItems[] = {"TCP_V_M43A_Light_Olive","ReconCloaks_H_SniperHoodSpec_taiga","NSWep_NVG","TCP_G_BalaclavaTacticalGlasses_Green_Red"};
+    respawnLinkedItems[] = {"TCP_V_M43A_Light_Olive","ReconCloaks_H_SniperHoodSpec_taiga","NSWep_NVG","TCP_G_BalaclavaTacticalGlasses_Green_Red"};
 
     magazines[] = {"STB73_M232_145x114x4_APFSDS_TC","STB73_M232_145x114x4_APFSDS_TC","STB73_M232_145x114x4_APFSDS_TC","STB73_M232_145x114x4_APFSDS_TC","STB73_M232_145x114x4_APFSDS_TC","STB73_M232_145x114x4_APFSDS_TC","STB73_M232_145x114x4_APFSDS_TC","STB73_M232_145x114x4_APFSDS_TC"};
     respawnMagazines[] = {"STB73_M232_145x114x4_APFSDS_TC","STB73_M232_145x114x4_APFSDS_TC","STB73_M232_145x114x4_APFSDS_TC","STB73_M232_145x114x4_APFSDS_TC","STB73_M232_145x114x4_APFSDS_TC","STB73_M232_145x114x4_APFSDS_TC","STB73_M232_145x114x4_APFSDS_TC","STB73_M232_145x114x4_APFSDS_TC"};
@@ -325,8 +325,8 @@ class 73_COP_Cult_SF_TeamLead: 73_COP_UnitBase
     weapons[] = {"STB73_BR55HBM1_DMR_NSWep_BR55M1_Suppressor_NSWep_BR55_Flashlight_TCP_optic_M27RCO","Knife_kukri", "Throw", "Put"};
     respawnWeapons[] = {"STB73_BR55HBM1_DMR_NSWep_BR55M1_Suppressor_NSWep_BR55_Flashlight_TCP_optic_M27RCO","Knife_kukri", "Throw", "Put"};
 
-    linkedItems[] = {"CoP_V_M43A_Light_3_2_Black","TCP_H_Helmet_ECH43A_Black_Red","OPTRE_NVG_HUL3_Gray","TCP_G_BalaclavaTacticalGlasses_Black_Black"};
-    respawnLinkedItems[] = {"CoP_V_M43A_Light_3_2_Black","TCP_H_Helmet_ECH43A_Black_Red","OPTRE_NVG_HUL3_Gray","TCP_G_BalaclavaTacticalGlasses_Black_Black"};
+    linkedItems[] = {"TCP_V_M43A_BaseSec_3_2_Black","TCP_H_Helmet_ECH43A_Black_Red","OPTRE_NVG_HUL3_Gray","TCP_G_BalaclavaTacticalGlasses_Black_Black"};
+    respawnLinkedItems[] = {"TCP_V_M43A_BaseSec_3_2_Black","TCP_H_Helmet_ECH43A_Black_Red","OPTRE_NVG_HUL3_Gray","TCP_G_BalaclavaTacticalGlasses_Black_Black"};
 
     magazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag_Tracer_IR"};
     respawnMagazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag_Tracer_IR"};
@@ -354,8 +354,8 @@ class 73_COP_Cult_Rifleman: 73_COP_UnitBase
     weapons[] = {"STB73_BR55HBM1_CQC_NSWep_BR55M1_FlashHider_NSWep_BR55_Flashlight_TCP_optic_M81ERO","Knife_kukri", "Throw", "Put"};
     respawnWeapons[] = {"STB73_BR55HBM1_CQC_NSWep_BR55M1_FlashHider_NSWep_BR55_Flashlight_TCP_optic_M81ERO","Knife_kukri", "Throw", "Put"};
 
-    linkedItems[] = {"CoP_V_M43A_Light_3_Olive","ReconCloaks_H_Hood_tna","NSWep_NVG","G_CBRN_M04_Hood"};
-    respawnLinkedItems[] = {"CoP_V_M43A_Light_3_Olive","ReconCloaks_H_Hood_tna","NSWep_NVG","G_CBRN_M04_Hood"};
+    linkedItems[] = {"TCP_V_M43A_Light_3_Olive","ReconCloaks_H_Hood_tna","NSWep_NVG","G_CBRN_M04_Hood"};
+    respawnLinkedItems[] = {"TCP_V_M43A_Light_3_Olive","ReconCloaks_H_Hood_tna","NSWep_NVG","G_CBRN_M04_Hood"};
 
     magazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag"};
     respawnMagazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag"};
@@ -383,8 +383,8 @@ class 73_COP_Cult_SL: 73_COP_UnitBase
     weapons[] = {"STB73_BR55HBM1_CQC_NSWep_BR55M1_FlashHider_NSWep_BR55_Flashlight_TCP_optic_M81ERO","Knife_kukri", "Throw", "Put"};
     respawnWeapons[] = {"STB73_BR55HBM1_CQC_NSWep_BR55M1_FlashHider_NSWep_BR55_Flashlight_TCP_optic_M81ERO","Knife_kukri", "Throw", "Put"};
 
-    linkedItems[] = {"CoP_V_M43A_Light_3_Olive","ReconCloaks_H_MaskingHood_dazzle_tna","NSWep_NVG","G_CBRN_M04_Hood"};
-    respawnLinkedItems[] = {"CoP_V_M43A_Light_3_Olive","ReconCloaks_H_MaskingHood_dazzle_tna","NSWep_NVG","G_CBRN_M04_Hood"};
+    linkedItems[] = {"TCP_V_M43A_Light_3_Olive","ReconCloaks_H_MaskingHood_dazzle_tna","NSWep_NVG","G_CBRN_M04_Hood"};
+    respawnLinkedItems[] = {"TCP_V_M43A_Light_3_Olive","ReconCloaks_H_MaskingHood_dazzle_tna","NSWep_NVG","G_CBRN_M04_Hood"};
 
     magazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag"};
     respawnMagazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag"};
@@ -412,8 +412,8 @@ class 73_COP_Cult_SF_Rifleman: 73_COP_UnitBase
     weapons[] = {"STB73_BR55HBM1_DMR_NSWep_BR55M1_Suppressor_NSWep_BR55_Flashlight_TCP_optic_M27RCO","Knife_kukri", "Throw", "Put"};
     respawnWeapons[] = {"STB73_BR55HBM1_DMR_NSWep_BR55M1_Suppressor_NSWep_BR55_Flashlight_TCP_optic_M27RCO","Knife_kukri", "Throw", "Put"};
 
-    linkedItems[] = {"CoP_V_M43A_GungnirL_3_2_Black","TCP_H_Helmet_ECH43A_Black_Black","OPTRE_NVG_HUL3_Gray","TCP_G_BalaclavaTacticalGlasses_Black_Black"};
-    respawnLinkedItems[] = {"CoP_V_M43A_GungnirL_3_2_Black","TCP_H_Helmet_ECH43A_Black_Black","OPTRE_NVG_HUL3_Gray","TCP_G_BalaclavaTacticalGlasses_Black_Black"};
+    linkedItems[] = {"TCP_V_M43A_GungnirL_3_2_Black","TCP_H_Helmet_ECH43A_Black_Black","OPTRE_NVG_HUL3_Gray","TCP_G_BalaclavaTacticalGlasses_Black_Black"};
+    respawnLinkedItems[] = {"TCP_V_M43A_GungnirL_3_2_Black","TCP_H_Helmet_ECH43A_Black_Black","OPTRE_NVG_HUL3_Gray","TCP_G_BalaclavaTacticalGlasses_Black_Black"};
 
     magazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag_Tracer_IR"};
     respawnMagazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag_Tracer_IR"};
@@ -441,8 +441,8 @@ class 73_COP_Cult_SF_Marksman: 73_COP_UnitBase
     weapons[] = {"STB73_M392_DMR_TCP_muzzle_snds_523_02_TCP_optic_M27RCO","Knife_kukri", "Throw", "Put"};
     respawnWeapons[] = {"STB73_M392_DMR_TCP_muzzle_snds_523_02_TCP_optic_M27RCO","Knife_kukri", "Throw", "Put"};
 
-    linkedItems[] = {"CoP_V_M43A_Light_2_2_Black","TCP_H_Helmet_ECH43A_Black_Black","OPTRE_NVG_HUL3_Gray","TCP_G_BalaclavaTacticalGlasses_Black_Black"};
-    respawnLinkedItems[] = {"CoP_V_M43A_Light_2_2_Black","TCP_H_Helmet_ECH43A_Black_Black","OPTRE_NVG_HUL3_Gray","TCP_G_BalaclavaTacticalGlasses_Black_Black"};
+    linkedItems[] = {"TCP_V_M43A_Light_2_2_Black","TCP_H_Helmet_ECH43A_Black_Black","OPTRE_NVG_HUL3_Gray","TCP_G_BalaclavaTacticalGlasses_Black_Black"};
+    respawnLinkedItems[] = {"TCP_V_M43A_Light_2_2_Black","TCP_H_Helmet_ECH43A_Black_Black","OPTRE_NVG_HUL3_Gray","TCP_G_BalaclavaTacticalGlasses_Black_Black"};
 
     magazines[] = {"STB73_15Rnd_762x51_Mag"};
     respawnMagazines[] = {"STB73_15Rnd_762x51_Mag"};
@@ -470,8 +470,8 @@ class 73_COP_Cult_Medic: 73_COP_UnitBase
     weapons[] = {"STB73_BR55HBM1_CQC_NSWep_BR55M1_FlashHider_NSWep_BR55_Flashlight_TCP_optic_M81ERO","Knife_kukri", "Throw", "Put"};
     respawnWeapons[] = {"STB73_BR55HBM1_CQC_NSWep_BR55M1_FlashHider_NSWep_BR55_Flashlight_TCP_optic_M81ERO","Knife_kukri", "Throw", "Put"};
 
-    linkedItems[] = {"CoP_V_M43A_Light_3_Olive","ReconCloaks_H_Hood_ghex","NSWep_NVG","G_CBRN_M04_Hood"};
-    respawnLinkedItems[] = {"CoP_V_M43A_Light_3_Olive","ReconCloaks_H_Hood_ghex","NSWep_NVG","G_CBRN_M04_Hood"};
+    linkedItems[] = {"TCP_V_M43A_Light_3_Olive","ReconCloaks_H_Hood_ghex","NSWep_NVG","G_CBRN_M04_Hood"};
+    respawnLinkedItems[] = {"TCP_V_M43A_Light_3_Olive","ReconCloaks_H_Hood_ghex","NSWep_NVG","G_CBRN_M04_Hood"};
 
     magazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag"};
     respawnMagazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag"};
@@ -499,8 +499,8 @@ class 73_COP_Cult_MG: 73_COP_UnitBase
     weapons[] = {"STB73_GMG_M247A1_TCP_optic_M81ERO", "Throw", "Put"};
     respawnWeapons[] = {"STB73_GMG_M247A1_TCP_optic_M81ERO", "Throw", "Put"};
 
-    linkedItems[] = {"CoP_V_M43A_Light_3_Olive","ReconCloaks_H_Hood_tna","NSWep_NVG","G_CBRN_M04_Hood"};
-    respawnLinkedItems[] = {"CoP_V_M43A_Light_3_Olive","ReconCloaks_H_Hood_tna","NSWep_NVG","G_CBRN_M04_Hood"};
+    linkedItems[] = {"TCP_V_M43A_Light_3_Olive","ReconCloaks_H_Hood_tna","NSWep_NVG","G_CBRN_M04_Hood"};
+    respawnLinkedItems[] = {"TCP_V_M43A_Light_3_Olive","ReconCloaks_H_Hood_tna","NSWep_NVG","G_CBRN_M04_Hood"};
 
     magazines[] = {"STB73_200rnd_762x51_Mag_Tracer_Yellow","STB73_200rnd_762x51_Mag_Tracer_Yellow"};
     respawnMagazines[] = {"STB73_200rnd_762x51_Mag_Tracer_Yellow","STB73_200rnd_762x51_Mag_Tracer_Yellow"};
@@ -528,8 +528,8 @@ class 73_COP_Friar_Bodyguard: 73_COP_UnitBase
     weapons[] = {"STB73_BR55HBM1_CQC_NSWep_BR55M1_FlashHider_NSWep_BR55_Flashlight_TCP_optic_M81ERO","Knife_kukri", "Throw", "Put"};
     respawnWeapons[] = {"STB73_BR55HBM1_CQC_NSWep_BR55M1_FlashHider_NSWep_BR55_Flashlight_TCP_optic_M81ERO","Knife_kukri", "Throw", "Put"};
 
-    linkedItems[] = {"CoP_V_M43A_Light_3_Black","TCP_H_Helmet_CH43A_Black","ReconCloaks_NV_Hood_Down_blk","G_CBRN_B_black"};
-    respawnLinkedItems[] = {"CoP_V_M43A_Light_3_Black","TCP_H_Helmet_CH43A_Black","ReconCloaks_NV_Hood_Down_blk","G_CBRN_B_black"};
+    linkedItems[] = {"TCP_V_M43A_Light_3_Black","TCP_H_Helmet_CH43A_Black","ReconCloaks_NV_Hood_Down_blk","G_CBRN_B_black"};
+    respawnLinkedItems[] = {"TCP_V_M43A_Light_3_Black","TCP_H_Helmet_CH43A_Black","ReconCloaks_NV_Hood_Down_blk","G_CBRN_B_black"};
 
     magazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag"};
     respawnMagazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag"};
