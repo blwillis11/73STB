@@ -37,7 +37,16 @@ class CfgWeapons
     class UniformItem;
     class TCP_equipmentTypes;
     class TCP_uniformDecals;
-    
+
+    class DetectorCore;
+    class MineDetector: DetectorCore
+    {
+        class ItemInfo : ItemInfo
+        {
+            mass=0;
+        };
+    };
+
     class STB73_Vest_Base: ItemCore
 	{
 		class ItemInfo;
@@ -215,14 +224,14 @@ class CfgWeapons
                 class Face
                 {
                 hitpointName="HitFace";
-                armor=12;
-                passThrough=0.5;
+                armor=14;
+                passThrough=0.2;
                 };
                 class Head
                 {
                 hitpointName="HitHead";
-                armor=18;
-                passThrough=0.5;
+                armor=20;
+                passThrough=0.2;
                 };
             };
         };
@@ -234,21 +243,27 @@ class CfgWeapons
     ECH55D_HELMET(Company,Black,Officer)
     ECH55D_HELMET(Company,Red,SORC)
     ECH55D_HELMET(Company,Gold,NCO)
+    ECH55D_HELMET(Company,Green,Specialist)
     ECH55D_HELMET(Company,Blue,Enlisted)
+
+    ECH55D_HELMET(Medic,Red,SORC)
 
     ECH55D_HELMET(Standard,Black,Officer)
     ECH55D_HELMET(Standard,Red,SORC)
     ECH55D_HELMET(Standard,Gold,NCO)
+    ECH55D_HELMET(Standard,Green,Specialist)
     ECH55D_HELMET(Standard,Blue,Enlisted)
 
     ECH55D_HELMET(Atlas1,Black,Officer)
     ECH55D_HELMET(Atlas1,Red,SORC) 
     ECH55D_HELMET(Atlas1,Gold,NCO)
+    ECH55D_HELMET(Atlas1,Green,Specialist)
     ECH55D_HELMET(Atlas1,Blue,Enlisted)
 
     ECH55D_HELMET(Atlas2,Black,Officer)
     ECH55D_HELMET(Atlas2,Red,SORC)
     ECH55D_HELMET(Atlas2,Gold,NCO)
+    ECH55D_HELMET(Atlas2,Green,Specialist)
     ECH55D_HELMET(Atlas2,Blue,Enlisted)
 
     class Uniform_Base;

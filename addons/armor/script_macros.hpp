@@ -1663,7 +1663,7 @@ class HitpointsProtectionInfo {  \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_NORMAL(CAMO,SHIRT,SLEEVE));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -1683,7 +1683,7 @@ class HitpointsProtectionInfo {  \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_NORMAL_FULL(CAMO,SHIRT));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -1709,7 +1709,7 @@ class HitpointsProtectionInfo {  \
 		}; \
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_NORMAL_SS(CAMO,SHIRT));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -1728,7 +1728,7 @@ class HitpointsProtectionInfo {  \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_KNEEPADS(CAMO,SHIRT,SLEEVE));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -1748,7 +1748,7 @@ class HitpointsProtectionInfo {  \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_KNEEPADS_FULL(CAMO,SHIRT));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -1774,7 +1774,7 @@ class HitpointsProtectionInfo {  \
 		}; \
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_KNEEPADS_SS(CAMO,SHIRT));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -1874,7 +1874,7 @@ class HitpointsProtectionInfo {  \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_BLOUSED(CAMO,SHIRT,SLEEVE));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -1894,7 +1894,7 @@ class HitpointsProtectionInfo {  \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_BLOUSED_FULL(CAMO,SHIRT));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -1916,7 +1916,7 @@ class HitpointsProtectionInfo {  \
     ace_arsenal_uniqueBase = QUOTE(STB73_U_B_##SHIRT##_Full_Bloused_##CAMO##);\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_BLOUSED_SS(CAMO,SHIRT));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -1940,7 +1940,7 @@ class HitpointsProtectionInfo {  \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_BLOUSED_KNEEPADS(CAMO,SHIRT,SLEEVE));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -1960,7 +1960,7 @@ class HitpointsProtectionInfo {  \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_BLOUSED_KNEEPADS_FULL(CAMO,SHIRT));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -1982,7 +1982,7 @@ class HitpointsProtectionInfo {  \
     ace_arsenal_uniqueBase = QUOTE(STB73_U_B_##SHIRT##_Full_Bloused_Kneepads_##CAMO##);\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_BLOUSED_KNEEPADS_SS(CAMO,SHIRT));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -2092,7 +2092,7 @@ class HitpointsProtectionInfo {  \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_GLOVES(CAMO,SHIRT,SLEEVE));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -2112,7 +2112,7 @@ class HitpointsProtectionInfo {  \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_GLOVES_FULL(CAMO,SHIRT));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -2134,7 +2134,7 @@ class HitpointsProtectionInfo {  \
     ace_arsenal_uniqueBase = QUOTE(STB73_U_B_##SHIRT##_Full_Gloves_##CAMO##);\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_GLOVES_SS(CAMO,SHIRT));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -2158,7 +2158,7 @@ class HitpointsProtectionInfo {  \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_GLOVES_KNEEPADS(CAMO,SHIRT,SLEEVE));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -2178,7 +2178,7 @@ class HitpointsProtectionInfo {  \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_GLOVES_KNEEPADS_FULL(CAMO,SHIRT));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -2200,7 +2200,7 @@ class HitpointsProtectionInfo {  \
     ace_arsenal_uniqueBase = QUOTE(STB73_U_B_##SHIRT##_Full_Gloves_Kneepads_##CAMO##);\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_GLOVES_KNEEPADS_SS(CAMO,SHIRT));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -2311,7 +2311,7 @@ class HitpointsProtectionInfo {  \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_BLOUSED_GLOVES(CAMO,SHIRT,SLEEVE));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -2331,7 +2331,7 @@ class HitpointsProtectionInfo {  \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_BLOUSED_GLOVES_FULL(CAMO,SHIRT));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -2353,7 +2353,7 @@ class HitpointsProtectionInfo {  \
     ace_arsenal_uniqueBase = QUOTE(STB73_U_B_##SHIRT##_Full_Gloves_Bloused_##CAMO##);\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_BLOUSED_GLOVES_SS(CAMO,SHIRT));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -2377,7 +2377,7 @@ class HitpointsProtectionInfo {  \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_BLOUSED_GLOVES_KNEEPADS(CAMO,SHIRT,SLEEVE));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -2397,7 +2397,7 @@ class HitpointsProtectionInfo {  \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_BLOUSED_GLOVES_KNEEPADS_FULL(CAMO,SHIRT));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -2419,7 +2419,7 @@ class HitpointsProtectionInfo {  \
     ace_arsenal_uniqueBase = QUOTE(STB73_U_B_##SHIRT##_Full_Gloves_Bloused_Kneepads_##CAMO##);\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_BLOUSED_GLOVES_KNEEPADS_SS(CAMO,SHIRT));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -2524,7 +2524,7 @@ class HitpointsProtectionInfo {  \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_UNZIPPED(CAMO,SHIRT,SLEEVE));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -2544,7 +2544,7 @@ class HitpointsProtectionInfo {  \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_UNZIPPED_FULL(CAMO,SHIRT));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -2566,7 +2566,7 @@ class HitpointsProtectionInfo {  \
     ace_arsenal_uniqueBase = QUOTE(STB73_U_B_##SHIRT##_Full_Unzipped_##CAMO##);\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_UNZIPPED_SS(CAMO,SHIRT));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -2590,7 +2590,7 @@ class HitpointsProtectionInfo {  \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_UNZIPPED_KNEEPADS(CAMO,SHIRT,SLEEVE));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -2610,7 +2610,7 @@ class HitpointsProtectionInfo {  \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_UNZIPPED_KNEEPADS_FULL(CAMO,SHIRT));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -2632,7 +2632,7 @@ class HitpointsProtectionInfo {  \
     ace_arsenal_uniqueBase = QUOTE(STB73_U_B_##SHIRT##_Full_Unzipped_Kneepads_##CAMO##);\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_UNZIPPED_KNEEPADS_SS(CAMO,SHIRT));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -2737,7 +2737,7 @@ class HitpointsProtectionInfo {  \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_BLOUSED_UNZIPPED(CAMO,SHIRT,SLEEVE));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -2757,7 +2757,7 @@ class HitpointsProtectionInfo {  \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_BLOUSED_UNZIPPED_FULL(CAMO,SHIRT));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -2779,7 +2779,7 @@ class HitpointsProtectionInfo {  \
     ace_arsenal_uniqueBase = QUOTE(STB73_U_B_##SHIRT##_Full_Bloused_Unzipped_##CAMO##);\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_BLOUSED_UNZIPPED_SS(CAMO,SHIRT));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -2803,7 +2803,7 @@ class HitpointsProtectionInfo {  \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_BLOUSED_UNZIPPED_KNEEPADS(CAMO,SHIRT,SLEEVE));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -2823,7 +2823,7 @@ class HitpointsProtectionInfo {  \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_BLOUSED_UNZIPPED_KNEEPADS_FULL(CAMO,SHIRT));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -2845,7 +2845,7 @@ class HitpointsProtectionInfo {  \
     ace_arsenal_uniqueBase = QUOTE(STB73_U_B_##SHIRT##_Full_Bloused_Unzipped_Kneepads_##CAMO##);\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_BLOUSED_UNZIPPED_KNEEPADS_SS(CAMO,SHIRT));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -2954,7 +2954,7 @@ class HitpointsProtectionInfo {  \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_GLOVES_UNZIPPED(CAMO,SHIRT,SLEEVE));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -2974,7 +2974,7 @@ class HitpointsProtectionInfo {  \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_GLOVES_UNZIPPED_FULL(CAMO,SHIRT));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -2996,7 +2996,7 @@ class HitpointsProtectionInfo {  \
     ace_arsenal_uniqueBase = QUOTE(STB73_U_B_##SHIRT##_Full_Gloves_Unzipped_##CAMO##);\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_GLOVES_UNZIPPED_SS(CAMO,SHIRT));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -3020,7 +3020,7 @@ class HitpointsProtectionInfo {  \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_GLOVES_UNZIPPED_KNEEPADS(CAMO,SHIRT,SLEEVE));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -3040,7 +3040,7 @@ class HitpointsProtectionInfo {  \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_GLOVES_UNZIPPED_KNEEPADS_FULL(CAMO,SHIRT));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -3062,7 +3062,7 @@ class HitpointsProtectionInfo {  \
     ace_arsenal_uniqueBase = QUOTE(STB73_U_B_##SHIRT##_Full_Gloves_Unzipped_Kneepads_##CAMO##);\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_GLOVES_UNZIPPED_KNEEPADS_SS(CAMO,SHIRT));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -3173,7 +3173,7 @@ class HitpointsProtectionInfo {  \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_GLOVES_BLOUSED_UNZIPPED(CAMO,SHIRT,SLEEVE));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -3193,7 +3193,7 @@ class HitpointsProtectionInfo {  \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_GLOVES_BLOUSED_UNZIPPED_FULL(CAMO,SHIRT));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -3215,7 +3215,7 @@ class HitpointsProtectionInfo {  \
     ace_arsenal_uniqueBase = QUOTE(STB73_U_B_##SHIRT##_Full_Gloves_Bloused_Unzipped_##CAMO##);\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_GLOVES_BLOUSED_UNZIPPED_SS(CAMO,SHIRT));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -3239,7 +3239,7 @@ class HitpointsProtectionInfo {  \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_GLOVES_BLOUSED_UNZIPPED_KNEEPADS(CAMO,SHIRT,SLEEVE));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -3259,7 +3259,7 @@ class HitpointsProtectionInfo {  \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_GLOVES_BLOUSED_UNZIPPED_KNEEPADS_FULL(CAMO,SHIRT));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\
@@ -3281,7 +3281,7 @@ class HitpointsProtectionInfo {  \
     ace_arsenal_uniqueBase = QUOTE(STB73_U_B_##SHIRT##_Full_Gloves_Bloused_Unzipped_Kneepads_##CAMO##);\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_GLOVES_BLOUSED_UNZIPPED_KNEEPADS_SS(CAMO,SHIRT));\
-      containerClass="Supply50"; \
+      containerClass=QUOTE(UNI_MAXLOAD); \
       mass=1;\
       uniformType = "Neopren";\
       allowedSlots[]={"701","801","901"};\

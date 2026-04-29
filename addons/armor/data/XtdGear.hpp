@@ -254,6 +254,7 @@ class XtdGearModels
                 {
                     "Standard",
 					"Company",
+					"Medic",
                     "Atlas1",
 					"Atlas2"
                 };
@@ -269,6 +270,7 @@ class XtdGearModels
                     "Officer",
                     "SORC",
                     "NCO",
+					"Specialist",
                     "Enlisted"
                 };
             };
@@ -1385,6 +1387,44 @@ class XtdGearModels
 				class Roll
 				{
 					label="Sleeping Roll";
+				};
+			};
+		};
+		class STB73_B_EM39_MLBE_Buttpack
+		{
+			label="EM39 M/LBE Buttpack";
+			author="$STR_TCP_Data_Author";
+			options[]=
+			{
+				"camo"
+			};
+			class camo: STB73_CamoFabric
+			{
+				values[]=
+				{
+					"Black",
+					"Olive",
+					"Tan",
+					"White"
+				};
+			};
+		};
+		class STB73_B_M35_Hydration_Pack
+		{
+			label="M35 Hydration Pack";
+			author="$STR_TCP_Data_Author";
+			options[]=
+			{
+				"camo"
+			};
+			class camo: STB73_CamoFabric
+			{
+				values[]=
+				{
+					"Black",
+					"Olive",
+					"Tan",
+					"White"
 				};
 			};
 		};

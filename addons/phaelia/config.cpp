@@ -1,9 +1,11 @@
+#include "script_component.hpp"
+
 class CfgPatches
 {
     class 73_COP
     {
         authors[] = {"IS1. A. Grayson","73rd STB S-4"};
-        name = "Creed of phaelia";
+        name = "Creed of Phaelia";
         
         units[]=
         {
@@ -95,29 +97,8 @@ class CfgPatches
         requiredVersion = "2.20.153701";
         requiredAddons[] =
         {
-            "STB73_Weapons",
-            "Weap_melee_knife",
-            "NSWep_Weapons",
-            "STB73_armor",
-            "A3_Characters_F_Exp",
-            "TCP_Characters_BLUFOR_UNSC_Army_Backpacks_ANPRC171",
-            "A3_Armor_F_Tank_LT_01",
-            "A3_Static_F_Sams_Radar_System_01",
-            "A3_Armor_F_Tank_AFV_Wheeled_01",
-            "A3_Air_F_Beta_Heli_Transport_01",
-            "OPTRE_Vehicles_Warthog",
-            "OPTRE_Vehicles_Misc",
-            "TKE_Ext_Core_V",
-            "A3_Armor_F_Beta_APC_Tracked_01",
-            "A3_Armor_F_EPB_MBT_03",
-            "A3_Air_F_Heli_Light_01",
-            "A3_Armor_F_Gamma_MBT_01",
-            "A3_Boat_F_Beta_Boat_Armed_01",
-            "A3_Soft_F_Beta_Truck_01",
-            "A3_Soft_F_Offroad_01",
-            "OPTRE_Ins_Units_DME",
-            "A3_Static_F_Sams_SAM_System_03",
-            "A3_Armor_F_EPC_MBT_01"
+            "STB73_Main",
+            "TCP_Characters_BLUFOR_UNSC_Army_Uniforms_CBUU"
         };
     };
 };
@@ -126,7 +107,7 @@ class CfgFactionClasses
 {
     class 73_COP
     {
-        displayName = "Creed of phaelia";
+        displayName = "Creed of Phaelia";
         side = 0;
         flag = "ca\Ca_E\data\flag_opfor_co.paa";
         icon = "ca\Ca_E\data\flag_opfor_co.paa";
@@ -138,6 +119,7 @@ class CfgFactionClasses
 
 class CfgWeapons
 {
+    class ItemInfo;
     #include "weapons.hpp"
     #include "uniforms.hpp"
     #include "vests.hpp"
@@ -145,10 +127,10 @@ class CfgWeapons
 
 class CfgVehicles
 {
-    #include "units.hpp"
     #include "uniformBases.hpp"
     #include "backpacks.hpp"
     #include "vehicles.hpp"
+    #include "units.hpp"
 };
 
 class CfgGroups

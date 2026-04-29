@@ -111,11 +111,11 @@ class STB73_HDV134_TT_C:VES_HDV134_TT_C
 
 
 
-class VES_M12;
+class TCP_B_UNSC_MC_M12A;
 
-class STB73_M12 : VES_M12
+class STB73_M12 : TCP_B_UNSC_MC_M12A
 {
-    displayName="[73] M12 FAV Warthog [Unarmed]";
+    displayName="[73] M12 FAV Warthog";
     author= AUTHOR;
     faction = "STB73_STB";
     editorCategory = "STB73_STB";
@@ -138,18 +138,18 @@ class STB73_M12 : VES_M12
             scope = 1;
             spawner= "73rd Mechanized";
             vehicle = "M12";
-            Type = "FAV Unarmed";
+            Type = "FAV";
             cost = 0;
             priority = 1;
         };
     };
 };
 
-class VES_M12_LRV;
+class TCP_B_UNSC_MC_M12A_LAAG_M41;
 
-class STB73_M12_LRV : VES_M12_LRV
+class STB73_M12_LRV : TCP_B_UNSC_MC_M12A_LAAG_M41
 {
-    displayName="[73] M12 LRV Warthog [M41 LAAG]";
+    displayName="[73] M12A LRV Warthog [M41 LAAG]";
     author= AUTHOR;
     faction = "STB73_STB";
     editorCategory = "STB73_STB";
@@ -179,11 +179,11 @@ class STB73_M12_LRV : VES_M12_LRV
         };
     };
 };
-class VES_M12G1_LRV;
+class TCP_B_UNSC_MC_M12A_ALIM_M68B;
 
-class STB73_M12G1_LRV : VES_M12G1_LRV
+class STB73_M12G1_LRV : TCP_B_UNSC_MC_M12A_ALIM_M68B
 {
-    displayName="[73] M12 LRV Warthog [M68 ALIM]";
+    displayName="[73] M12AG2 LAAV Warthog [M68B]";
     author= AUTHOR;
     faction = "STB73_STB";
     editorCategory = "STB73_STB";
@@ -215,109 +215,11 @@ class STB73_M12G1_LRV : VES_M12G1_LRV
 };
 class VES_M12A1_LRV;
 
-class STB73_M12A1_LRV : VES_M12A1_LRV
-{
-    displayName="[73] M12 LRV Warthog [ATGM]";
-    author= AUTHOR;
-    faction = "STB73_STB";
-    editorCategory = "STB73_STB";
-    editorSubcategory = "STB73_Cars_EdSubCat";
-    scopeCurator=2;
-    scope=2;
-    side=1;
-    crew = "STB73_Marine_Rifleman";
-    class ace_cargo {
-        class cargo {
-            class ACE_Tyres { // Doesn't have to have the same name as the item you're adding
-                type = "ACE_Wheel";
-                amount = 8;
-            };
-        };
-    };
-    class VehicleSpawnerInfo {
-        class STB73_GroundSpawner
-        {
-            scope = 1;
-            spawner= "73rd Mechanized";
-            vehicle = "M12";
-            Type = "LRV ATGM";
-            cost = 1;
-            priority = 1;
-        };
-    };
-};
-class VES_M12R_AA;
+class TCP_B_UNSC_MC_M831A;
 
-class STB73_M12R_AA : VES_M12R_AA
+class STB73_M813_TT : TCP_B_UNSC_MC_M831A
 {
-    displayName="[73] M12 LRV Warthog [M79 AA]";
-    author= AUTHOR;
-    faction = "STB73_STB";
-    editorCategory = "STB73_STB";
-    editorSubcategory = "STB73_Cars_EdSubCat";
-    scopeCurator=2;
-    scope=2;
-    side=1;
-    crew = "STB73_Marine_Rifleman";
-    class ace_cargo {
-        class cargo {
-            class ACE_Tyres { // Doesn't have to have the same name as the item you're adding
-                type = "ACE_Wheel";
-
-                amount = 8;
-            };
-        };
-    };
-    class VehicleSpawnerInfo {
-        class STB73_GroundSpawner
-        {
-            scope = 1;
-            spawner= "73rd Mechanized";
-            vehicle = "M12";
-            Type = "LRV AA";
-            cost = 1;
-            priority = 1;
-        };
-    };
-};
-class VES_M12_APC;
-class STB73_M12_APC : VES_M12_APC
-{
-    displayName="[73] M12 APC Warthog";
-    author= AUTHOR;
-    faction = "STB73_STB";
-    editorCategory = "STB73_STB";
-    editorSubcategory = "STB73_Cars_EdSubCat";
-    scopeCurator=2;
-    scope=2;
-    side=1;
-    crew = "STB73_Marine_Rifleman";
-    class ace_cargo {
-        class cargo {
-            class ACE_Tyres { // Doesn't have to have the same name as the item you're adding
-                type = "ACE_Wheel";
-
-                amount = 8;
-            };
-        };
-    };
-    class VehicleSpawnerInfo {
-        class STB73_GroundSpawner
-        {
-            scope = 1;
-            spawner= "73rd Mechanized";
-            vehicle = "M12";
-            Type = "APC";
-            cost = 0;
-            priority = 1;
-        };
-    };
-};
-class VES_M813_TT;
-
-class STB73_M813_TT : VES_M813_TT
-{
-    displayName="[73] M813 TT Warthog";
+    displayName="[73] M831A Troop Transport Warthog";
     author= AUTHOR;
     faction = "STB73_STB";
     editorCategory = "STB73_STB";
@@ -342,40 +244,6 @@ class STB73_M813_TT : VES_M813_TT
             spawner= "73rd Mechanized";
             vehicle = "M12";
             Type = "TT";
-            cost = 0;
-            priority = 1;
-        };
-    };
-};
-class OPTRE_M12_TD_ins;
-
-class STB73_M914_TD : OPTRE_M12_TD_ins
-{
-    displayName="[73] M914 Tank Destroyer Warthog";
-    author= AUTHOR;
-    faction = "STB73_STB";
-    editorCategory = "STB73_STB";
-    editorSubcategory = "STB73_Cars_EdSubCat";
-    scopeCurator=2;
-    scope=2;
-    side=1;
-    crew = "STB73_Marine_Rifleman";
-    class ace_cargo {
-        class cargo {
-            class ACE_Tyres { // Doesn't have to have the same name as the item you're adding
-                type = "ACE_Wheel";
-
-                amount = 8;
-            };
-        };
-    };
-    class VehicleSpawnerInfo {
-        class STB73_GroundSpawner
-        {
-            scope = 1;
-            spawner= "73rd Mechanized";
-            vehicle = "M12";
-            Type = "TD";
             cost = 0;
             priority = 1;
         };

@@ -2,7 +2,7 @@ class CfgEditorCategories
 {
     class 73_COP_EdCat
     {
-        displayName = "Creed of phaelia";
+        displayName = "[73] Creed of Phaelia";
     };
 };
 class CfgEditorSubCategories

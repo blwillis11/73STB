@@ -37,6 +37,23 @@ class CfgVehicles
 		};
 	};
 
+	class optre_bootcamp_UNSC_Flag_BW;
+
+	class land_STB73_bootcamp_UNSC_Flag : optre_bootcamp_UNSC_Flag_BW
+	{
+		author = AUTHOR;
+		displayName = "73rd STB Ceremonial Flag";
+		scope = 2;
+		scopeCurator = 2;
+		faction = "STB73_Assets";
+		editorCategory = "STB73_Objects";
+		editorSubcategory = "STB73_Misc_EdSubcat";
+		hiddenSelectionsTextures[] = 
+		{
+			"\z\73STB\addons\objects\data\flags\camp_flag_73rdSTB_co.paa"
+		};
+	};
+
 	class Land_TCP_Banner_01_BES_02;
 
 	class Land_STB73_Flag_01_ODST : Land_TCP_Banner_01_BES_02
