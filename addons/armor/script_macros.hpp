@@ -27,7 +27,7 @@
 
 #define QP(PATH) #P(PATH)
   // Wraps the expanded path in quotes, e.g.:
-  // QP(data\loading_bg.jpg) => "\x\12thMEU\addons\12th_ui\data\loading_bg.jpg"
+  // QP(data\loading_bg.jpg) => "\x\@73rd STB Armor Pack v2\addons\73_units\something"
 
 // GLUE(A,B) => AB (concatenates tokens)
 #define GLUE(A,B) A##B
@@ -276,6 +276,42 @@ class HitpointsProtectionInfo {  \
     mass=VEST_MASS;                                                   \
     VEST_HITPOINT_INFO \
   };
+
+#define VEST_ITEM_M43D_Light_INFO(TF,CAMO)                                        \
+  class ItemInfo: ItemInfo {                                          \
+    hiddenSelectionsTextures[]=\
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+    uniformModel="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_Light.p3d"; \
+    vestType="Rebreather";                                            \
+    mass=VEST_MASS;                                                   \
+    VEST_HITPOINT_INFO                                               \
+  };
+
+#define NEW_VEST_M43D_Light(CAMO,PLATOON)                          \
+    class STB73_M43D_Light_##CAMO##_##PLATOON##: TCP_V_M43D_Light_Black {   \
+      scope=2; \
+      scopeArsenal=2; \
+      displayName = QUOTE([73] M43/D CBBAS [Light] [##CAMO##] [##PLATOON##]); \
+      maximumLoad = VEST_MAXLOAD; \
+      hiddenSelectionsTextures[]= { \
+        Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+        Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+        Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      }; \
+      class XtdGearInfo { \
+      Model="STB73_ACE_M43D_Vest"; \
+      Billet=Q(##PLATOON##); \
+      Camo=Q(##CAMO##); \
+      Variant=Q(Light);\
+      Collar=Q(None); \
+    }; \
+      VEST_ITEM_M43D_Light_INFO(TF,CAMO) \
+    };\
+    
 
 #define NEW_VEST_M43D_ODST(CAMO,PLATOON) \
   class STB73_M43D_ODST_##CAMO##_##PLATOON## : TCP_V_M43D_ODST_4_Black { \

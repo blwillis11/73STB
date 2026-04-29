@@ -30,6 +30,9 @@ class CfgWeapons
     class TCP_V_M43D_Sharpshooter_4_2_Black_TACPAD;
     class TCP_V_M43D_Sharpshooter_4_2_Black_UGPS;
     class TCP_V_M43A_BaseSec_3_Black;
+    class TCP_V_M43D_Light_Black;
+    class TCP_V_M43D_Light_Black_TACPAD;
+    class TCP_V_M43D_Light_Black_UGPS;
     class ItemCore;
     class UniformItem;
     class TCP_equipmentTypes;
@@ -50,6 +53,8 @@ class CfgWeapons
 	};
     
     NEW_VEST_43A(Aviator)
+
+    NEW_VEST_M43D_Light(Black,Standard)
 
     NEW_VEST_M43D_ODST(Black,Company)
     NEW_VEST_M43D_SHARPSHOOTER(Black,Company)
@@ -95,20 +100,20 @@ class CfgWeapons
         displayName = QUOTE([73] Medic CBUU SHIRT Full Gloves Bloused Kneepads); 
         ACE_GForceCoef=0.4;
         class ItemInfo : UniformItem {
-        uniformClass = QUOTE(STB73_B_FieldTop_Full_Gloves_Bloused_Kneepads_Medic);
-        containerClass="Supply50";
-        mass=1;
-        uniformType = "Neopren";
-        allowedSlots[]={"701","801","901"};
-        armor=20;
+            uniformClass = QUOTE(STB73_B_FieldTop_Full_Gloves_Bloused_Kneepads_Medic);
+            containerClass="Supply50";
+            mass=1;
+            uniformType = "Neopren";
+            allowedSlots[]={"701","801","901"};
+            armor=20;
         };
         hiddenSelectionsTextures[] = {
-        QP(data\uniform\Medic\CBUU_FieldTop_CO.paa)
+            QP(data\uniform\Medic\CBUU_FieldTop_CO.paa)
         };
         class TCP_equipmentTypes: TCP_equipmentTypes
-            {
-                baseEquipment=QUOTE(STB73_U_B_FieldTop_Full_Gloves_Bloused_Kneepads_Medic);
-            };
+        {
+            baseEquipment=QUOTE(STB73_U_B_FieldTop_Full_Gloves_Bloused_Kneepads_Medic);
+        };
     };
 
     class TCP_V_M43A_Pads_2_Base;
@@ -335,6 +340,8 @@ class CfgWeapons
 		descriptionShort="$STR_TCP_Weapons_Equipment_TACPAD_descriptionShort";
 		picture="\TCP\Weapons\Equipment\TACPAD\data\ui\icon_TACPAD_CA.paa";
 		model="\TCP\Weapons\Equipment\TACPAD\tacpad.p3d";
+        ctab_devicetype=3;
+        simulation="ItemGPS";
         class ItemInfo: InventoryUavTerminalItem_Base_F
 		{
 			side=1;

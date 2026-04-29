@@ -1,0 +1,22 @@
+{
+    "compress": {
+        "exclude": [
+        ],
+        "include": [
+        ]
+    },
+    "headers": [
+        {
+            "name": "prefix",
+            "value": "cTab"
+        },
+        {
+            "name": "Mikero",
+            "value": "DePbo.dll.7.16"
+        },
+        {
+            "name": "version",
+            "value": "Tue Mar 05 16:33:38 2019"
+        }
+    ]
+}

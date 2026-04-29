@@ -1,0 +1,22 @@
+{
+    "compress": {
+        "exclude": [
+        ],
+        "include": [
+        ]
+    },
+    "headers": [
+        {
+            "name": "prefix",
+            "value": "a3\\editor_f"
+        },
+        {
+            "name": "product",
+            "value": "Arma 3"
+        },
+        {
+            "name": "version",
+            "value": "121103"
+        }
+    ]
+}

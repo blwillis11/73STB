@@ -215,7 +215,8 @@ class XtdGearModels
                 label= "Variant";
                 values[]=
                 {
-                    "ODST",
+                    "Light",
+					"ODST",
                     "Sharpshooter",
                     "Breacher"
                 };
