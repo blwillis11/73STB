@@ -15,7 +15,7 @@ class CfgGroups
                     name = "[73] STB Company ODST Squad";
                     side = 1;
                     faction = "STB73_STB";
-                    icon = "\A3\ui_f\data\map\markers\nato\o_inf.paa";
+                    icon = "\A3\ui_f\data\map\markers\nato\b_inf.paa";
                     rarityGroup = 0.5;
 
                     class Unit0
@@ -129,7 +129,7 @@ class CfgGroups
                     name = "[73] STB Company ODST Fireteam";
                     side = 1;
                     faction = "STB73_STB";
-                    icon = "\A3\ui_f\data\map\markers\nato\o_inf.paa";
+                    icon = "\A3\ui_f\data\map\markers\nato\b_inf.paa";
                     rarityGroup = 0.5;
 
                     class Unit0
@@ -174,7 +174,7 @@ class CfgGroups
                     name = "[73] STB Company ODST Sentry";
                     side = 1;
                     faction = "STB73_STB";
-                    icon = "\A3\ui_f\data\map\markers\nato\o_inf.paa";
+                    icon = "\A3\ui_f\data\map\markers\nato\b_inf.paa";
                     rarityGroup = 0.5;
 
                     class Unit0
@@ -198,7 +198,7 @@ class CfgGroups
                     name = "[73] STB Company ODST Sniper Team";
                     side = 1;
                     faction = "STB73_STB";
-                    icon = "\A3\ui_f\data\map\markers\nato\o_inf.paa";
+                    icon = "\A3\ui_f\data\map\markers\nato\b_inf.paa";
                     rarityGroup = 0.5;
 
                     class Unit0

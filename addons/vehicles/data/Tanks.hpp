@@ -1,5 +1,4 @@
 class VES_M875_SPH;
-
 class STB73_M875:VES_M875_SPH
 {
     displayName="[73] M875 Scorpion [SPH]";
@@ -10,7 +9,7 @@ class STB73_M875:VES_M875_SPH
     scope=2;
     side=1;
     armor=450;
-    crew = "STB73_Marine_Rifleman";
+    crew = "STB73_STB_ODST_Rifleman";
      class ace_cargo {
             class cargo {
                 class ACE_Tracks { // Doesn't have to have the same name as the item you're adding
@@ -40,7 +39,6 @@ class STB73_M875:VES_M875_SPH
     };
 };
 class VES_M808BM_MBT;
-
 class STB73_M808BM_MBT:VES_M808BM_MBT
 {
     displayName="[73] M808B/M Scorpion";
@@ -50,18 +48,18 @@ class STB73_M808BM_MBT:VES_M808BM_MBT
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_Marine_Rifleman";
+    crew = "STB73_STB_ODST_Rifleman";
     armor=575;
     armorStructural=5;
-     class ace_cargo {
-            class cargo {
-                class ACE_Tracks { // Doesn't have to have the same name as the item you're adding
-                    type = "ACE_Tracks";
-					
-                    amount = 4;
-                };
+    class ace_cargo {
+        class cargo {
+            class ACE_Tracks { // Doesn't have to have the same name as the item you're adding
+                type = "ACE_Tracks";
+                
+                amount = 4;
             };
         };
+    };
     normalSpeedForwardCoef=0.69999999;
     slowSpeedForwardCoef=0.34999999;
     maxSpeed=80;
@@ -135,7 +133,7 @@ class STB73_M808BM_MBT:VES_M808BM_MBT
         neutralString="N";
         reverseString="R";
         transmissionDelay=0.1;
-};
+    };
     class VehicleSpawnerInfo {
         class STB73_GroundSpawner
         {
@@ -154,7 +152,6 @@ class STB73_M808BM_MBT:VES_M808BM_MBT
     };
 };
 class VES_M808B2_MBT;
-
 class STB73_M808B2_MBT:VES_M808B2_MBT
 {
     displayName="[73] M808B2 Sun Devil";
@@ -164,7 +161,7 @@ class STB73_M808B2_MBT:VES_M808B2_MBT
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_Marine_Rifleman";
+    crew = "STB73_STB_ODST_Rifleman";
     armor=575;
     armorStructural=5;
      class ace_cargo {
@@ -213,7 +210,7 @@ class STB73_M808BMk2:DMNS_M808B
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_Marine_Rifleman";
+    crew = "STB73_STB_ODST_Rifleman";
     armor=575;
     armorStructural=5;
      class ace_cargo {
@@ -249,472 +246,6 @@ class STB73_M808BMk2:DMNS_M808B
             liveries[]=
             {
              "[""Standard"",[""DMNS\DMNS_Armour\M808B_Scorpion\data\M808B_Hull_co.paa"",""DMNS\DMNS_Armour\M808B_Scorpion\data\M808B_Turret_co.paa"",""DMNS\DMNS_Armour\M808B_Scorpion\data\M808B_Track_Housing_Front_co.paa"",""DMNS\DMNS_Armour\M808B_Scorpion\data\M808B_Track_Housing_Rear_co.paa"",""DMNS\DMNS_Armour\M808B_Scorpion\data\M808B_Commander_co.paa"",""DMNS\DMNS_Armour\M808B_Scorpion\data\M808B_Details_EXT_co.paa"",""DMNS\DMNS_Armour\M808B_Scorpion\data\M808B_Details_EXT_2_co.paa"",""DMNS\DMNS_Armour\M808B_Scorpion\data\M808B_Track_Int_co.paa""]]",
-            };
-        };
-    };
-};
-
-class LandVehicle;
-class Tank: LandVehicle
-{
-    class NewTurret;
-};
-class Tank_F: Tank
-{
-    class Turrets
-    {
-        class MainTurret: NewTurret
-        {
-            class Turrets;
-        };
-    };
-};
-class MBT_01_base_F: Tank_F
-{
-    class Turrets: Turrets
-    {
-        class MainTurret: MainTurret
-        {
-            class Turrets: Turrets
-            {
-                class CommanderOptics;
-            };
-        };
-    };
-};
-class B_MBT_01_base_F: MBT_01_base_F
-{
-};
-class B_MBT_01_cannon_F: B_MBT_01_base_F
-{
-};
-class B_MBT_01_TUSK_F: B_MBT_01_cannon_F
-{
-    class Components;
-};
-class STB73_Merkava : B_MBT_01_TUSK_F
-{
-    displayName="[73] Merkava";
-    author= AUTHOR;
-    editorCategory = "STB73_STB";
-    editorSubcategory = "STB73_Tanks_EdSubCat";
-    scopeCurator=2;
-    scope=2;
-    side=1;
-    armor=450;
-    crew = "STB73_Marine_Rifleman";
-    typicalCargo[]=
-    {
-        "STB73_Marine_Rifleman"
-    };
-    transportSoldier=7;
-     class ace_cargo {
-            class cargo {
-                class ACE_Tracks { // Doesn't have to have the same name as the item you're adding
-                    type = "ACE_Tracks";
-					
-                    amount = 4;
-                };
-            };
-        };
-    hiddenSelectionsTextures[] =
-    {
-        "A3\Armor_F_Exp\MBT_01\data\MBT_01_body_olive_CO.paa",
-        "A3\Armor_F_Exp\MBT_01\data\MBT_01_tow_olive_CO.paa",
-        "A3\Armor_F_Exp\MBT_01\data\mbt_addons_olive_CO.paa",
-        "a3\Armor_F\Data\camonet_NATO_Green_CO.paa"
-    };
-    class VehicleSpawnerInfo {
-    class STB73_GroundSpawner
-    {
-        scope = 1;
-        spawner= "73rd Mechanized";
-        vehicle = "Merkava";
-        Type = "MBT";
-        cost = 5;
-
-        priority = 1;
-        liveries[]=
-        {
-         "[""Standard"",[""A3\Armor_F_Exp\MBT_01\data\MBT_01_body_olive_CO.paa"",""A3\Armor_F_Exp\MBT_01\data\MBT_01_tow_olive_CO.paa"",""A3\Armor_F_Exp\MBT_01\data\mbt_addons_olive_CO.paa"",""a3\Armor_F\Data\camonet_NATO_Green_CO.paa""]]",
-        };
-    };
-};
-    class UserActions
-    {
-        class Flip
-        {
-            displayNameDefault="Press SPACEBAR to Flip Merkava";
-            displayName="Press SPACEBAR to Flip Merkava";
-            position="";
-            radius=6;
-            onlyForPlayer=1;
-            condition="(alive this) AND !(canmove this)";
-            statement="this setposATL [getPosATL this select 0, getPosATL this select 1, (getPosATL this select 2) + 4]; this setVectorUp surfaceNormal getposATL this;";
-        };
-    };
-    class TransportWeapons
-    {};
-    class TransportMagazines
-    {
-        class _xx_OPTRE_60Rnd_762x51_Mag_AP
-        {
-            magazine="OPTRE_60Rnd_762x51_Mag_AP";
-            count=20;
-        };
-        class _xx_OPTRE_60Rnd_762x51_Mag_APT
-        {
-            magazine="OPTRE_60Rnd_762x51_Mag_APT";
-            count=20;
-        };
-        class _xx_OPTRE_36Rnd_95x40_Mag_JHP
-        {
-            magazine="OPTRE_36Rnd_95x40_Mag_JHP";
-            count=20;
-        };
-        class _xx_OPTRE_36Rnd_95x40_Mag_JHPT
-        {
-            magazine="OPTRE_36Rnd_95x40_Mag_JHPT";
-            count=20;
-        };
-        class _xx_OPTRE_60Rnd_5x23mm_Mag_FMJ
-        {
-            magazine="OPTRE_60Rnd_5x23mm_Mag_FMJ";
-            count=20;
-        };
-        class _xx_OPTRE_60Rnd_5x23mm_Mag_FMJT
-        {
-            magazine="OPTRE_60Rnd_5x23mm_Mag_FMJT";
-            count=20;
-        };
-        class _xx_OPTRE_20Rnd_86x70_Mag_AP
-        {
-            magazine="OPTRE_20Rnd_86x70_Mag_AP";
-            count=20;
-        };
-        class _xx_OPTRE_20Rnd_86x70_Mag_APT
-        {
-            magazine="OPTRE_20Rnd_86x70_Mag_APT";
-            count=20;
-        };
-        class _xx_OPTRE_M41_Twin_HEAP
-        {
-            magazine="OPTRE_M41_Twin_HEAP";
-            count=4;
-        };
-        class _xx_OPTRE_M41_Twin_HEAT_Thermal
-        {
-            magazine="OPTRE_M41_Twin_HEAT_Thermal";
-            count=2;
-        };
-    };
-    class TransportItems
-    {
-        delete _xx_FirstAidKit;
-        class _xx_Toolkit
-        {
-            name="Toolkit";
-            count=1;
-        };
-        class _xx_ACE_plasmaIV_1000
-        {
-            name="ACE_plasmaIV_1000";
-            count=10;
-        };
-        class _xx_ACE_epinephrine
-        {
-            name="ACE_epinephrine";
-            count=4;
-        };
-        class _xx_ACE_adenosine
-        {
-            name="ACE_adenosine";
-            count=4;
-        };
-        class _xx_ACE_Banana
-        {
-            name="ACE_Banana";
-            count=5;
-        };
-        class _xx_ACE_splint
-        {
-            name="ACE_splint";
-            count=10;
-        };
-    };
-    ace_hunterkiller[]=
-    {
-
-        {
-            {0},
-            3
-        },
-
-        {
-            {0,0},
-            3
-        }
-    };
-    class Turrets: Turrets
-    {
-        class MainTurret: MainTurret
-        {
-            class Turrets: Turrets
-            {
-                class CommanderOptics: CommanderOptics
-                {
-                    weapons[]=
-                    {
-                        "HMG_127_APC",
-                        "SmokeLauncher"
-                    };
-                    magazines[]=
-                    {
-                        "200Rnd_127x99_mag_Tracer_Red",
-                        "200Rnd_127x99_mag_Tracer_Red",
-                        "200Rnd_127x99_mag_Tracer_Red",
-                        "200Rnd_127x99_mag_Tracer_Red",
-                        "200Rnd_127x99_mag_Tracer_Red",
-                        "200Rnd_127x99_mag_Tracer_Red",
-                        "SmokeLauncherMag",
-                        "SmokeLauncherMag"
-                    };
-                };
-            };
-            weapons[]=
-            {
-                "cannon_120mm",
-                "HMG_127_APC"
-            };
-            magazines[]=
-            {
-                "12Rnd_120mm_HE_shells_Tracer_Red",
-                "12Rnd_120mm_HE_shells_Tracer_Red",
-                "12Rnd_120mm_HEAT_MP_T_Red",
-                "12Rnd_120mm_HEAT_MP_T_Red",
-                "200Rnd_127x99_mag_Tracer_Red",
-                "200Rnd_127x99_mag_Tracer_Red",
-                "200Rnd_127x99_mag_Tracer_Red",
-                "200Rnd_127x99_mag_Tracer_Red",
-                "200Rnd_127x99_mag_Tracer_Red",
-                "200Rnd_127x99_mag_Tracer_Red"
-            };
-        };
-    };
-    ace_cargo_space=4;
-    ace_cargo_hasCargo=1;
-    irScanGround=0;
-    irScanRangeMax=10000;
-    irScanRangeMin=2000;
-    irScanToEyeFactor=2;
-    radarType=2;
-    reportRemoteTargets=1;
-    receiveRemoteTargets=1;
-    incomingMissileDetectionSystem=16;
-    LockDetectionSystem=16;
-    class Components: Components
-    {
-        class SensorsManagerComponent
-        {
-            class Components
-            {
-                class IRSensorComponent: SensorTemplateIR
-                {
-                    class AirTarget
-                    {
-                        minRange=50;
-                        maxRange=16000;
-                        objectDistanceLimitCoef=-1;
-                        viewDistanceLimitCoef=-1;
-                    };
-                    class GroundTarget
-                    {
-                        minRange=50;
-                        maxRange=16000;
-                        objectDistanceLimitCoef=-1;
-                        viewDistanceLimitCoef=-1;
-                    };
-                    maxTrackableSpeed=1e+010;
-                    animDirection="Gun";
-                    angleRangeHorizontal=46;
-                    angleRangeVertical=34;
-                    aimdown=-0.25;
-                };
-                class VisualSensorComponent: SensorTemplateVisual
-                {
-                    class AirTarget
-                    {
-                        minRange=50;
-                        maxRange=8000;
-                        objectDistanceLimitCoef=1;
-                        viewDistanceLimitCoef=-1;
-                    };
-                    class GroundTarget
-                    {
-                        minRange=50;
-                        maxRange=8000;
-                        objectDistanceLimitCoef=1;
-                        viewDistanceLimitCoef=1;
-                    };
-                    maxTrackableSpeed=1e+010;
-                    animDirection="Gun";
-                    angleRangeHorizontal=46;
-                    angleRangeVertical=34;
-                    aimdown=-0.25;
-                };
-                class ActiveRadarSensorComponent: SensorTemplateActiveRadar
-                {
-                    class AirTarget
-                    {
-                        minRange=20;
-                        maxRange=16000;
-                        objectDistanceLimitCoef=-1;
-                        viewDistanceLimitCoef=-1;
-                    };
-                    class GroundTarget
-                    {
-                        minRange=20;
-                        maxRange=16000;
-                        objectDistanceLimitCoef=-1;
-                        viewDistanceLimitCoef=-1;
-                    };
-                    maxTrackableSpeed=1e+010;
-                    angleRangeHorizontal=180;
-                    angleRangeVertical=90;
-                    groundNoiseDistanceCoef=-1;
-                    maxGroundNoiseDistance=-1;
-                    minSpeedThreshold=0;
-                    maxSpeedThreshold=0;
-                    aimDown=30;
-                };
-                class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
-                {
-                    class AirTarget
-                    {
-                        minRange=50;
-                        maxRange=16000;
-                        objectDistanceLimitCoef=-1;
-                        viewDistanceLimitCoef=-1;
-                    };
-                    class GroundTarget
-                    {
-                        minRange=5;
-                        maxRange=16000;
-                        objectDistanceLimitCoef=-1;
-                        viewDistanceLimitCoef=-1;
-                    };
-                    maxTrackableSpeed=1e+010;
-                    angleRangeHorizontal=180;
-                    angleRangeVertical=90;
-                    groundNoiseDistanceCoef=-1;
-                    maxGroundNoiseDistance=-1;
-                    minSpeedThreshold=0;
-                    maxSpeedThreshold=0;
-                    aimDown=30;
-                };
-                class LaserSensorComponent: SensorTemplateLaser
-                {
-                    class AirTarget
-                    {
-                        minRange=50;
-                        maxRange=16000;
-                        objectDistanceLimitCoef=-1;
-                        viewDistanceLimitCoef=-1;
-                    };
-                    class GroundTarget
-                    {
-                        minRange=5;
-                        maxRange=16000;
-                        objectDistanceLimitCoef=-1;
-                        viewDistanceLimitCoef=-1;
-                    };
-                    maxTrackableSpeed=1e+010;
-                    angleRangeHorizontal=180;
-                    angleRangeVertical=90;
-                    groundNoiseDistanceCoef=-1;
-                    maxGroundNoiseDistance=-1;
-                    minSpeedThreshold=0;
-                    maxSpeedThreshold=0;
-                    aimDown=30;
-                };
-                class NVSensorComponent: SensorTemplateNV
-                {
-                    class AirTarget
-                    {
-                        minRange=50;
-                        maxRange=16000;
-                        objectDistanceLimitCoef=-1;
-                        viewDistanceLimitCoef=-1;
-                    };
-                    class GroundTarget
-                    {
-                        minRange=5;
-                        maxRange=16000;
-                        objectDistanceLimitCoef=-1;
-                        viewDistanceLimitCoef=-1;
-                    };
-                    maxTrackableSpeed=1e+010;
-                    angleRangeHorizontal=180;
-                    angleRangeVertical=90;
-                    groundNoiseDistanceCoef=-1;
-                    maxGroundNoiseDistance=-1;
-                    minSpeedThreshold=0;
-                    maxSpeedThreshold=0;
-                    aimDown=30;
-                };
-            };
-        };
-        class VehicleSystemsDisplayManagerComponentLeft: VehicleSystemsTemplateLeftPilot
-        {
-            class Components: Components
-            {
-                class VehiclePrimaryGunnerDisplay
-                {
-                    componentType="TransportFeedDisplayComponent";
-                    source="PrimaryGunner";
-                };
-                class VehicleMissileDisplay
-                {
-                    componentType="TransportFeedDisplayComponent";
-                    source="Missile";
-                };
-                class SensorDisplay
-                {
-                    componentType="SensorsDisplayComponent";
-                    range[]={2000,4000,8000,12000,16000};
-                    resource="RscCustomInfoSensors";
-                };
-                class MineDetectorDisplay
-                {
-                    componentType="MineDetectorDisplayComponent";
-                };
-            };
-        };
-        class VehicleSystemsDisplayManagerComponentRight: VehicleSystemsTemplateRightPilot
-        {
-            defaultDisplay="SensorDisplay";
-            class Components: Components
-            {
-                class VehiclePrimaryGunnerDisplay
-                {
-                    componentType="TransportFeedDisplayComponent";
-                    source="PrimaryGunner";
-                };
-                class VehicleMissileDisplay
-                {
-                    componentType="TransportFeedDisplayComponent";
-                    source="Missile";
-                };
-                class SensorDisplay
-                {
-                    componentType="SensorsDisplayComponent";
-                    range[]={2000,4000,8000,12000,16000};
-                    resource="RscCustomInfoSensors";
-                };
-                class MineDetectorDisplay
-                {
-                    componentType="MineDetectorDisplayComponent";
-                };
             };
         };
     };

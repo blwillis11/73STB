@@ -15,3 +15,14 @@ class Extended_PostInit_EventHandlers {
         init = QUOTE(call COMPILE_FILE(XEH_postInit));
     };
 };
+
+class Extended_InventoryClosed_EventHandlers
+{
+    class CAManBase
+    {
+        class STB73_ConvertOCIAmmo
+        {
+            inventoryClosed = "_this call STB73_fnc_convertOCIAmmo;";
+        };
+    };
+};

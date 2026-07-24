@@ -206,9 +206,6 @@ _groupSpeciality =  [_AssaultTroopsArray, 2, "AT"] call BIS_fnc_param// _groupSp
 			case "73rd STB": {
 				["STB73_STB_ODST_Team_Lead", "STB73_STB_ODST_Medic", "STB73_STB_ODST_AT", "STB73_STB_ODST_Rifleman", "STB73_STB_ODST_Autorifleman"]
 			};
-			case "10th MEB": {
-				["STB73_Marine_Team_Lead", "STB73_Marine_Medic", "STB73_Marine_Rifleman_AT", "STB73_Marine_Rifleman", "STB73_Marine_Autorifleman"]
-			};
 		})
 	};
 	
@@ -338,7 +335,8 @@ _wpDropAproach = _pelicanGroup addWaypoint [([_pos, 1000, _dir] call OPTRE_fnc_M
 _wpDropAproach setWaypointStatements ["true", "if isServer then {
 	_pelican = vehicle this;
 	_pelican flyInHeight 12;
-	_pelican animate ['cargodoor_1', 1]; _pelican animate ['cargodoor_2', 1];
+	_pelican animate ['cargodoor_1', 1];
+	_pelican animate ['cargodoor_2', 1];
 };
 "];
 _wpDropAproach setWaypointType "MOVE";

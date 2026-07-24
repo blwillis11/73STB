@@ -3,7 +3,6 @@ class TCP_B_762x51_Ball;
 
 class STB73_B_762x51_Ball: TCP_B_762x51_Ball
 {
-    hit=12;
 };
 class STB73_B_762x51_Ball_Tracer: STB73_B_762x51_Ball
 {
@@ -28,7 +27,6 @@ class TCP_B_762x51_BTHP;
 
 class STB73_B_762x51_BTHP: TCP_B_762x51_BTHP
 {
-    hit=12;
 };
 class STB73_B_762x51_BTHP_Tracer: STB73_B_762x51_BTHP
 {
@@ -49,7 +47,6 @@ class TCP_B_762x51_AP;
 
 class STB73_B_762x51_HVAP: TCP_B_762x51_AP
 {
-    hit=10.5;
 };
 class STB73_B_762x51_HVAP_Tracer: STB73_B_762x51_HVAP
 {
@@ -70,7 +67,6 @@ class STB73_B_762x51_HVAP_Tracer_IR: STB73_B_762x51_HVAP
 class TCP_B_95x40_Ball;
 class STB73_95x40_AP: TCP_B_95x40_Ball
 {
-    hit=14;
 };
 class STB73_95x40_AP_Tracer: STB73_95x40_AP
 {
@@ -86,15 +82,7 @@ class STB73_95x40_AP_Tracer_IR: STB73_95x40_AP
     nvgOnly=1;
 };
 
-class OPTRE_B_95x40_Ball;
-
-class STB73_B_95x40_Ball: OPTRE_B_95x40_Ball {
-    caliber = 4.3;
-    hit = 20;
-    typicalSpeed = 650;
-
-    cartridge = "FxCartridge_93x64_Ball";
-    model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
+class STB73_B_95x40_Ball: TCP_B_95x40_Ball {
 };
 class STB73_B_95x40_Tracer:STB73_B_95x40_Ball{
     model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
@@ -104,13 +92,14 @@ class STB73_B_95x40_Tracer_Yellow:STB73_B_95x40_Ball{
 };
 
 // 12 gauge
-class OPTRE_8Gauge_Pellets;
-class OPTRE_8Gauge_Slugs;
-class STB73_12Gauge_Pellets: OPTRE_8Gauge_Pellets
+class TCP_B_12Gauge_Pellets_Submunition;
+class TCP_B_12Gauge_Slug;
+class STB73_12Gauge_Pellets: TCP_B_12Gauge_Pellets_Submunition
 {
     model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
+    submunitionAmmo="TCP_B_12Gauge_Pellets_Submunition_Deploy";
 };
-class STB73_12Gauge_Slugs: OPTRE_8Gauge_Slugs
+class STB73_12Gauge_Slugs: TCP_B_12Gauge_Slug
 {
     model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
 };
@@ -130,7 +119,6 @@ class TCP_B_5x23_Ball;
 
 class STB73_5x23_Caseless:TCP_B_5x23_Ball
 {
-    hit=9;
 };
 class STB73_5x23_Caseless_Tracer:STB73_5x23_Caseless
 {
@@ -163,7 +151,6 @@ class TCP_B_127x30_Ball;
 
 class STB73_B_127x30_Ball:TCP_B_127x30_Ball
 {
-    hit=9;
 };
 class STB73_B_127x30_Ball_Tracer:STB73_B_127x30_Ball
 {

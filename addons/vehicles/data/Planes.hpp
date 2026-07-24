@@ -1,5 +1,4 @@
 class MEU_F29_Nandao_VTOL;
-
 class STB73_F29_Nandao_VTOL : MEU_F29_Nandao_VTOL
 {
     displayName="[73] F-29 Nandao VTOL";

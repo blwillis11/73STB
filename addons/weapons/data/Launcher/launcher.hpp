@@ -85,7 +85,7 @@ class OPTRE_M41_SSR;
 class STB73_M41_SSR:OPTRE_M41_SSR{
     displayName = "[73] M41 SSR MAV/AW";
     author= "73rd S-4 Team";
-    baseWeapon="STB73_MPLR";
+    baseWeapon="STB73_M41_SSR";
     scope = 2;
     scopeArsenal = 2;
     enabled = 1;

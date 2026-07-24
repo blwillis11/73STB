@@ -64,11 +64,11 @@ class CfgVehicles {
         uniformClass = "STB73_U_B_TacShirt_QuarterRoll_Unzipped_Urban";
         backpack = "";
 
-        weapons[] = {"","", "Throw", "Put"};
-        respawnWeapons[] = {"","", "Throw", "Put"};
+        weapons[] = {"Throw", "Put"};
+        respawnWeapons[] = {"Throw", "Put"};
 
-        linkedItems[] = {"STB73_M43D_Light_Black_Standard","","ItemMap","","ItemRadio","ItemCompass","TCP_Watch"};
-        respawnLinkedItems[] = {"STB73_M43D_Light_Black_Standard","","ItemMap","","ItemRadio","ItemCompass","TCP_Watch"};
+        linkedItems[] = {"STB73_M43D_Light_Black_Standard","ItemMap","ItemRadio","ItemCompass","TCP_Watch"};
+        respawnLinkedItems[] = {"STB73_M43D_Light_Black_Standard","ItemMap","ItemRadio","ItemCompass","TCP_Watch"};
 
         magazines[] = {""};
         respawnMagazines[] = {""};

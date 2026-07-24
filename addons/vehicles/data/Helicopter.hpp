@@ -260,7 +260,6 @@ class STB73_D77_TC_Pelican: Splits_UNSC_D77_TC_Pelican
 };
 
 class OPTRE_UNSC_falcon;
-
 class STB73_UNSC_falcon:OPTRE_UNSC_falcon
 {
     displayName = "[73] UH-144 Falcon [Unarmed]";
@@ -297,7 +296,6 @@ class STB73_UNSC_falcon:OPTRE_UNSC_falcon
 };
 
 class OPTRE_UNSC_falcon_S;
-
 class STB73_UNSC_falcon_S:OPTRE_UNSC_falcon_S
 {
     displayName = "[73] UH-144S Falcon";
@@ -333,7 +331,6 @@ class STB73_UNSC_falcon_S:OPTRE_UNSC_falcon_S
     };
 };
 class OPTRE_UNSC_MH_144_Falcon;
-
 class STB73_UNSC_MH_144_Falcon:OPTRE_UNSC_MH_144_Falcon
 {
     displayName = "[73] MH-144 Falcon";
@@ -369,7 +366,6 @@ class STB73_UNSC_MH_144_Falcon:OPTRE_UNSC_MH_144_Falcon
     };
 };
 class OPTRE_UNSC_MH_144S_Falcon;
-
 class STB73_UNSC_MH_144S_Falcon:OPTRE_UNSC_MH_144S_Falcon
 {
     displayName = "[73] MH-144S Falcon";
@@ -408,7 +404,6 @@ class STB73_UNSC_MH_144S_Falcon:OPTRE_UNSC_MH_144S_Falcon
 };
 
 class OPTRE_AV22_Sparrowhawk;
-
 class STB73_AV22_Sparrowhawk:OPTRE_AV22_Sparrowhawk
 {
     displayName = "[73] AV-22M Sparrowhawk";
@@ -444,7 +439,6 @@ class STB73_AV22_Sparrowhawk:OPTRE_AV22_Sparrowhawk
     };
 };
 class OPTRE_AV22A_Sparrowhawk;
-
 class STB73_AV22A_Sparrowhawk:OPTRE_AV22A_Sparrowhawk
 {
     displayName = "[73] AV-22L Sparrowhawk";
@@ -480,7 +474,6 @@ class STB73_AV22A_Sparrowhawk:OPTRE_AV22A_Sparrowhawk
     };
 };
 class OPTRE_AV22B_Sparrowhawk;
-
 class STB73_AV22B_Sparrowhawk:OPTRE_AV22B_Sparrowhawk
 {
     displayName = "[73] AV-22ML Sparrowhawk";
@@ -516,7 +509,6 @@ class STB73_AV22B_Sparrowhawk:OPTRE_AV22B_Sparrowhawk
     };
 };
 class OPTRE_AV22C_Sparrowhawk;
-
 class STB73_AV22C_Sparrowhawk:OPTRE_AV22C_Sparrowhawk
 {
     displayName = "[73] AV-22 Sparrowhawk";
@@ -553,7 +545,6 @@ class STB73_AV22C_Sparrowhawk:OPTRE_AV22C_Sparrowhawk
 };
 
 class TKE_Ext_Dragonfly_A;
-
 class STB73_AV18_Dragonfly:TKE_Ext_Dragonfly_A
 {
     displayName = "[73] AV-18 Dragonfly";

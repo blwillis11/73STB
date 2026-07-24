@@ -178,8 +178,11 @@ class XtdGearModels
             {
                 "Billet",
                 "Camo",
-                "Variant",
-				"Collar"
+				"Belt",
+				"Collar",
+                "Shoulders",
+				"Legs",
+				"Arms"
             };
             class Billet
             {
@@ -192,7 +195,6 @@ class XtdGearModels
                     "Standard",
                     "Company",
                     "Atlas1",
-					"Atlas2",
 					"SORC"
                 };
             };
@@ -207,21 +209,19 @@ class XtdGearModels
                     "Black"
                 };
             };
-            class Variant
+            class Belt
             {
                 alwaysSelectable=1;
                 changeingame=0;
                 changedelay=0;
-                label= "Variant";
+                label= "Belt";
                 values[]=
                 {
-                    "Light",
-					"ODST",
-                    "Sharpshooter",
-                    "Breacher"
+                    "None",
+					"Belt"
                 };
             };
-            class Collar
+			class Collar
             {
                 alwaysSelectable=1;
                 changeingame=0;
@@ -232,6 +232,46 @@ class XtdGearModels
                     "None",
                     "Flak",
                     "Armored"
+                };
+            };
+            class Shoulders
+            {
+                alwaysSelectable=1;
+                changeingame=0;
+                changedelay=0;
+                label= "Shoulders";
+                values[]=
+                {
+                    "None",
+					"Pads",
+					"ODST",
+                    "Sharpshooter",
+                    "Breacher"
+                };
+            };
+			class Legs
+            {
+                alwaysSelectable=1;
+                changeingame=0;
+                changedelay=0;
+                label= "Legs";
+                values[]=
+                {
+                    "None",
+                    "Thigh",
+                    "Shin"
+                };
+            };
+			class Arms
+            {
+                alwaysSelectable=1;
+                changeingame=0;
+                changedelay=0;
+                label= "Arms";
+                values[]=
+                {
+                    "None",
+                    "Gauntlets"
                 };
             };
         };
@@ -254,9 +294,7 @@ class XtdGearModels
                 {
                     "Standard",
 					"Company",
-					"Medic",
-                    "Atlas1",
-					"Atlas2"
+                    "Atlas1"
                 };
             };
             class Variant

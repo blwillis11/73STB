@@ -53,12 +53,10 @@ class CfgFunctions{
             file = "z\73STB\addons\functions\modules";
             class ModuleODSTHEV { file = "z\73STB\addons\functions\modules\fn_ModuleODSTHEV.sqf"; description = "STB73 - ODST HEV module"; };
             class ModuleBJHEV { file = "z\73STB\addons\functions\modules\fn_ModuleBJHEV.sqf"; description = "STB73 - BJ HEV module"; };
-            class ModuleOCLSSquadPod { file = "z\73STB\addons\functions\modules\fn_ModuleOCLSSquadPod.sqf"; description = "STB73 - OCLS squad pod module"; };
             class ModulePelicanAirAssault { file = "z\73STB\addons\functions\modules\fn_ModulePelicanAirAssault.sqf"; description = "STB73 - Pelican air assault module"; };
             class ModuleHEV { file = "z\73STB\addons\functions\modules\fn_ModuleHEV.sqf"; description = "STB73 - HEV module"; };
             class ModuleHEVCleanup { file = "z\73STB\addons\functions\modules\fn_ModuleHEVCleanup.sqf"; description = "STB73 - HEV Cleanup module"; };
         };
-
         class Thrusters
         {
             file = "z\73STB\addons\functions\thrusters";
@@ -77,7 +75,6 @@ class CfgFunctions{
             class EngageForwardThruster { file = "z\73STB\addons\functions\thrusters\Fn_EngageForwardThruster.sqf"; description = "Thrusters - engage forward thruster"; };
             
         };
-
         class Jumpack
         {
             file = "z\73STB\addons\functions\jumpack";
@@ -92,9 +89,7 @@ class CfgFunctions{
         {
             file = "z\73STB\addons\functions\support";
             class CS_ODSTHEV {};
-            class CS_BJHEV {};
             class CS_PelicanAirAssault {};
-            class CS_OCLSSquadPod {};
             class setCallMortarFireSupport73STB {};
             class setCallArtyFireSupport73STB {};
             class addFireSupportMenu73STB {};
@@ -128,6 +123,9 @@ class CfgFunctions{
             class Init_wep
             {
                 postInit=1;
+            };
+            class convertOCIAmmo
+            {
             };
         };
         class MenuFunctions
@@ -221,9 +219,7 @@ class CfgFunctions{
         class SupportSystem
         {
             class CS_ODSTHEV {file = "z\73STB\addons\functions\support\Fn_CS_ODSTHEV.sqf";};
-            class CS_BJHEV {file = "z\73STB\addons\functions\support\Fn_CS_BJHEV.sqf";};
             class CS_PelicanAirAssault {file = "z\73STB\addons\functions\support\Fn_CS_PelicanAirAssault.sqf";};
-            class CS_OCLSSquadPod {file = "z\73STB\addons\functions\support\Fn_CS_OCLSSquadPod.sqf";};
             class setCallMortarFireSupport73STB {file = "z\73STB\addons\functions\support\Fn_setCallMortarFireSupport73STB.sqf";};
             class setCallArtyFireSupport73STB {file = "z\73STB\addons\functions\support\Fn_setCallArtyFireSupport73STB.sqf";};
             class addFireSupportMenu73STB {file = "z\73STB\addons\functions\support\Fn_addFireSupportMenu73STB.sqf";};
@@ -256,12 +252,6 @@ class CfgFunctions{
             
             class ModuleODSTHEV {
                 file = "z\73STB\addons\functions\modules\fn_ModuleODSTHEV.sqf";
-            };
-            class ModuleBJHEV {
-                file = "z\73STB\addons\functions\modules\fn_ModuleBJHEV.sqf";
-            };
-            class ModuleOCLSSquadPod {
-                file = "z\73STB\addons\functions\modules\fn_ModuleOCLSSquadPod.sqf";
             };
             class ModulePelicanAirAssault {
                 file = "z\73STB\addons\functions\modules\fn_ModulePelicanAirAssault.sqf";

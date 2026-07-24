@@ -9,8 +9,7 @@ class CfgPatches {
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "TCP_Characters",
-            "STB73_Main"
+            "TCP_Characters"
         };
         authors[] = {"Salmon"}; // sub array of authors, considered for the specific addon, can be removed or left empty {}
         author = AUTHOR; // primary author name, either yours or your team's, considered for the whole mod
@@ -38,6 +37,12 @@ class CfgUnitInsignia {
         displayName = "73rd STB ACo Insignia";
         author = AUTHOR;
         texture = "z\73STB\addons\armor\data\insignia\aco_patch_co.paa";
+        material = "\A3\Ui_f\data\GUI\Cfg\UnitInsignia\default_insignia.rvmat";
+    };
+    class STB73_VC713_logo_insignia {
+        displayName = "73rd STB VC-713 Insignia";
+        author = AUTHOR;
+        texture = "z\73STB\addons\armor\data\insignia\vc713_patch_co.paa";
         material = "\A3\Ui_f\data\GUI\Cfg\UnitInsignia\default_insignia.rvmat";
     };
 };

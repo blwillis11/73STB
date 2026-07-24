@@ -21,20 +21,6 @@ class CfgVehicles
     VEH_UNI_CLASS(Urban)
     VEH_UNI_CLASS(White)
     VEH_UNI_CLASS(Woodland)
-
-    class STB73_B_FieldTop_Full_Gloves_Bloused_Kneepads_Medic : TCP_B_CBUU_FieldTop_Full_Gloves_Bloused_Kneepads_Base {
-        author=AUTHOR;
-        scope= 1;
-        scopeArsenal= 1;
-        scopeCurator = 1;
-        CBRN_protectionLevel="4 + 8";
-        hiddenSelectionsTextures[] = {
-            QP(data\uniform\Medic\CBUU_FieldTop_CO.paa),
-            QP(data\uniform\Medic\CBUU_Pants_CO.paa),
-            QP(data\uniform\Medic\CBUU_Gloves_CO.paa)
-            };
-        uniformClass = QUOTE(STB73_U_B_FieldTop_Full_Gloves_Bloused_Kneepads_Medic);
-    };
 	class ItemInfo;
 	class UniformItem;
     class OPTRE_Rucksack;
@@ -241,7 +227,6 @@ class CfgVehicles
     STB73_EM39_BACKPACK_MOS_ROLL_ONLY(EM39_MLBE_Hardcase,Patrol,Roll,Black,300)
     STB73_EM39_BACKPACK_ROLL_ONLY(EM39_MLBE_Hardcase,Roll,Black,250)
 
-    STB73_NO_BACKPACK_2(Medic_1,Medic,200)
 
     STB73_M43_RUCKSACK_VARS
 

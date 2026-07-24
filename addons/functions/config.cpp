@@ -7,13 +7,12 @@ class CfgPatches {
         {
 			"STB73_Module_HEV",
 			"STB73_Module_ODSTDrop",
-			"STB73_Module_BattlejumperDrop",
-			"STB73_Module_OCLSSquadDrop",
 			"STB73_Module_PelicanAirAssault",
 			"STB73_ODSTDrop",
-			"STB73_BattlejumperDrop",
-			"STB73_OCLSSquadDrop",
-			"STB73_PelicanAirAssault"
+			"STB73_PelicanAirAssault",
+			"STB73_Modules_MakeAceArsenal",
+			"STB73_Modules_RescaleObjects",
+			"STB73_Modules_MakeTrippleRArea"
         }; 
         weapons[] = {
         };

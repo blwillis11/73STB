@@ -2,37 +2,8 @@ class CfgWeapons
 {
     class VestItem;
     class ItemInfo;
-    class TCP_V_M43D_ODST_4_Black;
-    class TCP_V_M43D_ODST_4_Black_TACPAD;
-    class TCP_V_M43D_ODST_4_Black_UGPS;
-    class TCP_V_M43D_ODST_4_1_Black;
-    class TCP_V_M43D_ODST_4_1_Black_TACPAD;
-    class TCP_V_M43D_ODST_4_1_Black_UGPS;
-    class TCP_V_M43D_ODST_4_2_Black;
-    class TCP_V_M43D_ODST_4_2_Black_TACPAD;
-    class TCP_V_M43D_ODST_4_2_Black_UGPS;
-    class TCP_V_M43D_Breacher_4_Black;
-    class TCP_V_M43D_Breacher_4_Black_TACPAD;
-    class TCP_V_M43D_Breacher_4_Black_UGPS;
-    class TCP_V_M43D_Breacher_4_1_Black;
-    class TCP_V_M43D_Breacher_4_1_Black_TACPAD;
-    class TCP_V_M43D_Breacher_4_1_Black_UGPS;
-    class TCP_V_M43D_Breacher_4_2_Black;
-    class TCP_V_M43D_Breacher_4_2_Black_TACPAD;
-    class TCP_V_M43D_Breacher_4_2_Black_UGPS;
-    class TCP_V_M43D_Sharpshooter_4_Black;
-    class TCP_V_M43D_Sharpshooter_4_Black_TACPAD;
-    class TCP_V_M43D_Sharpshooter_4_Black_UGPS;
-    class TCP_V_M43D_Sharpshooter_4_1_Black;
-    class TCP_V_M43D_Sharpshooter_4_1_Black_TACPAD;
-    class TCP_V_M43D_Sharpshooter_4_1_Black_UGPS;
-    class TCP_V_M43D_Sharpshooter_4_2_Black;
-    class TCP_V_M43D_Sharpshooter_4_2_Black_TACPAD;
-    class TCP_V_M43D_Sharpshooter_4_2_Black_UGPS;
     class TCP_V_M43A_BaseSec_3_Black;
     class TCP_V_M43D_Light_Black;
-    class TCP_V_M43D_Light_Black_TACPAD;
-    class TCP_V_M43D_Light_Black_UGPS;
     class ItemCore;
     class UniformItem;
     class TCP_equipmentTypes;
@@ -47,43 +18,45 @@ class CfgWeapons
         };
     };
 
-    class STB73_Vest_Base: ItemCore
-	{
-		class ItemInfo;
-	};
-    class STB73_VestItem_Base: STB73_Vest_Base
-	{
-		class TCP_uniformDecals;
-		class ItemInfo: ItemInfo
-		{
-			VEST_HITPOINT_INFO
-            continerClass="STB73_vest_supply";
-		};
-	};
+    class TCP_V_M43D_Light_Base;
+    class STB73_M43D_Base: TCP_V_M43D_Light_Base {
+        class itemInfo: ItemInfo
+        {
+           VEST_HITPOINT_INFO
+           containerClass="STB73_vest_supply";
+        };
+    };
     
     NEW_VEST_43A(Aviator)
 
-    NEW_VEST_M43D_Light(Black,Standard)
-
+    NEW_VEST_M43D_NONE(Black,Company)
+    NEW_VEST_M43D_LIGHT(Black,Company)
+    NEW_VEST_M43D_PADS(Black,Company)
     NEW_VEST_M43D_ODST(Black,Company)
     NEW_VEST_M43D_SHARPSHOOTER(Black,Company)
     NEW_VEST_M43D_BREACHER(Black,Company)
 
+    NEW_VEST_M43D_NONE(Black,Standard)
+    NEW_VEST_M43D_LIGHT(Black,Standard)
+    NEW_VEST_M43D_PADS(Black,Standard)
     NEW_VEST_M43D_ODST(Black,Standard)
     NEW_VEST_M43D_SHARPSHOOTER(Black,Standard)
     NEW_VEST_M43D_BREACHER(Black,Standard)
 
+    NEW_VEST_M43D_NONE(Black,Atlas1)
+    NEW_VEST_M43D_LIGHT(Black,Atlas1)
+    NEW_VEST_M43D_PADS(Black,Atlas1)
     NEW_VEST_M43D_ODST(Black,Atlas1)
     NEW_VEST_M43D_SHARPSHOOTER(Black,Atlas1)
     NEW_VEST_M43D_BREACHER(Black,Atlas1)
-
-    NEW_VEST_M43D_ODST(Black,Atlas2)
-    NEW_VEST_M43D_SHARPSHOOTER(Black,Atlas2)
-    NEW_VEST_M43D_BREACHER(Black,Atlas2)
-
+    
+    NEW_VEST_M43D_NONE(Black,SORC)
+    NEW_VEST_M43D_LIGHT(Black,SORC)
+    NEW_VEST_M43D_PADS(Black,SORC)
     NEW_VEST_M43D_ODST(Black,SORC)
     NEW_VEST_M43D_SHARPSHOOTER(Black,SORC)
     NEW_VEST_M43D_BREACHER(Black,SORC)
+    
 
 
     TCP_WEP_CLASS_DEF
@@ -192,28 +165,6 @@ class CfgWeapons
     class TCP_H_Helmet_ECH55D_Black_Black_DP;
     class HeadgearItem;
 
-    class STB73_Helmet_Base: ItemCore
-    {
-        class HelmetItem: ItemInfo
-        {
-            class HitpointsProtectionInfo
-            {
-                class Face
-                {
-                    hitpointName="HitFace"; 
-                    armor=14;
-                    passThrough=0.5;
-                };
-                class Head
-                {
-                    hitpointName="HitHead";
-                    armor=18;
-                    passThrough=0.5;
-                };
-            };
-        };
-    };
-
     class STB73_Helmet_ECH55D_Base: TCP_H_Helmet_ECH55D_Black_Black
 	{
         scope=1;
@@ -223,48 +174,46 @@ class CfgWeapons
             {
                 class Face
                 {
-                hitpointName="HitFace";
-                armor=14;
-                passThrough=0.2;
+                    hitpointName="HitFace";
+                    armor=LVL3_ARMOR;
+                    passThrough=LVL3_PASS;
                 };
                 class Head
                 {
-                hitpointName="HitHead";
-                armor=20;
-                passThrough=0.2;
+                    hitpointName="HitHead";
+                    armor=LVL4_ARMOR;
+                    passThrough=LVL4_PASS;
                 };
             };
         };
 	};
     class STB73_Helmet_ECH55D_DP_Base: TCP_H_Helmet_ECH55D_Black_Black_DP
 	{
-	}; 
+	};
     
-    ECH55D_HELMET(Company,Black,Officer)
-    ECH55D_HELMET(Company,Red,SORC)
-    ECH55D_HELMET(Company,Gold,NCO)
-    ECH55D_HELMET(Company,Green,Specialist)
-    ECH55D_HELMET(Company,Blue,Enlisted)
+    ECH55D_HELMET(Company,Black,Officer,Standard)
+    ECH55D_HELMET(Company,Red,SORC,SORC)
+    ECH55D_HELMET(Company,Gold,NCO,Standard)
+    ECH55D_HELMET(Company,Silver,Specialist,Standard)
+    ECH55D_HELMET(Company,Blue,Enlisted,Standard)
 
-    ECH55D_HELMET(Medic,Red,SORC)
+    ECH55D_HELMET(Standard,Black,Officer,Standard)
+    ECH55D_HELMET(Standard,Red,SORC,SORC)
+    ECH55D_HELMET(Standard,Gold,NCO,Standard)
+    ECH55D_HELMET(Standard,Silver,Specialist,Standard)
+    ECH55D_HELMET(Standard,Blue,Enlisted,Standard)
 
-    ECH55D_HELMET(Standard,Black,Officer)
-    ECH55D_HELMET(Standard,Red,SORC)
-    ECH55D_HELMET(Standard,Gold,NCO)
-    ECH55D_HELMET(Standard,Green,Specialist)
-    ECH55D_HELMET(Standard,Blue,Enlisted)
+    ECH55D_HELMET(Atlas1,Black,Officer,Standard)
+    ECH55D_HELMET(Atlas1,Red,SORC,SORC) 
+    ECH55D_HELMET(Atlas1,Gold,NCO,Standard)
+    ECH55D_HELMET(Atlas1,Silver,Specialist,Standard)
+    ECH55D_HELMET(Atlas1,Blue,Enlisted,Standard)
 
-    ECH55D_HELMET(Atlas1,Black,Officer)
-    ECH55D_HELMET(Atlas1,Red,SORC) 
-    ECH55D_HELMET(Atlas1,Gold,NCO)
-    ECH55D_HELMET(Atlas1,Green,Specialist)
-    ECH55D_HELMET(Atlas1,Blue,Enlisted)
-
-    ECH55D_HELMET(Atlas2,Black,Officer)
-    ECH55D_HELMET(Atlas2,Red,SORC)
-    ECH55D_HELMET(Atlas2,Gold,NCO)
-    ECH55D_HELMET(Atlas2,Green,Specialist)
-    ECH55D_HELMET(Atlas2,Blue,Enlisted)
+    // ECH55D_HELMET(Atlas2,Black,Officer,Standard)
+    // ECH55D_HELMET(Atlas2,Red,SORC,SORC)
+    // ECH55D_HELMET(Atlas2,Gold,NCO,Standard)
+    // ECH55D_HELMET(Atlas2,Silver,Specialist,Standard)
+    // ECH55D_HELMET(Atlas2,Blue,Enlisted,Standard)
 
     class Uniform_Base;
 	class OPTRE_UNSC_Army_Soldier_DressGray;
@@ -320,10 +269,18 @@ class CfgWeapons
     class H_Beret_Colonel;
     class STB73_beret: H_Beret_Colonel
     {
-        displayName = "[73] Beret";
+        displayName = "[73] STB Beret";
         hiddenSelectionsTextures[]=
         {
             "z\73STB\addons\armor\data\helmets\73Beret_co.paa"
+        };
+    };
+    class STB73_aviation_beret: H_Beret_Colonel
+    {
+        displayName = "[73] VC-713 Beret";
+        hiddenSelectionsTextures[]=
+        {
+            "z\73STB\addons\armor\data\helmets\vc713Beret_co.paa"
         };
     };
 

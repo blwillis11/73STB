@@ -49,3 +49,5 @@ class HitpointsProtectionInfo {  \
     passThrough=0.4;             \
   };                             \
 };
+
+#define PREP(fncName) FUNC(fncName) = compile preProcessFileLineNumbers QPATHTOF(functions\DOUBLES(fnc,fncName))

@@ -106,7 +106,7 @@ while { STB73_JumpPack_ON } do {
 	_fuel = player getVariable ["STB73_JumpPack_fuel", 1];
 
 	// Normal fuel & Heat Changes
-	_newHeat = _heat + 0.035;
+	_newHeat = _heat + 0.025;
 	_newFuel = _fuel - 0.01;
 
 	_pos = getPosATL player;
