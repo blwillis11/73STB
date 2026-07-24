@@ -209,6 +209,8 @@ class CfgWeapons
     ECH55D_HELMET(Atlas1,Silver,Specialist,Standard)
     ECH55D_HELMET(Atlas1,Blue,Enlisted,Standard)
 
+    CUS_ECH55D_HELMET(Dove,Silver)
+
     // ECH55D_HELMET(Atlas2,Black,Officer,Standard)
     // ECH55D_HELMET(Atlas2,Red,SORC,SORC)
     // ECH55D_HELMET(Atlas2,Gold,NCO,Standard)
