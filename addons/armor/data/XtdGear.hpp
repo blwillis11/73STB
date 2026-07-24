@@ -313,6 +313,29 @@ class XtdGearModels
                 };
             };
         };
+        class STB73_ACE_CUS_ECH55D_Helmet
+        {
+            label = "[73] Custom ECH55D Helmet";
+            author = AUTHOR;
+            options[]=
+            {
+                "Custom",
+				"Variant"
+            };
+			class Custom
+            {
+                alwaysSelectable=1;
+                changeingame=0;
+                changedelay=0;
+                label= "Custom";
+                values[]=
+                {
+                    "Dove",
+					"Ninja"
+                };
+            };
+
+        };
 
         class STB73_ACE_VX19_Helmet
 		{
