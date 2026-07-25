@@ -3753,7 +3753,7 @@ class HitpointsProtectionInfo {  \
     CBRN_protectionLevel="1 + 2"; \
     class XtdGearInfo { \
       Model="STB73_ACE_CUS_ECH55D_Helmet"; \
-      Billet=Q(##WHO##); \
+      Custom=Q(##WHO##); \
     };\
     TCP_visrClasses[]= \
 		{ \
