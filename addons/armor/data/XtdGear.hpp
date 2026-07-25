@@ -330,7 +330,11 @@ class XtdGearModels
                 values[]=
                 {
                     "Dove",
-					"Ninja"
+					"Ninja",
+					"Ridge",
+					"Mendez",
+					"Stauss",
+					"Smith"
                 };
             };
 
