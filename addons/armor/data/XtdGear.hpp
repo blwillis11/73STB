@@ -319,8 +319,7 @@ class XtdGearModels
             author = AUTHOR;
             options[]=
             {
-                "Custom",
-				"Variant"
+                "Custom"
             };
 			class Custom
             {
