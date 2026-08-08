@@ -116,7 +116,6 @@ class CfgFactionClasses
 };
 
 #include "categories.hpp"
-
 class CfgWeapons
 {
     class ItemInfo;

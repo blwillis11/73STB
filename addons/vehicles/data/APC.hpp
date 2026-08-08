@@ -10,6 +10,12 @@ class STB73_M494_Oryx: OPTRE_M494
     scope=2;
     side=1;
     crew = "STB73_STB_ODST_Rifleman";
+    class TCP_Compat_OPTRE
+    {
+        magLockOffset[] = {0, -7.2, -1.57105};
+        magLockReversed = 1; // Rotates the vehicle 180 degrees when mag-locked
+        magLockGearInterlock = 1; // Disallows the mag-locked vehicle from being unloaded when gear are down
+    };
     class ace_cargo {
         class cargo {
             class ACE_Tracks { // Doesn't have to have the same name as the item you're adding
@@ -49,6 +55,12 @@ class STB73_M511_Springbok_APC : DMNS_M511_Springbok_APC
     scope=2;
     side=1;
     crew = "STB73_STB_ODST_Rifleman";
+    class TCP_Compat_OPTRE
+    {
+        magLockOffset[] = {0, -9, -0.72};
+        magLockReversed = 1; // Rotates the vehicle 180 degrees when mag-locked
+        magLockGearInterlock = 1; // Disallows the mag-locked vehicle from being unloaded when gear are down
+    };
     class ACE_Cargo
     {
         class Cargo
@@ -89,6 +101,12 @@ class STB73_M511_Springbok_IFV : DMNS_M511_Springbok_IFV
     scope=2;
     side=1;
     crew = "STB73_STB_ODST_Rifleman";
+    class TCP_Compat_OPTRE
+    {
+        magLockOffset[] = {0, -9, -0.85};
+        magLockReversed = 1; // Rotates the vehicle 180 degrees when mag-locked
+        magLockGearInterlock = 1; // Disallows the mag-locked vehicle from being unloaded when gear are down
+    };
     class ACE_Cargo
     {
         class Cargo
@@ -128,6 +146,12 @@ class STB73_M511_Springbok_MGS : DMNS_M511_Springbok_MGS
     scope=2;
     side=1;
     crew = "STB73_STB_ODST_Rifleman";
+    class TCP_Compat_OPTRE
+    {
+        magLockOffset[] = {0, -9, -0.85};
+        magLockReversed = 1; // Rotates the vehicle 180 degrees when mag-locked
+        magLockGearInterlock = 1; // Disallows the mag-locked vehicle from being unloaded when gear are down
+    };
     class ACE_Cargo
     {
         class Cargo
@@ -167,6 +191,12 @@ class STB73_M511_Springbok_AA : DMNS_M511_Springbok_AA
     scope=2;
     side=1;
     crew = "STB73_STB_ODST_Rifleman";
+    class TCP_Compat_OPTRE
+    {
+        magLockOffset[] = {0, -9, -0.85};
+        magLockReversed = 1; // Rotates the vehicle 180 degrees when mag-locked
+        magLockGearInterlock = 1; // Disallows the mag-locked vehicle from being unloaded when gear are down
+    };
     class ACE_Cargo
     {
         class Cargo

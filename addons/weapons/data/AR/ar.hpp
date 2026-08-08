@@ -369,8 +369,8 @@ class STB73_MA5BGL: NSWep_MA5BGL
         grenadeLauncher="M301";
     };
 };
-class OPTRE_MA5C;
-class STB73_MA5C: OPTRE_MA5C
+class NSWep_MA5C;
+class STB73_MA5C: NSWep_MA5C
 {
     author= "73rd S-4 Team";
     displayName             = "[73] MA5C ICWS Assault Rifle";
@@ -384,27 +384,27 @@ class STB73_MA5C: OPTRE_MA5C
         grenadeLauncher="None";
     };
 };
-class OPTRE_MA5CGL;
-class STB73_MA5CGL: OPTRE_MA5CGL
+class NSWep_MA5CGL;
+class STB73_MA5CGL: NSWep_MA5CGL
 {
     displayName         = "[73] MA5C ICWS Assault Rifle [M301]";
     baseWeapon 			= "STB73_MA5CGL";
     magazines[]             = {"STB73_60Rnd_762x51_Mag_Tracer"};
     magazineWell[] 			= {"STB73_60Rnd_762x51_MagWell","STB73_32Rnd_762x51_MagWell","STB73_15Rnd_762x51_MagWell"};
-    class OPTRE_M301UGL:STB73_launch_M301
+    class NSWep_M300CUGL:STB73_launch_M301
     {
         displayName 														= "M301 Grenade Launcher";
         descriptionShort 													= "M301 GL";
         cursor								= "EmptyCursor";
-        cursorAim							= "OPTRE_GRNDLNCH";
+        cursorAim							= "NSWep_GL_Ret";
         useModelOptics 														= 0;
         useExternalOptic 													= 0;
         cameraDir 															= "OP_look";
         discreteDistance[] 													= {100, 200, 300};
-        discreteDistanceCameraPoint[] 										= {"OP_eye", "OP_eye2", "OP_eye3"}; /// the angle of gun changes with zeroing
+        discreteDistanceCameraPoint[] 										= {"OP_eye", "OP_eye2", "OP_eye3", "OP_eye4", "OP_eye5"}; /// the angle of gun changes with zeroing
         discreteDistanceInitIndex 											= 0;
-        reloadAction 														= "GestureReloadMXUGL";
-        reloadMagazineSound[] 												= {"A3\Sounds_F\arsenal\weapons\Rifles\MX\MX_UGL_reload",1,1,10};
+        reloadAction 														= "GestureReloadMk20UGL";
+        reloadMagazineSound[] 												= {"A3\Sounds_F\arsenal\weapons\UGL\Reload_UGL",0.562341,1,10};
         class Single: Single
         {
             sounds[]=
@@ -414,19 +414,17 @@ class STB73_MA5CGL: OPTRE_MA5CGL
             class BaseSoundModeType
             {
                 weaponSoundEffect="DefaultRifle";
-                closure1[]={};
+                closure1[]={"A3\Sounds_F\arsenal\weapons\UGL\Closure_UGL",1,1,10};
                 closure2[]={};
                 soundClosure[]=
                 {
                     "closure1",
-                    0.5,
-                    "closure2",
-                    0.5
+                    1
                 };
             };
             class StandardSound: BaseSoundModeType
             {
-                soundSetShot[] = {"Msbs65_01_Ugl_Shot_SoundSet","Msbs65_01_Ugl_Tail_SoundSet","Msbs65_01_Ugl_InteriorTail_SoundSet"};
+                soundSetShot[] = {"UGL_shot_SoundSet","UGL_Tail_SoundSet","UGL_InteriorTail_SoundSet"};
             };
             reloadTime = 0.1;
         };

@@ -26,6 +26,12 @@ class STB73_SDV_ODST: B_SDV_01_F
     waterAngularDampingCoef=1.1;
     rudderForceCoef=0.1;
     rudderForceCoefAtMaxSpeed=0.050000001;
+    class TCP_Compat_OPTRE
+    {
+        magLockOffset[] = {0,-7.5,-.25};
+        magLockReversed = 1; // Rotates the vehicle 180 degrees when mag-locked
+        magLockGearInterlock = 1; // Disallows the mag-locked vehicle from being unloaded when gear are down
+    };
     class TransportItems
     {
     };
@@ -62,6 +68,12 @@ class STB73_Boat_Transport:B_Boat_Transport_01_F
     canBeTransported = 1;
     transportVehicleMass = 1000;
     engineShiftY=0.3;
+    class TCP_Compat_OPTRE
+    {
+        magLockOffset[] = {0, -4.8, -0.1};
+        magLockReversed = 1; // Rotates the vehicle 180 degrees when mag-locked
+        magLockGearInterlock = 1; // Disallows the mag-locked vehicle from being unloaded when gear are down
+    };
     class VehicleTransport
     {
         class Cargo

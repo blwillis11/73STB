@@ -2635,6 +2635,22 @@ class HitpointsProtectionInfo {  \
 			"wristdefaultl", \
 			"wristugps" \
 		}; \
+    class ItemInfo: ItemInfo \
+    { \
+      hiddenSelections[]= \
+      { \
+        "camo", \
+        "camo1", \
+        "camo2", \
+        "camo3", \
+        "camo4", \
+        "camo5", \
+        "decals", \
+        "collarflak", \
+        "wristdefaultl", \
+        "wristugps" \
+      }; \
+    }; \
   };\
   class STB73_M43D_Breacher_4_2_##CAMO##_##PLATOON##_UGPS : STB73_M43D_Breacher_4_2_##CAMO##_##PLATOON## { \
     scope=1; \
@@ -2652,7 +2668,23 @@ class HitpointsProtectionInfo {  \
 			"wristdefaultl", \
 			"wristtacpad" \
 		}; \
-  };\
+    class ItemInfo: ItemInfo \
+    { \
+      hiddenSelections[]= \
+      { \
+        "camo", \
+        "camo1", \
+        "camo2", \
+        "camo3", \
+        "camo4", \
+        "camo5", \
+        "decals", \
+        "collarflak", \
+        "wristdefaultl", \
+        "wristtacpad" \
+      }; \
+    }; \
+  }; \
   class STB73_M43D_Breacher_3_##CAMO##_##PLATOON## : STB73_M43D_Light_##CAMO##_##PLATOON## { \
     displayName = Q([73] M43/D [Breacher] [##PLATOON##] [##CAMO##]); \
     model="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_BREACHER_3.p3d"; \
@@ -3077,7 +3109,24 @@ class HitpointsProtectionInfo {  \
 			"wristdefaultl", \
 			"wristtacpad" \
 		}; \
-  }; \
+    class ItemInfo: ItemInfo \
+    { \
+      hiddenSelections[]= \
+      { \
+        "camo", \
+        "camo1", \
+        "camo2", \
+        "camo3", \
+        "camo4", \
+        "camo5", \
+        "decals", \
+        "collararmored", \
+        "collarflak", \
+        "wristdefaultl", \
+        "wristtacpad" \
+      }; \
+    }; \
+  };\
   class STB73_M43D_Sharpshooter_4_1_##CAMO##_##PLATOON## : STB73_M43D_Sharpshooter_4_##CAMO##_##PLATOON## { \
     hiddenSelections[]= \
 		{ \
@@ -3139,6 +3188,22 @@ class HitpointsProtectionInfo {  \
 			"wristdefaultl", \
 			"wristugps" \
 		}; \
+    class ItemInfo: ItemInfo \
+    { \
+      hiddenSelections[]= \
+      { \
+        "camo", \
+        "camo1", \
+        "camo2", \
+        "camo3", \
+        "camo4", \
+        "camo5", \
+        "decals", \
+        "collararmored", \
+        "wristdefaultl", \
+        "wristugps" \
+      }; \
+    }; \
   };\
   class STB73_M43D_Sharpshooter_4_1_##CAMO##_##PLATOON##_UGPS : STB73_M43D_Sharpshooter_4_1_##CAMO##_##PLATOON## { \
     scope=1; \
@@ -4208,16 +4273,16 @@ class HitpointsProtectionInfo {  \
       uniformClass = QUOTE(STB73_WEP_NORMAL_FULL(CAMO,SHIRT));\
   }; \
   class STB73_B_##SHIRT##_Full_##CAMO##_SlimSleeve : TCP_B_CBUU_##SHIRT##_SlimSleeve_Base {\
-      author=AUTHOR;\
-      scope= 1;\
-      scopeArsenal= 1;\
-      scopeCurator = 1;\
+    author=AUTHOR;\
+    scope= 1;\
+    scopeArsenal= 1;\
+    scopeCurator = 1;\
     CBRN_protectionLevel="4"; \
-      hiddenSelectionsTextures[] = {\
-        QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
-        QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa)\
-        };\
-      uniformClass = QUOTE(STB73_WEP_NORMAL_SS(CAMO,SHIRT));\
+    hiddenSelectionsTextures[] = {\
+      QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
+      QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa)\
+      };\
+    uniformClass = QUOTE(STB73_WEP_NORMAL_SS(CAMO,SHIRT));\
   };
 
 #define VEH_CLASS_KNEEPADS(CAMO,SHIRT,SLEEVE)                          \

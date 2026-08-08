@@ -60,30 +60,30 @@ class CfgFunctions{
         class Thrusters
         {
             file = "z\73STB\addons\functions\thrusters";
-            class GetFlightTime { file = "z\73STB\addons\functions\thrusters\Fn_GetFlightTime.sqf"; description = "Thrusters - get flight time"; };
-            class IncreaseThrusterLevel { file = "z\73STB\addons\functions\thrusters\Fn_IncreaseThrusterLevel.sqf"; description = "Thrusters - increase level"; };
-            class RegisterThrusters { file = "z\73STB\addons\functions\thrusters\Fn_RegisterThrusters.sqf"; description = "Thrusters - register thrusters"; };
-            class ThrusterAnimate { file = "z\73STB\addons\functions\thrusters\Fn_ThrusterAnimate.sqf"; description = "Thrusters - animate"; };
-            class ThrusterDeAnimate { file = "z\73STB\addons\functions\thrusters\Fn_ThrusterDeAnimate.sqf"; description = "Thrusters - de-animate"; };
-            class ThrusterDisengage { file = "z\73STB\addons\functions\thrusters\Fn_ThrusterDisengage.sqf"; description = "Thrusters - disengage"; };
-            class AfterburnersDisengage { file = "z\73STB\addons\functions\thrusters\Fn_AfterburnersDisengage.sqf"; description = "Thrusters - afterburners disengage"; };
+            class GetFlightTime { file = "z\73STB\addons\functions\thrusters\fn_GetFlightTime.sqf"; description = "Thrusters - get flight time"; };
+            class IncreaseThrusterLevel { file = "z\73STB\addons\functions\thrusters\fn_IncreaseThrusterLevel.sqf"; description = "Thrusters - increase level"; };
+            class RegisterThrusters { file = "z\73STB\addons\functions\thrusters\fn_RegisterThrusters.sqf"; description = "Thrusters - register thrusters"; };
+            class ThrusterAnimate { file = "z\73STB\addons\functions\thrusters\fn_ThrusterAnimate.sqf"; description = "Thrusters - animate"; };
+            class ThrusterDeAnimate { file = "z\73STB\addons\functions\thrusters\fn_ThrusterDeAnimate.sqf"; description = "Thrusters - de-animate"; };
+            class ThrusterDisengage { file = "z\73STB\addons\functions\thrusters\fn_ThrusterDisengage.sqf"; description = "Thrusters - disengage"; };
+            class AfterburnersDisengage { file = "z\73STB\addons\functions\thrusters\fn_AfterburnersDisengage.sqf"; description = "Thrusters - afterburners disengage"; };
             class Init_vic { postInit = 1;  file = "z\73STB\addons\functions\thrusters\fn_Init_vic.sqf"; description = "Thrusters - initialization"; };
-            class ChangeSpeed { file = "z\73STB\addons\functions\thrusters\Fn_ChangeSpeed.sqf"; description = "Thrusters - change speed"; };
-            class DecreaseThrusterLevel { file = "z\73STB\addons\functions\thrusters\Fn_DecreaseThrusterLevel.sqf"; description = "Thrusters - decrease level"; };
-            class EngageAfterburners { file = "z\73STB\addons\functions\thrusters\Fn_EngageAfterburners.sqf"; description = "Thrusters - engage afterburners"; };
-            class EngageAirbrakes { file = "z\73STB\addons\functions\thrusters\Fn_EngageAirbrakes.sqf"; description = "Thrusters - engage airbrakes"; };
-            class EngageForwardThruster { file = "z\73STB\addons\functions\thrusters\Fn_EngageForwardThruster.sqf"; description = "Thrusters - engage forward thruster"; };
+            class ChangeSpeed { file = "z\73STB\addons\functions\thrusters\fn_ChangeSpeed.sqf"; description = "Thrusters - change speed"; };
+            class DecreaseThrusterLevel { file = "z\73STB\addons\functions\thrusters\fn_DecreaseThrusterLevel.sqf"; description = "Thrusters - decrease level"; };
+            class EngageAfterburners { file = "z\73STB\addons\functions\thrusters\fn_EngageAfterburners.sqf"; description = "Thrusters - engage afterburners"; };
+            class EngageAirbrakes { file = "z\73STB\addons\functions\thrusters\fn_EngageAirbrakes.sqf"; description = "Thrusters - engage airbrakes"; };
+            class EngageForwardThruster { file = "z\73STB\addons\functions\thrusters\fn_EngageForwardThruster.sqf"; description = "Thrusters - engage forward thruster"; };
             
         };
         class Jumpack
         {
             file = "z\73STB\addons\functions\jumpack";
-            class PreInit { preInit = 1; description = "Jumpack - preInit"; };
-            class Init_JP { postInit = 1; description = "Jumpack - init"; };
-            class JumpPack { description = "Jumpack - main"; };
-            class EventHandlers { description = "Jumpack - event handlers"; };
-            class JumpPackRefuel { description = "Jumpack - refuel"; };
-            class RoofStuckCheck { description = "Jumpack - roof stuck check"; };
+            class PreInit { preInit = 1; file = "z\73STB\addons\functions\jumpack\fn_preInit.sqf"; description = "Jumpack - preInit"; };
+            class Init_JP { postInit = 1; file = "z\73STB\addons\functions\jumpack\fn_init_JP.sqf"; description = "Jumpack - init"; };
+            class JumpPack { file = "z\73STB\addons\functions\jumpack\fn_jumpPack.sqf"; description = "Jumpack - main"; };
+            class EventHandlers { file = "z\73STB\addons\functions\jumpack\fn_eventHandlers.sqf"; description = "Jumpack - event handlers"; };
+            class JumpPackRefuel { file = "z\73STB\addons\functions\jumpack\fn_jumpPackRefuel.sqf"; description = "Jumpack - refuel"; };
+            class RoofStuckCheck { file = "z\73STB\addons\functions\jumpack\fn_roofStuckCheck.sqf"; description = "Jumpack - roof stuck check"; };
         };
         class SupportSystem
         {
@@ -255,6 +255,25 @@ class CfgFunctions{
             };
             class ModulePelicanAirAssault {
                 file = "z\73STB\addons\functions\modules\fn_ModulePelicanAirAssault.sqf";
+            };
+        };
+        class PelicanMagLiftSystem
+        {
+            file="z\73STB\addons\functions\PelicanMagLiftSystem";
+            class PelicanLoadSupplyPodsMenuUnload
+            {
+            };
+            class PelicanLoadSupplyPodsMenuOpened
+            {
+            };
+            class PelicanLoadSupplyPodsMenuLoad
+            {
+            };
+            class PelicanLoadSupplyPodMenuDetachMenu
+            {
+            };
+            class PelicanLoad_UnloadAllSupplyPods
+            {
             };
         };
     };

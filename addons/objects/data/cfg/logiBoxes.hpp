@@ -18,7 +18,7 @@ class Items_base_F : ThingX
             radius = 5;
             priority = 3;
             onlyForPlayer = 1;
-            condition = "(vehicle player == player) AND (isNull (isVehicleCargo this)) AND (({vehicleCargoEnabled _x} count (nearestObjects [this, [""Car"", ""Plane"", ""Helicopter""], 25])) > 0)";
+            condition = "(vehicle player == player) AND (isNull (isVehicleCargo this)) AND (({vehicleCargoEnabled _x} count (nearestObjects [this, [""Car"", ""Plane"", ""Helicopter""], 15])) > 0)";
             statement = "[this] call STB73_fnc_LoadIntoNearestVehicle;";
         }; 
     };
@@ -407,6 +407,12 @@ class STB73_Space_Crate_Pallet_Large_Base : Land_TCP_Space_Crate_Pallet_Large_01
     ace_cargo_space = 16; //How much ACE Cargo space does it have for storing items?
     ace_cargo_hasCargo = 1; //Enables it to have items be loaded into it
     ace_dragging_canDrag=0;
+    class TCP_Compat_OPTRE
+    {
+        magLockOffset[] = {0, -6.75, -1};
+        magLockReversed = 1; // Rotates the vehicle 180 degrees when mag-locked
+        magLockGearInterlock = 1; // Disallows the mag-locked vehicle from being unloaded when gear are down
+    };
     class VehicleTransport
     {
         class Cargo
@@ -430,8 +436,8 @@ class STB73_Space_Crate_Pallet_Large_Base : Land_TCP_Space_Crate_Pallet_Large_01
             radius = 5;
             priority = 2;
             onlyForPlayer = 1;
-            condition = "(vehicle player == player) AND ((count (nearestObjects [this, [""STB73_D77_TC_Pelican""], 15])) > 0) AND (str ((nearestObjects [this, [""STB73_D77_TC_Pelican""], 15] select 0) getVariable [""Splits_Pelican_AttachedToVehiclesEffect"",[]]) == ""[]"")";
-            statement = "private _pel = (nearestObjects [this, [""STB73_D77_TC_Pelican""], 15]) select 0; 0 = [_pel, this] spawn STB73_fnc_PelicanLoadValidate;";
+            condition = "(vehicle player == player) AND ((count (nearestObjects [this, [""STB73_D77_TC_Pelican""], 15])) > 0) AND (str ((nearestObjects [this, [""STB73_D77_TC_Pelican""], 15] select 0) getVariable [""OPTRE_Pelican_AttachedToVehiclesEffect"",[]]) == ""[]"")";
+            statement = "private _pel = (nearestObjects [this, [""STB73_D77_TC_Pelican""], 15]) select 0; 0 = [_pel, this] spawn OPTRE_fnc_PelicanLoadValidate;";
         };
     };
 };

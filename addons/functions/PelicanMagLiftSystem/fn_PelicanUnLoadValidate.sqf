@@ -1,4 +1,4 @@
-private _varName = format["%1_Pelican_AttachedToVehiclesEffect", "Splits"];
+private _varName = format["%1_Pelican_AttachedToVehiclesEffect", "OPTRE"];
 private _pelican = (_this select 0);
 private _vehicles = _pelican getVariable [_varName, []];
 
@@ -13,7 +13,7 @@ private _vicCount = {
 	!(["SupplyPod", (typeOf _x)] call BIS_fnc_inString);
 } count _vehicles;
 if (_vicCount isEqualTo 0) exitWith {
-	_pelican spawn Splits_fnc_PelicanLoad_UnloadAllSupplyPods;
+	_pelican spawn STB73_fnc_PelicanLoad_UnloadAllSupplyPods;
 };
 
 // Abort nonclears.

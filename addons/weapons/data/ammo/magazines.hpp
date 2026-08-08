@@ -409,9 +409,9 @@ class STB73_1Rnd_50x137_PEN: STB73_1Rnd_50x137_HE
     allowedSlots[]={901,701};
 };
 
-class OPTRE_M41_Twin_HEAT_G;
+class TCP_2Rnd_102mm_Mag_HEAT;
 
-class STB73_HEAT:OPTRE_M41_Twin_HEAT_G{
+class STB73_Mag_HEAT:TCP_2Rnd_102mm_Mag_HEAT{
     displayname	= "[73] M19 HEAT Twin Rockets";
     author=AUTHOR;
     displaynameshort = "HEAT";
@@ -423,7 +423,7 @@ class STB73_HEAT:OPTRE_M41_Twin_HEAT_G{
         "\optre_weapons\rockets\data\logos_ca.paa"
     };
 };
-class STB73_HEAP:STB73_HEAT{
+class STB73_Mag_HEAP:STB73_Mag_HEAT{
     count=2;
     displayname	= "[73] M19 HEAP Twin Rockets";
     author=AUTHOR;
@@ -436,7 +436,7 @@ class STB73_HEAP:STB73_HEAT{
     };
     picture = "\OPTRE_Weapons\Rockets\icons\magazine\heap.paa";
 };
-class STB73_HEAA:STB73_HEAT{
+class STB73_Mag_HEAA:STB73_Mag_HEAT{
     count=2;
     displayname	= "[73] M19 HEAA Twin Rockets";
     displaynameshort = "HEAA";
@@ -447,6 +447,14 @@ class STB73_HEAA:STB73_HEAT{
         "optre_weapons\rockets\data\logos_ca.paa"
     };
     picture = "\OPTRE_Weapons\Rockets\icons\magazine\heat.paa";
+};
+
+class STB73_Mag_HEAT_LASER:STB73_Mag_HEAT{
+    count=2;
+    displayname	= "[73] M19 HEAT Laser Guided Twin Rockets";
+    displaynameshort = "HEAT Laser";
+    descriptionshort = "High Explosive Anti Tank (Laser Guided)<br/>Laser Guided";
+    ammo = "OPTRE_M41_Rocket_HEAT_Laser";
 };
 
 

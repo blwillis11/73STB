@@ -1,5 +1,11 @@
 #include "\z\ace\addons\main\script_macros.hpp"
+#include "\z\ace\addons\medical_engine\script_macros_medical.hpp"
 #include "\x\cba\addons\main\script_macros_common.hpp"
+
+#include "\a3\ui_f\hpp\defineResincl.inc"
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
+#include "\a3\ui_f\hpp\defineCommonGrids.inc"
+#include "\a3\ui_f\hpp\defineCommonColors.inc"
 
 #define OPFOR_VEST_HITPOINT_INFO       \
 class HitpointsProtectionInfo {  \
@@ -49,5 +55,3 @@ class HitpointsProtectionInfo {  \
     passThrough=0.4;             \
   };                             \
 };
-
-#define PREP(fncName) FUNC(fncName) = compile preProcessFileLineNumbers QPATHTOF(functions\DOUBLES(fnc,fncName))

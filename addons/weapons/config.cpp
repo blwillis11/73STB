@@ -55,13 +55,9 @@ class CfgPatches {
     };
 };
 
-// configs go here
-#include "CfgEventHandlers.hpp"
-#include "data\XtdGearModels.hpp"
-#include "CfgWeapons.hpp"
-#include "CfgVehicles.hpp"
-
+class ace_missileguidance_type_Hot;
 class ace_missileguidance_type_Sidewinder;
+class ace_missileguidance_type_KH25;
 class STB73_ace_missileguidance_type_M41_AA: ace_missileguidance_type_Sidewinder
 {
 	enabled=1;
@@ -95,6 +91,91 @@ class STB73_ace_missileguidance_type_M41_AA: ace_missileguidance_type_Sidewinder
 	seekerMinRange=10;
 	seekerMaxRange=5000;
 };
+class STB73_ace_missileguidance_type_M41_SACLOS: ace_missileguidance_type_Hot
+{
+	enabled=1;
+	canVanillaLock=0;
+	pitchRate=30;
+	yawRate=30;
+	defaultSeekerType="SACLOS";
+	seekerTypes[]=
+	{
+		"SACLOS"
+	};
+	defaultSeekerLockMode="LOAL";
+	seekerLockModes[]=
+	{
+		"LOAL",
+		"LOBL"
+	};
+	defaultNavigationType="Line";
+	navigationTypes[]=
+	{
+		"Line"
+	};
+	defaultAttackProfile="WIRE";
+	attackProfiles[]=
+	{
+		"WIRE"
+	};
+	offsetFromCrosshair[]={0,0,0.5};
+	seekLastTargetPos=0;
+	seekerAngle=60;
+	seekerAccuracy=1;
+	seekerMinRange=1;
+	seekerMaxRange=5000;
+};
+class STB73_ace_missileguidance_type_M41_Laser: ace_missileguidance_type_KH25
+{
+	enabled=1;
+	canVanillaLock=0;
+	pitchRate=30;
+	yawRate=30;
+	defaultSeekerType="SALH";
+	seekerTypes[]=
+	{
+		"SALH"
+	};
+	defaultSeekerLockMode="LOAL";
+	seekerLockModes[]=
+	{
+		"LOAL"
+	};
+	defaultNavigationType="AugmentedProportionalNavigation";
+	navigationTypes[]=
+	{
+		"AugmentedProportionalNavigation"
+	};
+	defaultAttackProfile="DIR";
+	attackProfiles[]=
+	{
+		"DIR"
+	};
+	seekLastTargetPos=1;
+	seekerAngle=300;
+	seekerAccuracy=1;
+	seekerMinRange=5;
+	seekerMaxRange=2500;
+};
+class Mode_SemiAuto;	// External class reference
+class Mode_Burst;	// External class reference
+class Mode_FullAuto;	// External class reference
+class OPTRE_MuzzleSlot;
+class OPTRE_CowsSlot_Rail;
+class OPTRE_Pointers;
+class OPTRE_UnderBarrelSlot_rail;
+class WeaponSlotsInfo;
+class CowsSlot;
+class MuzzleSlot;
+class PointerSlot;
+class UnderBarrelSlot;
+// configs go here
+#include "CfgEventHandlers.hpp"
+#include "data\XtdGearModels.hpp"
+#include "CfgWeapons.hpp"
+#include "CfgVehicles.hpp"
+
+
 class SensorTemplatePassiveRadar;
 class SensorTemplateAntiRadiation;
 class SensorTemplateActiveRadar;
@@ -120,9 +201,10 @@ class cfgMagazines
 class cfgMagazineWells{
 	class STB73_rockets{
 		STB73_Magazines[] = {
-			"STB73_HEAT",
-			"STB73_HEAP",
-			"STB73_HEAA"
+			"STB73_Mag_HEAT",
+			"STB73_Mag_HEAP",
+			"STB73_Mag_HEAA",
+			"STB73_Mag_HEAT_LASER"
 		};
 	};
 	class STB73_15Rnd_762x51_MagWell{
@@ -280,18 +362,7 @@ class cfgMagazineWells{
 		};
 	};
 };
-class Mode_SemiAuto;	// External class reference
-class Mode_Burst;	// External class reference
-class Mode_FullAuto;	// External class reference
-class OPTRE_MuzzleSlot;
-class OPTRE_CowsSlot_Rail;
-class OPTRE_Pointers;
-class OPTRE_UnderBarrelSlot_rail;
-class WeaponSlotsInfo;
-class CowsSlot;
-class MuzzleSlot;
-class PointerSlot;
-class UnderBarrelSlot;
+
 class CBA_DisposableLaunchers {
     STB73_M96_LAW_Loaded[] = {"STB73_M96_LAW","STB73_M96_LAW_Used"};
 };
@@ -319,21 +390,4 @@ class CfgMovesBasic
 };
 class CfgGesturesMale
 {
-	class Default;
-	class States
-	{
-		class GestureReloadHVAP1: Default
-		{
-			file="z\73STB\addons\weapons\anims\hvap1reload.rtm";
-			looped=0;
-			speed=0.28;
-			mask="handsWeapon";
-			headBobStrength=0.1;
-			headBobMode=2;
-			rightHandIKBeg=1;
-			rightHandIKEnd=1;
-			LeftHandIKCurve[]={0.0015625,0.25, 0.15,0, 0.95,0, 1,1};
-			RightHandIKCurve[]={1,1, 0.05,0, 0.95,0, 1,1};
-		};
-	};
 };

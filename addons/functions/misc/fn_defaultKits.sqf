@@ -33,7 +33,7 @@ _kit = [
 			"",
 			"",
 			[
-				"STB73_HEAT", 2
+				"STB73_MAG_HEAT", 2
 			],
 			[],
 			""
@@ -98,8 +98,8 @@ _kit = [
 				["STB73_32Rnd_762x51_Mag_Tracer_Yellow", 5, 32],
 				["STB73_12Rnd_10x31_NARQ_Mag_Tracer", 1, 12],
 				["STB73_12Rnd_127x30_SAP_Mag_Tracer", 2, 12],
-				["STB73_HEAT", 1, 1],
-				["STB73_HEAA", 1, 1]
+				["STB73_MAG_HEAT", 1, 1],
+				["STB73_MAG_HEAA", 1, 1]
 			]
 		],
 		"STB73_H_ECH55D_Standard_Blue",

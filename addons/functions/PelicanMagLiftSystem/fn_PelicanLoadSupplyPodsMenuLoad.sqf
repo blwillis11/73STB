@@ -1,20 +1,19 @@
-_podArray = (Splits_PelicanLoadSupplyPods_Menu_PelicanObject getVariable ["Splits_Pelican_AttachedToVehiclesEffect", []]);
+_podArray = (OPTRE_PelicanLoadSupplyPods_Menu_PelicanObject getVariable ["OPTRE_Pelican_AttachedToVehiclesEffect", []]);
 
 if (
 (
 {
 	["SupplyPod", (typeOf _x)] call BIS_fnc_inString
 } count _podArray < 1
-) and (count _podArray > 0)
-) exitWith {
+) and (count _podArray > 0)) exitWith {
 	hint "YOU MUST UNLOAD THE ATTACHED VEHICLE BEFORE TRYING TO LOAD SUPPLY PODS.";
 };
 
 // Clear Current Pods Attached
 {
 	deleteVehicle _x;
-} forEach (Splits_PelicanLoadSupplyPods_Menu_PelicanObject getVariable ["Splits_Pelican_AttachedToVehiclesEffect", []]);
-Splits_PelicanLoadSupplyPods_Menu_PelicanObject setVariable ["Splits_Pelican_AttachedToVehiclesEffect", [], true];
+} forEach (OPTRE_PelicanLoadSupplyPods_Menu_PelicanObject getVariable ["OPTRE_Pelican_AttachedToVehiclesEffect", []]);
+OPTRE_PelicanLoadSupplyPods_Menu_PelicanObject setVariable ["OPTRE_Pelican_AttachedToVehiclesEffect", [], true];
 
 // Add New pods / Create Array Containing Pods
 _podArray = [];
@@ -30,12 +29,12 @@ for "_i" from 10 to 15 do {
 
 	if (_podClassname != "none") then {
 		_pod = _podClassname createVehicle [0, 0, 0];
-		_pod disableCollisionWith Splits_PelicanLoadSupplyPods_Menu_PelicanObject;
-		Splits_PelicanLoadSupplyPods_Menu_PelicanObject disableCollisionWith _pod;
+		_pod disableCollisionWith OPTRE_PelicanLoadSupplyPods_Menu_PelicanObject;
+		OPTRE_PelicanLoadSupplyPods_Menu_PelicanObject disableCollisionWith _pod;
 
 		_pod attachTo [
 
-			Splits_PelicanLoadSupplyPods_Menu_PelicanObject,
+			OPTRE_PelicanLoadSupplyPods_Menu_PelicanObject,
 			(
 			switch _i do {
 				case 10: {
@@ -65,6 +64,6 @@ for "_i" from 10 to 15 do {
 };
 
 // Add New Pods to Global Variable
-Splits_PelicanLoadSupplyPods_Menu_PelicanObject setVariable ["Splits_Pelican_AttachedToVehiclesEffect", _podArray, true];
+OPTRE_PelicanLoadSupplyPods_Menu_PelicanObject setVariable ["OPTRE_Pelican_AttachedToVehiclesEffect", _podArray, true];
 
 true

@@ -290,35 +290,30 @@ class Module_OPTRE_PelicanSupplyDrop: Module_F
                 };
                 class n11
                 {
-                    name="[73] Mortar Ammo Supply Pod";
-                    value="STB73_SupplyPod_Mortar_Ammo";
-                };
-                class n12
-                {
                     name="[73] EOD Supply Pod";
                     value="STB73_SupplyPod_EOD";
                 };
-                class n13
+                class n12
                 {
                     name="[73] SMG Supply Pod";
                     value="STB73_SupplyPod_SMG";
                 };
-                class n14
+                class n13
                 {
                     name="[73] Vehicle Ammo";
                     value="STB73_SupplyPod_VehicleAmmo";
                 };
-                class n15
+                class n14
                 {
                     name="[73] Vehicle Repair";
                     value="STB73_SupplyPod_VehicleRepair";
                 };
-                class n16
+                class n15
                 {
                     name="[73] Vehicle Refuel";
                     value="STB73_SupplyPod_VehicleRefuel";
                 };
-                class n17
+                class n16
                 {
                     name="[73] Empty Supply Pod";
                     value="STB73_SupplyPod_Emptypod";

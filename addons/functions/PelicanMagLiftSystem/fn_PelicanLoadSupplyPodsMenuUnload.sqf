@@ -1,27 +1,24 @@
-_podArray = (OPTRE_PelicanLoadSupplyPods_Menu_PelicanObject getVariable ["Splits_Pelican_AttachedToVehiclesEffect",[]]);
+_podArray = (OPTRE_PelicanLoadSupplyPods_Menu_PelicanObject getVariable ["OPTRE_Pelican_AttachedToVehiclesEffect", []]);
 
 if (
-	(
-		{
-			["SupplyPod", (typeOf _x)] call BIS_fnc_inString
-		} count _podArray < 1
-	) AND (
-		count _podArray > 0
-	)
+(
+{
+	["SupplyPod", (typeOf _x)] call BIS_fnc_inString
+} count _podArray < 1
+) and (count _podArray > 0)
 ) exitWith {
 	titleText ["-------------------------------------------<br/><t color='#ff0000' size='1.5'>NO SUPPLY PODS ATTACHED TO PELICAN!</t><br/>-------------------------------------------", "PLAIN DOWN", -1, true, true];
-	//hint "NO SUPPLY PODS ATTACHED TO PELICAN.";
+	// hint "NO SUPPLY PODS ATTACHED TO PELICAN.";
 };
 
-_podsToRemove = (OPTRE_PelicanLoadSupplyPods_Menu_PelicanObject getVariable ["Splits_Pelican_AttachedToVehiclesEffect",[]]);
+_podsToRemove = (OPTRE_PelicanLoadSupplyPods_Menu_PelicanObject getVariable ["OPTRE_Pelican_AttachedToVehiclesEffect", []]);
 
 {
 	deleteVehicle _x;
 } forEach _podsToRemove;
 
-
-OPTRE_PelicanLoadSupplyPods_Menu_PelicanObject setVariable ["Splits_Pelican_AttachedToVehiclesEffect",[], true];
+OPTRE_PelicanLoadSupplyPods_Menu_PelicanObject setVariable ["OPTRE_Pelican_AttachedToVehiclesEffect", [], true];
 
 {
 	((findDisplay 10293) displayCtrl _x) lbSetCurSel 0;
-} forEach [10,11,12,13,14,15];
+} forEach [10, 11, 12, 13, 14, 15];

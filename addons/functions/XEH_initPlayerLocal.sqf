@@ -3,10 +3,14 @@
 
 // this file will be called with _this = [player]
 private _args = _this;
-private _player = if (count _args > 0) then {_args select 0} else { nil };
+private _player = if (count _args > 0) then {
+	_args select 0
+} else {
+	nil
+};
 if (isNil "_player") exitWith {};
 
-diag_log format ["XEH_initPlayerLocal: running on %1, player=%2, uid=%3", ["CLIENT","SERVER"] select (isServer), name _player, getPlayerUID _player];
+diag_log format ["XEH_initPlayerLocal: running on %1, player=%2, uid=%3", ["CLIENT", "SERVER"] select (isServer), name _player, getPlayerUID _player];
 
 // Spawn a small retry loop to handle race conditions where ACE's interact
 // system (and its functions) may not yet be registered when initPlayerLocal fires.
@@ -22,7 +26,7 @@ diag_log format ["XEH_initPlayerLocal: running on %1, player=%2, uid=%3", ["CLIE
 			sleep 1;
 		} else {
 			diag_log format ["XEH_initPlayerLocal: calling OPTRE_fnc_addFireSupportMenu73STB for player %1 (uid=%2) on attempt %3", name _p, _uid, _attempt + 1];
-			// Call the function as registered in CfgFunctions (OPTRE tag)
+			// call the function as registered in CfgFunctions (OPTRE tag)
 			[_p] call OPTRE_fnc_addFireSupportMenu73STB;
 			diag_log format ["XEH_initPlayerLocal: called OPTRE_fnc_addFireSupportMenu73STB for player %1 (uid=%2)", name _p, _uid];
 			// Force loop exit by advancing attempt counter

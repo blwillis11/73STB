@@ -80,9 +80,9 @@ class STB73_Fang: launch_MRAWS_green_rail_F
 //    };
 };
 
-class OPTRE_M41_SSR;
+class TCP_launch_M41;
 
-class STB73_M41_SSR:OPTRE_M41_SSR{
+class STB73_M41_SSR:TCP_launch_M41{
     displayName = "[73] M41 SSR MAV/AW";
     author= "73rd S-4 Team";
     baseWeapon="STB73_M41_SSR";
@@ -91,17 +91,10 @@ class STB73_M41_SSR:OPTRE_M41_SSR{
     enabled = 1;
     weaponInfoType = "";
     magazines[]={
-        "STB73_HEAT",
+        "STB73_Mag_HEAT",
+        "STB73_Mag_HEAT_LASER",
+        "STB73_Mag_HEAP",
+        "STB73_Mag_HEAA"
     };
     magazineWell[] = {"STB73_rockets","OPTRE_M41"};
-    hiddenSelections[]= {
-        "camo",
-        "camo_tubes",
-        "camo_details"
-    };
-    hiddenSelectionsTextures[] = {
-        "optre_weapons\rockets\data\launcher_co.paa",
-        "optre_weapons\rockets\data\tubes_co.paa",
-        "optre_weapons\rockets\data\logos_ca.paa"
-    };
 };

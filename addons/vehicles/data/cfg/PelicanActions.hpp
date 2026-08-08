@@ -43,8 +43,8 @@ class PelLift_LoadVehicle
     radius = 15;
     priority = 2;
     onlyForPlayer = 0;
-    condition = "!(player in [gunner this, driver this]) AND ((vehicle player != player AND isPlayer vehicle player)) AND (str (this getVariable [""Splits_Pelican_AttachedToVehiclesEffect"",[]]) == ""[]"")";
-    statement = "0 = [this,vehicle player] spawn STB73_fnc_PelicanLoadValidate;";
+    condition = "!(player in [gunner this, driver this]) AND ((vehicle player != player AND isPlayer vehicle player)) AND (str (this getVariable [""OPTRE_Pelican_AttachedToVehiclesEffect"",[]]) == ""[]"")";
+    statement = "0 = [this,vehicle player] spawn OPTRE_fnc_PelicanLoadValidate;";
 };
 class PelLift_LoadCrate
 {
@@ -57,8 +57,8 @@ class PelLift_LoadCrate
     radius = 15;
     priority = 2;
     onlyForPlayer = 0;
-    condition = "!(player in [gunner this, driver this]) AND (vehicle player == player) AND (this isKindOf ""STB73_Space_Crate_Pallet_Large_Base"") AND (str (this getVariable [""Splits_Pelican_AttachedToVehiclesEffect"",[]]) == ""[]"")";
-    statement = "0 = [this,vehicle player] spawn STB73_fnc_PelicanLoadValidate;";
+    condition = "!(player in [gunner this, driver this]) AND (vehicle player == player) AND (this isKindOf ""STB73_Space_Crate_Pallet_Large_Base"") AND ((count (this getVariable [""OPTRE_Pelican_AttachedToVehiclesEffect"",[]])) == 0)";
+    statement = "0 = [this,vehicle player] spawn OPTRE_fnc_PelicanLoadValidate;";
 };
 class PelLift_LoadPodMenu
 {
@@ -73,7 +73,7 @@ class PelLift_LoadPodMenu
     onlyForPlayer = 0;
     condition = "!(player in [gunner this, driver this]) AND (player == driver vehicle player) AND ((vehicle player) isKindOf ""OPTRE_cart_base"")";
     //condition = "( vehicle player != this AND vehicle player != this AND player == driver vehicle player AND (vehicle player) isKindOf ""OPTRE_cart_base"" ) ";
-    statement = "Splits_pelicanloadSupplyPods_Menu_PelicanObject = this; createDialog ""Splits_pelicanloadSupplyPods_Menu""; Splits_pelicanloadSupplyPods_Menu_cam = ""camera"" CamCreate getPosATL Splits_pelicanloadSupplyPods_Menu_PelicanObject;  Splits_pelicanloadSupplyPods_Menu_cam CamSetTarget Splits_pelicanloadSupplyPods_Menu_PelicanObject; Splits_pelicanloadSupplyPods_Menu_cam CameraEffect [""Internal"",""Back""]; Splits_pelicanloadSupplyPods_Menu_cam camSetRelPos [4,-12,-2.4]; Splits_pelicanloadSupplyPods_Menu_cam CamCommit 0; showCinemaBorder false; if (sunOrMoon == 0) then {camUseNVG true;};";
+    statement = "OPTRE_pelicanloadSupplyPods_Menu_PelicanObject = this; createDialog ""OPTRE_pelicanloadSupplyPods_Menu""; OPTRE_pelicanloadSupplyPods_Menu_cam = ""camera"" CamCreate getPosATL OPTRE_pelicanloadSupplyPods_Menu_PelicanObject;  OPTRE_pelicanloadSupplyPods_Menu_cam CamSetTarget OPTRE_pelicanloadSupplyPods_Menu_PelicanObject; OPTRE_pelicanloadSupplyPods_Menu_cam CameraEffect [""Internal"",""Back""]; OPTRE_pelicanloadSupplyPods_Menu_cam camSetRelPos [4,-12,-2.4]; OPTRE_pelicanloadSupplyPods_Menu_cam CamCommit 0; showCinemaBorder false; if (sunOrMoon == 0) then {camUseNVG true;};";
 };
 class PelLift_UnLoadVehicle
 {
@@ -86,8 +86,8 @@ class PelLift_UnLoadVehicle
     radius = 5;
     priority = 3;
     onlyForPlayer = 0;
-    condition = "(player in [gunner this, driver this]) AND ((count (vehicle player getVariable [""Splits_Pelican_AttachedToVehiclesEffect"",[]])) > 0)";
-    statement = "0 = [this] spawn STB73_fnc_PelicanUnLoadValidate;";
+    condition = "(player in [gunner this, driver this]) AND ((count (vehicle player getVariable [""OPTRE_Pelican_AttachedToVehiclesEffect"",[]])) > 0)";
+    statement = "0 = [this] spawn OPTRE_fnc_PelicanUnLoadValidate;";
 };
 class PelLift_OpenDetachPodMenu
 {
@@ -100,8 +100,8 @@ class PelLift_OpenDetachPodMenu
     radius = 5;
     priority = 3;
     onlyForPlayer = 0;
-    condition = "(player in [gunner this, driver this]) AND (({_x isKindOf ""OPTRE_Ammo_SupplyPod_Empty""} count (this getVariable [""Splits_Pelican_AttachedToVehiclesEffect"",[]])) > 0)";
-    statement = "0 = this spawn Splits_fnc_PelicanLoadSupplyPodMenuDetachMenu;";
+    condition = "(player in [gunner this, driver this]) AND (({_x isKindOf ""OPTRE_Ammo_SupplyPod_Empty""} count (this getVariable [""OPTRE_Pelican_AttachedToVehiclesEffect"",[]])) > 0)";
+    statement = "0 = this spawn STB73_fnc_PelicanLoadSupplyPodMenuDetachMenu;";
 };
 class RampOpen
 {

@@ -2,80 +2,96 @@
 // Simple runtime verifier: checks that key STB73/OPTRE functions are registered.
 // Usage: [] call STB73_fnc_VerifyFunctions;
 
+// Static list of functions to verify (matches entries from CfgFunctions.hpp)
 private _functionsToCheck = [
-	    /* STB73 Modules */
-		    "STB73_fnc_ModuleODSTHEV", 
-		    "STB73_fnc_ModuleHEV", 
-		    "STB73_fnc_ModuleHEVCleanUp", 
-		    "STB73_fnc_ModulePelicanAirAssault", 
+	/* STB73 - Misc */
+		"STB73_fnc_Init_misc", 
+		"STB73_fnc_DefaultKits", 
+		"STB73_fnc_ZeusMessage", 
+		"STB73_fnc_RescaleObjects", 
+		"STB73_fnc_RepairRefuelRearmArea", 
+		"STB73_fnc_MakeACEArsenal", 
+		"STB73_fnc_LoadIntoNearestVehicle", 
+		"STB73_fnc_destroyEquipment", 
 		
-	    /* STB73 Thrusters */
-		    "STB73_fnc_AfterburnersDisengage", 
-		    "STB73_fnc_ChangeSpeed", 
-		    "STB73_fnc_DecreaseThrusterLevel", 
-		    "STB73_fnc_EngageAfterburners", 
-		    "STB73_fnc_EngageAirbrakes", 
-		    "STB73_fnc_EngageForwardThruster", 
-		    "STB73_fnc_GetFlightTime", 
-		    "STB73_fnc_IncreaseThrusterLevel", 
-		    "STB73_fnc_Init_vic", 
-		    "STB73_fnc_RegisterThrusters", 
-		    "STB73_fnc_ThrusterAnimate", 
-		    "STB73_fnc_ThrusterDeAnimate", 
-		    "STB73_fnc_ThrusterDisengage", 
+	/* STB73 - Modules */
+		"STB73_fnc_ModuleODSTHEV", 
+		"STB73_fnc_ModuleBJHEV", 
+		"STB73_fnc_ModulePelicanAirAssault", 
+		"STB73_fnc_ModuleHEV", 
+		"STB73_fnc_ModuleHEVCleanup", 
 		
-	    /* STB73 Jumpack */
-		    "STB73_fnc_PreInit", 
-		    "STB73_fnc_Init_JP", 
-		    "STB73_fnc_JumpPack", 
-		    "STB73_fnc_EventHandlers", 
-		    "STB73_fnc_JumpPackRefuel", 
-		    "STB73_fnc_RoofStuckCheck", 
+	/* STB73 - Thrusters */
+		"STB73_fnc_GetFlightTime", 
+		"STB73_fnc_IncreaseThrusterLevel", 
+		"STB73_fnc_RegisterThrusters", 
+		"STB73_fnc_ThrusterAnimate", 
+		"STB73_fnc_ThrusterDeAnimate", 
+		"STB73_fnc_ThrusterDisengage", 
+		"STB73_fnc_AfterburnersDisengage", 
+		"STB73_fnc_Init_vic", 
+		"STB73_fnc_ChangeSpeed", 
+		"STB73_fnc_DecreaseThrusterLevel", 
+		"STB73_fnc_EngageAfterburners", 
+		"STB73_fnc_EngageAirbrakes", 
+		"STB73_fnc_EngageForwardThruster", 
 		
-	    /* STB73 HEV */
-		    "STB73_fnc_HEV", 
-		    "STB73_fnc_HEVAtmoEffects", 
-		    "STB73_fnc_HEVBoosterDown", 
-		    "STB73_fnc_HEVChuteDeploy", 
-		    "STB73_fnc_HEVCleanUp", 
-		    "STB73_fnc_SpawnFakeHEVRoom", 
-		    "STB73_fnc_SpawnHEVsFrigate", 
-		    "STB73_fnc_SpawnHEVsNoFrigate", 
-		    "STB73_fnc_PlayerHEVEffectsUpdate_BoasterDown", 
-		    "STB73_fnc_PlayerHEVEffectsUpdate_Chute", 
-		    "STB73_fnc_PlayerHEVEffectsUpdate_GroundAlarm", 
-		    "STB73_fnc_PlayerHEVEffectsUpdate_Light", 
-		    "STB73_fnc_PlayerHEVEffectsUpdate_ReEntrySounds", 
-		    "STB73_fnc_PlayerHEVEffectsUpdate_PlayTones", 
-		    "STB73_fnc_HEVRoomDynamicSetupGrabUnits", 
-		    "STB73_fnc_HEVDoor", 
-		    "STB73_fnc_HEVHandleLanding", 
-		    "STB73_fnc_CountDown", 
-		    "STB73_fnc_CleanUp", 
+	/* STB73 - Jumpack */
+		"STB73_fnc_PreInit", 
+		"STB73_fnc_Init_JP", 
+		"STB73_fnc_JumpPack", 
+		"STB73_fnc_EventHandlers", 
+		"STB73_fnc_JumpPackRefuel", 
+		"STB73_fnc_RoofStuckCheck", 
 		
-	    /* STB73 MenuFunctions */
-		    "STB73_fnc_HEVRoom", 
-		    "STB73_fnc_UNSCdatabase", 
+	/* STB73 - HEV */
+		"STB73_fnc_HEV", 
+		"STB73_fnc_HEVAtmoEffects", 
+		"STB73_fnc_HEVBoosterDown", 
+		"STB73_fnc_HEVChuteDeploy", 
+		"STB73_fnc_HEVCleanUp", 
+		"STB73_fnc_SpawnFakeHEVRoom", 
+		"STB73_fnc_SpawnHEVsFrigate", 
+		"STB73_fnc_SpawnHEVsNoFrigate", 
+		"STB73_fnc_PlayerHEVEffectsUpdate_BoasterDown", 
+		"STB73_fnc_PlayerHEVEffectsUpdate_Chute", 
+		"STB73_fnc_PlayerHEVEffectsUpdate_GroundAlarm", 
+		"STB73_fnc_PlayerHEVEffectsUpdate_Light", 
+		"STB73_fnc_PlayerHEVEffectsUpdate_ReEntrySounds", 
+		"STB73_fnc_PlayerHEVEffectsUpdate_PlayTones", 
+		"STB73_fnc_HEVRoomDynamicSetupGrabUnits", 
+		"STB73_fnc_HEVDoor", 
+		"STB73_fnc_HEVHandleLanding", 
+		"STB73_fnc_CountDown", 
+		"STB73_fnc_CleanUp", 
 		
-	    /* STB73 Tools */
-		    "STB73_fnc_VerifyFunctions", 
-		    "STB73_fnc_locateBlacklisted", 
+	/* STB73 - MenuFunctions */
+		"STB73_fnc_HEVRoom", 
+		"STB73_fnc_UNSCdatabase", 
 		
-	    /* OPTRE SupportSystem */
-		    "OPTRE_fnc_CS_ODSTHEV", 
-		    "OPTRE_fnc_CS_PelicanAirAssault", 
-		    "OPTRE_fnc_setCallMortarFireSupport73STB", 
-		    "OPTRE_fnc_setCallArtyFireSupport73STB", 
-		    "OPTRE_fnc_addFireSupportMenu73STB", 
+	/* STB73 - Tools */
+		"STB73_fnc_VerifyFunctions", 
+		"STB73_fnc_locateBlacklisted", 
 		
-	    /* STB73 Misc */
-		    "STB73_fnc_defaultKits", 
-		    "STB73_fnc_destroyEquipment", 
-		    "STB73_fnc_init_misc", 
-		    "STB73_fnc_zeusMessage", 
-		    "STB73_fnc_makeAceArsenal", 
-		    "STB73_fnc_rescaleObjects", 
-		    "STB73_fnc_repairRefuelRearmArea"
+	/* STB73 - weapons */
+		"STB73_fnc_Init_wep", 
+		"STB73_fnc_convertOCIAmmo", 
+		
+	/* STB73 - PelicanMagLiftSystem */
+		"STB73_fnc_PelicanLoadValidate", 
+		"STB73_fnc_PelicanUnLoadValidate", 
+		"STB73_fnc_PelicanLoadSupplyPodsMenuUnload", 
+		"STB73_fnc_PelicanLoadSupplyPodsMenuOpened", 
+		"STB73_fnc_PelicanLoadSupplyPodsMenuLoad", 
+		"STB73_fnc_PelicanLoadSupplyPodMenuDetachMenu", 
+		"STB73_fnc_PelicanLoad_UnloadAllSupplyPods", 
+		
+	/* OPTRE - SupportSystem (registered under OPTRE tag but sourced from this addon) */
+		"OPTRE_fnc_CS_ODSTHEV", 
+		"OPTRE_fnc_CS_PelicanAirAssault", 
+		"OPTRE_fnc_setCallMortarFireSupport73STB", 
+		"OPTRE_fnc_setCallArtyFireSupport73STB", 
+		"OPTRE_fnc_addFireSupportMenu73STB"
 	];
 	
 	private _missing = [];

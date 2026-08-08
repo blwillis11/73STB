@@ -10,6 +10,12 @@ class STB73_M875:VES_M875_SPH
     side=1;
     armor=450;
     crew = "STB73_STB_ODST_Rifleman";
+    class TCP_Compat_OPTRE
+    {
+        magLockOffset[] = {0, -9.5, -1.3};
+        magLockReversed = 1; // Rotates the vehicle 180 degrees when mag-locked
+        magLockGearInterlock = 1; // Disallows the mag-locked vehicle from being unloaded when gear are down
+    };
      class ace_cargo {
             class cargo {
                 class ACE_Tracks { // Doesn't have to have the same name as the item you're adding
@@ -51,6 +57,12 @@ class STB73_M808BM_MBT:VES_M808BM_MBT
     crew = "STB73_STB_ODST_Rifleman";
     armor=575;
     armorStructural=5;
+    class TCP_Compat_OPTRE
+    {
+        magLockOffset[] = {0, -9.5, -1.3};
+        magLockReversed = 1; // Rotates the vehicle 180 degrees when mag-locked
+        magLockGearInterlock = 1; // Disallows the mag-locked vehicle from being unloaded when gear are down
+    };
     class ace_cargo {
         class cargo {
             class ACE_Tracks { // Doesn't have to have the same name as the item you're adding
@@ -164,6 +176,12 @@ class STB73_M808B2_MBT:VES_M808B2_MBT
     crew = "STB73_STB_ODST_Rifleman";
     armor=575;
     armorStructural=5;
+    class TCP_Compat_OPTRE
+    {
+        magLockOffset[] = {0, -9.5, -1.3};
+        magLockReversed = 1; // Rotates the vehicle 180 degrees when mag-locked
+        magLockGearInterlock = 1; // Disallows the mag-locked vehicle from being unloaded when gear are down
+    };
      class ace_cargo {
             class cargo {
                 class ACE_Tracks { // Doesn't have to have the same name as the item you're adding
@@ -213,6 +231,12 @@ class STB73_M808BMk2:DMNS_M808B
     crew = "STB73_STB_ODST_Rifleman";
     armor=575;
     armorStructural=5;
+    class TCP_Compat_OPTRE
+    {
+        magLockOffset[] = {0, -9.5, -1.3};
+        magLockReversed = 1; // Rotates the vehicle 180 degrees when mag-locked
+        magLockGearInterlock = 1; // Disallows the mag-locked vehicle from being unloaded when gear are down
+    };
      class ace_cargo {
             class cargo {
                 class ACE_Tracks { // Doesn't have to have the same name as the item you're adding

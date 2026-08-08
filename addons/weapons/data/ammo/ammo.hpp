@@ -258,24 +258,102 @@ class STB73_50x137_PEN: STB73_50X137_HE
     allowAgainstInfantry=0;
 };
 
-class OPTRE_M41_Rocket_HEAT_G;
-class OPTRE_M41_Rocket_HEAP;
-class OPTRE_M41_Rocket_HEAT_G_AA;
+class TCP_M_102mm_HEAT;
+class GroundTarget;
+class AirTarget;
 
-class STB73_HEAT:OPTRE_M41_Rocket_HEAT_G{
+
+class STB73_HEAT:TCP_M_102mm_HEAT{
     maxSpeed=350;
-    hit = 1600;
+    hit = 800;
+    irLock=1;
+    airLock=1;
+    laserLock=0;
+    nvLock=0;
+    class Components
+    {
+        class SensorsManagerComponent
+        {
+            class Components
+            {
+                class IRSensorComponent: SensorTemplateIR
+                {
+                    angleRangeHorizontal=7;
+                    angleRangeVertical=4.5;
+                    groundNoiseDistanceCoef=-1;
+                    maxGroundNoiseDistance=-1;
+                    maxTrackableSpeed=250;
+                    class AirTarget: AirTarget
+                    {
+                        maxRange=3500;
+                    };
+                    class GroundTarget: GroundTarget
+                    {
+                        maxRange=2500;
+                    };
+                };
+                class LaserSensorComponent: SensorTemplateLaser
+                {
+                    angleRangeHorizontal=90;
+                    angleRangeVertical=70;
+                    maxTrackableSpeed=55;
+                };
+            };
+        };
+    };
+    weaponLockSystem="2 + 16";
 };
-class STB73_HEAP:OPTRE_M41_Rocket_HEAP{
+class STB73_HEAT_Laser:STB73_HEAT{
+    autoSeekTarget=1;
+    lockSeekRadius=2500;
+    maxControlRange=10000;
+    irLock=0;
+    airLock=0;
+    lockType=0;
+    laserLock=1;
+    maxSpeed=350;
+    hit = 800;
+    nvLock=0;
+    cmImmunity=1;
+    missileKeepLockedCone=360;
+    missileLockCone=300;
+    trackOversteer=1;
+    trackLead=0.5;
+    manualControl=0;
+    flightProfiles[]=
+		{
+			"LOALDistance"
+		};
+		class Direct
+		{
+		};
+		class LOALDistance: Direct
+		{
+			lockSeekDistanceFromParent=1;
+		};
+		class ace_missileguidance: STB73_ace_missileguidance_type_M41_Laser
+		{
+		};
+};
+class STB73_HEAP:STB73_HEAT{
     maxSpeed=350;
     allowAgainstInfantry = 1;
     proximityExplosionDistance = 0;
     hit = 300;
 };
-class STB73_HEAA:OPTRE_M41_Rocket_HEAT_G_AA
+class STB73_HEAA:STB73_HEAT
 {
     hit = 650;
+    aiAmmoUsageFlags=256;
+    allowAgainstInfantry=0;
     indirectHit = 150;
+    warheadName="TandemHEAT";
+    submunitionAmmo="ammo_Penetrator_Vorona";
+    effectsMissile="missile3";
+    irLock=0;
+    airLock=1;
+    laserLock=0;
+    nvLock=0;
     indirectHitRange = 4;
     explosive=0.80000001;
     cmImmunity = 0.85;
@@ -287,6 +365,38 @@ class STB73_HEAA:OPTRE_M41_Rocket_HEAT_G_AA
     missileLockMinDistance = 50;
     missileLockMaxSpeed = 1200;
     maxSpeed = 800;
+    class Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class IRSensorComponent: SensorTemplateIR
+					{
+						class AirTarget
+						{
+							minRange=25;
+							maxRange=4000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=0;
+							maxRange=0;
+							objectDistanceLimitCoef=0;
+							viewDistanceLimitCoef=0;
+						};
+						minTrackableSpeed=-1;
+						maxTrackableSpeed=175;
+						angleRangeHorizontal=10;
+						angleRangeVertical=10;
+						minTrackableATL=5;
+						maxTrackableATL=1000;
+					};
+				};
+			};
+		};
 };
 class G_40mm_Smoke;
 class G_40mm_SmokeRed;
