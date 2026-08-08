@@ -214,6 +214,7 @@ class CfgWeapons
     CUS_ECH55D_HELMET(Ridge,Red)
     CUS_ECH55D_HELMET(Mendez,Gold)
     CUS_ECH55D_HELMET(Stauss,Gold)
+    CUS_ECH55D_HELMET(Price,Black)
     CUS_ECH55D_HELMET(Smith,Black)
 
     // ECH55D_HELMET(Atlas2,Black,Officer,Standard)
