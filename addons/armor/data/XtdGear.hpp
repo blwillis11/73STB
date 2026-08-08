@@ -334,6 +334,7 @@ class XtdGearModels
 					"Ridge",
 					"Mendez",
 					"Stauss",
+					"Price",
 					"Smith"
                 };
             };
