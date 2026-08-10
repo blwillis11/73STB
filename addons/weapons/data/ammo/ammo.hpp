@@ -301,6 +301,23 @@ class STB73_HEAT:TCP_M_102mm_HEAT{
             };
         };
     };
+    class ace_missileguidance {
+        enabled = 0; // Enable missile guidance (0-disabled, 1-enabled)
+        minDeflection = 0.00025;  // Minimum flap deflection for guidance
+        maxDeflection = 0.001;  // Maximum flap deflection for guidance
+        incDeflection = 0.0005;  // The increment in which deflection adjusts
+        canVanillaLock = 1;  // Enable vanilla lock, only applicable to non-cadet modes, 'recruit' always uses vanilla locking (0-disabled, 1-enabled)
+        defaultSeekerType = "SACLOS";  // Default seeker type
+        seekerTypes[] = {"SALH", "SACLOS"};  // Seeker types available
+        defaultSeekerLockMode = "LOAL";  // Default seeker lock mode
+        seekerLockModes[] = {"LOAL", "LOBL"};  // Seeker lock modes available
+        seekerAngle = 90;  // Angle in front of the missile which can be searched
+        seekerAccuracy = 1;  // Seeker accuracy multiplier
+        seekerMinRange = 1;  // Minimum range from the missile which the seeker can visually search
+        seekerMaxRange = 2500;  // Maximum from the missile which the seeker can visually search
+        defaultAttackProfile = "LIN";  // Default attack profile
+        attackProfiles[] = {"LIN", "DIR"};  // Attack profiles available
+    };
     weaponLockSystem="2 + 16";
 };
 class STB73_HEAT_Laser:STB73_HEAT{
@@ -321,19 +338,19 @@ class STB73_HEAT_Laser:STB73_HEAT{
     trackLead=0.5;
     manualControl=0;
     flightProfiles[]=
-		{
-			"LOALDistance"
-		};
-		class Direct
-		{
-		};
-		class LOALDistance: Direct
-		{
-			lockSeekDistanceFromParent=1;
-		};
-		class ace_missileguidance: STB73_ace_missileguidance_type_M41_Laser
-		{
-		};
+    {
+        "LOALDistance"
+    };
+    class Direct
+    {
+    };
+    class LOALDistance: Direct
+    {
+        lockSeekDistanceFromParent=1;
+    };
+    class ace_missileguidance: STB73_ace_missileguidance_type_M41_Laser
+    {
+    };
 };
 class STB73_HEAP:STB73_HEAT{
     maxSpeed=350;
@@ -350,10 +367,6 @@ class STB73_HEAA:STB73_HEAT
     warheadName="TandemHEAT";
     submunitionAmmo="ammo_Penetrator_Vorona";
     effectsMissile="missile3";
-    irLock=0;
-    airLock=1;
-    laserLock=0;
-    nvLock=0;
     indirectHitRange = 4;
     explosive=0.80000001;
     cmImmunity = 0.85;
@@ -366,37 +379,36 @@ class STB73_HEAA:STB73_HEAT
     missileLockMaxSpeed = 1200;
     maxSpeed = 800;
     class Components
-		{
-			class SensorsManagerComponent
-			{
-				class Components
-				{
-					class IRSensorComponent: SensorTemplateIR
-					{
-						class AirTarget
-						{
-							minRange=25;
-							maxRange=4000;
-							objectDistanceLimitCoef=-1;
-							viewDistanceLimitCoef=1;
-						};
-						class GroundTarget
-						{
-							minRange=0;
-							maxRange=0;
-							objectDistanceLimitCoef=0;
-							viewDistanceLimitCoef=0;
-						};
-						minTrackableSpeed=-1;
-						maxTrackableSpeed=175;
-						angleRangeHorizontal=10;
-						angleRangeVertical=10;
-						minTrackableATL=5;
-						maxTrackableATL=1000;
-					};
-				};
-			};
-		};
+    {
+        class SensorsManagerComponent
+        {
+            class Components
+            {
+                class IRSensorComponent: SensorTemplateIR
+                {
+                    class AirTarget
+                    {
+                        minRange=25;
+                        maxRange=4000;
+                        objectDistanceLimitCoef=-1;
+                        viewDistanceLimitCoef=1;
+                    };
+                    class GroundTarget
+                    {
+                        minRange=0;
+                        maxRange=0;
+                        objectDistanceLimitCoef=0;
+                        viewDistanceLimitCoef=0;
+                    };
+                    maxTrackableSpeed=175;
+                    angleRangeHorizontal=10;
+                    angleRangeVertical=10;
+                    minTrackableATL=5;
+                    maxTrackableATL=1000;
+                };
+            };
+        };
+    };
 };
 class G_40mm_Smoke;
 class G_40mm_SmokeRed;

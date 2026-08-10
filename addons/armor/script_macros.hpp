@@ -13,7 +13,7 @@
     - UNSCF_VEST_ITEM_INFO and INVIS_VEST_ITEM_INFO: define vest parameters like
       mass, containerClass, and the hitpoint info.
     - UNSCF_VEST_ALL_VARIANTS: expands into multiple definitions for each vest
-      selection set (Rifleman, Breacher, Grenadier, etc.) with each
+      selection set (Rifleman, BREACHER, Grenadier, etc.) with each
       combination of pouches.
   ==============================================================================
 */
@@ -233,26 +233,10 @@ class HitpointsProtectionInfo {  \
     class TCP_U_B_CBUU_##SHIRT##_Base;                           \
   
 #define NEW_VEST_M43D_NONE(CAMO,PLATOON) \
-  class STB73_M43D_Light_##CAMO##_##PLATOON## : STB73_M43D_Base { \
+  class STB73_M43D_Light_##CAMO##_##PLATOON## : STB73_M43D_Light_Base { \
     scope=2; \
     scopeArsenal=2; \
     displayName = Q([73] M43/D [Light] [##PLATOON##] [##CAMO##]); \
-    author=AUTHOR; \
-    maximumLoad = VEST_MAXLOAD; \
-    picture="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\data\ui\Black\icon_vest_M43D_Light_CA.paa"; \
-		model="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_Light.p3d"; \
-    class TCP_uniformDecals: TCP_uniformDecals \
-		{ \
-			decalColor="white"; \
-      selectionName="nameM43D"; \
-			selectionRank="rankM43D"; \
-		}; \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"decals" \
-		}; \
     hiddenSelectionsTextures[]= \
     { \
       Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
@@ -269,69 +253,16 @@ class HitpointsProtectionInfo {  \
       Legs=Q(None);\
       Arms=Q(None);\
     }; \
-    class ItemInfo: ItemInfo {     \
-      hiddenSelectionsTextures[]=\
-      { \
-        Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
-      };\
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "decals" \
-      }; \
-      uniformModel="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_Light.p3d"; \
-      vestType="Rebreather"; \
-      mass=VEST_MASS; \
-    };\
   };
 
 #define NEW_VEST_M43D_LIGHT(CAMO,PLATOON) \
-  class STB73_M43D_Light_4_##CAMO##_##PLATOON## : STB73_M43D_Light_##CAMO##_##PLATOON## { \
+  class STB73_M43D_Light_4_##CAMO##_##PLATOON## : STB73_M43D_Light_4_Base { \
     displayName = Q([73] M43/D [Light] [##PLATOON##] [##CAMO##]); \
-    model="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_Light_4.p3d"; \
-    class TCP_uniformDecals: TCP_uniformDecals \
-		{ \
-			decalColor="white"; \
-		}; \
+    scope=2; \
+    scopeArsenal=2; \
     class TCP_equipmentTypes: TCP_equipmentTypes \
 		{ \
 			baseEquipment=Q(STB73_M43D_Light_4_##CAMO##_##PLATOON##); \
-      class GPS \
-			{ \
-				class UGPS \
-				{ \
-					indirectCompatibility=2; \
-					class compatibleItems \
-					{ \
-						TCP_UGPS=1; \
-					}; \
-				}; \
-				class TACPAD \
-				{ \
-					indirectCompatibility=2; \
-					class compatibleItems \
-					{ \
-						TCP_TACPAD=1; \
-					}; \
-				}; \
-			}; \
-		}; \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"decals", \
-			"collararmored", \
-			"collarflak", \
-			"wristugps", \
-			"wristtacpad" \
 		}; \
     hiddenSelectionsTextures[]= \
     { \
@@ -351,112 +282,46 @@ class HitpointsProtectionInfo {  \
       Legs=Q(Shin);\
       Arms=Q(Gauntlets);\
     }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "decals", \
-        "collararmored", \
-        "collarflak", \
-        "wristugps", \
-        "wristtacpad" \
-      }; \
-      uniformModel="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_Light_4.p3d"; \
-      vestType="Rebreather"; \
-      mass=VEST_MASS; \
-    }; \
   }; \
-  class STB73_M43D_Light_4_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_Light_4_##CAMO##_##PLATOON## { \
-    scope=1; \
+  class STB73_M43D_Light_4_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_Light_4_Base_TACPAD { \
     displayName = Q([73] M43/D [Light] [##PLATOON##] [##CAMO##]); \
-    author=AUTHOR; \
     ace_arsenal_uniqueBase = QUOTE(STB73_M43D_Light_4_##CAMO##_##PLATOON##);\
     class TCP_equipmentTypes: TCP_equipmentTypes \
 		{ \
 			baseEquipment=Q(STB73_M43D_Light_4_##CAMO##_##PLATOON##); \
 		}; \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"decals", \
-			"collararmored", \
-			"collarflak", \
-			"wristdefaultl", \
-			"wristugps" \
-		}; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "decals", \
-        "collararmored", \
-        "collarflak", \
-        "wristdefaultl", \
-        "wristugps" \
-      }; \
-    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
   };\
-  class STB73_M43D_Light_4_##CAMO##_##PLATOON##_UGPS : STB73_M43D_Light_4_##CAMO##_##PLATOON## { \
-    scope=1; \
+  class STB73_M43D_Light_4_##CAMO##_##PLATOON##_UGPS : STB73_M43D_Light_4_Base_UGPS { \
     displayName = Q([73] M43/D [Light] [##PLATOON##] [##CAMO##]); \
-    author=AUTHOR; \
     ace_arsenal_uniqueBase = QUOTE(STB73_M43D_Light_4_##CAMO##_##PLATOON##);\
     class TCP_equipmentTypes: TCP_equipmentTypes \
 		{ \
 			baseEquipment=Q(STB73_M43D_Light_4_##CAMO##_##PLATOON##); \
 		}; \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"decals", \
-			"collararmored", \
-			"collarflak", \
-			"wristdefaultl", \
-			"wristtacpad" \
-		}; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "decals", \
-        "collararmored", \
-        "collarflak", \
-        "wristdefaultl", \
-        "wristtacpad" \
-      }; \
-    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
   }; \
-  class STB73_M43D_Light_4_1_##CAMO##_##PLATOON## : STB73_M43D_Light_4_##CAMO##_##PLATOON## { \
+  class STB73_M43D_Light_4_1_##CAMO##_##PLATOON## : STB73_M43D_Light_4_1_Base { \
+    scope=2; \
+    scopeArsenal=2; \
     displayName = Q([73] M43/D [Light] [##PLATOON##] [##CAMO##]); \
     class TCP_equipmentTypes: TCP_equipmentTypes \
 		{ \
 			baseEquipment=Q(STB73_M43D_Light_4_1_##CAMO##_##PLATOON##); \
-		}; \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"decals", \
-			"collararmored", \
-			"wristugps", \
-			"wristtacpad" \
 		}; \
     hiddenSelectionsTextures[]= \
     { \
@@ -476,21 +341,24 @@ class HitpointsProtectionInfo {  \
       Legs=Q(Shin);\
       Arms=Q(Gauntlets);\
     }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "decals", \
-        "collararmored", \
-        "wristugps", \
-        "wristtacpad" \
-      }; \
-    }; \
   }; \
-  class STB73_M43D_Light_4_1_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_Light_4_1_##CAMO##_##PLATOON## { \
+  class STB73_M43D_Light_4_1_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_Light_4_1_Base_TACPAD { \
+    displayName = Q([73] M43/D [Light] [##PLATOON##] [##CAMO##]); \
+    ace_arsenal_uniqueBase = QUOTE(STB73_M43D_Light_4_1_##CAMO##_##PLATOON##);\
+    class TCP_equipmentTypes: TCP_equipmentTypes \
+		{ \
+			baseEquipment=Q(STB73_M43D_Light_4_1_##CAMO##_##PLATOON##); \
+		}; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+  };\
+  class STB73_M43D_Light_4_1_##CAMO##_##PLATOON##_UGPS : STB73_M43D_Light_4_1_Base_UGPS { \
     scope=1; \
     displayName = Q([73] M43/D [Light] [##PLATOON##] [##CAMO##]); \
     ace_arsenal_uniqueBase = QUOTE(STB73_M43D_Light_4_1_##CAMO##_##PLATOON##);\
@@ -498,65 +366,18 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_Light_4_1_##CAMO##_##PLATOON##); \
 		}; \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"decals", \
-			"collararmored", \
-			"wristdefaultl", \
-			"wristugps" \
-		}; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "decals", \
-        "collararmored", \
-        "wristdefaultl", \
-        "wristugps" \
-      }; \
-    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
   };\
-  class STB73_M43D_Light_4_1_##CAMO##_##PLATOON##_UGPS : STB73_M43D_Light_4_1_##CAMO##_##PLATOON## { \
-    scope=1; \
-    displayName = Q([73] M43/D [Light] [##PLATOON##] [##CAMO##]); \
-    ace_arsenal_uniqueBase = QUOTE(STB73_M43D_Light_4_1_##CAMO##_##PLATOON##);\
-    class TCP_equipmentTypes: TCP_equipmentTypes \
-		{ \
-			baseEquipment=Q(STB73_M43D_Light_4_1_##CAMO##_##PLATOON##); \
-		}; \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"decals", \
-			"collararmored", \
-			"wristdefaultl", \
-			"wristtacpad" \
-		}; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "decals", \
-        "collararmored", \
-        "wristdefaultl", \
-        "wristtacpad" \
-      }; \
-    }; \
-  };\
-  class STB73_M43D_Light_4_2_##CAMO##_##PLATOON## : STB73_M43D_Light_4_##CAMO##_##PLATOON## { \
+  class STB73_M43D_Light_4_2_##CAMO##_##PLATOON## : STB73_M43D_Light_4_2_Base { \
+    scope=2; \
+    scopeArsenal=2; \
     displayName = Q([73] M43/D [Light] [##PLATOON##] [##CAMO##]); \
     class TCP_equipmentTypes: TCP_equipmentTypes \
 		{ \
@@ -572,48 +393,21 @@ class HitpointsProtectionInfo {  \
       Legs=Q(Shin);\
       Arms=Q(Gauntlets);\
     }; \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"decals", \
-			"collarflak", \
-			"wristugps", \
-			"wristtacpad" \
-		}; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "decals", \
-        "collarflak", \
-        "wristugps", \
-        "wristtacpad" \
-      }; \
-    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
   }; \
-  class STB73_M43D_Light_4_2_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_Light_4_2_##CAMO##_##PLATOON## { \
-    scope=1; \
+  class STB73_M43D_Light_4_2_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_Light_4_2_Base_TACPAD { \
+    displayName = Q([73] M43/D [Light] [##PLATOON##] [##CAMO##]); \
     ace_arsenal_uniqueBase = QUOTE(STB73_M43D_Light_4_2_##CAMO##_##PLATOON##);\
     class TCP_equipmentTypes: TCP_equipmentTypes \
 		{ \
 			baseEquipment=Q(STB73_M43D_Light_4_2_##CAMO##_##PLATOON##); \
-		}; \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"decals", \
-			"collarflak", \
-			"wristdefaultl", \
-			"wristugps" \
 		}; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
@@ -622,22 +416,17 @@ class HitpointsProtectionInfo {  \
       Variant=Q(Light);\
       Collar=Q(Armored); \
     }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "decals", \
-        "collarflak", \
-        "wristdefaultl", \
-        "wristugps" \
-      }; \
-    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
   };\
-  class STB73_M43D_Light_4_2_##CAMO##_##PLATOON##_UGPS : STB73_M43D_Light_4_2_##CAMO##_##PLATOON## { \
-    scope=1; \
+  class STB73_M43D_Light_4_2_##CAMO##_##PLATOON##_UGPS : STB73_M43D_Light_4_2_Base_UGPS { \
+    displayName = Q([73] M43/D [Light] [##PLATOON##] [##CAMO##]); \
     ace_arsenal_uniqueBase = QUOTE(STB73_M43D_Light_4_2_##CAMO##_##PLATOON##);\
     class TCP_equipmentTypes: TCP_equipmentTypes \
 		{ \
@@ -668,9 +457,10 @@ class HitpointsProtectionInfo {  \
       }; \
     }; \
   };\
-  class STB73_M43D_Light_3_##CAMO##_##PLATOON## : STB73_M43D_Light_##CAMO##_##PLATOON## { \
+  class STB73_M43D_Light_3_##CAMO##_##PLATOON## : STB73_M43D_Light_3_Base { \
     displayName = Q([73] M43/D [Light] [##PLATOON##] [##CAMO##]); \
-    model="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_Light_3.p3d"; \
+    scope=2; \
+    scopeArsenal=2; \
     hiddenSelections[]= \
 		{ \
 			"camo", \
@@ -699,40 +489,11 @@ class HitpointsProtectionInfo {  \
       Legs=Q(Shin);\
       Arms=Q(None);\
     }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "decals", \
-        "collararmored", \
-        "collarflak" \
-      }; \
-      hiddenSelectionsTextures[]= \
-      { \
-        Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
-      };\
-      uniformModel="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_Light_3.p3d"; \
-      vestType="Rebreather"; \
-      mass=VEST_MASS; \
-    }; \
   }; \
-  class STB73_M43D_Light_3_1_##CAMO##_##PLATOON## : STB73_M43D_Light_3_##CAMO##_##PLATOON## { \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"decals", \
-			"collararmored" \
-		}; \
+  class STB73_M43D_Light_3_1_##CAMO##_##PLATOON## : STB73_M43D_Light_3_1_Base { \
+    scope=2; \
+    scopeArsenal=2; \
+    displayName = Q([73] M43/D [Light] [##PLATOON##] [##CAMO##]); \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -743,28 +504,19 @@ class HitpointsProtectionInfo {  \
       Legs=Q(Shin);\
       Arms=Q(None);\
     }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "decals", \
-        "collararmored" \
-      }; \
-    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
   }; \
-  class STB73_M43D_Light_3_2_##CAMO##_##PLATOON## : STB73_M43D_Light_3_##CAMO##_##PLATOON## { \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"decals", \
-			"collarflak" \
-		}; \
+  class STB73_M43D_Light_3_2_##CAMO##_##PLATOON## : STB73_M43D_Light_3_2_Base { \
+    scope=2; \
+    scopeArsenal=2; \
+    displayName = Q([73] M43/D [Light] [##PLATOON##] [##CAMO##]); \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -775,35 +527,23 @@ class HitpointsProtectionInfo {  \
       Legs=Q(Shin);\
       Arms=Q(None);\
     }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "decals", \
-        "collarflak" \
-      }; \
-    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
   }; \
-  class STB73_M43D_Light_2_##CAMO##_##PLATOON## : STB73_M43D_Light_3_##CAMO##_##PLATOON## { \
+  class STB73_M43D_Light_2_##CAMO##_##PLATOON## : STB73_M43D_Light_2_Base { \
     displayName = Q([73] M43/D [Light] [##PLATOON##] [##CAMO##]); \
-    model="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_Light_2.p3d"; \
+    scope=2; \
+    scopeArsenal=2; \
     class TCP_equipmentTypes: TCP_equipmentTypes \
 		{ \
 			baseEquipment=Q(STB73_M43D_Light_2_##CAMO##_##PLATOON##); \
 		}; \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"decals", \
-			"collararmored", \
-			"collarflak" \
-		}; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -814,203 +554,6 @@ class HitpointsProtectionInfo {  \
       Legs=Q(Thigh);\
       Arms=Q(None);\
     }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "decals", \
-        "collararmored", \
-        "collarflak" \
-      }; \
-      uniformModel="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_Light_2.p3d"; \
-    }; \
-  }; \
-  class STB73_M43D_Light_2_1_##CAMO##_##PLATOON## : STB73_M43D_Light_2_##CAMO##_##PLATOON## { \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"decals", \
-			"collararmored" \
-		}; \
-    class XtdGearInfo { \
-      Model="STB73_ACE_M43D_Vest"; \
-      Billet=Q(##PLATOON##); \
-      Camo=Q(##CAMO##); \
-      Belt=Q(Belt); \
-      Collar=Q(Flak); \
-      Shoulders=Q(None);\
-      Legs=Q(Thigh);\
-      Arms=Q(None);\
-    }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "decals", \
-        "collararmored" \
-      }; \
-    }; \
-  }; \
-  class STB73_M43D_Light_2_2_##CAMO##_##PLATOON## : STB73_M43D_Light_2_##CAMO##_##PLATOON## { \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"decals", \
-			"collarflak" \
-		}; \
-    class XtdGearInfo { \
-      Model="STB73_ACE_M43D_Vest"; \
-      Billet=Q(##PLATOON##); \
-      Camo=Q(##CAMO##); \
-      Belt=Q(Belt); \
-      Collar=Q(Armored); \
-      Shoulders=Q(None);\
-      Legs=Q(Thigh);\
-      Arms=Q(None);\
-    }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "decals", \
-        "collarflak" \
-      }; \
-    }; \
-  }; \
-  class STB73_M43D_Light_1_##CAMO##_##PLATOON## : STB73_M43D_Light_2_##CAMO##_##PLATOON## { \
-    displayName = Q([73] M43/D [Light] [##PLATOON##] [##CAMO##]); \
-    class TCP_uniformDecals: TCP_uniformDecals \
-		{ \
-			decalColor="white"; \
-		}; \
-    class TCP_equipmentTypes: TCP_equipmentTypes \
-		{ \
-			baseEquipment=Q(STB73_M43D_Light_1_##CAMO##_##PLATOON##); \
-		}; \
-    model="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_Light_1.p3d"; \
-    hiddenSelectionsTextures[]= \
-    { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
-    };\
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"decals", \
-			"collararmored", \
-			"collarflak" \
-		}; \
-    class XtdGearInfo { \
-      Model="STB73_ACE_M43D_Vest"; \
-      Billet=Q(##PLATOON##); \
-      Camo=Q(##CAMO##); \
-      Belt=Q(Belt); \
-      Collar=Q(None); \
-      Shoulders=Q(None);\
-      Legs=Q(None);\
-      Arms=Q(None);\
-    }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "decals", \
-        "collararmored", \
-        "collarflak" \
-      }; \
-      uniformModel="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_Light_1.p3d"; \
-    }; \
-  }; \
-  class STB73_M43D_Light_1_1_##CAMO##_##PLATOON## : STB73_M43D_Light_1_##CAMO##_##PLATOON## { \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"decals", \
-			"collararmored" \
-		}; \
-    class XtdGearInfo { \
-      Model="STB73_ACE_M43D_Vest"; \
-      Billet=Q(##PLATOON##); \
-      Camo=Q(##CAMO##); \
-      Belt=Q(Belt); \
-      Collar=Q(Flak); \
-      Shoulders=Q(None);\
-      Legs=Q(None);\
-      Arms=Q(None);\
-    }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "decals", \
-        "collararmored" \
-      }; \
-    }; \
-  }; \
-  class STB73_M43D_Light_1_2_##CAMO##_##PLATOON## : STB73_M43D_Light_1_##CAMO##_##PLATOON## { \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"decals", \
-			"collarflak" \
-		}; \
-    class XtdGearInfo { \
-      Model="STB73_ACE_M43D_Vest"; \
-      Billet=Q(##PLATOON##); \
-      Camo=Q(##CAMO##); \
-      Belt=Q(Belt); \
-      Collar=Q(Armored); \
-      Shoulders=Q(None);\
-      Legs=Q(None);\
-      Arms=Q(None);\
-    }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "decals", \
-        "collarflak" \
-      }; \
-    }; \
-  };
-
-#define NEW_VEST_M43D_PADS(CAMO,PLATOON) \
-  class STB73_M43D_Pads_4_##CAMO##_##PLATOON## : STB73_M43D_Light_4_##CAMO##_##PLATOON## { \
-    displayName = Q([73] M43/D [Pads] [##PLATOON##] [##CAMO##]); \
-    class TCP_equipmentTypes: TCP_equipmentTypes \
-		{ \
-			baseEquipment=Q(STB73_M43D_Pads_4_##CAMO##_##PLATOON##); \
-		}; \
-    model="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_Pads_4.p3d"; \
     hiddenSelectionsTextures[]= \
     { \
       Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
@@ -1019,18 +562,141 @@ class HitpointsProtectionInfo {  \
       Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
       Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
     };\
-    hiddenSelections[]= \
+  }; \
+  class STB73_M43D_Light_2_1_##CAMO##_##PLATOON## : STB73_M43D_Light_2_1_Base { \
+    scope=2; \
+    scopeArsenal=2; \
+    displayName = Q([73] M43/D [Light] [##PLATOON##] [##CAMO##]); \
+    class XtdGearInfo { \
+      Model="STB73_ACE_M43D_Vest"; \
+      Billet=Q(##PLATOON##); \
+      Camo=Q(##CAMO##); \
+      Belt=Q(Belt); \
+      Collar=Q(Flak); \
+      Shoulders=Q(None);\
+      Legs=Q(Thigh);\
+      Arms=Q(None);\
+    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+  }; \
+  class STB73_M43D_Light_2_2_##CAMO##_##PLATOON## : STB73_M43D_Light_2_2_Base { \
+    scope=2; \
+    scopeArsenal=2; \
+    displayName = Q([73] M43/D [Light] [##PLATOON##] [##CAMO##]); \
+    class XtdGearInfo { \
+      Model="STB73_ACE_M43D_Vest"; \
+      Billet=Q(##PLATOON##); \
+      Camo=Q(##CAMO##); \
+      Belt=Q(Belt); \
+      Collar=Q(Armored); \
+      Shoulders=Q(None);\
+      Legs=Q(Thigh);\
+      Arms=Q(None);\
+    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+  }; \
+  class STB73_M43D_Light_1_##CAMO##_##PLATOON## : STB73_M43D_Light_1_Base { \
+    displayName = Q([73] M43/D [Light] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
+    class TCP_equipmentTypes: TCP_equipmentTypes \
 		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"decals", \
-			"collararmored", \
-			"collarflak", \
-			"wristugps", \
-			"wristtacpad" \
+			baseEquipment=Q(STB73_M43D_Light_1_##CAMO##_##PLATOON##); \
 		}; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+    class XtdGearInfo { \
+      Model="STB73_ACE_M43D_Vest"; \
+      Billet=Q(##PLATOON##); \
+      Camo=Q(##CAMO##); \
+      Belt=Q(Belt); \
+      Collar=Q(None); \
+      Shoulders=Q(None);\
+      Legs=Q(None);\
+      Arms=Q(None);\
+    }; \
+  }; \
+  class STB73_M43D_Light_1_1_##CAMO##_##PLATOON## : STB73_M43D_Light_1_1_Base { \
+    scope=2; \
+    scopeArsenal=2; \
+    displayName = Q([73] M43/D [Light] [##PLATOON##] [##CAMO##]); \
+    class XtdGearInfo { \
+      Model="STB73_ACE_M43D_Vest"; \
+      Billet=Q(##PLATOON##); \
+      Camo=Q(##CAMO##); \
+      Belt=Q(Belt); \
+      Collar=Q(Flak); \
+      Shoulders=Q(None);\
+      Legs=Q(None);\
+      Arms=Q(None);\
+    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+  }; \
+  class STB73_M43D_Light_1_2_##CAMO##_##PLATOON## : STB73_M43D_Light_1_2_Base { \
+    scope=2; \
+    scopeArsenal=2; \
+    displayName = Q([73] M43/D [Light] [##PLATOON##] [##CAMO##]); \
+    class XtdGearInfo { \
+      Model="STB73_ACE_M43D_Vest"; \
+      Billet=Q(##PLATOON##); \
+      Camo=Q(##CAMO##); \
+      Belt=Q(Belt); \
+      Collar=Q(Armored); \
+      Shoulders=Q(None);\
+      Legs=Q(None);\
+      Arms=Q(None);\
+    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+  };
+
+#define NEW_VEST_M43D_PADS(CAMO,PLATOON) \
+  class STB73_M43D_Pads_4_##CAMO##_##PLATOON## : STB73_M43D_Pads_4_Base { \
+    displayName = Q([73] M43/D [Pads] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
+    class TCP_equipmentTypes: TCP_equipmentTypes \
+		{ \
+			baseEquipment=Q(STB73_M43D_Pads_4_##CAMO##_##PLATOON##); \
+		}; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -1041,97 +707,38 @@ class HitpointsProtectionInfo {  \
       Legs=Q(Shin);\
       Arms=Q(Gauntlets);\
     }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "decals", \
-        "collararmored", \
-        "collarflak", \
-        "wristugps", \
-        "wristtacpad" \
-      }; \
-      uniformModel="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_Pads_4.p3d"; \
-    }; \
   }; \
-  class STB73_M43D_Pads_4_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_Pads_4_##CAMO##_##PLATOON## { \
-    scope=1; \
+  class STB73_M43D_Pads_4_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_Pads_4_Base_TACPAD { \
+    displayName = Q([73] M43/D [Pads] [##PLATOON##] [##CAMO##]); \
     ace_arsenal_uniqueBase = QUOTE(STB73_M43D_Pads_4_##CAMO##_##PLATOON##);\
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"decals", \
-			"collararmored", \
-			"collarflak", \
-			"wristdefaultl", \
-			"wristugps" \
-		}; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "decals", \
-        "collararmored", \
-        "collarflak", \
-        "wristdefaultl", \
-        "wristugps" \
-      }; \
-    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
   };\
-  class STB73_M43D_Pads_4_##CAMO##_##PLATOON##_UGPS : STB73_M43D_Pads_4_##CAMO##_##PLATOON## { \
-    scope=1; \
+  class STB73_M43D_Pads_4_##CAMO##_##PLATOON##_UGPS : STB73_M43D_Pads_4_Base_UGPS { \
+    displayName = Q([73] M43/D [Pads] [##PLATOON##] [##CAMO##]); \
     ace_arsenal_uniqueBase = QUOTE(STB73_M43D_Pads_4_##CAMO##_##PLATOON##);\
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"decals", \
-			"collararmored", \
-			"collarflak", \
-			"wristugps", \
-			"wristtacpad" \
-		}; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "decals", \
-        "collararmored", \
-        "collarflak", \
-        "wristugps", \
-        "wristtacpad" \
-      }; \
-    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
   }; \
-  class STB73_M43D_Pads_4_1_##CAMO##_##PLATOON## : STB73_M43D_Pads_4_##CAMO##_##PLATOON## { \
+  class STB73_M43D_Pads_4_1_##CAMO##_##PLATOON## : STB73_M43D_Pads_4_1_Base { \
+    scope=2; \
+    scopeArsenal=2; \
+    displayName = Q([73] M43/D [Pads] [##PLATOON##] [##CAMO##]); \
     class TCP_equipmentTypes: TCP_equipmentTypes \
 		{ \
 			baseEquipment=Q(STB73_M43D_Pads_4_1_##CAMO##_##PLATOON##); \
-		}; \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"decals", \
-			"collararmored", \
-			"wristugps", \
-			"wristtacpad" \
 		}; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
@@ -1143,100 +750,54 @@ class HitpointsProtectionInfo {  \
       Legs=Q(Shin);\
       Arms=Q(Gauntlets);\
     }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "decals", \
-        "collararmored", \
-        "wristugps", \
-        "wristtacpad" \
-      }; \
-    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
   }; \
-  class STB73_M43D_Pads_4_1_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_Pads_4_1_##CAMO##_##PLATOON## { \
-    scope=1; \
-    ace_arsenal_uniqueBase = QUOTE(STB73_M43D_Pads_4_1_##CAMO##_##PLATOON##);\
-    class TCP_equipmentTypes: TCP_equipmentTypes \
-		{ \
-			baseEquipment=Q(STB73_M43D_Pads_4_1_##CAMO##_##PLATOON##); \
-		}; \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"decals", \
-			"collararmored", \
-			"wristdefaultl", \
-			"wristugps" \
-		}; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "decals", \
-        "collararmored", \
-        "wristdefaultl", \
-        "wristugps" \
-      }; \
-    }; \
-  };\
-  class STB73_M43D_Pads_4_1_##CAMO##_##PLATOON##_UGPS : STB73_M43D_Pads_4_1_##CAMO##_##PLATOON## { \
-    scope=1; \
-    ace_arsenal_uniqueBase = QUOTE(STB73_M43D_Pads_4_1_##CAMO##_##PLATOON##);\
-    class TCP_equipmentTypes: TCP_equipmentTypes \
-		{ \
-			baseEquipment=Q(STB73_M43D_Pads_4_1_##CAMO##_##PLATOON##); \
-		}; \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"decals", \
-			"collararmored", \
-			"wristdefaultl", \
-			"wristtacpad" \
-		}; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "decals", \
-        "collararmored", \
-        "wristdefaultl", \
-        "wristtacpad" \
-      }; \
-    }; \
-  };\
-  class STB73_M43D_Pads_4_2_##CAMO##_##PLATOON## : STB73_M43D_Pads_4_1_##CAMO##_##PLATOON## { \
+  class STB73_M43D_Pads_4_1_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_Pads_4_1_Base_TACPAD { \
     displayName = Q([73] M43/D [Pads] [##PLATOON##] [##CAMO##]); \
+    ace_arsenal_uniqueBase = QUOTE(STB73_M43D_Pads_4_1_##CAMO##_##PLATOON##);\
+    class TCP_equipmentTypes: TCP_equipmentTypes \
+		{ \
+			baseEquipment=Q(STB73_M43D_Pads_4_1_##CAMO##_##PLATOON##); \
+		}; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+  };\
+  class STB73_M43D_Pads_4_1_##CAMO##_##PLATOON##_UGPS : STB73_M43D_Pads_4_1_Base_UGPS { \
+    displayName = Q([73] M43/D [Pads] [##PLATOON##] [##CAMO##]); \
+    ace_arsenal_uniqueBase = QUOTE(STB73_M43D_Pads_4_1_##CAMO##_##PLATOON##);\
+    class TCP_equipmentTypes: TCP_equipmentTypes \
+		{ \
+			baseEquipment=Q(STB73_M43D_Pads_4_1_##CAMO##_##PLATOON##); \
+		}; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+  };\
+  class STB73_M43D_Pads_4_2_##CAMO##_##PLATOON## : STB73_M43D_Pads_4_2_Base { \
+    displayName = Q([73] M43/D [Pads] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
     class TCP_equipmentTypes: TCP_equipmentTypes \
 		{ \
 			baseEquipment=Q(STB73_M43D_Pads_4_2_##CAMO##_##PLATOON##); \
-		}; \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"decals", \
-			"collarflak", \
-			"wristugps", \
-			"wristtacpad" \
 		}; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
@@ -1248,37 +809,21 @@ class HitpointsProtectionInfo {  \
       Legs=Q(Shin);\
       Arms=Q(Gauntlets);\
     }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "decals", \
-        "collarflak", \
-        "wristugps", \
-        "wristtacpad" \
-      }; \
-    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
   }; \
-  class STB73_M43D_Pads_4_2_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_Pads_4_2_##CAMO##_##PLATOON## { \
-    scope=1; \
+  class STB73_M43D_Pads_4_2_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_Pads_4_2_Base_TACPAD { \
+    displayName = Q([73] M43/D [Pads] [##PLATOON##] [##CAMO##]); \
     ace_arsenal_uniqueBase = QUOTE(STB73_M43D_Pads_4_2_##CAMO##_##PLATOON##);\
     class TCP_equipmentTypes: TCP_equipmentTypes \
 		{ \
 			baseEquipment=Q(STB73_M43D_Pads_4_2_##CAMO##_##PLATOON##); \
-		}; \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"decals", \
-			"collarflak", \
-			"wristdefaultl", \
-			"wristugps" \
 		}; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
@@ -1287,63 +832,21 @@ class HitpointsProtectionInfo {  \
       Variant=Q(Pads);\
       Collar=Q(Armored); \
     }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "decals", \
-        "collarflak", \
-        "wristdefaultl", \
-        "wristugps" \
-      }; \
-    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
   };\
-  class STB73_M43D_Pads_4_2_##CAMO##_##PLATOON##_UGPS : STB73_M43D_Pads_4_2_##CAMO##_##PLATOON## { \
-    scope=1; \
+  class STB73_M43D_Pads_4_2_##CAMO##_##PLATOON##_UGPS : STB73_M43D_Pads_4_2_Base_UGPS { \
+    displayName = Q([73] M43/D [Pads] [##PLATOON##] [##CAMO##]); \
     ace_arsenal_uniqueBase = QUOTE(STB73_M43D_Pads_4_2_##CAMO##_##PLATOON##);\
     class TCP_equipmentTypes: TCP_equipmentTypes \
 		{ \
 			baseEquipment=Q(STB73_M43D_Pads_4_2_##CAMO##_##PLATOON##); \
-		}; \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"decals", \
-			"collarflak", \
-			"wristdefaultl", \
-			"wristtacpad" \
-		}; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "decals", \
-        "collarflak", \
-        "wristdefaultl", \
-        "wristtacpad" \
-      }; \
-    }; \
-  };\
-  class STB73_M43D_Pads_3_##CAMO##_##PLATOON## : STB73_M43D_Light_##CAMO##_##PLATOON## { \
-    displayName = Q([73] M43/D [Pads] [##PLATOON##] [##CAMO##]); \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"decals", \
-			"collararmored", \
-			"collarflak" \
 		}; \
     hiddenSelectionsTextures[]= \
     { \
@@ -1353,50 +856,34 @@ class HitpointsProtectionInfo {  \
       Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
       Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
     };\
-    model="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_Pads_3.p3d"; \
-    class XtdGearInfo { \
-      Model="STB73_ACE_M43D_Vest"; \
-      Billet=Q(##PLATOON##); \
-      Camo=Q(##CAMO##); \
-      Belt=Q(Belt); \
-      Collar=Q(None); \
-      Shoulders=Q(Pads);\
-      Legs=Q(Shin);\
-      Arms=Q(None);\
-    }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "decals", \
-        "collararmored", \
-        "collarflak" \
-      }; \
-      hiddenSelectionsTextures[]= \
-      { \
-        Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
-      };\
-      uniformModel="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_Pads_3.p3d"; \
-    }; \
-  }; \
-  class STB73_M43D_Pads_3_1_##CAMO##_##PLATOON## : STB73_M43D_Pads_3_##CAMO##_##PLATOON## { \
+  };\
+  class STB73_M43D_Pads_3_##CAMO##_##PLATOON## : STB73_M43D_Pads_3_Base { \
     displayName = Q([73] M43/D [Pads] [##PLATOON##] [##CAMO##]); \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"decals", \
-			"collararmored" \
-		}; \
+    scope=2; \
+    scopeArsenal=2; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+    class XtdGearInfo { \
+      Model="STB73_ACE_M43D_Vest"; \
+      Billet=Q(##PLATOON##); \
+      Camo=Q(##CAMO##); \
+      Belt=Q(Belt); \
+      Collar=Q(None); \
+      Shoulders=Q(Pads);\
+      Legs=Q(Shin);\
+      Arms=Q(None);\
+    }; \
+  }; \
+  class STB73_M43D_Pads_3_1_##CAMO##_##PLATOON## : STB73_M43D_Pads_3_1_Base { \
+    displayName = Q([73] M43/D [Pads] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -1407,28 +894,19 @@ class HitpointsProtectionInfo {  \
       Legs=Q(Shin);\
       Arms=Q(None);\
     }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "decals", \
-        "collararmored" \
-      }; \
-    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
   }; \
-  class STB73_M43D_Pads_3_2_##CAMO##_##PLATOON## : STB73_M43D_Pads_3_##CAMO##_##PLATOON## { \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"decals", \
-			"collarflak" \
-		}; \
+  class STB73_M43D_Pads_3_2_##CAMO##_##PLATOON## : STB73_M43D_Pads_3_2_Base { \
+    displayName = Q([73] M43/D [Pads] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -1439,30 +917,19 @@ class HitpointsProtectionInfo {  \
       Legs=Q(Shin);\
       Arms=Q(None);\
     }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "decals", \
-        "collarflak" \
-      }; \
-    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
   }; \
-  class STB73_M43D_Pads_2_##CAMO##_##PLATOON## : STB73_M43D_Pads_3_##CAMO##_##PLATOON## { \
-    model="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_Pads_2.p3d"; \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"decals", \
-			"collararmored", \
-			"collarflak" \
-		}; \
+  class STB73_M43D_Pads_2_##CAMO##_##PLATOON## : STB73_M43D_Pads_2_Base { \
+    displayName = Q([73] M43/D [Pads] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -1473,30 +940,19 @@ class HitpointsProtectionInfo {  \
       Legs=Q(Thigh);\
       Arms=Q(None);\
     }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "decals", \
-        "collararmored", \
-        "collarflak" \
-      }; \
-      uniformModel="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_Pads_2.p3d"; \
-    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
   }; \
-  class STB73_M43D_Pads_2_1_##CAMO##_##PLATOON## : STB73_M43D_Pads_2_##CAMO##_##PLATOON## { \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"decals", \
-			"collararmored" \
-		}; \
+  class STB73_M43D_Pads_2_1_##CAMO##_##PLATOON## : STB73_M43D_Pads_2_1_Base { \
+    displayName = Q([73] M43/D [Pads] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -1507,28 +963,19 @@ class HitpointsProtectionInfo {  \
       Legs=Q(Thigh);\
       Arms=Q(None);\
     }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "decals", \
-        "collararmored" \
-      }; \
-    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
   }; \
-  class STB73_M43D_Pads_2_2_##CAMO##_##PLATOON## : STB73_M43D_Pads_2_##CAMO##_##PLATOON## { \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"decals", \
-			"collarflak" \
-		}; \
+  class STB73_M43D_Pads_2_2_##CAMO##_##PLATOON## : STB73_M43D_Pads_2_2_Base { \
+    displayName = Q([73] M43/D [Pads] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -1539,20 +986,19 @@ class HitpointsProtectionInfo {  \
       Legs=Q(Thigh);\
       Arms=Q(None);\
     }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "decals", \
-        "collarflak" \
-      }; \
-    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
   }; \
-  class STB73_M43D_Pads_1_##CAMO##_##PLATOON## : STB73_M43D_Pads_2_##CAMO##_##PLATOON## { \
-    model="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_Pads_1.p3d"; \
+  class STB73_M43D_Pads_1_##CAMO##_##PLATOON## : STB73_M43D_Pads_1_Base { \
+    displayName = Q([73] M43/D [Pads] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
     hiddenSelectionsTextures[]= \
     { \
       Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
@@ -1560,15 +1006,6 @@ class HitpointsProtectionInfo {  \
       Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
       Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
     };\
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"decals", \
-			"collararmored", \
-			"collarflak" \
-		}; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -1579,35 +1016,11 @@ class HitpointsProtectionInfo {  \
       Legs=Q(None);\
       Arms=Q(None);\
     }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "decals", \
-        "collararmored", \
-        "collarflak" \
-      }; \
-      hiddenSelectionsTextures[]= \
-      { \
-        Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
-      };\
-      uniformModel="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_Pads_1.p3d"; \
-    }; \
   }; \
-  class STB73_M43D_Pads_1_1_##CAMO##_##PLATOON## : STB73_M43D_Pads_1_##CAMO##_##PLATOON## { \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"decals", \
-			"collararmored" \
-		}; \
+  class STB73_M43D_Pads_1_1_##CAMO##_##PLATOON## : STB73_M43D_Pads_1_1_Base { \
+    displayName = Q([73] M43/D [Pads] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -1618,26 +1031,18 @@ class HitpointsProtectionInfo {  \
       Legs=Q(None);\
       Arms=Q(None);\
     }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "decals", \
-        "collararmored" \
-      }; \
-    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
   }; \
-  class STB73_M43D_Pads_1_2_##CAMO##_##PLATOON## : STB73_M43D_Pads_1_##CAMO##_##PLATOON## { \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"decals", \
-			"collarflak" \
-		}; \
+  class STB73_M43D_Pads_1_2_##CAMO##_##PLATOON## : STB73_M43D_Pads_1_2_Base { \
+    displayName = Q([73] M43/D [Pads] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -1648,43 +1053,24 @@ class HitpointsProtectionInfo {  \
       Legs=Q(None);\
       Arms=Q(None);\
     }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "decals", \
-        "collarflak" \
-      }; \
-    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
   };
 
 #define NEW_VEST_M43D_ODST(CAMO,PLATOON) \
-  class STB73_M43D_ODST_4_##CAMO##_##PLATOON## : STB73_M43D_Light_4_##CAMO##_##PLATOON## { \
+  class STB73_M43D_ODST_4_##CAMO##_##PLATOON## : STB73_M43D_ODST_4_Base { \
     displayName = Q([73] M43/D [ODST] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
     class TCP_equipmentTypes: TCP_equipmentTypes \
 		{ \
 			baseEquipment=Q(STB73_M43D_ODST_4_##CAMO##_##PLATOON##); \
-      class GPS \
-			{ \
-				class UGPS \
-				{ \
-					class compatibleItems \
-					{ \
-						TCP_UGPS=1; \
-					}; \
-				}; \
-				class TACPAD \
-				{ \
-					class compatibleItems \
-					{ \
-						TCP_TACPAD=1; \
-					}; \
-				}; \
-			}; \
 		}; \
-    model="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_ODST_4.p3d"; \
     hiddenSelectionsTextures[]= \
     { \
       Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
@@ -1694,19 +1080,6 @@ class HitpointsProtectionInfo {  \
       Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
       Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
     };\
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"decals", \
-      "collararmored",\
-			"collarflak", \
-			"wristugps", \
-			"wristtacpad" \
-		}; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -1717,112 +1090,40 @@ class HitpointsProtectionInfo {  \
       Legs=Q(Shin);\
       Arms=Q(Gauntlets);\
     }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "decals", \
-        "collararmored", \
-        "collarflak", \
-        "wristugps", \
-        "wristtacpad" \
-      }; \
-      hiddenSelectionsTextures[]= \
-      { \
-        Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-        Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
-      };\
-      uniformModel="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_ODST_4.p3d"; \
-    }; \
   }; \
-  class STB73_M43D_ODST_4_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_ODST_4_##CAMO##_##PLATOON## { \
-    scope=1; \
+  class STB73_M43D_ODST_4_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_ODST_4_Base_TACPAD { \
+    displayName = Q([73] M43/D [ODST] [##PLATOON##] [##CAMO##]); \
     ace_arsenal_uniqueBase = QUOTE(STB73_M43D_ODST_4_##CAMO##_##PLATOON##);\
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"decals", \
-			"collararmored", \
-			"collarflak", \
-			"wristdefaultl", \
-			"wristugps" \
-		}; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "decals", \
-        "collararmored", \
-        "collarflak", \
-        "wristdefaultl", \
-        "wristugps" \
-      }; \
-    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
   };\
-  class STB73_M43D_ODST_4_##CAMO##_##PLATOON##_UGPS : STB73_M43D_ODST_4_##CAMO##_##PLATOON## { \
-    scope=1; \
+  class STB73_M43D_ODST_4_##CAMO##_##PLATOON##_UGPS : STB73_M43D_ODST_4_Base_UGPS { \
+    displayName = Q([73] M43/D [ODST] [##PLATOON##] [##CAMO##]); \
     ace_arsenal_uniqueBase = QUOTE(STB73_M43D_ODST_4_##CAMO##_##PLATOON##);\
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"decals", \
-			"collararmored", \
-			"collarflak", \
-			"wristdefaultl", \
-			"wristtacpad" \
-		}; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "decals", \
-        "collararmored", \
-        "collarflak", \
-        "wristdefaultl", \
-        "wristtacpad" \
-      }; \
-    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
   }; \
-  class STB73_M43D_ODST_4_1_##CAMO##_##PLATOON## : STB73_M43D_ODST_4_##CAMO##_##PLATOON## { \
+  class STB73_M43D_ODST_4_1_##CAMO##_##PLATOON## : STB73_M43D_ODST_4_1_Base { \
+    displayName = Q([73] M43/D [ODST] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
     class TCP_equipmentTypes: TCP_equipmentTypes \
 		{ \
 			baseEquipment=Q(STB73_M43D_ODST_4_1_##CAMO##_##PLATOON##); \
-		}; \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"decals", \
-			"collararmored", \
-			"wristugps", \
-			"wristtacpad" \
 		}; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
@@ -1834,96 +1135,57 @@ class HitpointsProtectionInfo {  \
       Legs=Q(Shin);\
       Arms=Q(Gauntlets);\
     }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "decals", \
-        "collararmored", \
-        "wristugps", \
-        "wristtacpad" \
-      }; \
-    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
   }; \
-  class STB73_M43D_ODST_4_1_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_ODST_4_1_##CAMO##_##PLATOON## { \
+  class STB73_M43D_ODST_4_1_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_ODST_4_1_Base_TACPAD { \
+    displayName = Q([73] M43/D [ODST] [##PLATOON##] [##CAMO##]); \
     ace_arsenal_uniqueBase = QUOTE(STB73_M43D_ODST_4_1_##CAMO##_##PLATOON##);\
-    hiddenSelections[]= \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+    class TCP_equipmentTypes: TCP_equipmentTypes \
 		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"decals", \
-			"collararmored", \
-			"wristdefaultl", \
-			"wristugps" \
+			baseEquipment=Q(STB73_M43D_ODST_4_1_##CAMO##_##PLATOON##); \
 		}; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "decals", \
-        "collararmored", \
-        "wristdefaultl", \
-        "wristugps" \
-      }; \
-    }; \
   }; \
-  class STB73_M43D_ODST_4_1_##CAMO##_##PLATOON##_UGPS : STB73_M43D_ODST_4_1_##CAMO##_##PLATOON## { \
+  class STB73_M43D_ODST_4_1_##CAMO##_##PLATOON##_UGPS : STB73_M43D_ODST_4_1_Base_UGPS { \
+    displayName = Q([73] M43/D [ODST] [##PLATOON##] [##CAMO##]); \
     ace_arsenal_uniqueBase = QUOTE(STB73_M43D_ODST_4_1_##CAMO##_##PLATOON##);\
-    hiddenSelections[]= \
+    class TCP_equipmentTypes: TCP_equipmentTypes \
 		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"decals", \
-			"collararmored", \
-			"wristdefaultl", \
-			"wristtacpad" \
+			baseEquipment=Q(STB73_M43D_ODST_4_1_##CAMO##_##PLATOON##); \
 		}; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "decals", \
-        "collararmored", \
-        "wristdefaultl", \
-        "wristtacpad" \
-      }; \
-    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
   };\
-  class STB73_M43D_ODST_4_2_##CAMO##_##PLATOON## : STB73_M43D_ODST_4_1_##CAMO##_##PLATOON## { \
+  class STB73_M43D_ODST_4_2_##CAMO##_##PLATOON## : STB73_M43D_ODST_4_2_Base { \
+    displayName = Q([73] M43/D [ODST] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
     class TCP_equipmentTypes: TCP_equipmentTypes \
 		{ \
 			baseEquipment=Q(STB73_M43D_ODST_4_2_##CAMO##_##PLATOON##); \
-		}; \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"decals", \
-			"collarflak", \
-			"wristdefaultl", \
-			"wristugps", \
-      "wristtacpad" \
 		}; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
@@ -1935,40 +1197,22 @@ class HitpointsProtectionInfo {  \
       Legs=Q(Shin);\
       Arms=Q(Gauntlets);\
     }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "decals", \
-        "collarflak", \
-        "wristdefaultl", \
-        "wristugps", \
-        "wristtacpad" \
-      }; \
-    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
   }; \
-  class STB73_M43D_ODST_4_2_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_ODST_4_2_##CAMO##_##PLATOON## { \
-    scope=1; \
+  class STB73_M43D_ODST_4_2_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_ODST_4_2_Base_TACPAD { \
+    displayName = Q([73] M43/D [ODST] [##PLATOON##] [##CAMO##]); \
     ace_arsenal_uniqueBase = QUOTE(STB73_M43D_ODST_4_2_##CAMO##_##PLATOON##);\
     class TCP_equipmentTypes: TCP_equipmentTypes \
 		{ \
 			baseEquipment=Q(STB73_M43D_ODST_4_2_##CAMO##_##PLATOON##); \
-		}; \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"decals", \
-			"collarflak", \
-			"wristdefaultl", \
-			"wristugps" \
 		}; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
@@ -1977,54 +1221,6 @@ class HitpointsProtectionInfo {  \
       Variant=Q(ODST);\
       Collar=Q(Armored); \
     }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "decals", \
-        "collarflak", \
-        "wristdefaultl", \
-        "wristugps" \
-      }; \
-    }; \
-  };\
-  class STB73_M43D_ODST_4_2_##CAMO##_##PLATOON##_UGPS : STB73_M43D_ODST_4_2_##CAMO##_##PLATOON## { \
-    scope=1; \
-    ace_arsenal_uniqueBase = QUOTE(STB73_M43D_ODST_4_2_##CAMO##_##PLATOON##);\
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"decals", \
-			"collarflak", \
-			"wristdefaultl", \
-			"wristtacpad" \
-		}; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "decals", \
-        "collarflak", \
-        "wristdefaultl", \
-        "wristtacpad" \
-      }; \
-    }; \
-  };\
-  class STB73_M43D_ODST_3_##CAMO##_##PLATOON## : STB73_M43D_Light_##CAMO##_##PLATOON## { \
-    displayName = Q([73] M43/D [ODST] [##PLATOON##] [##CAMO##]); \
-    model="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_ODST_3.p3d"; \
     hiddenSelectionsTextures[]= \
     { \
       Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
@@ -2034,17 +1230,33 @@ class HitpointsProtectionInfo {  \
       Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
       Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
     };\
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"decals", \
-			"collararmored", \
-			"collarflak" \
-		}; \
+  };\
+  class STB73_M43D_ODST_4_2_##CAMO##_##PLATOON##_UGPS : STB73_M43D_ODST_4_2_Base_UGPS { \
+    displayName = Q([73] M43/D [ODST] [##PLATOON##] [##CAMO##]); \
+    ace_arsenal_uniqueBase = QUOTE(STB73_M43D_ODST_4_2_##CAMO##_##PLATOON##);\
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+  };\
+  class STB73_M43D_ODST_3_##CAMO##_##PLATOON## : STB73_M43D_ODST_3_Base { \
+    displayName = Q([73] M43/D [ODST] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -2055,41 +1267,11 @@ class HitpointsProtectionInfo {  \
       Legs=Q(Shin);\
       Arms=Q(None);\
     }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "decals", \
-        "collararmored", \
-        "collarflak" \
-      }; \
-      hiddenSelectionsTextures[]= \
-      { \
-        Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-        Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
-      };\
-      uniformModel="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_ODST_3.p3d"; \
-    }; \
   }; \
-  class STB73_M43D_ODST_3_1_##CAMO##_##PLATOON## : STB73_M43D_ODST_3_##CAMO##_##PLATOON## { \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"decals", \
-			"collararmored" \
-		}; \
+  class STB73_M43D_ODST_3_1_##CAMO##_##PLATOON## : STB73_M43D_ODST_3_1_Base { \
+    displayName = Q([73] M43/D [ODST] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -2100,30 +1282,20 @@ class HitpointsProtectionInfo {  \
       Legs=Q(Shin);\
       Arms=Q(None);\
     }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "decals", \
-        "collararmored" \
-      }; \
-    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
   }; \
-  class STB73_M43D_ODST_3_2_##CAMO##_##PLATOON## : STB73_M43D_ODST_3_##CAMO##_##PLATOON## { \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"decals", \
-			"collarflak" \
-		}; \
+  class STB73_M43D_ODST_3_2_##CAMO##_##PLATOON## : STB73_M43D_ODST_3_2_Base { \
+    displayName = Q([73] M43/D [ODST] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -2134,21 +1306,20 @@ class HitpointsProtectionInfo {  \
       Legs=Q(Shin);\
       Arms=Q(None);\
     }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "decals", \
-        "collarflak" \
-      }; \
-    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
   }; \
-  class STB73_M43D_ODST_2_##CAMO##_##PLATOON## : STB73_M43D_ODST_3_##CAMO##_##PLATOON## { \
-    model="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_ODST_2.p3d"; \
+  class STB73_M43D_ODST_2_##CAMO##_##PLATOON## : STB73_M43D_ODST_2_Base { \
+    displayName = Q([73] M43/D [ODST] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -2159,12 +1330,20 @@ class HitpointsProtectionInfo {  \
       Legs=Q(Thigh);\
       Arms=Q(None);\
     }; \
-    class ItemInfo: ItemInfo { \
-      uniformModel="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_ODST_2.p3d"; \
-    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
   }; \
-  class STB73_M43D_ODST_2_1_##CAMO##_##PLATOON## : STB73_M43D_ODST_3_1_##CAMO##_##PLATOON## { \
-    model="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_ODST_2.p3d"; \
+  class STB73_M43D_ODST_2_1_##CAMO##_##PLATOON## : STB73_M43D_ODST_2_1_Base { \
+    displayName = Q([73] M43/D [ODST] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -2175,12 +1354,20 @@ class HitpointsProtectionInfo {  \
       Legs=Q(Thigh);\
       Arms=Q(None);\
     }; \
-    class ItemInfo: ItemInfo { \
-      uniformModel="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_ODST_2.p3d"; \
-    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
   }; \
-  class STB73_M43D_ODST_2_2_##CAMO##_##PLATOON## : STB73_M43D_ODST_3_2_##CAMO##_##PLATOON## { \
-    model="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_ODST_2.p3d"; \
+  class STB73_M43D_ODST_2_2_##CAMO##_##PLATOON## : STB73_M43D_ODST_2_2_Base { \
+    displayName = Q([73] M43/D [ODST] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -2191,22 +1378,20 @@ class HitpointsProtectionInfo {  \
       Legs=Q(Thigh);\
       Arms=Q(None);\
     }; \
-    class ItemInfo: ItemInfo { \
-      uniformModel="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_ODST_2.p3d"; \
-    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
   }; \
-  class STB73_M43D_ODST_1_##CAMO##_##PLATOON## : STB73_M43D_ODST_2_##CAMO##_##PLATOON## { \
-    model="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_ODST_1.p3d"; \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"decals", \
-			"collararmored", \
-			"collarflak" \
-		}; \
+  class STB73_M43D_ODST_1_##CAMO##_##PLATOON## : STB73_M43D_ODST_1_Base { \
+    displayName = Q([73] M43/D [ODST] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -2225,38 +1410,11 @@ class HitpointsProtectionInfo {  \
       Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
       Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
     };\
-    class ItemInfo: ItemInfo { \
-      uniformModel="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_ODST_1.p3d"; \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "decals", \
-        "collararmored", \
-        "collarflak" \
-      }; \
-      hiddenSelectionsTextures[]= \
-      { \
-        Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-        Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
-      };\
-    }; \
   }; \
-  class STB73_M43D_ODST_1_1_##CAMO##_##PLATOON## : STB73_M43D_ODST_1_##CAMO##_##PLATOON## { \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"decals", \
-			"collararmored" \
-		}; \
+  class STB73_M43D_ODST_1_1_##CAMO##_##PLATOON## : STB73_M43D_ODST_1_1_Base { \
+    displayName = Q([73] M43/D [ODST] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -2267,28 +1425,19 @@ class HitpointsProtectionInfo {  \
       Legs=Q(None);\
       Arms=Q(None);\
     }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "decals", \
-        "collararmored" \
-      }; \
-    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
   }; \
-  class STB73_M43D_ODST_1_2_##CAMO##_##PLATOON## : STB73_M43D_ODST_1_##CAMO##_##PLATOON## { \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"decals", \
-			"collarflak" \
-		}; \
+  class STB73_M43D_ODST_1_2_##CAMO##_##PLATOON## : STB73_M43D_ODST_1_2_Base { \
+    displayName = Q([73] M43/D [ODST] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -2299,49 +1448,30 @@ class HitpointsProtectionInfo {  \
       Legs=Q(None);\
       Arms=Q(None);\
     }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "decals", \
-        "collarflak" \
-      }; \
-    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
   }; 
 
 #define NEW_VEST_M43D_BREACHER(CAMO,PLATOON) \
-  class STB73_M43D_Breacher_4_##CAMO##_##PLATOON## : STB73_M43D_Light_4_##CAMO##_##PLATOON## { \
-    displayName = Q([73] M43/D [Breacher] [##PLATOON##] [##CAMO##]); \
+  class STB73_M43D_BREACHER_4_##CAMO##_##PLATOON## : STB73_M43D_BREACHER_4_Base { \
+    displayName = Q([73] M43/D [BREACHER] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
     class TCP_equipmentTypes: TCP_equipmentTypes \
 		{ \
-			baseEquipment=Q(STB73_M43D_Breacher_4_##CAMO##_##PLATOON##); \
-      class GPS \
-			{ \
-				class UGPS \
-				{ \
-					class compatibleItems \
-					{ \
-						TCP_UGPS=1; \
-					}; \
-				}; \
-				class TACPAD \
-				{ \
-					class compatibleItems \
-					{ \
-						TCP_TACPAD=1; \
-					}; \
-				}; \
-			}; \
+			baseEquipment=Q(STB73_M43D_BREACHER_4_##CAMO##_##PLATOON##); \
 		}; \
-    model="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_BREACHER_4.p3d"; \
     hiddenSelectionsTextures[]= \
     { \
       Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
       Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_Breacher_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_BREACHER_CO.paa)),\
       Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
       Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
       Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
@@ -2353,526 +1483,336 @@ class HitpointsProtectionInfo {  \
       Camo=Q(##CAMO##); \
       Belt=Q(Belt); \
       Collar=Q(None); \
-      Shoulders=Q(Breacher);\
+      Shoulders=Q(BREACHER);\
       Legs=Q(Shin);\
       Arms=Q(Gauntlets);\
     }; \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"camo5", \
-			"decals", \
-			"collararmored", \
-			"collarflak", \
-			"wristugps", \
-			"wristtacpad" \
-		}; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "camo5", \
-        "decals", \
-        "collararmored", \
-        "collarflak", \
-        "wristugps", \
-        "wristtacpad" \
-      }; \
-      uniformModel="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_BREACHER_4.p3d"; \
-      hiddenSelectionsTextures[]= \
-      { \
-        Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-        Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-        Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_Breacher_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
-      };\
-    }; \
   }; \
-  class STB73_M43D_Breacher_4_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_Breacher_4_##CAMO##_##PLATOON## { \
-    scope=1; \
-    ace_arsenal_uniqueBase = QUOTE(STB73_M43D_Breacher_4_##CAMO##_##PLATOON##);\
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"camo5", \
-			"decals", \
-			"collararmored", \
-			"collarflak", \
-			"wristdefaultl", \
-			"wristugps" \
-		}; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "camo5", \
-        "decals", \
-        "collararmored", \
-        "collarflak", \
-        "wristdefaultl", \
-        "wristugps" \
-      }; \
-    }; \
-  };\
-  class STB73_M43D_Breacher_4_##CAMO##_##PLATOON##_UGPS : STB73_M43D_Breacher_4_##CAMO##_##PLATOON## { \
-    scope=1; \
-    ace_arsenal_uniqueBase = QUOTE(STB73_M43D_Breacher_4_##CAMO##_##PLATOON##);\
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"camo5", \
-			"decals", \
-			"collararmored", \
-			"collarflak", \
-			"wristdefaultl", \
-			"wristtacpad" \
-		}; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "camo5", \
-        "decals", \
-        "collararmored", \
-        "collarflak", \
-        "wristdefaultl", \
-        "wristtacpad" \
-      }; \
-    }; \
-  }; \
-  class STB73_M43D_Breacher_4_1_##CAMO##_##PLATOON## : STB73_M43D_Breacher_4_##CAMO##_##PLATOON## { \
+  class STB73_M43D_BREACHER_4_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_BREACHER_4_Base_TACPAD { \
+    displayName = Q([73] M43/D [BREACHER] [##PLATOON##] [##CAMO##]); \
+    ace_arsenal_uniqueBase = QUOTE(STB73_M43D_BREACHER_4_##CAMO##_##PLATOON##);\
     class TCP_equipmentTypes: TCP_equipmentTypes \
 		{ \
-			baseEquipment=Q(STB73_M43D_Breacher_4_1_##CAMO##_##PLATOON##); \
+			baseEquipment=Q(STB73_M43D_BREACHER_4_##CAMO##_##PLATOON##); \
 		}; \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"camo5", \
-			"decals", \
-			"collararmored", \
-			"wristugps", \
-			"wristtacpad" \
-		}; \
-    class XtdGearInfo { \
-      Model="STB73_ACE_M43D_Vest"; \
-      Billet=Q(##PLATOON##); \
-      Camo=Q(##CAMO##); \
-      Belt=Q(Belt); \
-      Collar=Q(Flak); \
-      Shoulders=Q(Breacher);\
-      Legs=Q(Shin);\
-      Arms=Q(Gauntlets);\
-    }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "camo5", \
-        "decals", \
-        "collararmored", \
-        "wristugps", \
-        "wristtacpad" \
-      }; \
-    }; \
-  }; \
-  class STB73_M43D_Breacher_4_1_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_Breacher_4_1_##CAMO##_##PLATOON## { \
-    scope=1; \
-    ace_arsenal_uniqueBase = QUOTE(STB73_M43D_Breacher_4_1_##CAMO##_##PLATOON##);\
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"camo5", \
-			"decals", \
-			"collararmored", \
-			"wristdefaultl", \
-			"wristugps" \
-		}; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "camo5", \
-        "decals", \
-        "collararmored", \
-        "wristdefaultl", \
-        "wristugps" \
-      }; \
-    }; \
-  };\
-  class STB73_M43D_Breacher_4_1_##CAMO##_##PLATOON##_UGPS : STB73_M43D_Breacher_4_1_##CAMO##_##PLATOON## { \
-    scope=1; \
-    ace_arsenal_uniqueBase = QUOTE(STB73_M43D_Breacher_4_1_##CAMO##_##PLATOON##);\
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"camo5", \
-			"decals", \
-			"collararmored", \
-			"wristdefaultl", \
-			"wristtacpad" \
-		}; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "camo5", \
-        "decals", \
-        "collararmored", \
-        "wristdefaultl", \
-        "wristtacpad" \
-      }; \
-    }; \
-  };\
-  class STB73_M43D_Breacher_4_2_##CAMO##_##PLATOON## : STB73_M43D_Breacher_4_1_##CAMO##_##PLATOON## { \
-    class TCP_equipmentTypes: TCP_equipmentTypes \
-		{ \
-			baseEquipment=Q(STB73_M43D_Breacher_4_2_##CAMO##_##PLATOON##); \
-		}; \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"camo5", \
-			"decals", \
-			"collarflak", \
-			"wristugps", \
-			"wristtacpad" \
-		}; \
-    class XtdGearInfo { \
-      Model="STB73_ACE_M43D_Vest"; \
-      Billet=Q(##PLATOON##); \
-      Camo=Q(##CAMO##); \
-      Belt=Q(Belt); \
-      Collar=Q(Armored); \
-      Shoulders=Q(Breacher);\
-      Legs=Q(Shin);\
-      Arms=Q(Gauntlets);\
-    }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "camo5", \
-        "decals", \
-        "collarflak", \
-        "wristugps", \
-        "wristtacpad" \
-      }; \
-    }; \
-  }; \
-  class STB73_M43D_Breacher_4_2_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_Breacher_4_2_##CAMO##_##PLATOON## { \
-    scope=1; \
-    ace_arsenal_uniqueBase = QUOTE(STB73_M43D_Breacher_4_2_##CAMO##_##PLATOON##);\
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"camo5", \
-			"decals", \
-			"collarflak", \
-			"wristdefaultl", \
-			"wristugps" \
-		}; \
-    class ItemInfo: ItemInfo \
-    { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "camo5", \
-        "decals", \
-        "collarflak", \
-        "wristdefaultl", \
-        "wristugps" \
-      }; \
-    }; \
-  };\
-  class STB73_M43D_Breacher_4_2_##CAMO##_##PLATOON##_UGPS : STB73_M43D_Breacher_4_2_##CAMO##_##PLATOON## { \
-    scope=1; \
-    ace_arsenal_uniqueBase = QUOTE(STB73_M43D_Breacher_4_2_##CAMO##_##PLATOON##);\
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"camo5", \
-			"decals", \
-			"collarflak", \
-			"wristdefaultl", \
-			"wristtacpad" \
-		}; \
-    class ItemInfo: ItemInfo \
-    { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "camo5", \
-        "decals", \
-        "collarflak", \
-        "wristdefaultl", \
-        "wristtacpad" \
-      }; \
-    }; \
-  }; \
-  class STB73_M43D_Breacher_3_##CAMO##_##PLATOON## : STB73_M43D_Light_##CAMO##_##PLATOON## { \
-    displayName = Q([73] M43/D [Breacher] [##PLATOON##] [##CAMO##]); \
-    model="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_BREACHER_3.p3d"; \
     hiddenSelectionsTextures[]= \
     { \
       Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
       Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_Breacher_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_BREACHER_CO.paa)),\
       Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
       Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
       Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
       Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
     };\
-    hiddenSelections[]= \
+  };\
+  class STB73_M43D_BREACHER_4_##CAMO##_##PLATOON##_UGPS : STB73_M43D_BREACHER_4_Base_UGPS { \
+    displayName = Q([73] M43/D [BREACHER] [##PLATOON##] [##CAMO##]); \
+    ace_arsenal_uniqueBase = QUOTE(STB73_M43D_BREACHER_4_##CAMO##_##PLATOON##);\
+    class TCP_equipmentTypes: TCP_equipmentTypes \
 		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"camo5", \
-			"decals", \
-			"collararmored", \
-			"collarflak" \
+			baseEquipment=Q(STB73_M43D_BREACHER_4_##CAMO##_##PLATOON##); \
 		}; \
-    class XtdGearInfo { \
-      Model="STB73_ACE_M43D_Vest"; \
-      Billet=Q(##PLATOON##); \
-      Camo=Q(##CAMO##); \
-      Belt=Q(Belt); \
-      Collar=Q(None); \
-      Shoulders=Q(Breacher);\
-      Legs=Q(Shin);\
-      Arms=Q(None);\
-    }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelectionsTextures[]= \
-      { \
-        Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-        Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-        Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_Breacher_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
-      };\
-      hiddenSelections[]= \
-			{ \
-				"camo", \
-				"camo1", \
-				"camo2", \
-				"camo3", \
-				"camo4", \
-				"camo5", \
-				"decals", \
-				"collararmored", \
-				"collarflak" \
-			}; \
-      uniformModel="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_BREACHER_3.p3d"; \
-    }; \
-  }; \
-  class STB73_M43D_Breacher_3_1_##CAMO##_##PLATOON## : STB73_M43D_Breacher_3_##CAMO##_##PLATOON## { \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"camo5", \
-			"decals", \
-			"collararmored" \
-		}; \
-    class XtdGearInfo { \
-      Model="STB73_ACE_M43D_Vest"; \
-      Billet=Q(##PLATOON##); \
-      Camo=Q(##CAMO##); \
-      Belt=Q(Belt); \
-      Collar=Q(Flak); \
-      Shoulders=Q(Breacher);\
-      Legs=Q(Shin);\
-      Arms=Q(None);\
-    }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "camo5", \
-        "decals", \
-        "collararmored" \
-      }; \
-    }; \
-  }; \
-  class STB73_M43D_Breacher_3_2_##CAMO##_##PLATOON## : STB73_M43D_Breacher_3_##CAMO##_##PLATOON## { \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"camo5", \
-			"decals", \
-			"collarflak" \
-		}; \
-    class XtdGearInfo { \
-      Model="STB73_ACE_M43D_Vest"; \
-      Billet=Q(##PLATOON##); \
-      Camo=Q(##CAMO##); \
-      Belt=Q(Belt); \
-      Collar=Q(Armored); \
-      Shoulders=Q(Breacher);\
-      Legs=Q(Shin);\
-      Arms=Q(None);\
-    }; \
-    class ItemInfo: ItemInfo { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "camo5", \
-        "decals", \
-        "collarflak" \
-      }; \
-    }; \
-  }; \
-  class STB73_M43D_Breacher_2_##CAMO##_##PLATOON## : STB73_M43D_Breacher_3_##CAMO##_##PLATOON## { \
-    model="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_BREACHER_2.p3d"; \
-    class XtdGearInfo { \
-      Model="STB73_ACE_M43D_Vest"; \
-      Billet=Q(##PLATOON##); \
-      Camo=Q(##CAMO##); \
-      Belt=Q(Belt); \
-      Collar=Q(None); \
-      Shoulders=Q(Breacher);\
-      Legs=Q(Thigh);\
-      Arms=Q(None);\
-    }; \
-    class ItemInfo: ItemInfo { \
-      uniformModel="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_BREACHER_2.p3d"; \
-    }; \
-  }; \
-  class STB73_M43D_Breacher_2_1_##CAMO##_##PLATOON## : STB73_M43D_Breacher_3_1_##CAMO##_##PLATOON## { \
-    model="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_BREACHER_2.p3d"; \
-    class XtdGearInfo { \
-      Model="STB73_ACE_M43D_Vest"; \
-      Billet=Q(##PLATOON##); \
-      Camo=Q(##CAMO##); \
-      Belt=Q(Belt); \
-      Collar=Q(Flak); \
-      Shoulders=Q(Breacher);\
-      Legs=Q(Thigh);\
-      Arms=Q(None);\
-    }; \
-    class ItemInfo: ItemInfo { \
-      uniformModel="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_BREACHER_2.p3d"; \
-    }; \
-  }; \
-  class STB73_M43D_Breacher_2_2_##CAMO##_##PLATOON## : STB73_M43D_Breacher_3_2_##CAMO##_##PLATOON## { \
-    model="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_BREACHER_2.p3d"; \
-    class XtdGearInfo { \
-      Model="STB73_ACE_M43D_Vest"; \
-      Billet=Q(##PLATOON##); \
-      Camo=Q(##CAMO##); \
-      Belt=Q(Belt); \
-      Collar=Q(Armored); \
-      Shoulders=Q(Breacher);\
-      Legs=Q(Thigh);\
-      Arms=Q(None);\
-    }; \
-    class ItemInfo: ItemInfo { \
-      uniformModel="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_BREACHER_2.p3d"; \
-    }; \
-  }; \
-  class STB73_M43D_Breacher_1_##CAMO##_##PLATOON## : STB73_M43D_Breacher_2_##CAMO##_##PLATOON## { \
-    model="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_BREACHER_1.p3d"; \
     hiddenSelectionsTextures[]= \
     { \
       Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
       Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_Breacher_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_BREACHER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+  }; \
+  class STB73_M43D_BREACHER_4_1_##CAMO##_##PLATOON## : STB73_M43D_BREACHER_4_1_Base { \
+    displayName = Q([73] M43/D [BREACHER] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
+    class TCP_equipmentTypes: TCP_equipmentTypes \
+		{ \
+			baseEquipment=Q(STB73_M43D_BREACHER_4_1_##CAMO##_##PLATOON##); \
+		}; \
+    class XtdGearInfo { \
+      Model="STB73_ACE_M43D_Vest"; \
+      Billet=Q(##PLATOON##); \
+      Camo=Q(##CAMO##); \
+      Belt=Q(Belt); \
+      Collar=Q(Flak); \
+      Shoulders=Q(BREACHER);\
+      Legs=Q(Shin);\
+      Arms=Q(Gauntlets);\
+    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_BREACHER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+  }; \
+  class STB73_M43D_BREACHER_4_1_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_BREACHER_4_1_Base_TACPAD { \
+    displayName = Q([73] M43/D [BREACHER] [##PLATOON##] [##CAMO##]); \
+    ace_arsenal_uniqueBase = QUOTE(STB73_M43D_BREACHER_4_1_##CAMO##_##PLATOON##);\
+    class TCP_equipmentTypes: TCP_equipmentTypes \
+		{ \
+			baseEquipment=Q(STB73_M43D_BREACHER_4_1_##CAMO##_##PLATOON##); \
+		}; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_BREACHER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+  };\
+  class STB73_M43D_BREACHER_4_1_##CAMO##_##PLATOON##_UGPS : STB73_M43D_BREACHER_4_1_Base_TACPAD { \
+    displayName = Q([73] M43/D [BREACHER] [##PLATOON##] [##CAMO##]); \
+    ace_arsenal_uniqueBase = QUOTE(STB73_M43D_BREACHER_4_1_##CAMO##_##PLATOON##);\
+    class TCP_equipmentTypes: TCP_equipmentTypes \
+		{ \
+			baseEquipment=Q(STB73_M43D_BREACHER_4_1_##CAMO##_##PLATOON##); \
+		}; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_BREACHER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+  };\
+  class STB73_M43D_BREACHER_4_2_##CAMO##_##PLATOON## : STB73_M43D_BREACHER_4_2_Base { \
+    displayName = Q([73] M43/D [BREACHER] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
+    class TCP_equipmentTypes: TCP_equipmentTypes \
+		{ \
+			baseEquipment=Q(STB73_M43D_BREACHER_4_2_##CAMO##_##PLATOON##); \
+		}; \
+    class XtdGearInfo { \
+      Model="STB73_ACE_M43D_Vest"; \
+      Billet=Q(##PLATOON##); \
+      Camo=Q(##CAMO##); \
+      Belt=Q(Belt); \
+      Collar=Q(Armored); \
+      Shoulders=Q(BREACHER);\
+      Legs=Q(Shin);\
+      Arms=Q(Gauntlets);\
+    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_BREACHER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+  }; \
+  class STB73_M43D_BREACHER_4_2_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_BREACHER_4_2_Base_TACPAD { \
+    displayName = Q([73] M43/D [BREACHER] [##PLATOON##] [##CAMO##]); \
+    ace_arsenal_uniqueBase = QUOTE(STB73_M43D_BREACHER_4_2_##CAMO##_##PLATOON##);\
+    class TCP_equipmentTypes: TCP_equipmentTypes \
+		{ \
+			baseEquipment=Q(STB73_M43D_BREACHER_4_2_##CAMO##_##PLATOON##); \
+		}; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_BREACHER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+  };\
+  class STB73_M43D_BREACHER_4_2_##CAMO##_##PLATOON##_UGPS : STB73_M43D_BREACHER_4_2_Base_UGPS { \
+    displayName = Q([73] M43/D [BREACHER] [##PLATOON##] [##CAMO##]); \
+    ace_arsenal_uniqueBase = QUOTE(STB73_M43D_BREACHER_4_2_##CAMO##_##PLATOON##);\
+    class TCP_equipmentTypes: TCP_equipmentTypes \
+		{ \
+			baseEquipment=Q(STB73_M43D_BREACHER_4_2_##CAMO##_##PLATOON##); \
+		}; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_BREACHER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+  }; \
+  class STB73_M43D_BREACHER_3_##CAMO##_##PLATOON## : STB73_M43D_BREACHER_3_Base { \
+    displayName = Q([73] M43/D [BREACHER] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_BREACHER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+    class XtdGearInfo { \
+      Model="STB73_ACE_M43D_Vest"; \
+      Billet=Q(##PLATOON##); \
+      Camo=Q(##CAMO##); \
+      Belt=Q(Belt); \
+      Collar=Q(None); \
+      Shoulders=Q(BREACHER);\
+      Legs=Q(Shin);\
+      Arms=Q(None);\
+    }; \
+  }; \
+  class STB73_M43D_BREACHER_3_1_##CAMO##_##PLATOON## : STB73_M43D_BREACHER_3_1_Base { \
+    displayName = Q([73] M43/D [BREACHER] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
+    class XtdGearInfo { \
+      Model="STB73_ACE_M43D_Vest"; \
+      Billet=Q(##PLATOON##); \
+      Camo=Q(##CAMO##); \
+      Belt=Q(Belt); \
+      Collar=Q(Flak); \
+      Shoulders=Q(BREACHER);\
+      Legs=Q(Shin);\
+      Arms=Q(None);\
+    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_BREACHER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+  }; \
+  class STB73_M43D_BREACHER_3_2_##CAMO##_##PLATOON## : STB73_M43D_BREACHER_3_2_Base { \
+    scope=2; \
+    scopeArsenal=2; \
+    displayName = Q([73] M43/D [BREACHER] [##PLATOON##] [##CAMO##]); \
+    class XtdGearInfo { \
+      Model="STB73_ACE_M43D_Vest"; \
+      Billet=Q(##PLATOON##); \
+      Camo=Q(##CAMO##); \
+      Belt=Q(Belt); \
+      Collar=Q(Armored); \
+      Shoulders=Q(BREACHER);\
+      Legs=Q(Shin);\
+      Arms=Q(None);\
+    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_BREACHER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+  }; \
+  class STB73_M43D_BREACHER_2_##CAMO##_##PLATOON## : STB73_M43D_BREACHER_2_Base { \
+    displayName = Q([73] M43/D [BREACHER] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
+    class XtdGearInfo { \
+      Model="STB73_ACE_M43D_Vest"; \
+      Billet=Q(##PLATOON##); \
+      Camo=Q(##CAMO##); \
+      Belt=Q(Belt); \
+      Collar=Q(None); \
+      Shoulders=Q(BREACHER);\
+      Legs=Q(Thigh);\
+      Arms=Q(None);\
+    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_BREACHER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+  }; \
+  class STB73_M43D_BREACHER_2_1_##CAMO##_##PLATOON## : STB73_M43D_BREACHER_2_1_Base { \
+    displayName = Q([73] M43/D [BREACHER] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
+    class XtdGearInfo { \
+      Model="STB73_ACE_M43D_Vest"; \
+      Billet=Q(##PLATOON##); \
+      Camo=Q(##CAMO##); \
+      Belt=Q(Belt); \
+      Collar=Q(Flak); \
+      Shoulders=Q(BREACHER);\
+      Legs=Q(Thigh);\
+      Arms=Q(None);\
+    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_BREACHER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+  }; \
+  class STB73_M43D_BREACHER_2_2_##CAMO##_##PLATOON## : STB73_M43D_BREACHER_2_2_Base { \
+    displayName = Q([73] M43/D [BREACHER] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
+    class XtdGearInfo { \
+      Model="STB73_ACE_M43D_Vest"; \
+      Billet=Q(##PLATOON##); \
+      Camo=Q(##CAMO##); \
+      Belt=Q(Belt); \
+      Collar=Q(Armored); \
+      Shoulders=Q(BREACHER);\
+      Legs=Q(Thigh);\
+      Arms=Q(None);\
+    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_BREACHER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+  }; \
+  class STB73_M43D_BREACHER_1_##CAMO##_##PLATOON## : STB73_M43D_BREACHER_1_Base { \
+    displayName = Q([73] M43/D [BREACHER] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_BREACHER_CO.paa)),\
       Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
       Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
       Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
@@ -2883,30 +1823,20 @@ class HitpointsProtectionInfo {  \
       Camo=Q(##CAMO##); \
       Belt=Q(Belt); \
       Collar=Q(None); \
-      Shoulders=Q(Breacher);\
+      Shoulders=Q(BREACHER);\
       Legs=Q(None);\
       Arms=Q(None);\
     }; \
-    class ItemInfo: ItemInfo { \
-      uniformModel="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_BREACHER_1.p3d"; \
-      hiddenSelectionsTextures[]= \
-      { \
-        Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-        Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-        Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_Breacher_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
-      };\
-    }; \
   }; \
-  class STB73_M43D_Breacher_1_1_##CAMO##_##PLATOON## : STB73_M43D_Breacher_2_1_##CAMO##_##PLATOON## { \
-    model="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_BREACHER_1.p3d"; \
+  class STB73_M43D_BREACHER_1_1_##CAMO##_##PLATOON## : STB73_M43D_BREACHER_1_1_Base { \
+    displayName = Q([73] M43/D [BREACHER] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
     hiddenSelectionsTextures[]= \
     { \
       Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
       Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_Breacher_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_BREACHER_CO.paa)),\
       Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
       Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
       Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
@@ -2917,30 +1847,20 @@ class HitpointsProtectionInfo {  \
       Camo=Q(##CAMO##); \
       Belt=Q(Belt); \
       Collar=Q(Flak); \
-      Shoulders=Q(Breacher);\
+      Shoulders=Q(BREACHER);\
       Legs=Q(None);\
       Arms=Q(None);\
     }; \
-    class ItemInfo: ItemInfo { \
-      uniformModel="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_BREACHER_1.p3d"; \
-      hiddenSelectionsTextures[]= \
-      { \
-        Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-        Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-        Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_Breacher_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
-      };\
-    }; \
   }; \
-  class STB73_M43D_Breacher_1_2_##CAMO##_##PLATOON## : STB73_M43D_Breacher_2_2_##CAMO##_##PLATOON## { \
-    model="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_BREACHER_1.p3d"; \
+  class STB73_M43D_BREACHER_1_2_##CAMO##_##PLATOON## : STB73_M43D_BREACHER_1_2_Base { \
+    displayName = Q([73] M43/D [BREACHER] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
     hiddenSelectionsTextures[]= \
     { \
       Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
       Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_Breacher_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_BREACHER_CO.paa)),\
       Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
       Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
       Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
@@ -2951,669 +1871,367 @@ class HitpointsProtectionInfo {  \
       Camo=Q(##CAMO##); \
       Belt=Q(Belt); \
       Collar=Q(Armored); \
-      Shoulders=Q(Breacher);\
+      Shoulders=Q(BREACHER);\
       Legs=Q(None);\
       Arms=Q(None);\
-    }; \
-    class ItemInfo: ItemInfo { \
-      uniformModel="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_BREACHER_1.p3d"; \
-      hiddenSelectionsTextures[]= \
-      { \
-        Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-        Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-        Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_Breacher_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
-      };\
     }; \
   };
 
 #define NEW_VEST_M43D_SHARPSHOOTER(CAMO,PLATOON) \
-  class STB73_M43D_Sharpshooter_4_##CAMO##_##PLATOON## : STB73_M43D_Light_4_##CAMO##_##PLATOON## { \
-    displayName = Q([73] M43/D [Sharpshooter] [##PLATOON##] [##CAMO##]); \
+  class STB73_M43D_SHARPSHOOTER_4_##CAMO##_##PLATOON## : STB73_M43D_SHARPSHOOTER_4_Base { \
+    displayName = Q([73] M43/D [SHARPSHOOTER] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
     class TCP_equipmentTypes: TCP_equipmentTypes \
 		{ \
-			baseEquipment=Q(STB73_M43D_Sharpshooter_4_##CAMO##_##PLATOON##); \
-      class GPS \
-			{ \
-				class UGPS \
-				{ \
-					class compatibleItems \
-					{ \
-						TCP_UGPS=1; \
-					}; \
-				}; \
-				class TACPAD \
-				{ \
-					class compatibleItems \
-					{ \
-						TCP_TACPAD=1; \
-					}; \
-				}; \
-			}; \
+			baseEquipment=Q(STB73_M43D_SHARPSHOOTER_4_##CAMO##_##PLATOON##); \
 		}; \
-    model="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_SHARPSHOOTER_4.p3d"; \
     hiddenSelectionsTextures[]= \
     { \
       Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
       Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_Sharpshooter_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
       Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
       Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
       Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
       Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
     };\
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"camo5", \
-			"decals", \
-			"collararmored", \
-			"collarflak", \
-			"wristugps", \
-			"wristtacpad" \
-		}; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
       Camo=Q(##CAMO##); \
       Belt=Q(Belt); \
       Collar=Q(None); \
-      Shoulders=Q(Sharpshooter);\
+      Shoulders=Q(SHARPSHOOTER);\
       Legs=Q(Shin);\
       Arms=Q(Gauntlets);\
     }; \
-    class ItemInfo: ItemInfo \
-    { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "camo5", \
-        "decals", \
-        "collararmored", \
-        "collarflak", \
-        "wristugps", \
-        "wristtacpad" \
-      }; \
-      hiddenSelectionsTextures[]= \
-      { \
-        Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-        Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-        Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_Sharpshooter_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
-      };\
-      uniformModel="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_SHARPSHOOTER_4.p3d"; \
-    }; \
   }; \
-  class STB73_M43D_Sharpshooter_4_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_Sharpshooter_4_##CAMO##_##PLATOON## { \
-    scope=1; \
-    ace_arsenal_uniqueBase = QUOTE(STB73_M43D_Sharpshooter_4_##CAMO##_##PLATOON##);\
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"camo5", \
-			"decals", \
-			"collararmored", \
-			"collarflak", \
-			"wristdefaultl", \
-			"wristugps" \
-		}; \
-    class ItemInfo: ItemInfo \
-    { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "camo5", \
-        "decals", \
-        "collararmored", \
-        "collarflak", \
-        "wristdefaultl", \
-        "wristugps" \
-      }; \
-    }; \
-  };\
-  class STB73_M43D_Sharpshooter_4_##CAMO##_##PLATOON##_UGPS : STB73_M43D_Sharpshooter_4_##CAMO##_##PLATOON## { \
-    scope=1; \
-    ace_arsenal_uniqueBase = QUOTE(STB73_M43D_Sharpshooter_4_##CAMO##_##PLATOON##);\
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"camo5", \
-			"decals", \
-			"collararmored", \
-			"collarflak", \
-			"wristdefaultl", \
-			"wristtacpad" \
-		}; \
-    class ItemInfo: ItemInfo \
-    { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "camo5", \
-        "decals", \
-        "collararmored", \
-        "collarflak", \
-        "wristdefaultl", \
-        "wristtacpad" \
-      }; \
-    }; \
-  };\
-  class STB73_M43D_Sharpshooter_4_1_##CAMO##_##PLATOON## : STB73_M43D_Sharpshooter_4_##CAMO##_##PLATOON## { \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"camo5", \
-			"decals", \
-			"collararmored", \
-			"wristugps", \
-			"wristtacpad" \
-		}; \
+  class STB73_M43D_SHARPSHOOTER_4_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_SHARPSHOOTER_4_Base_TACPAD { \
+    displayName = Q([73] M43/D [SHARPSHOOTER] [##PLATOON##] [##CAMO##]); \
+    ace_arsenal_uniqueBase = QUOTE(STB73_M43D_SHARPSHOOTER_4_##CAMO##_##PLATOON##);\
     class TCP_equipmentTypes: TCP_equipmentTypes \
 		{ \
-			baseEquipment=Q(STB73_M43D_Sharpshooter_4_1_##CAMO##_##PLATOON##); \
+			baseEquipment=Q(STB73_M43D_SHARPSHOOTER_4_##CAMO##_##PLATOON##); \
 		}; \
-    class XtdGearInfo { \
-      Model="STB73_ACE_M43D_Vest"; \
-      Billet=Q(##PLATOON##); \
-      Camo=Q(##CAMO##); \
-      Belt=Q(Belt); \
-      Collar=Q(Flak); \
-      Shoulders=Q(Sharpshooter);\
-      Legs=Q(Shin);\
-      Arms=Q(Gauntlets);\
-    }; \
-    class ItemInfo: ItemInfo \
-    { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "camo5", \
-        "decals", \
-        "collararmored", \
-        "wristugps", \
-        "wristtacpad" \
-      }; \
-    }; \
-  }; \
-  class STB73_M43D_Sharpshooter_4_1_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_Sharpshooter_4_1_##CAMO##_##PLATOON## { \
-    scope=1; \
-    ace_arsenal_uniqueBase = QUOTE(STB73_M43D_Sharpshooter_4_1_##CAMO##_##PLATOON##);\
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"camo5", \
-			"decals", \
-			"collararmored", \
-			"wristdefaultl", \
-			"wristugps" \
-		}; \
-    class ItemInfo: ItemInfo \
-    { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "camo5", \
-        "decals", \
-        "collararmored", \
-        "wristdefaultl", \
-        "wristugps" \
-      }; \
-    }; \
-  };\
-  class STB73_M43D_Sharpshooter_4_1_##CAMO##_##PLATOON##_UGPS : STB73_M43D_Sharpshooter_4_1_##CAMO##_##PLATOON## { \
-    scope=1; \
-    ace_arsenal_uniqueBase = QUOTE(STB73_M43D_Sharpshooter_4_1_##CAMO##_##PLATOON##);\
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"camo5", \
-			"decals", \
-			"collararmored", \
-			"wristdefaultl", \
-			"wristtacpad" \
-		}; \
-    class ItemInfo: ItemInfo \
-    { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "camo5", \
-        "decals", \
-        "collararmored", \
-        "wristdefaultl", \
-        "wristtacpad" \
-      }; \
-    }; \
-  };\
-  class STB73_M43D_Sharpshooter_4_2_##CAMO##_##PLATOON## : STB73_M43D_Sharpshooter_4_##CAMO##_##PLATOON## { \
-    class TCP_equipmentTypes: TCP_equipmentTypes \
-		{ \
-			baseEquipment=Q(STB73_M43D_Sharpshooter_4_2_##CAMO##_##PLATOON##); \
-		}; \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"camo5", \
-			"decals", \
-			"collarflak", \
-			"wristugps", \
-			"wristtacpad" \
-		}; \
-    class XtdGearInfo { \
-      Model="STB73_ACE_M43D_Vest"; \
-      Billet=Q(##PLATOON##); \
-      Camo=Q(##CAMO##); \
-      Belt=Q(Belt); \
-      Collar=Q(Armored); \
-      Shoulders=Q(Sharpshooter);\
-      Legs=Q(Shin);\
-      Arms=Q(Gauntlets);\
-    }; \
-    class ItemInfo: ItemInfo \
-    { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "camo5", \
-        "decals", \
-        "collarflak", \
-        "wristugps", \
-        "wristtacpad" \
-      }; \
-    }; \
-  }; \
-  class STB73_M43D_Sharpshooter_4_2_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_Sharpshooter_4_2_##CAMO##_##PLATOON## { \
-    scope=1; \
-    ace_arsenal_uniqueBase = QUOTE(STB73_M43D_Sharpshooter_4_2_##CAMO##_##PLATOON##);\
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"camo5", \
-			"decals", \
-			"collarflak", \
-			"wristdefaultl", \
-			"wristugps" \
-		}; \
-    class XtdGearInfo { \
-      Model="STB73_ACE_M43D_Vest"; \
-      Billet=Q(##PLATOON##); \
-      Camo=Q(##CAMO##); \
-      Variant=Q(Sharpshooter);\
-      Collar=Q(Armored); \
-    }; \
-    class ItemInfo: ItemInfo \
-    { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "camo5", \
-        "decals", \
-        "collarflak", \
-        "wristdefaultl", \
-        "wristugps" \
-      }; \
-    }; \
-  };\
-  class STB73_M43D_Sharpshooter_4_2_##CAMO##_##PLATOON##_UGPS : STB73_M43D_Sharpshooter_4_2_##CAMO##_##PLATOON## { \
-    scope=1; \
-    ace_arsenal_uniqueBase = QUOTE(STB73_M43D_Sharpshooter_4_2_##CAMO##_##PLATOON##);\
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"camo5", \
-			"decals", \
-			"collarflak", \
-			"wristdefaultl", \
-			"wristtacpad" \
-		}; \
-    class ItemInfo: ItemInfo \
-    { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "camo5", \
-        "decals", \
-        "collarflak", \
-        "wristdefaultl", \
-        "wristtacpad" \
-      }; \
-    }; \
-  };\
-  class STB73_M43D_Sharpshooter_3_##CAMO##_##PLATOON## : STB73_M43D_Light_##CAMO##_##PLATOON## { \
-    displayName = Q([73] M43/D [Sharpshooter] [##PLATOON##] [##CAMO##]); \
-    model="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_SHARPSHOOTER_3.p3d"; \
     hiddenSelectionsTextures[]= \
     { \
       Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
       Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_Sharpshooter_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
       Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
       Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
       Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
       Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
     };\
-    hiddenSelections[]= \
+  };\
+  class STB73_M43D_SHARPSHOOTER_4_##CAMO##_##PLATOON##_UGPS : STB73_M43D_SHARPSHOOTER_4_Base_UGPS { \
+    displayName = Q([73] M43/D [SHARPSHOOTER] [##PLATOON##] [##CAMO##]); \
+    ace_arsenal_uniqueBase = QUOTE(STB73_M43D_SHARPSHOOTER_4_##CAMO##_##PLATOON##);\
+    class TCP_equipmentTypes: TCP_equipmentTypes \
 		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"camo5", \
-			"decals", \
-			"collararmored", \
-			"collarflak" \
+			baseEquipment=Q(STB73_M43D_SHARPSHOOTER_4_##CAMO##_##PLATOON##); \
 		}; \
-    class XtdGearInfo { \
-      Model="STB73_ACE_M43D_Vest"; \
-      Billet=Q(##PLATOON##); \
-      Camo=Q(##CAMO##); \
-      Belt=Q(Belt); \
-      Collar=Q(None); \
-      Shoulders=Q(Sharpshooter);\
-      Legs=Q(Shin);\
-      Arms=Q(None);\
-    }; \
-    class ItemInfo: ItemInfo \
-    { \
-      hiddenSelectionsTextures[]= \
-      { \
-        Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-        Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-        Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_Sharpshooter_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
-      };\
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "camo5", \
-        "decals", \
-        "collararmored", \
-        "collarflak" \
-      }; \
-      uniformModel="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_SHARPSHOOTER_3.p3d"; \
-    }; \
-  }; \
-  class STB73_M43D_Sharpshooter_3_1_##CAMO##_##PLATOON## : STB73_M43D_Sharpshooter_3_##CAMO##_##PLATOON## { \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"camo5", \
-			"decals", \
-			"collararmored", \
-		}; \
-    class XtdGearInfo { \
-      Model="STB73_ACE_M43D_Vest"; \
-      Billet=Q(##PLATOON##); \
-      Camo=Q(##CAMO##); \
-      Belt=Q(Belt); \
-      Collar=Q(Flak); \
-      Shoulders=Q(Sharpshooter);\
-      Legs=Q(Shin);\
-      Arms=Q(None);\
-    }; \
-    class ItemInfo: ItemInfo \
-    { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "camo5", \
-        "decals", \
-        "collararmored", \
-      }; \
-    }; \
-  }; \
-  class STB73_M43D_Sharpshooter_3_2_##CAMO##_##PLATOON## : STB73_M43D_Sharpshooter_3_##CAMO##_##PLATOON## { \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"camo5", \
-			"decals", \
-			"collarflak" \
-		}; \
-    class XtdGearInfo { \
-      Model="STB73_ACE_M43D_Vest"; \
-      Billet=Q(##PLATOON##); \
-      Camo=Q(##CAMO##); \
-      Belt=Q(Belt); \
-      Collar=Q(Armored); \
-      Shoulders=Q(Sharpshooter);\
-      Legs=Q(Shin);\
-      Arms=Q(None);\
-    }; \
-    class ItemInfo: ItemInfo \
-    { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "camo5", \
-        "decals", \
-        "collarflak" \
-      }; \
-    }; \
-  }; \
-  class STB73_M43D_Sharpshooter_2_##CAMO##_##PLATOON## : STB73_M43D_Sharpshooter_3_##CAMO##_##PLATOON## { \
-    model="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_SHARPSHOOTER_2.p3d"; \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"camo5", \
-			"decals", \
-			"collararmored", \
-			"collarflak" \
-		}; \
-    class XtdGearInfo { \
-      Model="STB73_ACE_M43D_Vest"; \
-      Billet=Q(##PLATOON##); \
-      Camo=Q(##CAMO##); \
-      Belt=Q(Belt); \
-      Collar=Q(None); \
-      Shoulders=Q(Sharpshooter);\
-      Legs=Q(Thigh);\
-      Arms=Q(None);\
-    }; \
-    class ItemInfo: ItemInfo \
-    { \
-      uniformModel="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_SHARPSHOOTER_2.p3d"; \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "camo5", \
-        "decals", \
-        "collararmored", \
-        "collarflak" \
-      }; \
-    }; \
-  }; \
-  class STB73_M43D_Sharpshooter_2_1_##CAMO##_##PLATOON## : STB73_M43D_Sharpshooter_2_##CAMO##_##PLATOON## { \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"camo5", \
-			"decals", \
-			"collararmored" \
-		}; \
-    class XtdGearInfo { \
-      Model="STB73_ACE_M43D_Vest"; \
-      Billet=Q(##PLATOON##); \
-      Camo=Q(##CAMO##); \
-      Belt=Q(Belt); \
-      Collar=Q(Flak); \
-      Shoulders=Q(Sharpshooter);\
-      Legs=Q(Thigh);\
-      Arms=Q(None);\
-    }; \
-    class ItemInfo: ItemInfo \
-    { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "camo5", \
-        "decals", \
-        "collararmored" \
-      }; \
-    }; \
-  }; \
-  class STB73_M43D_Sharpshooter_2_2_##CAMO##_##PLATOON## : STB73_M43D_Sharpshooter_2_##CAMO##_##PLATOON## { \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"camo5", \
-			"decals", \
-			"collarflak" \
-		}; \
-    class XtdGearInfo { \
-      Model="STB73_ACE_M43D_Vest"; \
-      Billet=Q(##PLATOON##); \
-      Camo=Q(##CAMO##); \
-      Belt=Q(Belt); \
-      Collar=Q(Armored); \
-      Shoulders=Q(Sharpshooter);\
-      Legs=Q(Thigh);\
-      Arms=Q(None);\
-    }; \
-    class ItemInfo: ItemInfo \
-    { \
-      hiddenSelections[]= \
-      { \
-        "camo", \
-        "camo1", \
-        "camo2", \
-        "camo3", \
-        "camo4", \
-        "camo5", \
-        "decals", \
-        "collarflak" \
-      }; \
-    }; \
-  }; \
-  class STB73_M43D_Sharpshooter_1_##CAMO##_##PLATOON## : STB73_M43D_Sharpshooter_2_##CAMO##_##PLATOON## { \
-    model="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_SHARPSHOOTER_1.p3d"; \
     hiddenSelectionsTextures[]= \
     { \
       Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
       Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_Sharpshooter_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+  };\
+  class STB73_M43D_SHARPSHOOTER_4_1_##CAMO##_##PLATOON## : STB73_M43D_SHARPSHOOTER_4_1_Base { \
+    displayName = Q([73] M43/D [SHARPSHOOTER] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
+    class TCP_equipmentTypes: TCP_equipmentTypes \
+		{ \
+			baseEquipment=Q(STB73_M43D_SHARPSHOOTER_4_1_##CAMO##_##PLATOON##); \
+		}; \
+    class XtdGearInfo { \
+      Model="STB73_ACE_M43D_Vest"; \
+      Billet=Q(##PLATOON##); \
+      Camo=Q(##CAMO##); \
+      Belt=Q(Belt); \
+      Collar=Q(Flak); \
+      Shoulders=Q(SHARPSHOOTER);\
+      Legs=Q(Shin);\
+      Arms=Q(Gauntlets);\
+    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+  }; \
+  class STB73_M43D_SHARPSHOOTER_4_1_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_SHARPSHOOTER_4_1_Base_TACPAD { \
+    displayName = Q([73] M43/D [SHARPSHOOTER] [##PLATOON##] [##CAMO##]); \
+    ace_arsenal_uniqueBase = QUOTE(STB73_M43D_SHARPSHOOTER_4_1_##CAMO##_##PLATOON##);\
+    class TCP_equipmentTypes: TCP_equipmentTypes \
+		{ \
+			baseEquipment=Q(STB73_M43D_SHARPSHOOTER_4_1_##CAMO##_##PLATOON##); \
+		}; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+  };\
+  class STB73_M43D_SHARPSHOOTER_4_1_##CAMO##_##PLATOON##_UGPS : STB73_M43D_SHARPSHOOTER_4_1_Base_UGPS { \
+    displayName = Q([73] M43/D [SHARPSHOOTER] [##PLATOON##] [##CAMO##]); \
+    ace_arsenal_uniqueBase = QUOTE(STB73_M43D_SHARPSHOOTER_4_1_##CAMO##_##PLATOON##);\
+    class TCP_equipmentTypes: TCP_equipmentTypes \
+		{ \
+			baseEquipment=Q(STB73_M43D_SHARPSHOOTER_4_1_##CAMO##_##PLATOON##); \
+		}; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+  };\
+  class STB73_M43D_SHARPSHOOTER_4_2_##CAMO##_##PLATOON## : STB73_M43D_SHARPSHOOTER_4_2_Base { \
+    displayName = Q([73] M43/D [SHARPSHOOTER] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
+    class TCP_equipmentTypes: TCP_equipmentTypes \
+		{ \
+			baseEquipment=Q(STB73_M43D_SHARPSHOOTER_4_2_##CAMO##_##PLATOON##); \
+		}; \
+    class XtdGearInfo { \
+      Model="STB73_ACE_M43D_Vest"; \
+      Billet=Q(##PLATOON##); \
+      Camo=Q(##CAMO##); \
+      Belt=Q(Belt); \
+      Collar=Q(Armored); \
+      Shoulders=Q(SHARPSHOOTER);\
+      Legs=Q(Shin);\
+      Arms=Q(Gauntlets);\
+    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+  }; \
+  class STB73_M43D_SHARPSHOOTER_4_2_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_SHARPSHOOTER_4_2_Base_TACPAD { \
+    displayName = Q([73] M43/D [SHARPSHOOTER] [##PLATOON##] [##CAMO##]); \
+    ace_arsenal_uniqueBase = QUOTE(STB73_M43D_SHARPSHOOTER_4_2_##CAMO##_##PLATOON##);\
+    class TCP_equipmentTypes: TCP_equipmentTypes \
+		{ \
+			baseEquipment=Q(STB73_M43D_SHARPSHOOTER_4_2_##CAMO##_##PLATOON##); \
+		}; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+  };\
+  class STB73_M43D_SHARPSHOOTER_4_2_##CAMO##_##PLATOON##_UGPS : STB73_M43D_SHARPSHOOTER_4_2_Base_UGPS { \
+    displayName = Q([73] M43/D [SHARPSHOOTER] [##PLATOON##] [##CAMO##]); \
+    ace_arsenal_uniqueBase = QUOTE(STB73_M43D_SHARPSHOOTER_4_2_##CAMO##_##PLATOON##);\
+    class TCP_equipmentTypes: TCP_equipmentTypes \
+		{ \
+			baseEquipment=Q(STB73_M43D_SHARPSHOOTER_4_2_##CAMO##_##PLATOON##); \
+		}; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+  };\
+  class STB73_M43D_SHARPSHOOTER_3_##CAMO##_##PLATOON## : STB73_M43D_SHARPSHOOTER_3_Base { \
+    displayName = Q([73] M43/D [SHARPSHOOTER] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+    class XtdGearInfo { \
+      Model="STB73_ACE_M43D_Vest"; \
+      Billet=Q(##PLATOON##); \
+      Camo=Q(##CAMO##); \
+      Belt=Q(Belt); \
+      Collar=Q(None); \
+      Shoulders=Q(SHARPSHOOTER);\
+      Legs=Q(Shin);\
+      Arms=Q(None);\
+    }; \
+  }; \
+  class STB73_M43D_SHARPSHOOTER_3_1_##CAMO##_##PLATOON## : STB73_M43D_SHARPSHOOTER_3_1_Base { \
+    displayName = Q([73] M43/D [SHARPSHOOTER] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
+    class XtdGearInfo { \
+      Model="STB73_ACE_M43D_Vest"; \
+      Billet=Q(##PLATOON##); \
+      Camo=Q(##CAMO##); \
+      Belt=Q(Belt); \
+      Collar=Q(Flak); \
+      Shoulders=Q(SHARPSHOOTER);\
+      Legs=Q(Shin);\
+      Arms=Q(None);\
+    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+  }; \
+  class STB73_M43D_SHARPSHOOTER_3_2_##CAMO##_##PLATOON## : STB73_M43D_SHARPSHOOTER_3_2_Base { \
+    displayName = Q([73] M43/D [SHARPSHOOTER] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
+    class XtdGearInfo { \
+      Model="STB73_ACE_M43D_Vest"; \
+      Billet=Q(##PLATOON##); \
+      Camo=Q(##CAMO##); \
+      Belt=Q(Belt); \
+      Collar=Q(Armored); \
+      Shoulders=Q(SHARPSHOOTER);\
+      Legs=Q(Shin);\
+      Arms=Q(None);\
+    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+  }; \
+  class STB73_M43D_SHARPSHOOTER_2_##CAMO##_##PLATOON## : STB73_M43D_SHARPSHOOTER_2_Base { \
+    displayName = Q([73] M43/D [SHARPSHOOTER] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
+    class XtdGearInfo { \
+      Model="STB73_ACE_M43D_Vest"; \
+      Billet=Q(##PLATOON##); \
+      Camo=Q(##CAMO##); \
+      Belt=Q(Belt); \
+      Collar=Q(None); \
+      Shoulders=Q(SHARPSHOOTER);\
+      Legs=Q(Thigh);\
+      Arms=Q(None);\
+    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+  }; \
+  class STB73_M43D_SHARPSHOOTER_2_1_##CAMO##_##PLATOON## : STB73_M43D_SHARPSHOOTER_2_1_Base { \
+    displayName = Q([73] M43/D [SHARPSHOOTER] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
+    class XtdGearInfo { \
+      Model="STB73_ACE_M43D_Vest"; \
+      Billet=Q(##PLATOON##); \
+      Camo=Q(##CAMO##); \
+      Belt=Q(Belt); \
+      Collar=Q(Flak); \
+      Shoulders=Q(SHARPSHOOTER);\
+      Legs=Q(Thigh);\
+      Arms=Q(None);\
+    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+  }; \
+  class STB73_M43D_SHARPSHOOTER_2_2_##CAMO##_##PLATOON## : STB73_M43D_SHARPSHOOTER_2_2_Base { \
+    displayName = Q([73] M43/D [SHARPSHOOTER] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
+    class XtdGearInfo { \
+      Model="STB73_ACE_M43D_Vest"; \
+      Billet=Q(##PLATOON##); \
+      Camo=Q(##CAMO##); \
+      Belt=Q(Belt); \
+      Collar=Q(Armored); \
+      Shoulders=Q(SHARPSHOOTER);\
+      Legs=Q(Thigh);\
+      Arms=Q(None);\
+    }; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
+  }; \
+  class STB73_M43D_SHARPSHOOTER_1_##CAMO##_##PLATOON## : STB73_M43D_SHARPSHOOTER_1_Base { \
+    displayName = Q([73] M43/D [SHARPSHOOTER] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
+    hiddenSelectionsTextures[]= \
+    { \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
       Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
       Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
       Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
@@ -3624,91 +2242,58 @@ class HitpointsProtectionInfo {  \
       Camo=Q(##CAMO##); \
       Belt=Q(Belt); \
       Collar=Q(None); \
-      Shoulders=Q(Sharpshooter);\
+      Shoulders=Q(SHARPSHOOTER);\
       Legs=Q(None);\
       Arms=Q(None);\
     }; \
-    class ItemInfo: ItemInfo \
-    { \
-      uniformModel="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_SHARPSHOOTER_1.p3d"; \
-      hiddenSelectionsTextures[]= \
-      { \
-        Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-        Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-        Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_Sharpshooter_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
-      };\
-    }; \
   }; \
-  class STB73_M43D_Sharpshooter_1_1_##CAMO##_##PLATOON## : STB73_M43D_Sharpshooter_1_##CAMO##_##PLATOON## { \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"decals", \
-			"collararmored" \
-		}; \
+  class STB73_M43D_SHARPSHOOTER_1_1_##CAMO##_##PLATOON## : STB73_M43D_SHARPSHOOTER_1_1_Base { \
+    displayName = Q([73] M43/D [SHARPSHOOTER] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
       Camo=Q(##CAMO##); \
       Belt=Q(Belt); \
       Collar=Q(Flak); \
-      Shoulders=Q(Sharpshooter);\
+      Shoulders=Q(SHARPSHOOTER);\
       Legs=Q(None);\
       Arms=Q(None);\
     }; \
-    class ItemInfo: ItemInfo \
+    hiddenSelectionsTextures[]= \
     { \
-      hiddenSelectionsTextures[]= \
-      { \
-        Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-        Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-        Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_Sharpshooter_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
-      };\
-    }; \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
   }; \
-  class STB73_M43D_Sharpshooter_1_2_##CAMO##_##PLATOON## : STB73_M43D_Sharpshooter_1_##CAMO##_##PLATOON## { \
-    hiddenSelections[]= \
-		{ \
-			"camo", \
-			"camo1", \
-			"camo2", \
-			"camo3", \
-			"camo4", \
-			"decals", \
-			"collarflak" \
-		}; \
+  class STB73_M43D_SHARPSHOOTER_1_2_##CAMO##_##PLATOON## : STB73_M43D_SHARPSHOOTER_1_2_Base { \
+    displayName = Q([73] M43/D [SHARPSHOOTER] [##PLATOON##] [##CAMO##]); \
+    scope=2; \
+    scopeArsenal=2; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
       Camo=Q(##CAMO##); \
       Belt=Q(Belt); \
       Collar=Q(Armored); \
-      Shoulders=Q(Sharpshooter);\
+      Shoulders=Q(SHARPSHOOTER);\
       Legs=Q(None);\
       Arms=Q(None);\
     }; \
-    class ItemInfo: ItemInfo \
+    hiddenSelectionsTextures[]= \
     { \
-      hiddenSelectionsTextures[]= \
-      { \
-        Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-        Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-        Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_Sharpshooter_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
-      };\
-    }; \
+      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+    };\
   };
 
 
@@ -4301,10 +2886,10 @@ class HitpointsProtectionInfo {  \
 
 #define VEH_CLASS_KNEEPADS_FULL(CAMO,SHIRT)                          \
   class STB73_B_##SHIRT##_Full_Kneepads_##CAMO## : TCP_B_CBUU_##SHIRT##_Full_Kneepads_Base {\
-      author=AUTHOR;\
-      scope= 1;\
-      scopeArsenal= 1;\
-      scopeCurator = 1;\
+    author=AUTHOR;\
+    scope= 1;\
+    scopeArsenal= 1;\
+    scopeCurator = 1;\
     CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
@@ -4360,9 +2945,24 @@ class HitpointsProtectionInfo {  \
       allowedSlots[]={"701","801","901"};\
       armor=20;\
     };\
-    class TCP_equipmentTypes: TCP_equipmentTypes \
+    class TCP_equipmentTypes \
 		{ \
 			baseEquipment=QUOTE(STB73_U_B_##SHIRT##_Full_##CAMO##); \
+      class Vest \
+      { \
+          class SlimSleeve \
+          { \
+              indirectCompatibility = 2; \
+              class compatibleItems \
+              { \
+                  STB73_M43D_Light_4_Base = 1; \
+                  STB73_M43D_Pads_4_Base = 1; \
+                  STB73_M43D_ODST_4_Base = 1; \
+                  STB73_M43D_BREACHER_4_Base = 1; \
+                  STB73_M43D_SHARPSHOOTER_4_Base = 1; \
+              }; \
+          }; \
+      }; \
 		}; \
     hiddenSelectionsTextures[] = {\
       QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa)\
@@ -4374,7 +2974,7 @@ class HitpointsProtectionInfo {  \
     ace_arsenal_uniqueBase = QUOTE(STB73_U_B_##SHIRT##_Full_##CAMO##);\
     ACE_GForceCoef=0.4;\
     CBRN_protectionLevel="4"; \
-    class TCP_equipmentTypes: TCP_equipmentTypes \
+    class TCP_equipmentTypes \
 		{ \
 			baseEquipment=QUOTE(STB73_U_B_##SHIRT##_Full_##CAMO##); \
 		}; \
@@ -4425,9 +3025,24 @@ class HitpointsProtectionInfo {  \
       allowedSlots[]={"701","801","901"};\
       armor=20;\
     };\
-    class TCP_equipmentTypes: TCP_equipmentTypes \
+    class TCP_equipmentTypes \
 		{ \
 			baseEquipment=QUOTE(STB73_U_B_##SHIRT##_Full_Kneepads_##CAMO##); \
+      class Vest \
+      { \
+          class SlimSleeve \
+          { \
+              indirectCompatibility = 2; \
+              class compatibleItems \
+              { \
+                  STB73_M43D_Light_4_Base = 1; \
+                  STB73_M43D_Pads_4_Base = 1; \
+                  STB73_M43D_ODST_4_Base = 1; \
+                  STB73_M43D_BREACHER_4_Base = 1; \
+                  STB73_M43D_SHARPSHOOTER_4_Base = 1; \
+              }; \
+          }; \
+      }; \
 		}; \
     hiddenSelectionsTextures[] = {\
       QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa)\
@@ -4439,7 +3054,7 @@ class HitpointsProtectionInfo {  \
     ace_arsenal_uniqueBase = QUOTE(STB73_U_B_##SHIRT##_Full_Kneepads_##CAMO##);\
     ACE_GForceCoef=0.4;\
     CBRN_protectionLevel="4"; \
-    class TCP_equipmentTypes: TCP_equipmentTypes \
+    class TCP_equipmentTypes \
 		{ \
 			baseEquipment=QUOTE(STB73_U_B_##SHIRT##_Full_Kneepads_##CAMO##); \
 		}; \
@@ -4574,9 +3189,24 @@ class HitpointsProtectionInfo {  \
     hiddenSelectionsTextures[] = {\
       QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa)\
     };\
-    class TCP_equipmentTypes: TCP_equipmentTypes \
+    class TCP_equipmentTypes \
 		{ \
 			baseEquipment=QUOTE(STB73_U_B_##SHIRT##_Full_Bloused_##CAMO##); \
+      class Vest \
+      { \
+          class SlimSleeve \
+          { \
+              indirectCompatibility = 2; \
+              class compatibleItems \
+              { \
+                  STB73_M43D_Light_4_Base = 1; \
+                  STB73_M43D_Pads_4_Base = 1; \
+                  STB73_M43D_ODST_4_Base = 1; \
+                  STB73_M43D_BREACHER_4_Base = 1; \
+                  STB73_M43D_SHARPSHOOTER_4_Base = 1; \
+              }; \
+          }; \
+      }; \
 		}; \
   }; \
   class STB73_U_B_##SHIRT##_Full_Bloused_##CAMO##_SlimSleeve : TCP_U_B_CBUU_##SHIRT##_SlimSleeve_Bloused_Base{\
@@ -4596,7 +3226,7 @@ class HitpointsProtectionInfo {  \
     hiddenSelectionsTextures[] = {\
       QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa)\
     };\
-    class TCP_equipmentTypes: TCP_equipmentTypes \
+    class TCP_equipmentTypes \
 		{ \
 			baseEquipment=QUOTE(STB73_U_B_##SHIRT##_Full_Bloused_##CAMO##); \
 		}; \
@@ -4640,9 +3270,24 @@ class HitpointsProtectionInfo {  \
     hiddenSelectionsTextures[] = {\
       QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa)\
     };\
-    class TCP_equipmentTypes: TCP_equipmentTypes \
+    class TCP_equipmentTypes \
 		{ \
 			baseEquipment=QUOTE(STB73_U_B_##SHIRT##_Full_Bloused_Kneepads_##CAMO##); \
+      class Vest \
+      { \
+          class SlimSleeve \
+          { \
+              indirectCompatibility = 2; \
+              class compatibleItems \
+              { \
+                  STB73_M43D_Light_4_Base = 1; \
+                  STB73_M43D_Pads_4_Base = 1; \
+                  STB73_M43D_ODST_4_Base = 1; \
+                  STB73_M43D_BREACHER_4_Base = 1; \
+                  STB73_M43D_SHARPSHOOTER_4_Base = 1; \
+              }; \
+          }; \
+      }; \
 		}; \
   }; \
   class STB73_U_B_##SHIRT##_Full_Bloused_Kneepads_##CAMO##_SlimSleeve : TCP_U_B_CBUU_##SHIRT##_SlimSleeve_Bloused_Kneepads_Base{\
@@ -4662,7 +3307,7 @@ class HitpointsProtectionInfo {  \
     hiddenSelectionsTextures[] = {\
       QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa)\
     };\
-    class TCP_equipmentTypes: TCP_equipmentTypes \
+    class TCP_equipmentTypes \
 		{ \
 			baseEquipment=QUOTE(STB73_U_B_##SHIRT##_Full_Bloused_Kneepads_##CAMO##); \
 		}; \
@@ -4792,9 +3437,24 @@ class HitpointsProtectionInfo {  \
     hiddenSelectionsTextures[] = {\
       QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa)\
     };\
-    class TCP_equipmentTypes: TCP_equipmentTypes \
+    class TCP_equipmentTypes \
 		{ \
 			baseEquipment=QUOTE(STB73_U_B_##SHIRT##_Full_Gloves_##CAMO##); \
+      class Vest \
+      { \
+          class SlimSleeve \
+          { \
+              indirectCompatibility = 2; \
+              class compatibleItems \
+              { \
+                  STB73_M43D_Light_4_Base = 1; \
+                  STB73_M43D_Pads_4_Base = 1; \
+                  STB73_M43D_ODST_4_Base = 1; \
+                  STB73_M43D_BREACHER_4_Base = 1; \
+                  STB73_M43D_SHARPSHOOTER_4_Base = 1; \
+              }; \
+          }; \
+      }; \
 		}; \
   };\
   class STB73_U_B_##SHIRT##_Full_Gloves_##CAMO##_SlimSleeve : TCP_U_B_CBUU_##SHIRT##_SlimSleeve_Gloves_Base{\
@@ -4814,7 +3474,7 @@ class HitpointsProtectionInfo {  \
     hiddenSelectionsTextures[] = {\
       QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa)\
     };\
-    class TCP_equipmentTypes: TCP_equipmentTypes \
+    class TCP_equipmentTypes \
 		{ \
 			baseEquipment=QUOTE(STB73_U_B_##SHIRT##_Full_Gloves_##CAMO##); \
 		}; \
@@ -4858,9 +3518,24 @@ class HitpointsProtectionInfo {  \
     hiddenSelectionsTextures[] = {\
       QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa)\
     };\
-    class TCP_equipmentTypes: TCP_equipmentTypes \
+    class TCP_equipmentTypes \
 		{ \
 			baseEquipment=QUOTE(STB73_U_B_##SHIRT##_Full_Gloves_Kneepads_##CAMO##); \
+      class Vest \
+      { \
+          class SlimSleeve \
+          { \
+              indirectCompatibility = 2; \
+              class compatibleItems \
+              { \
+                  STB73_M43D_Light_4_Base = 1; \
+                  STB73_M43D_Pads_4_Base = 1; \
+                  STB73_M43D_ODST_4_Base = 1; \
+                  STB73_M43D_BREACHER_4_Base = 1; \
+                  STB73_M43D_SHARPSHOOTER_4_Base = 1; \
+              }; \
+          }; \
+      }; \
 		}; \
   };\
   class STB73_U_B_##SHIRT##_Full_Gloves_Kneepads_##CAMO##_SlimSleeve : TCP_U_B_CBUU_##SHIRT##_SlimSleeve_Gloves_Kneepads_Base{\
@@ -4880,7 +3555,7 @@ class HitpointsProtectionInfo {  \
     hiddenSelectionsTextures[] = {\
       QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa)\
     };\
-    class TCP_equipmentTypes: TCP_equipmentTypes \
+    class TCP_equipmentTypes \
 		{ \
 			baseEquipment=QUOTE(STB73_U_B_##SHIRT##_Full_Gloves_Kneepads_##CAMO##); \
 		}; \
@@ -5011,9 +3686,24 @@ class HitpointsProtectionInfo {  \
     hiddenSelectionsTextures[] = {\
       QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa)\
     };\
-    class TCP_equipmentTypes: TCP_equipmentTypes \
+    class TCP_equipmentTypes \
 		{ \
 			baseEquipment=QUOTE(STB73_U_B_##SHIRT##_Full_Gloves_Bloused_##CAMO##); \
+      class Vest \
+      { \
+          class SlimSleeve \
+          { \
+              indirectCompatibility = 2; \
+              class compatibleItems \
+              { \
+                  STB73_M43D_Light_4_Base = 1; \
+                  STB73_M43D_Pads_4_Base = 1; \
+                  STB73_M43D_ODST_4_Base = 1; \
+                  STB73_M43D_BREACHER_4_Base = 1; \
+                  STB73_M43D_SHARPSHOOTER_4_Base = 1; \
+              }; \
+          }; \
+      }; \
 		}; \
   }; \
   class STB73_U_B_##SHIRT##_Full_Gloves_Bloused_##CAMO##_SlimSleeve : TCP_U_B_CBUU_##SHIRT##_SlimSleeve_Gloves_Bloused_Base{\
@@ -5033,7 +3723,7 @@ class HitpointsProtectionInfo {  \
     hiddenSelectionsTextures[] = {\
       QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa)\
     };\
-    class TCP_equipmentTypes: TCP_equipmentTypes \
+    class TCP_equipmentTypes \
 		{ \
 			baseEquipment=QUOTE(STB73_U_B_##SHIRT##_Full_Gloves_Bloused_##CAMO##); \
 		}; \
@@ -5077,9 +3767,24 @@ class HitpointsProtectionInfo {  \
     hiddenSelectionsTextures[] = {\
       QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa)\
     };\
-    class TCP_equipmentTypes: TCP_equipmentTypes \
+    class TCP_equipmentTypes \
 		{ \
 			baseEquipment=QUOTE(STB73_U_B_##SHIRT##_Full_Gloves_Bloused_Kneepads_##CAMO##); \
+      class Vest \
+      { \
+          class SlimSleeve \
+          { \
+              indirectCompatibility = 2; \
+              class compatibleItems \
+              { \
+                  STB73_M43D_Light_4_Base = 1; \
+                  STB73_M43D_Pads_4_Base = 1; \
+                  STB73_M43D_ODST_4_Base = 1; \
+                  STB73_M43D_BREACHER_4_Base = 1; \
+                  STB73_M43D_SHARPSHOOTER_4_Base = 1; \
+              }; \
+          }; \
+      }; \
 		}; \
   }; \
   class STB73_U_B_##SHIRT##_Full_Gloves_Bloused_Kneepads_##CAMO##_SlimSleeve : TCP_U_B_CBUU_##SHIRT##_SlimSleeve_Gloves_Bloused_Kneepads_Base{\
@@ -5099,7 +3804,7 @@ class HitpointsProtectionInfo {  \
     hiddenSelectionsTextures[] = {\
       QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa)\
     };\
-    class TCP_equipmentTypes: TCP_equipmentTypes \
+    class TCP_equipmentTypes \
 		{ \
 			baseEquipment=QUOTE(STB73_U_B_##SHIRT##_Full_Gloves_Bloused_Kneepads_##CAMO##); \
 		}; \
@@ -5224,9 +3929,24 @@ class HitpointsProtectionInfo {  \
     hiddenSelectionsTextures[] = {\
       QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa)\
     };\
-    class TCP_equipmentTypes: TCP_equipmentTypes \
+    class TCP_equipmentTypes \
 		{ \
 			baseEquipment=QUOTE(STB73_U_B_##SHIRT##_Full_Unzipped_##CAMO##); \
+      class Vest \
+      { \
+          class SlimSleeve \
+          { \
+              indirectCompatibility = 2; \
+              class compatibleItems \
+              { \
+                  STB73_M43D_Light_4_Base = 1; \
+                  STB73_M43D_Pads_4_Base = 1; \
+                  STB73_M43D_ODST_4_Base = 1; \
+                  STB73_M43D_BREACHER_4_Base = 1; \
+                  STB73_M43D_SHARPSHOOTER_4_Base = 1; \
+              }; \
+          }; \
+      }; \
 		}; \
   };\
   class STB73_U_B_##SHIRT##_Full_Unzipped_##CAMO##_SlimSleeve : TCP_U_B_CBUU_##SHIRT##_SlimSleeve_Unzipped_Base{\
@@ -5246,7 +3966,7 @@ class HitpointsProtectionInfo {  \
     hiddenSelectionsTextures[] = {\
       QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa)\
     };\
-    class TCP_equipmentTypes: TCP_equipmentTypes \
+    class TCP_equipmentTypes \
 		{ \
 			baseEquipment=QUOTE(STB73_U_B_##SHIRT##_Full_Unzipped_##CAMO##); \
 		}; \
@@ -5290,9 +4010,24 @@ class HitpointsProtectionInfo {  \
     hiddenSelectionsTextures[] = {\
       QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa)\
     };\
-    class TCP_equipmentTypes: TCP_equipmentTypes \
+    class TCP_equipmentTypes \
 		{ \
 			baseEquipment=QUOTE(STB73_U_B_##SHIRT##_Full_Unzipped_Kneepads_##CAMO##); \
+      class Vest \
+      { \
+          class SlimSleeve \
+          { \
+              indirectCompatibility = 2; \
+              class compatibleItems \
+              { \
+                  STB73_M43D_Light_4_Base = 1; \
+                  STB73_M43D_Pads_4_Base = 1; \
+                  STB73_M43D_ODST_4_Base = 1; \
+                  STB73_M43D_BREACHER_4_Base = 1; \
+                  STB73_M43D_SHARPSHOOTER_4_Base = 1; \
+              }; \
+          }; \
+      }; \
 		}; \
   };\
   class STB73_U_B_##SHIRT##_Full_Unzipped_Kneepads_##CAMO##_SlimSleeve : TCP_U_B_CBUU_##SHIRT##_SlimSleeve_Unzipped_Kneepads_Base{\
@@ -5312,7 +4047,7 @@ class HitpointsProtectionInfo {  \
     hiddenSelectionsTextures[] = {\
       QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa)\
     };\
-    class TCP_equipmentTypes: TCP_equipmentTypes \
+    class TCP_equipmentTypes \
 		{ \
 			baseEquipment=QUOTE(STB73_U_B_##SHIRT##_Full_Unzipped_Kneepads_##CAMO##); \
 		}; \
@@ -5437,9 +4172,24 @@ class HitpointsProtectionInfo {  \
     hiddenSelectionsTextures[] = {\
       QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa)\
     };\
-    class TCP_equipmentTypes: TCP_equipmentTypes \
+    class TCP_equipmentTypes \
 		{ \
 			baseEquipment=QUOTE(STB73_U_B_##SHIRT##_Full_Bloused_Unzipped_##CAMO##); \
+      class Vest \
+      { \
+          class SlimSleeve \
+          { \
+              indirectCompatibility = 2; \
+              class compatibleItems \
+              { \
+                  STB73_M43D_Light_4_Base = 1; \
+                  STB73_M43D_Pads_4_Base = 1; \
+                  STB73_M43D_ODST_4_Base = 1; \
+                  STB73_M43D_BREACHER_4_Base = 1; \
+                  STB73_M43D_SHARPSHOOTER_4_Base = 1; \
+              }; \
+          }; \
+      }; \
 		}; \
   }; \
   class STB73_U_B_##SHIRT##_Full_Bloused_Unzipped_##CAMO##_SlimSleeve : TCP_U_B_CBUU_##SHIRT##_SlimSleeve_Bloused_Unzipped_Base{\
@@ -5459,7 +4209,7 @@ class HitpointsProtectionInfo {  \
     hiddenSelectionsTextures[] = {\
       QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa)\
     };\
-    class TCP_equipmentTypes: TCP_equipmentTypes \
+    class TCP_equipmentTypes \
 		{ \
 			baseEquipment=QUOTE(STB73_U_B_##SHIRT##_Full_Bloused_Unzipped_##CAMO##); \
 		}; \
@@ -5503,9 +4253,24 @@ class HitpointsProtectionInfo {  \
     hiddenSelectionsTextures[] = {\
       QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa)\
     };\
-    class TCP_equipmentTypes: TCP_equipmentTypes \
+    class TCP_equipmentTypes \
 		{ \
 			baseEquipment=QUOTE(STB73_U_B_##SHIRT##_Full_Bloused_Unzipped_Kneepads_##CAMO##); \
+      class Vest \
+      { \
+          class SlimSleeve \
+          { \
+              indirectCompatibility = 2; \
+              class compatibleItems \
+              { \
+                  STB73_M43D_Light_4_Base = 1; \
+                  STB73_M43D_Pads_4_Base = 1; \
+                  STB73_M43D_ODST_4_Base = 1; \
+                  STB73_M43D_BREACHER_4_Base = 1; \
+                  STB73_M43D_SHARPSHOOTER_4_Base = 1; \
+              }; \
+          }; \
+      }; \
 		}; \
   }; \
   class STB73_U_B_##SHIRT##_Full_Bloused_Unzipped_Kneepads_##CAMO##_SlimSleeve : TCP_U_B_CBUU_##SHIRT##_SlimSleeve_Bloused_Unzipped_Kneepads_Base{\
@@ -5525,7 +4290,7 @@ class HitpointsProtectionInfo {  \
     hiddenSelectionsTextures[] = {\
       QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa)\
     };\
-    class TCP_equipmentTypes: TCP_equipmentTypes \
+    class TCP_equipmentTypes \
 		{ \
 			baseEquipment=QUOTE(STB73_U_B_##SHIRT##_Full_Bloused_Unzipped_Kneepads_##CAMO##); \
 		}; \
@@ -5654,9 +4419,24 @@ class HitpointsProtectionInfo {  \
     hiddenSelectionsTextures[] = {\
       QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa)\
     };\
-    class TCP_equipmentTypes: TCP_equipmentTypes \
+    class TCP_equipmentTypes \
 		{ \
 			baseEquipment=QUOTE(STB73_U_B_##SHIRT##_Full_Gloves_Unzipped_##CAMO##); \
+      class Vest \
+      { \
+          class SlimSleeve \
+          { \
+              indirectCompatibility = 2; \
+              class compatibleItems \
+              { \
+                  STB73_M43D_Light_4_Base = 1; \
+                  STB73_M43D_Pads_4_Base = 1; \
+                  STB73_M43D_ODST_4_Base = 1; \
+                  STB73_M43D_BREACHER_4_Base = 1; \
+                  STB73_M43D_SHARPSHOOTER_4_Base = 1; \
+              }; \
+          }; \
+      }; \
 		}; \
   }; \
   class STB73_U_B_##SHIRT##_Full_Gloves_Unzipped_##CAMO##_SlimSleeve : TCP_U_B_CBUU_##SHIRT##_SlimSleeve_Gloves_Unzipped_Base{\
@@ -5676,7 +4456,7 @@ class HitpointsProtectionInfo {  \
     hiddenSelectionsTextures[] = {\
       QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa)\
     };\
-    class TCP_equipmentTypes: TCP_equipmentTypes \
+    class TCP_equipmentTypes \
 		{ \
 			baseEquipment=QUOTE(STB73_U_B_##SHIRT##_Full_Gloves_Unzipped_##CAMO##); \
 		}; \
@@ -5720,9 +4500,24 @@ class HitpointsProtectionInfo {  \
     hiddenSelectionsTextures[] = {\
       QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa)\
     };\
-    class TCP_equipmentTypes: TCP_equipmentTypes \
+    class TCP_equipmentTypes \
 		{ \
 			baseEquipment=QUOTE(STB73_U_B_##SHIRT##_Full_Gloves_Unzipped_Kneepads_##CAMO##); \
+      class Vest \
+      { \
+          class SlimSleeve \
+          { \
+              indirectCompatibility = 2; \
+              class compatibleItems \
+              { \
+                  STB73_M43D_Light_4_Base = 1; \
+                  STB73_M43D_Pads_4_Base = 1; \
+                  STB73_M43D_ODST_4_Base = 1; \
+                  STB73_M43D_BREACHER_4_Base = 1; \
+                  STB73_M43D_SHARPSHOOTER_4_Base = 1; \
+              }; \
+          }; \
+      }; \
 		}; \
   }; \
   class STB73_U_B_##SHIRT##_Full_Gloves_Unzipped_Kneepads_##CAMO##_SlimSleeve : TCP_U_B_CBUU_##SHIRT##_SlimSleeve_Gloves_Unzipped_Kneepads_Base{\
@@ -5742,7 +4537,7 @@ class HitpointsProtectionInfo {  \
     hiddenSelectionsTextures[] = {\
       QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa)\
     };\
-    class TCP_equipmentTypes: TCP_equipmentTypes \
+    class TCP_equipmentTypes \
 		{ \
 			baseEquipment=QUOTE(STB73_U_B_##SHIRT##_Full_Gloves_Unzipped_Kneepads_##CAMO##); \
 		}; \
@@ -5873,9 +4668,24 @@ class HitpointsProtectionInfo {  \
     hiddenSelectionsTextures[] = {\
       QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa)\
     };\
-    class TCP_equipmentTypes: TCP_equipmentTypes \
+    class TCP_equipmentTypes \
 		{ \
 			baseEquipment=QUOTE(STB73_U_B_##SHIRT##_Full_Gloves_Bloused_Unzipped_##CAMO##); \
+      class Vest \
+      { \
+          class SlimSleeve \
+          { \
+              indirectCompatibility = 2; \
+              class compatibleItems \
+              { \
+                  STB73_M43D_Light_4_Base = 1; \
+                  STB73_M43D_Pads_4_Base = 1; \
+                  STB73_M43D_ODST_4_Base = 1; \
+                  STB73_M43D_BREACHER_4_Base = 1; \
+                  STB73_M43D_SHARPSHOOTER_4_Base = 1; \
+              }; \
+          }; \
+      }; \
 		}; \
   };\
   class STB73_U_B_##SHIRT##_Full_Gloves_Bloused_Unzipped_##CAMO##_SlimSleeve : TCP_U_B_CBUU_##SHIRT##_SlimSleeve_Gloves_Bloused_Unzipped_Base{\
@@ -5895,7 +4705,7 @@ class HitpointsProtectionInfo {  \
     hiddenSelectionsTextures[] = {\
       QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa)\
     };\
-    class TCP_equipmentTypes: TCP_equipmentTypes \
+    class TCP_equipmentTypes \
 		{ \
 			baseEquipment=QUOTE(STB73_U_B_##SHIRT##_Full_Gloves_Bloused_Unzipped_##CAMO##); \
 		}; \
@@ -5939,9 +4749,24 @@ class HitpointsProtectionInfo {  \
     hiddenSelectionsTextures[] = {\
       QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa)\
     };\
-    class TCP_equipmentTypes: TCP_equipmentTypes \
+    class TCP_equipmentTypes \
 		{ \
 			baseEquipment=QUOTE(STB73_U_B_##SHIRT##_Full_Gloves_Bloused_Unzipped_Kneepads_##CAMO##); \
+      class Vest \
+      { \
+          class SlimSleeve \
+          { \
+              indirectCompatibility = 2; \
+              class compatibleItems \
+              { \
+                  STB73_M43D_Light_4_Base = 1; \
+                  STB73_M43D_Pads_4_Base = 1; \
+                  STB73_M43D_ODST_4_Base = 1; \
+                  STB73_M43D_BREACHER_4_Base = 1; \
+                  STB73_M43D_SHARPSHOOTER_4_Base = 1; \
+              }; \
+          }; \
+      }; \
 		}; \
   };\
   class STB73_U_B_##SHIRT##_Full_Gloves_Bloused_Unzipped_Kneepads_##CAMO##_SlimSleeve : TCP_U_B_CBUU_##SHIRT##_SlimSleeve_Gloves_Bloused_Unzipped_Kneepads_Base{\
@@ -5961,7 +4786,7 @@ class HitpointsProtectionInfo {  \
     hiddenSelectionsTextures[] = {\
       QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa)\
     };\
-    class TCP_equipmentTypes: TCP_equipmentTypes \
+    class TCP_equipmentTypes \
 		{ \
 			baseEquipment=QUOTE(STB73_U_B_##SHIRT##_Full_Gloves_Bloused_Unzipped_Kneepads_##CAMO##); \
 		}; \

@@ -245,8 +245,8 @@ class XtdGearModels
                     "None",
 					"Pads",
 					"ODST",
-                    "Sharpshooter",
-                    "Breacher"
+                    "SHARPSHOOTER",
+                    "BREACHER"
                 };
             };
 			class Legs

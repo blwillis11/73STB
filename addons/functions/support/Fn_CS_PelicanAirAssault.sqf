@@ -225,7 +225,7 @@ _groupSpeciality =  [_AssaultTroopsArray, 2, "AT"] call BIS_fnc_param// _groupSp
 		_veh call _code;
 		_veh disableCollisionWith _pelican;
 	// _veh enableSimulation false;
-		_veh attachTo [_pelican, ([_vehicleMagLiftedClassname] call OPTRE_fnc_PelicanAttachToPoints)]; 
+		[_veh, _pelican] call OPTRE_fnc_PelicanAttachToPoints;
 		_VehWPPosArray pushBack ([_pos, 70, 180] call OPTRE_fnc_MathsTriangulatePos);
 	/*_exitRearWP = _crewGroup addWaypoint [([_pos, 70, 180] call OPTRE_fnc_MathsTriangulatePos), 0];
 		_exitRearWP setWaypointType "MOVE";

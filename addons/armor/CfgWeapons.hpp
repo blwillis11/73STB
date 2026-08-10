@@ -24,8 +24,13 @@ class CfgWeapons
         {
            VEST_HITPOINT_INFO
            containerClass="STB73_vest_supply";
+           mass=VEST_MASS;
+           vestType="Rebreather";
         };
     };
+
+    #include "data\vest\m43DBase.hpp"
+
     
     NEW_VEST_43A(Aviator)
 

@@ -7,6 +7,7 @@ class CfgVehicles {
     class VehicleSystemsTemplateRightPilot;
     class Turrets;
     class MainTurret;
+    class RearDoorGun;
     class CommanderOptics;
     class Components;
     class SensorTemplateIR;

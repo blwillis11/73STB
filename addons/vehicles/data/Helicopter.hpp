@@ -115,6 +115,12 @@ class STB73_D77_TC_Pelican: Splits_UNSC_D77_TC_Pelican
     transportVehicleAmmo = 0;  // No ammo transfer
     transportVehicleFuel = 0;  // No fuel transfer
     transportVehicleRepair = 0;  // No repair transfer
+    class Turrets : Turrets
+    {
+        class RearDoorGun : RearDoorGun {
+            gunnerType = "STB73_Aviator";
+        };   
+    };
     class TransportVehicles {
         class Cargo1 {
             name = "FrontLeft";

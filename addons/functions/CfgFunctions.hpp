@@ -56,6 +56,7 @@ class CfgFunctions{
             class ModulePelicanAirAssault { file = "z\73STB\addons\functions\modules\fn_ModulePelicanAirAssault.sqf"; description = "STB73 - Pelican air assault module"; };
             class ModuleHEV { file = "z\73STB\addons\functions\modules\fn_ModuleHEV.sqf"; description = "STB73 - HEV module"; };
             class ModuleHEVCleanup { file = "z\73STB\addons\functions\modules\fn_ModuleHEVCleanup.sqf"; description = "STB73 - HEV Cleanup module"; };
+            class ModulePelicanResupply { file = "z\73STB\addons\functions\modules\fn_ModulePelicanResupply.sqf"; description = "STB73 - Pelican resupply module"; };
         };
         class Thrusters
         {
@@ -90,9 +91,13 @@ class CfgFunctions{
             file = "z\73STB\addons\functions\support";
             class CS_ODSTHEV {};
             class CS_PelicanAirAssault {};
+            class CS_PelicanResupply {};
+            class PelicanAttachToPoints {};
+            class CS_MonitorResupply{};
             class setCallMortarFireSupport73STB {};
             class setCallArtyFireSupport73STB {};
             class addFireSupportMenu73STB {};
+
         };
         class HEV
         {
