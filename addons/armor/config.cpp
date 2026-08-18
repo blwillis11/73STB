@@ -21,6 +21,9 @@ class CfgPatches {
 
 #include "CfgEventHandlers.hpp"
 
+class TCP_equipmentTypes;
+class TCP_uniformDecals;
+
 #include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgGlasses.hpp"

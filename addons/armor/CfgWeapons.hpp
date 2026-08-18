@@ -6,8 +6,6 @@ class CfgWeapons
     class TCP_V_M43D_Light_Black;
     class ItemCore;
     class UniformItem;
-    class TCP_equipmentTypes;
-    class TCP_uniformDecals;
 
     class DetectorCore;
     class MineDetector: DetectorCore

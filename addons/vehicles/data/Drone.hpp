@@ -8,6 +8,9 @@ class STB73_OQ40_Minibee: OPTRE_OQ40_Minibee_UNSC
     editorCategory = "STB73_STB";
     editorSubcategory = "STB73_Drones_EdSubCat";
     fuelCapacity=100;
+    arc_mode = "SAT";
+    arc_noBattery = 1;
+    arc_isr = "arc_isr_fnc_vanilla";
     class assembleInfo
     {
         primary=1;

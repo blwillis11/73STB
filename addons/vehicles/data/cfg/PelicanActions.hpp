@@ -72,7 +72,6 @@ class PelLift_LoadPodMenu
     priority = 2;
     onlyForPlayer = 0;
     condition = "!(player in [gunner this, driver this]) AND (player == driver vehicle player) AND ((vehicle player) isKindOf ""OPTRE_cart_base"")";
-    //condition = "( vehicle player != this AND vehicle player != this AND player == driver vehicle player AND (vehicle player) isKindOf ""OPTRE_cart_base"" ) ";
     statement = "OPTRE_pelicanloadSupplyPods_Menu_PelicanObject = this; createDialog ""OPTRE_pelicanloadSupplyPods_Menu""; OPTRE_pelicanloadSupplyPods_Menu_cam = ""camera"" CamCreate getPosATL OPTRE_pelicanloadSupplyPods_Menu_PelicanObject;  OPTRE_pelicanloadSupplyPods_Menu_cam CamSetTarget OPTRE_pelicanloadSupplyPods_Menu_PelicanObject; OPTRE_pelicanloadSupplyPods_Menu_cam CameraEffect [""Internal"",""Back""]; OPTRE_pelicanloadSupplyPods_Menu_cam camSetRelPos [4,-12,-2.4]; OPTRE_pelicanloadSupplyPods_Menu_cam CamCommit 0; showCinemaBorder false; if (sunOrMoon == 0) then {camUseNVG true;};";
 };
 class PelLift_UnLoadVehicle

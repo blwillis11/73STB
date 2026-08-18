@@ -3048,7 +3048,7 @@ class HitpointsProtectionInfo {  \
       QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa)\
     };\
   }; \
-  class STB73_U_B_##SHIRT##_Full_Kneepads_##CAMO##_SlimSleeve : TCP_U_B_CBUU_##SHIRT##_SlimSleeve_Base{\
+  class STB73_U_B_##SHIRT##_Full_Kneepads_##CAMO##_SlimSleeve : TCP_U_B_CBUU_##SHIRT##_SlimSleeve_Kneepads_Base{\
     scope=1;\
     displayName = QUOTE([73] CAMO CBUU SHIRT SlimSleeve); \
     ace_arsenal_uniqueBase = QUOTE(STB73_U_B_##SHIRT##_Full_Kneepads_##CAMO##);\
