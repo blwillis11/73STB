@@ -3,3 +3,8 @@
 hemtt
 hemtt.exe
 *.biprivatekey
+<<<<<<< HEAD
+*.psd
+=======
+*.psd
+>>>>>>> 0bec2f24f8b950e88af65042fb39d64b465bf77d
