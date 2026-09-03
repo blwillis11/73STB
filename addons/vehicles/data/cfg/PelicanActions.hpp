@@ -43,7 +43,7 @@ class PelLift_LoadVehicle
     radius = 15;
     priority = 2;
     onlyForPlayer = 0;
-    condition = "!(player in [gunner this, driver this]) AND ((vehicle player != player AND isPlayer vehicle player)) AND (str (this getVariable [""OPTRE_Pelican_AttachedToVehiclesEffect"",[]]) == ""[]"")";
+    condition = "!(player in [gunner this, driver this]) AND (player == driver vehicle player) AND (str (this getVariable [""OPTRE_Pelican_AttachedToVehiclesEffect"",[]]) == ""[]"") AND (vehicle player != player)";
     statement = "0 = [this,vehicle player] spawn OPTRE_fnc_PelicanLoadValidate;";
 };
 class PelLift_LoadCrate
@@ -72,7 +72,7 @@ class PelLift_LoadPodMenu
     priority = 2;
     onlyForPlayer = 0;
     condition = "!(player in [gunner this, driver this]) AND (player == driver vehicle player) AND ((vehicle player) isKindOf ""OPTRE_cart_base"")";
-    statement = "OPTRE_pelicanloadSupplyPods_Menu_PelicanObject = this; createDialog ""OPTRE_pelicanloadSupplyPods_Menu""; OPTRE_pelicanloadSupplyPods_Menu_cam = ""camera"" CamCreate getPosATL OPTRE_pelicanloadSupplyPods_Menu_PelicanObject;  OPTRE_pelicanloadSupplyPods_Menu_cam CamSetTarget OPTRE_pelicanloadSupplyPods_Menu_PelicanObject; OPTRE_pelicanloadSupplyPods_Menu_cam CameraEffect [""Internal"",""Back""]; OPTRE_pelicanloadSupplyPods_Menu_cam camSetRelPos [4,-12,-2.4]; OPTRE_pelicanloadSupplyPods_Menu_cam CamCommit 0; showCinemaBorder false; if (sunOrMoon == 0) then {camUseNVG true;};";
+    statement = "OPTRE_PelicanLoadSupplyPods_Menu_PelicanObject = this; createDialog ""OPTRE_PelicanLoadSupplyPods_Menu""; OPTRE_PelicanLoadSupplyPods_Menu_cam = ""camera"" CamCreate getPosATL OPTRE_PelicanLoadSupplyPods_Menu_PelicanObject;  OPTRE_PelicanLoadSupplyPods_Menu_cam CamSetTarget OPTRE_PelicanLoadSupplyPods_Menu_PelicanObject; OPTRE_PelicanLoadSupplyPods_Menu_cam CameraEffect [""Internal"",""Back""]; OPTRE_PelicanLoadSupplyPods_Menu_cam camSetRelPos [4,-12,-2.4]; OPTRE_PelicanLoadSupplyPods_Menu_cam CamCommit 0; showCinemaBorder false; if (sunOrMoon == 0) then {camUseNVG true;};";
 };
 class PelLift_UnLoadVehicle
 {
@@ -100,31 +100,31 @@ class PelLift_OpenDetachPodMenu
     priority = 3;
     onlyForPlayer = 0;
     condition = "(player in [gunner this, driver this]) AND (({_x isKindOf ""OPTRE_Ammo_SupplyPod_Empty""} count (this getVariable [""OPTRE_Pelican_AttachedToVehiclesEffect"",[]])) > 0)";
-    statement = "0 = this spawn STB73_fnc_PelicanLoadSupplyPodMenuDetachMenu;";
+    statement = "0 = this spawn OPTRE_fnc_PelicanLoadSupplyPodMenuDetachMenu;";
 };
 class RampOpen
 {
     userActionID = 50;
-    displayName = "Close Ramp";
-    displayNameDefault = "Close Ramp";
-    textToolTip = "Close Ramp";
+    displayName = "Open Ramp";
+    displayNameDefault = "Open Ramp";
+    textToolTip = "Open Ramp";
     position = "cargo_door_handle";
     showWindow = 0;
     radius = 100000;
     priority = 4;
     onlyForPlayer = 0;
-    condition = "((this animationPhase ""cargoDoor_1"" < 0.5) AND (alive this) AND (player in [gunner this, driver this]))";
-    statement = "this animate [""cargoDoor_1"",1]";
+    condition = "((this animationPhase ""cargoDoor_1"" < 0.5) AND (this animationPhase ""cargoDoor_2"" < 0.5) AND (alive this) AND (player in [gunner this, driver this]))";
+    statement = "this animate [""cargoDoor_1"",1]; this animate [""cargoDoor_2"",1]";
     animPeriod = 5;
 };
 class RampClose : RampOpen
 {
     userActionID = 51;
-    displayName = "Open Ramp";
-    displayNameDefault = "Open Ramp";
-    textToolTip = "Open Ramp";
+    displayName = "Close Ramp";
+    displayNameDefault = "Close Ramp";
+    textToolTip = "Close Ramp";
     priority = 4;
-    condition = "((this animationPhase ""cargoDoor_1"" > 0.5) AND (alive this) AND (player in [gunner this, driver this]))";
-    statement = "this animate [""cargoDoor_1"",0]";
+    condition = "((this animationPhase ""cargoDoor_1"" > 0.5) AND (this animationPhase ""cargoDoor_2"" > 0.5) AND (alive this) AND (player in [gunner this, driver this]))";
+    statement = "this animate [""cargoDoor_1"",0]; this animate [""cargoDoor_2"",0]";
     animPeriod = 5;
 };

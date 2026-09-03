@@ -5,25 +5,25 @@ class CfgPatches {
         name = COMPONENT_NAME;
 		units[] = 
         {
-            "STB73_M494_Oryx",//Load/unload
-            "STB73_M511_Springbok_APC",//Load/unload
-            "STB73_M511_Springbok_IFV",//Load/unload
-            "STB73_M511_Springbok_MGS",//Load/unload
-            "STB73_M511_Springbok_AA",//Load/unload
-            "STB73_SDV_ODST", //Load/unload
-            "STB73_Boat_Transport",//ViV only
-            "STB73_HDV134_Resupply",//Load/unload
-            "STB73_HDV134_TT",//Load/unload
-            "STB73_HDV134_TT_C",//Load/unload
-            "STB73_M12",//Load/unload
-            "STB73_M12_LRV",//Load/unload
-            "STB73_M12G1_LRV",//Load/unload
-            "STB73_M813_TT",//Load/unload
-            "STB73_M274_ATV", //ViV only
+            "STB73_M494_Oryx",
+            "STB73_M494_Oryx_AIE",
+            "STB73_M411_APC",
+            "STB73_M412_IFV",
+            "STB73_M413_MGS",
+            "STB73_SDV_ODST", 
+            "STB73_Boat_Transport",
+            "STB73_HDV134_Resupply",
+            "STB73_HDV134_TT",
+            "STB73_HDV134_TT_C",
+            "STB73_M12",
+            "STB73_M12_LRV",
+            "STB73_M12G1_LRV",
+            "STB73_M813_TT",
+            "STB73_M274_ATV",
             "STB73_OQ40_Minibee",
             "STB73_AV14_Hornet_CAS",
             "STB73_AV14_Hornet_CAP",
-            "STB73_D77_TC_Pelican",
+            "STB73_D77H_SOCOM_Pelican",
             "STB73_UNSC_falcon_S",
             "STB73_UNSC_falcon",
             "STB73_UNSC_MH_144_Falcon",
@@ -37,10 +37,10 @@ class CfgPatches {
             "STB73_YSS_1000_A_VTOL_Single",
             "STB73_Shortsword_01_F",
             "STB73_JT_RM2_Longsword_dynamicLoadout_F",
-            "STB73_M875",//Load/unload
-            "STB73_M808BM_MBT",//Load/unload
-            "STB73_M808B2_MBT",//Load/unload
-            "STB73_M808BMk2",//Load/unload
+            "STB73_M875",
+            "STB73_M808BM_MBT",
+            "STB73_M808B2_MBT",
+            "STB73_M808BMk2",
             "STB73_cart"
         }; 
         weapons[] = {
@@ -49,7 +49,6 @@ class CfgPatches {
         requiredAddons[] = {
             "OPTRE_UNSC_Units_Army",
             "OPTRE_FunctionsLibrary",
-            "DMNS_Armour",
 			"STB73_Functions"
         };
         authors[] = {"Salmon"}; // sub array of authors, considered for the specific addon, can be removed or left empty {}

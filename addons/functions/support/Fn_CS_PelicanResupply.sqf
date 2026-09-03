@@ -165,11 +165,11 @@ _pelican addEventHandler ["HandleDamage", {
 			} forEach allCurators;
 			{
 				(_this select 0) removeAllEventHandlers _x;
-			} forEach ["GetOut", "HandleDamage", "killed"];
+			} forEach ["GetOut", "HandleDamage", "Killed"];
 		};
 	};
 }];
-driver _pelican addEventHandler ["killed", {
+driver _pelican addEventHandler ["Killed", {
 	if isServer then {
 		{
 			detach _x;
@@ -179,7 +179,7 @@ driver _pelican addEventHandler ["killed", {
 		} forEach allCurators;
 		{
 			(_this select 0) removeAllEventHandlers _x;
-		} forEach ["GetOut", "HandleDamage", "killed"];
+		} forEach ["GetOut", "HandleDamage", "Killed"];
 	};
 }];
 _pelican addEventHandler ["GetOut", {
@@ -193,7 +193,7 @@ _pelican addEventHandler ["GetOut", {
 			} forEach allCurators;
 			{
 				(_this select 0) removeAllEventHandlers _x;
-			} forEach ["GetOut", "HandleDamage", "killed"];
+			} forEach ["GetOut", "HandleDamage", "Killed"];
 		};
 	};
 }];

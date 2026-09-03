@@ -115,7 +115,7 @@ _unitsInGroup apply {
 		true,
 		300,
 		true
-	] call STB73_fnc_HEV;
+	] call OPTRE_fnc_HEV;
 } call CBA_fnc_directCall;
 
 private _wayPoint =_group addWaypoint [_pos, 0];

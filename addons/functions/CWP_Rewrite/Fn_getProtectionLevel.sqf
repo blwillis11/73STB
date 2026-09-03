@@ -21,10 +21,10 @@ _uniform = uniform _unit;
 _helmet = headgear _unit;
 _nvg = hmd _unit;
 
-_glassesProtection = gettext (configFile >> "cfgGlasses" >> _glasses >> "CBRN_protectionLevel");
-_uniformProtection = gettext (configFile >> "cfgWeapons" >> _uniform >> "CBRN_protectionLevel");
-_helmetProtection = gettext (configFile >> "cfgWeapons" >> _helmet >> "CBRN_protectionLevel");
-_nvgProtection = gettext (configFile >> "cfgWeapons" >> _nvg >> "CBRN_protectionLevel");
+_glassesProtection = getText (configFile >> "cfgGlasses" >> _glasses >> "CBRN_protectionLevel");
+_uniformProtection = getText (configFile >> "cfgWeapons" >> _uniform >> "CBRN_protectionLevel");
+_helmetProtection = getText (configFile >> "cfgWeapons" >> _helmet >> "CBRN_protectionLevel");
+_nvgProtection = getText (configFile >> "cfgWeapons" >> _nvg >> "CBRN_protectionLevel");
 
 // Protection levels based on config
 // Body coverage
@@ -76,7 +76,7 @@ if (_uniform == "") then {
 private _isInCBRNVeh = false;
 
 if (!isNull _unit && {
-	vehicle _unit != _unit
+	!isNull objectParent _unit
 }) then {
 	private _veh = vehicle _unit;
 

@@ -25,6 +25,8 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
 			"STB73_Main",
+			"STB73_Weapons",
+			"STB73_Armor",
 			"OPTRE_UNSC_Units",
 			"OPTRE_FC_Units"
         };

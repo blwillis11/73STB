@@ -39,11 +39,6 @@ class CfgVehicles
 		};
 		class ModuleDescription{};
 	};
-    class Sign_Sphere10cm_F;
-    class STB73_Stand_In : Sign_Sphere10cm_F
-    {
-        displayName= "DO NOT DELETE!";
-    };
 	class Module_OPTRE_HEV;
 	class Module_OPTRE_ODSTDrop;
 	class OPTRE_ODSTDrop;
@@ -334,15 +329,16 @@ class CfgVehicles
 		};
 	};
     class ModuleCASMissile_F;
-    class STB73_PelicanSupplyDrop : ModuleCASMissile_F {
-	displayName = "Pelican Resupply";
-	category = "STB73_Modules";
-	scopeCurator = 2;
-	curatorInfoType = "STB73_ZeusDisplay_PelicanResupply"; 
-	function = "STB73_fnc_ModulePelicanResupply";
-	portrait = "OPTRE_Vehicles\Pelican\Data\icon2.paa";
-	author = "Article 2 Studios";
-};
+    class STB73_PelicanSupplyDrop : ModuleCASMissile_F
+	{
+		displayName = "Pelican Resupply";
+		category = "STB73_Modules";
+		scopeCurator = 2;
+		curatorInfoType = "STB73_ZeusDisplay_PelicanResupply"; 
+		function = "STB73_fnc_ModulePelicanResupply";
+		portrait = "OPTRE_Vehicles\Pelican\Data\icon2.paa";
+		author = "Article 2 Studios";
+	};
 
 	class STB73_Module_HEV: Module_OPTRE_HEV
 	{

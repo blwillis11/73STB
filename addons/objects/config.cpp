@@ -52,8 +52,6 @@ class CfgPatches {
         requiredAddons[] = {
 			"STB73_Main",
             "OPTRE_Misc",
-            "DMNS_Core",
-            "NSWep_Core",
             "STB73_Weapons"
         };
         authors[] = {"Salmon"}; // sub array of authors, considered for the specific addon, can be removed or left empty {}

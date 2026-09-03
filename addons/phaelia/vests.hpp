@@ -4,7 +4,6 @@ class TCP_V_M43A_Light_3_Black;
 class TCP_V_M43A_Light_3_White;
 class TCP_V_M43A_Light_3_Brown;
 class TCP_V_M43A_Light_Olive;
-class TCP_uniformDecals;
 
 class CoP_V_M43A_Light_3_Olive: TCP_V_M43A_Light_3_Olive
 {

@@ -9,7 +9,6 @@ class CfgPatches {
         requiredAddons[] = {
 			"STB73_main",
 			"A3_Data_F_Enoch_Loadorder",
-			"19th_Fleet_Armor",
 			"TCP_UI"
         };
         authors[] = {"Salmon"}; // sub array of authors, considered for the specific addon, can be removed or left empty {}
@@ -21,7 +20,7 @@ class CfgMissions
 {
 	class Cutscenes
 	{
-		class STB73_Intro
+		class Intro73STB
 		{
 			directory="z\73STB\addons\mainmenu\Cutscenes";
 		};
@@ -34,7 +33,7 @@ class CfgWorlds
 	{
 		cutscenes[]=
 		{
-			"STB73_Intro"
+			"Intro73STB"
 		};
 	};
 };

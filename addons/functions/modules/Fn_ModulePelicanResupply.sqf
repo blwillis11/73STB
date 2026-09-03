@@ -73,11 +73,7 @@ _podArray = [];
 	};
 } forEach [_box1, _box2, _box3, _box4, _box5, _box6];
 
-_typeOfSpawn = (if ( _veh == "none") then {
-	_podArray
-} else {
-	_veh
-} );
+_typeOfSpawn = ([_veh, _podArray] select (_veh == "none"));
 deleteVehicle _logic;
 
 [

@@ -118,12 +118,6 @@ class STB73_M12 : TCP_B_UNSC_MC_M12A
     scope=2;
     side=1;
     crew = "STB73_STB_ODST_Rifleman";
-    class TCP_Compat_OPTRE
-    {
-        magLockOffset[] = {0, -6.5, -0.5};
-        magLockReversed = 1; // Rotates the vehicle 180 degrees when mag-locked
-        magLockGearInterlock = 1; // Disallows the mag-locked vehicle from being unloaded when gear are down
-    };
     class ace_cargo {
         class cargo {
             class ACE_Tyres { // Doesn't have to have the same name as the item you're adding
@@ -156,12 +150,6 @@ class STB73_M12_LRV : TCP_B_UNSC_MC_M12A_LAAG_M41
     scope=2;
     side=1;
     crew = "STB73_STB_ODST_Rifleman";
-    class TCP_Compat_OPTRE
-    {
-        magLockOffset[] = {0, -6.5, -1.0};
-        magLockReversed = 1; // Rotates the vehicle 180 degrees when mag-locked
-        magLockGearInterlock = 1; // Disallows the mag-locked vehicle from being unloaded when gear are down
-    };
     class ace_cargo {
         class cargo {
             class ACE_Tyres { // Doesn't have to have the same name as the item you're adding
@@ -195,12 +183,6 @@ class STB73_M12G1_LRV : TCP_B_UNSC_MC_M12A_ALIM_M68B
     scope=2;
     side=1;
     crew = "STB73_STB_ODST_Rifleman";
-    class TCP_Compat_OPTRE
-    {
-        magLockOffset[] = {0, -6.5, -1.0};
-        magLockReversed = 1; // Rotates the vehicle 180 degrees when mag-locked
-        magLockGearInterlock = 1; // Disallows the mag-locked vehicle from being unloaded when gear are down
-    };
     class ace_cargo {
         class cargo {
             class ACE_Tyres { // Doesn't have to have the same name as the item you're adding
@@ -234,12 +216,6 @@ class STB73_M813_TT : TCP_B_UNSC_MC_M831A
     scope=2;
     side=1;
     crew = "STB73_STB_ODST_Rifleman";
-    class TCP_Compat_OPTRE
-    {
-        magLockOffset[] = {0, -6.5, -1.0};
-        magLockReversed = 1; // Rotates the vehicle 180 degrees when mag-locked
-        magLockGearInterlock = 1; // Disallows the mag-locked vehicle from being unloaded when gear are down
-    };
     class ace_cargo {
         class cargo {
             class ACE_Tyres { // Doesn't have to have the same name as the item you're adding

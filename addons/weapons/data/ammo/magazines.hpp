@@ -357,21 +357,6 @@ class STB73_95x40_36Rnd_Mag_Tracer_IR:STB73_95x40_36Rnd_Mag_Tracer
 };
 
 // Launcher
-
-class CA_LauncherMagazine;
-class STB73_M96_LAW: CA_LauncherMagazine {
-    scope = 1;
-    allowedSlots[] = {};
-};
-class DMNS_M96_HEAT;
-class STB73_M96_HEAT: DMNS_M96_HEAT
-{
-    displayname						= "[73] M-96 HEAT Disposable Rockets";
-    ammo							= "DMNS_M96_Rocket_HEAT";
-    count							= 1;
-    mass 							= 45;
-    initSpeed 						= 650;
-};
 class MRAWS_HEAT_F;
 class STB73_1Rnd_50x137_HEAT: MRAWS_HEAT_F
 {
@@ -417,11 +402,6 @@ class STB73_Mag_HEAT:TCP_2Rnd_102mm_Mag_HEAT{
     displaynameshort = "HEAT";
     descriptionshort = "High Explosive Anti Tank";
     ammo = "STB73_HEAT";
-    hiddenSelections[] = {"camo_tubes","camo_details"};
-    hiddenSelectionsTextures[] = {
-        "\OPTRE_Weapons\Rockets\data\mag_types\heat.paa",
-        "\optre_weapons\rockets\data\logos_ca.paa"
-    };
 };
 class STB73_Mag_HEAP:STB73_Mag_HEAT{
     count=2;
@@ -430,11 +410,8 @@ class STB73_Mag_HEAP:STB73_Mag_HEAT{
     displaynameshort = "HEAP";
     descriptionshort = "High Explosive Anti Personnel (Un-guided)<br/>Un-guided";
     ammo = "STB73_HEAP";
-    hiddenSelectionsTextures[] = {
-        "\OPTRE_Weapons\Rockets\data\mag_types\heap.paa",
-        "optre_weapons\rockets\data\logos_ca.paa"
-    };
-    picture = "\OPTRE_Weapons\Rockets\icons\magazine\heap.paa";
+    model = "\TCP\Weapons\Ammo\102\HEAP\mag_102mm_HEAP_2rnd.p3d";
+    picture = "\TCP\Weapons\Ammo\102\HEAP\data\ui\icon_102_HEAP_2rnd_CA.paa";
 };
 class STB73_Mag_HEAA:STB73_Mag_HEAT{
     count=2;
@@ -442,11 +419,6 @@ class STB73_Mag_HEAA:STB73_Mag_HEAT{
     displaynameshort = "HEAA";
     descriptionshort = "High Explosive Anti Air (Guided)<br/>Guided";
     ammo = "STB73_HEAA";
-    hiddenSelectionsTextures[] = {
-        "\OPTRE_Weapons\Rockets\data\mag_types\he.paa",
-        "optre_weapons\rockets\data\logos_ca.paa"
-    };
-    picture = "\OPTRE_Weapons\Rockets\icons\magazine\heat.paa";
 };
 
 class STB73_Mag_HEAT_LASER:STB73_Mag_HEAT{

@@ -40,7 +40,6 @@ class CfgPatches {
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-			"19_UNSC_Weapons",
             "OPTRE_FunctionsLibrary",
 			"OPTRE_Weapons",
 			"ACE_Javelin",
@@ -364,7 +363,9 @@ class cfgMagazineWells{
 };
 
 class CBA_DisposableLaunchers {
-    STB73_M96_LAW_Loaded[] = {"STB73_M96_LAW","STB73_M96_LAW_Used"};
+    STB73_M44_Lykoi_HEAT_Loaded[] = {"STB73_M44_Lykoi_HEAT","STB73_M44_Lykoi_HEAT_Used"};
+    STB73_M44_Lykoi_HE_Loaded[] = {"STB73_M44_Lykoi_HE","STB73_M44_Lykoi_HE_Used"};
+    STB73_M44_Lykoi_AA_Loaded[] = {"STB73_M44_Lykoi_AA","STB73_M44_Lykoi_AA_Used"};
 };
 
 

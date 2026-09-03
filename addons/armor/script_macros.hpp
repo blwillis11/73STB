@@ -221,27 +221,31 @@ class HitpointsProtectionInfo {  \
     uniformModel="\TCP\Characters\BLUFOR\UNSC\Army\Vests\M43A\M43A_BaseSec_3.p3d"; \
     hiddenSelectionsTextures[]=\
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
       Q(STB73_TEXPATH(vest,vest_Shoulders_BaseSec_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   };
 
 #define UNIFORM_XtdGI(CAMO,SHIRT) 						               \
     class TCP_U_B_CBUU_##SHIRT##_Base;                           \
   
-#define NEW_VEST_M43D_NONE(CAMO,PLATOON) \
+#define NEW_VEST_M43D_NONE(CAMO,PLATOON,DECAL) \
   class STB73_M43D_Light_##CAMO##_##PLATOON## : STB73_M43D_Light_Base { \
     scope=2; \
     scopeArsenal=2; \
     displayName = Q([73] M43/D [Light] [##PLATOON##] [##CAMO##]); \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
@@ -255,22 +259,26 @@ class HitpointsProtectionInfo {  \
     }; \
   };
 
-#define NEW_VEST_M43D_LIGHT(CAMO,PLATOON) \
+#define NEW_VEST_M43D_LIGHT(CAMO,PLATOON,DECAL) \
   class STB73_M43D_Light_4_##CAMO##_##PLATOON## : STB73_M43D_Light_4_Base { \
     displayName = Q([73] M43/D [Light] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class TCP_equipmentTypes: TCP_equipmentTypes \
 		{ \
 			baseEquipment=Q(STB73_M43D_Light_4_##CAMO##_##PLATOON##); \
 		}; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
@@ -290,13 +298,17 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_Light_4_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   };\
   class STB73_M43D_Light_4_##CAMO##_##PLATOON##_UGPS : STB73_M43D_Light_4_Base_UGPS { \
@@ -306,13 +318,17 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_Light_4_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_Light_4_1_##CAMO##_##PLATOON## : STB73_M43D_Light_4_1_Base { \
@@ -323,13 +339,17 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_Light_4_1_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
@@ -349,13 +369,17 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_Light_4_1_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   };\
   class STB73_M43D_Light_4_1_##CAMO##_##PLATOON##_UGPS : STB73_M43D_Light_4_1_Base_UGPS { \
@@ -366,13 +390,17 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_Light_4_1_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   };\
   class STB73_M43D_Light_4_2_##CAMO##_##PLATOON## : STB73_M43D_Light_4_2_Base { \
@@ -383,6 +411,10 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_Light_4_2_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -395,11 +427,11 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_Light_4_2_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_Light_4_2_Base_TACPAD { \
@@ -409,6 +441,10 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_Light_4_2_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -418,11 +454,11 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   };\
   class STB73_M43D_Light_4_2_##CAMO##_##PLATOON##_UGPS : STB73_M43D_Light_4_2_Base_UGPS { \
@@ -432,6 +468,10 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_Light_4_2_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelections[]= \
 		{ \
 			"camo", \
@@ -461,6 +501,10 @@ class HitpointsProtectionInfo {  \
     displayName = Q([73] M43/D [Light] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelections[]= \
 		{ \
 			"camo", \
@@ -473,11 +517,11 @@ class HitpointsProtectionInfo {  \
 		}; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
@@ -494,6 +538,10 @@ class HitpointsProtectionInfo {  \
     scope=2; \
     scopeArsenal=2; \
     displayName = Q([73] M43/D [Light] [##PLATOON##] [##CAMO##]); \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -506,17 +554,21 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_Light_3_2_##CAMO##_##PLATOON## : STB73_M43D_Light_3_2_Base { \
     scope=2; \
     scopeArsenal=2; \
     displayName = Q([73] M43/D [Light] [##PLATOON##] [##CAMO##]); \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -529,11 +581,11 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_Light_2_##CAMO##_##PLATOON## : STB73_M43D_Light_2_Base { \
@@ -544,6 +596,10 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_Light_2_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -556,17 +612,21 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_Light_2_1_##CAMO##_##PLATOON## : STB73_M43D_Light_2_1_Base { \
     scope=2; \
     scopeArsenal=2; \
     displayName = Q([73] M43/D [Light] [##PLATOON##] [##CAMO##]); \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -579,17 +639,21 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_Light_2_2_##CAMO##_##PLATOON## : STB73_M43D_Light_2_2_Base { \
     scope=2; \
     scopeArsenal=2; \
     displayName = Q([73] M43/D [Light] [##PLATOON##] [##CAMO##]); \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -602,11 +666,11 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_Light_1_##CAMO##_##PLATOON## : STB73_M43D_Light_1_Base { \
@@ -617,12 +681,16 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_Light_1_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
@@ -639,6 +707,10 @@ class HitpointsProtectionInfo {  \
     scope=2; \
     scopeArsenal=2; \
     displayName = Q([73] M43/D [Light] [##PLATOON##] [##CAMO##]); \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -651,16 +723,20 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_Light_1_2_##CAMO##_##PLATOON## : STB73_M43D_Light_1_2_Base { \
     scope=2; \
     scopeArsenal=2; \
     displayName = Q([73] M43/D [Light] [##PLATOON##] [##CAMO##]); \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -673,14 +749,14 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   };
 
-#define NEW_VEST_M43D_PADS(CAMO,PLATOON) \
+#define NEW_VEST_M43D_PADS(CAMO,PLATOON,DECAL) \
   class STB73_M43D_Pads_4_##CAMO##_##PLATOON## : STB73_M43D_Pads_4_Base { \
     displayName = Q([73] M43/D [Pads] [##PLATOON##] [##CAMO##]); \
     scope=2; \
@@ -689,13 +765,17 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_Pads_4_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
@@ -711,25 +791,33 @@ class HitpointsProtectionInfo {  \
   class STB73_M43D_Pads_4_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_Pads_4_Base_TACPAD { \
     displayName = Q([73] M43/D [Pads] [##PLATOON##] [##CAMO##]); \
     ace_arsenal_uniqueBase = QUOTE(STB73_M43D_Pads_4_##CAMO##_##PLATOON##);\
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   };\
   class STB73_M43D_Pads_4_##CAMO##_##PLATOON##_UGPS : STB73_M43D_Pads_4_Base_UGPS { \
     displayName = Q([73] M43/D [Pads] [##PLATOON##] [##CAMO##]); \
     ace_arsenal_uniqueBase = QUOTE(STB73_M43D_Pads_4_##CAMO##_##PLATOON##);\
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_Pads_4_1_##CAMO##_##PLATOON## : STB73_M43D_Pads_4_1_Base { \
@@ -740,6 +828,10 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_Pads_4_1_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -752,11 +844,11 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_Pads_4_1_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_Pads_4_1_Base_TACPAD { \
@@ -766,13 +858,17 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_Pads_4_1_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   };\
   class STB73_M43D_Pads_4_1_##CAMO##_##PLATOON##_UGPS : STB73_M43D_Pads_4_1_Base_UGPS { \
@@ -782,13 +878,17 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_Pads_4_1_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   };\
   class STB73_M43D_Pads_4_2_##CAMO##_##PLATOON## : STB73_M43D_Pads_4_2_Base { \
@@ -799,6 +899,10 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_Pads_4_2_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -811,11 +915,11 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_Pads_4_2_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_Pads_4_2_Base_TACPAD { \
@@ -825,6 +929,10 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_Pads_4_2_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -834,11 +942,11 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   };\
   class STB73_M43D_Pads_4_2_##CAMO##_##PLATOON##_UGPS : STB73_M43D_Pads_4_2_Base_UGPS { \
@@ -848,26 +956,34 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_Pads_4_2_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   };\
   class STB73_M43D_Pads_3_##CAMO##_##PLATOON## : STB73_M43D_Pads_3_Base { \
     displayName = Q([73] M43/D [Pads] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
@@ -884,6 +1000,10 @@ class HitpointsProtectionInfo {  \
     displayName = Q([73] M43/D [Pads] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -896,17 +1016,21 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_Pads_3_2_##CAMO##_##PLATOON## : STB73_M43D_Pads_3_2_Base { \
     displayName = Q([73] M43/D [Pads] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -919,17 +1043,21 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_Pads_2_##CAMO##_##PLATOON## : STB73_M43D_Pads_2_Base { \
     displayName = Q([73] M43/D [Pads] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -942,17 +1070,21 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_Pads_2_1_##CAMO##_##PLATOON## : STB73_M43D_Pads_2_1_Base { \
     displayName = Q([73] M43/D [Pads] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -965,17 +1097,21 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_Pads_2_2_##CAMO##_##PLATOON## : STB73_M43D_Pads_2_2_Base { \
     displayName = Q([73] M43/D [Pads] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -988,23 +1124,27 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_Pads_1_##CAMO##_##PLATOON## : STB73_M43D_Pads_1_Base { \
     displayName = Q([73] M43/D [Pads] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
@@ -1021,6 +1161,10 @@ class HitpointsProtectionInfo {  \
     displayName = Q([73] M43/D [Pads] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -1033,16 +1177,20 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_Pads_1_2_##CAMO##_##PLATOON## : STB73_M43D_Pads_1_2_Base { \
     displayName = Q([73] M43/D [Pads] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -1055,14 +1203,14 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   };
 
-#define NEW_VEST_M43D_ODST(CAMO,PLATOON) \
+#define NEW_VEST_M43D_ODST(CAMO,PLATOON,DECAL) \
   class STB73_M43D_ODST_4_##CAMO##_##PLATOON## : STB73_M43D_ODST_4_Base { \
     displayName = Q([73] M43/D [ODST] [##PLATOON##] [##CAMO##]); \
     scope=2; \
@@ -1071,14 +1219,18 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_ODST_4_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
@@ -1094,27 +1246,35 @@ class HitpointsProtectionInfo {  \
   class STB73_M43D_ODST_4_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_ODST_4_Base_TACPAD { \
     displayName = Q([73] M43/D [ODST] [##PLATOON##] [##CAMO##]); \
     ace_arsenal_uniqueBase = QUOTE(STB73_M43D_ODST_4_##CAMO##_##PLATOON##);\
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   };\
   class STB73_M43D_ODST_4_##CAMO##_##PLATOON##_UGPS : STB73_M43D_ODST_4_Base_UGPS { \
     displayName = Q([73] M43/D [ODST] [##PLATOON##] [##CAMO##]); \
     ace_arsenal_uniqueBase = QUOTE(STB73_M43D_ODST_4_##CAMO##_##PLATOON##);\
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_ODST_4_1_##CAMO##_##PLATOON## : STB73_M43D_ODST_4_1_Base { \
@@ -1125,6 +1285,10 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_ODST_4_1_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -1137,25 +1301,29 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_ODST_4_1_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_ODST_4_1_Base_TACPAD { \
     displayName = Q([73] M43/D [ODST] [##PLATOON##] [##CAMO##]); \
     ace_arsenal_uniqueBase = QUOTE(STB73_M43D_ODST_4_1_##CAMO##_##PLATOON##);\
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
     class TCP_equipmentTypes: TCP_equipmentTypes \
 		{ \
@@ -1169,14 +1337,18 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_ODST_4_1_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   };\
   class STB73_M43D_ODST_4_2_##CAMO##_##PLATOON## : STB73_M43D_ODST_4_2_Base { \
@@ -1187,6 +1359,10 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_ODST_4_2_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -1199,12 +1375,12 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_ODST_4_2_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_ODST_4_2_Base_TACPAD { \
@@ -1214,6 +1390,10 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_ODST_4_2_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -1223,39 +1403,47 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   };\
   class STB73_M43D_ODST_4_2_##CAMO##_##PLATOON##_UGPS : STB73_M43D_ODST_4_2_Base_UGPS { \
     displayName = Q([73] M43/D [ODST] [##PLATOON##] [##CAMO##]); \
     ace_arsenal_uniqueBase = QUOTE(STB73_M43D_ODST_4_2_##CAMO##_##PLATOON##);\
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   };\
   class STB73_M43D_ODST_3_##CAMO##_##PLATOON## : STB73_M43D_ODST_3_Base { \
     displayName = Q([73] M43/D [ODST] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
@@ -1272,6 +1460,10 @@ class HitpointsProtectionInfo {  \
     displayName = Q([73] M43/D [ODST] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -1284,18 +1476,22 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_ODST_3_2_##CAMO##_##PLATOON## : STB73_M43D_ODST_3_2_Base { \
     displayName = Q([73] M43/D [ODST] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -1308,18 +1504,22 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_ODST_2_##CAMO##_##PLATOON## : STB73_M43D_ODST_2_Base { \
     displayName = Q([73] M43/D [ODST] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -1332,18 +1532,22 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_ODST_2_1_##CAMO##_##PLATOON## : STB73_M43D_ODST_2_1_Base { \
     displayName = Q([73] M43/D [ODST] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -1356,18 +1560,22 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_ODST_2_2_##CAMO##_##PLATOON## : STB73_M43D_ODST_2_2_Base { \
     displayName = Q([73] M43/D [ODST] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -1380,18 +1588,22 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_ODST_1_##CAMO##_##PLATOON## : STB73_M43D_ODST_1_Base { \
     displayName = Q([73] M43/D [ODST] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -1404,17 +1616,21 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_ODST_1_1_##CAMO##_##PLATOON## : STB73_M43D_ODST_1_1_Base { \
     displayName = Q([73] M43/D [ODST] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -1427,17 +1643,21 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_ODST_1_2_##CAMO##_##PLATOON## : STB73_M43D_ODST_1_2_Base { \
     displayName = Q([73] M43/D [ODST] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -1450,15 +1670,15 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; 
 
-#define NEW_VEST_M43D_BREACHER(CAMO,PLATOON) \
+#define NEW_VEST_M43D_BREACHER(CAMO,PLATOON,DECAL) \
   class STB73_M43D_BREACHER_4_##CAMO##_##PLATOON## : STB73_M43D_BREACHER_4_Base { \
     displayName = Q([73] M43/D [BREACHER] [##PLATOON##] [##CAMO##]); \
     scope=2; \
@@ -1467,15 +1687,19 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_BREACHER_4_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_BREACHER_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_BREACHER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
@@ -1495,15 +1719,19 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_BREACHER_4_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_BREACHER_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_BREACHER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   };\
   class STB73_M43D_BREACHER_4_##CAMO##_##PLATOON##_UGPS : STB73_M43D_BREACHER_4_Base_UGPS { \
@@ -1513,15 +1741,19 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_BREACHER_4_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_BREACHER_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_BREACHER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_BREACHER_4_1_##CAMO##_##PLATOON## : STB73_M43D_BREACHER_4_1_Base { \
@@ -1532,6 +1764,10 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_BREACHER_4_1_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -1544,13 +1780,13 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_BREACHER_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_BREACHER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_BREACHER_4_1_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_BREACHER_4_1_Base_TACPAD { \
@@ -1560,15 +1796,19 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_BREACHER_4_1_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_BREACHER_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_BREACHER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   };\
   class STB73_M43D_BREACHER_4_1_##CAMO##_##PLATOON##_UGPS : STB73_M43D_BREACHER_4_1_Base_TACPAD { \
@@ -1578,15 +1818,19 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_BREACHER_4_1_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_BREACHER_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_BREACHER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   };\
   class STB73_M43D_BREACHER_4_2_##CAMO##_##PLATOON## : STB73_M43D_BREACHER_4_2_Base { \
@@ -1597,6 +1841,10 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_BREACHER_4_2_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -1609,13 +1857,13 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_BREACHER_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_BREACHER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_BREACHER_4_2_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_BREACHER_4_2_Base_TACPAD { \
@@ -1625,15 +1873,19 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_BREACHER_4_2_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_BREACHER_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_BREACHER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   };\
   class STB73_M43D_BREACHER_4_2_##CAMO##_##PLATOON##_UGPS : STB73_M43D_BREACHER_4_2_Base_UGPS { \
@@ -1643,30 +1895,38 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_BREACHER_4_2_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_BREACHER_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_BREACHER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_BREACHER_3_##CAMO##_##PLATOON## : STB73_M43D_BREACHER_3_Base { \
     displayName = Q([73] M43/D [BREACHER] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_BREACHER_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_BREACHER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
@@ -1683,6 +1943,10 @@ class HitpointsProtectionInfo {  \
     displayName = Q([73] M43/D [BREACHER] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -1695,19 +1959,23 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_BREACHER_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_BREACHER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_BREACHER_3_2_##CAMO##_##PLATOON## : STB73_M43D_BREACHER_3_2_Base { \
     scope=2; \
     scopeArsenal=2; \
     displayName = Q([73] M43/D [BREACHER] [##PLATOON##] [##CAMO##]); \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -1720,19 +1988,23 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_BREACHER_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_BREACHER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_BREACHER_2_##CAMO##_##PLATOON## : STB73_M43D_BREACHER_2_Base { \
     displayName = Q([73] M43/D [BREACHER] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -1745,19 +2017,23 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_BREACHER_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_BREACHER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_BREACHER_2_1_##CAMO##_##PLATOON## : STB73_M43D_BREACHER_2_1_Base { \
     displayName = Q([73] M43/D [BREACHER] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -1770,19 +2046,23 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_BREACHER_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_BREACHER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_BREACHER_2_2_##CAMO##_##PLATOON## : STB73_M43D_BREACHER_2_2_Base { \
     displayName = Q([73] M43/D [BREACHER] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -1795,27 +2075,31 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_BREACHER_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_BREACHER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_BREACHER_1_##CAMO##_##PLATOON## : STB73_M43D_BREACHER_1_Base { \
     displayName = Q([73] M43/D [BREACHER] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_BREACHER_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_BREACHER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
@@ -1832,14 +2116,18 @@ class HitpointsProtectionInfo {  \
     displayName = Q([73] M43/D [BREACHER] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_BREACHER_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_BREACHER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
@@ -1856,14 +2144,18 @@ class HitpointsProtectionInfo {  \
     displayName = Q([73] M43/D [BREACHER] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_BREACHER_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_BREACHER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
@@ -1877,7 +2169,7 @@ class HitpointsProtectionInfo {  \
     }; \
   };
 
-#define NEW_VEST_M43D_SHARPSHOOTER(CAMO,PLATOON) \
+#define NEW_VEST_M43D_SHARPSHOOTER(CAMO,PLATOON,DECAL) \
   class STB73_M43D_SHARPSHOOTER_4_##CAMO##_##PLATOON## : STB73_M43D_SHARPSHOOTER_4_Base { \
     displayName = Q([73] M43/D [SHARPSHOOTER] [##PLATOON##] [##CAMO##]); \
     scope=2; \
@@ -1886,15 +2178,19 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_SHARPSHOOTER_4_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
@@ -1914,15 +2210,19 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_SHARPSHOOTER_4_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   };\
   class STB73_M43D_SHARPSHOOTER_4_##CAMO##_##PLATOON##_UGPS : STB73_M43D_SHARPSHOOTER_4_Base_UGPS { \
@@ -1932,15 +2232,19 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_SHARPSHOOTER_4_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   };\
   class STB73_M43D_SHARPSHOOTER_4_1_##CAMO##_##PLATOON## : STB73_M43D_SHARPSHOOTER_4_1_Base { \
@@ -1951,6 +2255,10 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_SHARPSHOOTER_4_1_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -1963,13 +2271,13 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_SHARPSHOOTER_4_1_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_SHARPSHOOTER_4_1_Base_TACPAD { \
@@ -1979,15 +2287,19 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_SHARPSHOOTER_4_1_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   };\
   class STB73_M43D_SHARPSHOOTER_4_1_##CAMO##_##PLATOON##_UGPS : STB73_M43D_SHARPSHOOTER_4_1_Base_UGPS { \
@@ -1997,15 +2309,19 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_SHARPSHOOTER_4_1_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   };\
   class STB73_M43D_SHARPSHOOTER_4_2_##CAMO##_##PLATOON## : STB73_M43D_SHARPSHOOTER_4_2_Base { \
@@ -2016,6 +2332,10 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_SHARPSHOOTER_4_2_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -2028,13 +2348,13 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_SHARPSHOOTER_4_2_##CAMO##_##PLATOON##_TACPAD : STB73_M43D_SHARPSHOOTER_4_2_Base_TACPAD { \
@@ -2044,15 +2364,19 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_SHARPSHOOTER_4_2_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   };\
   class STB73_M43D_SHARPSHOOTER_4_2_##CAMO##_##PLATOON##_UGPS : STB73_M43D_SHARPSHOOTER_4_2_Base_UGPS { \
@@ -2062,30 +2386,38 @@ class HitpointsProtectionInfo {  \
 		{ \
 			baseEquipment=Q(STB73_M43D_SHARPSHOOTER_4_2_##CAMO##_##PLATOON##); \
 		}; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   };\
   class STB73_M43D_SHARPSHOOTER_3_##CAMO##_##PLATOON## : STB73_M43D_SHARPSHOOTER_3_Base { \
     displayName = Q([73] M43/D [SHARPSHOOTER] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
@@ -2102,6 +2434,10 @@ class HitpointsProtectionInfo {  \
     displayName = Q([73] M43/D [SHARPSHOOTER] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -2114,19 +2450,23 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_SHARPSHOOTER_3_2_##CAMO##_##PLATOON## : STB73_M43D_SHARPSHOOTER_3_2_Base { \
     displayName = Q([73] M43/D [SHARPSHOOTER] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -2139,19 +2479,23 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_SHARPSHOOTER_2_##CAMO##_##PLATOON## : STB73_M43D_SHARPSHOOTER_2_Base { \
     displayName = Q([73] M43/D [SHARPSHOOTER] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -2164,19 +2508,23 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_SHARPSHOOTER_2_1_##CAMO##_##PLATOON## : STB73_M43D_SHARPSHOOTER_2_1_Base { \
     displayName = Q([73] M43/D [SHARPSHOOTER] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -2189,19 +2537,23 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_SHARPSHOOTER_2_2_##CAMO##_##PLATOON## : STB73_M43D_SHARPSHOOTER_2_2_Base { \
     displayName = Q([73] M43/D [SHARPSHOOTER] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -2214,27 +2566,31 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_SHARPSHOOTER_1_##CAMO##_##PLATOON## : STB73_M43D_SHARPSHOOTER_1_Base { \
     displayName = Q([73] M43/D [SHARPSHOOTER] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
@@ -2251,6 +2607,10 @@ class HitpointsProtectionInfo {  \
     displayName = Q([73] M43/D [SHARPSHOOTER] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -2263,18 +2623,22 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   }; \
   class STB73_M43D_SHARPSHOOTER_1_2_##CAMO##_##PLATOON## : STB73_M43D_SHARPSHOOTER_1_2_Base { \
     displayName = Q([73] M43/D [SHARPSHOOTER] [##PLATOON##] [##CAMO##]); \
     scope=2; \
     scopeArsenal=2; \
+    class TCP_uniformDecals: TCP_uniformDecals \
+    { \
+        decalColor=Q(##DECAL##); \
+    }; \
     class XtdGearInfo { \
       Model="STB73_ACE_M43D_Vest"; \
       Billet=Q(##PLATOON##); \
@@ -2287,32 +2651,70 @@ class HitpointsProtectionInfo {  \
     }; \
     hiddenSelectionsTextures[]= \
     { \
-      Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,##PLATOON##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43D_ODST_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-      Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##PLATOON##\##CAMO##\vest_Shoulders_SHARPSHOOTER_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43D_ODST_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
     };\
   };
 
+#define VEST_M43D_CAMOS(PLATOON) \
+  NEW_VEST_M43D_NONE(Black,PLATOON,White) \
+  NEW_VEST_M43D_LIGHT(Black,PLATOON,White) \
+  NEW_VEST_M43D_PADS(Black,PLATOON,White) \
+  NEW_VEST_M43D_ODST(Black,PLATOON,White) \
+  NEW_VEST_M43D_SHARPSHOOTER(Black,PLATOON,White) \
+  NEW_VEST_M43D_BREACHER(Black,PLATOON,White) \
+  NEW_VEST_M43D_NONE(Brown,PLATOON,White) \
+  NEW_VEST_M43D_LIGHT(Brown,PLATOON,White) \
+  NEW_VEST_M43D_PADS(Brown,PLATOON,White) \
+  NEW_VEST_M43D_ODST(Brown,PLATOON,White) \
+  NEW_VEST_M43D_SHARPSHOOTER(Brown,PLATOON,White) \
+  NEW_VEST_M43D_BREACHER(Brown,PLATOON,White) \
+  NEW_VEST_M43D_NONE(Olive,PLATOON,White) \
+  NEW_VEST_M43D_LIGHT(Olive,PLATOON,White) \
+  NEW_VEST_M43D_PADS(Olive,PLATOON,White) \
+  NEW_VEST_M43D_ODST(Olive,PLATOON,White) \
+  NEW_VEST_M43D_SHARPSHOOTER(Olive,PLATOON,White) \
+  NEW_VEST_M43D_BREACHER(Olive,PLATOON,White) \
+  NEW_VEST_M43D_NONE(Tan,PLATOON,Black) \
+  NEW_VEST_M43D_LIGHT(Tan,PLATOON,Black) \
+  NEW_VEST_M43D_PADS(Tan,PLATOON,Black) \
+  NEW_VEST_M43D_ODST(Tan,PLATOON,Black) \
+  NEW_VEST_M43D_SHARPSHOOTER(Tan,PLATOON,Black) \
+  NEW_VEST_M43D_BREACHER(Tan,PLATOON,Black) \
+  NEW_VEST_M43D_NONE(White,PLATOON,Black) \
+  NEW_VEST_M43D_LIGHT(White,PLATOON,Black) \
+  NEW_VEST_M43D_PADS(White,PLATOON,Black) \
+  NEW_VEST_M43D_ODST(White,PLATOON,Black) \
+  NEW_VEST_M43D_SHARPSHOOTER(White,PLATOON,Black) \
+  NEW_VEST_M43D_BREACHER(White,PLATOON,Black) \
 
-#define NEW_VEST_43A(ROLE)                          \
-    class STB73_M43A_##ROLE##_Black: TCP_V_M43A_BaseSec_3_Black {   \
-      scope=2; \
-      scopeArsenal=2; \
-      displayName = QUOTE([73] M43/A CBBAS [ROLE]); \
-      maximumLoad = VEST_MAXLOAD; \
-      hiddenSelectionsTextures[]=\
-      { \
-        Q(STB73_TEXPATH(vest,vest_M43A_01_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_Shoulders_BaseSec_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43A_02_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43A_03_CO.paa)),\
-        Q(STB73_TEXPATH(vest,vest_M43_DecalSheet_CA.paa))\
-      };\
-      VEST_ITEM_M43A_INFO \
-    };
+#define NEW_VEST_43A(CAMO,ROLE)                          \
+  class STB73_M43A_##ROLE##_##CAMO: STB73_M43D_BaseSec_Base {   \
+    scope=2; \
+    scopeArsenal=2; \
+    displayName = QUOTE([73] M43/A CBBAS [ROLE] [CAMO]); \
+    maximumLoad = VEST_MAXLOAD; \
+    hiddenSelectionsTextures[]=\
+    { \
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_01_CO.paa)),\
+      Q(STB73_TEXPATH(vest,vest_Shoulders_BaseSec_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_02_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43A_03_CO.paa)),\
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa))\
+    };\
+    VEST_ITEM_M43A_INFO \
+  };
+
+#define VEST_M43A_CAMOS(ROLE) \
+  NEW_VEST_43A(Black,ROLE) \
+  NEW_VEST_43A(Brown,ROLE) \
+  NEW_VEST_43A(Tan,ROLE) \
+  NEW_VEST_43A(Olive,ROLE) \
+  NEW_VEST_43A(White,ROLE)
 
 #define HELMET_HITPOINT_INFO       \
   class HitpointsProtectionInfo \
@@ -2351,90 +2753,113 @@ class HitpointsProtectionInfo {  \
     HELMET_HITPOINT_INFO                                                \
   };
 
-#define ECH55D_HELMET(CAMO,VISOR,POSITION,TYPE) \
-  class STB73_H_ECH55D_##CAMO##_##VISOR## : STB73_Helmet_ECH55D_Base { \
-    displayName = QUOTE([73] ECH55D Helmet CAMO VISOR); \
+#define ECH55D_HELMET(CAMO,PLATOON,VISOR,POSITION,TYPE) \
+  class STB73_H_ECH55D_##PLATOON##_##CAMO##_##VISOR## : STB73_Helmet_ECH55D_Base { \
+    displayName = QUOTE([73] ECH55D Helmet CAMO PLATOON VISOR); \
     ace_hearing_protection = 5; \
     scope=2; \
     scopeArsenal=2; \
     CBRN_protectionLevel="1 + 2"; \
     class XtdGearInfo { \
       Model="STB73_ACE_ECH55D_Helmet"; \
-      Billet=Q(##CAMO##); \
+      Camo=Q(##CAMO##); \
+      Billet=Q(##PLATOON##); \
       Variant =Q(##POSITION##); \
     };\
     TCP_visrClasses[]= \
 		{ \
-			"STB73_H_ECH55D_##CAMO##_##VISOR##", \
-			"STB73_H_ECH55D_##CAMO##_##VISOR##_DP" \
+			"STB73_H_ECH55D_##PLATOON##_##CAMO##_##VISOR##", \
+			"STB73_H_ECH55D_##PLATOON##_##CAMO##_##VISOR##_DP" \
 		}; \
     hiddenSelectionsTextures[] = \
     { \
-      Q(STB73_TEXPATH(helmets,##CAMO##\ECH55D_##TYPE##_helmet_co.paa)), \
+      Q(STB73_TEXPATH(helmets,##PLATOON##\##CAMO##\ECH55D_##TYPE##_helmet_co.paa)), \
       Q(STB73_TEXPATH(helmets,ECH55D_##VISOR##_visor_co.paa)),\
-      "tcp\characters\BLUFOR\UNSC\ARMY\Vests\M43A\data\camo\White\vest_M43_DecalSheet_CA.paa" \
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa)) \
       }; \
   }; \
-  class STB73_H_ECH55D_##CAMO##_##VISOR##_DP : STB73_Helmet_ECH55D_DP_Base { \
-    displayName = QUOTE([73] ECH55D Helmet CAMO VISOR [DP]); \
+  class STB73_H_ECH55D_##PLATOON##_##CAMO##_##VISOR##_DP : STB73_Helmet_ECH55D_DP_Base { \
+    displayName = QUOTE([73] ECH55D Helmet CAMO PLATOON VISOR [DP]); \
     ace_hearing_protection = 5; \
     CBRN_protectionLevel="1 + 2"; \
     scope=1; \
     scopeArsenal=1; \
     TCP_visrClasses[]= \
 		{ \
-			"STB73_H_ECH55D_##CAMO##_##VISOR##", \
-			"STB73_H_ECH55D_##CAMO##_##VISOR##_DP" \
+			"STB73_H_ECH55D_##PLATOON##_##CAMO##_##VISOR##", \
+			"STB73_H_ECH55D_##PLATOON##_##CAMO##_##VISOR##_DP" \
 		}; \
     hiddenSelectionsTextures[] = \
     { \
-      Q(STB73_TEXPATH(helmets,##CAMO##\ECH55D_standard_helmet_co.paa)),\
+      Q(STB73_TEXPATH(helmets,##PLATOON##\##CAMO##\ECH55D_standard_helmet_co.paa)),\
       "\TCP\Characters\BLUFOR\UNSC\Marines\Headgear\helmet_ECH55D\data\camo\Black\helmet_ECH55D_Visor_CA.paa", \
-      "tcp\characters\BLUFOR\UNSC\ARMY\Vests\M43A\data\camo\White\vest_M43_DecalSheet_CA.paa" \
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa)) \
       }; \
   };
 
-#define CUS_ECH55D_HELMET(WHO,VISOR) \
-  class STB73_H_ECH55D_##WHO##_##VISOR## : STB73_Helmet_ECH55D_Base { \
-    displayName = QUOTE([73] ECH55D Helmet WHO VISOR); \
+#define ECH55D_HELMET_CAMOS(PLATOON,VISOR,POSITION,TYPE) \
+  ECH55D_HELMET(Black,PLATOON,VISOR,POSITION,TYPE) \
+  ECH55D_HELMET(Brown,PLATOON,VISOR,POSITION,TYPE) \
+  ECH55D_HELMET(Tan,PLATOON,VISOR,POSITION,TYPE) \
+  ECH55D_HELMET(Olive,PLATOON,VISOR,POSITION,TYPE) \
+  ECH55D_HELMET(White,PLATOON,VISOR,POSITION,TYPE)
+
+#define ECH55D_HELMET_VISORS(PLATOON) \
+  ECH55D_HELMET_CAMOS(PLATOON,Black,Officer,Standard) \
+  ECH55D_HELMET_CAMOS(PLATOON,Red,SORC,SORC) \
+  ECH55D_HELMET_CAMOS(PLATOON,Gold,NCO,Standard) \
+  ECH55D_HELMET_CAMOS(PLATOON,Silver,Specialist,Standard) \
+  ECH55D_HELMET_CAMOS(PLATOON,Blue,Enlisted,Standard)
+
+#define CUS_ECH55D_HELMET(CAMO,WHO,VISOR) \
+  class STB73_H_ECH55D_##CAMO##_##WHO##_##VISOR## : STB73_Helmet_ECH55D_Base { \
+    displayName = QUOTE([73] ECH55D Helmet CAMO WHO VISOR); \
     ace_hearing_protection = 5; \
     scope=2; \
     scopeArsenal=2; \
     CBRN_protectionLevel="1 + 2"; \
     class XtdGearInfo { \
       Model="STB73_ACE_CUS_ECH55D_Helmet"; \
+      Camo=Q(##CAMO##); \
       Custom=Q(##WHO##); \
     };\
     TCP_visrClasses[]= \
 		{ \
-			"STB73_H_ECH55D_##WHO##_##VISOR##", \
-			"STB73_H_ECH55D_##WHO##_##VISOR##_DP" \
+			"STB73_H_ECH55D_##CAMO##_##WHO##_##VISOR##", \
+			"STB73_H_ECH55D_##CAMO##_##WHO##_##VISOR##_DP" \
 		}; \
     hiddenSelectionsTextures[] = \
     { \
-      Q(STB73_TEXPATH(helmets,custom\ECH55D_##WHO##_helmet_co.paa)), \
+      Q(STB73_TEXPATH(helmets,custom\##WHO##\##CAMO##\ECH55D_##WHO##_helmet_co.paa)), \
       Q(STB73_TEXPATH(helmets,ECH55D_##VISOR##_visor_co.paa)),\
-      "tcp\characters\BLUFOR\UNSC\ARMY\Vests\M43A\data\camo\White\vest_M43_DecalSheet_CA.paa" \
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa)) \
       }; \
   }; \
-  class STB73_H_ECH55D_##WHO##_##VISOR##_DP : STB73_Helmet_ECH55D_DP_Base { \
-    displayName = QUOTE([73] ECH55D Helmet WHO VISOR [DP]); \
+  class STB73_H_ECH55D_##CAMO##_##WHO##_##VISOR##_DP : STB73_Helmet_ECH55D_DP_Base { \
+    displayName = QUOTE([73] ECH55D Helmet CAMO WHO VISOR [DP]); \
     ace_hearing_protection = 5; \
     CBRN_protectionLevel="1 + 2"; \
     scope=1; \
     scopeArsenal=1; \
     TCP_visrClasses[]= \
 		{ \
-			"STB73_H_ECH55D_##WHO##_##VISOR##", \
-			"STB73_H_ECH55D_##WHO##_##VISOR##_DP" \
+			"STB73_H_ECH55D_##CAMO##_##WHO##_##VISOR##", \
+			"STB73_H_ECH55D_##CAMO##_##WHO##_##VISOR##_DP" \
 		}; \
     hiddenSelectionsTextures[] = \
     { \
-      Q(STB73_TEXPATH(helmets,custom\ECH55D_##WHO##_helmet_co.paa)),\
+      Q(STB73_TEXPATH(helmets,custom\##WHO##\##CAMO##\ECH55D_##WHO##_helmet_co.paa)),\
       "\TCP\Characters\BLUFOR\UNSC\Marines\Headgear\helmet_ECH55D\data\camo\Black\helmet_ECH55D_Visor_CA.paa", \
-      "tcp\characters\BLUFOR\UNSC\ARMY\Vests\M43A\data\camo\White\vest_M43_DecalSheet_CA.paa" \
+      Q(STB73_TEXPATH(vest,##CAMO##\vest_M43_DecalSheet_CA.paa)) \
       }; \
   };
+
+#define ECH55D_CUS_HELMET_CAMOS(WHO,VISOR) \
+  CUS_ECH55D_HELMET(Black,WHO,VISOR) \
+  CUS_ECH55D_HELMET(Brown,WHO,VISOR) \
+  CUS_ECH55D_HELMET(Tan,WHO,VISOR) \
+  CUS_ECH55D_HELMET(Olive,WHO,VISOR) \
+  CUS_ECH55D_HELMET(White,WHO,VISOR)
 
 #define TCP_WEP_CLASS_NORMAL(SHIRT,SLEEVE)                          \
   class TCP_U_B_CBUU_##SHIRT##_##SLEEVE##_Base;
@@ -5320,1720 +5745,3 @@ class HitpointsProtectionInfo {  \
         }; \
       }; \
   };
-
-#define TCP_NO_BACKPACK(ROLE) \
-  class TCP_B_##ROLE##_Black;\
-  class TCP_B_##ROLE##_Black_M43A1;\
-  class TCP_B_##ROLE##_Black_M43A;\
-  class TCP_B_##ROLE##_Black_M43D1;\
-  class TCP_B_##ROLE##_Black_M43D;
-
-#define TCP_NO_BACKPACK_M43(ROLE) \
-  class TCP_B_##ROLE##_Black;\
-  class TCP_B_##ROLE##_Black_M43;\
-
-#define TCP_BUTTPACK(ROLE,BUTT) \
-  class TCP_B_##ROLE##_##BUTT##_Black;\
-  class TCP_B_##ROLE##_##BUTT##_Black_M43A1;\
-  class TCP_B_##ROLE##_##BUTT##_Black_M43A;\
-  class TCP_B_##ROLE##_##BUTT##_Black_M43D1;\
-  class TCP_B_##ROLE##_##BUTT##_Black_M43D;
-
-#define TCP_BUTTPACK_M43(ROLE,BUTT) \
-  class TCP_B_##ROLE##_##BUTT##_Black;\
-  class TCP_B_##ROLE##_##BUTT##_Black_M43;\
-
-#define TCP_BACKPACK(ROLE,BACK) \
-  class TCP_B_##ROLE##_##BACK##_Black;\
-  class TCP_B_##ROLE##_##BACK##_Black_M43A1;\
-  class TCP_B_##ROLE##_##BACK##_Black_M43A;\
-  class TCP_B_##ROLE##_##BACK##_Black_M43D1;\
-  class TCP_B_##ROLE##_##BACK##_Black_M43D;
-
-#define TCP_BACKPACK_BUTTPACK(ROLE,BACK,BUTT) \
-  class TCP_B_##ROLE##_##BACK##_##BUTT##_Black;\
-  class TCP_B_##ROLE##_##BACK##_##BUTT##_Black_M43A1;\
-  class TCP_B_##ROLE##_##BACK##_##BUTT##_Black_M43A;\
-  class TCP_B_##ROLE##_##BACK##_##BUTT##_Black_M43D1;\
-  class TCP_B_##ROLE##_##BACK##_##BUTT##_Black_M43D;
-
-#define TCP_BACKPACK_BUTTPACK_M43(ROLE,BACK,BUTT) \
-  class TCP_B_##ROLE##_##BACK##_##BUTT##_Black;\
-  class TCP_B_##ROLE##_##BACK##_##BUTT##_Black_M43;\
-
-#define TCP_BACKPACK_MOS_BUTTPACK(ROLE,BACK,MOS,BUTT) \
-  class TCP_B_##ROLE##_##BACK##_##MOS##_##BUTT##_Black;\
-  class TCP_B_##ROLE##_##BACK##_##MOS##_##BUTT##_Black_M43A1;\
-  class TCP_B_##ROLE##_##BACK##_##MOS##_##BUTT##_Black_M43A;\
-  class TCP_B_##ROLE##_##BACK##_##MOS##_##BUTT##_Black_M43D1;\
-  class TCP_B_##ROLE##_##BACK##_##MOS##_##BUTT##_Black_M43D;
-
-#define TCP_BACKPACK_MOS(ROLE,BACK,MOS) \
-  class TCP_B_##ROLE##_##BACK##_##MOS##_Black;\
-  class TCP_B_##ROLE##_##BACK##_##MOS##_Black_M43A1;\
-  class TCP_B_##ROLE##_##BACK##_##MOS##_Black_M43A;\
-  class TCP_B_##ROLE##_##BACK##_##MOS##_Black_M43D1;\
-  class TCP_B_##ROLE##_##BACK##_##MOS##_Black_M43D;
-
-#define TCP_BACKPACK_ROLE(ROLE) \
-  TCP_NO_BACKPACK(##ROLE##)\
-  TCP_BUTTPACK(##ROLE##,M2_Buttpack)\
-  TCP_BUTTPACK(##ROLE##,M35_Buttpack)\
-  TCP_BUTTPACK(##ROLE##,EM39_Buttpack)\
-  TCP_BACKPACK(##ROLE##,EM39_MLBE_Hardcase)\
-  TCP_BACKPACK(##ROLE##,M43_Medium_Rucksack)\
-  TCP_BACKPACK_BUTTPACK(##ROLE##,EM39_MLBE_Hardcase,M2_Buttpack)\
-  TCP_BACKPACK_BUTTPACK(##ROLE##,EM39_MLBE_Hardcase,M35_Buttpack)\
-  TCP_BACKPACK_BUTTPACK(##ROLE##,EM39_MLBE_Hardcase,EM39_Buttpack)\
-  TCP_BACKPACK_BUTTPACK(##ROLE##,EM39_MLBE_Hardcase,Roll)\
-  TCP_BACKPACK_BUTTPACK(##ROLE##,M43_Medium_Rucksack,M2_Buttpack)\
-  TCP_BACKPACK_BUTTPACK(##ROLE##,M43_Medium_Rucksack,M35_Buttpack)\
-  TCP_BACKPACK_BUTTPACK(##ROLE##,M43_Medium_Rucksack,EM39_Buttpack)\
-  TCP_BACKPACK_BUTTPACK(##ROLE##,M43_Medium_Rucksack,Roll)\
-  TCP_BACKPACK_MOS(##ROLE##,EM39_MLBE_Hardcase,Patrol)\
-  TCP_BACKPACK_MOS(##ROLE##,M43_Medium_Rucksack,Patrol)\
-  TCP_BACKPACK_MOS(##ROLE##,M43_Medium_Rucksack,Assault)\
-  TCP_BACKPACK_MOS(##ROLE##,M43_Medium_Rucksack,Engineer)\
-  TCP_BACKPACK_MOS(##ROLE##,M43_Medium_Rucksack,Field)\
-  TCP_BACKPACK_MOS(##ROLE##,M43_Medium_Rucksack,Medical)\
-  TCP_BACKPACK_MOS_BUTTPACK(##ROLE##,EM39_MLBE_Hardcase,Patrol,M2_Buttpack)\
-  TCP_BACKPACK_MOS_BUTTPACK(##ROLE##,EM39_MLBE_Hardcase,Patrol,M35_Buttpack)\
-  TCP_BACKPACK_MOS_BUTTPACK(##ROLE##,EM39_MLBE_Hardcase,Patrol,EM39_Buttpack)\
-  TCP_BACKPACK_MOS_BUTTPACK(##ROLE##,EM39_MLBE_Hardcase,Patrol,Roll)\
-  TCP_BACKPACK_MOS_BUTTPACK(##ROLE##,M43_Medium_Rucksack,Patrol,M2_Buttpack)\
-  TCP_BACKPACK_MOS_BUTTPACK(##ROLE##,M43_Medium_Rucksack,Patrol,M35_Buttpack)\
-  TCP_BACKPACK_MOS_BUTTPACK(##ROLE##,M43_Medium_Rucksack,Patrol,EM39_Buttpack)\
-  TCP_BACKPACK_MOS_BUTTPACK(##ROLE##,M43_Medium_Rucksack,Patrol,Roll)\
-  TCP_BACKPACK_MOS_BUTTPACK(##ROLE##,M43_Medium_Rucksack,Assault,M2_Buttpack)\
-  TCP_BACKPACK_MOS_BUTTPACK(##ROLE##,M43_Medium_Rucksack,Assault,M35_Buttpack)\
-  TCP_BACKPACK_MOS_BUTTPACK(##ROLE##,M43_Medium_Rucksack,Assault,EM39_Buttpack)\
-  TCP_BACKPACK_MOS_BUTTPACK(##ROLE##,M43_Medium_Rucksack,Assault,Roll)\
-  TCP_BACKPACK_MOS_BUTTPACK(##ROLE##,M43_Medium_Rucksack,Engineer,M2_Buttpack)\
-  TCP_BACKPACK_MOS_BUTTPACK(##ROLE##,M43_Medium_Rucksack,Engineer,M35_Buttpack)\
-  TCP_BACKPACK_MOS_BUTTPACK(##ROLE##,M43_Medium_Rucksack,Engineer,EM39_Buttpack)\
-  TCP_BACKPACK_MOS_BUTTPACK(##ROLE##,M43_Medium_Rucksack,Engineer,Roll)\
-  TCP_BACKPACK_MOS_BUTTPACK(##ROLE##,M43_Medium_Rucksack,Field,M2_Buttpack)\
-  TCP_BACKPACK_MOS_BUTTPACK(##ROLE##,M43_Medium_Rucksack,Field,M35_Buttpack)\
-  TCP_BACKPACK_MOS_BUTTPACK(##ROLE##,M43_Medium_Rucksack,Field,EM39_Buttpack)\
-  TCP_BACKPACK_MOS_BUTTPACK(##ROLE##,M43_Medium_Rucksack,Field,Roll)\
-  TCP_BACKPACK_MOS_BUTTPACK(##ROLE##,M43_Medium_Rucksack,Medical,M2_Buttpack)\
-  TCP_BACKPACK_MOS_BUTTPACK(##ROLE##,M43_Medium_Rucksack,Medical,M35_Buttpack)\
-  TCP_BACKPACK_MOS_BUTTPACK(##ROLE##,M43_Medium_Rucksack,Medical,EM39_Buttpack)\
-  TCP_BACKPACK_MOS_BUTTPACK(##ROLE##,M43_Medium_Rucksack,Medical,Roll)
-
-
-#define STB73_BUTTPACK_ONLY(BUTT,CAMO,MAXLOAD) \
-  class STB73_B_##BUTT##_##CAMO## : TCP_B_##BUTT##_Black\
-  {\
-    maximumLoad = MAXLOAD;\
-    scope=2;\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##BUTT##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-    class XtdGearInfo { \
-      model=Q(STB73_B_##BUTT##); \
-      camo=Q(##CAMO##); \
-    }; \
-  };\
-  class STB73_B_##BUTT##_##CAMO##_M43A1 : TCP_B_##BUTT##_Black_M43A1\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##BUTT##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##BUTT##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };\
-  class STB73_B_##BUTT##_##CAMO##_M43A : TCP_B_##BUTT##_Black_M43A\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##BUTT##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##BUTT##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };\
-  class STB73_B_##BUTT##_##CAMO##_M43D1 : TCP_B_##BUTT##_Black_M43D1\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##BUTT##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##BUTT##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };\
-  class STB73_B_##BUTT##_##CAMO##_M43D : TCP_B_##BUTT##_Black_M43D\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##BUTT##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##BUTT##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };
-#define STB73_M43_BACKPACK_ONLY(BACK,CAMO,MAXLOAD) \
-  class STB73_B_##BACK##_##CAMO## : TCP_B_##BACK##_Black\
-  {\
-    maximumLoad = MAXLOAD;\
-    scope=2;\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##BACK##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\##BACK##_CO.paa)\
-		};\
-    class XtdGearInfo { \
-      model=Q(STB73_B_##BACK##); \
-      camo=Q(##CAMO##); \
-      roll=Q(None); \
-      pouch_level=Q(None); \
-    }; \
-  };\
-  class STB73_B_##BACK##_##CAMO##_M43 : TCP_B_##BACK##_Black_M43\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##BACK##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##BACK##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa)\
-		};\
-  };
-#define STB73_M43_BACKPACK_MOS_ONLY(BACK,MOS,CAMO,MAXLOAD) \
-  class STB73_B_##BACK##_##MOS##_##CAMO## : TCP_B_##BACK##_##MOS##_Black\
-  {\
-    maximumLoad = MAXLOAD;\
-    scope=2;\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##BACK##_##MOS##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-      QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-    class XtdGearInfo { \
-      model=Q(STB73_B_##BACK##); \
-      camo=Q(##CAMO##); \
-      roll=Q(None); \
-      pouch_level=Q(##MOS##); \
-    }; \
-  };\
-  class STB73_B_##BACK##_##MOS##_##CAMO##_M43 : TCP_B_##BACK##_##MOS##_Black_M43\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##BACK##_##MOS##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##BACK##_##MOS##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-      QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };
-
-#define STB73_M43_BACKPACK_MOS_ROLL_ONLY(BACK,MOS,ROLL,CAMO,MAXLOAD) \
-  class STB73_B_##BACK##_##MOS##_##ROLL##_##CAMO## : TCP_B_##BACK##_##MOS##_##ROLL##_Black\
-  {\
-    maximumLoad = MAXLOAD;\
-    scope=2;\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##BACK##_##MOS##_##ROLL##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-      QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-    class XtdGearInfo { \
-      model=Q(STB73_B_##BACK##); \
-      camo=Q(##CAMO##); \
-      roll=Q(##ROLL##); \
-      pouch_level=Q(##MOS##); \
-    }; \
-  };\
-  class STB73_B_##BACK##_##MOS##_##ROLL##_##CAMO##_M43 : TCP_B_##BACK##_##MOS##_##ROLL##_Black_M43\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##BACK##_##MOS##_##ROLL##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##BACK##_##MOS##_##ROLL##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-      QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };
-
-#define STB73_M43_BACKPACK_ROLL_ONLY(BACK,ROLL,CAMO,MAXLOAD) \
-  class STB73_B_##BACK##_##ROLL##_##CAMO## : TCP_B_##BACK##_##ROLL##_Black\
-  {\
-    maximumLoad = MAXLOAD;\
-    scope=2;\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##BACK##_##ROLL##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-      QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-    class XtdGearInfo { \
-      model=Q(STB73_B_##BACK##); \
-      camo=Q(##CAMO##); \
-      roll=Q(##ROLL##); \
-      pouch_level=Q(None); \
-    }; \
-  };\
-  class STB73_B_##BACK##_##ROLL##_##CAMO##_M43 : TCP_B_##BACK##_##ROLL##_Black_M43\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##BACK##_##ROLL##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##BACK##_##ROLL##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-      QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };
-
-#define STB73_EM39_BACKPACK_ONLY(BACK,CAMO,MAXLOAD) \
-  class STB73_B_##BACK##_##CAMO## : TCP_B_##BACK##_Black\
-  {\
-    maximumLoad = MAXLOAD;\
-    scope=2;\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##BACK##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\##BACK##_CO.paa)\
-		};\
-    class XtdGearInfo { \
-      model=Q(STB73_B_##BACK##); \
-      roll=Q(None); \
-      pouch_level=Q(None); \
-    }; \
-  };\
-  class STB73_B_##BACK##_##CAMO##_M43A1 : TCP_B_##BACK##_Black_M43A1\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##BACK##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##BACK##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa)\
-		};\
-  };\
-  class STB73_B_##BACK##_##CAMO##_M43A : TCP_B_##BACK##_Black_M43A\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##BACK##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##BACK##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa)\
-		};\
-  };\
-  class STB73_B_##BACK##_##CAMO##_M43D1 : TCP_B_##BACK##_Black_M43D1\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##BACK##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##BACK##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa)\
-		};\
-  };\
-  class STB73_B_##BACK##_##CAMO##_M43D : TCP_B_##BACK##_Black_M43D\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##BACK##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##BACK##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\##BACK##_CO.paa)\
-		};\
-  };
-#define STB73_EM39_BACKPACK_MOS_ONLY(BACK,MOS,CAMO,MAXLOAD) \
-  class STB73_B_##BACK##_##MOS##_##CAMO## : TCP_B_##BACK##_##MOS##_Black\
-  {\
-    maximumLoad = MAXLOAD;\
-    scope=2;\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##BACK##_##MOS##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-      QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-    class XtdGearInfo { \
-      model=Q(STB73_B_##BACK##); \
-      roll=Q(None); \
-      pouch_level=Q(##MOS##); \
-    }; \
-  };\
-  class STB73_B_##BACK##_##MOS##_##CAMO##_M43A1 : TCP_B_##BACK##_##MOS##_Black_M43A1\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##BACK##_##MOS##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##BACK##_##MOS##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-      QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };\
-  class STB73_B_##BACK##_##MOS##_##CAMO##_M43A : TCP_B_##BACK##_##MOS##_Black_M43A\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##BACK##_##MOS##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##BACK##_##MOS##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-      QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };\
-  class STB73_B_##BACK##_##MOS##_##CAMO##_M43D1 : TCP_B_##BACK##_##MOS##_Black_M43D1\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##BACK##_##MOS##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##BACK##_##MOS##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-      QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };\
-  class STB73_B_##BACK##_##MOS##_##CAMO##_M43D : TCP_B_##BACK##_##MOS##_Black_M43D\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##BACK##_##MOS##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##BACK##_##MOS##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-      QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };
-#define STB73_EM39_BACKPACK_MOS_ROLL_ONLY(BACK,MOS,ROLL,CAMO,MAXLOAD) \
-  class STB73_B_##BACK##_##MOS##_##ROLL##_##CAMO## : TCP_B_##BACK##_##MOS##_##ROLL##_Black\
-  {\
-    maximumLoad = MAXLOAD;\
-    scope=2;\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##BACK##_##MOS##_##ROLL##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-      QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-    class XtdGearInfo { \
-      model=Q(STB73_B_##BACK##); \
-      roll=Q(##ROLL##); \
-      pouch_level=Q(##MOS##); \
-    }; \
-  };\
-  class STB73_B_##BACK##_##MOS##_##ROLL##_##CAMO##_M43A1 : TCP_B_##BACK##_##MOS##_##ROLL##_Black_M43A1\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##BACK##_##MOS##_##ROLL##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##BACK##_##MOS##_##ROLL##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-      QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };\
-  class STB73_B_##BACK##_##MOS##_##ROLL##_##CAMO##_M43A : TCP_B_##BACK##_##MOS##_##ROLL##_Black_M43A\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##BACK##_##MOS##_##ROLL##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##BACK##_##MOS##_##ROLL##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-      QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };\
-  class STB73_B_##BACK##_##MOS##_##ROLL##_##CAMO##_M43D1 : TCP_B_##BACK##_##MOS##_##ROLL##_Black_M43D1\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##BACK##_##MOS##_##ROLL##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##BACK##_##MOS##_##ROLL##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-      QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };\
-  class STB73_B_##BACK##_##MOS##_##ROLL##_##CAMO##_M43D : TCP_B_##BACK##_##MOS##_##ROLL##_Black_M43D\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##BACK##_##MOS##_##ROLL##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##BACK##_##MOS##_##ROLL##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-      QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };
-#define STB73_EM39_BACKPACK_ROLL_ONLY(BACK,ROLL,CAMO,MAXLOAD) \
-  class STB73_B_##BACK##_##ROLL##_##CAMO## : TCP_B_##BACK##_##ROLL##_Black\
-  {\
-    maximumLoad = MAXLOAD;\
-    scope=2;\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##BACK##_##ROLL##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-      QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-    class XtdGearInfo { \
-      model=Q(STB73_B_##BACK##); \
-      roll=Q(##ROLL##); \
-      pouch_level=Q(None); \
-    }; \
-  };\
-  class STB73_B_##BACK##_##ROLL##_##CAMO##_M43A1 : TCP_B_##BACK##_##ROLL##_Black_M43A1\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##BACK##_##ROLL##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##BACK##_##ROLL##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-      QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };\
-  class STB73_B_##BACK##_##ROLL##_##CAMO##_M43A : TCP_B_##BACK##_##ROLL##_Black_M43A\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##BACK##_##ROLL##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##BACK##_##ROLL##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-      QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };\
-  class STB73_B_##BACK##_##ROLL##_##CAMO##_M43D1 : TCP_B_##BACK##_##ROLL##_Black_M43D1\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##BACK##_##ROLL##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##BACK##_##ROLL##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-      QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };\
-  class STB73_B_##BACK##_##ROLL##_##CAMO##_M43D : TCP_B_##BACK##_##ROLL##_Black_M43D\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##BACK##_##ROLL##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##BACK##_##ROLL##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-      QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };
-#define STB73_NO_BACKPACK_2(ROLE,CAMO,MAXLOAD) \
-  class STB73_B_##ROLE##_##CAMO## : TCP_B_##ROLE##_Black\
-  {\
-    maximumLoad = MAXLOAD;\
-    scope=2;\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa),\
-			QP(data\vest\vest_M43A_03_CO.paa)\
-		};\
-    class XtdGearInfo { \
-      model=Q(STB73_B_##ROLE##); \
-      camo=Q(##CAMO##); \
-      backpack="None"; \
-      backpackPouchLevel="None"; \
-      buttpack="None"; \
-    }; \
-  };\
-  class STB73_B_##ROLE##_##CAMO##_M43A1 : TCP_B_##ROLE##_Black_M43A1\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa),\
-			QP(data\vest\vest_M43A_03_CO.paa)\
-		};\
-  };\
-  class STB73_B_##ROLE##_##CAMO##_M43A : TCP_B_##ROLE##_Black_M43A\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa),\
-			QP(data\vest\vest_M43A_03_CO.paa)\
-		};\
-  };\
-  class STB73_B_##ROLE##_##CAMO##_M43D1 : TCP_B_##ROLE##_Black_M43D1\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa),\
-			QP(data\vest\vest_M43A_03_CO.paa)\
-		};\
-  };\
-  class STB73_B_##ROLE##_##CAMO##_M43D : TCP_B_##ROLE##_Black_M43D\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa),\
-			QP(data\vest\vest_M43A_03_CO.paa)\
-		};\
-  };
-
-#define STB73_NO_BACKPACK_1(ROLE,CAMO,MAXLOAD) \
-  class STB73_B_##ROLE##_##CAMO## : TCP_B_##ROLE##_Black\
-  {\
-    maximumLoad = MAXLOAD;\
-    scope=2;\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-    class XtdGearInfo { \
-      model=Q(STB73_B_##ROLE##); \
-      camo=Q(##CAMO##); \
-      backpack="None"; \
-      backpackPouchLevel="None"; \
-      buttpack="None"; \
-    }; \
-  };\
-  class STB73_B_##ROLE##_##CAMO##_M43A1 : TCP_B_##ROLE##_Black_M43A1\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };\
-  class STB73_B_##ROLE##_##CAMO##_M43A : TCP_B_##ROLE##_Black_M43A\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };\
-  class STB73_B_##ROLE##_##CAMO##_M43D1 : TCP_B_##ROLE##_Black_M43D1\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };\
-  class STB73_B_##ROLE##_##CAMO##_M43D : TCP_B_##ROLE##_Black_M43D\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  }; \
-
-#define STB73_BUTTPACK_1(ROLE,BUTT,CAMO,MAXLOAD) \
-  class STB73_B_##ROLE##_##BUTT##_##CAMO## : TCP_B_##ROLE##_##BUTT##_Black\
-  {\
-    maximumLoad = MAXLOAD;\
-    scope=2;\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BUTT##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-    class XtdGearInfo { \
-      model=Q(STB73_B_##ROLE##); \
-      camo=Q(##CAMO##); \
-      backpack="None"; \
-      backpackPouchLevel="None"; \
-      buttpack=Q(##BUTT##); \
-    }; \
-  };\
-  class STB73_B_##ROLE##_##BUTT##_##CAMO##_M43A1 : TCP_B_##ROLE##_##BUTT##_Black_M43A1\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BUTT##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BUTT##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };\
-  class STB73_B_##ROLE##_##BUTT##_##CAMO##_M43A : TCP_B_##ROLE##_##BUTT##_Black_M43A\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BUTT##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BUTT##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };\
-  class STB73_B_##ROLE##_##BUTT##_##CAMO##_M43D1 : TCP_B_##ROLE##_##BUTT##_Black_M43D1\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BUTT##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BUTT##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };\
-  class STB73_B_##ROLE##_##BUTT##_##CAMO##_M43D : TCP_B_##ROLE##_##BUTT##_Black_M43D\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BUTT##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BUTT##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };
-
-#define STB73_BUTTPACK_2(ROLE,BUTT,CAMO,MAXLOAD) \
-  class STB73_B_##ROLE##_##BUTT##_##CAMO## : TCP_B_##ROLE##_##BUTT##_Black\
-  {\
-    maximumLoad = MAXLOAD;\
-    scope=2;\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BUTT##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa),\
-      QP(data\vest\vest_M43A_03_CO.paa)\
-		};\
-    class XtdGearInfo { \
-      model=Q(STB73_B_##ROLE##); \
-      camo=Q(##CAMO##); \
-      backpack="None"; \
-      backpackPouchLevel="None"; \
-      buttpack=Q(##BUTT##); \
-    }; \
-  };\
-  class STB73_B_##ROLE##_##BUTT##_##CAMO##_M43A1 : TCP_B_##ROLE##_##BUTT##_Black_M43A1\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BUTT##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BUTT##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa),\
-      QP(data\vest\vest_M43A_03_CO.paa)\
-		};\
-  };\
-  class STB73_B_##ROLE##_##BUTT##_##CAMO##_M43A : TCP_B_##ROLE##_##BUTT##_Black_M43A\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BUTT##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BUTT##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa),\
-      QP(data\vest\vest_M43A_03_CO.paa)\
-		};\
-  };\
-  class STB73_B_##ROLE##_##BUTT##_##CAMO##_M43D1 : TCP_B_##ROLE##_##BUTT##_Black_M43D1\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BUTT##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BUTT##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa),\
-      QP(data\vest\vest_M43A_03_CO.paa)\
-		};\
-  };\
-  class STB73_B_##ROLE##_##BUTT##_##CAMO##_M43D : TCP_B_##ROLE##_##BUTT##_Black_M43D\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BUTT##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BUTT##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa),\
-      QP(data\vest\vest_M43A_03_CO.paa)\
-		};\
-  }; \
-
-
-#define STB73_BACKPACK_2(ROLE,BACK,CAMO,MAXLOAD) \
-  class STB73_B_##ROLE##_##BACK##_##CAMO## : TCP_B_##ROLE##_##BACK##_Black\
-  {\
-    maximumLoad = MAXLOAD;\
-    scope=2;\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-    class XtdGearInfo { \
-      model=Q(STB73_B_##ROLE##); \
-      camo=Q(##CAMO##); \
-      backpack=Q(##BACK##); \
-      backpackPouchLevel="None"; \
-      buttpack="None"; \
-    }; \
-  };\
-  class STB73_B_##ROLE##_##BACK##_##CAMO##_M43A1 : TCP_B_##ROLE##_##BACK##_Black_M43A1\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BACK##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };\
-  class STB73_B_##ROLE##_##BACK##_##CAMO##_M43A : TCP_B_##ROLE##_##BACK##_Black_M43A\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BACK##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };\
-  class STB73_B_##ROLE##_##BACK##_##CAMO##_M43D1 : TCP_B_##ROLE##_##BACK##_Black_M43D1\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BACK##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };\
-  class STB73_B_##ROLE##_##BACK##_##CAMO##_M43D : TCP_B_##ROLE##_##BACK##_Black_M43D\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BACK##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };
-
-#define STB73_BACKPACK_3(ROLE,BACK,CAMO,MAXLOAD) \
-  class STB73_B_##ROLE##_##BACK##_##CAMO## : TCP_B_##ROLE##_##BACK##_Black\
-  {\
-    maximumLoad = MAXLOAD;\
-    scope=2;\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa),\
-      QP(data\vest\vest_M43A_03_CO.paa)\
-		};\
-    class XtdGearInfo { \
-      model=Q(STB73_B_##ROLE##); \
-      camo=Q(##CAMO##); \
-      backpack=Q(##BACK##); \
-      backpackPouchLevel="None"; \
-      buttpack="None"; \
-    }; \
-  };\
-  class STB73_B_##ROLE##_##BACK##_##CAMO##_M43A1 : TCP_B_##ROLE##_##BACK##_Black_M43A1\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BACK##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa),\
-      QP(data\vest\vest_M43A_03_CO.paa)\
-		};\
-  };\
-  class STB73_B_##ROLE##_##BACK##_##CAMO##_M43A : TCP_B_##ROLE##_##BACK##_Black_M43A\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BACK##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa),\
-      QP(data\vest\vest_M43A_03_CO.paa)\
-		};\
-  };\
-  class STB73_B_##ROLE##_##BACK##_##CAMO##_M43D1 : TCP_B_##ROLE##_##BACK##_Black_M43D1\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BACK##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa),\
-      QP(data\vest\vest_M43A_03_CO.paa)\
-		};\
-  };\
-  class STB73_B_##ROLE##_##BACK##_##CAMO##_M43D : TCP_B_##ROLE##_##BACK##_Black_M43D\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BACK##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa),\
-      QP(data\vest\vest_M43A_03_CO.paa)\
-		};\
-  };
-
-#define STB73_BACKPACK_BUTTPACK_2(ROLE,BACK,BUTT,CAMO,MAXLOAD) \
-  class STB73_B_##ROLE##_##BACK##_##BUTT##_##CAMO## : TCP_B_##ROLE##_##BACK##_##BUTT##_Black\
-  {\
-    maximumLoad = MAXLOAD;\
-    scope=2;\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##BUTT##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-    class XtdGearInfo { \
-      model=Q(STB73_B_##ROLE##); \
-      camo=Q(##CAMO##); \
-      backpack=Q(##BACK##); \
-      backpackPouchLevel="None"; \
-      buttpack=Q(##BUTT##); \
-    }; \
-  };\
-  class STB73_B_##ROLE##_##BACK##_##BUTT##_##CAMO##_M43A1 : TCP_B_##ROLE##_##BACK##_##BUTT##_Black_M43A1\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BACK##_##BUTT##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##BUTT##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };\
-  class STB73_B_##ROLE##_##BACK##_##BUTT##_##CAMO##_M43A : TCP_B_##ROLE##_##BACK##_##BUTT##_Black_M43A\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BACK##_##BUTT##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##BUTT##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };\
-  class STB73_B_##ROLE##_##BACK##_##BUTT##_##CAMO##_M43D1 : TCP_B_##ROLE##_##BACK##_##BUTT##_Black_M43D1\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BACK##_##BUTT##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##BUTT##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };\
-  class STB73_B_##ROLE##_##BACK##_##BUTT##_##CAMO##_M43D : TCP_B_##ROLE##_##BACK##_##BUTT##_Black_M43D\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BACK##_##BUTT##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##BUTT##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };
-
-#define STB73_BACKPACK_BUTTPACK_3(ROLE,BACK,BUTT,CAMO,MAXLOAD) \
-  class STB73_B_##ROLE##_##BACK##_##BUTT##_##CAMO## : TCP_B_##ROLE##_##BACK##_##BUTT##_Black\
-  {\
-    maximumLoad = MAXLOAD;\
-    scope=2;\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##BUTT##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-			QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa),\
-      QP(data\vest\vest_M43A_03_CO.paa)\
-		};\
-    class XtdGearInfo { \
-      model=Q(STB73_B_##ROLE##); \
-      camo=Q(##CAMO##); \
-      backpack=Q(##BACK##); \
-      backpackPouchLevel="None"; \
-      buttpack=Q(##BUTT##); \
-    }; \
-  };\
-  class STB73_B_##ROLE##_##BACK##_##BUTT##_##CAMO##_M43A1 : TCP_B_##ROLE##_##BACK##_##BUTT##_Black_M43A1\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BACK##_##BUTT##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##BUTT##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa),\
-      QP(data\vest\vest_M43A_03_CO.paa)\
-		};\
-  };\
-  class STB73_B_##ROLE##_##BACK##_##BUTT##_##CAMO##_M43A : TCP_B_##ROLE##_##BACK##_##BUTT##_Black_M43A\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BACK##_##BUTT##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##BUTT##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa),\
-      QP(data\vest\vest_M43A_03_CO.paa)\
-		};\
-  };\
-  class STB73_B_##ROLE##_##BACK##_##BUTT##_##CAMO##_M43D1 : TCP_B_##ROLE##_##BACK##_##BUTT##_Black_M43D1\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BACK##_##BUTT##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##BUTT##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa),\
-      QP(data\vest\vest_M43A_03_CO.paa)\
-		};\
-  };\
-  class STB73_B_##ROLE##_##BACK##_##BUTT##_##CAMO##_M43D : TCP_B_##ROLE##_##BACK##_##BUTT##_Black_M43D\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BACK##_##BUTT##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##BUTT##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa),\
-      QP(data\vest\vest_M43A_03_CO.paa)\
-		};\
-  }; \
-
-#define STB73_BACKPACK_MOS_BUTTPACK_2(ROLE,BACK,MOS,BUTT,CAMO,MAXLOAD) \
-  class STB73_B_##ROLE##_##BACK##_##MOS##_##BUTT##_##CAMO## : TCP_B_##ROLE##_##BACK##_##MOS##_##BUTT##_Black\
-  {\
-    maximumLoad = MAXLOAD;\
-    scope=2;\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##MOS##_##BUTT##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-    class XtdGearInfo { \
-      model=Q(STB73_B_##ROLE##); \
-      camo=Q(##CAMO##); \
-      backpack=Q(##BACK##); \
-      backpackPouchLevel=Q(##MOS##); \
-      buttpack=Q(##BUTT##); \
-    }; \
-  };\
-  class STB73_B_##ROLE##_##BACK##_##MOS##_##BUTT##_##CAMO##_M43A1 : TCP_B_##ROLE##_##BACK##_##MOS##_##BUTT##_Black_M43A1\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BACK##_##MOS##_##BUTT##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##MOS##_##BUTT##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };\
-  class STB73_B_##ROLE##_##BACK##_##MOS##_##BUTT##_##CAMO##_M43A : TCP_B_##ROLE##_##BACK##_##MOS##_##BUTT##_Black_M43A\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BACK##_##MOS##_##BUTT##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##MOS##_##BUTT##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };\
-  class STB73_B_##ROLE##_##BACK##_##MOS##_##BUTT##_##CAMO##_M43D1 : TCP_B_##ROLE##_##BACK##_##MOS##_##BUTT##_Black_M43D1\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BACK##_##MOS##_##BUTT##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##MOS##_##BUTT##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };\
-  class STB73_B_##ROLE##_##BACK##_##MOS##_##BUTT##_##CAMO##_M43D : TCP_B_##ROLE##_##BACK##_##MOS##_##BUTT##_Black_M43D\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BACK##_##MOS##_##BUTT##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##MOS##_##BUTT##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };
-
-#define STB73_BACKPACK_MOS_BUTTPACK_3(ROLE,BACK,MOS,BUTT,CAMO,MAXLOAD) \
-  class STB73_B_##ROLE##_##BACK##_##MOS##_##BUTT##_##CAMO## : TCP_B_##ROLE##_##BACK##_##MOS##_##BUTT##_Black\
-  {\
-    maximumLoad = MAXLOAD;\
-    scope=2;\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##MOS##_##BUTT##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa),\
-			QP(data\vest\vest_M43A_03_CO.paa)\
-		};\
-    class XtdGearInfo { \
-      model=Q(STB73_B_##ROLE##); \
-      camo=Q(##CAMO##); \
-      backpack=Q(##BACK##); \
-      backpackPouchLevel=Q(##MOS##); \
-      buttpack=Q(##BUTT##); \
-    }; \
-  };\
-  class STB73_B_##ROLE##_##BACK##_##MOS##_##BUTT##_##CAMO##_M43A1 : TCP_B_##ROLE##_##BACK##_##MOS##_##BUTT##_Black_M43A1\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BACK##_##MOS##_##BUTT##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##MOS##_##BUTT##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa),\
-			QP(data\vest\vest_M43A_03_CO.paa)\
-		};\
-  };\
-  class STB73_B_##ROLE##_##BACK##_##MOS##_##BUTT##_##CAMO##_M43A : TCP_B_##ROLE##_##BACK##_##MOS##_##BUTT##_Black_M43A\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BACK##_##MOS##_##BUTT##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##MOS##_##BUTT##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa),\
-			QP(data\vest\vest_M43A_03_CO.paa)\
-		};\
-  };\
-  class STB73_B_##ROLE##_##BACK##_##MOS##_##BUTT##_##CAMO##_M43D1 : TCP_B_##ROLE##_##BACK##_##MOS##_##BUTT##_Black_M43D1\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BACK##_##MOS##_##BUTT##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##MOS##_##BUTT##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa),\
-			QP(data\vest\vest_M43A_03_CO.paa)\
-		};\
-  };\
-  class STB73_B_##ROLE##_##BACK##_##MOS##_##BUTT##_##CAMO##_M43D : TCP_B_##ROLE##_##BACK##_##MOS##_##BUTT##_Black_M43D\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BACK##_##MOS##_##BUTT##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##MOS##_##BUTT##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa),\
-			QP(data\vest\vest_M43A_03_CO.paa)\
-		};\
-  }; \
-
-#define STB73_BACKPACK_MOS_2(ROLE,BACK,MOS,CAMO,MAXLOAD) \
-  class STB73_B_##ROLE##_##BACK##_##MOS##_##CAMO## : TCP_B_##ROLE##_##BACK##_##MOS##_Black\
-  {\
-    maximumLoad = MAXLOAD;\
-    scope=2;\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##MOS##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-    class XtdGearInfo { \
-      model=Q(STB73_B_##ROLE##); \
-      camo=Q(##CAMO##); \
-      backpack=Q(##BACK##); \
-      backpackPouchLevel=Q(##MOS##); \
-      buttpack="None"; \
-    }; \
-  };\
-  class STB73_B_##ROLE##_##BACK##_##MOS##_##CAMO##_M43A1 : TCP_B_##ROLE##_##BACK##_##MOS##_Black_M43A1\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BACK##_##MOS##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##MOS##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };\
-  class STB73_B_##ROLE##_##BACK##_##MOS##_##CAMO##_M43A : TCP_B_##ROLE##_##BACK##_##MOS##_Black_M43A\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BACK##_##MOS##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##MOS##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };\
-  class STB73_B_##ROLE##_##BACK##_##MOS##_##CAMO##_M43D1 : TCP_B_##ROLE##_##BACK##_##MOS##_Black_M43D1\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BACK##_##MOS##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##MOS##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };\
-  class STB73_B_##ROLE##_##BACK##_##MOS##_##CAMO##_M43D : TCP_B_##ROLE##_##BACK##_##MOS##_Black_M43D\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BACK##_##MOS##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##MOS##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa)\
-		};\
-  };
-
-#define STB73_BACKPACK_MOS_3(ROLE,BACK,MOS,CAMO,MAXLOAD) \
-  class STB73_B_##ROLE##_##BACK##_##MOS##_##CAMO## : TCP_B_##ROLE##_##BACK##_##MOS##_Black\
-  {\
-    maximumLoad = MAXLOAD;\
-    scope=2;\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##MOS##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa),\
-      QP(data\vest\vest_M43A_03_CO.paa)\
-		};\
-    class XtdGearInfo { \
-      model=Q(STB73_B_##ROLE##); \
-      camo=Q(##CAMO##); \
-      backpack=Q(##BACK##); \
-      backpackPouchLevel=Q(##MOS##); \
-      buttpack="None"; \
-    }; \
-  };\
-  class STB73_B_##ROLE##_##BACK##_##MOS##_##CAMO##_M43A1 : TCP_B_##ROLE##_##BACK##_##MOS##_Black_M43A1\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BACK##_##MOS##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##MOS##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa),\
-      QP(data\vest\vest_M43A_03_CO.paa)\
-		};\
-  };\
-  class STB73_B_##ROLE##_##BACK##_##MOS##_##CAMO##_M43A : TCP_B_##ROLE##_##BACK##_##MOS##_Black_M43A\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BACK##_##MOS##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##MOS##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa),\
-      QP(data\vest\vest_M43A_03_CO.paa)\
-		};\
-  };\
-  class STB73_B_##ROLE##_##BACK##_##MOS##_##CAMO##_M43D1 : TCP_B_##ROLE##_##BACK##_##MOS##_Black_M43D1\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BACK##_##MOS##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##MOS##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa),\
-      QP(data\vest\vest_M43A_03_CO.paa)\
-		};\
-  };\
-  class STB73_B_##ROLE##_##BACK##_##MOS##_##CAMO##_M43D : TCP_B_##ROLE##_##BACK##_##MOS##_Black_M43D\
-  {\
-    maximumLoad = MAXLOAD;\
-    ace_arsenal_uniqueBase = QUOTE(STB73_B_##ROLE##_##BACK##_##MOS##_##CAMO##);\
-    class TCP_equipmentTypes:TCP_equipmentTypes \
-		{ \
-      baseEquipment=QUOTE(STB73_B_##ROLE##_##BACK##_##MOS##_##CAMO##); \
-    }; \
-    hiddenSelectionsTextures[]= \
-		{\
-      QP(data\pouches\##CAMO##\##BACK##_CO.paa),\
-			QP(data\pouches\##CAMO##\Pouches_CO.paa),\
-      QP(data\vest\vest_M43A_03_CO.paa)\
-		};\
-  }; \
-
-
-#define STB73_BACKPACK_ROLE_LOW(ROLE,CAMO) \
-  STB73_NO_BACKPACK_1(##ROLE##,##CAMO##,150)\
-  STB73_BUTTPACK_1(##ROLE##,M2_Buttpack,##CAMO##,150)\
-  STB73_BUTTPACK_1(##ROLE##,M35_Buttpack,##CAMO##,150)\
-  STB73_BUTTPACK_1(##ROLE##,EM39_Buttpack,##CAMO##,150)\
-  STB73_BACKPACK_2(##ROLE##,M43_Medium_Rucksack,##CAMO##,300)\
-  STB73_BACKPACK_BUTTPACK_2(##ROLE##,M43_Medium_Rucksack,M2_Buttpack,##CAMO##,350)\
-  STB73_BACKPACK_BUTTPACK_2(##ROLE##,M43_Medium_Rucksack,M35_Buttpack,##CAMO##,350)\
-  STB73_BACKPACK_BUTTPACK_2(##ROLE##,M43_Medium_Rucksack,EM39_Buttpack,##CAMO##,350)\
-  STB73_BACKPACK_BUTTPACK_2(##ROLE##,M43_Medium_Rucksack,Roll,##CAMO##,350)\
-  STB73_BACKPACK_MOS_2(##ROLE##,M43_Medium_Rucksack,Patrol,##CAMO##,350)\
-  STB73_BACKPACK_MOS_2(##ROLE##,M43_Medium_Rucksack,Assault,##CAMO##,350)\
-  STB73_BACKPACK_MOS_2(##ROLE##,M43_Medium_Rucksack,Engineer,##CAMO##,350)\
-  STB73_BACKPACK_MOS_2(##ROLE##,M43_Medium_Rucksack,Field,##CAMO##,350)\
-  STB73_BACKPACK_MOS_2(##ROLE##,M43_Medium_Rucksack,Medical,##CAMO##,350)\
-  STB73_BACKPACK_MOS_BUTTPACK_2(##ROLE##,M43_Medium_Rucksack,Patrol,M2_Buttpack,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_2(##ROLE##,M43_Medium_Rucksack,Patrol,M35_Buttpack,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_2(##ROLE##,M43_Medium_Rucksack,Patrol,EM39_Buttpack,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_2(##ROLE##,M43_Medium_Rucksack,Patrol,Roll,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_2(##ROLE##,M43_Medium_Rucksack,Assault,M2_Buttpack,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_2(##ROLE##,M43_Medium_Rucksack,Assault,M35_Buttpack,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_2(##ROLE##,M43_Medium_Rucksack,Assault,EM39_Buttpack,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_2(##ROLE##,M43_Medium_Rucksack,Assault,Roll,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_2(##ROLE##,M43_Medium_Rucksack,Engineer,M2_Buttpack,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_2(##ROLE##,M43_Medium_Rucksack,Engineer,M35_Buttpack,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_2(##ROLE##,M43_Medium_Rucksack,Engineer,EM39_Buttpack,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_2(##ROLE##,M43_Medium_Rucksack,Engineer,Roll,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_2(##ROLE##,M43_Medium_Rucksack,Field,M2_Buttpack,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_2(##ROLE##,M43_Medium_Rucksack,Field,M35_Buttpack,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_2(##ROLE##,M43_Medium_Rucksack,Field,EM39_Buttpack,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_2(##ROLE##,M43_Medium_Rucksack,Field,Roll,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_2(##ROLE##,M43_Medium_Rucksack,Medical,M2_Buttpack,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_2(##ROLE##,M43_Medium_Rucksack,Medical,M35_Buttpack,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_2(##ROLE##,M43_Medium_Rucksack,Medical,EM39_Buttpack,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_2(##ROLE##,M43_Medium_Rucksack,Medical,Roll,##CAMO##,400)
-
-#define STB73_BACKPACK_ROLE_HIGH(ROLE,CAMO) \
-  STB73_NO_BACKPACK_2(##ROLE##,##CAMO##,150)\
-  STB73_BUTTPACK_2(##ROLE##,M2_Buttpack,##CAMO##,150)\
-  STB73_BUTTPACK_2(##ROLE##,M35_Buttpack,##CAMO##,150)\
-  STB73_BUTTPACK_2(##ROLE##,EM39_Buttpack,##CAMO##,150)\
-  STB73_BACKPACK_2(##ROLE##,M43_Medium_Rucksack,##CAMO##,300)\
-  STB73_BACKPACK_BUTTPACK_3(##ROLE##,M43_Medium_Rucksack,M2_Buttpack,##CAMO##,350)\
-  STB73_BACKPACK_BUTTPACK_3(##ROLE##,M43_Medium_Rucksack,M35_Buttpack,##CAMO##,350)\
-  STB73_BACKPACK_BUTTPACK_3(##ROLE##,M43_Medium_Rucksack,EM39_Buttpack,##CAMO##,350)\
-  STB73_BACKPACK_BUTTPACK_3(##ROLE##,M43_Medium_Rucksack,Roll,##CAMO##,350)\
-  STB73_BACKPACK_MOS_3(##ROLE##,M43_Medium_Rucksack,Patrol,##CAMO##,350)\
-  STB73_BACKPACK_MOS_3(##ROLE##,M43_Medium_Rucksack,Assault,##CAMO##,350)\
-  STB73_BACKPACK_MOS_3(##ROLE##,M43_Medium_Rucksack,Engineer,##CAMO##,350)\
-  STB73_BACKPACK_MOS_3(##ROLE##,M43_Medium_Rucksack,Field,##CAMO##,350)\
-  STB73_BACKPACK_MOS_3(##ROLE##,M43_Medium_Rucksack,Medical,##CAMO##,350)\
-  STB73_BACKPACK_MOS_BUTTPACK_3(##ROLE##,M43_Medium_Rucksack,Patrol,M2_Buttpack,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_3(##ROLE##,M43_Medium_Rucksack,Patrol,M35_Buttpack,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_3(##ROLE##,M43_Medium_Rucksack,Patrol,EM39_Buttpack,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_3(##ROLE##,M43_Medium_Rucksack,Patrol,Roll,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_3(##ROLE##,M43_Medium_Rucksack,Assault,M2_Buttpack,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_3(##ROLE##,M43_Medium_Rucksack,Assault,M35_Buttpack,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_3(##ROLE##,M43_Medium_Rucksack,Assault,EM39_Buttpack,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_3(##ROLE##,M43_Medium_Rucksack,Assault,Roll,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_3(##ROLE##,M43_Medium_Rucksack,Engineer,M2_Buttpack,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_3(##ROLE##,M43_Medium_Rucksack,Engineer,M35_Buttpack,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_3(##ROLE##,M43_Medium_Rucksack,Engineer,EM39_Buttpack,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_3(##ROLE##,M43_Medium_Rucksack,Engineer,Roll,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_3(##ROLE##,M43_Medium_Rucksack,Field,M2_Buttpack,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_3(##ROLE##,M43_Medium_Rucksack,Field,M35_Buttpack,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_3(##ROLE##,M43_Medium_Rucksack,Field,EM39_Buttpack,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_3(##ROLE##,M43_Medium_Rucksack,Field,Roll,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_3(##ROLE##,M43_Medium_Rucksack,Medical,M2_Buttpack,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_3(##ROLE##,M43_Medium_Rucksack,Medical,M35_Buttpack,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_3(##ROLE##,M43_Medium_Rucksack,Medical,EM39_Buttpack,##CAMO##,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_3(##ROLE##,M43_Medium_Rucksack,Medical,Roll,##CAMO##,400)
-
-#define STB73_HARDCASE_ROLE_LOW(ROLE) \
-  STB73_BACKPACK_2(##ROLE##,EM39_MLBE_Hardcase,Black,300)\
-  STB73_BACKPACK_MOS_2(##ROLE##,EM39_MLBE_Hardcase,Patrol,Black,350)\
-  STB73_BACKPACK_BUTTPACK_2(##ROLE##,EM39_MLBE_Hardcase,M2_Buttpack,Black,350)\
-  STB73_BACKPACK_BUTTPACK_2(##ROLE##,EM39_MLBE_Hardcase,M35_Buttpack,Black,350)\
-  STB73_BACKPACK_BUTTPACK_2(##ROLE##,EM39_MLBE_Hardcase,EM39_Buttpack,Black,350)\
-  STB73_BACKPACK_BUTTPACK_2(##ROLE##,EM39_MLBE_Hardcase,Roll,Black,350)\
-  STB73_BACKPACK_MOS_BUTTPACK_2(##ROLE##,EM39_MLBE_Hardcase,Patrol,M2_Buttpack,Black,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_2(##ROLE##,EM39_MLBE_Hardcase,Patrol,M35_Buttpack,Black,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_2(##ROLE##,EM39_MLBE_Hardcase,Patrol,EM39_Buttpack,Black,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_2(##ROLE##,EM39_MLBE_Hardcase,Patrol,Roll,Black,400)
-
-#define STB73_HARDCASE_ROLE_HIGH(ROLE) \
-  STB73_BACKPACK_3(##ROLE##,EM39_MLBE_Hardcase,Black,300)\
-  STB73_BACKPACK_MOS_3(##ROLE##,EM39_MLBE_Hardcase,Patrol,Black,350)\
-  STB73_BACKPACK_BUTTPACK_3(##ROLE##,EM39_MLBE_Hardcase,M2_Buttpack,Black,350)\
-  STB73_BACKPACK_BUTTPACK_3(##ROLE##,EM39_MLBE_Hardcase,M35_Buttpack,Black,350)\
-  STB73_BACKPACK_BUTTPACK_3(##ROLE##,EM39_MLBE_Hardcase,EM39_Buttpack,Black,350)\
-  STB73_BACKPACK_BUTTPACK_3(##ROLE##,EM39_MLBE_Hardcase,Roll,Black,350)\
-  STB73_BACKPACK_MOS_BUTTPACK_3(##ROLE##,EM39_MLBE_Hardcase,Patrol,M2_Buttpack,Black,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_3(##ROLE##,EM39_MLBE_Hardcase,Patrol,M35_Buttpack,Black,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_3(##ROLE##,EM39_MLBE_Hardcase,Patrol,EM39_Buttpack,Black,400)\
-  STB73_BACKPACK_MOS_BUTTPACK_3(##ROLE##,EM39_MLBE_Hardcase,Patrol,Roll,Black,400)
-
-#define STB73_M43_RUCKSACK_VARS \
-  STB73_M43_BACKPACK_ONLY(M43_Medium_Rucksack,Black,200) \
-  STB73_M43_BACKPACK_ONLY(M43_Medium_Rucksack,Olive,200) \
-  STB73_M43_BACKPACK_ONLY(M43_Medium_Rucksack,Tan,200) \
-  STB73_M43_BACKPACK_ONLY(M43_Medium_Rucksack,White,200) \
-  STB73_M43_BACKPACK_MOS_ONLY(M43_Medium_Rucksack,Patrol,Black,200) \
-  STB73_M43_BACKPACK_MOS_ONLY(M43_Medium_Rucksack,Patrol,Olive,200) \
-  STB73_M43_BACKPACK_MOS_ONLY(M43_Medium_Rucksack,Patrol,Tan,200) \
-  STB73_M43_BACKPACK_MOS_ONLY(M43_Medium_Rucksack,Patrol,White,200) \
-  STB73_M43_BACKPACK_MOS_ONLY(M43_Medium_Rucksack,Assault,Black,200) \
-  STB73_M43_BACKPACK_MOS_ONLY(M43_Medium_Rucksack,Assault,Olive,200) \
-  STB73_M43_BACKPACK_MOS_ONLY(M43_Medium_Rucksack,Assault,Tan,200) \
-  STB73_M43_BACKPACK_MOS_ONLY(M43_Medium_Rucksack,Assault,White,200) \
-  STB73_M43_BACKPACK_MOS_ONLY(M43_Medium_Rucksack,Engineer,Black,200) \
-  STB73_M43_BACKPACK_MOS_ONLY(M43_Medium_Rucksack,Engineer,Olive,200) \
-  STB73_M43_BACKPACK_MOS_ONLY(M43_Medium_Rucksack,Engineer,Tan,200) \
-  STB73_M43_BACKPACK_MOS_ONLY(M43_Medium_Rucksack,Engineer,White,200) \
-  STB73_M43_BACKPACK_MOS_ONLY(M43_Medium_Rucksack,Field,Black,200) \
-  STB73_M43_BACKPACK_MOS_ONLY(M43_Medium_Rucksack,Field,Olive,200) \
-  STB73_M43_BACKPACK_MOS_ONLY(M43_Medium_Rucksack,Field,Tan,200) \
-  STB73_M43_BACKPACK_MOS_ONLY(M43_Medium_Rucksack,Field,White,200) \
-  STB73_M43_BACKPACK_MOS_ONLY(M43_Medium_Rucksack,Medical,Black,200) \
-  STB73_M43_BACKPACK_MOS_ONLY(M43_Medium_Rucksack,Medical,Olive,200) \
-  STB73_M43_BACKPACK_MOS_ONLY(M43_Medium_Rucksack,Medical,Tan,200) \
-  STB73_M43_BACKPACK_MOS_ONLY(M43_Medium_Rucksack,Medical,White,200) \
-  STB73_M43_BACKPACK_MOS_ROLL_ONLY(M43_Medium_Rucksack,Patrol,Roll,Black,300) \
-  STB73_M43_BACKPACK_MOS_ROLL_ONLY(M43_Medium_Rucksack,Patrol,Roll,Olive,300) \
-  STB73_M43_BACKPACK_MOS_ROLL_ONLY(M43_Medium_Rucksack,Patrol,Roll,Tan,300) \
-  STB73_M43_BACKPACK_MOS_ROLL_ONLY(M43_Medium_Rucksack,Patrol,Roll,White,300) \
-  STB73_M43_BACKPACK_MOS_ROLL_ONLY(M43_Medium_Rucksack,Assault,Roll,Black,300) \
-  STB73_M43_BACKPACK_MOS_ROLL_ONLY(M43_Medium_Rucksack,Assault,Roll,Olive,300) \
-  STB73_M43_BACKPACK_MOS_ROLL_ONLY(M43_Medium_Rucksack,Assault,Roll,Tan,300) \
-  STB73_M43_BACKPACK_MOS_ROLL_ONLY(M43_Medium_Rucksack,Assault,Roll,White,300) \
-  STB73_M43_BACKPACK_MOS_ROLL_ONLY(M43_Medium_Rucksack,Engineer,Roll,Black,300) \
-  STB73_M43_BACKPACK_MOS_ROLL_ONLY(M43_Medium_Rucksack,Engineer,Roll,Olive,300) \
-  STB73_M43_BACKPACK_MOS_ROLL_ONLY(M43_Medium_Rucksack,Engineer,Roll,Tan,300) \
-  STB73_M43_BACKPACK_MOS_ROLL_ONLY(M43_Medium_Rucksack,Engineer,Roll,White,300) \
-  STB73_M43_BACKPACK_MOS_ROLL_ONLY(M43_Medium_Rucksack,Field,Roll,Black,300) \
-  STB73_M43_BACKPACK_MOS_ROLL_ONLY(M43_Medium_Rucksack,Field,Roll,Olive,300) \
-  STB73_M43_BACKPACK_MOS_ROLL_ONLY(M43_Medium_Rucksack,Field,Roll,Tan,300) \
-  STB73_M43_BACKPACK_MOS_ROLL_ONLY(M43_Medium_Rucksack,Field,Roll,White,300) \
-  STB73_M43_BACKPACK_MOS_ROLL_ONLY(M43_Medium_Rucksack,Medical,Roll,Black,300) \
-  STB73_M43_BACKPACK_MOS_ROLL_ONLY(M43_Medium_Rucksack,Medical,Roll,Olive,300) \
-  STB73_M43_BACKPACK_MOS_ROLL_ONLY(M43_Medium_Rucksack,Medical,Roll,Tan,300) \
-  STB73_M43_BACKPACK_MOS_ROLL_ONLY(M43_Medium_Rucksack,Medical,Roll,White,300) \
-  STB73_M43_BACKPACK_ROLL_ONLY(M43_Medium_Rucksack,Roll,Black,250) \
-  STB73_M43_BACKPACK_ROLL_ONLY(M43_Medium_Rucksack,Roll,Olive,250) \
-  STB73_M43_BACKPACK_ROLL_ONLY(M43_Medium_Rucksack,Roll,Tan,250) \
-  STB73_M43_BACKPACK_ROLL_ONLY(M43_Medium_Rucksack,Roll,White,250)

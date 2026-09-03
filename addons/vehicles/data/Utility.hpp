@@ -11,9 +11,6 @@ class STB73_cart:OPTRE_cart
     scope=2;
     side=1;
     crew = "STB73_Aviator";
-    hiddenSelectionsTextures[] = {
-        "OPTRE_Vehicles\cart\data\truck_01_ext_022_co.paa"
-    };
     ace_rearm_defaultSupply = 10000;
     class VehicleSpawnerInfo {
         class STB73_GroundSpawner

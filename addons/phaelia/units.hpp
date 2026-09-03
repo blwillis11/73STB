@@ -10,10 +10,10 @@ class 73_COP_UnitBase: O_Soldier_F
     editorCategory = "73_COP_EdCat";
     
     identityTypes[] = {"Head_Euro","LanguagePER_F","G_IRAN_default"};
-    allowedfacewear[] = {""};
-    allowedHeadgear[] = {""};
-    allowedHeadgearB[] = {""};
-    headgearList[] = {""};
+    allowedfacewear[] = {};
+    allowedHeadgear[] = {};
+    allowedHeadgearB[] = {};
+    headgearList[] = {};
 };
 
 class 73_COP_Cult_Bomber: 73_COP_UnitBase
@@ -41,8 +41,8 @@ class 73_COP_Cult_Bomber: 73_COP_UnitBase
     magazines[] = {"STB73_24Rnd_127x30_SAP_Mag_Tracer","STB73_36Rnd_127x30_SAP_Mag_Tracer","STB73_36Rnd_127x30_SAP_Mag_Tracer","STB73_36Rnd_127x30_SAP_Mag_Tracer","STB73_36Rnd_127x30_SAP_Mag_Tracer","STB73_36Rnd_127x30_SAP_Mag_Tracer","STB73_36Rnd_127x30_SAP_Mag_Tracer","STB73_36Rnd_127x30_SAP_Mag_Tracer"};
     respawnMagazines[] = {"STB73_24Rnd_127x30_SAP_Mag_Tracer","STB73_36Rnd_127x30_SAP_Mag_Tracer","STB73_36Rnd_127x30_SAP_Mag_Tracer","STB73_36Rnd_127x30_SAP_Mag_Tracer","STB73_36Rnd_127x30_SAP_Mag_Tracer","STB73_36Rnd_127x30_SAP_Mag_Tracer","STB73_36Rnd_127x30_SAP_Mag_Tracer","STB73_36Rnd_127x30_SAP_Mag_Tracer"};
 
-    items[] = {""};
-    respawnItems[] = {""};
+    items[] = {};
+    respawnItems[] = {};
 };
 
 class 73_COP_Cult_Crewman: 73_COP_UnitBase
@@ -70,8 +70,8 @@ class 73_COP_Cult_Crewman: 73_COP_UnitBase
     magazines[] = {"STB73_60Rnd_5x23Caseless_FMJ_Mag","STB73_60Rnd_5x23Caseless_FMJ_Mag","STB73_60Rnd_5x23Caseless_FMJ_Mag","STB73_60Rnd_5x23Caseless_FMJ_Mag","STB73_60Rnd_5x23Caseless_FMJ_Mag","STB73_60Rnd_5x23Caseless_FMJ_Mag"};
     respawnMagazines[] = {"STB73_60Rnd_5x23Caseless_FMJ_Mag","STB73_60Rnd_5x23Caseless_FMJ_Mag","STB73_60Rnd_5x23Caseless_FMJ_Mag","STB73_60Rnd_5x23Caseless_FMJ_Mag","STB73_60Rnd_5x23Caseless_FMJ_Mag","STB73_60Rnd_5x23Caseless_FMJ_Mag"};
 
-    items[] = {""};
-    respawnItems[] = {""};
+    items[] = {};
+    respawnItems[] = {};
 };
 
 class 73_COP_Cult_Platoon_Lead: 73_COP_UnitBase
@@ -99,8 +99,8 @@ class 73_COP_Cult_Platoon_Lead: 73_COP_UnitBase
     magazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag"};
     respawnMagazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag"};
 
-    items[] = {""};
-    respawnItems[] = {""};
+    items[] = {};
+    respawnItems[] = {};
 };
 
 class 73_COP_Friar_Lead: 73_COP_UnitBase
@@ -128,8 +128,8 @@ class 73_COP_Friar_Lead: 73_COP_UnitBase
     magazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag"};
     respawnMagazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag"};
 
-    items[] = {""};
-    respawnItems[] = {""};
+    items[] = {};
+    respawnItems[] = {};
 };
 
 class 73_COP_Cult_SF_MG: 73_COP_UnitBase
@@ -157,8 +157,8 @@ class 73_COP_Cult_SF_MG: 73_COP_UnitBase
     magazines[] = {"OPTRE_50Rnd_127x99_M250_Box","OPTRE_50Rnd_127x99_M250_Box","OPTRE_50Rnd_127x99_M250_Box"};
     respawnMagazines[] = {"OPTRE_50Rnd_127x99_M250_Box","OPTRE_50Rnd_127x99_M250_Box","OPTRE_50Rnd_127x99_M250_Box"};
 
-    items[] = {""};
-    respawnItems[] = {""};
+    items[] = {};
+    respawnItems[] = {};
 };
 
 class 73_COP_Prophet_Bodyguard: 73_COP_UnitBase
@@ -186,8 +186,8 @@ class 73_COP_Prophet_Bodyguard: 73_COP_UnitBase
     magazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag"};
     respawnMagazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag"};
 
-    items[] = {""};
-    respawnItems[] = {""};
+    items[] = {};
+    respawnItems[] = {};
 };
 
 class 73_COP_Cult_Grenadier: 73_COP_UnitBase
@@ -215,8 +215,8 @@ class 73_COP_Cult_Grenadier: 73_COP_UnitBase
     magazines[] = {"36Rnd_95x40_br_55","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","PHEN_FSPLUS_ChemGrenade_RiotCSGasGrenade_40mm_3GL","PHEN_FSPLUS_ChemGrenade_RiotCSGasGrenade_40mm_3GL","PHEN_FSPLUS_ChemGrenade_RiotCSGasGrenade_40mm_3GL"};
     respawnMagazines[] = {"36Rnd_95x40_br_55","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","NSWep_95x40x60_KURTZ_T_C","PHEN_FSPLUS_ChemGrenade_RiotCSGasGrenade_40mm_3GL","PHEN_FSPLUS_ChemGrenade_RiotCSGasGrenade_40mm_3GL","PHEN_FSPLUS_ChemGrenade_RiotCSGasGrenade_40mm_3GL"};
 
-    items[] = {""};
-    respawnItems[] = {""};
+    items[] = {};
+    respawnItems[] = {};
 };
 
 class 73_COP_Cult_Company_Lead: 73_COP_UnitBase
@@ -244,8 +244,8 @@ class 73_COP_Cult_Company_Lead: 73_COP_UnitBase
     magazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag"};
     respawnMagazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag"};
 
-    items[] = {""};
-    respawnItems[] = {""};
+    items[] = {};
+    respawnItems[] = {};
 };
 
 class 73_COP_Prophet_Lead: 73_COP_UnitBase
@@ -273,8 +273,8 @@ class 73_COP_Prophet_Lead: 73_COP_UnitBase
     magazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag"};
     respawnMagazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag"};
 
-    items[] = {""};
-    respawnItems[] = {""};
+    items[] = {};
+    respawnItems[] = {};
 };
 
 class 73_COP_Cult_Sniper: 73_COP_UnitBase
@@ -302,8 +302,8 @@ class 73_COP_Cult_Sniper: 73_COP_UnitBase
     magazines[] = {"STB73_M232_145x114x4_APFSDS_TC","STB73_M232_145x114x4_APFSDS_TC","STB73_M232_145x114x4_APFSDS_TC","STB73_M232_145x114x4_APFSDS_TC","STB73_M232_145x114x4_APFSDS_TC","STB73_M232_145x114x4_APFSDS_TC","STB73_M232_145x114x4_APFSDS_TC","STB73_M232_145x114x4_APFSDS_TC"};
     respawnMagazines[] = {"STB73_M232_145x114x4_APFSDS_TC","STB73_M232_145x114x4_APFSDS_TC","STB73_M232_145x114x4_APFSDS_TC","STB73_M232_145x114x4_APFSDS_TC","STB73_M232_145x114x4_APFSDS_TC","STB73_M232_145x114x4_APFSDS_TC","STB73_M232_145x114x4_APFSDS_TC","STB73_M232_145x114x4_APFSDS_TC"};
 
-    items[] = {""};
-    respawnItems[] = {""};
+    items[] = {};
+    respawnItems[] = {};
 };
 
 class 73_COP_Cult_SF_TeamLead: 73_COP_UnitBase
@@ -331,8 +331,8 @@ class 73_COP_Cult_SF_TeamLead: 73_COP_UnitBase
     magazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag_Tracer_IR"};
     respawnMagazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag_Tracer_IR"};
 
-    items[] = {""};
-    respawnItems[] = {""};
+    items[] = {};
+    respawnItems[] = {};
 };
 
 class 73_COP_Cult_Rifleman: 73_COP_UnitBase
@@ -360,8 +360,8 @@ class 73_COP_Cult_Rifleman: 73_COP_UnitBase
     magazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag"};
     respawnMagazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag"};
 
-    items[] = {""};
-    respawnItems[] = {""};
+    items[] = {};
+    respawnItems[] = {};
 };
 
 class 73_COP_Cult_SL: 73_COP_UnitBase
@@ -389,8 +389,8 @@ class 73_COP_Cult_SL: 73_COP_UnitBase
     magazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag"};
     respawnMagazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag"};
 
-    items[] = {""};
-    respawnItems[] = {""};
+    items[] = {};
+    respawnItems[] = {};
 };
 
 class 73_COP_Cult_SF_Rifleman: 73_COP_UnitBase
@@ -418,8 +418,8 @@ class 73_COP_Cult_SF_Rifleman: 73_COP_UnitBase
     magazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag_Tracer_IR"};
     respawnMagazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag_Tracer_IR"};
 
-    items[] = {""};
-    respawnItems[] = {""};
+    items[] = {};
+    respawnItems[] = {};
 };
 
 class 73_COP_Cult_SF_Marksman: 73_COP_UnitBase
@@ -447,8 +447,8 @@ class 73_COP_Cult_SF_Marksman: 73_COP_UnitBase
     magazines[] = {"STB73_15Rnd_762x51_Mag"};
     respawnMagazines[] = {"STB73_15Rnd_762x51_Mag"};
 
-    items[] = {""};
-    respawnItems[] = {""};
+    items[] = {};
+    respawnItems[] = {};
 };
 
 class 73_COP_Cult_Medic: 73_COP_UnitBase
@@ -476,8 +476,8 @@ class 73_COP_Cult_Medic: 73_COP_UnitBase
     magazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag"};
     respawnMagazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag"};
 
-    items[] = {""};
-    respawnItems[] = {""};
+    items[] = {};
+    respawnItems[] = {};
 };
 
 class 73_COP_Cult_MG: 73_COP_UnitBase
@@ -505,8 +505,8 @@ class 73_COP_Cult_MG: 73_COP_UnitBase
     magazines[] = {"STB73_200rnd_762x51_Mag_Tracer_Yellow","STB73_200rnd_762x51_Mag_Tracer_Yellow"};
     respawnMagazines[] = {"STB73_200rnd_762x51_Mag_Tracer_Yellow","STB73_200rnd_762x51_Mag_Tracer_Yellow"};
 
-    items[] = {""};
-    respawnItems[] = {""};
+    items[] = {};
+    respawnItems[] = {};
 };
 
 class 73_COP_Friar_Bodyguard: 73_COP_UnitBase
@@ -534,6 +534,6 @@ class 73_COP_Friar_Bodyguard: 73_COP_UnitBase
     magazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag"};
     respawnMagazines[] = {"STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag","STB73_95x40_36Rnd_Mag"};
 
-    items[] = {""};
-    respawnItems[] = {""};
+    items[] = {};
+    respawnItems[] = {};
 };

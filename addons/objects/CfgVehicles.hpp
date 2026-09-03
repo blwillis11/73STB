@@ -71,36 +71,6 @@ class CfgVehicles
 		};
 	};
 
-	class Land_CC_FlagPole_01_OCLF : FlagCarrier_Asym
-	{
-		author = AUTHOR;
-		displayName = "Flag (OCLF)";
-		scope = 2;
-		scopeCurator = 2;
-		faction = "CC_Assets";
-		editorCategory = "CC_Objects";
-		editorSubcategory = "CC_Misc_EdSubCat";
-		class EventHandlers
-		{
-			init = "(_this select 0) setFlagTexture 'z\73STB\addons\objects\data\flags\URFFlag_co.paa'";
-		};
-	};
-
-	class Land_CC_FlagPole_02_OCLF : FlagCarrier
-	{
-		author = AUTHOR;
-		displayName = "Flag (OCLF) (Damaged)";
-		scope = 2;
-		scopeCurator = 2;
-		faction = "CC_Assets";
-		editorCategory = "CC_Objects";
-		editorSubcategory = "CC_Misc_EdSubCat";
-		class EventHandlers
-		{
-			init = "(_this select 0) setFlagTexture 'z\73STB\addons\objects\data\flags\URFFlag_dmg_co.paa'";
-		};
-	};
-
 	class SZ_screen;
 
 	class STB73_BriefScreen: SZ_screen

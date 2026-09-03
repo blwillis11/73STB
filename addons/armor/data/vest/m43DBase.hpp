@@ -28,6 +28,46 @@ class STB73_M43D_Light_Base : STB73_M43D_Base {
         uniformModel="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_Light.p3d";
     };
 };
+class STB73_M43D_BaseSec_Base : STB73_M43D_Light_Base {
+    scope=1;
+    scopeArsenal=1;
+    displayName = Q([73] M43/A [BaseSec]);
+    author=AUTHOR;
+    maximumLoad = VEST_MAXLOAD;
+	picture="\TCP\Characters\BLUFOR\UNSC\Army\Vests\M43A\data\ui\Black\icon_vest_M43A_BaseSec_3_2_CA.paa";
+	model="\TCP\Characters\BLUFOR\UNSC\Army\Vests\M43A\M43A_BaseSec_3.p3d";
+    class TCP_uniformDecals: TCP_uniformDecals
+    {
+        decalColor="white";
+        selectionName="nameM43A";
+        selectionRank="rankM43A";
+        selectionAffiliation="affiliationBaseSec";
+		selectionBloodType="bloodTypeBaseSec";
+    };
+    hiddenSelections[]=
+    {
+        "camo",
+        "camo1",
+        "camo2",
+        "camo3",
+        "decals",
+        "collararmored",
+        "collarflak"
+    };
+    class ItemInfo: ItemInfo {
+        hiddenSelections[]=
+        {
+            "camo",
+			"camo1",
+			"camo2",
+			"camo3",
+			"decals",
+			"collararmored",
+			"collarflak"
+        };
+        model="\TCP\Characters\BLUFOR\UNSC\Army\Vests\M43A\M43A_BaseSec_3.p3d";
+    };
+};
 class STB73_M43D_Light_1_Base: STB73_M43D_Light_Base
 {
     model="\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_Light_1.p3d";

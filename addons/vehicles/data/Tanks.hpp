@@ -1,5 +1,5 @@
-class VES_M875_SPH;
-class STB73_M875:VES_M875_SPH
+class OPTRE_M875_SPH;
+class STB73_M875:OPTRE_M875_SPH
 {
     displayName="[73] M875 Scorpion [SPH]";
     author= AUTHOR;
@@ -10,12 +10,6 @@ class STB73_M875:VES_M875_SPH
     side=1;
     armor=450;
     crew = "STB73_STB_ODST_Rifleman";
-    class TCP_Compat_OPTRE
-    {
-        magLockOffset[] = {0, -9.5, -1.3};
-        magLockReversed = 1; // Rotates the vehicle 180 degrees when mag-locked
-        magLockGearInterlock = 1; // Disallows the mag-locked vehicle from being unloaded when gear are down
-    };
      class ace_cargo {
             class cargo {
                 class ACE_Tracks { // Doesn't have to have the same name as the item you're adding
@@ -25,8 +19,6 @@ class STB73_M875:VES_M875_SPH
                 };
             };
         };
-    class textureSources
-    {};
     class VehicleSpawnerInfo {
         class STB73_GroundSpawner
         {
@@ -35,17 +27,12 @@ class STB73_M875:VES_M875_SPH
             vehicle = "Scorpion";
             Type = "SPH";
             cost = 5;
-
-            priority = 1;
-            liveries[]=
-            {
-             "[""Standard"",[""V_FZ_Ground_Vehicles\data\Scorpion\V_M808_OD3_CO.paa"",""V_FZ_Ground_Vehicles\data\Scorpion\V_M808_OD3_ART_CO.paa"",""OPTRE_Vehicles\Scorpion\data\texture\scorp_net_wood_ca.paa"",""OPTRE_Vehicles\Scorpion\data\texture\scorp_art_camo_ca.paa"",""OPTRE_Vehicles\Scorpion\data\texture\scorp_decals_ca.paa"",""V_FZ_Ground_Vehicles\data\Oryx\V_M494_OD3_MG_CO.paa"",""V_FZ_Ground_Vehicles\data\Scorpion\V_M808_OD3_DET1_CO.paa"",""V_FZ_Ground_Vehicles\data\Scorpion\V_M808_OD3_D3_CO.paa""]]",
-            };
+            priority = 2;
         };
     };
 };
-class VES_M808BM_MBT;
-class STB73_M808BM_MBT:VES_M808BM_MBT
+class OPTRE_M808BM_UNSC;
+class STB73_M808BM_MBT:OPTRE_M808BM_UNSC
 {
     displayName="[73] M808B/M Scorpion";
     author= AUTHOR;
@@ -57,12 +44,6 @@ class STB73_M808BM_MBT:VES_M808BM_MBT
     crew = "STB73_STB_ODST_Rifleman";
     armor=575;
     armorStructural=5;
-    class TCP_Compat_OPTRE
-    {
-        magLockOffset[] = {0, -9.5, -1.3};
-        magLockReversed = 1; // Rotates the vehicle 180 degrees when mag-locked
-        magLockGearInterlock = 1; // Disallows the mag-locked vehicle from being unloaded when gear are down
-    };
     class ace_cargo {
         class cargo {
             class ACE_Tracks { // Doesn't have to have the same name as the item you're adding
@@ -154,19 +135,14 @@ class STB73_M808BM_MBT:VES_M808BM_MBT
             vehicle = "Scorpion";
             Type = "MBT";
             cost = 5;
-
             priority = 1;
-            liveries[]=
-            {
-             "[""Standard"",[""V_FZ_Ground_Vehicles\data\Scorpion\V_M808_OD3_CO.paa"",""V_FZ_Ground_Vehicles\data\Scorpion\V_M808_OD3_T_CO.paa"",""V_FZ_Ground_Vehicles\data\Scorpion\V_M808_OD3_D3_CO.paa"",""OPTRE_Vehicles\Scorpion\data\texture\scorp_decals_ca.paa"",""OPTRE_Vehicles\Scorpion\data\texture\scorp_net_wood_ca.paa"",""OPTRE_Vehicles\Scorpion\data\texture\scorp_net_wood_ca.paa"",""V_FZ_Ground_Vehicles\data\Scorpion\V_M808_OD3_MR_CO.paa"",""V_FZ_Ground_Vehicles\data\Oryx\V_M494_OD3_MG_CO.paa""]]",
-            };
         };
     };
 };
-class VES_M808B2_MBT;
-class STB73_M808B2_MBT:VES_M808B2_MBT
+class OPTRE_M808B2A1;
+class STB73_M808B2_MBT:OPTRE_M808B2A1
 {
-    displayName="[73] M808B2 Sun Devil";
+    displayName="[73] M808B2A1 Sun Devil";
     author= AUTHOR;
     editorCategory = "STB73_STB";
     editorSubcategory = "STB73_Tanks_EdSubCat";
@@ -176,12 +152,6 @@ class STB73_M808B2_MBT:VES_M808B2_MBT
     crew = "STB73_STB_ODST_Rifleman";
     armor=575;
     armorStructural=5;
-    class TCP_Compat_OPTRE
-    {
-        magLockOffset[] = {0, -9.5, -1.3};
-        magLockReversed = 1; // Rotates the vehicle 180 degrees when mag-locked
-        magLockGearInterlock = 1; // Disallows the mag-locked vehicle from being unloaded when gear are down
-    };
      class ace_cargo {
             class cargo {
                 class ACE_Tracks { // Doesn't have to have the same name as the item you're adding
@@ -191,86 +161,16 @@ class STB73_M808B2_MBT:VES_M808B2_MBT
                 };
             };
         };
-    hiddenSelectionsTextures[]=
-    {
-        "V_FZ_Ground_Vehicles\data\Scorpion\V_M808S_CLS_CO.paa",
-        "V_FZ_Ground_Vehicles\data\Scorpion\V_M808S_DVX_CLS_CO.paa",
-        "V_FZ_Ground_Vehicles\data\Scorpion\V_M808S_RT_CLS_CO.paa",
-        "V_FZ_Ground_Vehicles\data\Scorpion\V_M808S_TB_CLS_CO.paa",
-        "V_FZ_Ground_Vehicles\data\Scorpion\V_M808S_SDH_CLS_CO.paa",
-        "V_FZ_Ground_Vehicles\data\Scorpion\V_M808S_SDG_CLS_CO.paa"
-    };
     class VehicleSpawnerInfo {
         class STB73_GroundSpawner
         {
             scope = 1;
             spawner= "73rd Mechanized";
-            vehicle = "Sun Devil";
+            vehicle = "M808B2A1 Sun Devil";
             Type = "AA";
             cost = 5;
 
             priority = 1;
-            liveries[]=
-            {
-             "[""Standard"",[""V_FZ_Ground_Vehicles\data\Scorpion\V_M808S_CLS_CO.paa"",""V_FZ_Ground_Vehicles\data\Scorpion\V_M808S_DVX_CLS_CO.paa"",""V_FZ_Ground_Vehicles\data\Scorpion\V_M808S_RT_CLS_CO.paa"",""V_FZ_Ground_Vehicles\data\Scorpion\V_M808S_TB_CLS_CO.paa"",""V_FZ_Ground_Vehicles\data\Scorpion\V_M808S_SDH_CLS_CO.paa"",""V_FZ_Ground_Vehicles\data\Scorpion\V_M808S_SDG_CLS_CO.paa""]]",
-            };
-        };
-    };
-};
-
-class DMNS_M808B;
-class STB73_M808BMk2:DMNS_M808B
-{
-    displayName="[73] M808B Scorpion MBT Mk.2";
-    author= AUTHOR;
-    editorCategory = "STB73_STB";
-    editorSubcategory = "STB73_Tanks_EdSubCat";
-    scopeCurator=2;
-    scope=2;
-    side=1;
-    crew = "STB73_STB_ODST_Rifleman";
-    armor=575;
-    armorStructural=5;
-    class TCP_Compat_OPTRE
-    {
-        magLockOffset[] = {0, -9.5, -1.3};
-        magLockReversed = 1; // Rotates the vehicle 180 degrees when mag-locked
-        magLockGearInterlock = 1; // Disallows the mag-locked vehicle from being unloaded when gear are down
-    };
-     class ace_cargo {
-            class cargo {
-                class ACE_Tracks { // Doesn't have to have the same name as the item you're adding
-                    type = "ACE_Tracks";
-					
-                    amount = 4;
-                };
-            };
-        };
-    hiddenSelectionsTextures[]=
-    {
-        "DMNS\DMNS_Armour\M808B_Scorpion\data\M808B_Hull_co.paa",
-        "DMNS\DMNS_Armour\M808B_Scorpion\data\M808B_Turret_co.paa",
-        "DMNS\DMNS_Armour\M808B_Scorpion\data\M808B_Track_Housing_Front_co.paa",
-        "DMNS\DMNS_Armour\M808B_Scorpion\data\M808B_Track_Housing_Rear_co.paa",
-        "DMNS\DMNS_Armour\M808B_Scorpion\data\M808B_Commander_co.paa",
-        "DMNS\DMNS_Armour\M808B_Scorpion\data\M808B_Details_EXT_co.paa",
-        "DMNS\DMNS_Armour\M808B_Scorpion\data\M808B_Details_EXT_2_co.paa",
-        "DMNS\DMNS_Armour\M808B_Scorpion\data\M808B_Track_Int_co.paa"
-    };
-    class VehicleSpawnerInfo {
-        class STB73_GroundSpawner
-        {
-            scope = 1;
-            spawner= "73rd Mechanized";
-            vehicle = "Scorpion";
-            Type = "MBT Mk.2";
-            cost = 5;
-
-            priority = 1;
-            liveries[]=
-            {
-             "[""Standard"",[""DMNS\DMNS_Armour\M808B_Scorpion\data\M808B_Hull_co.paa"",""DMNS\DMNS_Armour\M808B_Scorpion\data\M808B_Turret_co.paa"",""DMNS\DMNS_Armour\M808B_Scorpion\data\M808B_Track_Housing_Front_co.paa"",""DMNS\DMNS_Armour\M808B_Scorpion\data\M808B_Track_Housing_Rear_co.paa"",""DMNS\DMNS_Armour\M808B_Scorpion\data\M808B_Commander_co.paa"",""DMNS\DMNS_Armour\M808B_Scorpion\data\M808B_Details_EXT_co.paa"",""DMNS\DMNS_Armour\M808B_Scorpion\data\M808B_Details_EXT_2_co.paa"",""DMNS\DMNS_Armour\M808B_Scorpion\data\M808B_Track_Int_co.paa""]]",
-            };
         };
     };
 };

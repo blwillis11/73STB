@@ -48,11 +48,3 @@ STB73_ThrusterMultiplier = 20;
 		hint "MANUAL FIRE ACTIVATED";
 	};
 }, {}, [nil, [false, false, false]]] call CBA_fnc_addKeybind;
-
-["73rd Vehicles", "STB73_Vehicles_OpenI_TGT_System", ["Open I-TGT System", "Allows quick access to the I-TGT System"], {
-	private _unit = [player, remoteControlled player] select (isRemoteControlling player);
-	private _vic = (vehicle _unit);
-	if (_vic == _unit) exitWith {};
-	if (!((driver _vic) isEqualTo _unit)) exitWith {};
-	_vic execVM "\FIR_AirWeaponSystem_US\Script\TGTSystem\FIR_AWS_MFD_N_Open.sqf";
-}, {}, [nil, [false, false, false]]] call CBA_fnc_addKeybind;

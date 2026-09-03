@@ -30,36 +30,9 @@ class CfgWeapons
     #include "data\vest\m43DBase.hpp"
 
     
-    NEW_VEST_43A(Aviator)
-
-    NEW_VEST_M43D_NONE(Black,Company)
-    NEW_VEST_M43D_LIGHT(Black,Company)
-    NEW_VEST_M43D_PADS(Black,Company)
-    NEW_VEST_M43D_ODST(Black,Company)
-    NEW_VEST_M43D_SHARPSHOOTER(Black,Company)
-    NEW_VEST_M43D_BREACHER(Black,Company)
-
-    NEW_VEST_M43D_NONE(Black,Standard)
-    NEW_VEST_M43D_LIGHT(Black,Standard)
-    NEW_VEST_M43D_PADS(Black,Standard)
-    NEW_VEST_M43D_ODST(Black,Standard)
-    NEW_VEST_M43D_SHARPSHOOTER(Black,Standard)
-    NEW_VEST_M43D_BREACHER(Black,Standard)
-
-    NEW_VEST_M43D_NONE(Black,Atlas1)
-    NEW_VEST_M43D_LIGHT(Black,Atlas1)
-    NEW_VEST_M43D_PADS(Black,Atlas1)
-    NEW_VEST_M43D_ODST(Black,Atlas1)
-    NEW_VEST_M43D_SHARPSHOOTER(Black,Atlas1)
-    NEW_VEST_M43D_BREACHER(Black,Atlas1)
-    
-    NEW_VEST_M43D_NONE(Black,SORC)
-    NEW_VEST_M43D_LIGHT(Black,SORC)
-    NEW_VEST_M43D_PADS(Black,SORC)
-    NEW_VEST_M43D_ODST(Black,SORC)
-    NEW_VEST_M43D_SHARPSHOOTER(Black,SORC)
-    NEW_VEST_M43D_BREACHER(Black,SORC)
-    
+    NEW_VEST_43A(Black,Aviator)
+    VEST_M43D_CAMOS(Standard)
+    VEST_M43D_CAMOS(SORC)
 
 
     TCP_WEP_CLASS_DEF
@@ -76,93 +49,6 @@ class CfgWeapons
     WEP_UNI_CLASS(Urban)
     WEP_UNI_CLASS(White)
     WEP_UNI_CLASS(Woodland)
-
-    class STB73_U_B_FieldTop_Full_Gloves_Bloused_Kneepads_Medic : TCP_U_B_CBUU_FieldTop_Full_Gloves_Bloused_Kneepads_Base
-    {
-        scope=1;
-        scopeArsenal=1;
-        CBRN_protectionLevel="4";
-        displayName = QUOTE([73] Medic CBUU SHIRT Full Gloves Bloused Kneepads); 
-        ACE_GForceCoef=0.4;
-        class ItemInfo : UniformItem {
-            uniformClass = QUOTE(STB73_B_FieldTop_Full_Gloves_Bloused_Kneepads_Medic);
-            containerClass="Supply50";
-            mass=1;
-            uniformType = "Neopren";
-            allowedSlots[]={"701","801","901"};
-            armor=20;
-        };
-        hiddenSelectionsTextures[] = {
-            QP(data\uniform\Medic\CBUU_FieldTop_CO.paa)
-        };
-        class TCP_equipmentTypes: TCP_equipmentTypes
-        {
-            baseEquipment=QUOTE(STB73_U_B_FieldTop_Full_Gloves_Bloused_Kneepads_Medic);
-        };
-    };
-
-    class TCP_V_M43A_Pads_2_Base;
-    class STB73_V_M43A_Pads_2_Medic: TCP_V_M43A_Pads_2_Base
-	{
-		author=AUTHOR;
-		scope=1;
-		displayName=Q([10MEB] M43/A Medic);
-		class TCP_uniformDecals: TCP_uniformDecals
-		{
-			decalColor="black";
-		};
-		hiddenSelectionsTextures[]=
-		{
-			Q(STB73_TEXPATH(vest,medic\vest_M43A_01_CO.paa)),
-			Q(STB73_TEXPATH(vest,medic\vest_M43A_02_CO.paa)),
-			Q(STB73_TEXPATH(vest,medic\vest_M43A_03_CO.paa)),
-            Q(STB73_TEXPATH(vest,medic\vest_M43_DecalSheet_CA.paa))
-        };
-	};
-
-    class TCP_H_Helmet_CH43A_White;
-    class TCP_H_Helmet_CH43A_White_ChinstrapOffset;
-    class STB73_H_Helmet_CH43A_Medic: TCP_H_Helmet_CH43A_White
-	{
-		author=AUTHOR;
-		scope=1;
-		displayName=Q([73] CH43A Helmet Medic);
-		picture="\TCP\Characters\BLUFOR\UNSC\Army\Headgear\helmet_CH43A\data\ui\White\icon_headgear_CH43A_CA.paa";
-		class TCP_uniformDecals: TCP_uniformDecals
-		{
-			decalColor="white";
-		};
-		class TCP_equipmentTypes: TCP_equipmentTypes
-		{
-			baseEquipment="STB73_H_Helmet_CH43A_Medic";
-		};
-		hiddenSelectionsTextures[]=
-		{
-			Q(STB73_TEXPATH(helmets,medic\helmet_CH43A_CO.paa)),
-			Q(STB73_TEXPATH(vest,medic\vest_M43_DecalSheet_CA.paa))
-		};
-	};
-	class STB73_H_Helmet_CH43A_Medic_ChinstrapOffset: TCP_H_Helmet_CH43A_White_ChinstrapOffset
-	{
-		author=AUTHOR;
-		scope=1;
-		displayName=Q([73] CH43A Helmet Medic);
-		picture="\TCP\Characters\BLUFOR\UNSC\Army\Headgear\helmet_CH43A\data\ui\White\icon_headgear_CH43A_CA.paa";
-		class TCP_uniformDecals: TCP_uniformDecals
-		{
-			decalColor="white";
-		};
-		class TCP_equipmentTypes: TCP_equipmentTypes
-		{
-			baseEquipment="STB73_H_Helmet_CH43A_Medic";
-		};
-		hiddenSelectionsTextures[]=
-		{
-			Q(STB73_TEXPATH(helmets,medic\helmet_CH43A_CO.paa)),
-			Q(STB73_TEXPATH(vest,medic\vest_M43_DecalSheet_CA.paa))
-		};
-	};
-
 
     class TCP_H_Helmet_ECH55D_Black_Black;
     class TCP_H_Helmet_ECH55D_Black_Black_DP;
@@ -193,32 +79,18 @@ class CfgWeapons
     class STB73_Helmet_ECH55D_DP_Base: TCP_H_Helmet_ECH55D_Black_Black_DP
 	{
 	};
-    
-    ECH55D_HELMET(Company,Black,Officer,Standard)
-    ECH55D_HELMET(Company,Red,SORC,SORC)
-    ECH55D_HELMET(Company,Gold,NCO,Standard)
-    ECH55D_HELMET(Company,Silver,Specialist,Standard)
-    ECH55D_HELMET(Company,Blue,Enlisted,Standard)
 
-    ECH55D_HELMET(Standard,Black,Officer,Standard)
-    ECH55D_HELMET(Standard,Red,SORC,SORC)
-    ECH55D_HELMET(Standard,Gold,NCO,Standard)
-    ECH55D_HELMET(Standard,Silver,Specialist,Standard)
-    ECH55D_HELMET(Standard,Blue,Enlisted,Standard)
+    ECH55D_HELMET_VISORS(Company)
+    ECH55D_HELMET_VISORS(Standard)
+    ECH55D_HELMET_VISORS(Atlas1)
 
-    ECH55D_HELMET(Atlas1,Black,Officer,Standard)
-    ECH55D_HELMET(Atlas1,Red,SORC,SORC) 
-    ECH55D_HELMET(Atlas1,Gold,NCO,Standard)
-    ECH55D_HELMET(Atlas1,Silver,Specialist,Standard)
-    ECH55D_HELMET(Atlas1,Blue,Enlisted,Standard)
-
-    CUS_ECH55D_HELMET(Dove,Blue)
-    CUS_ECH55D_HELMET(Ninja,Silver)
-    CUS_ECH55D_HELMET(Ridge,Red)
-    CUS_ECH55D_HELMET(Mendez,Gold)
-    CUS_ECH55D_HELMET(Stauss,Gold)
-    CUS_ECH55D_HELMET(Price,Black)
-    CUS_ECH55D_HELMET(Smith,Black)
+    ECH55D_CUS_HELMET_CAMOS(Dove,Blue)
+    ECH55D_CUS_HELMET_CAMOS(Mendez,Gold)
+    ECH55D_CUS_HELMET_CAMOS(Ninja,Silver)
+    ECH55D_CUS_HELMET_CAMOS(Price,Black)
+    ECH55D_CUS_HELMET_CAMOS(Smith,Black)
+    ECH55D_CUS_HELMET_CAMOS(Stauss,Gold)
+    ECH55D_CUS_HELMET_CAMOS(Winters,Gold)
 
     // ECH55D_HELMET(Atlas2,Black,Officer,Standard)
     // ECH55D_HELMET(Atlas2,Red,SORC,SORC)
@@ -237,7 +109,7 @@ class CfgWeapons
     {
         scope=2;
         scopeArsenal=2;
-        author="73rd S-4 Team";
+        author=AUTHOR;
         displayName="[73] VX19 Flight Helmet [Aviator]";
         ace_hearing_protection = 0.80;
         hiddenSelectionsTextures[]=
@@ -257,12 +129,30 @@ class CfgWeapons
             Model="STB73_ACE_VX19_Helmet";
             Roles="Aviator";
         };
+        class ItemInfo:ItemInfo
+        {
+            class HitpointsProtectionInfo
+            {
+                class Face
+                {
+                    hitpointName="HitFace";
+                    armor=LVL3_ARMOR;
+                    passThrough=LVL3_PASS;
+                };
+                class Head
+                {
+                    hitpointName="HitHead";
+                    armor=LVL4_ARMOR;
+                    passThrough=LVL4_PASS;
+                };
+            };
+        };
     };
     class STB73_VX19_Helmet_Senior: STB73_VX19_Helmet_Base
     {
         scope=2;
         scopeArsenal=2;
-        author="73rd S-4 Team";
+        author=AUTHOR;
         displayName="[73] VX19 Flight Helmet [Sr Aviator]";
         ace_hearing_protection = 0.80;
         hiddenSelectionsTextures[]=
@@ -274,6 +164,67 @@ class CfgWeapons
         {
             Model="STB73_ACE_VX19_Helmet";
             Roles="Sr Aviator";
+        };
+    };
+
+    class OPTRE_UNSC_Recon_Helmet;
+
+    class STB73_Recon_Helmet_Base: OPTRE_UNSC_Recon_Helmet
+    {
+        scope=1;
+        scopeArsenal=1;
+        author=AUTHOR;
+        displayName="[73] Recon Helmet [Standard]";
+        ace_hearing_protection = 0.80;
+        class ItemInfo:ItemInfo
+        {
+            class HitpointsProtectionInfo
+            {
+                class Face
+                {
+                    hitpointName="HitFace";
+                    armor=LVL3_ARMOR;
+                    passThrough=LVL3_PASS;
+                };
+                class Head
+                {
+                    hitpointName="HitHead";
+                    armor=LVL4_ARMOR;
+                    passThrough=LVL4_PASS;
+                };
+            };
+        };
+    };
+    class STB73_Recon_Helmet_Grayson: STB73_Recon_Helmet_Base
+    {
+        scope=2;
+        scopeArsenal=2;
+        author=AUTHOR;
+        displayName="[73] Recon Helmet [Grayson]";
+        ace_hearing_protection = 0.80;
+        hiddenSelectionsTextures[] = {
+            "z\73STB\addons\armor\data\helmets\custom\Grayson\graysonhelmmage.paa",
+            "optre_unsc_units\army\data\recon_visor_co.paa",
+            "optre_unsc_units\army\data\ghillie_woodland_co.paa",
+            "optre_unsc_units\army\data\soft_packs_co.paa"
+        };
+        class ItemInfo:ItemInfo
+        {
+            class HitpointsProtectionInfo
+            {
+                class Face
+                {
+                    hitpointName="HitFace";
+                    armor=LVL3_ARMOR;
+                    passThrough=LVL3_PASS;
+                };
+                class Head
+                {
+                    hitpointName="HitHead";
+                    armor=LVL4_ARMOR;
+                    passThrough=LVL4_PASS;
+                };
+            };
         };
     };
 

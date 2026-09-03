@@ -26,5 +26,21 @@ parameters = [
 executable = "arma3profiling_x64"
 mission = "73rdTesting.flat_green_terrain"
 
+[hemtt.launch.big]
+workshop = [
+    "450814997",  # CBA_A3
+]
+presets = [
+    "bigtest"
+]
+parameters = [
+    "-world=empty",
+    "-noSplash",
+    "-showScriptErrors",
+    "-debug"
+]
+executable = "arma3profiling_x64"
+mission = "73rdTesting.flat_green_terrain"
+
 [version]
 path = "addons/main/script_version.hpp"

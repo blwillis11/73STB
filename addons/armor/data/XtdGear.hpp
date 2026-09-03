@@ -193,12 +193,10 @@ class XtdGearModels
                 values[]=
                 {
                     "Standard",
-                    "Company",
-                    "Atlas1",
 					"SORC"
                 };
             };
-            class Camo
+            class Camo : STB73_CamoMetal
             {
                 alwaysSelectable=1;
                 changeingame=0;
@@ -206,7 +204,11 @@ class XtdGearModels
                 label= "Camo";
                 values[]=
                 {
-                    "Black"
+                    "Black",
+					"Brown",
+					"Olive",
+					"Tan",
+                    "White"
                 };
             };
             class Belt
@@ -281,8 +283,24 @@ class XtdGearModels
             author = AUTHOR;
             options[]=
             {
-                "Billet",
+                "Camo",
+				"Billet",
 				"Variant"
+            };
+			class Camo : STB73_CamoMetal
+            {
+                alwaysSelectable=1;
+                changeingame=0;
+                changedelay=0;
+                label= "Camo";
+                values[]=
+                {
+                    "Black",
+					"Brown",
+					"Olive",
+					"Tan",
+                    "White"
+                };
             };
 			class Billet
             {
@@ -319,7 +337,8 @@ class XtdGearModels
             author = AUTHOR;
             options[]=
             {
-                "Custom"
+                "Custom",
+				"Camo"
             };
 			class Custom
             {
@@ -335,10 +354,25 @@ class XtdGearModels
 					"Mendez",
 					"Stauss",
 					"Price",
-					"Smith"
+					"Smith",
+					"Winters"
                 };
             };
-
+			class Camo : STB73_CamoMetal
+            {
+                alwaysSelectable=1;
+                changeingame=0;
+                changedelay=0;
+                label= "Camo";
+                values[]=
+                {
+                    "Black",
+					"Brown",
+					"Olive",
+					"Tan",
+                    "White"
+                };
+            };
         };
 
         class STB73_ACE_VX19_Helmet

@@ -409,9 +409,9 @@ class STB73_Space_Crate_Pallet_Large_Base : Land_TCP_Space_Crate_Pallet_Large_01
     ace_dragging_canDrag=0;
     class TCP_Compat_OPTRE
     {
-        magLockOffset[] = {0, -6.75, -1};
-        magLockReversed = 1; // Rotates the vehicle 180 degrees when mag-locked
-        magLockGearInterlock = 1; // Disallows the mag-locked vehicle from being unloaded when gear are down
+        magLockOffset[] = {0, -4.6, -0.35};
+        magLockReversed = 0; // Rotates the vehicle 180 degrees when mag-locked
+        magLockGearInterlock = 0; // Disallows the mag-locked vehicle from being unloaded when gear are down
     };
     class VehicleTransport
     {
@@ -436,8 +436,8 @@ class STB73_Space_Crate_Pallet_Large_Base : Land_TCP_Space_Crate_Pallet_Large_01
             radius = 5;
             priority = 2;
             onlyForPlayer = 1;
-            condition = "(vehicle player == player) AND ((count (nearestObjects [this, [""STB73_D77_TC_Pelican""], 15])) > 0) AND (str ((nearestObjects [this, [""STB73_D77_TC_Pelican""], 15] select 0) getVariable [""OPTRE_Pelican_AttachedToVehiclesEffect"",[]]) == ""[]"")";
-            statement = "private _pel = (nearestObjects [this, [""STB73_D77_TC_Pelican""], 15]) select 0; 0 = [_pel, this] spawn OPTRE_fnc_PelicanLoadValidate;";
+            condition = "vehicle player == player && {private _pel = nearestObjects [this, [""OPTRE_Pelican_F""], 15] select 0; !isNil ""_pel"" && {(_pel getVariable [""OPTRE_Pelican_AttachedToVehiclesEffect"", []]) isEqualTo []}}";
+            statement = "private _pel = nearestObjects [this, [""OPTRE_Pelican_F""], 15] select 0; [_pel, this] spawn OPTRE_fnc_PelicanLoadValidate;";
         };
     };
 };

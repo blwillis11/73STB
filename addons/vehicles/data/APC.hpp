@@ -10,12 +10,6 @@ class STB73_M494_Oryx: OPTRE_M494
     scope=2;
     side=1;
     crew = "STB73_STB_ODST_Rifleman";
-    class TCP_Compat_OPTRE
-    {
-        magLockOffset[] = {0, -7.2, -1.57105};
-        magLockReversed = 1; // Rotates the vehicle 180 degrees when mag-locked
-        magLockGearInterlock = 1; // Disallows the mag-locked vehicle from being unloaded when gear are down
-    };
     class ace_cargo {
         class cargo {
             class ACE_Tracks { // Doesn't have to have the same name as the item you're adding
@@ -42,13 +36,50 @@ class STB73_M494_Oryx: OPTRE_M494
     };
 };
 
-
-class DMNS_M511_Springbok_APC;
-
-class STB73_M511_Springbok_APC : DMNS_M511_Springbok_APC
+class OPTRE_M493_AIE;
+class STB73_M494_Oryx_AIE: OPTRE_M493_AIE
 {
-    displayName="[73] M511-Springbok Transport";
+    displayName="[73] M494 Oryx (AIE)";
     author= AUTHOR;
+    faction = "STB73_STB";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_APCs_EdSubCat";
+    scopeCurator=2;
+    scope=2;
+    side=1;
+    crew = "STB73_STB_ODST_Rifleman";
+    class ace_cargo {
+        class cargo {
+            class ACE_Tracks { // Doesn't have to have the same name as the item you're adding
+                type = "ACE_Tracks";
+                amount = 2;
+            };
+        };
+    };
+    class VehicleSpawnerInfo {
+        class STB73_GroundSpawner
+        {
+            scope = 1;
+            spawner= "73rd Mechanized";
+            vehicle = "STB73_M494_Oryx_AIE";
+            Type = "APC (AIE)";
+            cost = 3;
+
+            priority = 1;
+            liveries[]=
+            {
+             "[""Standard"",[""\OPTRE_Vehicles_Tracked\Oryx\data\texture\oryx_armor_co.paa","\OPTRE_Vehicles_Tracked\Oryx\data\texture\oryx_main_co.paa","\OPTRE_Vehicles_Tracked\Oryx\data\texture\oryx_net_ca.paa","\OPTRE_Vehicles_Tracked\Oryx\data\texture\oryx_net_ca.paa","\OPTRE_Vehicles_Tracked\Oryx\data\texture\oryx_net_ca.paa","\OPTRE_Vehicles_Tracked\Oryx\data\texture\oryx_turret_co.paa","\OPTRE_Vehicles_Tracked\Oryx\data\texture\scorpion_mg_co.paa","\OPTRE_Vehicles_Tracked\Oryx\data\Texture\oryx_decal_ca.paa""]]",
+            };
+        };
+    };
+};
+
+class OPTRE_M411_APC_UNSC;
+class STB73_M411_APC:OPTRE_M411_APC_UNSC
+{
+    displayName="[73] M411 Bison APC";
+    author= AUTHOR;
+    faction = "STB73_STB";
     editorCategory = "STB73_STB";
     editorSubcategory = "STB73_APCs_EdSubCat";
     scopeCurator=2;
@@ -57,7 +88,7 @@ class STB73_M511_Springbok_APC : DMNS_M511_Springbok_APC
     crew = "STB73_STB_ODST_Rifleman";
     class TCP_Compat_OPTRE
     {
-        magLockOffset[] = {0, -9, -0.72};
+        magLockOffset[] = {0,-6,-3.1};
         magLockReversed = 1; // Rotates the vehicle 180 degrees when mag-locked
         magLockGearInterlock = 1; // Disallows the mag-locked vehicle from being unloaded when gear are down
     };
@@ -77,36 +108,29 @@ class STB73_M511_Springbok_APC : DMNS_M511_Springbok_APC
         {
             scope = 1;
             spawner= "73rd Mechanized";
-            vehicle = "Springbok";
+            vehicle = "STB73_M411_APC";
             Type = "APC";
             cost = 3;
 
             priority = 1;
-            liveries[]=
-            {
-             "[""Standard"",[""DMNS\DMNS_Armour\M511_Springbok\Data\M511_Body_co.paa"",""DMNS\DMNS_Armour\M511_Springbok\Data\M511_Interior_co.paa"",""DMNS\DMNS_Armour\M511_Springbok\Data\M511_Details_co.paa"",""DMNS\DMNS_Armour\M511_Springbok\Data\m511_m247h_co.paa""]]",
+            liveries[]= {
+             "[""Standard"",[""OPTRE_Vehicles\Bison\data\Bison_Body_standard_CO.paa","OPTRE_Vehicles\Bison\data\Bison_Misc_standard_CO.paa","OPTRE_Vehicles\Bison\data\Bison_WheelsCannon_CO.paa","OPTRE_Vehicles\Bison\data\Bison_Seats_CO.paa","OPTRE_Vehicles\Bison\data\Bison_Interior_CO.paa","OPTRE_Vehicles\Bison\data\Bison_MFCDScreens_CO.paa""]]",
             };
         };
     };
 };
-
-class DMNS_M511_Springbok_IFV;
-class STB73_M511_Springbok_IFV : DMNS_M511_Springbok_IFV
+class OPTRE_M412_IFV_UNSC;
+class STB73_M412_IFV:OPTRE_M412_IFV_UNSC
 {
-    displayName="[73] M511-Springbok IFV";
+    displayName="[73] M412 Bison IFV";
     author= AUTHOR;
+    faction = "STB73_STB";
     editorCategory = "STB73_STB";
     editorSubcategory = "STB73_APCs_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
     crew = "STB73_STB_ODST_Rifleman";
-    class TCP_Compat_OPTRE
-    {
-        magLockOffset[] = {0, -9, -0.85};
-        magLockReversed = 1; // Rotates the vehicle 180 degrees when mag-locked
-        magLockGearInterlock = 1; // Disallows the mag-locked vehicle from being unloaded when gear are down
-    };
     class ACE_Cargo
     {
         class Cargo
@@ -123,35 +147,29 @@ class STB73_M511_Springbok_IFV : DMNS_M511_Springbok_IFV
         {
             scope = 1;
             spawner= "73rd Mechanized";
-            vehicle = "Springbok";
+            vehicle = "STB73_M412_IFV";
             Type = "IFV";
             cost = 3;
 
             priority = 1;
-            liveries[]=
-            {
-             "[""Standard"",[""DMNS\DMNS_Armour\M511_Springbok\Data\M511_Body_co.paa"",""DMNS\DMNS_Armour\M511_Springbok\Data\M511_Interior_co.paa"",""DMNS\DMNS_Armour\M511_Springbok\Data\M511_Details_co.paa"",""DMNS\DMNS_Armour\M511_Springbok\Data\M511_ifv_co.paa"",""DMNS\DMNS_Armour\M511_Springbok\Data\M511_aa_co.paa""]]",
+            liveries[]= {
+             "[""Standard"",[""OPTRE_Vehicles\Bison\data\Bison_Body_standard_CO.paa","OPTRE_Vehicles\Bison\data\Bison_Misc_standard_CO.paa","OPTRE_Vehicles\Bison\data\Bison_WheelsCannon_CO.paa","OPTRE_Vehicles\Bison\data\Bison_Seats_CO.paa","OPTRE_Vehicles\Bison\data\Bison_Interior_CO.paa","OPTRE_Vehicles\Bison\data\Bison_MFCDScreens_CO.paa","OPTRE_Vehicles\Bison\data\Bison_90mm_CO.paa""]]",
             };
         };
     };
 };
-class DMNS_M511_Springbok_MGS;
-class STB73_M511_Springbok_MGS : DMNS_M511_Springbok_MGS
+class OPTRE_M413_MGS_UNSC;
+class STB73_M413_MGS:OPTRE_M413_MGS_UNSC
 {
-    displayName="[73] M511-Springbok MGS";
+    displayName="[73] M413 Bison MGS";
     author= AUTHOR;
+    faction = "STB73_STB";
     editorCategory = "STB73_STB";
     editorSubcategory = "STB73_APCs_EdSubCat";
     scopeCurator=2;
     scope=2;
     side=1;
     crew = "STB73_STB_ODST_Rifleman";
-    class TCP_Compat_OPTRE
-    {
-        magLockOffset[] = {0, -9, -0.85};
-        magLockReversed = 1; // Rotates the vehicle 180 degrees when mag-locked
-        magLockGearInterlock = 1; // Disallows the mag-locked vehicle from being unloaded when gear are down
-    };
     class ACE_Cargo
     {
         class Cargo
@@ -168,61 +186,14 @@ class STB73_M511_Springbok_MGS : DMNS_M511_Springbok_MGS
         {
             scope = 1;
             spawner= "73rd Mechanized";
-            vehicle = "Springbok";
+            vehicle = "STB73_M413_MGS";
             Type = "MGS";
             cost = 3;
 
             priority = 1;
-            liveries[]=
-            {
-             "[""Standard"",[""DMNS\DMNS_Armour\M511_Springbok\Data\M511_Body_co.paa"",""DMNS\DMNS_Armour\M511_Springbok\Data\M511_Interior_co.paa"",""DMNS\DMNS_Armour\M511_Springbok\Data\M511_Details_co.paa"",""DMNS\DMNS_Armour\M511_Springbok\Data\M511_mgs_co.paa""]]",
+            liveries[]= {
+             "[""Standard"",[""OPTRE_Vehicles\Bison\data\Bison_Body_standard_CO.paa","OPTRE_Vehicles\Bison\data\Bison_Misc_standard_CO.paa","OPTRE_Vehicles\Bison\data\Bison_WheelsCannon_CO.paa","OPTRE_Vehicles\Bison\data\Bison_Seats_CO.paa","OPTRE_Vehicles\Bison\data\Bison_Interior_CO.paa","OPTRE_Vehicles\Bison\data\Bison_MFCDScreens_CO.paa","OPTRE_Vehicles\Bison\data\Bison_90mm_CO.paa""]]",
             };
         };
     };
 };
-class DMNS_M511_Springbok_AA;
-class STB73_M511_Springbok_AA : DMNS_M511_Springbok_AA
-{
-    displayName="[73] M511-Springbok AA";
-    author= AUTHOR;
-    editorCategory = "STB73_STB";
-    editorSubcategory = "STB73_APCs_EdSubCat";
-    scopeCurator=2;
-    scope=2;
-    side=1;
-    crew = "STB73_STB_ODST_Rifleman";
-    class TCP_Compat_OPTRE
-    {
-        magLockOffset[] = {0, -9, -0.85};
-        magLockReversed = 1; // Rotates the vehicle 180 degrees when mag-locked
-        magLockGearInterlock = 1; // Disallows the mag-locked vehicle from being unloaded when gear are down
-    };
-    class ACE_Cargo
-    {
-        class Cargo
-        {
-            class ACE_wheel
-            {
-                type="ACE_wheel";
-                amount=6;
-            };
-        };
-    };
-    class VehicleSpawnerInfo {
-        class STB73_GroundSpawner
-        {
-            scope = 1;
-            spawner= "73rd Mechanized";
-            vehicle = "Springbok";
-            Type = "AA";
-            cost = 3;
-
-            priority = 1;
-            liveries[]=
-            {
-             "[""Standard"",[""DMNS\DMNS_Armour\M511_Springbok\Data\M511_Body_co.paa"",""DMNS\DMNS_Armour\M511_Springbok\Data\M511_Interior_co.paa"",""DMNS\DMNS_Armour\M511_Springbok\Data\M511_Details_co.paa"",""DMNS\DMNS_Armour\M511_Springbok\Data\M511_aa_co.paa""]]",
-            };
-        };
-    };
-};
-

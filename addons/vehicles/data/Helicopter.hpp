@@ -93,8 +93,8 @@ class STB73_AV14_Hornet_CAP: OPTRE_UNSC_hornet_CAP
     };
 };
 
-class Splits_UNSC_D77_TC_Pelican;
-class STB73_D77_TC_Pelican: Splits_UNSC_D77_TC_Pelican
+class OPTRE_Pelican_armed_SOCOM;
+class STB73_D77H_SOCOM_Pelican: OPTRE_Pelican_armed_SOCOM
 {
     displayName = "[73] D77-TC Pelican";
     editorCategory = "STB73_STB";
@@ -103,139 +103,15 @@ class STB73_D77_TC_Pelican: Splits_UNSC_D77_TC_Pelican
     scope=2;
     side=1;
     crew = "STB73_Aviator";
-    hiddenSelectionsTextures[] =
+    class EventHandlers: EventHandlers
     {
-        "z\73STB\addons\vehicles\data\Pelican\body_co.paa",
-        "z\73STB\addons\vehicles\data\Pelican\wings_and_gear_co.paa",
-        "z\73STB\addons\vehicles\data\Pelican\weaponry_co.paa"
-    };
-    transportVehiclesCount = 2;  // Max vehicles loadable (e.g., 1 Warthog + 1 Mongoose)
-    transportVehiclesMass = 10000;  // Total mass limit (kg); adjust for balance
-    availableForSupportTypes[] = {"Drop"};  // Enables airdrop support
-    transportVehicleAmmo = 0;  // No ammo transfer
-    transportVehicleFuel = 0;  // No fuel transfer
-    transportVehicleRepair = 0;  // No repair transfer
-    class Turrets : Turrets
-    {
-        class RearDoorGun : RearDoorGun {
-            gunnerType = "STB73_Aviator";
-        };   
-    };
-    class TransportVehicles {
-        class Cargo1 {
-            name = "FrontLeft";
-            type = "STB73_M274_ATV";  // Example: Warthog class
-            direction = "forward";  // Align forward in bay
-            offset[] = {1.15, 6, 2.13};  // Relative offset from Pelican's center (tweak in editor)
-            maxLoadCoefficient = 0.5;  // Full size allowed
-        };
-        class Cargo2 {
-            name = "FrontRight";
-            type = "STB73_M274_ATV";  // Example: Mongoose ATV
-            direction = "forward";
-            offset[] = {-1.15, 6, 2.13};
-            maxLoadCoefficient = 0.5;  // Half size for smaller vehicle
-        };
-        class Cargo3 {
-            name = "BackLeft";
-            type = "STB73_M274_ATV";  // Example: Mongoose ATV
-            direction = "forward";
-            offset[] = {-1.15, 2.3, 2.13};
-            maxLoadCoefficient = 0.5;  // Half size for smaller vehicle
-        };
-        class Cargo4 {
-            name = "BackRight";
-            type = "STB73_M274_ATV";  // Example: Mongoose ATV
-            direction = "forward";
-            offset[] = {1.15, 2.3, 2.13};
-            maxLoadCoefficient = 0.5;  // Half size for smaller vehicle
-        };
-        class Cargo5 {
-            name = "BackLeft";
-            type = "STB73_M274_ATV";  // Example: Mongoose ATV
-            direction = "forward";
-            offset[] = {-1.15, .45, 2.13};
-            maxLoadCoefficient = 0.5;  // Half size for smaller vehicle
-        };
-        class Cargo6 {
-            name = "BackRight";
-            type = "STB73_M274_ATV";  // Example: Mongoose ATV
-            direction = "forward";
-            offset[] = {1.15, .45, 2.13};
-            maxLoadCoefficient = 0.5;  // Half size for smaller vehicle
-        };
-        class Cargo7 {
-            name = "MainBayCenter";
-            type = "STB73_SDV_ODST";  // Example: Mongoose ATV
-            direction = "backward";
-            offset[] = {0, 4.15, 2.13};
-            maxLoadCoefficient = 0.5;  // Half size for smaller vehicle
-        };
-        class Cargo8 {
-            name = "MainBayCenter";
-            type = "STB73_POGV_RCWS";  // Example: Mongoose ATV
-            direction = "backward";
-            offset[] = {0, 4.15, 2.13};
-            maxLoadCoefficient = 0.5;  // Half size for smaller vehicle
-        };
-        class Cargo9 {
-            name = "MainBayCenter";
-            type = "STB73_COGV_RCWS";  // Example: Mongoose ATV
-            direction = "backward";
-            offset[] = {0, 4.15, 2.13};
-            maxLoadCoefficient = 0.5;  // Half size for smaller vehicle
-        };
-        class Cargo10 {
-            name = "MainBayCenter";
-            type = "STB73_Space_Crate_Pallet_Large_Base";  // Example: Mongoose ATV
-            direction = "backward";
-            offset[] = {0, 4.15, 2.13};
-            maxLoadCoefficient = 0.5;  // Half size for smaller vehicle
-        };
-        class Cargo11 {
-            name = "MainBayCenter";
-            type = "STB73_Boat_Transport";  // Example: Mongoose ATV
-            direction = "forward";
-            offset[] = {0, 4.15, 2.13};
-            maxLoadCoefficient = 0.5;  // Half size for smaller vehicle
+        class STB73_RegisterThrusters_EH
+        {
+            init = "[(_this select 0),true,true,false] call STB73_fnc_RegisterThrusters;";
         };
     };
-    class CargoAlignment {
-        front[] = {"Cargo1"};  // Fill front first
-        back[] = {"Cargo2"};
-        center[] = {"Cargo7"};
-    };
-    class VehicleTransport
-    {
-    	class Carrier
-    	{
-    		//cargoBayDimensions[]		= { {1, 1.5, -1}, {-1, 6.5, -3.4} };			// alternatively, positions in model space (since 2.08)
-    		cargoBayDimensions[]		= { {1.5, .5, -1}, {-1.5, 7.2, -3.4} };			// alternatively, positions in model space (since 2.08)
-    		disableHeightLimit			= 1;								// If set to 1 disable height limit of transported vehicles
-    		maxLoadMass					= 200000;							// Maximum cargo weight (in Kg) which the vehicle can transport
-    		cargoAlignment[]			= { "front", "center"};				// Array of 2 elements defining alignment of vehicles in cargo space.
-    																		// Possible values are left, right, center, front, back. Order is important.
-    		cargoSpacing[]				= { 0, 1.85, 0 };					// Offset from X,Y,Z axes (in metres)
-            transportVehiclesCount = 2;
-    		exits[]					= { {0, -6, -4} };			// alternatively, positions in model space (since 2.08)
-
-    		unloadingInterval			= 2;								// Time between unloading vehicles (in seconds)
-    		loadingDistance				= 10;								// Maximal distance for loading in exit point (in meters).
-    		loadingAngle				= 60;								// Maximal sector where cargo vehicle must be to for loading (in degrees).
-    		parachuteClassDefault		= "B_Parachute_02_F";				// Type of parachute used when dropped in air. Can be overridden by parachuteClass in Cargo.
-    		parachuteHeightLimitDefault	= 50;								// Minimal height above terrain when parachute is used. Can be overridden by parachuteHeightLimit in Cargo.
-
-    		class CargoTypeWhitelist										// Whitelist. If this isn't empty, only listed vehicles (isKindOf) can load into (since 2.10)
-     		{
-     			STB73_M274_ATV = 1;
-     			STB73_POGV_RCWS = 1;
-     			STB73_COGV_RCWS = 1;
-     			STB73_SDV_ODST = 1;													// In this case the transporter only carry boats, not cars or tanks etc
-     			STB73_Space_Crate_Pallet_Large_Base = 1;
-                STB73_Boat_Transport=1;
-     		};
-    	};
-    };
+    class textureSources
+    {};
     class VehicleSpawnerInfo {
         class STB73_AirSpawner
         {
@@ -244,19 +120,7 @@ class STB73_D77_TC_Pelican: Splits_UNSC_D77_TC_Pelican
             vehicle = "Pelican";
             Type = "Standard";
             cost = 3;
-
             priority = 1;
-            liveries[]=
-            {
-             "[""Standard"",[""z\73STB\addons\vehicles\data\Pelican\body_co.paa"",""z\73STB\addons\vehicles\data\Pelican\wings_and_gear_co.paa"",""z\73STB\addons\vehicles\data\Pelican\weaponry_co.paa""]]",
-            };
-        };
-    };
-    class EventHandlers: EventHandlers
-    {
-        class STB73_RegisterThrusters_EH
-        {
-            init = "[(_this select 0),true,true,false] call STB73_fnc_RegisterThrusters;";
         };
     };
     class UserActions

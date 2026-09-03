@@ -114,6 +114,7 @@ class CfgFactionClasses
         priority = 0;
     };
 };
+class TCP_uniformDecals;
 
 #include "categories.hpp"
 class CfgWeapons

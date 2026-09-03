@@ -18,7 +18,7 @@ if (_offsetOPTRE isNotEqualTo []) then {
 
 // --- Check ADDON OPTIONS if CfgVehicles parameters fail
 if (!_loaded) then {
-	private _cbaVehArray = parseSimpleArray TCP_COMPAT_OPTRE_MAGLOCK_CUSTOM;
+	private _cbaVehArray = parseSimpleArray TCP_Compat_OPTRE_Maglock_Custom;
 	{
 		_x params [["_class", ""], ["_offset", [0, 0, 0]], ["_reversed", false], ["_gearInterlock", false]];
 		if (_vehClass isKindOf _class) exitWith {

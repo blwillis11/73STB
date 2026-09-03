@@ -28,4 +28,15 @@ class cfgGlasses
 		author=AUTHOR;
 		CBRN_protectionLevel = "8";
 	};
+
+	class OPTRE_PlayingCard;
+
+	class STB73_PlayingCard: OPTRE_PlayingCard
+	{
+		displayName=Q([73] Playing Card);
+		author=AUTHOR;
+		hiddenSelectionsTextures[] = {
+			"z\73STB\addons\armor\data\facewear\salmonplayingcard.paa"
+		};
+	};
 };
