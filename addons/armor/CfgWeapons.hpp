@@ -92,6 +92,8 @@ class CfgWeapons
     ECH55D_CUS_HELMET_CAMOS(Stauss,Gold)
     ECH55D_CUS_HELMET_CAMOS(Winters,Gold)
     ECH55D_CUS_HELMET_CAMOS(Mitchel,Red)
+    ECH55D_CUS_HELMET_CAMOS(Salmon,Black)
+    ECH55D_CUS_HELMET_CAMOS(Ridge,Red)
 
     // ECH55D_HELMET(Atlas2,Black,Officer,Standard)
     // ECH55D_HELMET(Atlas2,Red,SORC,SORC)

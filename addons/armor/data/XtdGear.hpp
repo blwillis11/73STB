@@ -356,7 +356,8 @@ class XtdGearModels
 					"Price",
 					"Smith",
 					"Winters",
-					"Mitchel"
+					"Mitchel",
+					"Salmon"
                 };
             };
 			class Camo : STB73_CamoMetal
