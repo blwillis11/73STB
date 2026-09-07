@@ -13,7 +13,9 @@ private _blacklistedMods = [
 	"Personal Arsenal",
 	"Personal Arsenal GP Version",
 	"DCON's Multiplayer Vehicle Spawner",
-	"DCON Vehicle Spawner"
+	"DCON Vehicle Spawner",
+	"KJW's Two Primary Weapons",
+	"Alternative Running"
 ]; // add other mod names here if needed
 
 // Small delay to ensure mod info is populated on join

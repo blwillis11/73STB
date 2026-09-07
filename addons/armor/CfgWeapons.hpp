@@ -231,15 +231,16 @@ class CfgWeapons
         };
     };
 
-    class H_Beret_Colonel;
-    class STB73_beret: H_Beret_Colonel
+    class TCP_H_Beret_UNSC_Circle_Black;
+    class STB73_beret: TCP_H_Beret_UNSC_Circle_Black
     {
         displayName = "[73] STB Beret";
         hiddenSelectionsTextures[]=
         {
-            "z\73STB\addons\armor\data\helmets\73Beret_co.paa"
+            "z\73STB\addons\armor\data\helmets\company\73_beret.paa"
         };
     };
+    class H_Beret_Colonel;
     class STB73_aviation_beret: H_Beret_Colonel
     {
         displayName = "[73] VC-713 Beret";
@@ -259,6 +260,21 @@ class CfgWeapons
     {
         hoa_sling_slingWithHelmet = 0;
         model="";
+    };
+
+    class STB73_NeckSeal : NVGoggles
+    {
+        displayName = "Neck Vacseal (Black)";
+        model = "\TCP\Characters\BLUFOR\UNSC\Marines\Facewear\Neck_Vacseal\g_Neck_Vacseal.p3d";
+        hiddenSelectionsTextures[] = {"\TCP\Characters\BLUFOR\UNSC\Marines\Facewear\Neck_Vacseal\data\camo\Black\g_Neck_Vacseal_CO.paa"};
+        picture = "\TCP\Characters\BLUFOR\UNSC\Marines\Facewear\Neck_Vacseal\data\ui\Black\icon_facewear_Neck_Vacseal_CA.paa";
+        hiddenSelections[] = {"camo"};
+        visionMode[] = {"Normal","NVG","TI"};
+        class itemInfo: ItemInfo
+        {
+            modelOff = "\TCP\Characters\BLUFOR\UNSC\Marines\Facewear\Neck_Vacseal\g_Neck_Vacseal.p3d";
+            uniformModel = "\TCP\Characters\BLUFOR\UNSC\Marines\Facewear\Neck_Vacseal\g_Neck_Vacseal.p3d";
+        };
     };
 
     class UavTerminal_base;

@@ -4,10 +4,10 @@ class CfgVehicles
 	class OPTRE_Ammo_SupplyPod_Launcher;
 	class Module_F;
 
-	class FlagCarrier_Asym;
-	class FlagCarrier;
+	class Land_TCP_PortableMast_01_Flag_Olive_TCP;
+	class Land_TCP_PortableMast_01_Flag_Olive_TCP_dmg;
 
-	class Land_STB73_FlagPole_01_ODST : FlagCarrier_Asym
+	class Land_STB73_FlagPole_01_ODST : Land_TCP_PortableMast_01_Flag_Olive_TCP
 	{
 		author = AUTHOR;
 		displayName = "Flag (73rd STB)";
@@ -22,7 +22,7 @@ class CfgVehicles
 		};
 	};
 
-	class Land_STB73_FlagPole_02_ODST : FlagCarrier
+	class Land_STB73_FlagPole_02_ODST : Land_TCP_PortableMast_01_Flag_Olive_TCP_dmg
 	{
 		author = AUTHOR;
 		displayName = "Flag (73rd STB) (Damaged)";

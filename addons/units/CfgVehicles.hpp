@@ -269,7 +269,7 @@ class CfgVehicles {
         engineer = 0;
         canDeactivateMines = 0;
 
-        uniformClass = "STB73_ODST_Dress_Uniform";
+        uniformClass = "STB73_U_B_TacShirt_Full_Gloves_Bloused_Kneepads_Urban_SlimSleeve";
         backpack = "";
 
         weapons[] = {"STB73_M6C","OPTRE_Smartfinder", "Throw", "Put"};

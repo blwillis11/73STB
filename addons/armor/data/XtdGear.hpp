@@ -1,5 +1,49 @@
 class XtdGearModels
 {
+	class STB73_BilletColors
+	{
+		label="Billet Colors";
+		class Standard
+		{
+			label="Standard";
+			image="z\73STB\addons\armor\data\ui\xtdgearinfo\standard.paa";
+		};
+		class SORC
+		{
+			label="SORC";
+			image="z\73STB\addons\armor\data\ui\xtdgearinfo\sorc.paa";
+		};
+		class Atlas1
+		{
+			label="Atlas1";
+			image="z\73STB\addons\armor\data\ui\xtdgearinfo\atlas1.paa";
+		};
+		class Company
+		{
+			label="Company";
+			image="z\73STB\addons\armor\data\ui\xtdgearinfo\company.paa";
+		};
+		class Officer
+		{
+			label="Officer";
+			image="z\73STB\addons\armor\data\ui\xtdgearinfo\visors\officer.paa";
+		};
+		class Enlisted
+		{
+			label="Enlisted";
+			image="z\73STB\addons\armor\data\ui\xtdgearinfo\visors\enlisted.paa";
+		};
+		class NCO
+		{
+			label="NCO";
+			image="z\73STB\addons\armor\data\ui\xtdgearinfo\visors\nco.paa";
+		};
+		class Specialist
+		{
+			label="Specialist";
+			image="z\73STB\addons\armor\data\ui\xtdgearinfo\visors\specialist.paa";
+		};
+	};
     class STB73_CamoBase
 	{
 		label="Camouflage";
@@ -184,7 +228,7 @@ class XtdGearModels
 				"Legs",
 				"Arms"
             };
-            class Billet
+            class Billet : STB73_BilletColors
             {
                 alwaysSelectable=1;
                 changeingame=0;
@@ -302,7 +346,7 @@ class XtdGearModels
                     "White"
                 };
             };
-			class Billet
+			class Billet : STB73_BilletColors
             {
                 alwaysSelectable=1;
                 changeingame=0;
@@ -315,7 +359,7 @@ class XtdGearModels
                     "Atlas1"
                 };
             };
-            class Variant
+            class Variant : STB73_BilletColors
             {
                 alwaysSelectable=1;
                 changeingame=0;

@@ -19,6 +19,9 @@ class CfgFunctions
             class biomed
             {
             };
+            class bigBiomed
+            {
+            };
             class medkit
             {
             };
