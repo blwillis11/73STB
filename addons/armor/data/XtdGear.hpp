@@ -424,7 +424,7 @@ class XtdGearModels
         class STB73_ACE_VX19_Helmet
 		{
 		    label="[73] VX19 Flight Helmet";
-			author="73rd S-4 Team";
+			author= AUTHOR;
 			options[] =
 			{
 				"Roles"
@@ -479,7 +479,10 @@ class XtdGearModels
 					"Tundra",
 					"Urban",
 					"White",
-					"Woodland"
+					"Woodland",
+					"Woodland2",
+					"Snow",
+					"Desert"
 				};
 			};
 			class top
@@ -634,8 +637,29 @@ class XtdGearModels
 			};
 		};
     };
-    class cfgVehicles
+    class CfgVehicles
 	{
+		class STB73_ACE_NCO_1_Lite
+		{
+			label = "[73] NCO 1 Lite";
+			author="73rd S-4 Team";
+			options[] = 
+			{
+				"Camo"
+			};
+			class camo: STB73_CamoFabric
+			{
+				values[]=
+				{
+					"Black",
+					"Brown",
+					"Green",
+					"Olive",
+					"Tan",
+					"White"
+				};
+			};
+		};
 		class STB73_ACE_Rucksack
 		{
 			label = "[73] Rucksack";

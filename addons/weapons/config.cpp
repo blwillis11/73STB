@@ -2,7 +2,7 @@
 
 class CfgPatches {
     class STB73_Weapons {
-        name = COMPONENT_NAME;
+        name = Q(COMPONENT_NAME);
 		units[] = 
         {
         }; 
@@ -31,7 +31,6 @@ class CfgPatches {
 			"STB73_MA5CGL",
             "STB73_MA5K",
             "STB73_SRS99AM_Stealth",
-            "STB73_M96_LAW",
             "STB73_Fang",
             "STB73_Fang2",
             "STB73_BR55HBM1_CQC",
@@ -308,7 +307,7 @@ class cfgMagazineWells{
 			"STB73_60Rnd_5x23Caseless_FMJ_Mag_Tracer_IR"
 		};
 	};
-	class STB73_1Rnd_12Gauge_MagWell
+	class STB73_6Rnd_12Gauge_MagWell
 	{
 		STB73_Magazines[] = {
 			"STB73_6Rnd_12Gauge_Pellets",

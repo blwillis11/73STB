@@ -4,7 +4,7 @@ class CfgPatches
 {
 	class STB73_TraitSelector
 	{
-		name = COMPONENT_NAME;
+		name = Q(COMPONENT_NAME);
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;

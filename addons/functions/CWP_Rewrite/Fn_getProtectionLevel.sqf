@@ -28,7 +28,7 @@ _nvgProtection = getText (configFile >> "cfgWeapons" >> _nvg >> "CBRN_protection
 
 // Protection levels based on config
 // Body coverage
-if (["8", _glassesProtection] call BIS_fnc_instring || ["8", _uniformProtection] call BIS_fnc_inString) then {
+if (["8", _glassesProtection] call BIS_fnc_inString || ["8", _nvgProtection] call BIS_fnc_inString || ["8", _uniformProtection] call BIS_fnc_inString) then {
 	_bodyCovered = true;
 };
 

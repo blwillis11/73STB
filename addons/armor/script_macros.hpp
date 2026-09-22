@@ -22,18 +22,6 @@
 #define P(PATH) \z\73stb\addons\armor\##PATH
     //P((Something) => "\x\@73rd STB Armor Pack v2\addons\73_units\something
 
-// Q(INPUT) => "INPUT"
-#define Q(INPUT) QUOTE(INPUT)
-
-#define QP(PATH) #P(PATH)
-  // Wraps the expanded path in quotes, e.g.:
-  // QP(data\loading_bg.jpg) => "\x\@73rd STB Armor Pack v2\addons\73_units\something"
-
-// GLUE(A,B) => AB (concatenates tokens)
-#define GLUE(A,B) A##B
-
-#define QUOTE(s) #s
-
 //Standard vest stuff
 #define VEST_MASS 80
 #define HELMET_MASS 80
@@ -3261,7 +3249,6 @@ class HitpointsProtectionInfo {  \
     scope= 1;\
     scopeArsenal= 1;\
     scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
     hiddenSelectionsTextures[] = {\
       QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
       QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa)\
@@ -3275,7 +3262,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa)\
@@ -3287,7 +3273,6 @@ class HitpointsProtectionInfo {  \
     scope= 1;\
     scopeArsenal= 1;\
     scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
     hiddenSelectionsTextures[] = {\
       QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
       QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa)\
@@ -3301,7 +3286,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa)\
@@ -3315,19 +3299,17 @@ class HitpointsProtectionInfo {  \
     scope= 1;\
     scopeArsenal= 1;\
     scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
-      hiddenSelectionsTextures[] = {\
-        QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
-        QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa)\
-        };\
-      uniformClass = QUOTE(STB73_WEP_KNEEPADS_FULL(CAMO,SHIRT));\
+    hiddenSelectionsTextures[] = {\
+      QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
+      QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa)\
+    };\
+    uniformClass = QUOTE(STB73_WEP_KNEEPADS_FULL(CAMO,SHIRT));\
   }; \
   class STB73_B_##SHIRT##_Full_Kneepads_##CAMO##_SlimSleeve : TCP_B_CBUU_##SHIRT##_SlimSleeve_Kneepads_Base {\
       author=AUTHOR;\
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa)\
@@ -3339,7 +3321,6 @@ class HitpointsProtectionInfo {  \
   class STB73_U_B_##SHIRT##_##SLEEVE##_##CAMO## : TCP_U_B_CBUU_##SHIRT##_##SLEEVE##_Base{\
     scope=2;\
     scopeArsenal=2;\
-    CBRN_protectionLevel="4"; \
     displayName = QUOTE([73] CAMO CBUU SHIRT SLEEVE); \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
@@ -3359,7 +3340,6 @@ class HitpointsProtectionInfo {  \
   class STB73_U_B_##SHIRT##_Full_##CAMO## : TCP_U_B_CBUU_##SHIRT##_Full_Base{\
     scope=2;\
     scopeArsenal=2;\
-    CBRN_protectionLevel="4"; \
     displayName = QUOTE([73] CAMO CBUU SHIRT Full); \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
@@ -3398,7 +3378,6 @@ class HitpointsProtectionInfo {  \
     displayName = QUOTE([73] CAMO CBUU SHIRT SlimSleeve); \
     ace_arsenal_uniqueBase = QUOTE(STB73_U_B_##SHIRT##_Full_##CAMO##);\
     ACE_GForceCoef=0.4;\
-    CBRN_protectionLevel="4"; \
     class TCP_equipmentTypes \
 		{ \
 			baseEquipment=QUOTE(STB73_U_B_##SHIRT##_Full_##CAMO##); \
@@ -3419,7 +3398,6 @@ class HitpointsProtectionInfo {  \
   class STB73_U_B_##SHIRT##_##SLEEVE##_Kneepads_##CAMO## : TCP_U_B_CBUU_##SHIRT##_##SLEEVE##_Kneepads_Base{\
     scope=2;\
     scopeArsenal=2;\
-    CBRN_protectionLevel="4"; \
     displayName = QUOTE([73] CAMO CBUU SHIRT SLEEVE); \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
@@ -3439,7 +3417,6 @@ class HitpointsProtectionInfo {  \
   class STB73_U_B_##SHIRT##_Full_Kneepads_##CAMO## : TCP_U_B_CBUU_##SHIRT##_Full_Kneepads_Base{\
     scope=2;\
     scopeArsenal=2;\
-    CBRN_protectionLevel="4"; \
     displayName = QUOTE([73] CAMO CBUU SHIRT Full); \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
@@ -3478,7 +3455,6 @@ class HitpointsProtectionInfo {  \
     displayName = QUOTE([73] CAMO CBUU SHIRT SlimSleeve); \
     ace_arsenal_uniqueBase = QUOTE(STB73_U_B_##SHIRT##_Full_Kneepads_##CAMO##);\
     ACE_GForceCoef=0.4;\
-    CBRN_protectionLevel="4"; \
     class TCP_equipmentTypes \
 		{ \
 			baseEquipment=QUOTE(STB73_U_B_##SHIRT##_Full_Kneepads_##CAMO##); \
@@ -3498,37 +3474,34 @@ class HitpointsProtectionInfo {  \
 
 #define VEH_CLASS_BLOUSED(CAMO,SHIRT,SLEEVE)                          \
   class STB73_B_##SHIRT##_##SLEEVE##_Bloused_##CAMO## : TCP_B_CBUU_##SHIRT##_##SLEEVE##_Bloused_Base {\
-      author=AUTHOR;\
-      scope= 1;\
-      scopeArsenal= 1;\
-      scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
-      hiddenSelectionsTextures[] = {\
-        QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
-        QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa)\
-        };\
-      uniformClass = QUOTE(STB73_WEP_BLOUSED(CAMO,SHIRT,SLEEVE));\
+    author=AUTHOR;\
+    scope= 1;\
+    scopeArsenal= 1;\
+    scopeCurator = 1;\
+    hiddenSelectionsTextures[] = {\
+    QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
+    QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa)\
+    };\
+    uniformClass = QUOTE(STB73_WEP_BLOUSED(CAMO,SHIRT,SLEEVE));\
   };
 
 #define VEH_CLASS_BLOUSED_FULL(CAMO,SHIRT)                          \
   class STB73_B_##SHIRT##_Full_Bloused_##CAMO## : TCP_B_CBUU_##SHIRT##_Full_Bloused_Base {\
-      author=AUTHOR;\
-      scope= 1;\
-      scopeArsenal= 1;\
-      scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
-      hiddenSelectionsTextures[] = {\
-        QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
-        QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa)\
-        };\
-      uniformClass = QUOTE(STB73_WEP_BLOUSED_FULL(CAMO,SHIRT));\
+    author=AUTHOR;\
+    scope= 1;\
+    scopeArsenal= 1;\
+    scopeCurator = 1;\
+    hiddenSelectionsTextures[] = {\
+      QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
+      QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa)\
+      };\
+    uniformClass = QUOTE(STB73_WEP_BLOUSED_FULL(CAMO,SHIRT));\
   }; \
   class STB73_B_##SHIRT##_Full_Bloused_##CAMO##_SlimSleeve : TCP_B_CBUU_##SHIRT##_SlimSleeve_Bloused_Base {\
       author=AUTHOR;\
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa)\
@@ -3542,7 +3515,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa)\
@@ -3556,7 +3528,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa)\
@@ -3568,7 +3539,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa)\
@@ -3580,7 +3550,6 @@ class HitpointsProtectionInfo {  \
   class STB73_U_B_##SHIRT##_##SLEEVE##_Bloused_##CAMO## : TCP_U_B_CBUU_##SHIRT##_##SLEEVE##_Bloused_Base{\
     scope=2;\
     scopeArsenal=2;\
-    CBRN_protectionLevel="4"; \
     displayName = QUOTE([73] CAMO CBUU SHIRT SLEEVE Bloused); \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
@@ -3600,7 +3569,6 @@ class HitpointsProtectionInfo {  \
   class STB73_U_B_##SHIRT##_Full_Bloused_##CAMO## : TCP_U_B_CBUU_##SHIRT##_Full_Bloused_Base{\
     scope=2;\
     scopeArsenal=2;\
-    CBRN_protectionLevel="4"; \
     displayName = QUOTE([73] CAMO CBUU SHIRT Full Bloused); \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
@@ -3638,7 +3606,6 @@ class HitpointsProtectionInfo {  \
     scope=1;\
     displayName = QUOTE([73] CAMO CBUU SHIRT Slim Sleeve Bloused); \
     ACE_GForceCoef=0.4;\
-    CBRN_protectionLevel="4"; \
     ace_arsenal_uniqueBase = QUOTE(STB73_U_B_##SHIRT##_Full_Bloused_##CAMO##);\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_BLOUSED_SS(CAMO,SHIRT));\
@@ -3661,7 +3628,6 @@ class HitpointsProtectionInfo {  \
   class STB73_U_B_##SHIRT##_##SLEEVE##_Bloused_Kneepads_##CAMO## : TCP_U_B_CBUU_##SHIRT##_##SLEEVE##_Bloused_Kneepads_Base{\
     scope=2;\
     scopeArsenal=2;\
-    CBRN_protectionLevel="4"; \
     displayName = QUOTE([73] CAMO CBUU SHIRT SLEEVE Bloused Kneepads); \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
@@ -3681,7 +3647,6 @@ class HitpointsProtectionInfo {  \
   class STB73_U_B_##SHIRT##_Full_Bloused_Kneepads_##CAMO## : TCP_U_B_CBUU_##SHIRT##_Full_Bloused_Kneepads_Base{\
     scope=2;\
     scopeArsenal=2;\
-    CBRN_protectionLevel="4"; \
     displayName = QUOTE([73] CAMO CBUU SHIRT Full Bloused Kneepads); \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
@@ -3719,7 +3684,6 @@ class HitpointsProtectionInfo {  \
     scope=1;\
     displayName = QUOTE([73] CAMO CBUU SHIRT Slim Sleeve Bloused Kneepads); \
     ACE_GForceCoef=0.4;\
-    CBRN_protectionLevel="4"; \
     ace_arsenal_uniqueBase = QUOTE(STB73_U_B_##SHIRT##_Full_Bloused_Kneepads_##CAMO##);\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_BLOUSED_KNEEPADS_SS(CAMO,SHIRT));\
@@ -3745,7 +3709,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa),\
@@ -3760,7 +3723,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa),\
@@ -3773,7 +3735,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa),\
@@ -3788,7 +3749,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa),\
@@ -3815,7 +3775,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa),\
@@ -3828,7 +3787,6 @@ class HitpointsProtectionInfo {  \
   class STB73_U_B_##SHIRT##_##SLEEVE##_Gloves_##CAMO## : TCP_U_B_CBUU_##SHIRT##_##SLEEVE##_Gloves_Base{\
     scope=2;\
     scopeArsenal=2;\
-    CBRN_protectionLevel="4"; \
     displayName = QUOTE([73] CAMO CBUU SHIRT SLEEVE Gloves); \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
@@ -3848,7 +3806,6 @@ class HitpointsProtectionInfo {  \
   class STB73_U_B_##SHIRT##_Full_Gloves_##CAMO## : TCP_U_B_CBUU_##SHIRT##_Full_Gloves_Base{\
     scope=2;\
     scopeArsenal=2;\
-    CBRN_protectionLevel="4"; \
     displayName = QUOTE([73] CAMO CBUU SHIRT Full Gloves); \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
@@ -3886,7 +3843,6 @@ class HitpointsProtectionInfo {  \
     scope=1;\
     displayName = QUOTE([73] CAMO CBUU SHIRT Gloves Slim Sleeve); \
     ACE_GForceCoef=0.4;\
-    CBRN_protectionLevel="4"; \
     ace_arsenal_uniqueBase = QUOTE(STB73_U_B_##SHIRT##_Full_Gloves_##CAMO##);\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_GLOVES_SS(CAMO,SHIRT));\
@@ -3909,7 +3865,6 @@ class HitpointsProtectionInfo {  \
   class STB73_U_B_##SHIRT##_##SLEEVE##_Gloves_Kneepads_##CAMO## : TCP_U_B_CBUU_##SHIRT##_##SLEEVE##_Gloves_Kneepads_Base{\
     scope=2;\
     scopeArsenal=2;\
-    CBRN_protectionLevel="4"; \
     displayName = QUOTE([73] CAMO CBUU SHIRT SLEEVE Gloves); \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
@@ -3929,7 +3884,6 @@ class HitpointsProtectionInfo {  \
   class STB73_U_B_##SHIRT##_Full_Gloves_Kneepads_##CAMO## : TCP_U_B_CBUU_##SHIRT##_Full_Gloves_Kneepads_Base{\
     scope=2;\
     scopeArsenal=2;\
-    CBRN_protectionLevel="4"; \
     displayName = QUOTE([73] CAMO CBUU SHIRT Full Gloves); \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
@@ -3967,7 +3921,6 @@ class HitpointsProtectionInfo {  \
     scope=1;\
     displayName = QUOTE([73] CAMO CBUU SHIRT Gloves Slim Sleeve); \
     ACE_GForceCoef=0.4;\
-    CBRN_protectionLevel="4"; \
     ace_arsenal_uniqueBase = QUOTE(STB73_U_B_##SHIRT##_Full_Gloves_Kneepads_##CAMO##);\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_GLOVES_KNEEPADS_SS(CAMO,SHIRT));\
@@ -3993,7 +3946,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa),\
@@ -4008,7 +3960,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa),\
@@ -4021,7 +3972,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa),\
@@ -4036,7 +3986,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa),\
@@ -4051,7 +4000,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa),\
@@ -4064,7 +4012,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa),\
@@ -4077,7 +4024,6 @@ class HitpointsProtectionInfo {  \
   class STB73_U_B_##SHIRT##_##SLEEVE##_Gloves_Bloused_##CAMO## : TCP_U_B_CBUU_##SHIRT##_##SLEEVE##_Gloves_Bloused_Base{\
     scope=2;\
     scopeArsenal=2;\
-    CBRN_protectionLevel="4"; \
     displayName = QUOTE([73] CAMO CBUU SHIRT SLEEVE Gloves Bloused); \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
@@ -4097,7 +4043,7 @@ class HitpointsProtectionInfo {  \
   class STB73_U_B_##SHIRT##_Full_Gloves_Bloused_##CAMO## : TCP_U_B_CBUU_##SHIRT##_Full_Gloves_Bloused_Base{\
     scope=2;\
     scopeArsenal=2;\
-    CBRN_protectionLevel="4"; \
+    CBRN_protectionLevel="8"; \
     displayName = QUOTE([73] CAMO CBUU SHIRT Full Gloves Bloused); \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
@@ -4135,7 +4081,7 @@ class HitpointsProtectionInfo {  \
     scope=1;\
     displayName = QUOTE([73] CAMO CBUU SHIRT Slim Sleeve Gloves Bloused); \
     ACE_GForceCoef=0.4;\
-    CBRN_protectionLevel="4"; \
+    CBRN_protectionLevel="8"; \
     ace_arsenal_uniqueBase = QUOTE(STB73_U_B_##SHIRT##_Full_Gloves_Bloused_##CAMO##);\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_BLOUSED_GLOVES_SS(CAMO,SHIRT));\
@@ -4158,7 +4104,6 @@ class HitpointsProtectionInfo {  \
   class STB73_U_B_##SHIRT##_##SLEEVE##_Gloves_Bloused_Kneepads_##CAMO## : TCP_U_B_CBUU_##SHIRT##_##SLEEVE##_Gloves_Bloused_Kneepads_Base{\
     scope=2;\
     scopeArsenal=2;\
-    CBRN_protectionLevel="4"; \
     displayName = QUOTE([73] CAMO CBUU SHIRT SLEEVE Gloves Bloused Kneepads); \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
@@ -4178,7 +4123,7 @@ class HitpointsProtectionInfo {  \
   class STB73_U_B_##SHIRT##_Full_Gloves_Bloused_Kneepads_##CAMO## : TCP_U_B_CBUU_##SHIRT##_Full_Gloves_Bloused_Kneepads_Base{\
     scope=2;\
     scopeArsenal=2;\
-    CBRN_protectionLevel="4"; \
+    CBRN_protectionLevel="8"; \
     displayName = QUOTE([73] CAMO CBUU SHIRT Full Gloves Bloused Kneepads); \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
@@ -4216,7 +4161,7 @@ class HitpointsProtectionInfo {  \
     scope=1;\
     displayName = QUOTE([73] CAMO CBUU SHIRT Slim Sleeve Gloves Bloused Kneepads); \
     ACE_GForceCoef=0.4;\
-    CBRN_protectionLevel="4"; \
+    CBRN_protectionLevel="8"; \
     ace_arsenal_uniqueBase = QUOTE(STB73_U_B_##SHIRT##_Full_Gloves_Bloused_Kneepads_##CAMO##);\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_BLOUSED_GLOVES_KNEEPADS_SS(CAMO,SHIRT));\
@@ -4242,7 +4187,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa)\
@@ -4256,7 +4200,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa)\
@@ -4268,7 +4211,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa)\
@@ -4282,7 +4224,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa)\
@@ -4296,7 +4237,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa)\
@@ -4308,7 +4248,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa)\
@@ -4320,7 +4259,6 @@ class HitpointsProtectionInfo {  \
   class STB73_U_B_##SHIRT##_##SLEEVE##_Unzipped_##CAMO## : TCP_U_B_CBUU_##SHIRT##_##SLEEVE##_Unzipped_Base{\
     scope=2;\
     scopeArsenal=2;\
-    CBRN_protectionLevel="4"; \
     displayName = QUOTE([73] CAMO CBUU SHIRT SLEEVE Unzipped); \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
@@ -4340,7 +4278,6 @@ class HitpointsProtectionInfo {  \
   class STB73_U_B_##SHIRT##_Full_Unzipped_##CAMO## : TCP_U_B_CBUU_##SHIRT##_Full_Unzipped_Base{\
     scope=2;\
     scopeArsenal=2;\
-    CBRN_protectionLevel="4"; \
     displayName = QUOTE([73] CAMO CBUU SHIRT Full Unzipped); \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
@@ -4378,7 +4315,6 @@ class HitpointsProtectionInfo {  \
     scope=1;\
     displayName = QUOTE([73] CAMO CBUU SHIRT Full Unzipped); \
     ACE_GForceCoef=0.4;\
-    CBRN_protectionLevel="4"; \
     ace_arsenal_uniqueBase = QUOTE(STB73_U_B_##SHIRT##_Full_Unzipped_##CAMO##);\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_UNZIPPED_SS(CAMO,SHIRT));\
@@ -4401,7 +4337,6 @@ class HitpointsProtectionInfo {  \
   class STB73_U_B_##SHIRT##_##SLEEVE##_Unzipped_Kneepads_##CAMO## : TCP_U_B_CBUU_##SHIRT##_##SLEEVE##_Unzipped_Kneepads_Base{\
     scope=2;\
     scopeArsenal=2;\
-    CBRN_protectionLevel="4"; \
     displayName = QUOTE([73] CAMO CBUU SHIRT SLEEVE Unzipped Kneepads); \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
@@ -4421,7 +4356,6 @@ class HitpointsProtectionInfo {  \
   class STB73_U_B_##SHIRT##_Full_Unzipped_Kneepads_##CAMO## : TCP_U_B_CBUU_##SHIRT##_Full_Unzipped_Kneepads_Base{\
     scope=2;\
     scopeArsenal=2;\
-    CBRN_protectionLevel="4"; \
     displayName = QUOTE([73] CAMO CBUU SHIRT Full Unzipped Kneepads); \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
@@ -4459,7 +4393,6 @@ class HitpointsProtectionInfo {  \
     scope=1;\
     displayName = QUOTE([73] CAMO CBUU SHIRT Full Unzipped Kneepads); \
     ACE_GForceCoef=0.4;\
-    CBRN_protectionLevel="4"; \
     ace_arsenal_uniqueBase = QUOTE(STB73_U_B_##SHIRT##_Full_Unzipped_Kneepads_##CAMO##);\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_UNZIPPED_KNEEPADS_SS(CAMO,SHIRT));\
@@ -4485,7 +4418,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa)\
@@ -4499,7 +4431,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa)\
@@ -4511,7 +4442,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa)\
@@ -4525,7 +4455,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa)\
@@ -4539,7 +4468,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa)\
@@ -4551,7 +4479,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-      CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa)\
@@ -4563,7 +4490,6 @@ class HitpointsProtectionInfo {  \
   class STB73_U_B_##SHIRT##_##SLEEVE##_Bloused_Unzipped_##CAMO## : TCP_U_B_CBUU_##SHIRT##_##SLEEVE##_Bloused_Unzipped_Base{\
     scope=2;\
     scopeArsenal=2;\
-    CBRN_protectionLevel="4"; \
     displayName = QUOTE([73] CAMO CBUU SHIRT SLEEVE Bloused Unzipped); \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
@@ -4583,7 +4509,6 @@ class HitpointsProtectionInfo {  \
   class STB73_U_B_##SHIRT##_Full_Bloused_Unzipped_##CAMO## : TCP_U_B_CBUU_##SHIRT##_Full_Bloused_Unzipped_Base{\
     scope=2;\
     scopeArsenal=2;\
-    CBRN_protectionLevel="4"; \
     displayName = QUOTE([73] CAMO CBUU SHIRT Full Bloused Unzipped); \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
@@ -4621,7 +4546,6 @@ class HitpointsProtectionInfo {  \
     scope=1;\
     displayName = QUOTE([73] CAMO CBUU SHIRT Slim Sleeve Bloused Unzipped); \
     ACE_GForceCoef=0.4;\
-    CBRN_protectionLevel="4"; \
     ace_arsenal_uniqueBase = QUOTE(STB73_U_B_##SHIRT##_Full_Bloused_Unzipped_##CAMO##);\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_BLOUSED_UNZIPPED_SS(CAMO,SHIRT));\
@@ -4644,7 +4568,6 @@ class HitpointsProtectionInfo {  \
   class STB73_U_B_##SHIRT##_##SLEEVE##_Bloused_Unzipped_Kneepads_##CAMO## : TCP_U_B_CBUU_##SHIRT##_##SLEEVE##_Bloused_Unzipped_Kneepads_Base{\
     scope=2;\
     scopeArsenal=2;\
-    CBRN_protectionLevel="4"; \
     displayName = QUOTE([73] CAMO CBUU SHIRT SLEEVE Bloused Unzipped Kneepads); \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
@@ -4664,7 +4587,6 @@ class HitpointsProtectionInfo {  \
   class STB73_U_B_##SHIRT##_Full_Bloused_Unzipped_Kneepads_##CAMO## : TCP_U_B_CBUU_##SHIRT##_Full_Bloused_Unzipped_Kneepads_Base{\
     scope=2;\
     scopeArsenal=2;\
-    CBRN_protectionLevel="4"; \
     displayName = QUOTE([73] CAMO CBUU SHIRT Full Bloused Unzipped Kneepads); \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
@@ -4702,7 +4624,6 @@ class HitpointsProtectionInfo {  \
     scope=1;\
     displayName = QUOTE([73] CAMO CBUU SHIRT Slim Sleeve Bloused Unzipped Kneepads); \
     ACE_GForceCoef=0.4;\
-    CBRN_protectionLevel="4"; \
     ace_arsenal_uniqueBase = QUOTE(STB73_U_B_##SHIRT##_Full_Bloused_Unzipped_Kneepads_##CAMO##);\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_BLOUSED_UNZIPPED_KNEEPADS_SS(CAMO,SHIRT));\
@@ -4728,7 +4649,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa),\
@@ -4742,7 +4662,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa),\
@@ -4755,7 +4674,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa),\
@@ -4770,7 +4688,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa),\
@@ -4784,7 +4701,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa),\
@@ -4797,7 +4713,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa),\
@@ -4810,7 +4725,6 @@ class HitpointsProtectionInfo {  \
   class STB73_U_B_##SHIRT##_##SLEEVE##_Gloves_Unzipped_##CAMO## : TCP_U_B_CBUU_##SHIRT##_##SLEEVE##_Gloves_Unzipped_Base{\
     scope=2;\
     scopeArsenal=2;\
-    CBRN_protectionLevel="4"; \
     displayName = QUOTE([73] CAMO CBUU SHIRT SLEEVE Gloves Unzipped); \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
@@ -4830,7 +4744,6 @@ class HitpointsProtectionInfo {  \
   class STB73_U_B_##SHIRT##_Full_Gloves_Unzipped_##CAMO## : TCP_U_B_CBUU_##SHIRT##_Full_Gloves_Unzipped_Base{\
     scope=2;\
     scopeArsenal=2;\
-    CBRN_protectionLevel="4"; \
     displayName = QUOTE([73] CAMO CBUU SHIRT Full Gloves Unzipped); \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
@@ -4868,7 +4781,6 @@ class HitpointsProtectionInfo {  \
     scope=1;\
     displayName = QUOTE([73] CAMO CBUU SHIRT Slim sleeve Gloves Unzipped); \
     ACE_GForceCoef=0.4;\
-    CBRN_protectionLevel="4"; \
     ace_arsenal_uniqueBase = QUOTE(STB73_U_B_##SHIRT##_Full_Gloves_Unzipped_##CAMO##);\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_GLOVES_UNZIPPED_SS(CAMO,SHIRT));\
@@ -4891,7 +4803,6 @@ class HitpointsProtectionInfo {  \
   class STB73_U_B_##SHIRT##_##SLEEVE##_Gloves_Unzipped_Kneepads_##CAMO## : TCP_U_B_CBUU_##SHIRT##_##SLEEVE##_Gloves_Unzipped_Kneepads_Base{\
     scope=2;\
     scopeArsenal=2;\
-    CBRN_protectionLevel="4"; \
     displayName = QUOTE([73] CAMO CBUU SHIRT SLEEVE Gloves Unzipped Kneepads); \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
@@ -4911,7 +4822,6 @@ class HitpointsProtectionInfo {  \
   class STB73_U_B_##SHIRT##_Full_Gloves_Unzipped_Kneepads_##CAMO## : TCP_U_B_CBUU_##SHIRT##_Full_Gloves_Unzipped_Kneepads_Base{\
     scope=2;\
     scopeArsenal=2;\
-    CBRN_protectionLevel="4"; \
     displayName = QUOTE([73] CAMO CBUU SHIRT Full Gloves Unzipped Kneepads); \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
@@ -4949,7 +4859,6 @@ class HitpointsProtectionInfo {  \
     scope=1;\
     displayName = QUOTE([73] CAMO CBUU SHIRT Slim sleeve Gloves Unzipped Kneepads); \
     ACE_GForceCoef=0.4;\
-    CBRN_protectionLevel="4"; \
     ace_arsenal_uniqueBase = QUOTE(STB73_U_B_##SHIRT##_Full_Gloves_Unzipped_Kneepads_##CAMO##);\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_GLOVES_UNZIPPED_KNEEPADS_SS(CAMO,SHIRT));\
@@ -4975,7 +4884,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa),\
@@ -4990,7 +4898,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa),\
@@ -5003,7 +4910,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa),\
@@ -5018,7 +4924,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa),\
@@ -5033,7 +4938,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa),\
@@ -5046,7 +4950,6 @@ class HitpointsProtectionInfo {  \
       scope= 1;\
       scopeArsenal= 1;\
       scopeCurator = 1;\
-    CBRN_protectionLevel="4"; \
       hiddenSelectionsTextures[] = {\
         QP(data\uniform\##CAMO##\CBUU_##SHIRT##_CO.paa),\
         QP(data\uniform\##CAMO##\CBUU_Pants_CO.paa),\
@@ -5059,7 +4962,6 @@ class HitpointsProtectionInfo {  \
   class STB73_U_B_##SHIRT##_##SLEEVE##_Gloves_Bloused_Unzipped_##CAMO## : TCP_U_B_CBUU_##SHIRT##_##SLEEVE##_Gloves_Bloused_Unzipped_Base{\
     scope=2;\
     scopeArsenal=2;\
-    CBRN_protectionLevel="4"; \
     displayName = QUOTE([73] CAMO CBUU SHIRT SLEEVE Gloves Bloused Unzipped); \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
@@ -5079,7 +4981,6 @@ class HitpointsProtectionInfo {  \
   class STB73_U_B_##SHIRT##_Full_Gloves_Bloused_Unzipped_##CAMO## : TCP_U_B_CBUU_##SHIRT##_Full_Gloves_Bloused_Unzipped_Base{\
     scope=2;\
     scopeArsenal=2;\
-    CBRN_protectionLevel="4"; \
     displayName = QUOTE([73] CAMO CBUU SHIRT Full Gloves Bloused Unzipped); \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
@@ -5117,7 +5018,6 @@ class HitpointsProtectionInfo {  \
     scope=1;\
     displayName = QUOTE([73] CAMO CBUU SHIRT Slim Sleeve Gloves Bloused Unzipped); \
     ACE_GForceCoef=0.4;\
-    CBRN_protectionLevel="4"; \
     ace_arsenal_uniqueBase = QUOTE(STB73_U_B_##SHIRT##_Full_Gloves_Bloused_Unzipped_##CAMO##);\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_GLOVES_BLOUSED_UNZIPPED_SS(CAMO,SHIRT));\
@@ -5140,7 +5040,6 @@ class HitpointsProtectionInfo {  \
   class STB73_U_B_##SHIRT##_##SLEEVE##_Gloves_Bloused_Unzipped_Kneepads_##CAMO## : TCP_U_B_CBUU_##SHIRT##_##SLEEVE##_Gloves_Bloused_Unzipped_Kneepads_Base{\
     scope=2;\
     scopeArsenal=2;\
-    CBRN_protectionLevel="4"; \
     displayName = QUOTE([73] CAMO CBUU SHIRT SLEEVE Gloves Bloused Unzipped Kneepads); \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
@@ -5160,7 +5059,6 @@ class HitpointsProtectionInfo {  \
   class STB73_U_B_##SHIRT##_Full_Gloves_Bloused_Unzipped_Kneepads_##CAMO## : TCP_U_B_CBUU_##SHIRT##_Full_Gloves_Bloused_Unzipped_Kneepads_Base{\
     scope=2;\
     scopeArsenal=2;\
-    CBRN_protectionLevel="4"; \
     displayName = QUOTE([73] CAMO CBUU SHIRT Full Gloves Bloused Unzipped Kneepads); \
     ACE_GForceCoef=0.4;\
     class ItemInfo : UniformItem {\
@@ -5198,7 +5096,6 @@ class HitpointsProtectionInfo {  \
     scope=1;\
     displayName = QUOTE([73] CAMO CBUU SHIRT Slim Sleeve Gloves Bloused Unzipped Kneepads); \
     ACE_GForceCoef=0.4;\
-    CBRN_protectionLevel="4"; \
     ace_arsenal_uniqueBase = QUOTE(STB73_U_B_##SHIRT##_Full_Gloves_Bloused_Unzipped_Kneepads_##CAMO##);\
     class ItemInfo : UniformItem {\
       uniformClass = QUOTE(STB73_VEH_GLOVES_BLOUSED_UNZIPPED_KNEEPADS_SS(CAMO,SHIRT));\

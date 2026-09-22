@@ -2,7 +2,7 @@
 
 class CfgPatches {
     class STB73_Medical {
-        name = COMPONENT_NAME;
+        name = Q(COMPONENT_NAME);
 		units[] = 
         {
 			"STB73_epinephrineItem",

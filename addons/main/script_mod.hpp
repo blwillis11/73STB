@@ -1,4 +1,5 @@
 #define MAINPREFIX z
+#define TITLE 73rd STB
 #define PREFIX STB73
 
 #define AUTHOR QUOTE(73rd S-4 Team)
@@ -23,10 +24,4 @@
 
 #ifdef RELEASE_BUILD
 	// insert debug defines here
-#endif
-
-#ifdef COMPONENT_BEAUTIFIED
-    #define COMPONENT_NAME QUOTE(73rd STB - COMPONENT_BEAUTIFIED)
-#else
-    #define COMPONENT_NAME QUOTE(73rd STB - COMPONENT)
 #endif

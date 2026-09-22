@@ -3,13 +3,14 @@
 
 class CfgPatches {
     class STB73_armor {
-        name = COMPONENT_NAME;
+        name = Q(COMPONENT_NAME);
         units[] = {};
         weapons[] = {
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "TCP_Characters"
+            "TCP_Characters",
+            "OPTRE_FC_Units_Marines"
         };
         authors[] = {"Salmon"}; // sub array of authors, considered for the specific addon, can be removed or left empty {}
         author = AUTHOR; // primary author name, either yours or your team's, considered for the whole mod

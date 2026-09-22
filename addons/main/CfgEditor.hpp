@@ -7,9 +7,37 @@ class cfgFactionClasses
         side = 1; // Opfor = 0, Blufor = 1, Indep = 2. 
         icon = "main\UI\73odstSTB.paa"; //Custom Icon
     };
-    class STB73_odst
+    class STB73_ODST_A
     {
-        displayName = "[73] Shock Trooper Battalion ODST";
+        displayName = "[73] Orbital Drop Shock Troopers (Arctic)";
+        priority = 0; // Position in list.
+        side = 1; // Opfor = 0, Blufor = 1, Indep = 2.
+        icon = "main\UI\73odstSTB.paa"; //Custom Icon
+    };
+    class STB73_ODST_D
+    {
+        displayName = "[73] Orbital Drop Shock Troopers (Desert)";
+        priority = 0; // Position in list.
+        side = 1; // Opfor = 0, Blufor = 1, Indep = 2.
+        icon = "main\UI\73odstSTB.paa"; //Custom Icon
+    };
+    class STB73_ODST_T
+    {
+        displayName = "[73] Orbital Drop Shock Troopers (Tropical)";
+        priority = 0; // Position in list.
+        side = 1; // Opfor = 0, Blufor = 1, Indep = 2.
+        icon = "main\UI\73odstSTB.paa"; //Custom Icon
+    };
+    class STB73_ODST_U
+    {
+        displayName = "[73] Orbital Drop Shock Troopers (Urban)";
+        priority = 0; // Position in list.
+        side = 1; // Opfor = 0, Blufor = 1, Indep = 2.
+        icon = "main\UI\73odstSTB.paa"; //Custom Icon
+    };
+    class STB73_ODST_W
+    {
+        displayName = "[73] Orbital Drop Shock Troopers (Woodland)";
         priority = 0; // Position in list.
         side = 1; // Opfor = 0, Blufor = 1, Indep = 2.
         icon = "main\UI\73odstSTB.paa"; //Custom Icon

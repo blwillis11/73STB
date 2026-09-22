@@ -49,6 +49,9 @@ class CfgWeapons
     WEP_UNI_CLASS(Urban)
     WEP_UNI_CLASS(White)
     WEP_UNI_CLASS(Woodland)
+    WEP_UNI_CLASS(Woodland2)
+    WEP_UNI_CLASS(Snow)
+    WEP_UNI_CLASS(Desert)
 
     class TCP_H_Helmet_ECH55D_Black_Black;
     class TCP_H_Helmet_ECH55D_Black_Black_DP;
@@ -94,18 +97,6 @@ class CfgWeapons
     ECH55D_CUS_HELMET_CAMOS(Mitchel,Red)
     ECH55D_CUS_HELMET_CAMOS(Salmon,Black)
     ECH55D_CUS_HELMET_CAMOS(Ridge,Red)
-
-    // ECH55D_HELMET(Atlas2,Black,Officer,Standard)
-    // ECH55D_HELMET(Atlas2,Red,SORC,SORC)
-    // ECH55D_HELMET(Atlas2,Gold,NCO,Standard)
-    // ECH55D_HELMET(Atlas2,Silver,Specialist,Standard)
-    // ECH55D_HELMET(Atlas2,Blue,Enlisted,Standard)
-
-    class Uniform_Base;
-	class OPTRE_UNSC_Army_Soldier_DressGray;
-	class CH252D_Helmet;
-    class CH252D_Helmet_dp;
-    class VES_CH252_WDL_Crew;
     
     class OPTRE_FC_VX19_Helmet;
     class STB73_VX19_Helmet_Base: OPTRE_FC_VX19_Helmet
@@ -121,11 +112,6 @@ class CfgWeapons
             "optre_fc_units\marines\data\h3_pilothelmet_visor_co.paa",
             "optre_unsc_units\army\data\ghillie_woodland_co.paa",
             "optre_unsc_units\army\data\soft_packs_co.paa"
-        };
-        hiddenSelectionsMaterials[]=
-        {
-            "optre_fc_units\marines\data\h3_pilothelmet.rvmat",
-            "optre_fc_units\marines\data\h3_pilothelmet_visor.rvmat"
         };
         class XtdGearInfo
         {
@@ -162,6 +148,8 @@ class CfgWeapons
         {
             "z\73STB\addons\armor\data\helmets\73_VX19_senioraviator_co.paa",
             "optre_fc_units\marines\data\h3_pilothelmet_visor_co.paa",
+            "optre_unsc_units\army\data\ghillie_woodland_co.paa",
+            "optre_unsc_units\army\data\soft_packs_co.paa"
         };
         class XtdGearInfo
         {
@@ -275,6 +263,9 @@ class CfgWeapons
             modelOff = "\TCP\Characters\BLUFOR\UNSC\Marines\Facewear\Neck_Vacseal\g_Neck_Vacseal.p3d";
             uniformModel = "\TCP\Characters\BLUFOR\UNSC\Marines\Facewear\Neck_Vacseal\g_Neck_Vacseal.p3d";
         };
+        CBRN_protectionLevel = "8";
+        hoa_sling_hideWhenSlung = 1; // 0-Nothing 1-Hide item when slung
+        hoa_sling_slingWithHelmet = 0;
     };
 
     class UavTerminal_base;

@@ -1,8 +1,9 @@
 #include "script_component.hpp"
+#include "script_macros.hpp"
 
 class CfgPatches {
     class STB73_Units {
-        name = COMPONENT_NAME;
+        name = Q(COMPONENT_NAME);
 		units[] = 
         {
 			"STB73_STB_ODST_Rifleman",
@@ -39,5 +40,4 @@ class CfgPatches {
 // configs go here
 #include "CfgEventHandlers.hpp"
 #include "CfgWeapons.hpp"
-#include "CfgVehicles.hpp"
 #include "CfgGroups.hpp"

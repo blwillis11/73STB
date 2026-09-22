@@ -46,7 +46,6 @@ class XtdGearModels
 					"MA37",
 					"MA37K",
 					"MA40",
-					"MA5A",
 					"MA5B",
 					"MA5C",
 					"MA5K"
@@ -81,11 +80,9 @@ class XtdGearModels
                 label= "Variants";
                 values[]=
 				{
-					"BR45",
 					"BR55",
 					"BR55_HB",
-					"BR55HBM1_DMR",
-					"BR55HBM1_CQC"
+					"XBR55"
 				};
 			};
 		};

@@ -21,6 +21,9 @@ class CfgVehicles
     VEH_UNI_CLASS(Urban)
     VEH_UNI_CLASS(White)
     VEH_UNI_CLASS(Woodland)
+    VEH_UNI_CLASS(Woodland2)
+    VEH_UNI_CLASS(Snow)
+    VEH_UNI_CLASS(Desert)
 	class ItemInfo;
 	class UniformItem;
     class OPTRE_Rucksack;

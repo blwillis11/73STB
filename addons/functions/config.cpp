@@ -2,7 +2,7 @@
 
 class CfgPatches {
     class STB73_Functions {
-        name = COMPONENT_NAME;
+        name = Q(COMPONENT_NAME);
 		units[] = 
         {
 			"STB73_Module_HEV",

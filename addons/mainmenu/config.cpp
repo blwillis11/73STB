@@ -2,7 +2,7 @@
 
 class CfgPatches {
     class STB73_MainMenu {
-        name = COMPONENT_NAME;
+        name = Q(COMPONENT_NAME);
 		units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
