@@ -26,6 +26,9 @@
 #define SMG						STB73_M7_SMG
 #define SMG_MAG					STB73_48Rnd_5x23Caseless_FMJ_Mag
 
+#define SMG_SPECOPS				STB73_M6J
+#define SMG_SPECOPS_MAG			STB73_36Rnd_127x30_SAP_Mag
+
 #define RIFLE_SPECOPS			STB73_MA37K
 #define RIFLE_SPECOPS_MAG		STB73_32Rnd_762x51_Mag
 
@@ -56,23 +59,20 @@
 #define ITEM_GPS				TCP_UGPS
 #define ITEM_TERMINAL			B_UavTerminal
 
-#define ITEM_IV_250             STB73_PolyHemoglobinIV_250
-#define ITEM_IV_500             STB73_PolyHemoglobinIV_500
-#define ITEM_IV_1000            STB73_PolyHemoglobinIV_1000
-#define ITEM_IV_2000            STB73_PolyHemoglobinIV_2000
+#define BLOOD_IV_250             STB73_PolyHemoglobinIV_250
+#define BLOOD_IV_500             STB73_PolyHemoglobinIV_500
+#define BLOOD_IV_1000            STB73_PolyHemoglobinIV_1000
+#define BLOOD_IV_2000            STB73_PolyHemoglobinIV_2000
 
-#define ITEM_LIGHT_BIOFOAM      STB73_Biofoam_Light
-#define ITEM_SORC_BIOFOAM       STB73_Biofoam
+#define LIGHT_BIOFOAM      STB73_Biofoam_Light
+#define SORC_BIOFOAM       STB73_Biofoam
 
-#define ITEM_LIGHT_MEDIGEL      STB73_Medigel_Light
-#define ITEM_SORC_MEDIGEL       STB73_Medigel
+#define LIGHT_MEDIGEL      STB73_Medigel_Light
+#define SORC_MEDIGEL       STB73_Medigel
 
-#define ITEM_MEDKIT       		STB73_MedKit
-
-#define ITEM_SPLINT             ACE_splint
-
-#define FACTION					SUBCOMPONENT
-#define PFACTION                DOUBLES(PREFIX,FACTION)
+#define BANDAGE      			ACE_packingBandage
+#define MEDKIT       			FirstAidKit
+#define SPLINT             		ACE_splint
 
 //--- Backpack Macros
 
@@ -83,11 +83,11 @@
 	\
 	class TransportMagazines\
 	{\
-		MAG_XX(RIFLE_MAG,10);\
+		MAG_XX(RIFLE_MAG,10)\
 	};\
 	class TransportItems{};\
 	class TransportWeapons{};\
-}
+};
 
 //--- Assistant Autorifleman
 #define BACKPACK_AAR(baseClass,faction) class TRIPLES(baseClass,faction,AAR): baseClass\
@@ -96,11 +96,11 @@
 	\
 	class TransportMagazines\
 	{\
-		MAG_XX(MACHINEGUN_MAG,3);\
+		MAG_XX(MACHINEGUN_MAG,3)\
 	};\
 	class TransportItems{};\
 	class TransportWeapons{};\
-}
+};
 
 //--- Autorifleman
 #define BACKPACK_AR(baseClass,faction) class TRIPLES(baseClass,faction,AR): baseClass\
@@ -109,11 +109,11 @@
 	\
 	class TransportMagazines\
 	{\
-		MAG_XX(MACHINEGUN_MAG,3);\
+		MAG_XX(MACHINEGUN_MAG,3)\
 	};\
 	class TransportItems{};\
 	class TransportWeapons{};\
-}
+};
 
 //--- Medic / Combat Life Saver
 #define BACKPACK_MED(baseClass,faction) class TRIPLES(baseClass,faction,MED): baseClass\
@@ -123,11 +123,11 @@
 	class TransportMagazines{};\
 	class TransportItems\
 	{\
-		ITEM_XX(MediKit,1);\
-		ITEM_XX(FirstAidKit,10);\
+		ITEM_XX(MediKit,1)\
+		ITEM_XX(FirstAidKit,10)\
 	};\
 	class TransportWeapons{};\
-}
+};
 
 //--- Engineer
 #define BACKPACK_ENG(baseClass,faction) class TRIPLES(baseClass,faction,ENG): baseClass\
@@ -136,19 +136,19 @@
 	\
 	class TransportMagazines\
 	{\
-		MAG_XX(SMOKE_ORANGE,1);\
-		MAG_XX(SMOKE_BLUE,1);\
-		MAG_XX(SMOKE_GREEN,1);\
+		MAG_XX(SMOKE_ORANGE,1)\
+		MAG_XX(SMOKE_BLUE,1)\
+		MAG_XX(SMOKE_GREEN,1)\
 	};\
 	class TransportItems\
 	{\
-		ITEM_XX(ToolKit,1);\
-		ITEM_XX(MineDetector,1);\
-		ITEM_XX(DemoCharge_Remote_Mag,2);\
-		ITEM_XX(SatchelCharge_Remote_Mag,1);\
+		ITEM_XX(ToolKit,1)\
+		ITEM_XX(MineDetector,1)\
+		ITEM_XX(DemoCharge_Remote_Mag,2)\
+		ITEM_XX(SatchelCharge_Remote_Mag,1)\
 	};\
 	class TransportWeapons{};\
-}
+};
 
 //--- Explosives Specialist
 #define BACKPACK_EXP(baseClass,faction) class TRIPLES(baseClass,faction,EXP): baseClass\
@@ -157,19 +157,19 @@
 	\
 	class TransportMagazines\
 	{\
-		MAG_XX(SMOKE_GREEN,1);\
+		MAG_XX(SMOKE_GREEN,1)\
 	};\
 	class TransportItems\
 	{\
-		ITEM_XX(ToolKit,1);\
-		ITEM_XX(MineDetector,1);\
-		ITEM_XX(APERSBoundingMine_Range_Mag,3);\
-		ITEM_XX(ClaymoreDirectionalMine_Remote_Mag,2);\
-		ITEM_XX(DemoCharge_Remote_Mag,1);\
-		ITEM_XX(SLAMDirectionalMine_Wire_Mag,2);\
+		ITEM_XX(ToolKit,1)\
+		ITEM_XX(MineDetector,1)\
+		ITEM_XX(APERSBoundingMine_Range_Mag,3)\
+		ITEM_XX(ClaymoreDirectionalMine_Remote_Mag,2)\
+		ITEM_XX(DemoCharge_Remote_Mag,1)\
+		ITEM_XX(SLAMDirectionalMine_Wire_Mag,2)\
 	};\
 	class TransportWeapons{};\
-}
+};
 
 //--- Grenadier
 #define BACKPACK_GRE(baseClass,faction) class TRIPLES(baseClass,faction,GRE): baseClass\
@@ -178,15 +178,15 @@
 	\
 	class TransportMagazines\
 	{\
-		MAG_XX(SMOKE_GREEN,1);\
-		MAG_XX(SMOKE_ORANGE,1);\
-		MAG_XX(SMOKE_BLUE,1);\
-		MAG_XX(SMOKE,4);\
-		MAG_XX(FRAG,4);\
+		MAG_XX(SMOKE_GREEN,1)\
+		MAG_XX(SMOKE_ORANGE,1)\
+		MAG_XX(SMOKE_BLUE,1)\
+		MAG_XX(SMOKE,4)\
+		MAG_XX(FRAG,4)\
 	};\
 	class TransportItems {};\
 	class TransportWeapons{};\
-}
+};
 
 //--- Anti-Air
 #define BACKPACK_AA(baseClass,faction) class TRIPLES(baseClass,faction,AA): baseClass\
@@ -195,11 +195,11 @@
 	\
 	class TransportMagazines\
 	{\
-		MAG_XX(LAUNCHER_AA_MAG,1);\
+		MAG_XX(LAUNCHER_AA_MAG,1)\
 	};\
 	class TransportItems {};\
 	class TransportWeapons{};\
-}
+};
 
 //--- Anti-Tank
 #define BACKPACK_AT(baseClass,faction) class TRIPLES(baseClass,faction,AT): baseClass\
@@ -208,11 +208,11 @@
 	\
 	class TransportMagazines\
 	{\
-		MAG_XX(LAUNCHER_MAG,1);\
+		MAG_XX(LAUNCHER_MAG,1)\
 	};\
 	class TransportItems {};\
 	class TransportWeapons{};\
-}
+};
 
 //--- Repair Specialist
 #define BACKPACK_REP(baseClass,faction) class TRIPLES(baseClass,faction,REP): baseClass\
@@ -221,27 +221,43 @@
 	\
 	class TransportMagazines\
 	{\
-		MAG_XX(SMOKE_ORANGE,1);\
-		MAG_XX(SMOKE_BLUE,1);\
-		MAG_XX(SMOKE_GREEN,1);\
+		MAG_XX(SMOKE_ORANGE,1)\
+		MAG_XX(SMOKE_BLUE,1)\
+		MAG_XX(SMOKE_GREEN,1)\
 	};\
 	class TransportItems\
 	{\
-		ITEM_XX(ToolKit,1);\
+		ITEM_XX(ToolKit,1)\
 	};\
 	class TransportWeapons{};\
-}
+};
+
+#define BACKPACK_RADIO(baseClass,faction) class TRIPLES(baseClass,faction,RADIO): baseClass\
+{\
+	scope = 1;\
+	\
+	class TransportMagazines\
+	{\
+		MAG_XX(SMOKE_ORANGE,1)\
+		MAG_XX(SMOKE_BLUE,1)\
+		MAG_XX(SMOKE_GREEN,1)\
+		MAG_XX(SMOKE_RED,1)\
+	};\
+	class TransportItems{};\
+	class TransportWeapons{};\
+};
 
 //--- Full Backpack Macro
 #define UNIT_BACKPACKS(baseClass,faction)\
-BACKPACK_A(baseClass,faction);\
-BACKPACK_AAR(baseClass,faction);\
-BACKPACK_AR(baseClass,faction);\
-BACKPACK_MED(baseClass,faction);\
-BACKPACK_ENG(baseClass,faction);\
-BACKPACK_EXP(baseClass,faction);\
-BACKPACK_GRE(baseClass,faction);\
-BACKPACK_AA(baseClass,faction);\
-BACKPACK_AT(baseClass,faction);\
-BACKPACK_REP(baseClass,faction)
+BACKPACK_A(baseClass,faction)\
+BACKPACK_AAR(baseClass,faction)\
+BACKPACK_AR(baseClass,faction)\
+BACKPACK_MED(baseClass,faction)\
+BACKPACK_ENG(baseClass,faction)\
+BACKPACK_EXP(baseClass,faction)\
+BACKPACK_GRE(baseClass,faction)\
+BACKPACK_AA(baseClass,faction)\
+BACKPACK_AT(baseClass,faction)\
+BACKPACK_REP(baseClass,faction)\
+BACKPACK_RADIO(baseClass,faction)
 

@@ -1,24 +1,33 @@
+// Soldier_Base No Gloves, No Kneepads
+// Soldier_Base_02 No Gloves
+// Soldier_Base_03 No Kneepads
+// Soldier_Base_04 Only Gloves and Kneepads
+/////////////////////////////////////////////
+// Soldier_Support_Base for Asst Roles
+// Pilot_Base for pilot roles
 
-class B_Soldier_Base_F;
+
+class SoldierEB;
+class B_Soldier_Base_F : SoldierEB {
+    class EventHandlers;
+};
+
 class DOUBLES(PFACTION,Soldier_Base): B_Soldier_Base_F
 {
     scope = 0;
-    scopeCurator = 0;
+
     dlc = Q(PREFIX);
     author = AUTHOR;
     faction = Q(PFACTION);
-    camouflage = 0.6;
+    uniformAccessories[] = {};
     nakedUniform = Q(UNIFORM_NAKED);
-    uniformClass = Q(UNIFORM);
+    uniformClass = Q(UNIFORM_F);
+    role = "Rifleman";
     identityTypes[] = {
         "LanguageENG_F",
         "Head_NATO",
         Q(FACEWEAR)
     };
-    allowedfacewear[] = {};
-    allowedHeadgear[] = {};
-    allowedHeadgearB[] = {};
-    headgearList[] = {};
     class UniformInfo
     {
         class SlotsInfo
@@ -84,465 +93,231 @@ class DOUBLES(PFACTION,Soldier_Base): B_Soldier_Base_F
         Q(ITEM_WATCH)
     };
     items[] = {
-        MAG_2(STB73_MedKit)
+        MAG_2(MEDKIT)
     };
     respawnItems[] = {
-        MAG_2(STB73_MedKit)
+        MAG_2(MEDKIT)
+    };
+    uniformList[] = {
+        Q(UNIFORM_F),0.5,
+        Q(UNIFORM_F_U),0.5,
+        Q(UNIFORM_H),0.5,
+        Q(UNIFORM_H_U),0.5,
+        Q(UNIFORM_Q),0.5,
+        Q(UNIFORM_Q_U),0.5
+    };
+    vestList[] = {};
+    headgearList[] = {};
+    facewearList[] = {};
+    backpackList[] = {};
+    // class EventHandlers: EventHandlers
+    // {
+    //     postInit="[(_this select 0), 1, nil, nil, nil, nil] call OCI_fnc_RandomizeGear";
+    // };
+};
+class DOUBLES(PFACTION,Soldier_Base_02): DOUBLES(PFACTION,Soldier_Base)
+{
+    scope = 0;
+    dlc = Q(PREFIX);
+    author = AUTHOR;
+    uniformClass = Q(UNIFORM_F);
+    uniformList[] = {
+        Q(UNIFORM_F),0.5,
+        Q(UNIFORM_F_U),0.5,
+        Q(UNIFORM_F_K),0.5,
+        Q(UNIFORM_F_U_K),0.5,
+        Q(UNIFORM_H),0.5,
+        Q(UNIFORM_H_U),0.5,
+        Q(UNIFORM_H_K),0.5,
+        Q(UNIFORM_H_U_K),0.5,
+        Q(UNIFORM_Q),0.5,
+        Q(UNIFORM_Q_U),0.5,
+        Q(UNIFORM_Q_K),0.5,
+        Q(UNIFORM_Q_U_K),0.5
     };
 };
-class DOUBLES(PFACTION,Aviator): DOUBLES(PFACTION,Soldier_Base)
+class DOUBLES(PFACTION,Soldier_Base_03): DOUBLES(PFACTION,Soldier_Base)
 {
-    scope = 2;
-    scopeCurator = 2;
-    displayName = "[73] Aviator Officer";
-    editorSubcategory = "STB73_Aviation_EdSubCat";
-    uniformClass = Q(UNIFORM_PILOT);
-    weapons[] = {
-        Q(SMG),
-        Q(BINO), 
-        "Throw", 
-        "Put"
-    };
-    respawnWeapons[] = {
-        Q(SMG),
-        Q(BINO), 
-        "Throw", 
-        "Put"
-    };
-    linkedItems[] = {
-        Q(VEST_PILOT),
-        Q(HELMET_PILOT),
-        Q(ITEM_MAP),
-        Q(ITEM_RADIO),
-        Q(ITEM_COMPASS),
-        Q(ITEM_WATCH)
-    };
-    respawnLinkedItems[] = {
-        Q(VEST_PILOT),
-        Q(HELMET_PILOT),
-        Q(ITEM_MAP),
-        Q(ITEM_RADIO),
-        Q(ITEM_COMPASS),
-        Q(ITEM_WATCH)
-    };
-    magazines[] = {
-        MAG_2(SMG_MAG)
-    };
-    respawnMagazines[] = {
-        MAG_2(SMG_MAG)
+    scope = 0;
+    dlc = Q(PREFIX);
+    author = AUTHOR;
+    uniformClass = Q(UNIFORM_F);
+    uniformList[] = {
+        Q(UNIFORM_F),0.5,
+        Q(UNIFORM_F_U),0.5,
+        Q(UNIFORM_F_G),0.5,
+        Q(UNIFORM_F_G_U),0.5,
+        Q(UNIFORM_H),0.5,
+        Q(UNIFORM_H_U),0.5,
+        Q(UNIFORM_H_G),0.5,
+        Q(UNIFORM_H_G_U),0.5,
+        Q(UNIFORM_Q),0.5,
+        Q(UNIFORM_Q_U),0.5,
+        Q(UNIFORM_Q_G),0.5,
+        Q(UNIFORM_Q_G_U),0.5
     };
 };
-class DOUBLES(PFACTION,Light): DOUBLES(PFACTION,Soldier_Base)
+class DOUBLES(PFACTION,Soldier_Base_04): DOUBLES(PFACTION,Soldier_Base)
 {
-    scope = 2;
-    scopeCurator = 2;
-    displayName = Q(Unarmed);
-    uniformClass = Q(UNIFORM_LIGHT);
-    weapons[] = {
-        "Throw", 
-        "Put"
-    };
-    respawnWeapons[] = {
-        "Throw", 
-        "Put"
-    };
-    linkedItems[] = {
-        Q(ITEM_MAP),
-        Q(ITEM_RADIO),
-        Q(ITEM_COMPASS),
-        Q(ITEM_WATCH)
-    };
-    respawnLinkedItems[] = {
-        Q(ITEM_MAP),
-        Q(ITEM_RADIO),
-        Q(ITEM_COMPASS),
-        Q(ITEM_WATCH)
-    };
-    magazines[] =
-    {
-        MAG_2(LIGHT)
-    };
-    respawnMagazines[] =
-    {
-        MAG_2(LIGHT)
-    };
-};
-class DOUBLES(PFACTION,Grenadier): DOUBLES(PFACTION,Soldier_Base)
-{
-    scope = 2;
-    scopeCurator = 2;
-    displayName = Q(Grenadier);
-    weapons[] = {
-        Q(RIFLE_GL),
-        Q(PISTOL),
-        Q(BINO), 
-        "Throw", 
-        "Put"
-    };
-    respawnWeapons[] = {
-        Q(RIFLE_GL),
-        Q(PISTOL),
-        Q(BINO), 
-        "Throw", 
-        "Put"
-    };
-    magazines[] = {
-        MAG_10(RIFLE_GL_40),
-        MAG_2(SMOKE),
-        MAG_2(FRAG),
-        MAG_6(RIFLE_GL_MAG),
-        MAG_1(PISTOL_MAG)
-    };
-    respawnMagazines[] = {
-        MAG_10(RIFLE_GL_40),
-        MAG_2(SMOKE),
-        MAG_2(FRAG),
-        MAG_6(RIFLE_GL_MAG),
-        MAG_1(PISTOL_MAG)
+    scope = 0;
+    dlc = Q(PREFIX);
+    author = AUTHOR;
+    uniformClass = Q(UNIFORM_F_G_K);
+    uniformList[] = {
+        Q(UNIFORM_F_G_K),0.5,
+        Q(UNIFORM_F_G_U_K),0.5,
+        Q(UNIFORM_H_G_K),0.5,
+        Q(UNIFORM_H_G_U_K),0.5,
+        Q(UNIFORM_Q_G_K),0.5,
+        Q(UNIFORM_Q_G_U_K),0.5
     };
 };
 
-class DOUBLES(PFACTION,Rifleman): DOUBLES(PFACTION,Soldier_Base)
+class DOUBLES(PFACTION,Soldier_Support_Base): DOUBLES(PFACTION,Soldier_Base)
 {
-    scope = 2;
-    scopeCurator = 2;
-    displayName = Q(Rifleman);
+    scope = 0;
+
+    dlc = Q(PREFIX);
+    author = AUTHOR;
+    role = "Assistant";
+	vehicleClass = "MenSupport";
+    uniformClass = Q(UNIFORM_F_G_K);
+    uniformList[] = {
+        Q(UNIFORM_F_G_K),0.5,
+        Q(UNIFORM_F_G_U_K),0.5,
+        Q(UNIFORM_H_G_K),0.5,
+        Q(UNIFORM_H_G_U_K),0.5,
+        Q(UNIFORM_Q_G_K),0.5,
+        Q(UNIFORM_Q_G_U_K),0.5
+    };
+    linkedItems[] =
+	{
+		QUOTE(VEST_SHINS),
+		QUOTE(HELMET),
+		QUOTE(ITEM_MAP),
+		QUOTE(ITEM_COMPASS),
+		QUOTE(ITEM_WATCH),
+		QUOTE(ITEM_RADIO),
+		QUOTE(ITEM_GPS)
+	};
+	respawnLinkedItems[] =
+	{
+		QUOTE(VEST_SHINS),
+		QUOTE(HELMET),
+		QUOTE(ITEM_MAP),
+		QUOTE(ITEM_COMPASS),
+		QUOTE(ITEM_WATCH),
+		QUOTE(ITEM_RADIO),
+		QUOTE(ITEM_GPS)
+	};
 };
 
-class DOUBLES(PFACTION,AT): DOUBLES(PFACTION,Soldier_Base)
+class DOUBLES(PFACTION,Pilot_Base): DOUBLES(PFACTION,Soldier_Base)
 {
-    scope = 2;
-    scopeCurator = 2;
-    displayName = Q(Missile Specialist (AT));
-    weapons[] = {
-        Q(RIFLE),
-        Q(PISTOL),
-        Q(LAUNCHER),
-        Q(BINO), 
-        "Throw", 
-        "Put"
-    };
-    respawnWeapons[] = {
-        Q(RIFLE),
-        Q(PISTOL),
-        Q(LAUNCHER),
-        Q(BINO), 
-        "Throw", 
-        "Put"
-    };
-    magazines[] = {
-        MAG_2(SMOKE),
-        MAG_2(FRAG),
-        MAG_6(RIFLE_MAG),
-        MAG_1(PISTOL_MAG),
-        MAG_1(LAUNCHER_MAG)
-    };
-    respawnMagazines[] = {
-        MAG_2(SMOKE),
-        MAG_2(FRAG),
-        MAG_6(RIFLE_MAG),
-        MAG_1(PISTOL_MAG),
-        MAG_1(LAUNCHER_MAG)
-    };
+	scope = 0;
+
+    dlc = Q(PREFIX);
+    author = AUTHOR;
+	role = "Crewman";
+	uniformClass = QUOTE(UNIFORM_PILOT);
+	backpack = QUOTE(PARACHUTE);
+    armor = 2;
+	armorStructural = 2;
+	explosionShielding = 0.2;
+	linkedItems[] =
+	{
+		QUOTE(VEST_PILOT),
+		QUOTE(HELMET_PILOT),
+		QUOTE(ITEM_MAP),
+		QUOTE(ITEM_COMPASS),
+		QUOTE(ITEM_WATCH),
+		QUOTE(ITEM_RADIO),
+		QUOTE(ITEM_GPS)
+	};
+	respawnLinkedItems[] =
+	{
+		QUOTE(VEST_PILOT),
+		QUOTE(HELMET_PILOT),
+		QUOTE(ITEM_MAP),
+		QUOTE(ITEM_COMPASS),
+		QUOTE(ITEM_WATCH),
+		QUOTE(ITEM_RADIO),
+		QUOTE(ITEM_GPS)
+	};
 };
 
-class DOUBLES(PFACTION,Autorifleman): DOUBLES(PFACTION,Soldier_Base)
+class DOUBLES(PFACTION,Recon_Base): DOUBLES(PFACTION,Soldier_Base)
 {
-    scope = 2;
-    scopeCurator = 2;
-    displayName = Q(Autorifleman);
-    weapons[] = {
-        Q(MACHINEGUN),
-        Q(PISTOL),
-        Q(BINO), 
-        "Throw", 
-        "Put"
-    };
-    respawnWeapons[] = {
-        Q(MACHINEGUN),
-        Q(PISTOL),
-        Q(BINO), 
-        "Throw", 
-        "Put"
-    };
-    magazines[] = {
-        MAG_2(SMOKE),
-        MAG_2(FRAG),
-        MAG_3(MACHINEGUN_MAG),
-        MAG_1(PISTOL_MAG)
-    };
-    respawnMagazines[] = {
-        MAG_2(SMOKE),
-        MAG_2(FRAG),
-        MAG_3(MACHINEGUN_MAG),
-        MAG_1(PISTOL_MAG)
-    };
-};
+	scope = 0;
+    dlc = Q(PREFIX);
+    author = AUTHOR;
 
-class DOUBLES(PFACTION,Sniper): DOUBLES(PFACTION,Soldier_Base)
-{
-    scope = 2;
-    scopeCurator = 2;
-    displayName = Q(Sniper);
-    weapons[] = {
-        Q(SNIPER),
-        Q(PISTOL),
-        Q(BINO), 
-        "Throw", 
-        "Put"
-    };
-    respawnWeapons[] = {
-        Q(SNIPER),
-        Q(PISTOL),
-        Q(BINO), 
-        "Throw", 
-        "Put"
-    };
-    magazines[] = {
-        MAG_2(SMOKE),
-        MAG_2(FRAG),
-        MAG_6(SNIPER_MAG),
-        MAG_1(PISTOL_MAG)
-    };
-    respawnMagazines[] = {
-        MAG_2(SMOKE),
-        MAG_2(FRAG),
-        MAG_6(SNIPER_MAG),
-        MAG_1(PISTOL_MAG)
-    };
-};
+	vehicleClass = "MenRecon";
 
-class DOUBLES(PFACTION,Marksman): DOUBLES(PFACTION,Soldier_Base)
-{
-    scope = 2;
-    scopeCurator = 2;
-    displayName = Q(Marksman);
-    weapons[] = {
-        Q(MARKSMAN),
-        Q(PISTOL),
-        Q(BINO), 
-        "Throw", 
-        "Put"
-    };
-    respawnWeapons[] = {
-        Q(MARKSMAN),
-        Q(PISTOL),
-        Q(BINO), 
-        "Throw", 
-        "Put"
-    };
-    magazines[] = {
-        MAG_2(SMOKE),
-        MAG_2(FRAG),
-        MAG_6(MARKSMAN_MAG),
-        MAG_1(PISTOL_MAG)
-    };
-    respawnMagazines[] = {
-        MAG_2(SMOKE),
-        MAG_2(FRAG),
-        MAG_6(MARKSMAN_MAG),
-        MAG_1(PISTOL_MAG)
-    };
-};
+	class SpeechVariants
+	{
+		class Default
+		{
+			speechSingular[] = {"veh_infantry_SF_s"};
+			speechPlural[] = {"veh_infantry_SF_p"};
+		};
+	};
+	textSingular = "$STR_A3_nameSound_veh_infantry_SF_s";
+	textPlural = "$STR_A3_nameSound_veh_infantry_SF_p";
+	nameSound = "veh_infantry_SF_s";
 
-class DOUBLES(PFACTION,Scout): DOUBLES(PFACTION,Soldier_Base)
-{
-    scope = 2;
-    scopeCurator = 2;
-    displayName = Q(Scout);
-    weapons[] = {
-        Q(MARKSMAN_SPECOPS),
-        Q(PISTOL),
-        Q(BINO), 
-        "Throw", 
-        "Put"
-    };
-    respawnWeapons[] = {
-        Q(MARKSMAN_SPECOPS),
-        Q(PISTOL),
-        Q(BINO), 
-        "Throw", 
-        "Put"
-    };
-    magazines[] = {
-        MAG_2(SMOKE),
-        MAG_2(FRAG),
-        MAG_6(MARKSMAN_SPECOPS_MAG),
-        MAG_1(PISTOL_MAG)
-    };
-    respawnMagazines[] = {
-        MAG_2(SMOKE),
-        MAG_2(FRAG),
-        MAG_6(MARKSMAN_SPECOPS_MAG),
-        MAG_1(PISTOL_MAG)
-    };
-};
+	camouflage = 0.6;
+	detectSkill = 18;
+	
+	uniformClass = QUOTE(UNIFORM_F_G_U_K);
 
-class DOUBLES(PFACTION,Officer): DOUBLES(PFACTION,Soldier_Base)
-{
-    scope = 2;
-    scopeCurator = 2;
-    displayName = Q(Officer);
-    weapons[] = {
-        Q(PISTOL),
-        Q(BINO), 
-        "Throw", 
-        "Put"
-    };
-    respawnWeapons[] = {
-        Q(PISTOL),
-        Q(BINO), 
-        "Throw", 
-        "Put"
-    };
-    linkedItems[] = {
-        Q(VEST_LIGHT),
-        Q(HAT),
-        Q(ITEM_MAP),
-        Q(ITEM_RADIO),
-        Q(ITEM_COMPASS),
-        Q(ITEM_WATCH)
-    };
-    respawnLinkedItems[] = {
-        Q(VEST_LIGHT),
-        Q(HAT),
-        Q(ITEM_MAP),
-        Q(ITEM_RADIO),
-        Q(ITEM_COMPASS),
-        Q(ITEM_WATCH)
-    };
-    magazines[] = {
-        MAG_2(SMOKE),
-        MAG_1(PISTOL_MAG)
-    };
-    respawnMagazines[] = {
-        MAG_2(SMOKE),
-        MAG_1(PISTOL_MAG)
-    };
-};
+	linkedItems[] =
+	{
+		QUOTE(VEST),
+		QUOTE(HELMET),
+		QUOTE(ITEM_MAP),
+		QUOTE(ITEM_COMPASS),
+		QUOTE(ITEM_WATCH),
+		QUOTE(ITEM_RADIO),
+		QUOTE(ITEM_GPS)
+	};
+	respawnLinkedItems[] =
+	{
+		QUOTE(VEST),
+		QUOTE(HELMET),
+		QUOTE(ITEM_MAP),
+		QUOTE(ITEM_COMPASS),
+		QUOTE(ITEM_WATCH),
+		QUOTE(ITEM_RADIO),
+		QUOTE(ITEM_GPS)
+	};
 
-class DOUBLES(PFACTION,Demo): DOUBLES(PFACTION,Soldier_Base)
-{
-    scope = 2;
-    scopeCurator = 2;
-    displayName = Q(Explosive Specialist);
-    weapons[] = {
-        Q(RIFLE),
-        Q(PISTOL),
-        Q(BINO), 
-        "Throw", 
-        "Put"
-    };
-    respawnWeapons[] = {
-        Q(RIFLE),
-        Q(PISTOL),
-        Q(BINO), 
-        "Throw", 
-        "Put"
-    };
-    linkedItems[] = {
-        Q(VEST),
-        Q(HELMET),
-        Q(ITEM_MAP),
-        Q(ITEM_RADIO),
-        Q(ITEM_COMPASS),
-        Q(ITEM_WATCH),
-        Q(NVGS)
-    };
-    respawnLinkedItems[] = {
-        Q(VEST),
-        Q(HELMET),
-        Q(ITEM_MAP),
-        Q(ITEM_RADIO),
-        Q(ITEM_COMPASS),
-        Q(ITEM_WATCH),
-        Q(NVGS)
-    };
-    magazines[] = {
-        MAG_2(SMOKE),
-        MAG_2(FRAG),
-        MAG_6(RIFLE_MAG),
-        MAG_1(PISTOL_MAG)
-    };
-    respawnMagazines[] = {
-        MAG_2(SMOKE),
-        MAG_2(FRAG),
-        MAG_6(RIFLE_MAG),
-        MAG_1(PISTOL_MAG)
-    };
-};
-
-class DOUBLES(PFACTION,SORC): DOUBLES(PFACTION,Soldier_Base)
-{
-    scope = 2;
-    scopeCurator = 2;
-    displayName = Q(SORC);
-    linkedItems[] = {
-        Q(VEST_SORC),
-        Q(HELMET_SORC),
-        Q(ITEM_MAP),
-        Q(ITEM_RADIO),
-        Q(ITEM_COMPASS),
-        Q(ITEM_WATCH),
-        Q(NVGS)
-    };
-    respawnLinkedItems[] = {
-        Q(VEST_SORC),
-        Q(HELMET_SORC),
-        Q(ITEM_MAP),
-        Q(ITEM_RADIO),
-        Q(ITEM_COMPASS),
-        Q(ITEM_WATCH),
-        Q(NVGS)
-    };
-};
-
-class DOUBLES(PFACTION,Team_Lead): DOUBLES(PFACTION,Soldier_Base)
-{
-    scope = 2;
-    scopeCurator = 2;
-    displayName = Q(Team Leader);
-    linkedItems[] = {
-        Q(VEST),
-        Q(HELMET_NCO),
-        Q(ITEM_MAP),
-        Q(ITEM_RADIO),
-        Q(ITEM_COMPASS),
-        Q(ITEM_WATCH),
-        Q(NVGS)
-    };
-    respawnLinkedItems[] = {
-        Q(VEST),
-        Q(HELMET_NCO),
-        Q(ITEM_MAP),
-        Q(ITEM_RADIO),
-        Q(ITEM_COMPASS),
-        Q(ITEM_WATCH),
-        Q(NVGS)
-    };
-};
-
-class DOUBLES(PFACTION,Squad_Lead): DOUBLES(PFACTION,Soldier_Base)
-{
-    scope = 2;
-    scopeCurator = 2;
-    displayName = Q(Squad Leader);
-    linkedItems[] = {
-        Q(VEST),
-        Q(HELMET_OFFICER),
-        Q(ITEM_MAP),
-        Q(ITEM_RADIO),
-        Q(ITEM_COMPASS),
-        Q(ITEM_WATCH),
-        Q(NVGS)
-    };
-    respawnLinkedItems[] = {
-        Q(VEST),
-        Q(HELMET_OFFICER),
-        Q(ITEM_MAP),
-        Q(ITEM_RADIO),
-        Q(ITEM_COMPASS),
-        Q(ITEM_WATCH),
-        Q(NVGS)
-    };
+	weapons[] =
+	{
+		QUOTE(RIFLE_SPECOPS),
+		"Throw",
+		"Put",
+        QUOTE(BINO)
+	};
+	respawnWeapons[] =
+	{
+		QUOTE(RIFLE_SPECOPS),
+		"Throw",
+		"Put",
+        QUOTE(BINO)
+	};
+	magazines[] =
+	{
+		MAG_8(RIFLE_SPECOPS_MAG),
+		MAG_1(FRAG),
+		MAG_1(SMOKE),
+		MAG_2(LIGHT)
+	};
+	respawnMagazines[] =
+	{
+		MAG_8(RIFLE_SPECOPS_MAG),
+		MAG_1(FRAG),
+		MAG_1(SMOKE),
+		MAG_2(LIGHT)
+	};
 };

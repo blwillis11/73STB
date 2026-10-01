@@ -49,9 +49,7 @@ class CfgWeapons
     WEP_UNI_CLASS(Urban)
     WEP_UNI_CLASS(White)
     WEP_UNI_CLASS(Woodland)
-    WEP_UNI_CLASS(Woodland2)
-    WEP_UNI_CLASS(Snow)
-    WEP_UNI_CLASS(Desert)
+    WEP_UNI_CLASS(Woodtarn)
 
     class TCP_H_Helmet_ECH55D_Black_Black;
     class TCP_H_Helmet_ECH55D_Black_Black_DP;
@@ -235,6 +233,15 @@ class CfgWeapons
         hiddenSelectionsTextures[]=
         {
             "z\73STB\addons\armor\data\helmets\vc713Beret_co.paa"
+        };
+    };
+    class TCP_H_UtilityCover_Black;
+    class STB73_H_utility_cover: TCP_H_UtilityCover_Black
+    {
+        displayName = "[73] Utility Cover";
+        hiddenSelectionsTextures[]=
+        {
+            "z\73STB\addons\armor\data\helmets\utilityCover\h_utilityCover_CO.paa"
         };
     };
 

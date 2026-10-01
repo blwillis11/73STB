@@ -6070,10 +6070,10 @@ class STB73_U_B_TShirt_Untucked_Gloves_Bloused_Kneepads_Woodland: STB73_U_B_TShi
 {
 	kneepads="Kneepads";
 };
-class STB73_U_B_FieldTop_Full_Woodland2
+class STB73_U_B_FieldTop_Full_Woodtarn
 {
 	model="STB73_U_B_CBUU";
-	camo="Woodland2";
+	camo="Woodtarn";
 	top="FieldTop";
 	tuck="Untucked";
 	sleeves="Full";
@@ -6082,70 +6082,70 @@ class STB73_U_B_FieldTop_Full_Woodland2
 	zipper="Zipped";
 	kneepads="None";
 };
-class STB73_U_B_FieldTop_Full_Gloves_Woodland2: STB73_U_B_FieldTop_Full_Woodland2
+class STB73_U_B_FieldTop_Full_Gloves_Woodtarn: STB73_U_B_FieldTop_Full_Woodtarn
 {
 	gloves="Gloves";
 };
-class STB73_U_B_FieldTop_Full_Gloves_Bloused_Woodland2: STB73_U_B_FieldTop_Full_Gloves_Woodland2
+class STB73_U_B_FieldTop_Full_Gloves_Bloused_Woodtarn: STB73_U_B_FieldTop_Full_Gloves_Woodtarn
 {
 	blouse="Bloused";
 };
-class STB73_U_B_FieldTop_Full_Gloves_Unzipped_Woodland2: STB73_U_B_FieldTop_Full_Gloves_Woodland2
+class STB73_U_B_FieldTop_Full_Gloves_Unzipped_Woodtarn: STB73_U_B_FieldTop_Full_Gloves_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_FieldTop_Full_Gloves_Bloused_Unzipped_Woodland2: STB73_U_B_FieldTop_Full_Gloves_Bloused_Woodland2
+class STB73_U_B_FieldTop_Full_Gloves_Bloused_Unzipped_Woodtarn: STB73_U_B_FieldTop_Full_Gloves_Bloused_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_FieldTop_Full_Bloused_Woodland2: STB73_U_B_FieldTop_Full_Woodland2
+class STB73_U_B_FieldTop_Full_Bloused_Woodtarn: STB73_U_B_FieldTop_Full_Woodtarn
 {
 	blouse="Bloused";
 };
-class STB73_U_B_FieldTop_Full_Bloused_Unzipped_Woodland2: STB73_U_B_FieldTop_Full_Bloused_Woodland2
+class STB73_U_B_FieldTop_Full_Bloused_Unzipped_Woodtarn: STB73_U_B_FieldTop_Full_Bloused_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_FieldTop_Full_Unzipped_Woodland2: STB73_U_B_FieldTop_Full_Woodland2
+class STB73_U_B_FieldTop_Full_Unzipped_Woodtarn: STB73_U_B_FieldTop_Full_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_FieldTop_Full_Kneepads_Woodland2: STB73_U_B_FieldTop_Full_Woodland2
+class STB73_U_B_FieldTop_Full_Kneepads_Woodtarn: STB73_U_B_FieldTop_Full_Woodtarn
 {
 	kneepads="Kneepads";
 };
-class STB73_U_B_FieldTop_Full_Bloused_Kneepads_Woodland2: STB73_U_B_FieldTop_Full_Kneepads_Woodland2
+class STB73_U_B_FieldTop_Full_Bloused_Kneepads_Woodtarn: STB73_U_B_FieldTop_Full_Kneepads_Woodtarn
 {
 	blouse="Bloused";
 };
-class STB73_U_B_FieldTop_Full_Unzipped_Kneepads_Woodland2: STB73_U_B_FieldTop_Full_Kneepads_Woodland2
+class STB73_U_B_FieldTop_Full_Unzipped_Kneepads_Woodtarn: STB73_U_B_FieldTop_Full_Kneepads_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_FieldTop_Full_Bloused_Unzipped_Kneepads_Woodland2: STB73_U_B_FieldTop_Full_Bloused_Kneepads_Woodland2
+class STB73_U_B_FieldTop_Full_Bloused_Unzipped_Kneepads_Woodtarn: STB73_U_B_FieldTop_Full_Bloused_Kneepads_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_FieldTop_Full_Gloves_Kneepads_Woodland2: STB73_U_B_FieldTop_Full_Kneepads_Woodland2
+class STB73_U_B_FieldTop_Full_Gloves_Kneepads_Woodtarn: STB73_U_B_FieldTop_Full_Kneepads_Woodtarn
 {
 	gloves="Gloves";
 };
-class STB73_U_B_FieldTop_Full_Gloves_Bloused_Kneepads_Woodland2: STB73_U_B_FieldTop_Full_Gloves_Kneepads_Woodland2
+class STB73_U_B_FieldTop_Full_Gloves_Bloused_Kneepads_Woodtarn: STB73_U_B_FieldTop_Full_Gloves_Kneepads_Woodtarn
 {
 	blouse="Bloused";
 };
-class STB73_U_B_FieldTop_Full_Gloves_Unzipped_Kneepads_Woodland2: STB73_U_B_FieldTop_Full_Gloves_Unzipped_Woodland2
+class STB73_U_B_FieldTop_Full_Gloves_Unzipped_Kneepads_Woodtarn: STB73_U_B_FieldTop_Full_Gloves_Unzipped_Woodtarn
 {
 	kneepads="Kneepads";
 };
-class STB73_U_B_FieldTop_Full_Gloves_Bloused_Unzipped_Kneepads_Woodland2: STB73_U_B_FieldTop_Full_Gloves_Bloused_Kneepads_Woodland2
+class STB73_U_B_FieldTop_Full_Gloves_Bloused_Unzipped_Kneepads_Woodtarn: STB73_U_B_FieldTop_Full_Gloves_Bloused_Kneepads_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_FieldTop_HalfRoll_Woodland2
+class STB73_U_B_FieldTop_HalfRoll_Woodtarn
 {
 	model="STB73_U_B_CBUU";
-	camo="Woodland2";
+	camo="Woodtarn";
 	top="FieldTop";
 	tuck="Untucked";
 	sleeves="HalfRoll";
@@ -6154,70 +6154,70 @@ class STB73_U_B_FieldTop_HalfRoll_Woodland2
 	zipper="Zipped";
 	kneepads="None";
 };
-class STB73_U_B_FieldTop_HalfRoll_Gloves_Woodland2: STB73_U_B_FieldTop_HalfRoll_Woodland2
+class STB73_U_B_FieldTop_HalfRoll_Gloves_Woodtarn: STB73_U_B_FieldTop_HalfRoll_Woodtarn
 {
 	gloves="Gloves";
 };
-class STB73_U_B_FieldTop_HalfRoll_Gloves_Bloused_Woodland2: STB73_U_B_FieldTop_HalfRoll_Gloves_Woodland2
+class STB73_U_B_FieldTop_HalfRoll_Gloves_Bloused_Woodtarn: STB73_U_B_FieldTop_HalfRoll_Gloves_Woodtarn
 {
 	blouse="Bloused";
 };
-class STB73_U_B_FieldTop_HalfRoll_Gloves_Unzipped_Woodland2: STB73_U_B_FieldTop_HalfRoll_Gloves_Woodland2
+class STB73_U_B_FieldTop_HalfRoll_Gloves_Unzipped_Woodtarn: STB73_U_B_FieldTop_HalfRoll_Gloves_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_FieldTop_HalfRoll_Gloves_Bloused_Unzipped_Woodland2: STB73_U_B_FieldTop_HalfRoll_Gloves_Bloused_Woodland2
+class STB73_U_B_FieldTop_HalfRoll_Gloves_Bloused_Unzipped_Woodtarn: STB73_U_B_FieldTop_HalfRoll_Gloves_Bloused_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_FieldTop_HalfRoll_Bloused_Woodland2: STB73_U_B_FieldTop_HalfRoll_Woodland2
+class STB73_U_B_FieldTop_HalfRoll_Bloused_Woodtarn: STB73_U_B_FieldTop_HalfRoll_Woodtarn
 {
 	blouse="Bloused";
 };
-class STB73_U_B_FieldTop_HalfRoll_Bloused_Unzipped_Woodland2: STB73_U_B_FieldTop_HalfRoll_Bloused_Woodland2
+class STB73_U_B_FieldTop_HalfRoll_Bloused_Unzipped_Woodtarn: STB73_U_B_FieldTop_HalfRoll_Bloused_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_FieldTop_HalfRoll_Unzipped_Woodland2: STB73_U_B_FieldTop_HalfRoll_Woodland2
+class STB73_U_B_FieldTop_HalfRoll_Unzipped_Woodtarn: STB73_U_B_FieldTop_HalfRoll_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_FieldTop_HalfRoll_Kneepads_Woodland2: STB73_U_B_FieldTop_HalfRoll_Woodland2
+class STB73_U_B_FieldTop_HalfRoll_Kneepads_Woodtarn: STB73_U_B_FieldTop_HalfRoll_Woodtarn
 {
 	kneepads="Kneepads";
 };
-class STB73_U_B_FieldTop_HalfRoll_Bloused_Kneepads_Woodland2: STB73_U_B_FieldTop_HalfRoll_Kneepads_Woodland2
+class STB73_U_B_FieldTop_HalfRoll_Bloused_Kneepads_Woodtarn: STB73_U_B_FieldTop_HalfRoll_Kneepads_Woodtarn
 {
 	blouse="Bloused";
 };
-class STB73_U_B_FieldTop_HalfRoll_Unzipped_Kneepads_Woodland2: STB73_U_B_FieldTop_HalfRoll_Kneepads_Woodland2
+class STB73_U_B_FieldTop_HalfRoll_Unzipped_Kneepads_Woodtarn: STB73_U_B_FieldTop_HalfRoll_Kneepads_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_FieldTop_HalfRoll_Bloused_Unzipped_Kneepads_Woodland2: STB73_U_B_FieldTop_HalfRoll_Bloused_Kneepads_Woodland2
+class STB73_U_B_FieldTop_HalfRoll_Bloused_Unzipped_Kneepads_Woodtarn: STB73_U_B_FieldTop_HalfRoll_Bloused_Kneepads_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_FieldTop_HalfRoll_Gloves_Kneepads_Woodland2: STB73_U_B_FieldTop_HalfRoll_Kneepads_Woodland2
+class STB73_U_B_FieldTop_HalfRoll_Gloves_Kneepads_Woodtarn: STB73_U_B_FieldTop_HalfRoll_Kneepads_Woodtarn
 {
 	gloves="Gloves";
 };
-class STB73_U_B_FieldTop_HalfRoll_Gloves_Bloused_Kneepads_Woodland2: STB73_U_B_FieldTop_HalfRoll_Gloves_Kneepads_Woodland2
+class STB73_U_B_FieldTop_HalfRoll_Gloves_Bloused_Kneepads_Woodtarn: STB73_U_B_FieldTop_HalfRoll_Gloves_Kneepads_Woodtarn
 {
 	blouse="Bloused";
 };
-class STB73_U_B_FieldTop_HalfRoll_Gloves_Unzipped_Kneepads_Woodland2: STB73_U_B_FieldTop_HalfRoll_Gloves_Unzipped_Woodland2
+class STB73_U_B_FieldTop_HalfRoll_Gloves_Unzipped_Kneepads_Woodtarn: STB73_U_B_FieldTop_HalfRoll_Gloves_Unzipped_Woodtarn
 {
 	kneepads="Kneepads";
 };
-class STB73_U_B_FieldTop_HalfRoll_Gloves_Bloused_Unzipped_Kneepads_Woodland2: STB73_U_B_FieldTop_HalfRoll_Gloves_Bloused_Kneepads_Woodland2
+class STB73_U_B_FieldTop_HalfRoll_Gloves_Bloused_Unzipped_Kneepads_Woodtarn: STB73_U_B_FieldTop_HalfRoll_Gloves_Bloused_Kneepads_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_FieldTop_QuarterRoll_Woodland2
+class STB73_U_B_FieldTop_QuarterRoll_Woodtarn
 {
 	model="STB73_U_B_CBUU";
-	camo="Woodland2";
+	camo="Woodtarn";
 	top="FieldTop";
 	tuck="Untucked";
 	sleeves="QuarterRoll";
@@ -6226,70 +6226,70 @@ class STB73_U_B_FieldTop_QuarterRoll_Woodland2
 	zipper="Zipped";
 	kneepads="None";
 };
-class STB73_U_B_FieldTop_QuarterRoll_Gloves_Woodland2: STB73_U_B_FieldTop_QuarterRoll_Woodland2
+class STB73_U_B_FieldTop_QuarterRoll_Gloves_Woodtarn: STB73_U_B_FieldTop_QuarterRoll_Woodtarn
 {
 	gloves="Gloves";
 };
-class STB73_U_B_FieldTop_QuarterRoll_Gloves_Bloused_Woodland2: STB73_U_B_FieldTop_QuarterRoll_Gloves_Woodland2
+class STB73_U_B_FieldTop_QuarterRoll_Gloves_Bloused_Woodtarn: STB73_U_B_FieldTop_QuarterRoll_Gloves_Woodtarn
 {
 	blouse="Bloused";
 };
-class STB73_U_B_FieldTop_QuarterRoll_Gloves_Unzipped_Woodland2: STB73_U_B_FieldTop_QuarterRoll_Gloves_Woodland2
+class STB73_U_B_FieldTop_QuarterRoll_Gloves_Unzipped_Woodtarn: STB73_U_B_FieldTop_QuarterRoll_Gloves_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_FieldTop_QuarterRoll_Gloves_Bloused_Unzipped_Woodland2: STB73_U_B_FieldTop_QuarterRoll_Gloves_Bloused_Woodland2
+class STB73_U_B_FieldTop_QuarterRoll_Gloves_Bloused_Unzipped_Woodtarn: STB73_U_B_FieldTop_QuarterRoll_Gloves_Bloused_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_FieldTop_QuarterRoll_Bloused_Woodland2: STB73_U_B_FieldTop_QuarterRoll_Woodland2
+class STB73_U_B_FieldTop_QuarterRoll_Bloused_Woodtarn: STB73_U_B_FieldTop_QuarterRoll_Woodtarn
 {
 	blouse="Bloused";
 };
-class STB73_U_B_FieldTop_QuarterRoll_Bloused_Unzipped_Woodland2: STB73_U_B_FieldTop_QuarterRoll_Bloused_Woodland2
+class STB73_U_B_FieldTop_QuarterRoll_Bloused_Unzipped_Woodtarn: STB73_U_B_FieldTop_QuarterRoll_Bloused_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_FieldTop_QuarterRoll_Unzipped_Woodland2: STB73_U_B_FieldTop_QuarterRoll_Woodland2
+class STB73_U_B_FieldTop_QuarterRoll_Unzipped_Woodtarn: STB73_U_B_FieldTop_QuarterRoll_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_FieldTop_QuarterRoll_Kneepads_Woodland2: STB73_U_B_FieldTop_QuarterRoll_Woodland2
+class STB73_U_B_FieldTop_QuarterRoll_Kneepads_Woodtarn: STB73_U_B_FieldTop_QuarterRoll_Woodtarn
 {
 	kneepads="Kneepads";
 };
-class STB73_U_B_FieldTop_QuarterRoll_Bloused_Kneepads_Woodland2: STB73_U_B_FieldTop_QuarterRoll_Kneepads_Woodland2
+class STB73_U_B_FieldTop_QuarterRoll_Bloused_Kneepads_Woodtarn: STB73_U_B_FieldTop_QuarterRoll_Kneepads_Woodtarn
 {
 	blouse="Bloused";
 };
-class STB73_U_B_FieldTop_QuarterRoll_Unzipped_Kneepads_Woodland2: STB73_U_B_FieldTop_QuarterRoll_Kneepads_Woodland2
+class STB73_U_B_FieldTop_QuarterRoll_Unzipped_Kneepads_Woodtarn: STB73_U_B_FieldTop_QuarterRoll_Kneepads_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_FieldTop_QuarterRoll_Bloused_Unzipped_Kneepads_Woodland2: STB73_U_B_FieldTop_QuarterRoll_Bloused_Kneepads_Woodland2
+class STB73_U_B_FieldTop_QuarterRoll_Bloused_Unzipped_Kneepads_Woodtarn: STB73_U_B_FieldTop_QuarterRoll_Bloused_Kneepads_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_FieldTop_QuarterRoll_Gloves_Kneepads_Woodland2: STB73_U_B_FieldTop_QuarterRoll_Kneepads_Woodland2
+class STB73_U_B_FieldTop_QuarterRoll_Gloves_Kneepads_Woodtarn: STB73_U_B_FieldTop_QuarterRoll_Kneepads_Woodtarn
 {
 	gloves="Gloves";
 };
-class STB73_U_B_FieldTop_QuarterRoll_Gloves_Bloused_Kneepads_Woodland2: STB73_U_B_FieldTop_QuarterRoll_Gloves_Kneepads_Woodland2
+class STB73_U_B_FieldTop_QuarterRoll_Gloves_Bloused_Kneepads_Woodtarn: STB73_U_B_FieldTop_QuarterRoll_Gloves_Kneepads_Woodtarn
 {
 	blouse="Bloused";
 };
-class STB73_U_B_FieldTop_QuarterRoll_Gloves_Unzipped_Kneepads_Woodland2: STB73_U_B_FieldTop_QuarterRoll_Gloves_Unzipped_Woodland2
+class STB73_U_B_FieldTop_QuarterRoll_Gloves_Unzipped_Kneepads_Woodtarn: STB73_U_B_FieldTop_QuarterRoll_Gloves_Unzipped_Woodtarn
 {
 	kneepads="Kneepads";
 };
-class STB73_U_B_FieldTop_QuarterRoll_Gloves_Bloused_Unzipped_Kneepads_Woodland2: STB73_U_B_FieldTop_QuarterRoll_Gloves_Bloused_Kneepads_Woodland2
+class STB73_U_B_FieldTop_QuarterRoll_Gloves_Bloused_Unzipped_Kneepads_Woodtarn: STB73_U_B_FieldTop_QuarterRoll_Gloves_Bloused_Kneepads_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_TacShirt_Full_Woodland2
+class STB73_U_B_TacShirt_Full_Woodtarn
 {
 	model="STB73_U_B_CBUU";
-	camo="Woodland2";
+	camo="Woodtarn";
 	top="TacShirt";
 	tuck="Untucked";
 	sleeves="Full";
@@ -6298,70 +6298,70 @@ class STB73_U_B_TacShirt_Full_Woodland2
 	zipper="Zipped";
 	kneepads="None";
 };
-class STB73_U_B_TacShirt_Full_Gloves_Woodland2: STB73_U_B_TacShirt_Full_Woodland2
+class STB73_U_B_TacShirt_Full_Gloves_Woodtarn: STB73_U_B_TacShirt_Full_Woodtarn
 {
 	gloves="Gloves";
 };
-class STB73_U_B_TacShirt_Full_Gloves_Bloused_Woodland2: STB73_U_B_TacShirt_Full_Gloves_Woodland2
+class STB73_U_B_TacShirt_Full_Gloves_Bloused_Woodtarn: STB73_U_B_TacShirt_Full_Gloves_Woodtarn
 {
 	blouse="Bloused";
 };
-class STB73_U_B_TacShirt_Full_Gloves_Unzipped_Woodland2: STB73_U_B_TacShirt_Full_Gloves_Woodland2
+class STB73_U_B_TacShirt_Full_Gloves_Unzipped_Woodtarn: STB73_U_B_TacShirt_Full_Gloves_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_TacShirt_Full_Gloves_Bloused_Unzipped_Woodland2: STB73_U_B_TacShirt_Full_Gloves_Bloused_Woodland2
+class STB73_U_B_TacShirt_Full_Gloves_Bloused_Unzipped_Woodtarn: STB73_U_B_TacShirt_Full_Gloves_Bloused_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_TacShirt_Full_Bloused_Woodland2: STB73_U_B_TacShirt_Full_Woodland2
+class STB73_U_B_TacShirt_Full_Bloused_Woodtarn: STB73_U_B_TacShirt_Full_Woodtarn
 {
 	blouse="Bloused";
 };
-class STB73_U_B_TacShirt_Full_Bloused_Unzipped_Woodland2: STB73_U_B_TacShirt_Full_Bloused_Woodland2
+class STB73_U_B_TacShirt_Full_Bloused_Unzipped_Woodtarn: STB73_U_B_TacShirt_Full_Bloused_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_TacShirt_Full_Unzipped_Woodland2: STB73_U_B_TacShirt_Full_Woodland2
+class STB73_U_B_TacShirt_Full_Unzipped_Woodtarn: STB73_U_B_TacShirt_Full_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_TacShirt_Full_Kneepads_Woodland2: STB73_U_B_TacShirt_Full_Woodland2
+class STB73_U_B_TacShirt_Full_Kneepads_Woodtarn: STB73_U_B_TacShirt_Full_Woodtarn
 {
 	kneepads="Kneepads";
 };
-class STB73_U_B_TacShirt_Full_Bloused_Kneepads_Woodland2: STB73_U_B_TacShirt_Full_Kneepads_Woodland2
+class STB73_U_B_TacShirt_Full_Bloused_Kneepads_Woodtarn: STB73_U_B_TacShirt_Full_Kneepads_Woodtarn
 {
 	blouse="Bloused";
 };
-class STB73_U_B_TacShirt_Full_Unzipped_Kneepads_Woodland2: STB73_U_B_TacShirt_Full_Kneepads_Woodland2
+class STB73_U_B_TacShirt_Full_Unzipped_Kneepads_Woodtarn: STB73_U_B_TacShirt_Full_Kneepads_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_TacShirt_Full_Bloused_Unzipped_Kneepads_Woodland2: STB73_U_B_TacShirt_Full_Bloused_Kneepads_Woodland2
+class STB73_U_B_TacShirt_Full_Bloused_Unzipped_Kneepads_Woodtarn: STB73_U_B_TacShirt_Full_Bloused_Kneepads_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_TacShirt_Full_Gloves_Kneepads_Woodland2: STB73_U_B_TacShirt_Full_Kneepads_Woodland2
+class STB73_U_B_TacShirt_Full_Gloves_Kneepads_Woodtarn: STB73_U_B_TacShirt_Full_Kneepads_Woodtarn
 {
 	gloves="Gloves";
 };
-class STB73_U_B_TacShirt_Full_Gloves_Bloused_Kneepads_Woodland2: STB73_U_B_TacShirt_Full_Gloves_Kneepads_Woodland2
+class STB73_U_B_TacShirt_Full_Gloves_Bloused_Kneepads_Woodtarn: STB73_U_B_TacShirt_Full_Gloves_Kneepads_Woodtarn
 {
 	blouse="Bloused";
 };
-class STB73_U_B_TacShirt_Full_Gloves_Unzipped_Kneepads_Woodland2: STB73_U_B_TacShirt_Full_Gloves_Unzipped_Woodland2
+class STB73_U_B_TacShirt_Full_Gloves_Unzipped_Kneepads_Woodtarn: STB73_U_B_TacShirt_Full_Gloves_Unzipped_Woodtarn
 {
 	kneepads="Kneepads";
 };
-class STB73_U_B_TacShirt_Full_Gloves_Bloused_Unzipped_Kneepads_Woodland2: STB73_U_B_TacShirt_Full_Gloves_Bloused_Kneepads_Woodland2
+class STB73_U_B_TacShirt_Full_Gloves_Bloused_Unzipped_Kneepads_Woodtarn: STB73_U_B_TacShirt_Full_Gloves_Bloused_Kneepads_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_TacShirt_HalfRoll_Woodland2
+class STB73_U_B_TacShirt_HalfRoll_Woodtarn
 {
 	model="STB73_U_B_CBUU";
-	camo="Woodland2";
+	camo="Woodtarn";
 	top="TacShirt";
 	tuck="Untucked";
 	sleeves="HalfRoll";
@@ -6370,70 +6370,70 @@ class STB73_U_B_TacShirt_HalfRoll_Woodland2
 	zipper="Zipped";
 	kneepads="None";
 };
-class STB73_U_B_TacShirt_HalfRoll_Gloves_Woodland2: STB73_U_B_TacShirt_HalfRoll_Woodland2
+class STB73_U_B_TacShirt_HalfRoll_Gloves_Woodtarn: STB73_U_B_TacShirt_HalfRoll_Woodtarn
 {
 	gloves="Gloves";
 };
-class STB73_U_B_TacShirt_HalfRoll_Gloves_Bloused_Woodland2: STB73_U_B_TacShirt_HalfRoll_Gloves_Woodland2
+class STB73_U_B_TacShirt_HalfRoll_Gloves_Bloused_Woodtarn: STB73_U_B_TacShirt_HalfRoll_Gloves_Woodtarn
 {
 	blouse="Bloused";
 };
-class STB73_U_B_TacShirt_HalfRoll_Gloves_Unzipped_Woodland2: STB73_U_B_TacShirt_HalfRoll_Gloves_Woodland2
+class STB73_U_B_TacShirt_HalfRoll_Gloves_Unzipped_Woodtarn: STB73_U_B_TacShirt_HalfRoll_Gloves_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_TacShirt_HalfRoll_Gloves_Bloused_Unzipped_Woodland2: STB73_U_B_TacShirt_HalfRoll_Gloves_Bloused_Woodland2
+class STB73_U_B_TacShirt_HalfRoll_Gloves_Bloused_Unzipped_Woodtarn: STB73_U_B_TacShirt_HalfRoll_Gloves_Bloused_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_TacShirt_HalfRoll_Bloused_Woodland2: STB73_U_B_TacShirt_HalfRoll_Woodland2
+class STB73_U_B_TacShirt_HalfRoll_Bloused_Woodtarn: STB73_U_B_TacShirt_HalfRoll_Woodtarn
 {
 	blouse="Bloused";
 };
-class STB73_U_B_TacShirt_HalfRoll_Bloused_Unzipped_Woodland2: STB73_U_B_TacShirt_HalfRoll_Bloused_Woodland2
+class STB73_U_B_TacShirt_HalfRoll_Bloused_Unzipped_Woodtarn: STB73_U_B_TacShirt_HalfRoll_Bloused_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_TacShirt_HalfRoll_Unzipped_Woodland2: STB73_U_B_TacShirt_HalfRoll_Woodland2
+class STB73_U_B_TacShirt_HalfRoll_Unzipped_Woodtarn: STB73_U_B_TacShirt_HalfRoll_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_TacShirt_HalfRoll_Kneepads_Woodland2: STB73_U_B_TacShirt_HalfRoll_Woodland2
+class STB73_U_B_TacShirt_HalfRoll_Kneepads_Woodtarn: STB73_U_B_TacShirt_HalfRoll_Woodtarn
 {
 	kneepads="Kneepads";
 };
-class STB73_U_B_TacShirt_HalfRoll_Bloused_Kneepads_Woodland2: STB73_U_B_TacShirt_HalfRoll_Kneepads_Woodland2
+class STB73_U_B_TacShirt_HalfRoll_Bloused_Kneepads_Woodtarn: STB73_U_B_TacShirt_HalfRoll_Kneepads_Woodtarn
 {
 	blouse="Bloused";
 };
-class STB73_U_B_TacShirt_HalfRoll_Unzipped_Kneepads_Woodland2: STB73_U_B_TacShirt_HalfRoll_Kneepads_Woodland2
+class STB73_U_B_TacShirt_HalfRoll_Unzipped_Kneepads_Woodtarn: STB73_U_B_TacShirt_HalfRoll_Kneepads_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_TacShirt_HalfRoll_Bloused_Unzipped_Kneepads_Woodland2: STB73_U_B_TacShirt_HalfRoll_Bloused_Kneepads_Woodland2
+class STB73_U_B_TacShirt_HalfRoll_Bloused_Unzipped_Kneepads_Woodtarn: STB73_U_B_TacShirt_HalfRoll_Bloused_Kneepads_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_TacShirt_HalfRoll_Gloves_Kneepads_Woodland2: STB73_U_B_TacShirt_HalfRoll_Kneepads_Woodland2
+class STB73_U_B_TacShirt_HalfRoll_Gloves_Kneepads_Woodtarn: STB73_U_B_TacShirt_HalfRoll_Kneepads_Woodtarn
 {
 	gloves="Gloves";
 };
-class STB73_U_B_TacShirt_HalfRoll_Gloves_Bloused_Kneepads_Woodland2: STB73_U_B_TacShirt_HalfRoll_Gloves_Kneepads_Woodland2
+class STB73_U_B_TacShirt_HalfRoll_Gloves_Bloused_Kneepads_Woodtarn: STB73_U_B_TacShirt_HalfRoll_Gloves_Kneepads_Woodtarn
 {
 	blouse="Bloused";
 };
-class STB73_U_B_TacShirt_HalfRoll_Gloves_Unzipped_Kneepads_Woodland2: STB73_U_B_TacShirt_HalfRoll_Gloves_Unzipped_Woodland2
+class STB73_U_B_TacShirt_HalfRoll_Gloves_Unzipped_Kneepads_Woodtarn: STB73_U_B_TacShirt_HalfRoll_Gloves_Unzipped_Woodtarn
 {
 	kneepads="Kneepads";
 };
-class STB73_U_B_TacShirt_HalfRoll_Gloves_Bloused_Unzipped_Kneepads_Woodland2: STB73_U_B_TacShirt_HalfRoll_Gloves_Bloused_Kneepads_Woodland2
+class STB73_U_B_TacShirt_HalfRoll_Gloves_Bloused_Unzipped_Kneepads_Woodtarn: STB73_U_B_TacShirt_HalfRoll_Gloves_Bloused_Kneepads_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_TacShirt_QuarterRoll_Woodland2
+class STB73_U_B_TacShirt_QuarterRoll_Woodtarn
 {
 	model="STB73_U_B_CBUU";
-	camo="Woodland2";
+	camo="Woodtarn";
 	top="TacShirt";
 	tuck="Untucked";
 	sleeves="QuarterRoll";
@@ -6442,1149 +6442,137 @@ class STB73_U_B_TacShirt_QuarterRoll_Woodland2
 	zipper="Zipped";
 	kneepads="None";
 };
-class STB73_U_B_TacShirt_QuarterRoll_Gloves_Woodland2: STB73_U_B_TacShirt_QuarterRoll_Woodland2
+class STB73_U_B_TacShirt_QuarterRoll_Gloves_Woodtarn: STB73_U_B_TacShirt_QuarterRoll_Woodtarn
 {
 	gloves="Gloves";
 };
-class STB73_U_B_TacShirt_QuarterRoll_Gloves_Bloused_Woodland2: STB73_U_B_TacShirt_QuarterRoll_Gloves_Woodland2
+class STB73_U_B_TacShirt_QuarterRoll_Gloves_Bloused_Woodtarn: STB73_U_B_TacShirt_QuarterRoll_Gloves_Woodtarn
 {
 	blouse="Bloused";
 };
-class STB73_U_B_TacShirt_QuarterRoll_Gloves_Unzipped_Woodland2: STB73_U_B_TacShirt_QuarterRoll_Gloves_Woodland2
+class STB73_U_B_TacShirt_QuarterRoll_Gloves_Unzipped_Woodtarn: STB73_U_B_TacShirt_QuarterRoll_Gloves_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_TacShirt_QuarterRoll_Gloves_Bloused_Unzipped_Woodland2: STB73_U_B_TacShirt_QuarterRoll_Gloves_Bloused_Woodland2
+class STB73_U_B_TacShirt_QuarterRoll_Gloves_Bloused_Unzipped_Woodtarn: STB73_U_B_TacShirt_QuarterRoll_Gloves_Bloused_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_TacShirt_QuarterRoll_Bloused_Woodland2: STB73_U_B_TacShirt_QuarterRoll_Woodland2
+class STB73_U_B_TacShirt_QuarterRoll_Bloused_Woodtarn: STB73_U_B_TacShirt_QuarterRoll_Woodtarn
 {
 	blouse="Bloused";
 };
-class STB73_U_B_TacShirt_QuarterRoll_Bloused_Unzipped_Woodland2: STB73_U_B_TacShirt_QuarterRoll_Bloused_Woodland2
+class STB73_U_B_TacShirt_QuarterRoll_Bloused_Unzipped_Woodtarn: STB73_U_B_TacShirt_QuarterRoll_Bloused_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_TacShirt_QuarterRoll_Unzipped_Woodland2: STB73_U_B_TacShirt_QuarterRoll_Woodland2
+class STB73_U_B_TacShirt_QuarterRoll_Unzipped_Woodtarn: STB73_U_B_TacShirt_QuarterRoll_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_TacShirt_QuarterRoll_Kneepads_Woodland2: STB73_U_B_TacShirt_QuarterRoll_Woodland2
+class STB73_U_B_TacShirt_QuarterRoll_Kneepads_Woodtarn: STB73_U_B_TacShirt_QuarterRoll_Woodtarn
 {
 	kneepads="Kneepads";
 };
-class STB73_U_B_TacShirt_QuarterRoll_Bloused_Kneepads_Woodland2: STB73_U_B_TacShirt_QuarterRoll_Kneepads_Woodland2
+class STB73_U_B_TacShirt_QuarterRoll_Bloused_Kneepads_Woodtarn: STB73_U_B_TacShirt_QuarterRoll_Kneepads_Woodtarn
 {
 	blouse="Bloused";
 };
-class STB73_U_B_TacShirt_QuarterRoll_Unzipped_Kneepads_Woodland2: STB73_U_B_TacShirt_QuarterRoll_Kneepads_Woodland2
+class STB73_U_B_TacShirt_QuarterRoll_Unzipped_Kneepads_Woodtarn: STB73_U_B_TacShirt_QuarterRoll_Kneepads_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_TacShirt_QuarterRoll_Bloused_Unzipped_Kneepads_Woodland2: STB73_U_B_TacShirt_QuarterRoll_Bloused_Kneepads_Woodland2
+class STB73_U_B_TacShirt_QuarterRoll_Bloused_Unzipped_Kneepads_Woodtarn: STB73_U_B_TacShirt_QuarterRoll_Bloused_Kneepads_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_TacShirt_QuarterRoll_Gloves_Kneepads_Woodland2: STB73_U_B_TacShirt_QuarterRoll_Kneepads_Woodland2
+class STB73_U_B_TacShirt_QuarterRoll_Gloves_Kneepads_Woodtarn: STB73_U_B_TacShirt_QuarterRoll_Kneepads_Woodtarn
 {
 	gloves="Gloves";
 };
-class STB73_U_B_TacShirt_QuarterRoll_Gloves_Bloused_Kneepads_Woodland2: STB73_U_B_TacShirt_QuarterRoll_Gloves_Kneepads_Woodland2
+class STB73_U_B_TacShirt_QuarterRoll_Gloves_Bloused_Kneepads_Woodtarn: STB73_U_B_TacShirt_QuarterRoll_Gloves_Kneepads_Woodtarn
 {
 	blouse="Bloused";
 };
-class STB73_U_B_TacShirt_QuarterRoll_Gloves_Unzipped_Kneepads_Woodland2: STB73_U_B_TacShirt_QuarterRoll_Gloves_Unzipped_Woodland2
+class STB73_U_B_TacShirt_QuarterRoll_Gloves_Unzipped_Kneepads_Woodtarn: STB73_U_B_TacShirt_QuarterRoll_Gloves_Unzipped_Woodtarn
 {
 	kneepads="Kneepads";
 };
-class STB73_U_B_TacShirt_QuarterRoll_Gloves_Bloused_Unzipped_Kneepads_Woodland2: STB73_U_B_TacShirt_QuarterRoll_Gloves_Bloused_Kneepads_Woodland2
+class STB73_U_B_TacShirt_QuarterRoll_Gloves_Bloused_Unzipped_Kneepads_Woodtarn: STB73_U_B_TacShirt_QuarterRoll_Gloves_Bloused_Kneepads_Woodtarn
 {
 	zipper="Unzipped";
 };
-class STB73_U_B_TShirt_Tucked_Woodland2
+class STB73_U_B_TShirt_Tucked_Woodtarn
 {
 	model="STB73_U_B_TShirt";
-	camo="Woodland2";
+	camo="Woodtarn";
 	tuck="Tucked";
 	gloves="None";
 	blouse="Unbloused";
 	kneepads="None";
 };
-class STB73_U_B_TShirt_Tucked_Gloves_Woodland2: STB73_U_B_TShirt_Tucked_Woodland2
+class STB73_U_B_TShirt_Tucked_Gloves_Woodtarn: STB73_U_B_TShirt_Tucked_Woodtarn
 {
 	gloves="Gloves";
 };
-class STB73_U_B_TShirt_Tucked_Kneepads_Woodland2: STB73_U_B_TShirt_Tucked_Woodland2
+class STB73_U_B_TShirt_Tucked_Kneepads_Woodtarn: STB73_U_B_TShirt_Tucked_Woodtarn
 {
 	kneepads="Kneepads";
 };
-class STB73_U_B_TShirt_Tucked_Gloves_Kneepads_Woodland2: STB73_U_B_TShirt_Tucked_Kneepads_Woodland2
+class STB73_U_B_TShirt_Tucked_Gloves_Kneepads_Woodtarn: STB73_U_B_TShirt_Tucked_Kneepads_Woodtarn
 {
 	gloves="Gloves";
 };
-class STB73_U_B_TShirt_Tucked_Gloves_Bloused_Woodland2: STB73_U_B_TShirt_Tucked_Gloves_Woodland2
+class STB73_U_B_TShirt_Tucked_Gloves_Bloused_Woodtarn: STB73_U_B_TShirt_Tucked_Gloves_Woodtarn
 {
 	blouse="Bloused";
 };
-class STB73_U_B_TShirt_Tucked_Bloused_Woodland2: STB73_U_B_TShirt_Tucked_Woodland2
+class STB73_U_B_TShirt_Tucked_Bloused_Woodtarn: STB73_U_B_TShirt_Tucked_Woodtarn
 {
 	blouse="Bloused";
 };
-class STB73_U_B_TShirt_Tucked_Bloused_Kneepads_Woodland2: STB73_U_B_TShirt_Tucked_Bloused_Woodland2
+class STB73_U_B_TShirt_Tucked_Bloused_Kneepads_Woodtarn: STB73_U_B_TShirt_Tucked_Bloused_Woodtarn
 {
 	kneepads="Kneepads";
 };
-class STB73_U_B_TShirt_Tucked_Gloves_Bloused_Kneepads_Woodland2: STB73_U_B_TShirt_Tucked_Gloves_Bloused_Woodland2
+class STB73_U_B_TShirt_Tucked_Gloves_Bloused_Kneepads_Woodtarn: STB73_U_B_TShirt_Tucked_Gloves_Bloused_Woodtarn
 {
 	kneepads="Kneepads";
 };
-class STB73_U_B_TShirt_Untucked_Woodland2
+class STB73_U_B_TShirt_Untucked_Woodtarn
 {
 	model="STB73_U_B_TShirt";
-	camo="Woodland2";
+	camo="Woodtarn";
 	tuck="Untucked";
 	gloves="None";
 	blouse="Unbloused";
 	kneepads="None";
 };
-class STB73_U_B_TShirt_Untucked_Gloves_Woodland2: STB73_U_B_TShirt_Untucked_Woodland2
+class STB73_U_B_TShirt_Untucked_Gloves_Woodtarn: STB73_U_B_TShirt_Untucked_Woodtarn
 {
 	gloves="Gloves";
 };
-class STB73_U_B_TShirt_Untucked_Kneepads_Woodland2: STB73_U_B_TShirt_Untucked_Woodland2
+class STB73_U_B_TShirt_Untucked_Kneepads_Woodtarn: STB73_U_B_TShirt_Untucked_Woodtarn
 {
 	kneepads="Kneepads";
 };
-class STB73_U_B_TShirt_Untucked_Gloves_Kneepads_Woodland2: STB73_U_B_TShirt_Untucked_Kneepads_Woodland2
+class STB73_U_B_TShirt_Untucked_Gloves_Kneepads_Woodtarn: STB73_U_B_TShirt_Untucked_Kneepads_Woodtarn
 {
 	gloves="Gloves";
 };
-class STB73_U_B_TShirt_Untucked_Gloves_Bloused_Woodland2: STB73_U_B_TShirt_Untucked_Gloves_Woodland2
+class STB73_U_B_TShirt_Untucked_Gloves_Bloused_Woodtarn: STB73_U_B_TShirt_Untucked_Gloves_Woodtarn
 {
 	blouse="Bloused";
 };
-class STB73_U_B_TShirt_Untucked_Bloused_Woodland2: STB73_U_B_TShirt_Untucked_Woodland2
+class STB73_U_B_TShirt_Untucked_Bloused_Woodtarn: STB73_U_B_TShirt_Untucked_Woodtarn
 {
 	blouse="Bloused";
 };
-class STB73_U_B_TShirt_Untucked_Bloused_Kneepads_Woodland2: STB73_U_B_TShirt_Untucked_Bloused_Woodland2
+class STB73_U_B_TShirt_Untucked_Bloused_Kneepads_Woodtarn: STB73_U_B_TShirt_Untucked_Bloused_Woodtarn
 {
 	kneepads="Kneepads";
 };
-class STB73_U_B_TShirt_Untucked_Gloves_Bloused_Kneepads_Woodland2: STB73_U_B_TShirt_Untucked_Gloves_Bloused_Woodland2
-{
-	kneepads="Kneepads";
-};
-class STB73_U_B_FieldTop_Full_Snow
-{
-	model="STB73_U_B_CBUU";
-	camo="Snow";
-	top="FieldTop";
-	tuck="Untucked";
-	sleeves="Full";
-	gloves="None";
-	blouse="Unbloused";
-	zipper="Zipped";
-	kneepads="None";
-};
-class STB73_U_B_FieldTop_Full_Gloves_Snow: STB73_U_B_FieldTop_Full_Snow
-{
-	gloves="Gloves";
-};
-class STB73_U_B_FieldTop_Full_Gloves_Bloused_Snow: STB73_U_B_FieldTop_Full_Gloves_Snow
-{
-	blouse="Bloused";
-};
-class STB73_U_B_FieldTop_Full_Gloves_Unzipped_Snow: STB73_U_B_FieldTop_Full_Gloves_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_Full_Gloves_Bloused_Unzipped_Snow: STB73_U_B_FieldTop_Full_Gloves_Bloused_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_Full_Bloused_Snow: STB73_U_B_FieldTop_Full_Snow
-{
-	blouse="Bloused";
-};
-class STB73_U_B_FieldTop_Full_Bloused_Unzipped_Snow: STB73_U_B_FieldTop_Full_Bloused_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_Full_Unzipped_Snow: STB73_U_B_FieldTop_Full_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_Full_Kneepads_Snow: STB73_U_B_FieldTop_Full_Snow
-{
-	kneepads="Kneepads";
-};
-class STB73_U_B_FieldTop_Full_Bloused_Kneepads_Snow: STB73_U_B_FieldTop_Full_Kneepads_Snow
-{
-	blouse="Bloused";
-};
-class STB73_U_B_FieldTop_Full_Unzipped_Kneepads_Snow: STB73_U_B_FieldTop_Full_Kneepads_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_Full_Bloused_Unzipped_Kneepads_Snow: STB73_U_B_FieldTop_Full_Bloused_Kneepads_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_Full_Gloves_Kneepads_Snow: STB73_U_B_FieldTop_Full_Kneepads_Snow
-{
-	gloves="Gloves";
-};
-class STB73_U_B_FieldTop_Full_Gloves_Bloused_Kneepads_Snow: STB73_U_B_FieldTop_Full_Gloves_Kneepads_Snow
-{
-	blouse="Bloused";
-};
-class STB73_U_B_FieldTop_Full_Gloves_Unzipped_Kneepads_Snow: STB73_U_B_FieldTop_Full_Gloves_Unzipped_Snow
-{
-	kneepads="Kneepads";
-};
-class STB73_U_B_FieldTop_Full_Gloves_Bloused_Unzipped_Kneepads_Snow: STB73_U_B_FieldTop_Full_Gloves_Bloused_Kneepads_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_HalfRoll_Snow
-{
-	model="STB73_U_B_CBUU";
-	camo="Snow";
-	top="FieldTop";
-	tuck="Untucked";
-	sleeves="HalfRoll";
-	gloves="None";
-	blouse="Unbloused";
-	zipper="Zipped";
-	kneepads="None";
-};
-class STB73_U_B_FieldTop_HalfRoll_Gloves_Snow: STB73_U_B_FieldTop_HalfRoll_Snow
-{
-	gloves="Gloves";
-};
-class STB73_U_B_FieldTop_HalfRoll_Gloves_Bloused_Snow: STB73_U_B_FieldTop_HalfRoll_Gloves_Snow
-{
-	blouse="Bloused";
-};
-class STB73_U_B_FieldTop_HalfRoll_Gloves_Unzipped_Snow: STB73_U_B_FieldTop_HalfRoll_Gloves_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_HalfRoll_Gloves_Bloused_Unzipped_Snow: STB73_U_B_FieldTop_HalfRoll_Gloves_Bloused_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_HalfRoll_Bloused_Snow: STB73_U_B_FieldTop_HalfRoll_Snow
-{
-	blouse="Bloused";
-};
-class STB73_U_B_FieldTop_HalfRoll_Bloused_Unzipped_Snow: STB73_U_B_FieldTop_HalfRoll_Bloused_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_HalfRoll_Unzipped_Snow: STB73_U_B_FieldTop_HalfRoll_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_HalfRoll_Kneepads_Snow: STB73_U_B_FieldTop_HalfRoll_Snow
-{
-	kneepads="Kneepads";
-};
-class STB73_U_B_FieldTop_HalfRoll_Bloused_Kneepads_Snow: STB73_U_B_FieldTop_HalfRoll_Kneepads_Snow
-{
-	blouse="Bloused";
-};
-class STB73_U_B_FieldTop_HalfRoll_Unzipped_Kneepads_Snow: STB73_U_B_FieldTop_HalfRoll_Kneepads_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_HalfRoll_Bloused_Unzipped_Kneepads_Snow: STB73_U_B_FieldTop_HalfRoll_Bloused_Kneepads_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_HalfRoll_Gloves_Kneepads_Snow: STB73_U_B_FieldTop_HalfRoll_Kneepads_Snow
-{
-	gloves="Gloves";
-};
-class STB73_U_B_FieldTop_HalfRoll_Gloves_Bloused_Kneepads_Snow: STB73_U_B_FieldTop_HalfRoll_Gloves_Kneepads_Snow
-{
-	blouse="Bloused";
-};
-class STB73_U_B_FieldTop_HalfRoll_Gloves_Unzipped_Kneepads_Snow: STB73_U_B_FieldTop_HalfRoll_Gloves_Unzipped_Snow
-{
-	kneepads="Kneepads";
-};
-class STB73_U_B_FieldTop_HalfRoll_Gloves_Bloused_Unzipped_Kneepads_Snow: STB73_U_B_FieldTop_HalfRoll_Gloves_Bloused_Kneepads_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_QuarterRoll_Snow
-{
-	model="STB73_U_B_CBUU";
-	camo="Snow";
-	top="FieldTop";
-	tuck="Untucked";
-	sleeves="QuarterRoll";
-	gloves="None";
-	blouse="Unbloused";
-	zipper="Zipped";
-	kneepads="None";
-};
-class STB73_U_B_FieldTop_QuarterRoll_Gloves_Snow: STB73_U_B_FieldTop_QuarterRoll_Snow
-{
-	gloves="Gloves";
-};
-class STB73_U_B_FieldTop_QuarterRoll_Gloves_Bloused_Snow: STB73_U_B_FieldTop_QuarterRoll_Gloves_Snow
-{
-	blouse="Bloused";
-};
-class STB73_U_B_FieldTop_QuarterRoll_Gloves_Unzipped_Snow: STB73_U_B_FieldTop_QuarterRoll_Gloves_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_QuarterRoll_Gloves_Bloused_Unzipped_Snow: STB73_U_B_FieldTop_QuarterRoll_Gloves_Bloused_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_QuarterRoll_Bloused_Snow: STB73_U_B_FieldTop_QuarterRoll_Snow
-{
-	blouse="Bloused";
-};
-class STB73_U_B_FieldTop_QuarterRoll_Bloused_Unzipped_Snow: STB73_U_B_FieldTop_QuarterRoll_Bloused_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_QuarterRoll_Unzipped_Snow: STB73_U_B_FieldTop_QuarterRoll_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_QuarterRoll_Kneepads_Snow: STB73_U_B_FieldTop_QuarterRoll_Snow
-{
-	kneepads="Kneepads";
-};
-class STB73_U_B_FieldTop_QuarterRoll_Bloused_Kneepads_Snow: STB73_U_B_FieldTop_QuarterRoll_Kneepads_Snow
-{
-	blouse="Bloused";
-};
-class STB73_U_B_FieldTop_QuarterRoll_Unzipped_Kneepads_Snow: STB73_U_B_FieldTop_QuarterRoll_Kneepads_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_QuarterRoll_Bloused_Unzipped_Kneepads_Snow: STB73_U_B_FieldTop_QuarterRoll_Bloused_Kneepads_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_QuarterRoll_Gloves_Kneepads_Snow: STB73_U_B_FieldTop_QuarterRoll_Kneepads_Snow
-{
-	gloves="Gloves";
-};
-class STB73_U_B_FieldTop_QuarterRoll_Gloves_Bloused_Kneepads_Snow: STB73_U_B_FieldTop_QuarterRoll_Gloves_Kneepads_Snow
-{
-	blouse="Bloused";
-};
-class STB73_U_B_FieldTop_QuarterRoll_Gloves_Unzipped_Kneepads_Snow: STB73_U_B_FieldTop_QuarterRoll_Gloves_Unzipped_Snow
-{
-	kneepads="Kneepads";
-};
-class STB73_U_B_FieldTop_QuarterRoll_Gloves_Bloused_Unzipped_Kneepads_Snow: STB73_U_B_FieldTop_QuarterRoll_Gloves_Bloused_Kneepads_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_Full_Snow
-{
-	model="STB73_U_B_CBUU";
-	camo="Snow";
-	top="TacShirt";
-	tuck="Untucked";
-	sleeves="Full";
-	gloves="None";
-	blouse="Unbloused";
-	zipper="Zipped";
-	kneepads="None";
-};
-class STB73_U_B_TacShirt_Full_Gloves_Snow: STB73_U_B_TacShirt_Full_Snow
-{
-	gloves="Gloves";
-};
-class STB73_U_B_TacShirt_Full_Gloves_Bloused_Snow: STB73_U_B_TacShirt_Full_Gloves_Snow
-{
-	blouse="Bloused";
-};
-class STB73_U_B_TacShirt_Full_Gloves_Unzipped_Snow: STB73_U_B_TacShirt_Full_Gloves_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_Full_Gloves_Bloused_Unzipped_Snow: STB73_U_B_TacShirt_Full_Gloves_Bloused_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_Full_Bloused_Snow: STB73_U_B_TacShirt_Full_Snow
-{
-	blouse="Bloused";
-};
-class STB73_U_B_TacShirt_Full_Bloused_Unzipped_Snow: STB73_U_B_TacShirt_Full_Bloused_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_Full_Unzipped_Snow: STB73_U_B_TacShirt_Full_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_Full_Kneepads_Snow: STB73_U_B_TacShirt_Full_Snow
-{
-	kneepads="Kneepads";
-};
-class STB73_U_B_TacShirt_Full_Bloused_Kneepads_Snow: STB73_U_B_TacShirt_Full_Kneepads_Snow
-{
-	blouse="Bloused";
-};
-class STB73_U_B_TacShirt_Full_Unzipped_Kneepads_Snow: STB73_U_B_TacShirt_Full_Kneepads_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_Full_Bloused_Unzipped_Kneepads_Snow: STB73_U_B_TacShirt_Full_Bloused_Kneepads_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_Full_Gloves_Kneepads_Snow: STB73_U_B_TacShirt_Full_Kneepads_Snow
-{
-	gloves="Gloves";
-};
-class STB73_U_B_TacShirt_Full_Gloves_Bloused_Kneepads_Snow: STB73_U_B_TacShirt_Full_Gloves_Kneepads_Snow
-{
-	blouse="Bloused";
-};
-class STB73_U_B_TacShirt_Full_Gloves_Unzipped_Kneepads_Snow: STB73_U_B_TacShirt_Full_Gloves_Unzipped_Snow
-{
-	kneepads="Kneepads";
-};
-class STB73_U_B_TacShirt_Full_Gloves_Bloused_Unzipped_Kneepads_Snow: STB73_U_B_TacShirt_Full_Gloves_Bloused_Kneepads_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_HalfRoll_Snow
-{
-	model="STB73_U_B_CBUU";
-	camo="Snow";
-	top="TacShirt";
-	tuck="Untucked";
-	sleeves="HalfRoll";
-	gloves="None";
-	blouse="Unbloused";
-	zipper="Zipped";
-	kneepads="None";
-};
-class STB73_U_B_TacShirt_HalfRoll_Gloves_Snow: STB73_U_B_TacShirt_HalfRoll_Snow
-{
-	gloves="Gloves";
-};
-class STB73_U_B_TacShirt_HalfRoll_Gloves_Bloused_Snow: STB73_U_B_TacShirt_HalfRoll_Gloves_Snow
-{
-	blouse="Bloused";
-};
-class STB73_U_B_TacShirt_HalfRoll_Gloves_Unzipped_Snow: STB73_U_B_TacShirt_HalfRoll_Gloves_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_HalfRoll_Gloves_Bloused_Unzipped_Snow: STB73_U_B_TacShirt_HalfRoll_Gloves_Bloused_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_HalfRoll_Bloused_Snow: STB73_U_B_TacShirt_HalfRoll_Snow
-{
-	blouse="Bloused";
-};
-class STB73_U_B_TacShirt_HalfRoll_Bloused_Unzipped_Snow: STB73_U_B_TacShirt_HalfRoll_Bloused_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_HalfRoll_Unzipped_Snow: STB73_U_B_TacShirt_HalfRoll_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_HalfRoll_Kneepads_Snow: STB73_U_B_TacShirt_HalfRoll_Snow
-{
-	kneepads="Kneepads";
-};
-class STB73_U_B_TacShirt_HalfRoll_Bloused_Kneepads_Snow: STB73_U_B_TacShirt_HalfRoll_Kneepads_Snow
-{
-	blouse="Bloused";
-};
-class STB73_U_B_TacShirt_HalfRoll_Unzipped_Kneepads_Snow: STB73_U_B_TacShirt_HalfRoll_Kneepads_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_HalfRoll_Bloused_Unzipped_Kneepads_Snow: STB73_U_B_TacShirt_HalfRoll_Bloused_Kneepads_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_HalfRoll_Gloves_Kneepads_Snow: STB73_U_B_TacShirt_HalfRoll_Kneepads_Snow
-{
-	gloves="Gloves";
-};
-class STB73_U_B_TacShirt_HalfRoll_Gloves_Bloused_Kneepads_Snow: STB73_U_B_TacShirt_HalfRoll_Gloves_Kneepads_Snow
-{
-	blouse="Bloused";
-};
-class STB73_U_B_TacShirt_HalfRoll_Gloves_Unzipped_Kneepads_Snow: STB73_U_B_TacShirt_HalfRoll_Gloves_Unzipped_Snow
-{
-	kneepads="Kneepads";
-};
-class STB73_U_B_TacShirt_HalfRoll_Gloves_Bloused_Unzipped_Kneepads_Snow: STB73_U_B_TacShirt_HalfRoll_Gloves_Bloused_Kneepads_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_QuarterRoll_Snow
-{
-	model="STB73_U_B_CBUU";
-	camo="Snow";
-	top="TacShirt";
-	tuck="Untucked";
-	sleeves="QuarterRoll";
-	gloves="None";
-	blouse="Unbloused";
-	zipper="Zipped";
-	kneepads="None";
-};
-class STB73_U_B_TacShirt_QuarterRoll_Gloves_Snow: STB73_U_B_TacShirt_QuarterRoll_Snow
-{
-	gloves="Gloves";
-};
-class STB73_U_B_TacShirt_QuarterRoll_Gloves_Bloused_Snow: STB73_U_B_TacShirt_QuarterRoll_Gloves_Snow
-{
-	blouse="Bloused";
-};
-class STB73_U_B_TacShirt_QuarterRoll_Gloves_Unzipped_Snow: STB73_U_B_TacShirt_QuarterRoll_Gloves_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_QuarterRoll_Gloves_Bloused_Unzipped_Snow: STB73_U_B_TacShirt_QuarterRoll_Gloves_Bloused_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_QuarterRoll_Bloused_Snow: STB73_U_B_TacShirt_QuarterRoll_Snow
-{
-	blouse="Bloused";
-};
-class STB73_U_B_TacShirt_QuarterRoll_Bloused_Unzipped_Snow: STB73_U_B_TacShirt_QuarterRoll_Bloused_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_QuarterRoll_Unzipped_Snow: STB73_U_B_TacShirt_QuarterRoll_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_QuarterRoll_Kneepads_Snow: STB73_U_B_TacShirt_QuarterRoll_Snow
-{
-	kneepads="Kneepads";
-};
-class STB73_U_B_TacShirt_QuarterRoll_Bloused_Kneepads_Snow: STB73_U_B_TacShirt_QuarterRoll_Kneepads_Snow
-{
-	blouse="Bloused";
-};
-class STB73_U_B_TacShirt_QuarterRoll_Unzipped_Kneepads_Snow: STB73_U_B_TacShirt_QuarterRoll_Kneepads_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_QuarterRoll_Bloused_Unzipped_Kneepads_Snow: STB73_U_B_TacShirt_QuarterRoll_Bloused_Kneepads_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_QuarterRoll_Gloves_Kneepads_Snow: STB73_U_B_TacShirt_QuarterRoll_Kneepads_Snow
-{
-	gloves="Gloves";
-};
-class STB73_U_B_TacShirt_QuarterRoll_Gloves_Bloused_Kneepads_Snow: STB73_U_B_TacShirt_QuarterRoll_Gloves_Kneepads_Snow
-{
-	blouse="Bloused";
-};
-class STB73_U_B_TacShirt_QuarterRoll_Gloves_Unzipped_Kneepads_Snow: STB73_U_B_TacShirt_QuarterRoll_Gloves_Unzipped_Snow
-{
-	kneepads="Kneepads";
-};
-class STB73_U_B_TacShirt_QuarterRoll_Gloves_Bloused_Unzipped_Kneepads_Snow: STB73_U_B_TacShirt_QuarterRoll_Gloves_Bloused_Kneepads_Snow
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TShirt_Tucked_Snow
-{
-	model="STB73_U_B_TShirt";
-	camo="Snow";
-	tuck="Tucked";
-	gloves="None";
-	blouse="Unbloused";
-	kneepads="None";
-};
-class STB73_U_B_TShirt_Tucked_Gloves_Snow: STB73_U_B_TShirt_Tucked_Snow
-{
-	gloves="Gloves";
-};
-class STB73_U_B_TShirt_Tucked_Kneepads_Snow: STB73_U_B_TShirt_Tucked_Snow
-{
-	kneepads="Kneepads";
-};
-class STB73_U_B_TShirt_Tucked_Gloves_Kneepads_Snow: STB73_U_B_TShirt_Tucked_Kneepads_Snow
-{
-	gloves="Gloves";
-};
-class STB73_U_B_TShirt_Tucked_Gloves_Bloused_Snow: STB73_U_B_TShirt_Tucked_Gloves_Snow
-{
-	blouse="Bloused";
-};
-class STB73_U_B_TShirt_Tucked_Bloused_Snow: STB73_U_B_TShirt_Tucked_Snow
-{
-	blouse="Bloused";
-};
-class STB73_U_B_TShirt_Tucked_Bloused_Kneepads_Snow: STB73_U_B_TShirt_Tucked_Bloused_Snow
-{
-	kneepads="Kneepads";
-};
-class STB73_U_B_TShirt_Tucked_Gloves_Bloused_Kneepads_Snow: STB73_U_B_TShirt_Tucked_Gloves_Bloused_Snow
-{
-	kneepads="Kneepads";
-};
-class STB73_U_B_TShirt_Untucked_Snow
-{
-	model="STB73_U_B_TShirt";
-	camo="Snow";
-	tuck="Untucked";
-	gloves="None";
-	blouse="Unbloused";
-	kneepads="None";
-};
-class STB73_U_B_TShirt_Untucked_Gloves_Snow: STB73_U_B_TShirt_Untucked_Snow
-{
-	gloves="Gloves";
-};
-class STB73_U_B_TShirt_Untucked_Kneepads_Snow: STB73_U_B_TShirt_Untucked_Snow
-{
-	kneepads="Kneepads";
-};
-class STB73_U_B_TShirt_Untucked_Gloves_Kneepads_Snow: STB73_U_B_TShirt_Untucked_Kneepads_Snow
-{
-	gloves="Gloves";
-};
-class STB73_U_B_TShirt_Untucked_Gloves_Bloused_Snow: STB73_U_B_TShirt_Untucked_Gloves_Snow
-{
-	blouse="Bloused";
-};
-class STB73_U_B_TShirt_Untucked_Bloused_Snow: STB73_U_B_TShirt_Untucked_Snow
-{
-	blouse="Bloused";
-};
-class STB73_U_B_TShirt_Untucked_Bloused_Kneepads_Snow: STB73_U_B_TShirt_Untucked_Bloused_Snow
-{
-	kneepads="Kneepads";
-};
-class STB73_U_B_TShirt_Untucked_Gloves_Bloused_Kneepads_Snow: STB73_U_B_TShirt_Untucked_Gloves_Bloused_Snow
-{
-	kneepads="Kneepads";
-};
-class STB73_U_B_FieldTop_Full_Desert
-{
-	model="STB73_U_B_CBUU";
-	camo="Desert";
-	top="FieldTop";
-	tuck="Untucked";
-	sleeves="Full";
-	gloves="None";
-	blouse="Unbloused";
-	zipper="Zipped";
-	kneepads="None";
-};
-class STB73_U_B_FieldTop_Full_Gloves_Desert: STB73_U_B_FieldTop_Full_Desert
-{
-	gloves="Gloves";
-};
-class STB73_U_B_FieldTop_Full_Gloves_Bloused_Desert: STB73_U_B_FieldTop_Full_Gloves_Desert
-{
-	blouse="Bloused";
-};
-class STB73_U_B_FieldTop_Full_Gloves_Unzipped_Desert: STB73_U_B_FieldTop_Full_Gloves_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_Full_Gloves_Bloused_Unzipped_Desert: STB73_U_B_FieldTop_Full_Gloves_Bloused_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_Full_Bloused_Desert: STB73_U_B_FieldTop_Full_Desert
-{
-	blouse="Bloused";
-};
-class STB73_U_B_FieldTop_Full_Bloused_Unzipped_Desert: STB73_U_B_FieldTop_Full_Bloused_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_Full_Unzipped_Desert: STB73_U_B_FieldTop_Full_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_Full_Kneepads_Desert: STB73_U_B_FieldTop_Full_Desert
-{
-	kneepads="Kneepads";
-};
-class STB73_U_B_FieldTop_Full_Bloused_Kneepads_Desert: STB73_U_B_FieldTop_Full_Kneepads_Desert
-{
-	blouse="Bloused";
-};
-class STB73_U_B_FieldTop_Full_Unzipped_Kneepads_Desert: STB73_U_B_FieldTop_Full_Kneepads_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_Full_Bloused_Unzipped_Kneepads_Desert: STB73_U_B_FieldTop_Full_Bloused_Kneepads_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_Full_Gloves_Kneepads_Desert: STB73_U_B_FieldTop_Full_Kneepads_Desert
-{
-	gloves="Gloves";
-};
-class STB73_U_B_FieldTop_Full_Gloves_Bloused_Kneepads_Desert: STB73_U_B_FieldTop_Full_Gloves_Kneepads_Desert
-{
-	blouse="Bloused";
-};
-class STB73_U_B_FieldTop_Full_Gloves_Unzipped_Kneepads_Desert: STB73_U_B_FieldTop_Full_Gloves_Unzipped_Desert
-{
-	kneepads="Kneepads";
-};
-class STB73_U_B_FieldTop_Full_Gloves_Bloused_Unzipped_Kneepads_Desert: STB73_U_B_FieldTop_Full_Gloves_Bloused_Kneepads_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_HalfRoll_Desert
-{
-	model="STB73_U_B_CBUU";
-	camo="Desert";
-	top="FieldTop";
-	tuck="Untucked";
-	sleeves="HalfRoll";
-	gloves="None";
-	blouse="Unbloused";
-	zipper="Zipped";
-	kneepads="None";
-};
-class STB73_U_B_FieldTop_HalfRoll_Gloves_Desert: STB73_U_B_FieldTop_HalfRoll_Desert
-{
-	gloves="Gloves";
-};
-class STB73_U_B_FieldTop_HalfRoll_Gloves_Bloused_Desert: STB73_U_B_FieldTop_HalfRoll_Gloves_Desert
-{
-	blouse="Bloused";
-};
-class STB73_U_B_FieldTop_HalfRoll_Gloves_Unzipped_Desert: STB73_U_B_FieldTop_HalfRoll_Gloves_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_HalfRoll_Gloves_Bloused_Unzipped_Desert: STB73_U_B_FieldTop_HalfRoll_Gloves_Bloused_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_HalfRoll_Bloused_Desert: STB73_U_B_FieldTop_HalfRoll_Desert
-{
-	blouse="Bloused";
-};
-class STB73_U_B_FieldTop_HalfRoll_Bloused_Unzipped_Desert: STB73_U_B_FieldTop_HalfRoll_Bloused_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_HalfRoll_Unzipped_Desert: STB73_U_B_FieldTop_HalfRoll_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_HalfRoll_Kneepads_Desert: STB73_U_B_FieldTop_HalfRoll_Desert
-{
-	kneepads="Kneepads";
-};
-class STB73_U_B_FieldTop_HalfRoll_Bloused_Kneepads_Desert: STB73_U_B_FieldTop_HalfRoll_Kneepads_Desert
-{
-	blouse="Bloused";
-};
-class STB73_U_B_FieldTop_HalfRoll_Unzipped_Kneepads_Desert: STB73_U_B_FieldTop_HalfRoll_Kneepads_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_HalfRoll_Bloused_Unzipped_Kneepads_Desert: STB73_U_B_FieldTop_HalfRoll_Bloused_Kneepads_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_HalfRoll_Gloves_Kneepads_Desert: STB73_U_B_FieldTop_HalfRoll_Kneepads_Desert
-{
-	gloves="Gloves";
-};
-class STB73_U_B_FieldTop_HalfRoll_Gloves_Bloused_Kneepads_Desert: STB73_U_B_FieldTop_HalfRoll_Gloves_Kneepads_Desert
-{
-	blouse="Bloused";
-};
-class STB73_U_B_FieldTop_HalfRoll_Gloves_Unzipped_Kneepads_Desert: STB73_U_B_FieldTop_HalfRoll_Gloves_Unzipped_Desert
-{
-	kneepads="Kneepads";
-};
-class STB73_U_B_FieldTop_HalfRoll_Gloves_Bloused_Unzipped_Kneepads_Desert: STB73_U_B_FieldTop_HalfRoll_Gloves_Bloused_Kneepads_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_QuarterRoll_Desert
-{
-	model="STB73_U_B_CBUU";
-	camo="Desert";
-	top="FieldTop";
-	tuck="Untucked";
-	sleeves="QuarterRoll";
-	gloves="None";
-	blouse="Unbloused";
-	zipper="Zipped";
-	kneepads="None";
-};
-class STB73_U_B_FieldTop_QuarterRoll_Gloves_Desert: STB73_U_B_FieldTop_QuarterRoll_Desert
-{
-	gloves="Gloves";
-};
-class STB73_U_B_FieldTop_QuarterRoll_Gloves_Bloused_Desert: STB73_U_B_FieldTop_QuarterRoll_Gloves_Desert
-{
-	blouse="Bloused";
-};
-class STB73_U_B_FieldTop_QuarterRoll_Gloves_Unzipped_Desert: STB73_U_B_FieldTop_QuarterRoll_Gloves_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_QuarterRoll_Gloves_Bloused_Unzipped_Desert: STB73_U_B_FieldTop_QuarterRoll_Gloves_Bloused_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_QuarterRoll_Bloused_Desert: STB73_U_B_FieldTop_QuarterRoll_Desert
-{
-	blouse="Bloused";
-};
-class STB73_U_B_FieldTop_QuarterRoll_Bloused_Unzipped_Desert: STB73_U_B_FieldTop_QuarterRoll_Bloused_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_QuarterRoll_Unzipped_Desert: STB73_U_B_FieldTop_QuarterRoll_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_QuarterRoll_Kneepads_Desert: STB73_U_B_FieldTop_QuarterRoll_Desert
-{
-	kneepads="Kneepads";
-};
-class STB73_U_B_FieldTop_QuarterRoll_Bloused_Kneepads_Desert: STB73_U_B_FieldTop_QuarterRoll_Kneepads_Desert
-{
-	blouse="Bloused";
-};
-class STB73_U_B_FieldTop_QuarterRoll_Unzipped_Kneepads_Desert: STB73_U_B_FieldTop_QuarterRoll_Kneepads_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_QuarterRoll_Bloused_Unzipped_Kneepads_Desert: STB73_U_B_FieldTop_QuarterRoll_Bloused_Kneepads_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_FieldTop_QuarterRoll_Gloves_Kneepads_Desert: STB73_U_B_FieldTop_QuarterRoll_Kneepads_Desert
-{
-	gloves="Gloves";
-};
-class STB73_U_B_FieldTop_QuarterRoll_Gloves_Bloused_Kneepads_Desert: STB73_U_B_FieldTop_QuarterRoll_Gloves_Kneepads_Desert
-{
-	blouse="Bloused";
-};
-class STB73_U_B_FieldTop_QuarterRoll_Gloves_Unzipped_Kneepads_Desert: STB73_U_B_FieldTop_QuarterRoll_Gloves_Unzipped_Desert
-{
-	kneepads="Kneepads";
-};
-class STB73_U_B_FieldTop_QuarterRoll_Gloves_Bloused_Unzipped_Kneepads_Desert: STB73_U_B_FieldTop_QuarterRoll_Gloves_Bloused_Kneepads_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_Full_Desert
-{
-	model="STB73_U_B_CBUU";
-	camo="Desert";
-	top="TacShirt";
-	tuck="Untucked";
-	sleeves="Full";
-	gloves="None";
-	blouse="Unbloused";
-	zipper="Zipped";
-	kneepads="None";
-};
-class STB73_U_B_TacShirt_Full_Gloves_Desert: STB73_U_B_TacShirt_Full_Desert
-{
-	gloves="Gloves";
-};
-class STB73_U_B_TacShirt_Full_Gloves_Bloused_Desert: STB73_U_B_TacShirt_Full_Gloves_Desert
-{
-	blouse="Bloused";
-};
-class STB73_U_B_TacShirt_Full_Gloves_Unzipped_Desert: STB73_U_B_TacShirt_Full_Gloves_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_Full_Gloves_Bloused_Unzipped_Desert: STB73_U_B_TacShirt_Full_Gloves_Bloused_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_Full_Bloused_Desert: STB73_U_B_TacShirt_Full_Desert
-{
-	blouse="Bloused";
-};
-class STB73_U_B_TacShirt_Full_Bloused_Unzipped_Desert: STB73_U_B_TacShirt_Full_Bloused_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_Full_Unzipped_Desert: STB73_U_B_TacShirt_Full_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_Full_Kneepads_Desert: STB73_U_B_TacShirt_Full_Desert
-{
-	kneepads="Kneepads";
-};
-class STB73_U_B_TacShirt_Full_Bloused_Kneepads_Desert: STB73_U_B_TacShirt_Full_Kneepads_Desert
-{
-	blouse="Bloused";
-};
-class STB73_U_B_TacShirt_Full_Unzipped_Kneepads_Desert: STB73_U_B_TacShirt_Full_Kneepads_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_Full_Bloused_Unzipped_Kneepads_Desert: STB73_U_B_TacShirt_Full_Bloused_Kneepads_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_Full_Gloves_Kneepads_Desert: STB73_U_B_TacShirt_Full_Kneepads_Desert
-{
-	gloves="Gloves";
-};
-class STB73_U_B_TacShirt_Full_Gloves_Bloused_Kneepads_Desert: STB73_U_B_TacShirt_Full_Gloves_Kneepads_Desert
-{
-	blouse="Bloused";
-};
-class STB73_U_B_TacShirt_Full_Gloves_Unzipped_Kneepads_Desert: STB73_U_B_TacShirt_Full_Gloves_Unzipped_Desert
-{
-	kneepads="Kneepads";
-};
-class STB73_U_B_TacShirt_Full_Gloves_Bloused_Unzipped_Kneepads_Desert: STB73_U_B_TacShirt_Full_Gloves_Bloused_Kneepads_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_HalfRoll_Desert
-{
-	model="STB73_U_B_CBUU";
-	camo="Desert";
-	top="TacShirt";
-	tuck="Untucked";
-	sleeves="HalfRoll";
-	gloves="None";
-	blouse="Unbloused";
-	zipper="Zipped";
-	kneepads="None";
-};
-class STB73_U_B_TacShirt_HalfRoll_Gloves_Desert: STB73_U_B_TacShirt_HalfRoll_Desert
-{
-	gloves="Gloves";
-};
-class STB73_U_B_TacShirt_HalfRoll_Gloves_Bloused_Desert: STB73_U_B_TacShirt_HalfRoll_Gloves_Desert
-{
-	blouse="Bloused";
-};
-class STB73_U_B_TacShirt_HalfRoll_Gloves_Unzipped_Desert: STB73_U_B_TacShirt_HalfRoll_Gloves_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_HalfRoll_Gloves_Bloused_Unzipped_Desert: STB73_U_B_TacShirt_HalfRoll_Gloves_Bloused_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_HalfRoll_Bloused_Desert: STB73_U_B_TacShirt_HalfRoll_Desert
-{
-	blouse="Bloused";
-};
-class STB73_U_B_TacShirt_HalfRoll_Bloused_Unzipped_Desert: STB73_U_B_TacShirt_HalfRoll_Bloused_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_HalfRoll_Unzipped_Desert: STB73_U_B_TacShirt_HalfRoll_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_HalfRoll_Kneepads_Desert: STB73_U_B_TacShirt_HalfRoll_Desert
-{
-	kneepads="Kneepads";
-};
-class STB73_U_B_TacShirt_HalfRoll_Bloused_Kneepads_Desert: STB73_U_B_TacShirt_HalfRoll_Kneepads_Desert
-{
-	blouse="Bloused";
-};
-class STB73_U_B_TacShirt_HalfRoll_Unzipped_Kneepads_Desert: STB73_U_B_TacShirt_HalfRoll_Kneepads_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_HalfRoll_Bloused_Unzipped_Kneepads_Desert: STB73_U_B_TacShirt_HalfRoll_Bloused_Kneepads_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_HalfRoll_Gloves_Kneepads_Desert: STB73_U_B_TacShirt_HalfRoll_Kneepads_Desert
-{
-	gloves="Gloves";
-};
-class STB73_U_B_TacShirt_HalfRoll_Gloves_Bloused_Kneepads_Desert: STB73_U_B_TacShirt_HalfRoll_Gloves_Kneepads_Desert
-{
-	blouse="Bloused";
-};
-class STB73_U_B_TacShirt_HalfRoll_Gloves_Unzipped_Kneepads_Desert: STB73_U_B_TacShirt_HalfRoll_Gloves_Unzipped_Desert
-{
-	kneepads="Kneepads";
-};
-class STB73_U_B_TacShirt_HalfRoll_Gloves_Bloused_Unzipped_Kneepads_Desert: STB73_U_B_TacShirt_HalfRoll_Gloves_Bloused_Kneepads_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_QuarterRoll_Desert
-{
-	model="STB73_U_B_CBUU";
-	camo="Desert";
-	top="TacShirt";
-	tuck="Untucked";
-	sleeves="QuarterRoll";
-	gloves="None";
-	blouse="Unbloused";
-	zipper="Zipped";
-	kneepads="None";
-};
-class STB73_U_B_TacShirt_QuarterRoll_Gloves_Desert: STB73_U_B_TacShirt_QuarterRoll_Desert
-{
-	gloves="Gloves";
-};
-class STB73_U_B_TacShirt_QuarterRoll_Gloves_Bloused_Desert: STB73_U_B_TacShirt_QuarterRoll_Gloves_Desert
-{
-	blouse="Bloused";
-};
-class STB73_U_B_TacShirt_QuarterRoll_Gloves_Unzipped_Desert: STB73_U_B_TacShirt_QuarterRoll_Gloves_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_QuarterRoll_Gloves_Bloused_Unzipped_Desert: STB73_U_B_TacShirt_QuarterRoll_Gloves_Bloused_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_QuarterRoll_Bloused_Desert: STB73_U_B_TacShirt_QuarterRoll_Desert
-{
-	blouse="Bloused";
-};
-class STB73_U_B_TacShirt_QuarterRoll_Bloused_Unzipped_Desert: STB73_U_B_TacShirt_QuarterRoll_Bloused_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_QuarterRoll_Unzipped_Desert: STB73_U_B_TacShirt_QuarterRoll_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_QuarterRoll_Kneepads_Desert: STB73_U_B_TacShirt_QuarterRoll_Desert
-{
-	kneepads="Kneepads";
-};
-class STB73_U_B_TacShirt_QuarterRoll_Bloused_Kneepads_Desert: STB73_U_B_TacShirt_QuarterRoll_Kneepads_Desert
-{
-	blouse="Bloused";
-};
-class STB73_U_B_TacShirt_QuarterRoll_Unzipped_Kneepads_Desert: STB73_U_B_TacShirt_QuarterRoll_Kneepads_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_QuarterRoll_Bloused_Unzipped_Kneepads_Desert: STB73_U_B_TacShirt_QuarterRoll_Bloused_Kneepads_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TacShirt_QuarterRoll_Gloves_Kneepads_Desert: STB73_U_B_TacShirt_QuarterRoll_Kneepads_Desert
-{
-	gloves="Gloves";
-};
-class STB73_U_B_TacShirt_QuarterRoll_Gloves_Bloused_Kneepads_Desert: STB73_U_B_TacShirt_QuarterRoll_Gloves_Kneepads_Desert
-{
-	blouse="Bloused";
-};
-class STB73_U_B_TacShirt_QuarterRoll_Gloves_Unzipped_Kneepads_Desert: STB73_U_B_TacShirt_QuarterRoll_Gloves_Unzipped_Desert
-{
-	kneepads="Kneepads";
-};
-class STB73_U_B_TacShirt_QuarterRoll_Gloves_Bloused_Unzipped_Kneepads_Desert: STB73_U_B_TacShirt_QuarterRoll_Gloves_Bloused_Kneepads_Desert
-{
-	zipper="Unzipped";
-};
-class STB73_U_B_TShirt_Tucked_Desert
-{
-	model="STB73_U_B_TShirt";
-	camo="Desert";
-	tuck="Tucked";
-	gloves="None";
-	blouse="Unbloused";
-	kneepads="None";
-};
-class STB73_U_B_TShirt_Tucked_Gloves_Desert: STB73_U_B_TShirt_Tucked_Desert
-{
-	gloves="Gloves";
-};
-class STB73_U_B_TShirt_Tucked_Kneepads_Desert: STB73_U_B_TShirt_Tucked_Desert
-{
-	kneepads="Kneepads";
-};
-class STB73_U_B_TShirt_Tucked_Gloves_Kneepads_Desert: STB73_U_B_TShirt_Tucked_Kneepads_Desert
-{
-	gloves="Gloves";
-};
-class STB73_U_B_TShirt_Tucked_Gloves_Bloused_Desert: STB73_U_B_TShirt_Tucked_Gloves_Desert
-{
-	blouse="Bloused";
-};
-class STB73_U_B_TShirt_Tucked_Bloused_Desert: STB73_U_B_TShirt_Tucked_Desert
-{
-	blouse="Bloused";
-};
-class STB73_U_B_TShirt_Tucked_Bloused_Kneepads_Desert: STB73_U_B_TShirt_Tucked_Bloused_Desert
-{
-	kneepads="Kneepads";
-};
-class STB73_U_B_TShirt_Tucked_Gloves_Bloused_Kneepads_Desert: STB73_U_B_TShirt_Tucked_Gloves_Bloused_Desert
-{
-	kneepads="Kneepads";
-};
-class STB73_U_B_TShirt_Untucked_Desert
-{
-	model="STB73_U_B_TShirt";
-	camo="Desert";
-	tuck="Untucked";
-	gloves="None";
-	blouse="Unbloused";
-	kneepads="None";
-};
-class STB73_U_B_TShirt_Untucked_Gloves_Desert: STB73_U_B_TShirt_Untucked_Desert
-{
-	gloves="Gloves";
-};
-class STB73_U_B_TShirt_Untucked_Kneepads_Desert: STB73_U_B_TShirt_Untucked_Desert
-{
-	kneepads="Kneepads";
-};
-class STB73_U_B_TShirt_Untucked_Gloves_Kneepads_Desert: STB73_U_B_TShirt_Untucked_Kneepads_Desert
-{
-	gloves="Gloves";
-};
-class STB73_U_B_TShirt_Untucked_Gloves_Bloused_Desert: STB73_U_B_TShirt_Untucked_Gloves_Desert
-{
-	blouse="Bloused";
-};
-class STB73_U_B_TShirt_Untucked_Bloused_Desert: STB73_U_B_TShirt_Untucked_Desert
-{
-	blouse="Bloused";
-};
-class STB73_U_B_TShirt_Untucked_Bloused_Kneepads_Desert: STB73_U_B_TShirt_Untucked_Bloused_Desert
-{
-	kneepads="Kneepads";
-};
-class STB73_U_B_TShirt_Untucked_Gloves_Bloused_Kneepads_Desert: STB73_U_B_TShirt_Untucked_Gloves_Bloused_Desert
+class STB73_U_B_TShirt_Untucked_Gloves_Bloused_Kneepads_Woodtarn: STB73_U_B_TShirt_Untucked_Gloves_Bloused_Woodtarn
 {
 	kneepads="Kneepads";
 };

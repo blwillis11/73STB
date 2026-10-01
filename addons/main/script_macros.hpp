@@ -7,6 +7,12 @@
 #include "\a3\ui_f\hpp\defineCommonGrids.inc"
 #include "\a3\ui_f\hpp\defineCommonColors.inc"
 
+
+#define SCOPE_S scope = 2;
+#define SCOPEA_S scopeArsenal = 2;
+#define SCOPE_NS scope = 1;
+#define SCOPEA_NS scopeArsenal = 1;
+
 #define OPFOR_VEST_HITPOINT_INFO       \
 class HitpointsProtectionInfo {  \
   class Neck {                   \
@@ -145,9 +151,9 @@ class HitpointsProtectionInfo {  \
 
 // Equipment list macros definitions
 
-#define MAG_XX(a,b) class _xx_##a {magazine = a; count = b;}
-#define WEAP_XX(a,b) class _xx_##a {weapon = a; count = b;}
-#define ITEM_XX(a,b) class _xx_##a {name = a; count = b;}
+#define MAG_XX(a,b) class _xx_##a {magazine = Q(a); count = Q(b);};
+#define WEAP_XX(a,b) class _xx_##a {weapon = Q(a); count = Q(b);};
+#define ITEM_XX(a,b) class _xx_##a {name = Q(a); count = Q(b);};
 
 /// Magazines macros definition ///
 #define MAG_1(a) Q(a)

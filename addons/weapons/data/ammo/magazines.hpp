@@ -8,39 +8,23 @@ class STB73_15Rnd_762x51_Mag: TCP_15Rnd_762x51_Mag{
     displayName="[73] 15Rnd 7.62x51mm Magazine";
     author= AUTHOR;
     ammo="STB73_B_762x51_Ball";
-    greenmag_canSpeedload=1;
-    greenmag_needBelt=0;
-    greenmag_ammo="greenmag_ammo_762x51_basic_1Rnd";
-    greenmag_basicammo="greenmag_ammo_762x51_basic_1Rnd";
 };
 class STB73_15Rnd_762x51_Mag_Tracer: STB73_15Rnd_762x51_Mag{
     displayName="[73] 15Rnd 7.62x51mm Magazine [Tracer]";
     ammo="STB73_B_762x51_Ball_Tracer";
     tracersEvery = 1;
     lastRoundsTracer = 15;
-    greenmag_canSpeedload=1;
-    greenmag_needBelt=0;
-    greenmag_ammo="greenmag_ammo_762x51_tracer_1Rnd";
-    greenmag_basicammo="greenmag_ammo_762x51_basic_1Rnd";
 };
 class STB73_15Rnd_762x51_Mag_Tracer_Yellow: STB73_15Rnd_762x51_Mag_Tracer
 {
     displayName="[73] 15Rnd 7.62x51mm Magazine [Tracer Yellow]";
     ammo="STB73_B_762x51_Ball_Tracer_Yellow";
-    greenmag_canSpeedload=1;
-    greenmag_needBelt=0;
-    greenmag_ammo="greenmag_ammo_762x51_tracer_yellow_1Rnd";
-    greenmag_basicammo="greenmag_ammo_762x51_basic_1Rnd";
 
 };
 class STB73_15Rnd_762x51_Mag_Tracer_IR: STB73_15Rnd_762x51_Mag_Tracer
 {
     displayName="[73] 15Rnd 7.62x51mm Magazine [Tracer IR]";
     ammo="STB73_B_762x51_Ball_Tracer_IR";
-    greenmag_canSpeedload=1;
-    greenmag_needBelt=0;
-    greenmag_ammo="greenmag_ammo_762x51_IRtracer_1Rnd";
-    greenmag_basicammo="greenmag_ammo_762x51_basic_1Rnd";
 };
 
 
@@ -48,10 +32,6 @@ class STB73_15Rnd_762x51_Mag_Dual: STB73_15Rnd_762x51_Mag
 {
     displayName="[73] 15Rnd 7.62x51mm Magazine [Dual]";
     ammo="STB73_B_762x51_Dual";
-    greenmag_canSpeedload=1;
-    greenmag_needBelt=0;
-    greenmag_ammo="greenmag_ammo_762x51_basic_1Rnd";
-    greenmag_basicammo="greenmag_ammo_762x51_basic_1Rnd";
 };
 
 
@@ -59,10 +39,6 @@ class STB73_15Rnd_762x51_BTHP_Mag:TCP_15Rnd_762x51_Mag
 {
     ammo = "STB73_B_762x51_BTHP";
     displayname	= "[73] 15Rnd 7.62x51mm BTHP Magazine";
-    greenmag_canSpeedload=1;
-    greenmag_needBelt=0;
-    greenmag_ammo="greenmag_ammo_762x51_basic_1Rnd";
-    greenmag_basicammo="greenmag_ammo_762x51_basic_1Rnd";
 };
 class STB73_15Rnd_762x51_BTHP_Mag_Tracer:STB73_15Rnd_762x51_BTHP_Mag
 {
@@ -70,28 +46,16 @@ class STB73_15Rnd_762x51_BTHP_Mag_Tracer:STB73_15Rnd_762x51_BTHP_Mag
     ammo = "STB73_B_762x51_BTHP_Tracer";
     tracersEvery = 1;
     lastRoundsTracer = 15;
-    greenmag_canSpeedload=1;
-    greenmag_needBelt=0;
-    greenmag_ammo="greenmag_ammo_762x51_tracer_1Rnd";
-    greenmag_basicammo="greenmag_ammo_762x51_basic_1Rnd";
 };
 class STB73_15Rnd_762x51_BTHP_Mag_Tracer_Yellow:STB73_15Rnd_762x51_BTHP_Mag
 {
     displayname	= "[73] 15Rnd 7.62x51mm BTHP Magazine [Tracers Yellow]";
     ammo = "STB73_B_762x51_BTHP_Tracer_Yellow";
-    greenmag_canSpeedload=1;
-    greenmag_needBelt=0;
-    greenmag_ammo="greenmag_ammo_762x51_tracer_yellow_1Rnd";
-    greenmag_basicammo="greenmag_ammo_762x51_basic_1Rnd";
 };
 class STB73_15Rnd_762x51_BTHP_Mag_Tracer_IR:STB73_15Rnd_762x51_BTHP_Mag
 {
     displayname	= "[73] 15Rnd 7.62x51mm BTHP Magazine [Tracers IR]";
     ammo = "STB73_B_762x51_BTHP_Tracer_IR";
-    greenmag_canSpeedload=1;
-    greenmag_needBelt=0;
-    greenmag_ammo="greenmag_ammo_762x51_IRtracer_1Rnd";
-    greenmag_basicammo="greenmag_ammo_762x51_basic_1Rnd";
 
 };
 
@@ -100,10 +64,6 @@ class STB73_15Rnd_762x51_HVAP_Mag:TCP_15Rnd_762x51_Mag
 {
     displayname	= "[73] 15Rnd 7.62x51mm HVAP Magazine";
     ammo = "STB73_B_762x51_HVAP";
-    greenmag_canSpeedload=1;
-    greenmag_needBelt=0;
-    greenmag_ammo="greenmag_ammo_762x51_basic_1Rnd";
-    greenmag_basicammo="greenmag_ammo_762x51_basic_1Rnd";
 };
 class STB73_15Rnd_762x51_HVAP_Mag_Tracer:TCP_15Rnd_762x51_Mag
 {
@@ -111,28 +71,16 @@ class STB73_15Rnd_762x51_HVAP_Mag_Tracer:TCP_15Rnd_762x51_Mag
     ammo = "STB73_B_762x51_HVAP_Tracer";
     tracersEvery = 1;
     lastRoundsTracer = 15;
-    greenmag_canSpeedload=1;
-    greenmag_needBelt=0;
-    greenmag_ammo="greenmag_ammo_762x51_tracer_1Rnd";
-    greenmag_basicammo="greenmag_ammo_762x51_basic_1Rnd";
 };
 class STB73_15Rnd_762x51_HVAP_Mag_Tracer_Yellow:STB73_15Rnd_762x51_HVAP_Mag_Tracer
 {
     displayname	= "[73] 15Rnd 7.62x51mm HVAP Magazine [Tracers Yellow]";
     ammo = "STB73_B_762x51_HVAP_Tracer_Yellow";
-    greenmag_canSpeedload=1;
-    greenmag_needBelt=0;
-    greenmag_ammo="greenmag_ammo_762x51_tracer_yellow_1Rnd";
-    greenmag_basicammo="greenmag_ammo_762x51_basic_1Rnd";
 };
 class STB73_15Rnd_762x51_HVAP_Mag_Tracer_IR:STB73_15Rnd_762x51_HVAP_Mag_Tracer
 {
     displayname	= "[73] 15Rnd 7.62x51mm HVAP Magazine [Tracers IR]";
     ammo = "STB73_B_762x51_HVAP_Tracer_IR";
-    greenmag_canSpeedload=1;
-    greenmag_needBelt=0;
-    greenmag_ammo="greenmag_ammo_762x51_IRtracer_1Rnd";
-    greenmag_basicammo="greenmag_ammo_762x51_basic_1Rnd";
 };
 
 
@@ -141,38 +89,22 @@ class STB73_32Rnd_762x51_Mag: TCP_32Rnd_762x51_Mag{
     displayName="[73] 32Rnd 7.62x51mm Magazine";
     author= AUTHOR;
     ammo="STB73_B_762x51_Ball";
-    greenmag_canSpeedload=1;
-    greenmag_needBelt=0;
-    greenmag_ammo="greenmag_ammo_762x51_basic_1Rnd";
-    greenmag_basicammo="greenmag_ammo_762x51_basic_1Rnd";
 };
 class STB73_32Rnd_762x51_Mag_Tracer: STB73_32Rnd_762x51_Mag{
     displayName="[73] 32Rnd 7.62x51mm Magazine [Tracer]";
     ammo="STB73_B_762x51_Ball_Tracer";
     tracersEvery = 1;
     lastRoundsTracer = 32;
-    greenmag_canSpeedload=1;
-    greenmag_needBelt=0;
-    greenmag_ammo="greenmag_ammo_762x51_tracer_1Rnd";
-    greenmag_basicammo="greenmag_ammo_762x51_basic_1Rnd";
 };
 class STB73_32Rnd_762x51_Mag_Tracer_Yellow: STB73_32Rnd_762x51_Mag_Tracer
 {
     displayName="[73] 32Rnd 7.62x51mm Magazine [Tracer Yellow]";
     ammo="STB73_B_762x51_Ball_Tracer_Yellow";
-    greenmag_canSpeedload=1;
-    greenmag_needBelt=0;
-    greenmag_ammo="greenmag_ammo_762x51_tracer_yellow_1Rnd";
-    greenmag_basicammo="greenmag_ammo_762x51_basic_1Rnd";
 };
 class STB73_32Rnd_762x51_Mag_Tracer_IR: STB73_32Rnd_762x51_Mag_Tracer
 {
     displayName="[73] 32Rnd 7.62x51mm Magazine [Tracer IR]";
     ammo="STB73_B_762x51_Ball_Tracer_IR";
-    greenmag_canSpeedload=1;
-    greenmag_needBelt=0;
-    greenmag_ammo="greenmag_ammo_762x51_IRtracer_1Rnd";
-    greenmag_basicammo="greenmag_ammo_762x51_basic_1Rnd";
 };
 
 
@@ -180,10 +112,6 @@ class STB73_32Rnd_762x51_Mag_Dual: STB73_32Rnd_762x51_Mag
 {
     displayName="[73] 32Rnd 7.62x51mm Magazine [Dual]";
     ammo="STB73_B_762x51_Dual";
-    greenmag_canSpeedload=1;
-    greenmag_needBelt=0;
-    greenmag_ammo="greenmag_ammo_762x51_basic_1Rnd";
-    greenmag_basicammo="greenmag_ammo_762x51_basic_1Rnd";
 };
 
 
@@ -191,38 +119,22 @@ class STB73_60Rnd_762x51_Mag: TCP_60Rnd_762x51_Mag{
     displayName="[73] 60Rnd 7.62x51mm Magazine";
     author= AUTHOR;
     ammo="STB73_B_762x51_Ball";
-    greenmag_canSpeedload=1;
-    greenmag_needBelt=0;
-    greenmag_ammo="greenmag_ammo_762x51_basic_1Rnd";
-    greenmag_basicammo="greenmag_ammo_762x51_basic_1Rnd";
 };
 class STB73_60Rnd_762x51_Mag_Tracer: STB73_60Rnd_762x51_Mag{
     displayName="[73] 60Rnd 7.62x51mm Magazine [Tracer]";
     ammo="STB73_B_762x51_Ball_Tracer";
     tracersEvery = 1;
     lastRoundsTracer = 60;
-    greenmag_canSpeedload=1;
-    greenmag_needBelt=0;
-    greenmag_ammo="greenmag_ammo_762x51_tracer_1Rnd";
-    greenmag_basicammo="greenmag_ammo_762x51_basic_1Rnd";
 };
 class STB73_60Rnd_762x51_Mag_Tracer_Yellow: STB73_60Rnd_762x51_Mag_Tracer
 {
     displayName="[73] 60Rnd 7.62x51mm Magazine [Tracer Yellow]";
     ammo="STB73_B_762x51_Ball_Tracer_Yellow";
-    greenmag_canSpeedload=1;
-    greenmag_needBelt=0;
-    greenmag_ammo="greenmag_ammo_762x51_tracer_yellow_1Rnd";
-    greenmag_basicammo="greenmag_ammo_762x51_basic_1Rnd";
 };
 class STB73_60Rnd_762x51_Mag_Tracer_IR: STB73_60Rnd_762x51_Mag_Tracer
 {
     displayName="[73] 60Rnd 7.62x51mm Magazine [Tracer IR]";
     ammo="STB73_B_762x51_Ball_Tracer_IR";
-    greenmag_canSpeedload=1;
-    greenmag_needBelt=0;
-    greenmag_ammo="greenmag_ammo_762x51_IRtracer_1Rnd";
-    greenmag_basicammo="greenmag_ammo_762x51_basic_1Rnd";
 };
 
 
@@ -230,10 +142,6 @@ class STB73_60Rnd_762x51_Mag_Dual : STB73_60Rnd_762x51_Mag
 {
     displayname	= "[73] 60Rnd 7.62x51mm Magazine (Dual)";
     ammo = "STB73_B_762x51_Dual";
-    greenmag_canSpeedload=1;
-    greenmag_needBelt=0;
-    greenmag_ammo="greenmag_ammo_762x51_basic_1Rnd";
-    greenmag_basicammo="greenmag_ammo_762x51_basic_1Rnd";
 };
 
 class TCP_100Rnd_762x51_Mag;
@@ -242,72 +150,40 @@ class TCP_200Rnd_762x51_Mag;
 class STB73_200rnd_762x51_Mag: TCP_200Rnd_762x51_Mag{
     displayName = "[73] 200Rnd 7.62x51mm Box";
     ammo = "STB73_B_762x51_Ball";
-    greenmag_canSpeedload=0;
-    greenmag_needBelt=1;
-    greenmag_ammo="greenmag_beltlinked_762x51_tracer";
-    greenmag_basicammo="greenmag_beltlinked_762x51_basic";
 };
 class STB73_200rnd_762x51_Mag_Tracer: TCP_200Rnd_762x51_Mag{
     displayName = "[73] 200Rnd 7.62x51mm Box [Tracers]";
     ammo = "STB73_B_762x51_Ball_Tracer";
     tracersEvery = 1;
     lastRoundsTracer = 200;
-    greenmag_canSpeedload=0;
-    greenmag_needBelt=1;
-    greenmag_ammo="greenmag_beltlinked_762x51_tracer";
-    greenmag_basicammo="greenmag_beltlinked_762x51_basic";
 };
 class STB73_200rnd_762x51_Mag_Tracer_Yellow: STB73_200rnd_762x51_Mag_Tracer{
     displayName = "[73] 200Rnd 7.62x51mm Box [Yellow Tracers]";
     ammo = "STB73_B_762x51_Ball_Tracer_Yellow";
-    greenmag_canSpeedload=0;
-    greenmag_needBelt=1;
-    greenmag_ammo="greenmag_beltlinked_762x51_tracer";
-    greenmag_basicammo="greenmag_beltlinked_762x51_basic";
 };
 class STB73_200rnd_762x51_Mag_Tracer_IR: STB73_200rnd_762x51_Mag_Tracer{
     displayName = "[73] 200Rnd 7.62x51mm Box [IR Tracers]";
     ammo = "STB73_B_762x51_Ball_Tracer_IR";
-    greenmag_canSpeedload=0;
-    greenmag_needBelt=1;
-    greenmag_ammo="greenmag_beltlinked_762x51_tracer";
-    greenmag_basicammo="greenmag_beltlinked_762x51_basic";
 };
 
 
 class STB73_100rnd_762x51_Mag: TCP_100Rnd_762x51_Mag{
     displayName = "[73] 100Rnd 7.62x51mm Box";
     ammo = "STB73_B_762x51_Ball";
-    greenmag_canSpeedload=0;
-    greenmag_needBelt=1;
-    greenmag_ammo="greenmag_beltlinked_762x51_tracer";
-    greenmag_basicammo="greenmag_beltlinked_762x51_basic";
 };
 class STB73_100rnd_762x51_Mag_Tracer: TCP_100Rnd_762x51_Mag{
     displayName = "[73] 100Rnd 7.62x51mm Box [Tracers]";
     ammo = "STB73_B_762x51_Ball_Tracer";
     tracersEvery = 1;
     lastRoundsTracer = 100;
-    greenmag_canSpeedload=0;
-    greenmag_needBelt=1;
-    greenmag_ammo="greenmag_beltlinked_762x51_tracer";
-    greenmag_basicammo="greenmag_beltlinked_762x51_basic";
 };
 class STB73_100rnd_762x51_Mag_Tracer_Yellow: STB73_100rnd_762x51_Mag_Tracer{
     displayName = "[73] 100Rnd 7.62x51mm Box [Yellow Tracers]";
     ammo = "STB73_B_762x51_Ball_Tracer_Yellow";
-    greenmag_canSpeedload=0;
-    greenmag_needBelt=1;
-    greenmag_ammo="greenmag_beltlinked_762x51_tracer";
-    greenmag_basicammo="greenmag_beltlinked_762x51_basic";
 };
 class STB73_100rnd_762x51_Mag_Tracer_IR: STB73_100rnd_762x51_Mag_Tracer{
     displayName = "[73] 100Rnd 7.62x51mm Box [IR Tracers]";
     ammo = "STB73_B_762x51_Ball_Tracer_IR";
-    greenmag_canSpeedload=0;
-    greenmag_needBelt=1;
-    greenmag_ammo="greenmag_beltlinked_762x51_tracer";
-    greenmag_basicammo="greenmag_beltlinked_762x51_basic";
 };
 
 //12
@@ -321,10 +197,6 @@ class STB73_95x40_36Rnd_Mag:TCP_36Rnd_95x40_Mag
     displayName="[73] 36Rnd 9.5x40mm Magazine";
     author= AUTHOR;
     ammo="STB73_95x40_AP";
-    greenmag_canSpeedload=1;
-    greenmag_needBelt=0;
-    greenmag_ammo="greenmag_ammo_95x40_tracer_1Rnd";
-    greenmag_basicammo="greenmag_ammo_95x40_tracer_1Rnd";
 };
 class STB73_95x40_36Rnd_Mag_Tracer:STB73_95x40_36Rnd_Mag
 {
@@ -332,28 +204,16 @@ class STB73_95x40_36Rnd_Mag_Tracer:STB73_95x40_36Rnd_Mag
     ammo="STB73_95x40_AP_Tracer";
     tracersEvery = 1;
     lastRoundsTracer = 36;
-    greenmag_canSpeedload=1;
-    greenmag_needBelt=0;
-    greenmag_ammo="greenmag_ammo_95x40_tracer_1Rnd";
-    greenmag_basicammo="greenmag_ammo_95x40_tracer_1Rnd";
 };
 class STB73_95x40_36Rnd_Mag_Tracer_Yellow:STB73_95x40_36Rnd_Mag_Tracer
 {
     displayName="[73] 36Rnd 9.5x40mm Magazine [Yellow Tracer]";
     ammo="STB73_95x40_AP_Tracer_Yellow";
-    greenmag_canSpeedload=1;
-    greenmag_needBelt=0;
-    greenmag_ammo="greenmag_ammo_95x40_tracer_yellow_1Rnd";
-    greenmag_basicammo="greenmag_ammo_95x40_tracer_1Rnd";
 };
 class STB73_95x40_36Rnd_Mag_Tracer_IR:STB73_95x40_36Rnd_Mag_Tracer
 {
     displayName="[73] 36Rnd 9.5x40mm Magazine [IR Tracer]";
     ammo="STB73_95x40_AP_Tracer_IR";
-    greenmag_canSpeedload=1;
-    greenmag_needBelt=0;
-    greenmag_ammo="greenmag_ammo_95x40_IRtracer_1Rnd";
-    greenmag_basicammo="greenmag_ammo_95x40_tracer_1Rnd";
 };
 
 // Launcher

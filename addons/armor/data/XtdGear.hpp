@@ -115,6 +115,11 @@ class XtdGearModels
 	};
     class STB73_CamoFabric: STB73_CamoBase
 	{
+		class Woodtarn
+		{
+			label="Woodtarn";
+			image="z\73STB\addons\armor\data\ui\xtdgearinfo\woodtarn.paa";
+		};
 		class Black
 		{
 			label="$STR_TCP_Data_Black";
@@ -480,9 +485,7 @@ class XtdGearModels
 					"Urban",
 					"White",
 					"Woodland",
-					"Woodland2",
-					"Snow",
-					"Desert"
+					"Woodtarn"
 				};
 			};
 			class top

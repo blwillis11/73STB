@@ -25,8 +25,10 @@ class cfgGlasses
 	class STB73_ReconCloak : None
 	{
 		author = AUTHOR;
-		scope = 1;
+		scope = 0;
 		displayName = "[73] Recon Cloak";
 		model = "z\73STB\addons\armor\data\facewear\data\reconHood\ReconCloak.p3d";
+		identityTypes[] = {
+        };
 	};
 };

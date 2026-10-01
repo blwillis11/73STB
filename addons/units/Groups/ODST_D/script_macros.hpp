@@ -1,0 +1,3 @@
+#define SIDE West
+#define SIDE_ID 1
+#define FACTION DOUBLES(PREFIX,SUBCOMPONENT2)

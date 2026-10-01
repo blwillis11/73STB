@@ -395,3 +395,14 @@ class STB73_MA5K: TCP_arifle_MA5K
     };
 };
 
+class srifle_DMR_07_blk_F;
+
+class STB73_arifle_AUG7: srifle_DMR_07_blk_F {
+    displayname = "[73] AUG7";
+    baseWeapon 	= "STB73_arifle_AUG7";
+    model = "z\73STB\addons\weapons\data\AR\AUG\AugA7.p3d";
+    hiddenSelections[] = {"camo"};
+    hiddenSelectionsTextures[] = {"z\73STB\addons\weapons\data\AR\AUG\camo\DefaultMaterial_CO.paa"};
+    hiddenSelectionMaterials[] = {"z\73STB\addons\weapons\data\AR\AUG\camo\AUG7_01.rvmat"};
+    scope = 1;
+};

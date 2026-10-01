@@ -6,19 +6,6 @@ class CfgPatches {
         name = Q(COMPONENT_NAME);
 		units[] = 
         {
-			"STB73_STB_ODST_Rifleman",
-			"STB73_STB_ODST_Autorifleman",
-			"STB73_STB_ODST_Grenadier",
-			"STB73_STB_ODST_Demo",
-			"STB73_STB_ODST_Medic",
-			"STB73_STB_ODST_Sniper",
-			"STB73_STB_ODST_Marksman",
-			"STB73_STB_ODST_Officer",
-			"STB73_STB_ODST_AT",
-			"STB73_STB_ODST_Scout",
-			"STB73_STB_ODST_Team_Lead",
-			"STB73_STB_ODST_Squad_Lead",
-			"STB73_Aviator"
         }; 
         weapons[] = {
            
@@ -27,9 +14,7 @@ class CfgPatches {
         requiredAddons[] = {
 			"STB73_Main",
 			"STB73_Weapons",
-			"STB73_Armor",
-			"OPTRE_UNSC_Units",
-			"OPTRE_FC_Units"
+			"STB73_Armor"
         };
         authors[] = {"Salmon"}; // sub array of authors, considered for the specific addon, can be removed or left empty {}
         author = AUTHOR; // primary author name, either yours or your team's, considered for the whole mod
@@ -40,4 +25,3 @@ class CfgPatches {
 // configs go here
 #include "CfgEventHandlers.hpp"
 #include "CfgWeapons.hpp"
-#include "CfgGroups.hpp"

@@ -1,6 +1,6 @@
-class OPTRE_OQ40_Minibee_UNSC;
+class OPTRE_OQ40_Minibee_Black_UNSC;
 
-class STB73_OQ40_Minibee: OPTRE_OQ40_Minibee_UNSC
+class STB73_OQ40_Minibee: OPTRE_OQ40_Minibee_Black_UNSC
 {
     displayName="[73] OQ-40 'Minibee'";
     author= AUTHOR;
