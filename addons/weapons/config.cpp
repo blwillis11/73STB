@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+#include "script_macros.hpp"
 
 class CfgPatches {
     class STB73_Weapons {
@@ -7,7 +8,6 @@ class CfgPatches {
         {
         }; 
         weapons[] = {
-            "STB73_BR55HBM1_DMR",
             "STB73_M392_DMR",
             "STB73_M45",
             "STB73_M45E",
@@ -23,8 +23,6 @@ class CfgPatches {
             "STB73_MA40GL",
             "STB73_MA40",
             "STB73_MA37K",
-			"STB73_MA5A",
-			"STB73_MA5AGL",
             "STB73_MA5B",
             "STB73_MA5BGL",
 			"STB73_MA5C",
@@ -33,7 +31,6 @@ class CfgPatches {
             "STB73_SRS99AM_Stealth",
             "STB73_Fang",
             "STB73_Fang2",
-            "STB73_BR55HBM1_CQC",
 			"STB73_HMG_M250",
 			"STB73_GMG_M247A1"
         };
@@ -350,15 +347,6 @@ class cfgMagazineWells{
 			"STB73_M232_145x114x4_APFSDS_TIR"
 		};
 	};
-	class STB73_8Rnd_145x114_MagWell{
-		STB73_Magazines[] = {
-			"STB73_M232_145x114x8_APFSDS",
-			"STB73_M232_145x114x8_APFSDS_TG",
-			"STB73_M232_145x114x8_APFSDS_TR",
-			"STB73_M232_145x114x8_APFSDS_TC",
-			"STB73_M232_145x114x8_APFSDS_TIR"
-		};
-	};
 };
 
 class CBA_DisposableLaunchers {
@@ -367,27 +355,44 @@ class CBA_DisposableLaunchers {
     STB73_M44_Lykoi_AA_Loaded[] = {"STB73_M44_Lykoi_AA","STB73_M44_Lykoi_AA_Used"};
 };
 
-
 class CfgMovesBasic
 {
 	class Default;
 	class ManActions
 	{
-		GestureReloadHVAP1="GestureReloadHVAP1";
+		GestureReloadAugA7="GestureReloadAugA7";
 	};
 	class Actions
 	{
 		class RifleBaseStandActions;
 		class NoActions: ManActions
 		{
-			GestureReloadHVAP1[]=
+			GestureReloadAugA7[]=
 			{
-				"GestureReloadHVAP1",
+				"GestureReloadAugA7",
 				"Gesture"
 			};
 		};
 	};
 };
+
 class CfgGesturesMale
 {
+	class Default;
+	class States
+	{
+		class GestureReloadAugA7: Default
+		{
+			file="z\73STB\addons\weapons\data\AR\AUG\anim\AugA7ReloadAnim.rtm";
+			looped=0;
+			speed= 0.44444;
+			mask="handsWeapon";
+			headBobStrength=0.1;
+			headBobMode=2;
+			rightHandIKBeg=1;
+			rightHandIKEnd=1;
+			LeftHandIKCurve[]={0.0015625,0.25, 0.15,0, 0.95,0, 1,1};
+			RightHandIKCurve[]={1,1, 0.05,0, 0.95,0, 1,1};
+		};
+	};
 };

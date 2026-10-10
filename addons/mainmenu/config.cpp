@@ -27,24 +27,16 @@ class CfgMissions
 	};
     class TCPServers
     {
-        class STB73_OFFICIAL
-        {
-            author = AUTHOR;
-            briefingName = "Official 73rd STB Servers";
-            overviewPicture = "z\73STB\addons\main\UI\73odstSTB.paa";
-            overviewText = "";
-
-            class MainServer
-            {
-                author = AUTHOR;
-                briefingName = "73rd STB Main Server";
-                overviewPicture = "z\73STB\addons\main\UI\73odstSTB.paa";
-                overviewText = "The main server.";
-                address = "Yonservers.asuscomm.com";
-                port = "2302";
-                pass = "73STB";
-            };
-        };
+		class MainServer
+		{
+			author = AUTHOR;
+			briefingName = "73rd STB Main Server";
+			overviewPicture = "z\73STB\addons\main\UI\73odstSTB.paa";
+			overviewText = "The main server.";
+			address = "Yonservers.asuscomm.com";
+			port = "2302";
+			pass = "73STB";
+		};
     };
 };
 

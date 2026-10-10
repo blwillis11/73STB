@@ -26,6 +26,12 @@ parameters = [
 executable = "arma3profiling_x64"
 mission = "73rdTesting.flat_green_terrain"
 
+# Used for checking animations in-game
+[hemtt.launch.anim]
+extends = "default"
+binarize = true
+file_patching = false
+
 [hemtt.launch.big]
 workshop = [
     "450814997",  # CBA_A3

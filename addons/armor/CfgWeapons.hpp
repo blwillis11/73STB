@@ -192,8 +192,8 @@ class CfgWeapons
         displayName="[73] Recon Helmet [Grayson]";
         ace_hearing_protection = 0.80;
         hiddenSelectionsTextures[] = {
-            "z\73STB\addons\armor\data\helmets\custom\Grayson\graysonhelmmage.paa",
-            "optre_unsc_units\army\data\recon_visor_co.paa",
+            "z\73STB\addons\armor\data\helmets\custom\Grayson\ReconHelmet_CO.paa",
+            "z\73STB\addons\armor\data\helmets\custom\Grayson\ReconVisor_CO.paa",
             "optre_unsc_units\army\data\ghillie_woodland_co.paa",
             "optre_unsc_units\army\data\soft_packs_co.paa"
         };
