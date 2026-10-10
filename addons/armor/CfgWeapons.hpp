@@ -95,6 +95,8 @@ class CfgWeapons
     ECH55D_CUS_HELMET_CAMOS(Mitchel,Red)
     ECH55D_CUS_HELMET_CAMOS(Salmon,Black)
     ECH55D_CUS_HELMET_CAMOS(Ridge,Red)
+    ECH55D_CUS_HELMET_CAMOS(Kraine,Gold)
+    ECH55D_CUS_HELMET_CAMOS(Baron,Gold)
     
     class OPTRE_FC_VX19_Helmet;
     class STB73_VX19_Helmet_Base: OPTRE_FC_VX19_Helmet
