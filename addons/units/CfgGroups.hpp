@@ -58,14 +58,14 @@ class CfgGroups
                         position[] = {15,-15,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "STB73_STB_ODST_Rifleman";
+                        vehicle = "STB73_ODST_U_Soldier";
                     };
                     class Unit6
                     {
                         position[] = {-15,-15,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "STB73_STB_ODST_Rifleman";
+                        vehicle = "STB73_ODST_U_Soldier";
                     };
                     class Unit7
                     {
@@ -121,7 +121,7 @@ class CfgGroups
                         position[] = {-35,-35,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "STB73_STB_ODST_Rifleman";
+                        vehicle = "STB73_ODST_U_Soldier";
                     };
                 };
                 class STB73_STB_ODST_Fireteam
@@ -144,7 +144,7 @@ class CfgGroups
                         position[] = {5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "STB73_STB_ODST_Rifleman";
+                        vehicle = "STB73_ODST_U_Soldier";
                     };
                     class Unit2
                     {
@@ -165,7 +165,7 @@ class CfgGroups
                         position[] = {-10,-10,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "STB73_STB_ODST_Rifleman";
+                        vehicle = "STB73_ODST_U_Soldier";
                     };
                 };
 
@@ -182,7 +182,7 @@ class CfgGroups
                         position[] = {0,0,0};
                         rank = "SERGEANT";
                         side = 1;
-                        vehicle = "STB73_STB_ODST_Rifleman";
+                        vehicle = "STB73_ODST_U_Soldier";
                     };
                     class Unit1
                     {

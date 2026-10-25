@@ -33,20 +33,20 @@ if (["8", _glassesProtection] call BIS_fnc_inString || ["8", _nvgProtection] cal
 };
 
 // Hood presence
-if (["4", _glassesProtection] call BIS_fnc_instring || ["4", _nvgProtection] call BIS_fnc_inString ||
-["4", _uniformProtection] call BIS_fnc_instring || ["4", _helmetProtection] call BIS_fnc_inString) then {
+if (["4", _glassesProtection] call BIS_fnc_inString || ["4", _nvgProtection] call BIS_fnc_inString ||
+["4", _uniformProtection] call BIS_fnc_inString || ["4", _helmetProtection] call BIS_fnc_inString) then {
 	_hasHood = true;
 };
 
 // Filter protection
-if (["2", _glassesProtection] call BIS_fnc_instring || ["2", _nvgProtection] call BIS_fnc_inString ||
-["2", _uniformProtection] call BIS_fnc_instring || ["2", _helmetProtection] call BIS_fnc_inString) then {
+if (["2", _glassesProtection] call BIS_fnc_inString || ["2", _nvgProtection] call BIS_fnc_inString ||
+["2", _uniformProtection] call BIS_fnc_inString || ["2", _helmetProtection] call BIS_fnc_inString) then {
 	_hasFilter = true;
 };
 
 // face coverage
-if (["1", _glassesProtection] call BIS_fnc_instring || ["1", _nvgProtection] call BIS_fnc_inString ||
-["1", _uniformProtection] call BIS_fnc_instring || ["1", _helmetProtection] call BIS_fnc_inString) then {
+if (["1", _glassesProtection] call BIS_fnc_inString || ["1", _nvgProtection] call BIS_fnc_inString ||
+["1", _uniformProtection] call BIS_fnc_inString || ["1", _helmetProtection] call BIS_fnc_inString) then {
 	_faceCovered = true;
 };
 
@@ -78,7 +78,7 @@ private _isInCBRNVeh = false;
 if (!isNull _unit && {
 	!isNull objectParent _unit
 }) then {
-	private _veh = vehicle _unit;
+	private _veh = objectParent _unit;
 
 	if (!isNil "CBRN_CBRNVehicles" && {
 		(typeOf _veh) in CBRN_CBRNVehicles

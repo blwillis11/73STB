@@ -41,7 +41,7 @@ if (isNull _logic) exitWith {}; // exit if module is deleted
 			_units pushBack (
 			[
 				"STB73_STB_ODST_Grenadier",
-				"STB73_STB_ODST_Rifleman",
+				"STB73_ODST_U_Soldier",
 				"STB73_STB_ODST_AT",
 				"STB73_STB_ODST_Autorifleman",
 				"STB73_STB_ODST_Sniper",
@@ -59,7 +59,7 @@ if (isNull _logic) exitWith {}; // exit if module is deleted
 			// searching our known ODST pool for a matching substring.
 			private _odstPool = [
 				"STB73_STB_ODST_Grenadier",
-				"STB73_STB_ODST_Rifleman",
+				"STB73_ODST_U_Soldier",
 				"STB73_STB_ODST_AT",
 				"STB73_STB_ODST_Autorifleman",
 				"STB73_STB_ODST_Sniper",

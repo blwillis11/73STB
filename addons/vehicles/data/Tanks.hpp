@@ -9,7 +9,7 @@ class STB73_M875:OPTRE_M875_SPH
     scope=2;
     side=1;
     armor=450;
-    crew = "STB73_STB_ODST_Rifleman";
+    crew = "STB73_ODST_U_Soldier";
      class ace_cargo {
             class cargo {
                 class ACE_Tracks { // Doesn't have to have the same name as the item you're adding
@@ -41,7 +41,7 @@ class STB73_M808BM_MBT:OPTRE_M808BM_UNSC
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_STB_ODST_Rifleman";
+    crew = "STB73_ODST_U_Soldier";
     armor=575;
     armorStructural=5;
     class ace_cargo {
@@ -149,7 +149,7 @@ class STB73_M808B2_MBT:OPTRE_M808B2A1
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_STB_ODST_Rifleman";
+    crew = "STB73_ODST_U_Soldier";
     armor=575;
     armorStructural=5;
      class ace_cargo {

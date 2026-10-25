@@ -7,10 +7,7 @@
 // Pilot_Base for pilot roles
 
 
-class SoldierEB;
-class B_Soldier_Base_F : SoldierEB {
-    class EventHandlers;
-};
+class B_Soldier_Base_F;
 
 class DOUBLES(PFACTION,Soldier_Base): B_Soldier_Base_F
 {

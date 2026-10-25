@@ -131,4 +131,13 @@ class CfgFunctions{
             class HEVRoom { description = "Menus - HEV room menu"; file = "z\73STB\addons\functions\menufunctions\Fn_HEVRoom.sqf"; };
         };
     };
+    class TCP
+    {
+        class Weapons { 
+            class weaponTypeChange { 
+                description = "TCP - weapon type change"; 
+                file = "z\73STB\addons\functions\weapons\fn_weaponTypeChange.sqf"; 
+            };
+        };
+    };
 };

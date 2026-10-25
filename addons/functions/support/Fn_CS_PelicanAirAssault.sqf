@@ -204,7 +204,7 @@ _groupSpeciality =  [_AssaultTroopsArray, 2, "AT"] call BIS_fnc_param// _groupSp
 	} else {
 		(switch _squadsFactions do {
 			case "73rd STB": {
-				["STB73_STB_ODST_Team_Lead", "STB73_STB_ODST_Medic", "STB73_STB_ODST_AT", "STB73_STB_ODST_Rifleman", "STB73_STB_ODST_Autorifleman"]
+				["STB73_STB_ODST_Team_Lead", "STB73_STB_ODST_Medic", "STB73_STB_ODST_AT", "STB73_ODST_U_Soldier", "STB73_STB_ODST_Autorifleman"]
 			};
 		})
 	};

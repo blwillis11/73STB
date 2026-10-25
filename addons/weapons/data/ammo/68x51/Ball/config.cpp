@@ -7,6 +7,7 @@ class CfgPatches
 		addonRootClass = QUOTE(ADDON);
 
 		name = QUOTE(SUBCOMPONENT3_NAME);
+		units[] = {};
 
 		// Used for forcing load order
 		requiredAddons[] = {QUOTE(ADDON)};
@@ -16,3 +17,4 @@ class CfgPatches
 #include "CfgAmmo.hpp"
 #include "CfgMagazines.hpp"
 #include "CfgMagazineWells.hpp"
+#include "CfgVehicles.hpp"

@@ -7,7 +7,7 @@ class STB73_SDV_ODST: B_SDV_01_F
     editorCategory = "STB73_STB";
     editorSubcategory="EdSubcat_Submersibles";
     fuelCapacity=300;
-    crew="STB73_STB_ODST_Rifleman";
+    crew="STB73_ODST_U_Soldier";
     armor=100;
     acceleration=12;
     maxSpeed=65;
@@ -59,7 +59,7 @@ class STB73_Boat_Transport:B_Boat_Transport_01_F
     displayName="[73] Transport Boat";
     faction = "STB73_STB";
     editorCategory = "STB73_STB";
-    crew="STB73_STB_ODST_Rifleman";
+    crew="STB73_ODST_U_Soldier";
     enginePower=120;
     acceleration=15;
     maxSpeed=80;

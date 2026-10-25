@@ -18,7 +18,7 @@ class CfgWeapons
 
     class TCP_V_M43D_Light_Base;
     class STB73_M43D_Base: TCP_V_M43D_Light_Base {
-        class itemInfo: ItemInfo
+        class ItemInfo: ItemInfo
         {
            VEST_HITPOINT_INFO
            containerClass="STB73_vest_supply";
@@ -167,6 +167,7 @@ class CfgWeapons
         author=AUTHOR;
         displayName="[73] Recon Helmet [Standard]";
         ace_hearing_protection = 0.80;
+        TCP_visrClasses[] = {"TCP_H_Helmet_ECH43A_Gray_Black","TCP_H_Helmet_ECH43A_Gray_Black_DP"};
         class ItemInfo:ItemInfo
         {
             class HitpointsProtectionInfo
@@ -267,12 +268,12 @@ class CfgWeapons
         picture = "\TCP\Characters\BLUFOR\UNSC\Marines\Facewear\Neck_Vacseal\data\ui\Black\icon_facewear_Neck_Vacseal_CA.paa";
         hiddenSelections[] = {"camo"};
         visionMode[] = {"Normal","NVG","TI"};
-        class itemInfo: ItemInfo
+        class ItemInfo: ItemInfo
         {
             modelOff = "\TCP\Characters\BLUFOR\UNSC\Marines\Facewear\Neck_Vacseal\g_Neck_Vacseal.p3d";
             uniformModel = "\TCP\Characters\BLUFOR\UNSC\Marines\Facewear\Neck_Vacseal\g_Neck_Vacseal.p3d";
         };
-        CBRN_protectionLevel = "8";
+        CBRN_protectionLevel = "4";
         hoa_sling_hideWhenSlung = 1; // 0-Nothing 1-Hide item when slung
         hoa_sling_slingWithHelmet = 0;
     };

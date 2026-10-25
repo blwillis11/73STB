@@ -18,7 +18,7 @@ class STB73_HDV134_Resupply:VES_HDV134_Resupply
                 };
             };
         };
-    crew = "STB73_STB_ODST_Rifleman";
+    crew = "STB73_ODST_U_Soldier";
     class VehicleSpawnerInfo {
         class STB73_GroundSpawner
         {
@@ -47,7 +47,7 @@ class STB73_HDV134_TT:VES_HDV134_TT
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_STB_ODST_Rifleman";
+    crew = "STB73_ODST_U_Soldier";
  class ace_cargo {
             class cargo {
                 class ACE_Tyres { // Doesn't have to have the same name as the item you're adding
@@ -85,7 +85,7 @@ class STB73_HDV134_TT_C:VES_HDV134_TT_C
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_STB_ODST_Rifleman";
+    crew = "STB73_ODST_U_Soldier";
     class VehicleSpawnerInfo {
         class STB73_GroundSpawner
         {
@@ -117,7 +117,7 @@ class STB73_M12 : TCP_B_UNSC_MC_M12A
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_STB_ODST_Rifleman";
+    crew = "STB73_ODST_U_Soldier";
     class ace_cargo {
         class cargo {
             class ACE_Tyres { // Doesn't have to have the same name as the item you're adding
@@ -149,7 +149,7 @@ class STB73_M12_LRV : TCP_B_UNSC_MC_M12A_LAAG_M41
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_STB_ODST_Rifleman";
+    crew = "STB73_ODST_U_Soldier";
     class ace_cargo {
         class cargo {
             class ACE_Tyres { // Doesn't have to have the same name as the item you're adding
@@ -182,7 +182,7 @@ class STB73_M12G1_LRV : TCP_B_UNSC_MC_M12A_ALIM_M68B
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_STB_ODST_Rifleman";
+    crew = "STB73_ODST_U_Soldier";
     class ace_cargo {
         class cargo {
             class ACE_Tyres { // Doesn't have to have the same name as the item you're adding
@@ -215,7 +215,7 @@ class STB73_M813_TT : TCP_B_UNSC_MC_M831A
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_STB_ODST_Rifleman";
+    crew = "STB73_ODST_U_Soldier";
     class ace_cargo {
         class cargo {
             class ACE_Tyres { // Doesn't have to have the same name as the item you're adding
@@ -251,7 +251,7 @@ class STB73_M274_ATV:OPTRE_M274_ATV
    scopeCurator=2;
    scope=2;
    side=1;
-   crew = "STB73_STB_ODST_Rifleman";
+   crew = "STB73_ODST_U_Soldier";
    class VehicleSpawnerInfo {
         class STB73_GroundSpawner
         {

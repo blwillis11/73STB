@@ -46,7 +46,7 @@ private _units = switch (typeName (_this select 0)) do {
 		for "_i" from 1 to (_this select 0) do {
 			private _randomUnitType = selectRandom [
 				"STB73_STB_ODST_Grenadier",
-				"STB73_STB_ODST_Rifleman",
+				"STB73_ODST_U_Soldier",
 				"STB73_STB_ODST_AT",
 				"STB73_STB_ODST_Autorifleman",
 				"STB73_STB_ODST_Sniper",

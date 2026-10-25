@@ -18,8 +18,11 @@ class CfgWeapons
             "z\73STB\addons\weapons\data\AR\AUG\anim\AugA7HandAnim.rtm"
         };
         reloadAction = "GestureReloadAugA7";
-        magazines[] = {"STB73_30Rnd_68x51_Mag"};
-        magazineWell[] = {"STB73_30Rnd_68x51_MagWell"};
+        magazines[] = {"STB73_28Rnd_68x51_Mag"};
+        magazineWell[] = {"STB73_28Rnd_68x51_MagWell"};
+
+        ACE_barrelLength = BARREL_LENGTH;
+		ACE_barrelTwist = BARREL_TWIST;
 
         cursor = "TCP_srifle_VK78";
 
@@ -45,22 +48,23 @@ class CfgWeapons
         changeFiremodeSound[] = {"tcp\sounds\arsenal\weapons\LongRangeRifles\VK78\VK78_Firemod_01.ogg",0.31622776,1,5};
 
         //--- Attachments change weapon classname using the following structure
-		class TCP_weaponTypes
-		{
-			//--- Slot information to examine
-			class CowSlot
-			{
-				//--- Suffix for asset
-				class A7_Scope
-				{
-					//--- Items that will change weapon to alternative class
-					class compatibleItems
-					{
-						STB73_optic_A7Scope = 1;
-					};
-				};
-			};
-		};
+		// class TCP_weaponTypes
+		// {
+		// 	//--- Slot information to examine
+		// 	class CowsSlot
+		// 	{
+		// 		//--- Suffix for asset
+		// 		class A7_Scope
+		// 		{
+		// 			//--- Items that will change weapon to alternative class
+		// 			class compatibleItems
+		// 			{
+		// 				STB73_optic_A7Scope = 1;
+        //                 STB73_optic_2D_A7Scope = 1;
+		// 			};
+		// 		};
+		// 	};
+		// };
 
         // Weapons attachments
         class WeaponSlotsInfo
@@ -229,20 +233,22 @@ class CfgWeapons
 
             requiredOpticType = 1;
         };
+        // Never fires (ACE blocks the trigger while safe). Hidden from the player's
+        // fire mode cycle, and zero AI probability so AI never picks it.
+        class STB73_Safe: Single
+        {
+            showToPlayer = 0;
+
+            minRange = 0;
+            minRangeProbab = 0;
+            midRange = 0;
+            midRangeProbab = 0;
+            maxRange = 0;
+            maxRangeProbab = 0;
+        };
     };
     class STB73_arifle_AUGA7_A7_Scope: STB73_arifle_AUGA7 {
-        baseWeapon 	= "STB73_arifle_AUGA7_A7_Scope";
-        scope = 2;
-
         model = "z\73STB\addons\weapons\data\AR\AUG\AugA7Scope.p3d";
 
-        class linkedItems
-        {
-            class LinkedOptic
-            {
-                slot = "CowsSlot";
-                item = "STB73_optic_A7Scope";
-            };
-        };
     };
 };

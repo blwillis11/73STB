@@ -9,7 +9,7 @@ class STB73_M494_Oryx: OPTRE_M494
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_STB_ODST_Rifleman";
+    crew = "STB73_ODST_U_Soldier";
     class ace_cargo {
         class cargo {
             class ACE_Tracks { // Doesn't have to have the same name as the item you're adding
@@ -47,7 +47,7 @@ class STB73_M494_Oryx_AIE: OPTRE_M493_AIE
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_STB_ODST_Rifleman";
+    crew = "STB73_ODST_U_Soldier";
     class ace_cargo {
         class cargo {
             class ACE_Tracks { // Doesn't have to have the same name as the item you're adding
@@ -85,7 +85,7 @@ class STB73_M411_APC:OPTRE_M411_APC_UNSC
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_STB_ODST_Rifleman";
+    crew = "STB73_ODST_U_Soldier";
     class TCP_Compat_OPTRE
     {
         magLockOffset[] = {0,-6,-3.1};
@@ -130,7 +130,7 @@ class STB73_M412_IFV:OPTRE_M412_IFV_UNSC
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_STB_ODST_Rifleman";
+    crew = "STB73_ODST_U_Soldier";
     class ACE_Cargo
     {
         class Cargo
@@ -169,7 +169,7 @@ class STB73_M413_MGS:OPTRE_M413_MGS_UNSC
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_STB_ODST_Rifleman";
+    crew = "STB73_ODST_U_Soldier";
     class ACE_Cargo
     {
         class Cargo

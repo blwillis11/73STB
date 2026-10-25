@@ -2756,8 +2756,8 @@ class HitpointsProtectionInfo {  \
     };\
     TCP_visrClasses[]= \
 		{ \
-			"STB73_H_ECH55D_##PLATOON##_##CAMO##_##VISOR##", \
-			"STB73_H_ECH55D_##PLATOON##_##CAMO##_##VISOR##_DP" \
+			Q(STB73_H_ECH55D_##PLATOON##_##CAMO##_##VISOR##), \
+			Q(STB73_H_ECH55D_##PLATOON##_##CAMO##_##VISOR##_DP) \
 		}; \
     hiddenSelectionsTextures[] = \
     { \
@@ -2774,8 +2774,8 @@ class HitpointsProtectionInfo {  \
     scopeArsenal=1; \
     TCP_visrClasses[]= \
 		{ \
-			"STB73_H_ECH55D_##PLATOON##_##CAMO##_##VISOR##", \
-			"STB73_H_ECH55D_##PLATOON##_##CAMO##_##VISOR##_DP" \
+			Q(STB73_H_ECH55D_##PLATOON##_##CAMO##_##VISOR##), \
+			Q(STB73_H_ECH55D_##PLATOON##_##CAMO##_##VISOR##_DP) \
 		}; \
     hiddenSelectionsTextures[] = \
     { \
@@ -2813,8 +2813,8 @@ class HitpointsProtectionInfo {  \
     };\
     TCP_visrClasses[]= \
 		{ \
-			"STB73_H_ECH55D_##CAMO##_##WHO##_##VISOR##", \
-			"STB73_H_ECH55D_##CAMO##_##WHO##_##VISOR##_DP" \
+			Q(STB73_H_ECH55D_##CAMO##_##WHO##_##VISOR##), \
+			Q(STB73_H_ECH55D_##CAMO##_##WHO##_##VISOR##_DP) \
 		}; \
     hiddenSelectionsTextures[] = \
     { \
@@ -2831,8 +2831,8 @@ class HitpointsProtectionInfo {  \
     scopeArsenal=1; \
     TCP_visrClasses[]= \
 		{ \
-			"STB73_H_ECH55D_##CAMO##_##WHO##_##VISOR##", \
-			"STB73_H_ECH55D_##CAMO##_##WHO##_##VISOR##_DP" \
+			Q(STB73_H_ECH55D_##CAMO##_##WHO##_##VISOR##), \
+			Q(STB73_H_ECH55D_##CAMO##_##WHO##_##VISOR##_DP) \
 		}; \
     hiddenSelectionsTextures[] = \
     { \

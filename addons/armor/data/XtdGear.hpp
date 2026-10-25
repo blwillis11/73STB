@@ -406,7 +406,9 @@ class XtdGearModels
 					"Smith",
 					"Winters",
 					"Mitchel",
-					"Salmon"
+					"Salmon",
+					"Kraine",
+					"Baron"
                 };
             };
 			class Camo : STB73_CamoMetal
@@ -3648,6 +3650,6 @@ class XtdGearInfos
 {
     class CfgWeapons
     {
-    #include "cfg/Uniforms.hpp"
+    	#include "cfg/Uniforms.hpp"
     };
 };

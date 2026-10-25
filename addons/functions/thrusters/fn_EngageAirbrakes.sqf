@@ -23,7 +23,7 @@ STB73_ThrustersEH = addMissionEventHandler ["EachFrame", {
 	if (diag_frameNo % 2 == 0) exitWith {}; // Every other Frame
 	private _vehicle = (_thisArgs#0);
 	if (speed _vehicle > 50) then {
-		private _speed = -(STB73_ThrusterMultiplier/diag_fps);
+		private _speed = -((STB73_ThrusterMultiplier/diag_fps)*2.5);
 		[_vehicle, _speed] call STB73_fnc_changeSpeed;
 	} else {
 		_vehicle setVariable ["STB73_Airbrakes_Active", false];
