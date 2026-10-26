@@ -23,6 +23,8 @@ class CfgVehicles
     VEH_UNI_CLASS(Woodland)
     VEH_UNI_CLASS(Woodtarn)
 
+    VEH_TSHIRT_CLASS(Instructor)
+
 	class ItemInfo;
 	class UniformItem;
     class OPTRE_Rucksack;

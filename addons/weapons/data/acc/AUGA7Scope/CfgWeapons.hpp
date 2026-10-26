@@ -50,8 +50,8 @@ class CfgWeapons
 		author = AUTHOR;
 		dlc = QUOTE(PREFIX);
 
-		scope = 2;
-        scopeArsenal = 2;
+		scope = 1;
+        scopeArsenal = 1;
         baseWeapon = "STB73_optic_2D_A7Scope";
 
 		displayName = QUOTE(A7 Scope);

@@ -5114,6 +5114,24 @@ class HitpointsProtectionInfo {  \
 		}; \
   };
 
+#define VEH_TSHIRT_CLASS(CAMO) \
+  VEH_CLASS_NORMAL(CAMO,TShirt,Untucked)                       \
+  VEH_CLASS_NORMAL(CAMO,TShirt,Tucked)                       \
+  VEH_CLASS_KNEEPADS(CAMO,TShirt,Untucked)                       \
+  VEH_CLASS_KNEEPADS(CAMO,TShirt,Tucked)                       \
+  VEH_CLASS_BLOUSED(CAMO,TShirt,Tucked)                       \
+  VEH_CLASS_BLOUSED(CAMO,TShirt,Untucked)                       \
+  VEH_CLASS_BLOUSED_KNEEPADS(CAMO,TShirt,Tucked)                       \
+  VEH_CLASS_BLOUSED_KNEEPADS(CAMO,TShirt,Untucked)                       \
+  VEH_CLASS_GLOVES(CAMO,TShirt,Tucked)                       \
+  VEH_CLASS_GLOVES(CAMO,TShirt,Untucked)                       \
+  VEH_CLASS_GLOVES_KNEEPADS(CAMO,TShirt,Tucked)                       \
+  VEH_CLASS_GLOVES_KNEEPADS(CAMO,TShirt,Untucked)                       \
+  VEH_CLASS_BLOUSED_GLOVES(CAMO,TShirt,Tucked)                       \
+  VEH_CLASS_BLOUSED_GLOVES(CAMO,TShirt,Untucked)                       \
+  VEH_CLASS_BLOUSED_GLOVES_KNEEPADS(CAMO,TShirt,Tucked)                       \
+  VEH_CLASS_BLOUSED_GLOVES_KNEEPADS(CAMO,TShirt,Untucked)
+
 #define VEH_UNI_CLASS(CAMO) \
   VEH_CLASS_NORMAL(CAMO,TShirt,Untucked)                       \
   VEH_CLASS_NORMAL(CAMO,TShirt,Tucked)                       \
@@ -5228,6 +5246,24 @@ class HitpointsProtectionInfo {  \
   VEH_CLASS_GLOVES_BLOUSED_UNZIPPED_KNEEPADS(CAMO,TacShirt,HalfRoll)\
   VEH_CLASS_GLOVES_BLOUSED_UNZIPPED_KNEEPADS(CAMO,TacShirt,QuarterRoll)
   
+
+#define WEP_TSHIRT_CLASS(CAMO) \
+  WEP_CLASS_NORMAL(CAMO,TShirt,Untucked)                       \
+  WEP_CLASS_NORMAL(CAMO,TShirt,Tucked)                       \
+  WEP_CLASS_KNEEPADS(CAMO,TShirt,Untucked)                       \
+  WEP_CLASS_KNEEPADS(CAMO,TShirt,Tucked)                       \
+  WEP_CLASS_BLOUSED(CAMO,TShirt,Tucked)                       \
+  WEP_CLASS_BLOUSED(CAMO,TShirt,Untucked)                       \
+  WEP_CLASS_BLOUSED_KNEEPADS(CAMO,TShirt,Tucked)                       \
+  WEP_CLASS_BLOUSED_KNEEPADS(CAMO,TShirt,Untucked)                       \
+  WEP_CLASS_GLOVES(CAMO,TShirt,Tucked)                       \
+  WEP_CLASS_GLOVES(CAMO,TShirt,Untucked)                       \
+  WEP_CLASS_GLOVES_KNEEPADS(CAMO,TShirt,Tucked)                       \
+  WEP_CLASS_GLOVES_KNEEPADS(CAMO,TShirt,Untucked)                       \
+  WEP_CLASS_BLOUSED_GLOVES(CAMO,TShirt,Tucked)                       \
+  WEP_CLASS_BLOUSED_GLOVES(CAMO,TShirt,Untucked)                       \
+  WEP_CLASS_BLOUSED_GLOVES_KNEEPADS(CAMO,TShirt,Tucked)                       \
+  WEP_CLASS_BLOUSED_GLOVES_KNEEPADS(CAMO,TShirt,Untucked)
 
 //cfgWeapon
 #define WEP_UNI_CLASS(CAMO) \

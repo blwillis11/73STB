@@ -38,8 +38,7 @@ if (isNull _logic) exitWith {}; // exit if module is deleted
 	_unit = _logic getVariable [_x, "none"];
 	if (_unit != "" AND _unit != "none") then {
 		if (_unit == "random") then {
-			_units pushBack (
-			[
+			_units pushBack (selectRandom [
 				"STB73_STB_ODST_Grenadier",
 				"STB73_ODST_U_Soldier",
 				"STB73_STB_ODST_AT",
@@ -51,8 +50,7 @@ if (isNull _logic) exitWith {}; // exit if module is deleted
 				"STB73_STB_ODST_Medic",
 				"STB73_STB_ODST_Team_Lead",
 				"STB73_STB_ODST_Squad_Lead"
-			] call BIS_fnc_selectRandom
-			);
+			]);
 		} else {
 			// if unit className is not present in CfgVehicles, attempt to map malformed names
 			// (for example: "73_STB_ODST_Marksman" -> "STB73_STB_ODST_Marksman") by

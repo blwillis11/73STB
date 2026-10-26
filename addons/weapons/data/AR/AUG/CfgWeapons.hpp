@@ -233,22 +233,9 @@ class CfgWeapons
 
             requiredOpticType = 1;
         };
-        // Never fires (ACE blocks the trigger while safe). Hidden from the player's
-        // fire mode cycle, and zero AI probability so AI never picks it.
-        class STB73_Safe: Single
-        {
-            showToPlayer = 0;
-
-            minRange = 0;
-            minRangeProbab = 0;
-            midRange = 0;
-            midRangeProbab = 0;
-            maxRange = 0;
-            maxRangeProbab = 0;
-        };
     };
-    class STB73_arifle_AUGA7_A7_Scope: STB73_arifle_AUGA7 {
-        model = "z\73STB\addons\weapons\data\AR\AUG\AugA7Scope.p3d";
+    // class STB73_arifle_AUGA7_A7_Scope: STB73_arifle_AUGA7 {
+    //     model = "z\73STB\addons\weapons\data\AR\AUG\AugA7Scope.p3d";
 
-    };
+    // };
 };

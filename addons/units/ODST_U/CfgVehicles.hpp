@@ -4,4 +4,5 @@ class CfgVehicles {
     #include "..\Backpack.hpp"
     #include "..\Soldier.hpp"
     #include "..\Support.hpp"
+    #include "..\Pilot.hpp"
 };

@@ -10,7 +10,7 @@ class STB73_cart:OPTRE_cart
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_Aviator";
+    crew = "STB73_ODST_U_Pilot";
     ace_rearm_defaultSupply = 10000;
     class VehicleSpawnerInfo {
         class STB73_GroundSpawner

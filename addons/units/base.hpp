@@ -216,11 +216,47 @@ class DOUBLES(PFACTION,Pilot_Base): DOUBLES(PFACTION,Soldier_Base)
     dlc = Q(PREFIX);
     author = AUTHOR;
 	role = "Crewman";
-	uniformClass = QUOTE(UNIFORM_PILOT);
+	uniformClass = QUOTE(UNIFORM_F_G);
 	backpack = QUOTE(PARACHUTE);
     armor = 2;
 	armorStructural = 2;
 	explosionShielding = 0.2;
+	linkedItems[] =
+	{
+		QUOTE(VEST_PILOT),
+		QUOTE(HELMET_PILOT),
+		QUOTE(ITEM_MAP),
+		QUOTE(ITEM_COMPASS),
+		QUOTE(ITEM_WATCH),
+		QUOTE(ITEM_RADIO),
+		QUOTE(ITEM_GPS)
+	};
+	respawnLinkedItems[] =
+	{
+		QUOTE(VEST_PILOT),
+		QUOTE(HELMET_PILOT),
+		QUOTE(ITEM_MAP),
+		QUOTE(ITEM_COMPASS),
+		QUOTE(ITEM_WATCH),
+		QUOTE(ITEM_RADIO),
+		QUOTE(ITEM_GPS)
+	};
+};
+
+class DOUBLES(PFACTION,HeliPilot_Base): DOUBLES(PFACTION,Pilot_Base)
+{
+	author = ECSTRING(Data, Author);
+	dlc = QUOTE(PREFIX);
+
+	scope = 0;
+	
+	cost = 93000;
+	
+	role = "Crewman";
+
+	uniformClass = QUOTE(UNIFORM_F_G);
+	backpack = QUOTE(PARACHUTE);
+
 	linkedItems[] =
 	{
 		QUOTE(VEST_PILOT),

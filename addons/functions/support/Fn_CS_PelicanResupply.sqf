@@ -257,7 +257,19 @@ _count = 0;
 					"STB73_SupplyPod_Emptypod"
 				};
 				default {
-					(["STB73_SupplyPod_Sniper", "STB73_SupplyPod_Medical", "STB73_SupplyPod_AR", "STB73_SupplyPod_Autorifles", "STB73_SupplyPod_SMG", "STB73_SupplyPod_CQB", "STB73_SupplyPod_ARGL", "STB73_SupplyPod_AT", "STB73_SupplyPod_Marksman", "STB73_SupplyPod_EOD", "STB73_SupplyPod_Emptypod"] call BIS_fnc_selectRandom)
+					(selectRandom [
+						"STB73_SupplyPod_Sniper",
+						"STB73_SupplyPod_Medical",
+						"STB73_SupplyPod_AR",
+						"STB73_SupplyPod_Autorifles",
+						"STB73_SupplyPod_SMG",
+						"STB73_SupplyPod_CQB",
+						"STB73_SupplyPod_ARGL",
+						"STB73_SupplyPod_AT",
+						"STB73_SupplyPod_Marksman",
+						"STB73_SupplyPod_EOD",
+						"STB73_SupplyPod_Emptypod"
+					])
 				};
 			})
 		};

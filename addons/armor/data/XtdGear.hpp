@@ -487,7 +487,8 @@ class XtdGearModels
 					"Urban",
 					"White",
 					"Woodland",
-					"Woodtarn"
+					"Woodtarn",
+					"Instructor"
 				};
 			};
 			class top

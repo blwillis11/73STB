@@ -6576,3 +6576,77 @@ class STB73_U_B_TShirt_Untucked_Gloves_Bloused_Kneepads_Woodtarn: STB73_U_B_TShi
 {
 	kneepads="Kneepads";
 };
+class STB73_U_B_TShirt_Tucked_Instructor
+{
+	model="STB73_U_B_TShirt";
+	camo="Instructor";
+	tuck="Tucked";
+	gloves="None";
+	blouse="Unbloused";
+	kneepads="None";
+};
+class STB73_U_B_TShirt_Tucked_Gloves_Instructor: STB73_U_B_TShirt_Tucked_Instructor
+{
+	gloves="Gloves";
+};
+class STB73_U_B_TShirt_Tucked_Kneepads_Instructor: STB73_U_B_TShirt_Tucked_Instructor
+{
+	kneepads="Kneepads";
+};
+class STB73_U_B_TShirt_Tucked_Gloves_Kneepads_Instructor: STB73_U_B_TShirt_Tucked_Kneepads_Instructor
+{
+	gloves="Gloves";
+};
+class STB73_U_B_TShirt_Tucked_Gloves_Bloused_Instructor: STB73_U_B_TShirt_Tucked_Gloves_Instructor
+{
+	blouse="Bloused";
+};
+class STB73_U_B_TShirt_Tucked_Bloused_Instructor: STB73_U_B_TShirt_Tucked_Instructor
+{
+	blouse="Bloused";
+};
+class STB73_U_B_TShirt_Tucked_Bloused_Kneepads_Instructor: STB73_U_B_TShirt_Tucked_Bloused_Instructor
+{
+	kneepads="Kneepads";
+};
+class STB73_U_B_TShirt_Tucked_Gloves_Bloused_Kneepads_Instructor: STB73_U_B_TShirt_Tucked_Gloves_Bloused_Instructor
+{
+	kneepads="Kneepads";
+};
+class STB73_U_B_TShirt_Untucked_Instructor
+{
+	model="STB73_U_B_TShirt";
+	camo="Instructor";
+	tuck="Untucked";
+	gloves="None";
+	blouse="Unbloused";
+	kneepads="None";
+};
+class STB73_U_B_TShirt_Untucked_Gloves_Instructor: STB73_U_B_TShirt_Untucked_Instructor
+{
+	gloves="Gloves";
+};
+class STB73_U_B_TShirt_Untucked_Kneepads_Instructor: STB73_U_B_TShirt_Untucked_Instructor
+{
+	kneepads="Kneepads";
+};
+class STB73_U_B_TShirt_Untucked_Gloves_Kneepads_Instructor: STB73_U_B_TShirt_Untucked_Kneepads_Instructor
+{
+	gloves="Gloves";
+};
+class STB73_U_B_TShirt_Untucked_Gloves_Bloused_Instructor: STB73_U_B_TShirt_Untucked_Gloves_Instructor
+{
+	blouse="Bloused";
+};
+class STB73_U_B_TShirt_Untucked_Bloused_Instructor: STB73_U_B_TShirt_Untucked_Instructor
+{
+	blouse="Bloused";
+};
+class STB73_U_B_TShirt_Untucked_Bloused_Kneepads_Instructor: STB73_U_B_TShirt_Untucked_Bloused_Instructor
+{
+	kneepads="Kneepads";
+};
+class STB73_U_B_TShirt_Untucked_Gloves_Bloused_Kneepads_Instructor: STB73_U_B_TShirt_Untucked_Gloves_Bloused_Instructor
+{
+	kneepads="Kneepads";
+};

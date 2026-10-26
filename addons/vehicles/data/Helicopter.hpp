@@ -15,7 +15,7 @@ class STB73_AV14_Hornet_CAS: OPTRE_UNSC_hornet_CAS
             init = "[(_this select 0),true,false] call STB73_fnc_RegisterThrusters;";
         };
     };
-    crew = "STB73_Aviator";
+    crew = "STB73_ODST_U_Pilot";
     hiddenSelectionsTextures[] =
     {
         "optre_vehicles_air\hornet\data\hornet_hull_standard_co.paa",
@@ -67,7 +67,7 @@ class STB73_AV14_Hornet_CAP: OPTRE_UNSC_hornet_CAP
         #include "cfg\UtilityActions.hpp"
         #include "cfg\ThrusterActions.hpp"
     };
-    crew = "STB73_Aviator";
+    crew = "STB73_ODST_U_Pilot";
     hiddenSelectionsTextures[] =
     {
         "optre_vehicles_air\hornet\data\hornet_hull_standard_co.paa",
@@ -102,7 +102,7 @@ class STB73_D77H_SOCOM_Pelican: OPTRE_Pelican_armed_SOCOM
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_Aviator";
+    crew = "STB73_ODST_U_Pilot";
     class EventHandlers: EventHandlers
     {
         class STB73_RegisterThrusters_EH
@@ -129,6 +129,43 @@ class STB73_D77H_SOCOM_Pelican: OPTRE_Pelican_armed_SOCOM
     };
 };
 
+class OPTRE_Pelican_armed_70mm_single_seater;
+class STB73_D77H_SOCOM_Pelican_single_seater: OPTRE_Pelican_armed_70mm_single_seater
+{
+    displayName = "[73] D77-TC Pelican (Single Seater)";
+    editorCategory = "STB73_STB";
+    editorSubcategory = "STB73_Helicopters_EdSubCat";
+    scopeCurator=2;
+    scope=2;
+    side=1;
+    crew = "STB73_ODST_U_Pilot";
+    hiddenSelectionsTextures[] = {"OPTRE_Vehicles\Pelican\data\PelicanExterior_black_CO.paa",""};
+    class EventHandlers: EventHandlers
+    {
+        class STB73_RegisterThrusters_EH
+        {
+            init = "[(_this select 0),true,true,false] call STB73_fnc_RegisterThrusters;";
+        };
+    };
+    class textureSources
+    {};
+    class VehicleSpawnerInfo {
+        class STB73_AirSpawner
+        {
+            scope = 1;
+            spawner= "73rd Aviation";
+            vehicle = "Pelican";
+            Type = "Single Seater";
+            cost = 3;
+            priority = 1;
+        };
+    };
+    class UserActions
+    {
+        #include "cfg\PelicanActions.hpp"
+    };
+};
+
 class OPTRE_UNSC_falcon;
 class STB73_UNSC_falcon:OPTRE_UNSC_falcon
 {
@@ -139,7 +176,7 @@ class STB73_UNSC_falcon:OPTRE_UNSC_falcon
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_Aviator";
+    crew = "STB73_ODST_U_Pilot";
     class EventHandlers: EventHandlers
     {
         class STB73_RegisterThrusters_EH
@@ -175,7 +212,7 @@ class STB73_UNSC_falcon_S:OPTRE_UNSC_falcon_S
     scopeCurator=2;
     scope=2;
     side=1;
-    crew = "STB73_Aviator";
+    crew = "STB73_ODST_U_Pilot";
     class EventHandlers: EventHandlers
     {
         class STB73_RegisterThrusters_EH
@@ -217,7 +254,7 @@ class STB73_UNSC_MH_144_Falcon:OPTRE_UNSC_MH_144_Falcon
             init = "[(_this select 0),true,false] call STB73_fnc_RegisterThrusters;";
         };
     };
-    crew = "STB73_Aviator";
+    crew = "STB73_ODST_U_Pilot";
     class UserActions
     {
         #include "cfg\UtilityActions.hpp"
@@ -252,7 +289,7 @@ class STB73_UNSC_MH_144S_Falcon:OPTRE_UNSC_MH_144S_Falcon
             init = "[(_this select 0),true,false] call STB73_fnc_RegisterThrusters;";
         };
     };
-    crew = "STB73_Aviator";
+    crew = "STB73_ODST_U_Pilot";
     radarIcon="MA_HUD\textures\radar\vehicles\pelican.paa";
     radarIconScale=3;
     class UserActions
@@ -290,7 +327,7 @@ class STB73_AV22_Sparrowhawk:OPTRE_AV22_Sparrowhawk
             init = "[(_this select 0),true,false] call STB73_fnc_RegisterThrusters;";
         };
     };
-    crew = "STB73_Aviator";
+    crew = "STB73_ODST_U_Pilot";
 	class UserActions
 	{
 	    #include "cfg\UtilityActions.hpp"
@@ -325,7 +362,7 @@ class STB73_AV22A_Sparrowhawk:OPTRE_AV22A_Sparrowhawk
             init = "[(_this select 0),true,false] call STB73_fnc_RegisterThrusters;";
         };
     };
-    crew = "STB73_Aviator";
+    crew = "STB73_ODST_U_Pilot";
     class UserActions
     {
         #include "cfg\UtilityActions.hpp"
@@ -360,7 +397,7 @@ class STB73_AV22B_Sparrowhawk:OPTRE_AV22B_Sparrowhawk
             init = "[(_this select 0),true,false] call STB73_fnc_RegisterThrusters;";
         };
     };
-    crew = "STB73_Aviator";
+    crew = "STB73_ODST_U_Pilot";
     class UserActions
     {
         #include "cfg\UtilityActions.hpp"
@@ -395,7 +432,7 @@ class STB73_AV22C_Sparrowhawk:OPTRE_AV22C_Sparrowhawk
             init = "[(_this select 0),true,false] call STB73_fnc_RegisterThrusters;";
         };
     };
-    crew = "STB73_Aviator";
+    crew = "STB73_ODST_U_Pilot";
     class UserActions
     {
         #include "cfg\UtilityActions.hpp"
@@ -431,7 +468,7 @@ class STB73_AV18_Dragonfly:TKE_Ext_Dragonfly_A
             init = "[(_this select 0),true,false] call STB73_fnc_RegisterThrusters;";
         };
     };
-    crew = "STB73_Aviator";
+    crew = "STB73_ODST_U_Pilot";
     class UserActions
     {
         #include "cfg\UtilityActions.hpp"
