@@ -37,18 +37,15 @@ class CfgWeapons
 
     TCP_WEP_CLASS_DEF
 
-    WEP_UNI_CLASS(Arctic)
-    WEP_UNI_CLASS(Arid)
     WEP_UNI_CLASS(Black)
     WEP_UNI_CLASS(Green)
     WEP_UNI_CLASS(Gray)
     WEP_UNI_CLASS(Olive) 
     WEP_UNI_CLASS(Tan)
-    WEP_UNI_CLASS(Tropic)
-    WEP_UNI_CLASS(Tundra)
-    WEP_UNI_CLASS(Urban)
     WEP_UNI_CLASS(White)
-    WEP_UNI_CLASS(Woodland)
+    WEP_UNI_CLASS(Aridtarn)
+    WEP_UNI_CLASS(Snowtarn)
+    WEP_UNI_CLASS(Urbantarn)
     WEP_UNI_CLASS(Woodtarn)
 
     WEP_TSHIRT_CLASS(Instructor),

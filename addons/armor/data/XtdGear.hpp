@@ -475,19 +475,15 @@ class XtdGearModels
 			{
 				values[]=
 				{
-					"Arctic",
-					"Arid",
+					"Aridtarn",
+					"Snowtarn",
+					"Urbantarn",
+					"Woodtarn",
 					"Black",
 					"Gray",
 					"Green",
-					"Olive",
 					"Tan",
-					"Tropic",
-					"Tundra",
-					"Urban",
 					"White",
-					"Woodland",
-					"Woodtarn",
 					"Instructor",
 					"Sr Leader",
 					"Cadre"
