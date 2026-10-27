@@ -51,7 +51,9 @@ class CfgWeapons
     WEP_UNI_CLASS(Woodland)
     WEP_UNI_CLASS(Woodtarn)
 
-    WEP_TSHIRT_CLASS(Instructor)
+    WEP_TSHIRT_CLASS(Instructor),
+    WEP_TSHIRT_CLASS(Sr Leader),
+    WEP_TSHIRT_CLASS(Cadre)    
 
     class TCP_H_Helmet_ECH55D_Black_Black;
     class TCP_H_Helmet_ECH55D_Black_Black_DP;

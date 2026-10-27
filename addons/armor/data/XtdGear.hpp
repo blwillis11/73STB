@@ -488,7 +488,9 @@ class XtdGearModels
 					"White",
 					"Woodland",
 					"Woodtarn",
-					"Instructor"
+					"Instructor",
+					"Sr Leader",
+					"Cadre"
 				};
 			};
 			class top
